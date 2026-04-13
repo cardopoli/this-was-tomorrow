@@ -1,3 +1,0 @@
----
-title: "This Was Tomorrow"
----
