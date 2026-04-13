@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article class="site-page">
+    <a href="{{ "/" | relURL }}" class="back">&larr; All sites</a>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.location }}<div class="location-line">{{ . }}</div>{{ end }}
+
+    {{ .Content }}
+
+    {{ with .Params.photos }}
+    <div class="photo-grid">
+        {{ range . }}
+        <img src="{{ . }}" alt="" loading="lazy">
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.audio }}
+    <div class="audio-section">
+        <h3>Audio</h3>
+        {{ range . }}
+        <div class="audio-item">
+            {{ with .title }}<div class="audio-title">{{ . }}</div>{{ end }}
+            {{ if .archive_url }}
+            <iframe src="https://archive.org/embed/{{ .archive_id }}" height="40" frameborder="0" allowfullscreen></iframe>
+            {{ else if .file }}
+            <audio controls preload="none"><source src="{{ .file }}" type="audio/mpeg"></audio>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with .Params.sources }}
+    <div class="sources">
+        <strong>Sources</strong><br>
+        {{ range . }}- {{ . }}<br>{{ end }}
+    </div>
+    {{ end }}
+</article>
+{{ end }}
