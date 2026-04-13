@@ -1,4 +1,4 @@
-baseURL = "https://cardopoli.github.io/this-was-tomorrow/"
+baseURL = "https://thiswastomorrow.co.uk/"
 languageCode = "en-gb"
 title = "This Was Tomorrow"
 
@@ -12,3 +12,4 @@ title = "This Was Tomorrow"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
