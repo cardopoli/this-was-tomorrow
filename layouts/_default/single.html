@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="site-page">
-    <a href="{{ "/" | relURL }}"> class="back">&larr; All sites</a>    
+<a href="{{ "/" | relURL }}" class="back">&larr;All sites</a>
     <h1>{{ .Title }}</h1>
     {{ with .Params.location }}<div class="location-line">{{ . }}</div>{{ end }}
 
