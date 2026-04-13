@@ -1,9 +1,10 @@
 ---
-title: "Cressingham Gardens"
-location: "Lambeth, London"
-slug: "cressingham-gardens"
+title: Cressingham Gardens
+location: Lambeth, London
+slug: cressingham-gardens
 draft: false
-photos: []
+photos:
+  - /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
 audio: []
 sources: []
 ---
@@ -48,9 +49,10 @@ Cressingham Gardens represents a critical moment in the history of London housin
 
 Today, fifty years later, the estate faces erasure. The question posed by its ongoing fight is not merely architectural or financial, but political: what does a society value when it comes to housing, ownership, and community? The estate's residents have organised not for heritage preservation, but for survival – and in doing so, they have articulated an alternative future grounded in refurbishment, community ownership, and the principle that council housing can be both economically viable and socially meaningful. The tension between demolition and repair, between displacement and continuity, between profit and stewardship, animates every photograph made here.
 
----
+***
 
 **Sources:**
+
 - Cressingham Gardens, Wikipedia
 - Edward Hollamby, Wikipedia  
 - Architectuul: Cressingham Gardens; Edward Hollamby
