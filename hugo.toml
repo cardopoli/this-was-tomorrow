@@ -1,7 +1,6 @@
 baseURL = "https://cardopoli.github.io/this-was-tomorrow/"
 languageCode = "en-gb"
 title = "This Was Tomorrow"
-theme = ""
 
 [params]
   description = "Site Visit Archive"
