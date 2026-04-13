@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: cardopoli/this-was-tomorrow
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+site_url: https://cardopoli.github.io/this-was-tomorrow
+
+collections:
+  - name: "sites"
+    label: "Site Visits"
+    label_singular: "Site Visit"
+    folder: "content/sites"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Hebden Bridge, West Yorkshire" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Photos"
+        name: "photos"
+        widget: "list"
+        required: false
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Audio"
+        name: "audio"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Internet Archive ID", name: "archive_id", widget: "string", required: false, hint: "e.g. tinkers-bubble-interview-2026" }
+          - { label: "Direct file URL", name: "file", widget: "string", required: false, hint: "Alternative to Archive ID" }
+      - label: "Sources"
+        name: "sources"
+        widget: "list"
+        required: false
+        field: { label: "Source", name: "source", widget: "string" }
