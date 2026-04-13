@@ -1,0 +1,312 @@
+/* THIS WAS TOMORROW - Site Visit Archive
+   90s utilitarian / modern twist */
+
+:root {
+    --bg: #f7f5f0;
+    --text: #111;
+    --muted: #666;
+    --rule: #ccc;
+    --link: #111;
+    --hover: #555;
+    --mono: 'Courier New', Courier, monospace;
+    --serif: Georgia, 'Times New Roman', Times, serif;
+    --max-w: 720px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    padding: 0;
+}
+
+a { color: var(--link); }
+a:hover { color: var(--hover); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* LAYOUT */
+
+.wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* SITE HEADER */
+
+.site-header {
+    padding: 40px 0 20px;
+    border-bottom: 2px solid var(--text);
+    margin-bottom: 40px;
+}
+
+.site-header h1 {
+    font-family: var(--mono);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.site-header h1 a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-header .tagline {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1px;
+}
+
+/* SITE INDEX (landing page) */
+
+.site-index {
+    margin-bottom: 60px;
+}
+
+.site-index .intro {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.site-list {
+    list-style: none;
+}
+
+.site-list li {
+    border-bottom: 1px solid var(--rule);
+}
+
+.site-list li:first-child {
+    border-top: 1px solid var(--rule);
+}
+
+.site-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 14px;
+    transition: background 0.1s;
+}
+
+.site-list a:hover {
+    background: rgba(0,0,0,0.03);
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.site-list .name {
+    font-weight: 700;
+}
+
+.site-list .location {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: right;
+    white-space: nowrap;
+    margin-left: 16px;
+}
+
+/* SINGLE SITE PAGE */
+
+.site-page {
+    margin-bottom: 60px;
+}
+
+.site-page .back {
+    font-family: var(--mono);
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--muted);
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.site-page .back:hover { color: var(--text); }
+
+.site-page h1 {
+    font-family: var(--mono);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.site-page .location-line {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.site-page h2 {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px;
+}
+
+.site-page p {
+    margin-bottom: 14px;
+}
+
+.site-page ul, .site-page ol {
+    margin-left: 20px;
+    margin-bottom: 14px;
+}
+
+.site-page li {
+    margin-bottom: 8px;
+}
+
+.site-page a {
+    color: var(--text);
+}
+
+/* PHOTOS */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    margin: 30px 0;
+}
+
+.photo-grid img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .photo-grid { grid-template-columns: 1fr; }
+}
+
+/* AUDIO */
+
+.audio-section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid var(--rule);
+    background: #fff;
+}
+
+.audio-section h3 {
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    color: var(--muted);
+}
+
+.audio-item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.audio-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.audio-item .audio-title {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.audio-item audio {
+    width: 100%;
+}
+
+.audio-item iframe {
+    width: 100%;
+    border: none;
+}
+
+/* SOURCES */
+
+.sources {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.sources strong {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+
+.site-footer {
+    border-top: 2px solid var(--text);
+    padding: 30px 0 20px;
+    margin-top: 60px;
+    font-size: 13px;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin-bottom: 4px;
+}
+
+.footer-ace {
+    margin: 20px 0 10px;
+}
+
+.footer-ace img {
+    height: 50px;
+    width: auto;
+}
+
+.footer-credit {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 16px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .site-header h1 { font-size: 15px; }
+    .site-page h1 { font-size: 18px; }
+    .site-list a { flex-direction: column; gap: 2px; }
+    .site-list .location { text-align: left; margin-left: 0; }
+}
