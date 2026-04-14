@@ -30,6 +30,52 @@
   
   {{ .Content }}
   
+  {{ if .Params.videos }}
+  <h2>VIDEOS</h2>
+  <div class="videos-section">
+    {{ range .Params.videos }}
+    <div class="video-item">
+      <h3>{{ .title }}</h3>
+      {{ if .description }}<p class="video-description">{{ .description }}</p>{{ end }}
+      <div class="video-embed">
+        {{ if contains .url "youtube.com" }}
+          <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ (split .url "v=" | index 1) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{ else if contains .url "youtu.be" }}
+          <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ (split .url "/" | last) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {{ else }}
+          <p><a href="{{ .url }}" target="_blank">{{ .title }}</a></p>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  
+  {{ if .Params.archives }}
+  <h2>ARCHIVE LINKS</h2>
+  <div class="archives-section">
+    {{ range .Params.archives }}
+    <div class="archive-item">
+      <h3><a href="{{ .url }}" target="_blank">{{ .title }}</a></h3>
+      {{ if .note }}<p class="archive-note">{{ .note }}</p>{{ end }}
+      <p class="archive-url"><small>{{ .url }}</small></p>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+  
+  {{ if .Params.external_links }}
+  <h2>RELATED LINKS</h2>
+  <ul class="external-links">
+    {{ range .Params.external_links }}
+    <li>
+      <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  
   {{ if .Params.audio }}
   <h2>AUDIO INTERVIEWS</h2>
   {{ range .Params.audio }}
