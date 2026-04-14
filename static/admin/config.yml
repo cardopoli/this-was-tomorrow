@@ -9,12 +9,11 @@ public_folder: /images
 collections:
   - name: sites
     label: Sites
-    folder: content/sites
+    folder: src/sites
     create: true
     extension: md
     format: frontmatter
     fields:
-      - { name: layout, label: Layout, widget: hidden, default: base.njk }
       - { name: title, label: Site Title, widget: string }
       - { name: location, label: Location, widget: string }
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"] }
