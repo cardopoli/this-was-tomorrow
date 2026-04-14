@@ -2,10 +2,7 @@
 title: Cressingham Gardens
 location: Lambeth, London
 status: visited
-description: |-
-  Cressingham Gardens comprises 306 dwellings, a mixture of four, three and two-bedroom houses, and one-bedroom apartments. It was designed at the end of the 1960s by the Lambeth Borough Council Architect Edward Hollamby and second architect Roger Westman, and built at the start of the 1970s. The homes on the estate provide accommodation for households of one to six people, ranging from one bedroom bungalows to four-storey houses, each with its own private outdoor space. The central village green extends the landscape of the park into the site, and buildings are arranged so that the lower ones are around this plateau, rising to four-storey blocks around the perimeter. Cars are kept at the perimeter of the site, with paved access to the housing.
-
-  The architects felt that it was very important to create a village-like feel to promote community formation. This was achieved on Cressingham Gardens by the series of pedestrianised walkways, onto which front doors of dwellings all face, located opposite each other. The design features that helped promote the village community feel included a central green space reminiscent of a 'village square,' the Rotunda (used for community events, located centrally on the estate), vehicles restricted to the perimeter, small narrow passageways between buildings reminiscent of the 'unplanned' feel of medieval villages, and gardens of bungalows typically only fenced in with low picket fences.
+description: ''
 photos:
   - image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
     caption: ''
@@ -18,6 +15,10 @@ sources: []
 ---
 
 ## THE PLACE AND ITS MAKING
+
+Cressingham Gardens comprises 306 dwellings, a mixture of four, three and two-bedroom houses, and one-bedroom apartments. It was designed at the end of the 1960s by the Lambeth Borough Council Architect Edward Hollamby and second architect Roger Westman, and built at the start of the 1970s. The homes on the estate provide accommodation for households of one to six people, ranging from one bedroom bungalows to four-storey houses, each with its own private outdoor space. The central village green extends the landscape of the park into the site, and buildings are arranged so that the lower ones are around this plateau, rising to four-storey blocks around the perimeter. Cars are kept at the perimeter of the site, with paved access to the housing.
+
+The architects felt that it was very important to create a village-like feel to promote community formation. This was achieved on Cressingham Gardens by the series of pedestrianised walkways, onto which front doors of dwellings all face, located opposite each other. The design features that helped promote the village community feel included a central green space reminiscent of a 'village square,' the Rotunda (used for community events, located centrally on the estate), vehicles restricted to the perimeter, small narrow passageways between buildings reminiscent of the 'unplanned' feel of medieval villages, and gardens of bungalows typically only fenced in with low picket fences.
 
 ## THE PHILOSOPHY BEHIND IT
 
