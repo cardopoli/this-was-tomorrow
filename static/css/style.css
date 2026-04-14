@@ -310,3 +310,72 @@ img { max-width: 100%; height: auto; display: block; }
     .site-list a { flex-direction: column; gap: 2px; }
     .site-list .location { text-align: left; margin-left: 0; }
 }
+/* MASONRY PHOTO GRID */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.photo-item {
+  border: 1px solid #00aa00;
+  overflow: hidden;
+  background: #001a00;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-caption {
+  background: #001a00;
+  color: #00ff00;
+  padding: 8px;
+  font-size: 11px;
+  border-top: 1px solid #00aa00;
+  line-height: 1.4;
+}
+
+/* AUDIO PLAYERS */
+.audio-section {
+  margin: 12px 0;
+  border: 1px solid #00aa00;
+  padding: 12px;
+  background: #001a00;
+}
+
+.audio-title {
+  color: #00ff00;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.audio-duration {
+  color: #00aa00;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 6px;
+  background: #000;
+  border: 1px solid #00aa00;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #001a00;
+}
+
+audio::-webkit-media-controls-mute-button {
+  filter: invert(1);
+}
+
+audio::-webkit-media-controls-volume-slider {
+  filter: invert(1);
+}
