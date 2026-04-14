@@ -9,7 +9,7 @@ public_folder: /images
 collections:
   - name: sites
     label: Sites
-    folder: content/sites
+    folder: src/sites
     create: true
     extension: md
     format: yaml-frontmatter
