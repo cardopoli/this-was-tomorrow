@@ -3,39 +3,33 @@ backend:
   repo: cardopoli/this-was-tomorrow
   branch: main
 
-media_folder: "static/images"
-public_folder: "/images"
-
-site_url: https://cardopoli.github.io/this-was-tomorrow
+media_folder: images
+public_folder: /images
 
 collections:
-  - name: "sites"
-    label: "Site Visits"
-    label_singular: "Site Visit"
-    folder: "content/sites"
+  - name: sites
+    label: Sites
+    folder: src/sites
     create: true
-    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Location", name: "location", widget: "string", hint: "e.g. Hebden Bridge, West Yorkshire" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Photos"
-        name: "photos"
-        widget: "list"
-        required: false
-        field: { label: "Image", name: "image", widget: "image" }
-      - label: "Audio"
-        name: "audio"
-        widget: "list"
-        required: false
+      - { name: layout, label: Layout, widget: hidden, default: base.njk }
+      - { name: title, label: Site Title, widget: string }
+      - { name: location, label: Location, widget: string }
+      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"] }
+      - { name: description, label: Description, widget: text }
+      - name: photos
+        label: Photos
+        widget: list
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Internet Archive ID", name: "archive_id", widget: "string", required: false, hint: "e.g. tinkers-bubble-interview-2026" }
-          - { label: "Direct file URL", name: "file", widget: "string", required: false, hint: "Alternative to Archive ID" }
-      - label: "Sources"
-        name: "sources"
-        widget: "list"
-        required: false
-        field: { label: "Source", name: "source", widget: "string" }
+          - { name: image, label: Image, widget: image }
+          - { name: caption, label: Caption, widget: string }
+      - name: audio
+        label: Audio Files
+        widget: list
+        fields:
+          - { name: file, label: Audio File, widget: file }
+          - { name: title, label: Title, widget: string }
+          - { name: duration, label: Duration, widget: string }
+      - { name: body, label: Content, widget: markdown }
