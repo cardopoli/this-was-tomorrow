@@ -22,12 +22,13 @@ collections:
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
       - { name: description, label: Description, widget: text, required: false }
 
-      - name: photos
-        label: Photos
-        widget: list
-        fields:
-          - { name: image, label: Image, widget: image }
-          - { name: caption, label: Caption, widget: string, required: false }
+   - name: photos
+  label: Photos
+  widget: list
+  required: false
+  fields:
+    - { name: image, label: Image, widget: image }
+    - { name: caption, label: Caption, widget: string, required: false }
 
       - name: audio
         label: Audio Files
