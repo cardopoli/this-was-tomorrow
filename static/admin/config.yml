@@ -3,8 +3,11 @@ backend:
   repo: cardopoli/this-was-tomorrow
   branch: main
 
-media_folder: images
-public_folder: /images
+site_url: https://thiswastomorrow.co.uk
+display_url: https://thiswastomorrow.co.uk
+
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
   - name: sites
@@ -15,20 +18,24 @@ collections:
     format: frontmatter
     fields:
       - { name: title, label: Site Title, widget: string }
-      - { name: location, label: Location, widget: string }
-      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"] }
-      - { name: description, label: Description, widget: text }
+      - { name: location, label: Location, widget: string, required: false }
+      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
       - name: photos
         label: Photos
         widget: list
         fields:
           - { name: image, label: Image, widget: image }
-          - { name: caption, label: Caption, widget: string }
+          - { name: caption, label: Caption, widget: string, required: false }
+
       - name: audio
         label: Audio Files
         widget: list
+        required: false
         fields:
           - { name: file, label: Audio File, widget: file }
           - { name: title, label: Title, widget: string }
-          - { name: duration, label: Duration, widget: string }
+          - { name: duration, label: Duration, widget: string, required: false }
+
       - { name: body, label: Content, widget: markdown }
