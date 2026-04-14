@@ -1,36 +1,25 @@
-backend:
-  name: github
-  repo: cardopoli/this-was-tomorrow
-  branch: main
+name: Build and Deploy
 
-media_folder: static/images
-public_folder: /images
+on:
+  push:
+    branches: [ main ]
 
-collections:
-  - name: sites
-    label: Sites
-    folder: src/sites
-    create: true
-    extension: md
-    format: yaml-frontmatter
-    fields:
-      - { name: title, label: Site Title, widget: string }
-      - { name: location, label: Location, widget: string }
-      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"] }
-      - { name: description, label: Description, widget: text }
-      - { name: date, label: Date, widget: datetime }
-      - name: photos
-        label: Photos
-        widget: list
-        fields:
-          - { name: image, label: Image, widget: image }
-          - { name: caption, label: Caption, widget: string }
-          - { name: alt, label: Alt Text, widget: string }
-      - name: audio
-        label: Audio Files
-        widget: list
-        fields:
-          - { name: file, label: Audio File, widget: file }
-          - { name: title, label: Title, widget: string }
-          - { name: duration, label: Duration, widget: string }
-      - { name: body, label: Content, widget: markdown }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+      
+      - name: Build site
+        run: hugo --minify
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
