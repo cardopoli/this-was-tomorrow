@@ -38,13 +38,9 @@
       <h3>{{ .title }}</h3>
       {{ if .description }}<p class="video-description">{{ .description }}</p>{{ end }}
       <div class="video-embed">
-        {{ if contains .url "youtube.com" }}
-          <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ (split .url "v=" | index 1) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        {{ else if contains .url "youtu.be" }}
-          <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ (split .url "/" | last) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        {{ else }}
-          <p><a href="{{ .url }}" target="_blank">{{ .title }}</a></p>
-        {{ end }}
+      {{ if .url }}
+  <iframe width="100%" height="480" src="https://www.youtube.com/embed/{{ (split .url "v=" | index 1) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{ end }}
       </div>
     </div>
     {{ end }}
