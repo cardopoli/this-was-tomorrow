@@ -8,14 +8,8 @@
     {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
   </div>
   {{ end }}
-  
-  {{ if .Params.description }}
-  <p>{{ .Params.description }}</p>
-  {{ end }}
-  
-  {{ .Content }}
-  
-  {{ if .Params.photos }}
+
+    {{ if .Params.photos }}
   <h2>PHOTOGRAPHS</h2>
   <div class="photos-grid">
     {{ range .Params.photos }}
@@ -29,6 +23,16 @@
       </div>
     {{ end }}
   </div>
+  
+  {{ if .Params.description }}
+  <p>{{ .Params.description }}</p>
+  {{ end }}
+
+
+  
+  {{ .Content }}
+  
+
   {{ end }}  <!-- ← THIS WAS MISSING -->
   
   {{ if .Params.audio }}
