@@ -9,6 +9,10 @@
   </div>
   {{ end }}
   
+  {{ if .Params.description }}
+  <p>{{ .Params.description }}</p>
+  {{ end }}
+  
   {{ if .Params.photos }}
   <div class="photos-grid">
     {{ range .Params.photos }}
@@ -22,10 +26,6 @@
       </div>
     {{ end }}
   </div>
-  {{ end }}
-  
-  {{ if .Params.description }}
-  <p>{{ .Params.description }}</p>
   {{ end }}
   
   {{ .Content }}
