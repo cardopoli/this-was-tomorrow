@@ -9,7 +9,7 @@ public_folder: /images
 collections:
   - name: sites
     label: Sites
-    folder: src/sites
+    folder: content/sites
     create: true
     extension: md
     format: frontmatter
