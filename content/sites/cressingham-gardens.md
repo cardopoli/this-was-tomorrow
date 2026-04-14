@@ -3,8 +3,8 @@ title: Cressingham Gardens
 location: Lambeth, London
 slug: cressingham-gardens
 draft: false
-photos:
-  - /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+image: "/images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg"
+caption: ""
 audio: []
 sources: []
 ---
