@@ -1,6 +1,8 @@
 /* THIS WAS TOMORROW - Site Visit Archive
    Clean 90s aesthetic */
 
+@import url('/css/embeds.css');
+
 :root {
     --bg: #f7f5f0;
     --text: #111;
