@@ -1,9 +1,18 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 location: ""
-slug: "{{ .Name }}"
+status: "planned"
+description: ""
+date: {{ .Date }}
 draft: false
 photos: []
 audio: []
-sources: []
 ---
+
+## Context
+
+[Add description here]
+
+## Resources
+
+- [Project one-pager](https://enricopolicardo.com/thiswastomorrow)
