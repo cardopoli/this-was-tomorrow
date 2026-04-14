@@ -192,9 +192,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 .photos-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;      ← Change from repeat(2, 1fr) to 1fr (single column)
     gap: 12px;
     margin: 32px 0;
+    max-width: 720px;                ← Add this (same as --max-w)
+    margin-left: auto;               ← Add this
+    margin-right: auto;              ← Add this
 }
 
 .photo-item {
