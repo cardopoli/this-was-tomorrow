@@ -1,40 +1,44 @@
 {{ define "main" }}
-<article class="site-page">
-<a href="{{ "/" | relURL }}" class="back">&larr;All sites</a>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.location }}<div class="location-line">{{ . }}</div>{{ end }}
-
-    {{ .Content }}
-
-    {{ with .Params.photos }}
-    <div class="photo-grid">
-        {{ range . }}
-        <img src="{{ . }}" alt="" loading="lazy">
-        {{ end }}
+<article>
+  <h1>{{ .Title }}</h1>
+  
+  {{ if .Params.location }}
+  <div class="meta">
+    <strong>Location:</strong> {{ .Params.location }}
+    {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
+  </div>
+  {{ end }}
+  
+  {{ if .Params.description }}
+  <p>{{ .Params.description }}</p>
+  {{ end }}
+  
+  {{ .Content }}
+  
+  {{ if .Params.photos }}
+  <h2>PHOTOGRAPHS</h2>
+  <div class="photos-grid">
+    {{ range .Params.photos }}
+    <div class="photo-item">
+      <img src="{{ .image }}" alt="{{ if .caption }}{{ .caption }}{{ else }}Photo{{ end }}">
+      {{ if .caption }}<div class="photo-caption">{{ .caption }}</div>{{ end }}
     </div>
     {{ end }}
-
-    {{ with .Params.audio }}
-    <div class="audio-section">
-        <h3>Audio</h3>
-        {{ range . }}
-        <div class="audio-item">
-            {{ with .title }}<div class="audio-title">{{ . }}</div>{{ end }}
-            {{ if .archive_url }}
-            <iframe src="https://archive.org/embed/{{ .archive_id }}" height="40" frameborder="0" allowfullscreen></iframe>
-            {{ else if .file }}
-            <audio controls preload="none"><source src="{{ .file }}" type="audio/mpeg"></audio>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
-    {{ end }}
-
-    {{ with .Params.sources }}
-    <div class="sources">
-        <strong>Sources</strong><br>
-        {{ range . }}- {{ . }}<br>{{ end }}
-    </div>
-    {{ end }}
+  </div>
+  {{ end }}
+  
+  {{ if .Params.audio }}
+  <h2>AUDIO INTERVIEWS</h2>
+  {{ range .Params.audio }}
+  <div class="audio-section">
+    <div class="audio-title">▶ {{ .title }}</div>
+    {{ if .duration }}<div class="audio-duration">{{ .duration }}</div>{{ end }}
+    <audio controls>
+      <source src="{{ .file }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  {{ end }}
+  {{ end }}
 </article>
 {{ end }}
