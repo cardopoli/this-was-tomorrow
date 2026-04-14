@@ -53,18 +53,13 @@ The photographs document a place that poses a quiet question: not "what if?" but
 
 **Sources:**
 
-- Tinker's Bubble, Wikipedia
-- Hidden Somerset: Tinkers Bubble – Off-Grid Living Beneath Ham Hill
-- Eco-Homes + Communities: Tinkers Bubble, Somerset
-- Somerset Daily: Discovering Tinkers Bubble – Somerset's Hidden Off-Grid Village
-- Living in the Future: Episode 3 – Tinkers Bubble
-- A Peek Into Tinkers Bubble – Anon HQ
-- Positive News: The off-grid community hidden in an English woodland
-- We the Uncivilised: Tinkers Bubble
-- Tinkers Bubble official website (tinkersbubble.org)
-- The Land Is Ours: Planning Precedents – Tinker's Bubble
-- Diggers and Dreamers: Tinkers Bubble
-- Landworkers Alliance: Celebrating 31 Years of Tinkers Bubble
-- ITV News West Country: Magical off-grid community near Yeovil gets public backing
-- The Ecologist: Tinker's Bubble – low-impact living
-- United Diversity Library: Tinker's Bubble Summary document
+- [Tinker's Bubble, Wikipedia](https://en.wikipedia.org/wiki/Tinker%27s_Bubble)
+- [Hidden Somerset: Tinkers Bubble - Off-Grid Living Beneath Ham Hill](https://www.hiddensomerset.co.uk/tinkers-bubble-off-grid-living-in-the-heart-of-somerset/)
+- [Eco-Homes + Communities: Tinkers Bubble, Somerset](https://ecohomes.blog/2010/05/10/tinkers-bubble-somerset/)
+- [Somerset Daily: Discovering Tinkers Bubble - Somerset's Hidden Off-Grid Village](https://somersetdaily.co.uk/discovering-tinkers-bubble-somersets-hidden-off-grid-village/)
+- [Somerset Daily: Living Off-Grid in Tinkers Bubble](https://somersetdaily.co.uk/living-off-grid-in-tinkers-bubble-a-sustainable-woodland-community/)
+- [Positive News: The off-grid community hidden in an English woodland](https://www.positive.news/society/the-eco-commune-in-an-english-woodland/)
+- [Tinkers Bubble official website](https://tinkersbubble.org/)
+- [The Land Is Ours: Planning Precedents - Tinker's Bubble](https://tlio.org.uk/chapter7/chapter-7-planning-precedents/)
+- [Diggers and Dreamers: Tinkers Bubble](https://diggersanddreamers.org.uk/community/tinkers-bubble)
+- [Landworkers Alliance: Celebrating 31 Years of Tinkers Bubble](https://landworkersalliance.org.uk/celebrating-31-years-of-tinkers-bubble/)
