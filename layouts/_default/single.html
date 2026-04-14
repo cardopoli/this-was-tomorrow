@@ -19,15 +19,17 @@
   <h2>PHOTOGRAPHS</h2>
   <div class="photos-grid">
     {{ range .Params.photos }}
-  <div class="photo-item">
-    {{ if reflect.IsMap . }}
-      <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
-      {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
-    {{ else }}
-      <img src="{{ . }}" alt="Photo">
+      <div class="photo-item">
+        {{ if reflect.IsMap . }}
+          <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
+          {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+        {{ else }}
+          <img src="{{ . }}" alt="Photo">
+        {{ end }}
+      </div>
     {{ end }}
   </div>
-{{ end }}
+  {{ end }}  <!-- ← THIS WAS MISSING -->
   
   {{ if .Params.audio }}
   <h2>AUDIO INTERVIEWS</h2>
@@ -42,5 +44,6 @@
   </div>
   {{ end }}
   {{ end }}
+
 </article>
 {{ end }}
