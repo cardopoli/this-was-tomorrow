@@ -19,13 +19,15 @@
   <h2>PHOTOGRAPHS</h2>
   <div class="photos-grid">
     {{ range .Params.photos }}
-    <div class="photo-item">
-      <img src="{{ .image }}" alt="{{ if .caption }}{{ .caption }}{{ else }}Photo{{ end }}">
-      {{ if .caption }}<div class="photo-caption">{{ .caption }}</div>{{ end }}
-    </div>
+  <div class="photo-item">
+    {{ if reflect.IsMap . }}
+      <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
+      {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+    {{ else }}
+      <img src="{{ . }}" alt="Photo">
     {{ end }}
   </div>
-  {{ end }}
+{{ end }}
   
   {{ if .Params.audio }}
   <h2>AUDIO INTERVIEWS</h2>
