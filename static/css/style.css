@@ -216,11 +216,13 @@ img { max-width: 100%; height: auto; display: block; }
     line-height: 1.6;
 }
 
-@media (max-width: 500px) {
-    .photos-grid { 
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
+/* ALWAYS single column photos */
+.photos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 32px 0;
+}
 }
 
 /* VIDEOS */
