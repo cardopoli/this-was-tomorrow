@@ -1,10 +1,11 @@
 ---
-title: "Bosavern Community Farm"
-location: "St Just, Cornwall"
-slug: "bosavern"
-draft: false
+title: Bosavern Community Farm
+location: St Just, Cornwall
+description: ''
 photos: []
 audio: []
+draft: false
+slug: bosavern
 sources: []
 ---
 
