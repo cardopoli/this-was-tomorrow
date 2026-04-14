@@ -11,7 +11,7 @@
     --link: #111;
     --hover: #555;
     --mono-bold: 'VT323', monospace;
-    --mono-body: 'Courier New', Courier, monospace;
+    --mono-body: 'VT323', Courier, monospace;
     --max-w: 720px;
     
     /* SPACING CONTROLS - BREATHING ROOM */
