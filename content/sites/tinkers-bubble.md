@@ -1,10 +1,13 @@
 ---
-title: "Tinkers Bubble"
-location: "Norton Sub Hamdon, Somerset"
-slug: "tinkers-bubble"
-draft: false
-photos: []
+title: Tinkers Bubble
+location: Norton Sub Hamdon, Somerset
+description: ''
+photos:
+  - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
+    caption: ''
 audio: []
+draft: false
+slug: tinkers-bubble
 sources: []
 ---
 
@@ -46,9 +49,10 @@ Tinkers Bubble represents a sustained, three-decade experiment in living outside
 
 The photographs document a place that poses a quiet question: not "what if?" but "what is?" – the lived reality of fossil-fuel-free community, the daily negotiations between collective and individual, between the ideals of 1994 and the facts of 2026. The temporary buildings (designed by principle to be easily removed, to leave minimal trace) have become homes that have sheltered residents for decades. The steam-powered sawmill, the hand-felled timber, the horses, the apple harvest – these are not performance or tourism, but the infrastructure of survival and sustenance.
 
----
+***
 
 **Sources:**
+
 - Tinker's Bubble, Wikipedia
 - Hidden Somerset: Tinkers Bubble – Off-Grid Living Beneath Ham Hill
 - Eco-Homes + Communities: Tinkers Bubble, Somerset
