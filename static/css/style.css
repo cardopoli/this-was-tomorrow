@@ -147,7 +147,9 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
 }
 
 .site-page .location-line {
@@ -163,10 +165,10 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 14px;
     border-bottom: 1px solid var(--rule);
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .site-page p {
