@@ -1,27 +1,24 @@
 /* THIS WAS TOMORROW - Site Visit Archive
-   Courier body + VT323 headers, generous spacing */
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+   Clean, readable design inspired by Enrico Policardo aesthetic */
 
 :root {
-    --bg: #f7f5f0;
-    --text: #111;
+    --bg: #faf9f7;
+    --text: #222;
     --muted: #666;
-    --rule: #ccc;
-    --link: #111;
-    --hover: #555;
-    --mono-bold: 'VT323', monospace;
-    --mono-body: 'VT323', Courier, monospace;
-    --max-w: 720px;
+    --rule: #ddd;
+    --link: #222;
+    --hover: #888;
+    --serif: Georgia, 'Times New Roman', Times, serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    --max-w: 680px;
     
-    /* SPACING CONTROLS - BREATHING ROOM */
+    /* SPACING */
     --sp-xs: 4px;
     --sp-sm: 8px;
     --sp-md: 16px;
     --sp-lg: 24px;
     --sp-xl: 40px;
     --sp-2xl: 60px;
-    --sp-3xl: 80px;
 }
 
 * {
@@ -31,16 +28,23 @@
 }
 
 body {
-    font-family: var(--mono-body);
-    font-size: 15px;
-    line-height: 1.8;
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.75;
     color: var(--text);
     background: var(--bg);
-    letter-spacing: 0.3px;
 }
 
-a { color: var(--link); }
-a:hover { color: var(--hover); }
+a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--hover);
+}
 
 img {
     max-width: 100%;
@@ -59,19 +63,17 @@ img {
 /* SITE HEADER */
 
 .site-header {
-    padding: var(--sp-3xl) 0 var(--sp-2xl);
-    border-bottom: 2px solid var(--text);
-    margin-bottom: var(--sp-3xl);
+    padding: var(--sp-2xl) 0 var(--sp-lg);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: var(--sp-2xl);
 }
 
 .site-header h1 {
-    font-family: var(--mono-bold);
-    font-size: 22px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: var(--sp-lg);
-    line-height: 1.4;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    margin-bottom: var(--sp-sm);
 }
 
 .site-header h1 a {
@@ -80,26 +82,24 @@ img {
 }
 
 .site-header .tagline {
-    font-family: var(--mono-body);
+    font-family: var(--serif);
     font-size: 14px;
     color: var(--muted);
-    letter-spacing: 0.5px;
-    line-height: 1.6;
+    font-style: italic;
 }
 
 /* SITE INDEX */
 
 .site-index {
-    margin-bottom: var(--sp-3xl);
+    margin-bottom: var(--sp-2xl);
 }
 
 .site-index .intro {
     font-size: 15px;
     color: var(--muted);
-    margin-bottom: var(--sp-2xl);
+    margin-bottom: var(--sp-xl);
     max-width: 550px;
-    line-height: 1.9;
-    font-family: var(--mono-body);
+    line-height: 1.8;
 }
 
 .site-list {
@@ -115,83 +115,76 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: var(--sp-xl) 0;
+    padding: var(--sp-lg) 0;
     text-decoration: none;
-    font-family: var(--mono-body);
-    font-size: 15px;
+    font-size: 16px;
+    gap: var(--sp-lg);
 }
 
 .site-list a:hover {
-    background: rgba(0,0,0,0.03);
+    color: var(--hover);
 }
 
 .site-list .name {
-    font-family: var(--mono-bold);
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 500;
 }
 
 .site-list .location {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--muted);
     white-space: nowrap;
-    margin-left: var(--sp-lg);
-    font-family: var(--mono-body);
 }
 
 /* SITE PAGE */
 
 .site-page {
-    margin-bottom: var(--sp-3xl);
-}
-
-.site-page .back {
-    font-family: var(--mono-body);
-    font-size: 13px;
-    text-decoration: none;
-    color: var(--muted);
-    display: inline-block;
     margin-bottom: var(--sp-2xl);
 }
 
-.site-page .back:hover { color: var(--text); }
+.site-page .back {
+    font-family: var(--serif);
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--muted);
+    display: inline-block;
+    margin-bottom: var(--sp-xl);
+}
+
+.site-page .back:hover {
+    color: var(--text);
+}
 
 .site-page h1 {
-    font-family: var(--mono-bold);
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: var(--sp-lg);
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: var(--sp-sm);
     line-height: 1.3;
 }
 
 .site-page .location-line {
-    font-family: var(--mono-body);
-    font-size: 14px;
+    font-family: var(--serif);
+    font-size: 15px;
     color: var(--muted);
-    margin-bottom: var(--sp-3xl);
-    line-height: 1.7;
+    margin-bottom: var(--sp-2xl);
+    font-style: italic;
 }
 
 .site-page h2 {
-    font-family: var(--mono-bold);
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: var(--sp-3xl) 0 var(--sp-2xl);
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 600;
+    margin: var(--sp-2xl) 0 var(--sp-lg);
     border-bottom: 1px solid var(--rule);
-    padding-bottom: var(--sp-lg);
+    padding-bottom: var(--sp-md);
 }
 
 .site-page p,
 .site-page ul,
 .site-page ol {
     margin-bottom: var(--sp-lg);
-    font-family: var(--mono-body);
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 .site-page ul, .site-page ol {
@@ -206,13 +199,13 @@ img {
     color: var(--text);
 }
 
-/* PHOTOS GRID - BREATHING ROOM */
+/* PHOTOS GRID */
 
 .photos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-xl);
-    margin: var(--sp-3xl) 0;
+    gap: var(--sp-lg);
+    margin: var(--sp-2xl) 0;
 }
 
 .photos-grid img {
@@ -226,37 +219,41 @@ img {
 }
 
 .photo-caption {
-    padding: var(--sp-lg);
-    background: #fafafa;
+    padding: var(--sp-md);
+    background: #fff;
     font-size: 13px;
     color: var(--muted);
-    font-family: var(--mono-body);
-    line-height: 1.7;
+    line-height: 1.6;
+    border: 1px solid var(--rule);
+    border-top: none;
 }
 
 @media (max-width: 500px) {
     .photos-grid {
         grid-template-columns: 1fr;
-        gap: var(--sp-2xl);
+        gap: var(--sp-xl);
     }
 }
 
-/* AUDIO - BREATHING ROOM */
+/* AUDIO */
 
 .audio-section {
-    margin: var(--sp-3xl) 0;
-    padding: var(--sp-2xl);
+    margin: var(--sp-2xl) 0;
+    padding: var(--sp-lg);
     border: 1px solid var(--rule);
     background: #fff;
 }
 
 .audio-section h2 {
-    margin: 0 0 var(--sp-2xl) 0;
+    margin: 0 0 var(--sp-lg) 0;
+    font-size: 16px;
+    border: none;
+    padding: 0;
 }
 
 .audio-item {
-    margin-bottom: var(--sp-2xl);
-    padding-bottom: var(--sp-2xl);
+    margin-bottom: var(--sp-lg);
+    padding-bottom: var(--sp-lg);
     border-bottom: 1px solid var(--rule);
 }
 
@@ -267,98 +264,90 @@ img {
 }
 
 .audio-title {
-    font-family: var(--mono-body);
+    font-family: var(--serif);
     font-size: 15px;
-    font-weight: 700;
-    margin-bottom: var(--sp-md);
-    line-height: 1.6;
+    font-weight: 600;
+    margin-bottom: var(--sp-sm);
 }
 
 .audio-duration {
-    font-family: var(--mono-body);
+    font-family: var(--serif);
     font-size: 13px;
     color: var(--muted);
-    margin-bottom: var(--sp-lg);
+    margin-bottom: var(--sp-md);
 }
 
 audio {
     width: 100%;
-    margin-top: var(--sp-lg);
+    margin-top: var(--sp-md);
 }
 
 /* SOURCES */
 
 .sources {
-    margin-top: var(--sp-3xl);
-    padding-top: var(--sp-2xl);
+    margin-top: var(--sp-2xl);
+    padding-top: var(--sp-lg);
     border-top: 1px solid var(--rule);
     font-size: 13px;
     color: var(--muted);
     line-height: 1.8;
-    font-family: var(--mono-body);
 }
 
 .sources strong {
-    font-family: var(--mono-bold);
+    font-family: var(--serif);
+    font-weight: 600;
     font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* FOOTER */
 
 .site-footer {
-    border-top: 2px solid var(--text);
-    padding: var(--sp-3xl) 0 var(--sp-2xl);
-    margin-top: var(--sp-3xl);
+    border-top: 1px solid var(--rule);
+    padding: var(--sp-2xl) 0 var(--sp-lg);
+    margin-top: var(--sp-2xl);
     font-size: 14px;
-    font-family: var(--mono-body);
 }
 
 .footer-contact p {
-    margin-bottom: var(--sp-md);
+    margin-bottom: var(--sp-sm);
     line-height: 1.7;
 }
 
 .footer-ace {
-    margin: var(--sp-2xl) 0 var(--sp-lg);
+    margin: var(--sp-xl) 0 var(--sp-lg);
 }
 
 .footer-ace img {
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
 .footer-credit {
-    font-family: var(--mono-body);
-    font-size: 12px;
+    font-family: var(--serif);
+    font-size: 13px;
     color: var(--muted);
-    margin-top: var(--sp-2xl);
-    line-height: 1.6;
+    margin-top: var(--sp-lg);
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 600px) {
     :root {
-        --sp-3xl: 50px;
         --sp-2xl: 40px;
         --sp-xl: 24px;
         --sp-lg: 16px;
     }
     
-    .site-header h1 { font-size: 18px; }
-    .site-page h1 { font-size: 22px; }
+    .site-header h1 {
+        font-size: 16px;
+    }
+    
+    .site-page h1 {
+        font-size: 24px;
+    }
+    
     .site-list a {
         flex-direction: column;
         gap: var(--sp-sm);
-        padding: var(--sp-xl) 0;
-    }
-    .site-list .location {
-        margin-left: 0;
-    }
-    
-    .photos-grid {
-        gap: var(--sp-xl);
     }
 }
