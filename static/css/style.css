@@ -470,3 +470,26 @@ article > p:first-of-type {
     .site-list .location { text-align: left; margin-left: 0; }
     .audio-section { padding: 16px; }
 }
+/* CONTENT BODY */
+
+article h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+}
+
+article h3 {
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+article p {
+    margin-bottom: 24px;
+}
+
+article img {
+    margin-bottom: 40px;
+}
+
+.photos-grid {
+    margin-bottom: 48px;
+}
