@@ -1,11 +1,13 @@
 ---
 title: Tinkers Bubble
 location: Norton Sub Hamdon, Somerset
+status: visited
 description: ''
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble, photo by Enrico Policardo
 audio: []
+videos: []
 archives:
   - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
     title: Tinkers Bubble Interview Cam + Meg
@@ -23,6 +25,8 @@ sources: []
 Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road – historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
 
 The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
+
+<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ## HOW IT WORKS
 
