@@ -50,6 +50,10 @@ The community operates on principles of consensus and cooperative ownership. Unl
 
 The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 
+![](/images/_DSC1934_Tinkers%20Bubble%20Selected.jpg)
+
+![](/images/_DSC1962_Tinkers%20Bubble%20Selected.jpg)
+
 # THE BROADER SIGNIFICANCE
 
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
