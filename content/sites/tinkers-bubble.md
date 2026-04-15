@@ -3,20 +3,20 @@ title: Tinkers Bubble
 location: Norton Sub Hamdon, Somerset
 status: visited
 description: ''
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/lgqsyq4zuu59jkiyknr9k/AHU2uIPuCA-kdPrfKRvxLPY?rlkey=pcsncy9zpkbdm27xgwh6n2clk&st=ly13emu5&dl=0
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble, photo by Enrico Policardo
+draft: false
+archives:
+  - note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+    title: Tinkers Bubble Interview Cam + Meg
+    url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
+  - note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+    title: Tinkers Bubble Interview Ree
+    url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
 audio: []
 videos: []
-archives:
-  - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
-    title: Tinkers Bubble Interview Cam + Meg
-    note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-  - url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
-    title: Tinkers Bubble Interview Ree
-    note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-draft: false
 slug: tinkers-bubble
 sources: []
 ---
