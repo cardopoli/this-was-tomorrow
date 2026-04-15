@@ -10,6 +10,9 @@ archives:
   - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
     title: Tinkers Bubble Interview Cam + Meg
     note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+  - url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
+    title: Tinkers Bubble Interview Ree
+    note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
 draft: false
 slug: tinkers-bubble
 sources: []
