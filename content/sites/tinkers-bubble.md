@@ -20,7 +20,7 @@ slug: tinkers-bubble
 sources: []
 ---
 
-<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1" width="500" height="400" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1" width="100%" height="375" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ## THE PLACE AND ITS ORIGINS
 
