@@ -27,7 +27,21 @@
     {{ end }}
   </div>
   {{ end }}
-  
+
+  {{ if .Params.audio }}
+  <h2>AUDIO INTERVIEWS</h2>
+  {{ range .Params.audio }}
+  <div class="audio-section">
+    <div class="audio-title">▶ {{ .title }}</div>
+    {{ if .duration }}<div class="audio-duration">{{ .duration }}</div>{{ end }}
+    <audio controls>
+      <source src="{{ .file }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  {{ end }}
+  {{ end }}
+
   {{ .Content }}
   
   {{ if .Params.videos }}
@@ -71,19 +85,6 @@
     {{ end }}
   </ul>
   {{ end }}
-  
-  {{ if .Params.audio }}
-  <h2>AUDIO INTERVIEWS</h2>
-  {{ range .Params.audio }}
-  <div class="audio-section">
-    <div class="audio-title">▶ {{ .title }}</div>
-    {{ if .duration }}<div class="audio-duration">{{ .duration }}</div>{{ end }}
-    <audio controls>
-      <source src="{{ .file }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-  {{ end }}
-  {{ end }}
+
 </article>
 {{ end }}
