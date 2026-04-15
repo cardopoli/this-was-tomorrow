@@ -42,6 +42,8 @@
     {{ end }}
   {{ end }}
 
+{{ partial "dropbox-gallery.html" . }}
+  
   {{ if .Params.audio }}
   <h2>AUDIO INTERVIEWS</h2>
   {{ range .Params.audio }}
