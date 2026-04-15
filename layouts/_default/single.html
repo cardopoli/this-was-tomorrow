@@ -14,18 +14,32 @@
   {{ end }}
   
   {{ if .Params.photos }}
-  <div class="photos-grid">
-    {{ range .Params.photos }}
-      <div class="photo-item">
-        {{ if reflect.IsMap . }}
-          <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
-          {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
-        {{ else }}
-          <img src="{{ . }}" alt="Photo">
-        {{ end }}
-      </div>
+    {{ $photos := .Params.photos }}
+    {{ $first := index $photos 0 }}
+
+    <div class="photo-hero">
+      {{ if reflect.IsMap $first }}
+        <img src="{{ $first.image }}" alt="{{ $first.caption | default "Photo" }}">
+        {{ with $first.caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+      {{ else }}
+        <img src="{{ $first }}" alt="Photo">
+      {{ end }}
+    </div>
+
+    {{ if gt (len $photos) 1 }}
+    <div class="photos-grid">
+      {{ range after 1 $photos }}
+        <div class="photo-item">
+          {{ if reflect.IsMap . }}
+            <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
+            {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+          {{ else }}
+            <img src="{{ . }}" alt="Photo">
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
     {{ end }}
-  </div>
   {{ end }}
 
   {{ if .Params.audio }}
