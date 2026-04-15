@@ -1,7 +1,4 @@
-
-<!-- Dropbox Masonry Gallery
-     Drop this into your Hugo page content body
-     or include it as a partial -->
+<!-- Dropbox Masonry Gallery via Cloudflare Worker proxy -->
 
 <div id="dropbox-gallery" class="dbx-gallery">
   <div class="dbx-loading">Loading images...</div>
@@ -49,7 +46,6 @@
   opacity: 0.92;
 }
 
-/* Lightbox */
 .dbx-lightbox {
   display: none;
   position: fixed;
@@ -96,26 +92,29 @@
 <script>
 (function() {
 
-  // ── CONFIG ──────────────────────────────────────────────
- var TOKEN = null; // handled by proxy
- var PROXY_URL = 'https://dropbox-proxy.YOUR-SUBDOMAIN.workers.dev';
-     
+  var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+  var SHARED_LINK = '{{ .Params.dropbox_gallery }}';
+
   var gallery = document.getElementById('dropbox-gallery');
 
-  // Fetch file list from shared folder
-  fetch('https://api.dropboxapi.com/2/files/list_folder', {
-    method: 'POST',
-    headers: {
-      'Authorization': 'Bearer ' + TOKEN,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      path: '',
-      shared_link: { url: SHARED_LINK },
-      recursive: false
-    })
+  if (!SHARED_LINK || SHARED_LINK === '') {
+    gallery.innerHTML = '';
+    return;
+  }
+
+  function proxyFetch(endpoint, body) {
+    return fetch(PROXY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ endpoint: endpoint, body: body })
+    }).then(function(r) { return r.json(); });
+  }
+
+  proxyFetch('files/list_folder', {
+    path: '',
+    shared_link: { url: SHARED_LINK },
+    recursive: false
   })
-  .then(function(r) { return r.json(); })
   .then(function(data) {
 
     if (data.error) {
@@ -123,7 +122,6 @@
       return;
     }
 
-    // Filter to images only
     var images = (data.entries || []).filter(function(f) {
       return f['.tag'] === 'file' && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name);
     });
@@ -133,29 +131,17 @@
       return;
     }
 
-    // Build masonry grid
     var html = '<div class="masonry">';
     images.forEach(function(img) {
-      // Build direct image URL from shared link + file path
-      var directUrl = 'https://api.dropboxapi.com/2/files/get_temporary_link';
-      html += '<div class="masonry-item" data-path="' + img.path_lower + '">';
+      html += '<div class="masonry-item">';
       html += '<img src="" data-path="' + img.path_lower + '" alt="' + img.name + '" loading="lazy">';
       html += '</div>';
     });
     html += '</div>';
     gallery.innerHTML = html;
 
-    // Load each image via temporary link
     images.forEach(function(img) {
-      fetch('https://api.dropboxapi.com/2/files/get_temporary_link', {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Bearer ' + TOKEN,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ path: img.path_lower })
-      })
-      .then(function(r) { return r.json(); })
+      proxyFetch('files/get_temporary_link', { path: img.path_lower })
       .then(function(d) {
         if (d.link) {
           var el = gallery.querySelector('img[data-path="' + img.path_lower + '"]');
@@ -164,7 +150,6 @@
       });
     });
 
-    // Lightbox
     var lightbox = document.getElementById('dbxLightbox');
     var lightboxImg = document.getElementById('dbxLightboxImg');
     var closeBtn = document.getElementById('dbxClose');
