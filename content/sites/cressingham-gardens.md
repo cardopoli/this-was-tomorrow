@@ -3,12 +3,13 @@ title: Cressingham Gardens
 location: Lambeth, London
 status: visited
 description: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/2z7j4xarpide2av7il1v2/AGMCYPA1xqU5WOLfWuB7hoY?rlkey=i0dody63n9sbetpczis74ysov&dl=0
 photos:
   - image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
     caption: ''
-audio: []
-draft: false
 image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+draft: false
+audio: []
 slug: cressingham-gardens
 caption: ''
 sources: []
@@ -29,6 +30,8 @@ Hollamby believed strongly that architecture is 'a social art', both in the way 
 Lambeth's public housing of the period was conceived in the spirit of the British welfare state. Under Hollamby's leadership, the council's building programme grew manyfold in response to the government's housing drive of the 1960s. Lambeth stands out amongst inner-London boroughs during this period for developing an extensive variety of solutions in its search for high-density housing.
 
 Westman prioritised eco-friendly architecture, and the estate, as a consequence, was planned to retain as many existing trees as possible, and a tongue of landscaping extends from the north of the plateau to Tulse Hill, giving views into the site to passers-by and providing a pedestrian route connecting to the nursery school and then on to Brockwell Park.
+
+<iframe src="https://archive.org/embed/ace-twt-30032026-cressingham-gardens-andy-elizabeth&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ## WHY IT MATTERS – THEN AND NOW
 
