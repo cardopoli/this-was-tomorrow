@@ -62,7 +62,7 @@ Tinkers Bubble represents a sustained, three-decade experiment in living outside
 
 The photographs document a place that poses a quiet question: not "what if?" but "what is?" - the lived reality of fossil-fuel-free community, the daily negotiations between collective and individual, between the ideals of 1994 and the facts of 2026. The temporary buildings (designed by principle to be easily removed, to leave minimal trace) have become homes that have sheltered residents for decades. The steam-powered sawmill, the hand-felled timber, the horses, the apple harvest - these are not performance or tourism, but the infrastructure of survival and sustenance.
 
-<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="100%" height="360" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ***
 
