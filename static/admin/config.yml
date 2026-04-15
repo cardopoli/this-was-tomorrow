@@ -48,6 +48,7 @@ collections:
           - { name: url, label: YouTube URL, widget: string, hint: "Full URL or video ID" }
           - { name: title, label: Title, widget: string }
           - { name: description, label: Description, widget: string, required: false }
+          - { name: dropbox_gallery, label: Dropbox Gallery Folder URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
       
       - name: archives
         label: Archive Links
