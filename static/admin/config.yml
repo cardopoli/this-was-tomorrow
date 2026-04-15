@@ -2,13 +2,10 @@ backend:
   name: github
   repo: cardopoli/this-was-tomorrow
   branch: main
-
 site_url: https://thiswastomorrow.co.uk
 display_url: https://thiswastomorrow.co.uk
-
 media_folder: "static/images"
 public_folder: "/images"
-
 collections:
   - name: sites
     label: Sites
@@ -21,6 +18,7 @@ collections:
       - { name: location, label: Location, widget: string, required: false }
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
       - { name: description, label: Description, widget: text, required: false }
+      - { name: dropbox_gallery, label: Dropbox Gallery Folder URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
       
       - name: photos
         label: Photos
@@ -48,7 +46,6 @@ collections:
           - { name: url, label: YouTube URL, widget: string, hint: "Full URL or video ID" }
           - { name: title, label: Title, widget: string }
           - { name: description, label: Description, widget: string, required: false }
-          - { name: dropbox_gallery, label: Dropbox Gallery Folder URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
       
       - name: archives
         label: Archive Links
