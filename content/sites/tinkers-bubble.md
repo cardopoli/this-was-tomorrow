@@ -4,7 +4,7 @@ location: Norton Sub Hamdon, Somerset
 description: ''
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
-    caption: ''
+    caption: The guest house at Tinkers Bubble, photo by Enrico Policardo
 audio: []
 archives:
   - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
