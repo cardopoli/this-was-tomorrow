@@ -17,9 +17,9 @@ collections:
       - { name: title, label: Site Title, widget: string }
       - { name: location, label: Location, widget: string, required: false }
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
-      - { name: description, label: Description, widget: text, required: false }
-      - { name: dropbox_gallery, label: Dropbox Gallery Folder URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
-      
+      - { name: description, label: Short Description, widget: text, required: false }
+      - { name: dropbox_gallery, label: Dropbox Gallery URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
+
       - name: photos
         label: Photos
         widget: list
@@ -27,42 +27,5 @@ collections:
         fields:
           - { name: image, label: Image, widget: image }
           - { name: caption, label: Caption, widget: string, required: false }
-      
-      - name: audio
-        label: Audio Files
-        widget: list
-        required: false
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: duration, label: Duration, widget: string, required: false }
-          - { name: embed, label: Archive.org Embed URL, widget: string, required: false, hint: "Paste the Archive.org embed URL e.g. https://archive.org/embed/YOUR-ITEM-ID" }
-          - { name: file, label: Audio File (fallback), widget: file, required: false, hint: "Only needed if not using Archive.org embed" }
-      
-      - name: videos
-        label: Videos (YouTube)
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: YouTube URL, widget: string, hint: "Full URL or video ID" }
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: Description, widget: string, required: false }
-      
-      - name: archives
-        label: Archive Links
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: Archive.org URL, widget: string, hint: "Full URL to archive page" }
-          - { name: title, label: Title, widget: string }
-          - { name: note, label: Note, widget: string, required: false }
-      
-      - name: external_links
-        label: External Links
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: URL, widget: string }
-          - { name: title, label: Link Text, widget: string }
-          - { name: source, label: Source, widget: string, required: false }
-      
+
       - { name: body, label: Content, widget: markdown, required: false }
