@@ -213,17 +213,17 @@ article > p:first-of-type {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
-    margin: 40px 0 48px 48px;
+    margin: 40px 0 48px;
 }
 
 .photo-item {
-    margin-bottom: 24px;
+    margin-bottom: 48px;
 }
 
 .photos-grid img {
     width: 100%;
     object-fit: cover;
-   margin-bottom: 24px;
+   margin-bottom: 48px;
 }
 
 .photo-caption {
