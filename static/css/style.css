@@ -493,3 +493,14 @@ article img {
 .photos-grid {
     margin-bottom: 48px;
 }
+article img {
+    margin-bottom: 40px;
+}
+
+.photo-item img {
+    margin-bottom: 0;
+}
+
+.photo-caption {
+    margin-bottom: 40px;
+}
