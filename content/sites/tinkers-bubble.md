@@ -22,13 +22,13 @@ sources: []
 
 <iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1" width="100%" height="375" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
-## THE PLACE AND ITS ORIGINS
+# THE PLACE AND ITS ORIGINS
 
 Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road – historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
 
 The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 
-## HOW IT WORKS
+# HOW IT WORKS
 
 Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
 
@@ -48,13 +48,13 @@ The community operates on principles of consensus and cooperative ownership. Unl
 
 The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 
-## THE BROADER SIGNIFICANCE
+# THE BROADER SIGNIFICANCE
 
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
 
 Celebrating its 30th anniversary in January 2024, the village prides itself on being "fossil fuel free" and a pioneer in the UK's off-grid and intentional community sectors. There are times when they find it challenging – the inevitable irritations of living with other people, or getting up in the dark to milk the cows, or mending a fence in the rain. But the community persists.
 
-## CONTEXT FOR THIS PROJECT
+# CONTEXT FOR THIS PROJECT
 
 Tinkers Bubble represents a sustained, three-decade experiment in living outside the dominant economic and energy systems. Unlike short-term utopian projects, it has endured – through changes in residents, economic pressures, planning uncertainties, and the grinding reality of land-based work. The grant of permanent planning permission in 2023 marks a turning point: the state has formally acknowledged that this model of living works, that it is sustainable, and that it deserves continuance.
 
