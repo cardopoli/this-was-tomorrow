@@ -1,13 +1,13 @@
 ---
-title: Bosavern Community Farm
-location: St Just, Cornwall
-description: ''
+title: Bosavern Community Farm}
+location: 'St Just, Cornwall'}
+status: planned
 photos: []
-audio: []
+dropbox_gallery: 
 draft: false
-slug: bosavern
-sources: []
 ---
+
+
 
 ## The Land & The Beginning
 

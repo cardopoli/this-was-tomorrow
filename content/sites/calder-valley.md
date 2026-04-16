@@ -1,12 +1,13 @@
 ---
-title: "Calder Valley Community Land Trust"
-location: "Hebden Bridge & Todmorden"
-slug: "calder-valley"
-draft: false
+title: Calder Valley Community Land Trust}
+location: Hebden Bridge & Todmorden}
+status: planned
 photos: []
-audio: []
-sources: []
+dropbox_gallery: 
+draft: false
 ---
+
+
 
 ## Origins & Context
 

@@ -1,12 +1,13 @@
 ---
-title: "Trelay Cohousing Community"
-location: "North Cornwall"
-slug: "trelay"
-draft: false
+title: Trelay Cohousing Community}
+location: North Cornwall}
+status: planned
 photos: []
-audio: []
-sources: []
+dropbox_gallery: 
+draft: false
 ---
+
+
 
 ## Origins & Vision
 

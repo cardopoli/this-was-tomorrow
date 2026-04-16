@@ -1,12 +1,13 @@
 ---
-title: "Hastings Commons"
-location: "Hastings, East Sussex"
-slug: "hastings-commons"
-draft: false
+title: Hastings Commons}
+location: 'Hastings, East Sussex'}
+status: planned
 photos: []
-audio: []
-sources: []
+dropbox_gallery: 
+draft: false
 ---
+
+
 
 ## THE PLACE AND THE PROBLEM
 

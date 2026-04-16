@@ -1,12 +1,13 @@
 ---
-title: "LILAC: Low Impact Living Affordable Community"
-location: "Leeds"
-slug: "lilac"
-draft: false
+title: 'LILAC
+location: Leeds}
+status: planned
 photos: []
-audio: []
-sources: []
+dropbox_gallery: 
+draft: false
 ---
+
+
 
 ## Overview
 
