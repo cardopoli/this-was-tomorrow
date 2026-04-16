@@ -42,16 +42,39 @@
     {{ end }}
   {{ end }}
 
-  <!-- NEW: Body intro before gallery -->
+  <!-- TEXT BEFORE FIRST GALLERY -->
   {{ if .Params.body_intro }}
     {{ .Params.body_intro | markdownify }}
   {{ end }}
 
+  <!-- FIRST GALLERY -->
   {{ if .Params.dropbox_gallery }}
   {{ partial "dropbox-gallery.html" . }}
   {{ end }}
 
+  <!-- TEXT BETWEEN GALLERIES -->
+  {{ if .Params.body_middle }}
+    {{ .Params.body_middle | markdownify }}
+  {{ end }}
+
+  <!-- SECOND GALLERY (optional) -->
+  {{ if .Params.dropbox_gallery_2 }}
+  {{ partial "dropbox-gallery.html" . }}
+  {{ end }}
+
+  <!-- MAIN CONTENT -->
   {{ .Content }}
 
+  <!-- LINKS (bottom) -->
+  {{ if .Params.links }}
+  <div class="links-section">
+    {{ range .Params.links }}
+    <div class="link-item">
+      <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
 </article>
 {{ end }}
