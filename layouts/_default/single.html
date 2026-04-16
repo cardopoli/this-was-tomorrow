@@ -1,48 +1,52 @@
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
-  
+
   {{ if .Params.location }}
   <div class="meta">
     <strong>Location:</strong> {{ .Params.location }}
     {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
   </div>
   {{ end }}
-  
-  <!-- HERO PHOTO + CAPTION -->
+
+  {{ if .Params.description }}
+  <p class="description">{{ .Params.description }}</p>
+  {{ end }}
+
   {{ if .Params.photos }}
-    {{ $hero := index .Params.photos 0 }}
+    {{ $photos := .Params.photos }}
+    {{ $first := index $photos 0 }}
+
     <div class="photo-hero">
-      <img src="{{ $hero.image }}" alt="{{ $hero.caption | default "Photo" }}">
-      {{ if $hero.caption }}<div class="photo-caption">{{ $hero.caption }}</div>{{ end }}
+      {{ if reflect.IsMap $first }}
+        <img src="{{ $first.image }}" alt="{{ $first.caption | default "Photo" }}">
+        {{ with $first.caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+      {{ else }}
+        <img src="{{ $first }}" alt="Photo">
+      {{ end }}
     </div>
-  {{ end }}
 
-  <!-- TEXT SECTION 1 -->
-  {{ if .Params.body_intro }}
-    {{ .Params.body_intro | markdownify }}
-  {{ end }}
-
-  <!-- DROPBOX GALLERY -->
-  {{ if .Params.dropbox_gallery }}
-    {{ partial "dropbox-gallery.html" . }}
-  {{ end }}
-
-  <!-- TEXT SECTION 2 -->
-  {{ if .Params.body_main }}
-    {{ .Params.body_main | markdownify }}
-  {{ end }}
-
-  <!-- LINKS (bottom) -->
-  {{ if .Params.links }}
-  <div class="links-section">
-    {{ range .Params.links }}
-    <div class="link-item">
-      <a href="{{ .url }}" target="_blank">{{ .title }}</a>
-      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
+    {{ if gt (len $photos) 1 }}
+    <div class="photos-grid">
+      {{ range after 1 $photos }}
+        <div class="photo-item">
+          {{ if reflect.IsMap . }}
+            <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}">
+            {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+          {{ else }}
+            <img src="{{ . }}" alt="Photo">
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
     {{ end }}
-  </div>
   {{ end }}
+
+  {{ if .Params.dropbox_gallery }}
+  {{ partial "dropbox-gallery.html" . }}
+  {{ end }}
+
+  {{ .Content }}
+
 </article>
 {{ end }}
