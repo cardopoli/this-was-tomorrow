@@ -1,12 +1,12 @@
 ---
-title: OWCH / New Ground Cohousing
-location: High Barnet, London
-status: planned
-photos: []
-dropbox_gallery: 
+title: "OWCH / New Ground Cohousing"
+location: "High Barnet, London"
+slug: "owch-new-ground"
 draft: false
+photos: []
+audio: []
+sources: []
 ---
-
 
 ## THE CONCEPT AND ITS ORIGINS
 

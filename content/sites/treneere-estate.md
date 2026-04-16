@@ -1,12 +1,12 @@
 ---
-title: Treneere Estate
-location: Penzance, West Cornwall
-status: planned
-photos: []
-dropbox_gallery: 
+title: "Treneere Estate"
+location: "Penzance, West Cornwall"
+slug: "treneere-estate"
 draft: false
+photos: []
+audio: []
+sources: []
 ---
-
 
 ## The Site & Location
 

@@ -1,12 +1,12 @@
 ---
-title: Kitty's Launderette
-location: Liverpool
-status: planned
-photos: []
-dropbox_gallery: 
+title: "Kitty's Launderette"
+location: "Liverpool"
+slug: "kittys"
 draft: false
+photos: []
+audio: []
+sources: []
 ---
-
 
 ## Namesake & Inheritance
 

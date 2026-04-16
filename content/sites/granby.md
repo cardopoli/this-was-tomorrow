@@ -1,12 +1,12 @@
 ---
-title: Granby Four Streets Community Land Trust
-location: Liverpool
-status: planned
-photos: []
-dropbox_gallery: 
+title: "Granby Four Streets Community Land Trust"
+location: "Liverpool"
+slug: "granby"
 draft: false
+photos: []
+audio: []
+sources: []
 ---
-
 
 ## A Neighbourhood Written Off
 

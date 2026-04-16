@@ -1,12 +1,12 @@
 ---
-title: Newquay Community Orchard
-location: Cornwall
-status: planned
-photos: []
-dropbox_gallery: 
+title: "Newquay Community Orchard"
+location: "Cornwall"
+slug: "newquay"
 draft: false
+photos: []
+audio: []
+sources: []
 ---
-
 
 ## From Neglect to Greenspace
 
