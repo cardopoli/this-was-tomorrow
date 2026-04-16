@@ -1,18 +1,18 @@
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
-
+  
   {{ if .Params.location }}
   <div class="meta">
     <strong>Location:</strong> {{ .Params.location }}
     {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
   </div>
   {{ end }}
-
+  
   {{ if .Params.description }}
-  <p class="description">{{ .Params.description }}</p>
+  <p>{{ .Params.description }}</p>
   {{ end }}
-
+  
   {{ if .Params.photos }}
     {{ $photos := .Params.photos }}
     {{ $first := index $photos 0 }}
@@ -40,6 +40,11 @@
       {{ end }}
     </div>
     {{ end }}
+  {{ end }}
+
+  <!-- NEW: Body intro before gallery -->
+  {{ if .Params.body_intro }}
+    {{ .Params.body_intro | markdownify }}
   {{ end }}
 
   {{ if .Params.dropbox_gallery }}
