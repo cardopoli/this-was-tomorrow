@@ -1,7 +1,7 @@
 ---
 title: Cressingham Gardens
 location: Lambeth, London
-status: planned
+status: visited
 description: ''
 photos:
   - image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
