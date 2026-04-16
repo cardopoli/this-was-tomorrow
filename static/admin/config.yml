@@ -32,6 +32,10 @@ collections:
       
       - { name: dropbox_gallery, label: Dropbox Gallery URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
       
+      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false }
+      
+      - { name: dropbox_gallery_2, label: Second Dropbox Gallery URL, widget: string, required: false, hint: "Optional - paste second Dropbox folder link here" }
+      
       - { name: body, label: Content, widget: markdown, required: false }
       
       - name: links
