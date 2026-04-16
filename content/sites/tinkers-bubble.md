@@ -2,9 +2,7 @@
 title: Tinkers Bubble
 location: Norton Sub Hamdon, Somerset
 status: visited
-description: |-
-  Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
-  The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
+description: ''
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=rl5noqikr6b54jvbphsdg1oeg&st=k7mdocli&dl=0
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
@@ -22,6 +20,12 @@ videos: []
 slug: tinkers-bubble
 sources: []
 ---
+
+## The place and its origins
+
+Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
+
+The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 
 ## How it works
 
