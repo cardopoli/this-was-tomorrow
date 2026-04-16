@@ -3,10 +3,9 @@ title: Homebaked Community Land Trust
 location: Liverpool
 status: planned
 photos: []
-dropbox_gallery: ''
+dropbox_gallery: 
 draft: false
 ---
-
 
 
 ## The Beginning: Housing Market Renewal & Loss

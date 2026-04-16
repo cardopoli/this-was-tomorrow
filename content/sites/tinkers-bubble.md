@@ -3,12 +3,11 @@ title: Tinkers Bubble
 location: Norton Sub Hamdon, Somerset
 status: visited
 photos:
-  - caption: The guest house at Tinkers Bubble
-    image: /images/DSC_8803_Tinkers Bubble Selected.jpg
+  - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
+    caption: "The guest house at Tinkers Bubble"
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=rl5noqikr6b54jvbphsdg1oeg&st=k7mdocli&dl=0
 draft: false
 ---
-
 The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 
 ## The place and its origins
@@ -73,6 +72,4 @@ The photographs document a place that poses a quiet question: not "what if?" but
 ## Links
 
 - [Tinkers Bubble Interview Cam + Meg](https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview)
-  Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
 - [Tinkers Bubble Interview Ree](https://archive.org/details/twt-090426-tinkers-bubble-ree-interview)
-  Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.

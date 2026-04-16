@@ -3,10 +3,9 @@ title: Kitty's Launderette
 location: Liverpool
 status: planned
 photos: []
-dropbox_gallery: ''
+dropbox_gallery: 
 draft: false
 ---
-
 
 
 ## Namesake & Inheritance

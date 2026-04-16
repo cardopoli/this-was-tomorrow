@@ -3,10 +3,9 @@ title: Bosavern Community Farm
 location: St Just, Cornwall
 status: planned
 photos: []
-dropbox_gallery: ''
+dropbox_gallery: 
 draft: false
 ---
-
 
 
 ## The Land & The Beginning
