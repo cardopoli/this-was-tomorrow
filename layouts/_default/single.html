@@ -42,11 +42,21 @@
     {{ end }}
   {{ end }}
 
-  {{ if .Params.dropbox_gallery }}
-  {{ partial "dropbox-gallery.html" . }}
-  {{ end }}
+  <!-- First paragraph only -->
+{{ $paragraphs := split .Content "<h2>" }}
+{{ $firstPara := index $paragraphs 0 }}
 
-  {{ .Content }}
+{{ $firstPara | safeHTML }}
+
+<!-- Gallery goes HERE -->
+{{ if .Params.dropbox_gallery }}
+{{ partial "dropbox-gallery.html" . }}
+{{ end }}
+
+<!-- Rest of content (all H2+ sections) -->
+{{ if gt (len $paragraphs) 1 }}
+  <h2>{{ range after 1 $paragraphs }}<h2>{{ . | safeHTML }}{{ end }}
+{{ end }}
 
 </article>
 {{ end }}
