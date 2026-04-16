@@ -17,27 +17,15 @@ collections:
       - { name: title, label: Site Title, widget: string }
       - { name: location, label: Location, widget: string, required: false }
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
-      
+      - { name: description, label: Short Description, widget: text, required: false }
+      - { name: dropbox_gallery, label: Dropbox Gallery URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
+
       - name: photos
-        label: Hero Photo
+        label: Photos
         widget: list
         required: false
-        max: 1
         fields:
           - { name: image, label: Image, widget: image }
           - { name: caption, label: Caption, widget: string, required: false }
-      
-      - { name: body_intro, label: Text Section 1, widget: markdown, required: false }
-      
-      - { name: dropbox_gallery, label: Dropbox Gallery, widget: string, required: false }
-      
-      - { name: body_main, label: Text Section 2, widget: markdown, required: false }
-      
-      - name: links
-        label: Links
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: URL, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: source, label: Source, widget: string, required: false }
+
+      - { name: body, label: Content, widget: markdown, required: false }
