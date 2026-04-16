@@ -6,16 +6,16 @@ description: ''
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=rl5noqikr6b54jvbphsdg1oeg&st=k7mdocli&dl=0
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
-    caption: The guest house at Tinkers Bubble, photo by Enrico Policardo
-draft: false
-archives:
-  - note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-    title: Tinkers Bubble Interview Cam + Meg
-    url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
-  - note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-    title: Tinkers Bubble Interview Ree
-    url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
+    caption: The guest house at Tinkers Bubble
 audio: []
+archives:
+  - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
+    title: Tinkers Bubble Interview Cam + Meg
+    note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+  - url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
+    title: Tinkers Bubble Interview Ree
+    note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+draft: false
 videos: []
 slug: tinkers-bubble
 sources: []
