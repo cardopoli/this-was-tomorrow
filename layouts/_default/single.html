@@ -59,7 +59,74 @@
 
   <!-- SECOND GALLERY (optional) -->
   {{ if .Params.dropbox_gallery_2 }}
-  {{ partial "dropbox-gallery.html" . }}
+  <div id="dropbox-gallery-2" class="dbx-gallery">
+    <div class="dbx-loading">Loading images...</div>
+  </div>
+  <script>
+  (function() {
+    var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+    var SHARED_LINK = '{{ .Params.dropbox_gallery_2 }}';
+    var gallery = document.getElementById('dropbox-gallery-2');
+    if (!SHARED_LINK || SHARED_LINK === '') {
+      gallery.innerHTML = '';
+      return;
+    }
+    function proxyFetch(endpoint, body) {
+      return fetch(PROXY, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ endpoint: endpoint, body: body })
+      }).then(function(r) { return r.json(); });
+    }
+    proxyFetch('files/list_folder', {
+      path: '',
+      shared_link: { url: SHARED_LINK },
+      recursive: false
+    })
+    .then(function(data) {
+      if (data.error) {
+        gallery.innerHTML = '<div class="dbx-error">Could not load images: ' + (data.error_summary || 'unknown error') + '</div>';
+        return;
+      }
+      var images = (data.entries || []).filter(function(f) {
+        return f['.tag'] === 'file' && /\.(jpg|jpeg|png|gif|webp)$/i.test(f.name);
+      });
+      if (images.length === 0) {
+        gallery.innerHTML = '<div class="dbx-error">No images found in this folder.</div>';
+        return;
+      }
+      var html = '<div class="masonry">';
+      images.forEach(function(img) {
+        html += '<div class="masonry-item">';
+        html += '<img src="" data-path="' + img.path_lower + '" alt="' + img.name + '" loading="lazy">';
+        html += '</div>';
+      });
+      html += '</div>';
+      gallery.innerHTML = html;
+      images.forEach(function(img) {
+        proxyFetch('files/get_temporary_link', { path: img.path_lower })
+        .then(function(d) {
+          if (d.link) {
+            var el = gallery.querySelector('img[data-path="' + img.path_lower + '"]');
+            if (el) el.src = d.link;
+          }
+        });
+      });
+      var lightbox = document.getElementById('dbxLightbox');
+      var lightboxImg = document.getElementById('dbxLightboxImg');
+      var closeBtn = document.getElementById('dbxClose');
+      gallery.addEventListener('click', function(e) {
+        if (e.target.tagName === 'IMG' && e.target.src) {
+          lightboxImg.src = e.target.src;
+          lightbox.classList.add('active');
+        }
+      });
+    })
+    .catch(function(err) {
+      gallery.innerHTML = '<div class="dbx-error">Error loading gallery: ' + err.message + '</div>';
+    });
+  })();
+  </script>
   {{ end }}
 
   <!-- MAIN CONTENT -->
