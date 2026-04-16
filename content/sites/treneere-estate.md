@@ -1,6 +1,6 @@
 ---
-title: Treneere Estate}
-location: 'Penzance, West Cornwall'}
+title: Treneere Estate
+location: Penzance, West Cornwall
 status: planned
 photos: []
 dropbox_gallery: 

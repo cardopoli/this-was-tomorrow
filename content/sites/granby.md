@@ -1,6 +1,6 @@
 ---
-title: Granby Four Streets Community Land Trust}
-location: Liverpool}
+title: Granby Four Streets Community Land Trust
+location: Liverpool
 status: planned
 photos: []
 dropbox_gallery: 

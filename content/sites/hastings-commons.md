@@ -1,6 +1,6 @@
 ---
-title: Hastings Commons}
-location: 'Hastings, East Sussex'}
+title: Hastings Commons
+location: Hastings, East Sussex
 status: planned
 photos: []
 dropbox_gallery: 

@@ -1,6 +1,6 @@
 ---
-title: Cressingham Gardens}
-location: 'Lambeth, London'}
+title: Cressingham Gardens
+location: Lambeth, London
 status: visited
 photos: - caption: ''
   image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg

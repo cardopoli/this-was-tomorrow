@@ -1,6 +1,6 @@
 ---
-title: Trelay Cohousing Community}
-location: North Cornwall}
+title: Trelay Cohousing Community
+location: North Cornwall
 status: planned
 photos: []
 dropbox_gallery: 

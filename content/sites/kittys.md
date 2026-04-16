@@ -1,6 +1,6 @@
 ---
-title: Kitty's Launderette}
-location: Liverpool}
+title: Kitty's Launderette
+location: Liverpool
 status: planned
 photos: []
 dropbox_gallery: 

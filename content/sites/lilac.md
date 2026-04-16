@@ -1,6 +1,6 @@
 ---
 title: 'LILAC
-location: Leeds}
+location: Leeds
 status: planned
 photos: []
 dropbox_gallery: 

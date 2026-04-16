@@ -1,6 +1,6 @@
 ---
-title: Tinkers Bubble}
-location: 'Norton Sub Hamdon, Somerset'}
+title: Tinkers Bubble
+location: Norton Sub Hamdon, Somerset
 status: visited
 photos: - caption: The guest house at Tinkers Bubble
   image: /images/DSC_8803_Tinkers Bubble Selected.jpg
