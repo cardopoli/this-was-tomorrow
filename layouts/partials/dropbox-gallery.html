@@ -24,22 +24,23 @@
 }
 
 .masonry {
-  columns: 2;
-  column-gap: 12px;
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scroll-behavior: smooth;
 }
 
 .masonry-item {
-  break-inside: avoid;
-  margin-bottom: 8px;
-  overflow: hidden;
-  background: #F7F5F0;
+  min-width: 300px;
+  width: 300px;
+  flex-shrink: 0;
+  break-inside: auto;
 }
 
 .masonry-item img {
   width: 100%;
   height: auto;
   display: block;
-  transition: opacity 0.3s ease;
 }
 
 .masonry-item img:hover {
