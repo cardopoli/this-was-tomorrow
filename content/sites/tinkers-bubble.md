@@ -2,8 +2,9 @@
 title: Tinkers Bubble
 location: Norton Sub Hamdon, Somerset
 status: visited
-photos: - caption: The guest house at Tinkers Bubble
-  image: /images/DSC_8803_Tinkers Bubble Selected.jpg
+photos:
+  - caption: The guest house at Tinkers Bubble
+    image: /images/DSC_8803_Tinkers Bubble Selected.jpg
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=rl5noqikr6b54jvbphsdg1oeg&st=k7mdocli&dl=0
 draft: false
 ---

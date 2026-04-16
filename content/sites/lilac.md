@@ -3,7 +3,7 @@ title: 'LILAC
 location: Leeds
 status: planned
 photos: []
-dropbox_gallery: 
+dropbox_gallery: ''
 draft: false
 ---
 

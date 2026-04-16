@@ -3,7 +3,7 @@ title: Newquay Community Orchard
 location: Cornwall
 status: planned
 photos: []
-dropbox_gallery: 
+dropbox_gallery: ''
 draft: false
 ---
 

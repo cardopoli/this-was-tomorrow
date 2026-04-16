@@ -3,7 +3,7 @@ title: Hastings Commons
 location: Hastings, East Sussex
 status: planned
 photos: []
-dropbox_gallery: 
+dropbox_gallery: ''
 draft: false
 ---
 
