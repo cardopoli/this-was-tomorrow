@@ -24,13 +24,13 @@
 }
 
 .masonry {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin: 40px 0;
+  columns: 2;
+  column-gap: 12px;
 }
 
 .masonry-item {
+  break-inside: avoid;
+  margin-bottom: 8px;
   overflow: hidden;
   background: #F7F5F0;
 }
@@ -39,8 +39,7 @@
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
 .masonry-item img:hover {
