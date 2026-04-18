@@ -32,15 +32,13 @@ Any audio recording is optional and fully consent-based. All images and recordin
 
 How places are actually used - the everyday infrastructure of communal living. Details of maintenance, adaptation, repair and care. Shared spaces and how they function. Material traces of decision-making and collective work. The visual language of resilience and negotiation.
 
-![](/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp)
+<img src="/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" alt="" width="100%">
 
 ## Supporters & advisors
 
 This work is supported by Arts Council England through the Developing Your Creative Practice (DYCP) scheme.
 
 I'm working alongside [Open City](https://open-city.org.uk/) (Simon Vickery, Open House Festival Programme Manager); [Thaddeus Zupancic](https://shop.greyscape.com/product/london-estates-modernist-council-housing-1946-1981-by-thaddeus-zupancic/), writer and photographer documenting London's modernist council housing; and Judith Martin, architectural historian and conservationist, co-author of the original _This Was Tomorrow_ publication.
-
-{{< img src="images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" width="100%" >}}
 
 ## Exhibition & publication
 
