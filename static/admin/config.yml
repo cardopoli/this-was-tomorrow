@@ -6,6 +6,10 @@ site_url: https://thiswastomorrow.co.uk
 display_url: https://thiswastomorrow.co.uk
 media_folder: "static/images"
 public_folder: "/images"
+
+# Live preview
+preview_path: "{{slug}}"
+
 collections:
   - name: sites
     label: Sites
@@ -13,36 +17,55 @@ collections:
     create: true
     extension: md
     format: frontmatter
+    
     fields:
-      - { name: title, label: Site Title, widget: string }
-      - { name: location, label: Location, widget: string, required: false }
+      # Core metadata
+      - { name: title, label: Site Title, widget: string, required: true }
+      - { name: location, label: Location, widget: string, required: false, hint: "e.g. Leeds, UK" }
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
-      - { name: description, label: Short Description, widget: text, required: false }
+      - { name: description, label: Short Description, widget: text, required: false, hint: "One-line summary, shows in archive" }
       
+      # Visual content
       - name: photos
         label: Hero Photo
         widget: list
         required: false
         max: 1
+        hint: "Single featured image at top of page"
         fields:
           - { name: image, label: Image, widget: image }
           - { name: caption, label: Caption, widget: string, required: false }
       
-      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false }
+      # Text sections & galleries
+      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false, hint: "Short intro paragraph(s)" }
       
-      - { name: dropbox_gallery, label: Dropbox Gallery URL, widget: string, required: false, hint: "Paste the shared Dropbox folder link here" }
+      - { name: dropbox_gallery, label: First Dropbox Gallery, widget: string, required: false, hint: "Shared Dropbox folder link: https://www.dropbox.com/..." }
       
-      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false }
+      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false, hint: "Optional middle section" }
       
-      - { name: dropbox_gallery_2, label: Second Dropbox Gallery URL, widget: string, required: false, hint: "Optional - paste second Dropbox folder link here" }
+      - { name: dropbox_gallery_2, label: Second Dropbox Gallery, widget: string, required: false, hint: "Optional second gallery" }
       
-      - { name: body, label: Content, widget: markdown, required: false }
+      - { name: body, label: Main Content, widget: markdown, required: false, hint: "Full page body. Keep links OUT - use Bibliography field instead." }
       
-      - name: links
-        label: Links (bottom)
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: URL, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: source, label: Source, widget: string, required: false }
+      # Bibliography (separate, copy-paste friendly)
+      - { name: links, label: Bibliography / Sources, widget: textarea, required: false, hint: "Paste markdown links here:\n- [Title](url)\n- [Title](url) — Source" }
+      
+      - { name: draft, label: Draft, widget: boolean, default: false, required: false }
+      
+    view_groups:
+      - label: Sections
+        preview: false
+      - label: Preview
+        preview: true
+
+# Single page for project info
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: false
+    extension: md
+    format: frontmatter
+    
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: body, label: Content, widget: markdown }
