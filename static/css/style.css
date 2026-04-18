@@ -3,42 +3,68 @@
 /* ---- SELF-HOSTED FONTS ---- */
 
 @font-face {
-    font-family: 'AGPro';
-    src: url('/fonts/agpro-ext.otf') format('opentype');
-    font-weight: 900;
+    font-family: 'FreeSans';
+    src: url('/fonts/FreeSans.otf') format('opentype'),
+         url('/fonts/FreeSans.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AGPro';
-    src: url('/fonts/agpro-ext-italic.otf') format('opentype');
-    font-weight: 900;
+    font-family: 'FreeSans';
+    src: url('/fonts/FreeSansOblique.otf') format('opentype');
+    font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AGPro';
-    src: url('/fonts/agpro-bold.ttf') format('truetype');
+    font-family: 'FreeSans';
+    src: url('/fonts/FreeSansBold.otf') format('opentype'),
+         url('/fonts/FreeSansBold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'AGPro';
-    src: url('/fonts/agpro-regular.ttf') format('truetype');
+    font-family: 'FreeSans';
+    src: url('/fonts/FreeSansBoldOblique.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreeMono';
+    src: url('/fonts/FreeMono.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'LetterGothic';
-    src: url('/fonts/lettergothic.otf') format('opentype');
+    font-family: 'FreeMono';
+    src: url('/fonts/FreeMonoOblique.otf') format('opentype');
     font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreeMono';
+    src: url('/fonts/FreeMonoBold.otf') format('opentype');
+    font-weight: 700;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreeMono';
+    src: url('/fonts/FreeMonoBoldOblique.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -53,9 +79,9 @@
     --rule: #ccc;
     --link: #111;
     --hover: #555;
-    --mono: 'LetterGothic', 'Courier New', Courier, monospace;
-    --sans: 'AGPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --condensed: 'AGPro', Impact, 'Arial Narrow', sans-serif;
+    --mono: 'FreeMono', 'Courier New', Courier, monospace;
+    --sans: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --condensed: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --averia: 'Averia Serif Libre', Georgia, serif;
     --max-w: 720px;
 }
@@ -94,9 +120,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header h1 {
-    font-family: var(--condensed);
+    font-family: var(--sans);
     font-size: clamp(48px, 10vw, 88px);
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -1px;
     line-height: 0.9;
@@ -109,9 +135,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header .tagline {
-    font-family: var(--condensed);
+    font-family: var(--sans);
     font-size: clamp(18px, 4vw, 28px);
-    font-weight: 900;
+    font-weight: 700;
     font-style: italic;
     color: var(--text);
     letter-spacing: 0;
