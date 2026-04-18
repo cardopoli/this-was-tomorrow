@@ -13,3 +13,8 @@ title = "This Was Tomorrow"
     [markup.goldmark.renderer]
       unsafe = true
 
+[outputs]
+home = ["HTML", "JSON"]
+
+[outputFormats]
+JSON = { mediaType = "application/json" }
