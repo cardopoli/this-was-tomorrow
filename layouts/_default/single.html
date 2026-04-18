@@ -132,12 +132,16 @@
   <!-- MAIN CONTENT -->
   {{ .Content }}
 
-  <!-- BIBLIOGRAPHY — Rendered from links field -->
+  <!-- LINKS (bottom) -->
   {{ if .Params.links }}
-  <section class="bibliography">
-    <h3>Sources & Further Reading</h3>
-    {{ .Params.links | markdownify }}
-  </section>
+  <div class="links-section">
+    {{ range .Params.links }}
+    <div class="link-item">
+      <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
   {{ end }}
 </article>
 {{ end }}
