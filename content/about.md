@@ -10,7 +10,7 @@ This phase looks at places that are functioning in the present, without framing 
 
 The title holds the distance between what was promised and what is lived. The work attempts to make that distance visible - not as failure, but as the actual terrain of collective life.
 
-![](/images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg)
+<img src="/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" alt="" width="100%">
 
 ## How this evolved
 
@@ -40,7 +40,7 @@ This work is supported by Arts Council England through the Developing Your Creat
 
 I'm working alongside [Open City](https://open-city.org.uk/) (Simon Vickery, Open House Festival Programme Manager); [Thaddeus Zupancic](https://shop.greyscape.com/product/london-estates-modernist-council-housing-1946-1981-by-thaddeus-zupancic/), writer and photographer documenting London's modernist council housing; and Judith Martin, architectural historian and conservationist, co-author of the original _This Was Tomorrow_ publication.
 
-![](/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp)
+{{< img src="images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" width="100%" >}}
 
 ## Exhibition & publication
 
