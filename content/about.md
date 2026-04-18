@@ -4,13 +4,13 @@ description: This Was Tomorrow is a long-term photographic investigation into co
 layout: about
 ---
 
-## The work
-
-*This Was Tomorrow: Is This the Future We Were Dreaming Of?* is a long-term photographic investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
+_This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term photographic investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
 This phase looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
 
 The title holds the distance between what was promised and what is lived. The work attempts to make that distance visible - not as failure, but as the actual terrain of collective life.
+
+![](/images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg)
 
 ## How this evolved
 
@@ -26,15 +26,21 @@ I don't photograph people as a primary subject. The work focuses on places, inte
 
 Any audio recording is optional and fully consent-based. All images and recordings are used only after explicit consent is given.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X0tGY-LgxSc?si=3YkaHN0GPBMAA0or&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## What I'm documenting
 
 How places are actually used - the everyday infrastructure of communal living. Details of maintenance, adaptation, repair and care. Shared spaces and how they function. Material traces of decision-making and collective work. The visual language of resilience and negotiation.
+
+![](/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp)
 
 ## Supporters & advisors
 
 This work is supported by Arts Council England through the Developing Your Creative Practice (DYCP) scheme.
 
-I'm working alongside [Open City](https://open-city.org.uk/) (Simon Vickery, Open House Festival Programme Manager); [Thaddeus Zupancic](https://shop.greyscape.com/product/london-estates-modernist-council-housing-1946-1981-by-thaddeus-zupancic/), writer and photographer documenting London's modernist council housing; and Judith Martin, architectural historian and conservationist, co-author of the original *This Was Tomorrow* publication.
+I'm working alongside [Open City](https://open-city.org.uk/) (Simon Vickery, Open House Festival Programme Manager); [Thaddeus Zupancic](https://shop.greyscape.com/product/london-estates-modernist-council-housing-1946-1981-by-thaddeus-zupancic/), writer and photographer documenting London's modernist council housing; and Judith Martin, architectural historian and conservationist, co-author of the original _This Was Tomorrow_ publication.
+
+![](/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp)
 
 ## Exhibition & publication
 
