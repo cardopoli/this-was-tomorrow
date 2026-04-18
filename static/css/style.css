@@ -1,5 +1,48 @@
-/* THIS WAS TOMORROW - Site Visit Archive
-   90s utilitarian / modern twist */
+/* THIS WAS TOMORROW - Site Visit Archive */
+
+/* ---- SELF-HOSTED FONTS ---- */
+
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-ext.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-ext-italic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LetterGothic';
+    src: url('/fonts/lettergothic.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---- VARIABLES ---- */
 
 :root {
     --bg: #f7f5f0;
@@ -8,8 +51,9 @@
     --rule: #ccc;
     --link: #111;
     --hover: #555;
-    --mono: 'Courier New', Courier, monospace;
+    --mono: 'LetterGothic', 'Courier New', Courier, monospace;
     --serif: Georgia, 'Times New Roman', Times, serif;
+    --condensed: 'AGPro', Impact, 'Arial Narrow', sans-serif;
     --max-w: 720px;
 }
 
@@ -46,12 +90,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header h1 {
-    font-family: var(--mono);
-    font-size: 18px;
-    font-weight: 700;
+    font-family: var(--condensed);
+    font-size: clamp(48px, 10vw, 88px);
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 6px;
+    letter-spacing: -1px;
+    line-height: 0.9;
+    margin-bottom: 8px;
 }
 
 .site-header h1 a {
@@ -60,10 +105,30 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header .tagline {
+    font-family: var(--condensed);
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: 900;
+    font-style: italic;
+    color: var(--text);
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.site-header .header-link {
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-top: 12px;
+}
+
+.site-header .header-link a {
     color: var(--muted);
-    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.site-header .header-link a:hover {
+    color: var(--text);
 }
 
 /* SITE INDEX (landing page) */
@@ -211,6 +276,7 @@ article > p:first-of-type {
 
 .photo-hero {
     margin: 32px 0 12px;
+    margin-bottom: 0;
 }
 
 .photo-hero img {
@@ -226,7 +292,7 @@ article > p:first-of-type {
     color: var(--muted);
     line-height: 1.5;
     font-family: var(--mono);
-    margin-bottom: 32px;
+    margin-bottom: 10px;
 }
 
 /* PHOTOS GRID */
@@ -453,6 +519,18 @@ article > p:first-of-type {
     font-size: 13px;
 }
 
+.footer-project {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 480px;
+}
+
+.footer-project a {
+    color: var(--text);
+    white-space: nowrap;
+}
+
 .footer-contact {
     margin-bottom: 24px;
 }
@@ -529,23 +607,16 @@ article li {
 
 @media (max-width: 600px) {
     .wrap { padding: 0 20px; }
-    .site-header h1 { font-size: 15px; }
-    .site-page h1 { font-size: 18px; }
+    .site-header h1 { font-size: 48px; }
+    .site-header .tagline { font-size: 18px; }
     .site-list a { flex-direction: column; gap: 2px; }
     .site-list .location { text-align: left; margin-left: 0; }
     .audio-section { padding: 16px; }
     .photos-grid { grid-template-columns: 1fr; }
 }
-.photo-hero {
-    margin-bottom: 0;
-}
-
-.photo-hero .photo-caption {
-    margin-bottom: 10px;
-}
 
 /* ============================================================
-   LIGHTBOX (global - shared by all Dropbox gallery instances)
+   LIGHTBOX
    ============================================================ */
 
 .dbx-lightbox {
@@ -578,7 +649,6 @@ article li {
   opacity: 0;
 }
 
-/* Close button */
 .dbx-lightbox-close {
   position: fixed;
   top: 20px;
@@ -586,7 +656,7 @@ article li {
   color: #fff;
   font-size: 24px;
   cursor: pointer;
-  font-family: 'Courier New', monospace;
+  font-family: var(--mono);
   line-height: 1;
   opacity: 0.6;
   transition: opacity 0.2s;
@@ -598,7 +668,6 @@ article li {
 
 .dbx-lightbox-close:hover { opacity: 1; }
 
-/* Prev / Next arrows */
 .dbx-prev,
 .dbx-next {
   position: fixed;
@@ -612,7 +681,7 @@ article li {
   opacity: 0.5;
   transition: opacity 0.2s;
   padding: 16px 20px;
-  font-family: 'Courier New', monospace;
+  font-family: var(--mono);
   z-index: 10000;
   line-height: 1;
 }
@@ -626,20 +695,18 @@ article li {
 .dbx-prev:disabled,
 .dbx-next:disabled { opacity: 0.15; cursor: default; }
 
-/* Counter */
 .dbx-counter {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  font-family: 'Courier New', monospace;
+  font-family: var(--mono);
   font-size: 12px;
   opacity: 0.5;
   letter-spacing: 1px;
 }
 
-/* Mobile - larger tap targets */
 @media (max-width: 600px) {
   .dbx-prev { left: 4px; padding: 20px 14px; font-size: 22px; }
   .dbx-next { right: 4px; padding: 20px 14px; font-size: 22px; }
@@ -679,7 +746,7 @@ article li {
 }
 
 .dbx-error {
-  font-family: 'Courier New', monospace;
+  font-family: var(--mono);
   font-size: 13px;
   color: #900;
   padding: 24px 0;
@@ -717,7 +784,7 @@ article li {
 }
 
 @media (max-width: 600px) {
-  .masonry    { columns: 1; }
+  .masonry { columns: 1; }
   .dbx-skeleton { columns: 1; }
 }
 
@@ -758,20 +825,4 @@ article li {
 
 .about-page a {
   color: var(--text);
-}
-
-/* ============================================================
-   FOOTER - project line
-   ============================================================ */
-
-.footer-project {
-  margin-bottom: 16px;
-  font-size: 14px;
-  line-height: 1.8;
-  max-width: 480px;
-}
-
-.footer-project a {
-  color: var(--text);
-  white-space: nowrap;
 }
