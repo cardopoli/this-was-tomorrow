@@ -4,7 +4,7 @@ description: This Was Tomorrow is a long-term photographic investigation into co
 layout: about
 ---
 
-_This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term photographic investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
+This Was Tomorrow: _Is This the Future We Were Dreaming Of_? is a long-term photographic investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
 This phase looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
 
