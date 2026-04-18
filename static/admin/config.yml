@@ -98,3 +98,10 @@ collections:
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: about }
           - { name: body, label: Content, widget: markdown }
+
+      - name: index
+        label: Homepage
+        file: content/_index.md
+        fields:
+          - { name: title, label: Site title (browser tab), widget: string }
+          - { name: intro, label: Intro text, widget: text, hint: "The short paragraph above the list of sites." }
