@@ -51,6 +51,10 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+    <!-- Gallery JS: loaded in <head> so window._twt exists
+         before inline gallery scripts run in the page body -->
+    <script src="{{ "JS/gallery.js" | relURL }}"></script>
 </head>
 <body>
     <div class="wrap">
@@ -58,9 +62,9 @@
         {{ block "main" . }}{{ end }}
         {{ partial "footer.html" . }}
     </div>
-    <!-- Global lightbox - shared by all gallery instances -->
+    <!-- Global lightbox DOM - shared by all gallery instances -->
     {{ partial "lightbox.html" . }}
-    <!-- JS loaded after body -->
+    <!-- UI enhancements: dark mode, smooth scroll, static image fade -->
     <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
 </body>
 </html>
