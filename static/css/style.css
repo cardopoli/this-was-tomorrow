@@ -168,11 +168,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-index .intro {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--muted);
     margin-bottom: 40px;
     max-width: 100%;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .site-list {
