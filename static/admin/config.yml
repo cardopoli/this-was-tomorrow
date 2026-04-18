@@ -35,5 +35,5 @@ collections:
       - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false }
       - { name: dropbox_gallery_2, label: Second Dropbox Gallery, widget: string, required: false }
       - { name: body, label: Main Content, widget: markdown, required: false }
-      - { name: links, label: Bibliography / Sources, widget: textarea, required: false }
+      - { name: links, label: Links, widget: markdown, required: false }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
