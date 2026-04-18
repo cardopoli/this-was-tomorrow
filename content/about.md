@@ -26,7 +26,7 @@ I don't photograph people as a primary subject. The work focuses on places, inte
 
 Any audio recording is optional and fully consent-based. All images and recordings are used only after explicit consent is given.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X0tGY-LgxSc?si=3YkaHN0GPBMAA0or&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/X0tGY-LgxSc?si=3YkaHN0GPBMAA0or&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## What I'm documenting
 
