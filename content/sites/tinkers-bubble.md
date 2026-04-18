@@ -7,6 +7,7 @@ description: ''
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble
+image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 body_intro: |-
   ## The place and its origins
 
