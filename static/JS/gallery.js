@@ -69,6 +69,9 @@ window._twt.initControls = function() {
   var next = document.getElementById('dbxNext');
   var cls  = document.getElementById('dbxClose');
 
+  prev.textContent = '←';
+  next.textContent = '→';
+
   cls.addEventListener('click', function(e) {
     e.stopPropagation();
     window._twt.close();
