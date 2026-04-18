@@ -72,17 +72,70 @@
   </script>
   {{ end }}
 
+  <!-- MAIN CONTENT (body markdown) -->
   {{ .Content }}
 
-  {{ if .Params.links }}
-  <div class="links-section">
-    {{ range .Params.links }}
-    <div class="link-item">
-      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
+  <!-- AUDIO -->
+  {{ with .Params.audio }}
+  <div class="audio-section">
+    {{ range . }}
+    <div class="audio-title">{{ .title }}</div>
+    {{ with .duration }}<div class="audio-duration">{{ . }}</div>{{ end }}
+    <audio controls src="{{ .url }}"></audio>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- ARCHIVE.ORG RECORDINGS -->
+  {{ with .Params.archives }}
+  <div class="archives-section">
+    <h2>Recordings</h2>
+    {{ range . }}
+    <div class="archive-item">
+      <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
+      {{ with .note }}<p class="archive-note">{{ . }}</p>{{ end }}
     </div>
     {{ end }}
   </div>
   {{ end }}
+
+  <!-- VIDEOS -->
+  {{ with .Params.videos }}
+  <div class="videos-section">
+    <h2>Video</h2>
+    {{ range . }}
+    <div class="video-item">
+      <h3>{{ .title }}</h3>
+      {{ with .description }}<p class="video-description">{{ . }}</p>{{ end }}
+      <div class="video-embed">
+        <iframe src="{{ .url }}" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- SOURCES -->
+  {{ with .Params.sources }}
+  <div class="sources">
+    <strong>Sources</strong><br>
+    {{ range . }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><br>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- LINKS -->
+  {{ with .Params.links }}
+  <div class="links-section">
+    {{ range . }}
+    <div class="link-item">
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+      {{ with .source }}<span class="link-source">({{ . }})</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
 </article>
 {{ end }}
