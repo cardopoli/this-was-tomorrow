@@ -56,6 +56,8 @@ links: ''
 slug: tinkers-bubble
 ---
 
+<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
 ## The broader significance
 
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
