@@ -132,16 +132,19 @@
   <!-- MAIN CONTENT -->
   {{ .Content }}
 
-  <!-- LINKS (bottom) -->
+  <!-- LINKS (bottom) — Bibliography style -->
   {{ if .Params.links }}
-  <div class="links-section">
-    {{ range .Params.links }}
-    <div class="link-item">
-      <a href="{{ .url }}" target="_blank">{{ .title }}</a>
-      {{ if .source }}<span class="link-source">({{ .source }})</span>{{ end }}
-    </div>
-    {{ end }}
-  </div>
+  <section class="bibliography">
+    <h3>Sources & Further Reading</h3>
+    <ul class="bibliography-list">
+      {{ range .Params.links }}
+      <li class="bibliography-item">
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+        {{ if .source }}<span class="bibliography-source">— {{ .source }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
   {{ end }}
 </article>
 {{ end }}
