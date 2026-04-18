@@ -15,6 +15,13 @@
     <div class="wrap">
         {{ partial "header.html" . }}
         {{ block "main" . }}{{ end }}
+        {{ block "main" . }}{{ end }}
+  
+  <!-- Include Lunr -->
+  <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+  
+  <!-- Your supercharged JS -->
+  <script src="/js/supercharged.js" defer></script>
         {{ partial "footer.html" . }}
     </div>
 </body>
