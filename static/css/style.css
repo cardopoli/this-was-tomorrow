@@ -168,10 +168,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-index .intro {
-    font-size: 15px;
+    font-size: 12px;
     color: var(--muted);
     margin-bottom: 40px;
-    max-width: 500px;
+    max-width: 100%;
     line-height: 1.7;
 }
 
