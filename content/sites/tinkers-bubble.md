@@ -38,16 +38,28 @@ body_middle: |-
 
   The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/a178hduq8jhe1g7lj68yn/AA7D4YPTemUkSbzn1eYRrMs?rlkey=h7fixgx5sohfiayvjelqu50m9&dl=0
-links: []
-audio: []
-archives:
-  - url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
-    title: Tinkers Bubble Interview Cam + Meg
-    note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-  - url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
-    title: Tinkers Bubble Interview Ree
-    note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+links: |-
+  **Sources:**
+
+  - [Tinker's Bubble, Wikipedia](https://en.wikipedia.org/wiki/Tinker%27s_Bubble)
+  - [Hidden Somerset: Tinkers Bubble - Off-Grid Living Beneath Ham Hill](https://www.hiddensomerset.co.uk/tinkers-bubble-off-grid-living-in-the-heart-of-somerset/)
+  - [Eco-Homes + Communities: Tinkers Bubble, Somerset](https://ecohomes.blog/2010/05/10/tinkers-bubble-somerset/)
+  - [Somerset Daily: Discovering Tinkers Bubble - Somerset's Hidden Off-Grid Village](https://somersetdaily.co.uk/discovering-tinkers-bubble-somersets-hidden-off-grid-village/)
+  - [Somerset Daily: Living Off-Grid in Tinkers Bubble](https://somersetdaily.co.uk/living-off-grid-in-tinkers-bubble-a-sustainable-woodland-community/)
+  - [Positive News: The off-grid community hidden in an English woodland](https://www.positive.news/society/the-eco-commune-in-an-english-woodland/)
+  - [Tinkers Bubble official website](https://tinkersbubble.org/)
+  - [The Land Is Ours: Planning Precedents - Tinker's Bubble](https://tlio.org.uk/chapter7/chapter-7-planning-precedents/)
+  - [Diggers and Dreamers: Tinkers Bubble](https://diggersanddreamers.org.uk/community/tinkers-bubble)
+  - [Landworkers Alliance: Celebrating 31 Years of Tinkers Bubble](https://landworkersalliance.org.uk/celebrating-31-years-of-tinkers-bubble/)
 draft: false
+archives:
+  - note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+    title: Tinkers Bubble Interview Cam + Meg
+    url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
+  - note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+    title: Tinkers Bubble Interview Ree
+    url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
+audio: []
 videos: []
 slug: tinkers-bubble
 sources: []
@@ -66,18 +78,3 @@ Tinkers Bubble represents a sustained, three-decade experiment in living outside
 The photographs document a place that poses a quiet question: not "what if?" but "what is?" - the lived reality of fossil-fuel-free community, the daily negotiations between collective and individual, between the ideals of 1994 and the facts of 2026. The temporary buildings (designed by principle to be easily removed, to leave minimal trace) have become homes that have sheltered residents for decades. The steam-powered sawmill, the hand-felled timber, the horses, the apple harvest - these are not performance or tourism, but the infrastructure of survival and sustenance.
 
 <iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="100%" height="360" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
-***
-
-**Sources:**
-
-- [Tinker's Bubble, Wikipedia](https://en.wikipedia.org/wiki/Tinker%27s_Bubble)
-- [Hidden Somerset: Tinkers Bubble - Off-Grid Living Beneath Ham Hill](https://www.hiddensomerset.co.uk/tinkers-bubble-off-grid-living-in-the-heart-of-somerset/)
-- [Eco-Homes + Communities: Tinkers Bubble, Somerset](https://ecohomes.blog/2010/05/10/tinkers-bubble-somerset/)
-- [Somerset Daily: Discovering Tinkers Bubble - Somerset's Hidden Off-Grid Village](https://somersetdaily.co.uk/discovering-tinkers-bubble-somersets-hidden-off-grid-village/)
-- [Somerset Daily: Living Off-Grid in Tinkers Bubble](https://somersetdaily.co.uk/living-off-grid-in-tinkers-bubble-a-sustainable-woodland-community/)
-- [Positive News: The off-grid community hidden in an English woodland](https://www.positive.news/society/the-eco-commune-in-an-english-woodland/)
-- [Tinkers Bubble official website](https://tinkersbubble.org/)
-- [The Land Is Ours: Planning Precedents - Tinker's Bubble](https://tlio.org.uk/chapter7/chapter-7-planning-precedents/)
-- [Diggers and Dreamers: Tinkers Bubble](https://diggersanddreamers.org.uk/community/tinkers-bubble)
-- [Landworkers Alliance: Celebrating 31 Years of Tinkers Bubble](https://landworkersalliance.org.uk/celebrating-31-years-of-tinkers-bubble/)
