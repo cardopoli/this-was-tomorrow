@@ -16,6 +16,10 @@ body_intro: |-
   The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=7n34w64swc6wlfeszf1b4550u&dl=0
 body_middle: |-
+  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
   ## How it works
 
   Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
@@ -31,8 +35,6 @@ body_middle: |-
   The community fought very hard for planning consent for dwellings on the site and now has permission for temporary dwellings with limitations such as to the number of vehicles owned by the community. This battle for planning permission became historically significant: based on struggles to secure planning permission for Tinkers Bubble, Simon Fairlie adopted the term Low Impact Development, which is development which, by virtue of its low or benign environmental impact, may be allowed in locations where conventional development is not permitted. His book "Low Impact Development" (1996) details many principles that are as relevant today as when it was published.
 
   For nearly three decades, the community operated under temporary planning permissions - a precarious legal status that required periodic renewal. After 24 years of temporary planning permission, Tinkers Bubble was granted permanent planning permission in 2023, securing its future for years to come. This was a watershed moment: the community had demonstrated that low-impact, fossil-fuel-free living was not merely ideological but practically sustainable, financially viable, and valued by both local residents and planning authorities.
-
-  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
   ### Governance and philosophy
 
@@ -65,8 +67,6 @@ Celebrating its 30th anniversary in January 2024, the village prides itself on b
 Tinkers Bubble represents a sustained, three-decade experiment in living outside the dominant economic and energy systems. Unlike short-term utopian projects, it has endured - through changes in residents, economic pressures, planning uncertainties, and the grinding reality of land-based work. The grant of permanent planning permission in 2023 marks a turning point: the state has formally acknowledged that this model of living works, that it is sustainable, and that it deserves continuance.
 
 The photographs document a place that poses a quiet question: not "what if?" but "what is?" - the lived reality of fossil-fuel-free community, the daily negotiations between collective and individual, between the ideals of 1994 and the facts of 2026. The temporary buildings (designed by principle to be easily removed, to leave minimal trace) have become homes that have sheltered residents for decades. The steam-powered sawmill, the hand-felled timber, the horses, the apple harvest - these are not performance or tourism, but the infrastructure of survival and sustenance.
-
-<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="100%" height="360" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 **Sources:**
 
