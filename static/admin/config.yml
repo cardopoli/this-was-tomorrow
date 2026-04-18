@@ -86,3 +86,15 @@ collections:
           - { name: url, label: URL, widget: string }
           - { name: title, label: Title, widget: string }
           - { name: source, label: Source, widget: string, required: false }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: about
+        label: About
+        file: content/about.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: layout, label: Layout, widget: hidden, default: about }
+          - { name: body, label: Content, widget: markdown }
