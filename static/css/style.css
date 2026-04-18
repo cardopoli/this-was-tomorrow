@@ -193,7 +193,7 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: baseline;
     padding: 16px 0;
     text-decoration: none;
-    font-family: var(--mono);
+    font-family: var( --sans);
     font-size: 14px;
     transition: background 0.1s;
 }
