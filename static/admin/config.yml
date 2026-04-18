@@ -36,13 +36,14 @@ collections:
       
       - { name: dropbox_gallery_2, label: Second Dropbox Gallery URL, widget: string, required: false, hint: "Optional - paste second Dropbox folder link here" }
       
-      - { name: body, label: Content, widget: markdown, required: false }
+      - { name: body, label: Content, widget: markdown, required: false, hint: "Main body text. Links should NOT go here — use the 'Bibliography' section below instead." }
       
       - name: links
-        label: Links (bottom)
+        label: Bibliography / Sources
         widget: list
         required: false
+        hint: "Links rendered as a separate bibliography section at the bottom. Keep links OUT of the main body text."
         fields:
-          - { name: url, label: URL, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: source, label: Source, widget: string, required: false }
+          - { name: url, label: URL, widget: string, hint: "Full URL (will open in new tab)" }
+          - { name: title, label: Title, widget: string, hint: "Link text / source title" }
+          - { name: source, label: Source, widget: string, required: false, hint: "Optional - e.g. 'The Guardian', 'Wikipedia', 'Architectural Review'" }
