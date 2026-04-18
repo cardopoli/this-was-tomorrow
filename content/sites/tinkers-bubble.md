@@ -28,8 +28,6 @@ body_middle: |-
 
   The land is held in freehold ownership by a cooperative entitled Tinker's Bubble Land Ltd. All decisions about the project are made collectively at monthly meetings in which all participate. On rare occasions of dispute, the fully paid-up shareholders (the landholding cooperative) have the power of arbitration or veto. Weekly Monday morning meetings handle practical decisions about the land and community.
 
-  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
   ### The planning battle and symbolic significance
 
   The community fought very hard for planning consent for dwellings on the site and now has permission for temporary dwellings with limitations such as to the number of vehicles owned by the community. This battle for planning permission became historically significant: based on struggles to secure planning permission for Tinkers Bubble, Simon Fairlie adopted the term Low Impact Development, which is development which, by virtue of its low or benign environmental impact, may be allowed in locations where conventional development is not permitted. His book "Low Impact Development" (1996) details many principles that are as relevant today as when it was published.
