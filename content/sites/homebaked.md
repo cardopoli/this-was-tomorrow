@@ -1,11 +1,16 @@
 ---
-title: "Homebaked Community Land Trust"
-location: "Liverpool"
-slug: "homebaked"
-draft: false
+title: Homebaked Community Land Trust
+location: Liverpool
+draft: true
+description: ''
 photos: []
+body_intro: ''
+dropbox_gallery: ''
+body_middle: ''
+dropbox_gallery_2: ''
 audio: []
 sources: []
+slug: homebaked
 ---
 
 ## The Beginning: Housing Market Renewal & Loss
