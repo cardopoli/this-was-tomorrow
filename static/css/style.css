@@ -823,16 +823,19 @@ article li {
    SITE LIST - STATUS INDICATORS
    ============================================================ */
 
-/* Visited label - small tag after location */
-.visited-label {
+/* Unvisited sites are muted */
+li:not(.status-visited) .name,
+li:not(.status-visited) .location {
+    opacity: 0.4;
+}
+
+/* Visited dot */
+.status-dot {
     display: inline-block;
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--text);
-    border: 1px solid var(--text);
-    padding: 1px 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text);
     margin-left: 8px;
     vertical-align: middle;
     position: relative;
