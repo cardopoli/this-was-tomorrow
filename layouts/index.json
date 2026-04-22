@@ -1,0 +1,13 @@
+{{- $pages := where .Site.RegularPages "Section" "sites" -}}
+[
+  {{- range $idx, $page := $pages -}}
+    {{- if $idx }},{{ end }}
+    {
+      "id": {{ $idx }},
+      "title": {{ .Title | jsonify }},
+      "location": {{ .Params.location | jsonify }},
+      "url": {{ .RelPermalink | jsonify }},
+      "content": {{ (substr .Plain 0 200) | jsonify }}
+    }
+  {{- end }}
+]

@@ -1,0 +1,19 @@
+<!-- Dropbox Gallery 1
+     Requires: /JS/gallery.js (loaded in baseof.html) -->
+
+<div id="dropbox-gallery" class="dbx-gallery" aria-live="polite">
+  <div class="dbx-skeleton">
+    <div class="dbx-skeleton-item"></div>
+    <div class="dbx-skeleton-item"></div>
+    <div class="dbx-skeleton-item"></div>
+    <div class="dbx-skeleton-item"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+  var URL   = '{{ .Params.dropbox_gallery }}';
+  window._twt.buildGallery(PROXY, URL, 'dropbox-gallery');
+})();
+</script>

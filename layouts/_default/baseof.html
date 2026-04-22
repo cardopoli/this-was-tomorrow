@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>{{ if .IsHome }}{{ .Site.Title }} - Site Visit Archive{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+    <!-- DESCRIPTION -->
+    {{- $desc := .Site.Params.description -}}
+    {{- with .Params.description }}{{- $desc = . -}}{{- end }}
+    <meta name="description" content="{{ $desc }}">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="https://64.media.tumblr.com/3d00e55fb38d8b65bb11700ee4db779f/bf5b75c0c8a48cda-30/s640x960/9b15eaf272f6e614a494ad334b4cd8394742bed3.gifv">
+
+    <!-- OPEN GRAPH -->
+    {{- $ogTitle := .Site.Title -}}
+    {{- if not .IsHome }}{{- $ogTitle = printf "%s - %s" .Title .Site.Title -}}{{- end }}
+
+    {{- $ogImage := "https://64.media.tumblr.com/3d00e55fb38d8b65bb11700ee4db779f/bf5b75c0c8a48cda-30/s640x960/9b15eaf272f6e614a494ad334b4cd8394742bed3.gifv" -}}
+    {{- with .Params.image -}}
+      {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
+    {{- else -}}
+      {{- with .Params.photos -}}
+        {{- $first := index . 0 -}}
+        {{- if reflect.IsMap $first -}}
+          {{- with $first.image -}}
+            {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end }}
+
+    <meta property="og:type"        content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:title"       content="{{ $ogTitle }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:url"         content="{{ .Permalink }}">
+    <meta property="og:image"       content="{{ $ogImage }}">
+    <meta property="og:site_name"   content="{{ .Site.Title }}">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="{{ $ogTitle }}">
+    <meta name="twitter:description" content="{{ $desc }}">
+    <meta name="twitter:image"       content="{{ $ogImage }}">
+
+    <!-- STYLESHEET (includes @font-face declarations) -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+    <!-- Gallery JS: loaded in <head> so window._twt exists
+         before inline gallery scripts run in the page body -->
+    <script src="{{ "JS/gallery.js" | relURL }}"></script>
+</head>
+<body>
+    <div class="wrap">
+        {{ partial "header.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+    </div>
+    <!-- Global lightbox DOM - shared by all gallery instances -->
+    {{ partial "lightbox.html" . }}
+    <!-- UI enhancements: dark mode, smooth scroll, static image fade -->
+    <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
+</body>
+</html>
