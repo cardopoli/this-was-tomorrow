@@ -818,3 +818,92 @@ article li {
 .about-page a {
   color: var(--text);
 }
+
+/* ============================================================
+   SITE LIST - STATUS INDICATORS
+   ============================================================ */
+
+/* Visited dot - sits after the site name */
+.status-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--text);
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+/* Unvisited sites are slightly muted */
+.status-planned .site-list a,
+.status-scheduled .site-list a {
+    color: var(--muted);
+}
+
+li.status-planned .name,
+li.status-scheduled .name {
+    opacity: 0.5;
+}
+
+/* Visit date - small, below location */
+.visit-date {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* ============================================================
+   MAP PAGE
+   ============================================================ */
+
+.map-page {
+  margin-bottom: 80px;
+}
+
+.map-intro {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.map-embed {
+  margin: 0 0 48px;
+  border: 1px solid var(--rule);
+}
+
+.map-site-list {
+  list-style: none;
+}
+
+.map-site-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.map-site-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.map-site-list a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.map-site-list a:hover {
+  color: var(--hover);
+}
+
+.map-location {
+  color: var(--muted);
+  font-size: 11px;
+}
