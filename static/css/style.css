@@ -829,14 +829,30 @@ li:not(.status-visited) .location {
     opacity: 0.4;
 }
 
-/* Visited dot */
+/* Dot before visited title */
 .status-dot {
     display: inline-block;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background: var(--text);
-    margin-left: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+/* VISITED badge on right */
+.visited-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid var(--text);
+    padding: 1px 5px;
+    margin-left: 10px;
     vertical-align: middle;
     position: relative;
     top: -1px;
@@ -892,4 +908,41 @@ li:not(.status-visited) .location {
 .map-location {
   color: var(--muted);
   font-size: 11px;
+}
+
+/* ============================================================
+   404 PAGE
+   ============================================================ */
+
+.error-page {
+    padding: 80px 0;
+    text-align: left;
+}
+
+.error-code {
+    font-family: var(--condensed);
+    font-size: clamp(80px, 15vw, 140px);
+    font-weight: 900;
+    line-height: 0.9;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.error-message {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+}
+
+.error-page a {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.error-page a:hover {
+    color: var(--hover);
 }

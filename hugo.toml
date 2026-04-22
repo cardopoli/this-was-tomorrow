@@ -1,4 +1,5 @@
 baseURL = "https://thiswastomorrow.co.uk/"
+enableRobotsTXT = true
 languageCode = "en-gb"
 title = "This Was Tomorrow"
 

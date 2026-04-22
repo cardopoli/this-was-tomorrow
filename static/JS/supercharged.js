@@ -5,47 +5,6 @@
 'use strict';
 
 // ============================================================================
-// DARK MODE
-// Reads system preference, respects user override, persists across sessions.
-// Toggle button: class="theme-toggle" anywhere in HTML.
-// ============================================================================
-
-(function() {
-  var toggle = document.querySelector('.theme-toggle');
-  if (!toggle) return;
-
-  var saved      = localStorage.getItem('twt-theme');
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var isDark     = saved === 'dark' || (saved === null && prefersDark);
-
-  if (isDark) {
-    document.documentElement.classList.add('dark-mode');
-    toggle.textContent = '☀ light';
-  } else {
-    toggle.textContent = '◑ dark';
-  }
-
-  toggle.addEventListener('click', function() {
-    var nowDark = document.documentElement.classList.toggle('dark-mode');
-    localStorage.setItem('twt-theme', nowDark ? 'dark' : 'light');
-    toggle.textContent = nowDark ? '☀ light' : '◑ dark';
-  });
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-    if (localStorage.getItem('twt-theme') === null) {
-      if (e.matches) {
-        document.documentElement.classList.add('dark-mode');
-        toggle.textContent = '☀ light';
-      } else {
-        document.documentElement.classList.remove('dark-mode');
-        toggle.textContent = '◑ dark';
-      }
-    }
-  });
-})();
-
-
-// ============================================================================
 // SMOOTH SCROLL
 // Intercepts anchor clicks and scrolls smoothly.
 // ============================================================================

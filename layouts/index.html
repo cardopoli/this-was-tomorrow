@@ -7,10 +7,12 @@
         <li class="status-{{ .Params.status | default "planned" }}">
             <a href="{{ .RelPermalink }}">
                 <span class="name">
-                    {{ .Title }}
-                    {{ if eq .Params.status "visited" }}<span class="status-dot"></span>{{ end }}
+                    {{ if eq .Params.status "visited" }}<span class="status-dot"></span>{{ end }}{{ .Title }}
                 </span>
-                <span class="location">{{ .Params.location }}</span>
+                <span class="location">
+                    {{ .Params.location }}
+                    {{ if eq .Params.status "visited" }}<span class="visited-badge">Visited</span>{{ end }}
+                </span>
             </a>
         </li>
         {{ end }}

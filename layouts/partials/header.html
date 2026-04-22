@@ -1,4 +1,4 @@
 <header class="site-header">
     <h1><a href="{{ "/" | relURL }}">This Was Tomorrow</a></h1>
-    <div class="tagline">{{ .Site.Params.tagline }}</div>
+    {{ with .Site.Params.tagline }}<div class="tagline">{{ . }}</div>{{ end }}
 </header>
