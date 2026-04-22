@@ -10,6 +10,10 @@ photos:
     caption: The guest house at Tinkers Bubble
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 body_intro: |-
+  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
   ## The place and its origins
 
   Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
@@ -17,10 +21,6 @@ body_intro: |-
   The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=7n34w64swc6wlfeszf1b4550u&dl=0
 body_middle: |-
-  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
-  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
   ## How it works
 
   Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
