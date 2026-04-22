@@ -2,10 +2,13 @@
 title: Cressingham Gardens
 location: Lambeth, London
 status: visited
+visit_date: 04/04/2026
+draft: false
 description: ''
 photos:
   - image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
-    caption: ''
+    caption: Cressingham Gardens view from Brockwell park
+image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
 body_intro: |-
   ## THE PLACE AND ITS MAKING
 
@@ -41,11 +44,9 @@ body_middle: |-
   In early 2023, Lambeth Council announced that it was pausing the redevelopment of Cressingham Gardens and two other estates (Fenwick and Central Hill) after a critical report recommended a 'fundamental reset' to the way it handles the long-running projects. In September 2024, Lambeth published a report highlighting the Council's plans to reset key estate renewal projects and regain control of properties previously under HfL's management.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/e7cvm2wia5pxeav6dwjgy/APLEYPVfGmeyJU54ZC-z6zA?rlkey=3wg0dgzk0fehgzmd2c5n10ty7&dl=0
 audio: []
-draft: false
-image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+sources: []
 slug: cressingham-gardens
 caption: ''
-sources: []
 ---
 
 ## THE ALTERNATIVE
