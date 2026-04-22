@@ -1,0 +1,141 @@
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+
+  {{ if .Params.location }}
+  <div class="meta">
+    <strong>Location:</strong> {{ .Params.location }}
+    {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
+  </div>
+  {{ end }}
+
+  {{ if .Params.description }}
+  <p>{{ .Params.description }}</p>
+  {{ end }}
+
+  {{ if .Params.photos }}
+    {{ $photos := .Params.photos }}
+    {{ $first := index $photos 0 }}
+
+    <div class="photo-hero">
+      {{ if reflect.IsMap $first }}
+        <img src="{{ $first.image }}" alt="{{ $first.caption | default "Photo" }}" loading="eager">
+        {{ with $first.caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+      {{ else }}
+        <img src="{{ $first }}" alt="Photo" loading="eager">
+      {{ end }}
+    </div>
+
+    {{ if gt (len $photos) 1 }}
+    <div class="photos-grid">
+      {{ range after 1 $photos }}
+        <div class="photo-item">
+          {{ if reflect.IsMap . }}
+            <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}" loading="lazy">
+            {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
+          {{ else }}
+            <img src="{{ . }}" alt="Photo" loading="lazy">
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  {{ end }}
+
+  {{ if .Params.body_intro }}
+    {{ .Params.body_intro | markdownify }}
+  {{ end }}
+
+  {{ if .Params.dropbox_gallery }}
+  {{ partial "dropbox-gallery.html" . }}
+  {{ end }}
+
+  {{ if .Params.body_middle }}
+    {{ .Params.body_middle | markdownify }}
+  {{ end }}
+
+  {{ if .Params.dropbox_gallery_2 }}
+  <div id="dropbox-gallery-2" class="dbx-gallery" aria-live="polite">
+    <div class="dbx-skeleton">
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+    </div>
+  </div>
+  <script>
+  (function() {
+    var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+    var URL   = '{{ .Params.dropbox_gallery_2 }}';
+    window._twt.buildGallery(PROXY, URL, 'dropbox-gallery-2');
+  })();
+  </script>
+  {{ end }}
+
+  <!-- MAIN CONTENT (body markdown) -->
+  {{ .Content }}
+
+  <!-- AUDIO -->
+  {{ with .Params.audio }}
+  <div class="audio-section">
+    {{ range . }}
+    <div class="audio-title">{{ .title }}</div>
+    {{ with .duration }}<div class="audio-duration">{{ . }}</div>{{ end }}
+    <audio controls src="{{ .url }}"></audio>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- ARCHIVE.ORG RECORDINGS -->
+  {{ with .Params.archives }}
+  <div class="archives-section">
+    <h2>Recordings</h2>
+    {{ range . }}
+    <div class="archive-item">
+      <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
+      {{ with .note }}<p class="archive-note">{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- VIDEOS -->
+  {{ with .Params.videos }}
+  <div class="videos-section">
+    <h2>Video</h2>
+    {{ range . }}
+    <div class="video-item">
+      <h3>{{ .title }}</h3>
+      {{ with .description }}<p class="video-description">{{ . }}</p>{{ end }}
+      <div class="video-embed">
+        <iframe src="{{ .url }}" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- SOURCES -->
+  {{ with .Params.sources }}
+  <div class="sources">
+    <strong>Sources</strong><br>
+    {{ range . }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><br>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- LINKS -->
+  {{ with .Params.links }}
+  <div class="links-section">
+    {{ range . }}
+    <div class="link-item">
+      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+      {{ with .source }}<span class="link-source">({{ . }})</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</article>
+{{ end }}

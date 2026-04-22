@@ -1,0 +1,15 @@
+baseURL = "https://thiswastomorrow.co.uk/"
+languageCode = "en-gb"
+title = "This Was Tomorrow"
+
+[params]
+  description = "Site Visit Archive"
+  author = "Enrico Policardo"
+  email = "info@enricopolicardo.com"
+  phone = "+44(0)7517 420 206"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
