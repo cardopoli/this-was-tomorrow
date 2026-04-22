@@ -1,7 +1,8 @@
 ---
-title: Tinkers Bubble
+title: Tinker's Bubble
 location: Norton Sub Hamdon, Somerset
 status: visited
+visit_date: 4>10/04/2026
 draft: false
 description: ''
 photos:
