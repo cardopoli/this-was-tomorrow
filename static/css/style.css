@@ -823,37 +823,20 @@ article li {
    SITE LIST - STATUS INDICATORS
    ============================================================ */
 
-/* Visited dot - sits after the site name */
-.status-dot {
+/* Visited label - small tag after location */
+.visited-label {
     display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--text);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text);
+    border: 1px solid var(--text);
+    padding: 1px 5px;
     margin-left: 8px;
     vertical-align: middle;
     position: relative;
     top: -1px;
-}
-
-/* Unvisited sites are slightly muted */
-.status-planned .site-list a,
-.status-scheduled .site-list a {
-    color: var(--muted);
-}
-
-li.status-planned .name,
-li.status-scheduled .name {
-    opacity: 0.5;
-}
-
-/* Visit date - small, below location */
-.visit-date {
-    display: block;
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.5px;
-    margin-top: 2px;
 }
 
 /* ============================================================

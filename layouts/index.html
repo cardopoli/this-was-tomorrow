@@ -4,15 +4,12 @@
 
     <ul class="site-list">
         {{ range (where .Site.RegularPages "Section" "sites").ByTitle }}
-        <li class="status-{{ .Params.status | default "planned" }}">
+        <li>
             <a href="{{ .RelPermalink }}">
-                <span class="name">
-                    {{ .Title }}
-                    {{ if eq .Params.status "visited" }}<span class="status-dot" title="Visited"></span>{{ end }}
-                </span>
+                <span class="name">{{ .Title }}</span>
                 <span class="location">
                     {{ .Params.location }}
-                    {{ with .Params.visit_date }}<span class="visit-date">{{ . }}</span>{{ end }}
+                    {{ if eq .Params.status "visited" }}<span class="visited-label">Visited</span>{{ end }}
                 </span>
             </a>
         </li>

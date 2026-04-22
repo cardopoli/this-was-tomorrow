@@ -6,6 +6,7 @@
   <div class="meta">
     <strong>Location:</strong> {{ .Params.location }}
     {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
+    {{ with .Params.visit_date }} | {{ . }}{{ end }}
   </div>
   {{ end }}
 
@@ -72,10 +73,8 @@
   </script>
   {{ end }}
 
-  <!-- MAIN CONTENT (body markdown) -->
   {{ .Content }}
 
-  <!-- AUDIO -->
   {{ with .Params.audio }}
   <div class="audio-section">
     {{ range . }}
@@ -86,7 +85,6 @@
   </div>
   {{ end }}
 
-  <!-- ARCHIVE.ORG RECORDINGS -->
   {{ with .Params.archives }}
   <div class="archives-section">
     <h2>Recordings</h2>
@@ -99,7 +97,6 @@
   </div>
   {{ end }}
 
-  <!-- VIDEOS -->
   {{ with .Params.videos }}
   <div class="videos-section">
     <h2>Video</h2>
@@ -115,7 +112,6 @@
   </div>
   {{ end }}
 
-  <!-- SOURCES -->
   {{ with .Params.sources }}
   <div class="sources">
     <strong>Sources</strong><br>
@@ -125,7 +121,6 @@
   </div>
   {{ end }}
 
-  <!-- LINKS -->
   {{ with .Params.links }}
   <div class="links-section">
     {{ range . }}
