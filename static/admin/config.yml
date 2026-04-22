@@ -8,6 +8,7 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
+
   - name: sites
     label: Sites
     folder: content/sites
@@ -99,9 +100,28 @@ collections:
           - { name: layout, label: Layout, widget: hidden, default: about }
           - { name: body, label: Content, widget: markdown }
 
-      - name: index
+      - name: homepage
         label: Homepage
         file: content/_index.md
         fields:
           - { name: title, label: Site title (browser tab), widget: string }
-          - { name: intro, label: Intro text, widget: text, hint: "The short paragraph above the list of sites." }
+          - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the list of sites." }
+
+  - name: settings
+    label: Site Settings
+    files:
+      - name: general
+        label: Header & Footer
+        file: hugo.toml
+        editor:
+          preview: false
+        fields:
+          - { name: title, label: Site name, widget: string }
+          - name: params
+            label: Content
+            widget: object
+            fields:
+              - { name: tagline, label: Header tagline, widget: string, hint: "The italic line under the site title" }
+              - { name: footer_project, label: Footer project description, widget: text, hint: "The sentence at the top of the footer" }
+              - { name: footer_credit, label: Footer ACE credit line, widget: string }
+              - { name: email, label: Contact email, widget: string }
