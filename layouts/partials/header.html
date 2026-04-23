@@ -1,10 +1,8 @@
 <header class="site-header">
-    <div class="site-header-top">
-        <h1><a href="{{ "/" | relURL }}">This Was Tomorrow</a></h1>
-        <nav class="site-nav">
-            <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
-            <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
-        </nav>
-    </div>
+    <h1><a href="{{ "/" | relURL }}">This Was Tomorrow</a></h1>
     {{ with .Site.Params.tagline }}<div class="tagline">{{ . }}</div>{{ end }}
+    <nav class="site-nav">
+        <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
+        <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
+    </nav>
 </header>

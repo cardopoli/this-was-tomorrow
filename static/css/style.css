@@ -124,13 +124,6 @@ img { max-width: 100%; height: auto; display: block; }
     margin-bottom: 56px;
 }
 
-.site-header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-}
-
 .site-nav {
     display: flex;
     gap: 24px;
@@ -138,6 +131,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 11px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    margin-top: 16px;
 }
 
 .site-nav a {
@@ -148,11 +142,6 @@ img { max-width: 100%; height: auto; display: block; }
 .site-nav a:hover,
 .site-nav a.active {
     color: var(--text);
-}
-
-@media (max-width: 600px) {
-    .site-header-top { align-items: flex-start; gap: 12px; }
-    .site-nav { gap: 16px; }
 }
 
 .site-header h1 {
