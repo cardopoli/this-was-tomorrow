@@ -55,7 +55,7 @@ links: ''
 slug: tinkers-bubble
 ---
 
-<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="500" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="100%" height="350" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ## The broader significance
 
