@@ -1,26 +1,34 @@
 ---
-title: "OWCH / New Ground Cohousing"
-location: "High Barnet, London"
-slug: "owch-new-ground"
+title: OWCH / New Ground Cohousing
+location: High Barnet, London
+status: visited
+visit_date: 24-04-2026
 draft: false
-photos: []
+description: ''
+photos:
+  - image: /images/DSC_9188-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
+    caption: ''
+image: /images/DSC_9188-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
+body_intro: |-
+  ## THE CONCEPT AND ITS ORIGINS
+
+  New Ground is the UK's first completed senior cohousing project, built for single women over 50. The concept for New Ground was developed by a group of like-minded women who wanted to create a purpose-built development for single women over 50 to live in an inclusive community and provide each other with mutual support. This is unusual framing for cohousing, which has generally been thought of in the context of alternative accommodation in urban areas for young families.
+
+  The idea emerged from a 1998 workshop in London where a Joseph Rowntree Foundation research study by Maria Brenton presented the concept of senior cohousing as developed in The Netherlands. A group of six women who already knew each other attended this workshop and decided that they would act on the Dutch example and create their own women's cohousing community in London. Prime movers were Madeleine Levius and Shirley Meredeen. The first meeting of what became OWCH (Older Women's Co-Housing Community) met in Shirley's home in August 1998.
+dropbox_gallery: ''
+body_middle: |-
+  ## THE LONG FIGHT FOR REALISATION
+
+  The path to realisation was neither short nor simple. Housing for Women, a small housing association and charity, was represented at the initial workshop and offered support in developing the concept. In 1999 a formal partnership agreement was made between Housing for Women and the New Ground group. Maria Brenton and Elizabeth Clarson of Housing for Women approached the Housing Corporation (now Homes England) for support, resulting in a Corporation-funded 'Innovation and Good Practice' Study to examine the concept of cohousing in the context of British housing. However, few London councils were initially interested in the concept.
+
+  Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
+
+  For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
+dropbox_gallery_2: ''
 audio: []
 sources: []
+slug: owch-new-ground
 ---
-
-## THE CONCEPT AND ITS ORIGINS
-
-New Ground is the UK's first completed senior cohousing project, built for single women over 50. The concept for New Ground was developed by a group of like-minded women who wanted to create a purpose-built development for single women over 50 to live in an inclusive community and provide each other with mutual support. This is unusual framing for cohousing, which has generally been thought of in the context of alternative accommodation in urban areas for young families.
-
-The idea emerged from a 1998 workshop in London where a Joseph Rowntree Foundation research study by Maria Brenton presented the concept of senior cohousing as developed in The Netherlands. A group of six women who already knew each other attended this workshop and decided that they would act on the Dutch example and create their own women's cohousing community in London. Prime movers were Madeleine Levius and Shirley Meredeen. The first meeting of what became OWCH (Older Women's Co-Housing Community) met in Shirley's home in August 1998.
-
-## THE LONG FIGHT FOR REALISATION
-
-The path to realisation was neither short nor simple. Housing for Women, a small housing association and charity, was represented at the initial workshop and offered support in developing the concept. In 1999 a formal partnership agreement was made between Housing for Women and the New Ground group. Maria Brenton and Elizabeth Clarson of Housing for Women approached the Housing Corporation (now Homes England) for support, resulting in a Corporation-funded 'Innovation and Good Practice' Study to examine the concept of cohousing in the context of British housing. However, few London councils were initially interested in the concept.
-
-Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
-
-For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
 
 ## THE DESIGN AND DELIVERY
 
@@ -54,14 +62,15 @@ New Ground represents not just a housing solution but a statement of values: tha
 
 Photographically, the project poses questions about thresholds: between private and communal, between individual and collective, between the domestic and the social. What does a space look like where people have consciously chosen to live together? What traces does mutual care leave in a building?
 
----
+***
 
 **Sources:**
+
 - OWCH official website (owch.org.uk, now newgroundcohousing.uk)
 - OWCH History pages
 - New Ground Cohousing pages
 - Architecture Foundation: New Ground co-housing
-- RIBAJ: This is how to live
+- RIBA: This is how to live
 - Dezeen: Pollard Thomas Edwards completes UK's first over 50s co-housing scheme
 - UK Cohousing Network: New Ground cohousing development case study
 - Housing LIN case studies on OWCH
