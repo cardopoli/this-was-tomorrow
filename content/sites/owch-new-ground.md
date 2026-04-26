@@ -6,9 +6,9 @@ visit_date: 24-04-2026
 draft: false
 description: ''
 photos:
-  - image: /images/DSC_9188-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
+  - image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
     caption: ''
-image: /images/DSC_9188-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
+image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
 body_intro: |-
   ## THE CONCEPT AND ITS ORIGINS
 
