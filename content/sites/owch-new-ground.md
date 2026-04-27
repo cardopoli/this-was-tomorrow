@@ -15,7 +15,7 @@ body_intro: |-
   New Ground is the UK's first completed senior cohousing project, built for single women over 50. The concept for New Ground was developed by a group of like-minded women who wanted to create a purpose-built development for single women over 50 to live in an inclusive community and provide each other with mutual support. This is unusual framing for cohousing, which has generally been thought of in the context of alternative accommodation in urban areas for young families.
 
   The idea emerged from a 1998 workshop in London where a Joseph Rowntree Foundation research study by Maria Brenton presented the concept of senior cohousing as developed in The Netherlands. A group of six women who already knew each other attended this workshop and decided that they would act on the Dutch example and create their own women's cohousing community in London. Prime movers were Madeleine Levius and Shirley Meredeen. The first meeting of what became OWCH (Older Women's Co-Housing Community) met in Shirley's home in August 1998.
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
 body_middle: |-
   ## THE LONG FIGHT FOR REALISATION
 
@@ -24,7 +24,7 @@ body_middle: |-
   Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
 
   For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/iq9hgzcftd2pms09bicou/AGOPfUZL2zvAmasp7KBUFVo?rlkey=vhg1zf894s8qwowylepiyakrk&dl=0
 audio: []
 sources: []
 slug: owch-new-ground
