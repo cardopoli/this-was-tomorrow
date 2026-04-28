@@ -141,14 +141,7 @@ window._twt.buildGallery = function(proxyUrl, sharedLink, containerId) {
     var img = document.createElement('img');
     img.alt = alt;
     img.setAttribute('loading', 'lazy');
-    img.onload  = function() {
-      img.classList.add('loaded');
-      /* If landscape, span full width */
-      if (img.naturalWidth > img.naturalHeight * 1.3) {
-        var item = img.closest('.masonry-item');
-        if (item) item.classList.add('masonry-wide');
-      }
-    };
+    img.onload  = function() { img.classList.add('loaded'); };
     img.onerror = function() { img.classList.add('loaded'); };
     img.src = src;
     return img;
