@@ -787,18 +787,6 @@ article li {
   background: #F7F5F0;
 }
 
-/* Landscape images span full width */
-.masonry-item.masonry-wide {
-  column-span: all;
-}
-
-.masonry-item.masonry-wide img {
-  width: 100%;
-  max-height: 480px;
-  object-fit: cover;
-  object-position: center;
-}
-
 .masonry-item img {
   width: 100%;
   height: auto;
