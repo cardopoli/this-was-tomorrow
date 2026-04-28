@@ -2,9 +2,9 @@ backend:
   name: github
   repo: cardopoli/this-was-tomorrow
   branch: main
+  base_url: https://sveltia-cms-auth.cardopoli.workers.dev
 site_url: https://thiswastomorrow.co.uk
 display_url: https://thiswastomorrow.co.uk
-base_url: https://sveltia-cms-auth.cardopoli.workers.dev
 media_folder: "static/images"
 public_folder: "/images"
 
