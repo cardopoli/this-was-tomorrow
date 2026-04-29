@@ -23,8 +23,6 @@ body_intro: |-
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
   In 2014, Jess Steele (via her company Jericho Road Solutions) partnered with Meanwhile Space CIC to establish Hastings Commons Neighbourhood Ventures (HCNV), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
-
-  ##
 dropbox_gallery: https://www.dropbox.com/scl/fo/bnc5x98ncccxlq7f21lwo/ALH0aZpNjMjpwHFuy7zI04o?rlkey=ho9k7rd328x0dihag2ljreuvj&dl=0
 body_middle: |-
   ## THE MODEL: RISK-SHARING AND PERMANENCE
@@ -60,6 +58,8 @@ slug: hastings-commons
 ## RESPONDING TO GENTRIFICATION
 
 Despite these efforts, gentrification pressure in Hastings has accelerated. Since 2020, rents have gone up steeply while wages have stagnated. The gap between Local Housing Allowance and market rent has widened from around £100 in 2015 to nearly £300 by 2023. The White Rock area has a very high density of private rented housing – up around 80% of properties – creating a precarious and unstable housing market.
+
+![](/images/DSC_9328-LOW%20RES_Jpeg_Hastings%20Commons_ACE%20TWT.jpg)
 
 The result: wave of displacement. By 2023, Hastings had 1,000 households in temporary accommodation, costing Hastings Borough Council £5 million per year – a third of the council's budget. This unsustainable pressure has led the council toward financial crisis (a "section 114," the local government equivalent of declaring bankruptcy). As Jess Steele notes, unlike Birmingham City Council, Hastings is "not too big to fail," so may well be allowed to fail, which would mean losing local democratic control entirely.
 
