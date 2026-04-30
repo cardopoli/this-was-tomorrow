@@ -1,11 +1,17 @@
 ---
-title: "Gwavas Estate"
-location: "Newlyn, West Cornwall"
-slug: "gwavas-estate"
+title: Gwavas Estate
+location: Newlyn, West Cornwall
+status: planned
+visit_date: ''
 draft: false
+description: ''
 photos: []
+body_intro: ''
+dropbox_gallery: ''
+body_middle: ''
 audio: []
 sources: []
+slug: gwavas-estate
 ---
 
 ## The Site & Location
