@@ -14,8 +14,6 @@ body_intro: |-
 
   Hastings is a coastal town in East Sussex facing decades of decline. Built in the 1920s to house a local newspaper, the Hastings and St Leonards Observer building became a local landmark. When the Observer moved out in 1985, it took 500 jobs with it. That exodus was a prelude to the White Rock area becoming economically deprived. The area is a conservation area with significant architectural assets, but suffered from problems of derelict and abandoned buildings, houses in multiple occupation, and absentee landlords.
 
-  <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview&amp;playlist=1" width="100%" height="100" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
   ![](https://www.dropbox.com/scl/fi/oboix5g75npx5144f6uyk/_DSC2430-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=saszwoar4prmvpy2f4svynccq&raw=1)
 
   By 2016, a new threat had emerged: gentrification. Rising property values and rental prices were beginning to displace long-term residents. Local community members began asking: "Is gentrification happening? If so, is it a problem? If so, is there anything we can do about it?" The answer they came up with was to bring property into community ownership and cap the rents forever at one-third of average local income – what they call "Hastings Living Rents."
@@ -26,11 +24,13 @@ body_intro: |-
 
   The story begins in 2006 when activist and entrepreneur Jess Steele began work to restore the Hastings Pier, a closed historic structure. In 2008, with the pier slipping into further disrepair, the community decided they couldn't wait for someone else to solve it – they set up a trust to buy the pier themselves. That DIY approach has lasted through to the present day.
 
-  ![](https://www.dropbox.com/scl/fi/nkkc4662rrjjgvop93bi1/_DSC2460-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=n3r84vphe44lwxm5p1bgnjii2&raw=1)
-
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
-  In 2014, Jess Steele (via her company Jericho Road Solutions) partnered with Meanwhile Space CIC to establish Hastings Commons Neighbourhood Ventures (HCNV), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
+  <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview" width="100%" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+  _Listen to the interview with_ [_Jess Steele_](https://en.wikipedia.org/wiki/Jess_Steele) 
+
+  In 2014, Jess Steele (via her company [Jericho Road Solutions](https://www.jerichoroad.co.uk/)) partnered with Meanwhile Space CIC to establish [Hastings Commons Neighbourhood Ventures (HCNV)](https://hastingscommons.com/), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
 dropbox_gallery: https://www.dropbox.com/scl/fo/bnc5x98ncccxlq7f21lwo/ALH0aZpNjMjpwHFuy7zI04o?rlkey=ho9k7rd328x0dihag2ljreuvj&dl=0
 body_middle: |-
   ## THE MODEL: RISK-SHARING AND PERMANENCE
