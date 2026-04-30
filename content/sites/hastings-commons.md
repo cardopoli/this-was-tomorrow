@@ -6,9 +6,9 @@ visit_date: 27-04-2026
 draft: false
 description: ''
 photos:
-  - image: /images/R0043361-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+  - image: /images/DSC_9284-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
     caption: ''
-image: /images/R0043361-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+image: /images/DSC_9284-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
 body_intro: |-
   ## THE PLACE AND THE PROBLEM
 
@@ -74,6 +74,8 @@ The result: wave of displacement. By 2023, Hastings had 1,000 households in temp
 Hastings Commons has had vital investment in responding. Funding has come from Power to Change (crucial early support), National Lottery Community Fund, ESCC Stalled Sites Fund, Community Renewal Fund, Community Ownership Fund, Architectural Heritage Fund, Big Issue Invest, COOP Foundation, and many individual community members.
 
 ## THE VISION AND VALUES
+
+<img src="https://www.dropbox.com/scl/fi/huh7fx2iotk4mrt6dq0qy/DSC_9298-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=wvzy0yettzicq8x1fdz1g70nr&raw=1" alt="Hastings Pier" style="width:100%">
 
 Hastings Commons' overall purpose is to tackle dereliction, protect the character and diversity of the neighbourhood, and create an environment where people can shape their place and enhance their lives. It does this by bringing difficult and derelict properties into community ownership in perpetuity and renovating them to a high standard to provide affordable homes and workspaces, and spaces for learning, enterprise, and wellbeing.
 
