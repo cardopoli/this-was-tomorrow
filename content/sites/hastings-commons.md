@@ -30,8 +30,6 @@ body_intro: |-
 
   ![](https://www.dropbox.com/scl/fi/nkkc4662rrjjgvop93bi1/_DSC2460-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=n3r84vphe44lwxm5p1bgnjii2&raw=1)
 
-  _Hastings Pier today_
-
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
   In 2014, Jess Steele (via her company Jericho Road Solutions) partnered with Meanwhile Space CIC to establish Hastings Commons Neighbourhood Ventures (HCNV), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
