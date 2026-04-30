@@ -6,19 +6,15 @@ visit_date: 27-04-2026
 draft: false
 description: ''
 photos:
-  - image: /images/DSC_9284-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+  - image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
     caption: ''
-image: /images/DSC_9284-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
 body_intro: |-
   ## THE PLACE AND THE PROBLEM
 
   Hastings is a coastal town in East Sussex facing decades of decline. Built in the 1920s to house a local newspaper, the Hastings and St Leonards Observer building became a local landmark. When the Observer moved out in 1985, it took 500 jobs with it. That exodus was a prelude to the White Rock area becoming economically deprived. The area is a conservation area with significant architectural assets, but suffered from problems of derelict and abandoned buildings, houses in multiple occupation, and absentee landlords.
 
-  ![](https://www.dropbox.com/scl/fi/oboix5g75npx5144f6uyk/_DSC2430-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=saszwoar4prmvpy2f4svynccq&raw=1)
-
   By 2016, a new threat had emerged: gentrification. Rising property values and rental prices were beginning to displace long-term residents. Local community members began asking: "Is gentrification happening? If so, is it a problem? If so, is there anything we can do about it?" The answer they came up with was to bring property into community ownership and cap the rents forever at one-third of average local income – what they call "Hastings Living Rents."
-
-  ![Hastings seafront from the Observer Building Rooftop](https://www.dropbox.com/scl/fi/twfjvyc9a7189kdm16ctg/_DSC2405-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=mms21w9qz248yhx9gcyamq43v&raw=1 "Hastings seafront from the Observer Building Rooftop")
 
   ## THE ORIGINS: PIER TO COMMONS
 
