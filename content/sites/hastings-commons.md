@@ -19,7 +19,8 @@ body_intro: |-
   By 2016, a new threat had emerged: gentrification. Rising property values and rental prices were beginning to displace long-term residents. Local community members began asking: "Is gentrification happening? If so, is it a problem? If so, is there anything we can do about it?" The answer they came up with was to bring property into community ownership and cap the rents forever at one-third of average local income – what they call "Hastings Living Rents."
 
   ![](https://www.dropbox.com/scl/fi/twfjvyc9a7189kdm16ctg/_DSC2405-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=mms21w9qz248yhx9gcyamq43v&raw=1)
-  *Hastings seafront from the Observer Building Rooftop*
+
+  _Hastings seafront from the Observer Building Rooftop_
 
   <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview&amp;playlist=1" width="500" height="100" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
@@ -28,7 +29,8 @@ body_intro: |-
   The story begins in 2006 when activist and entrepreneur Jess Steele began work to restore the Hastings Pier, a closed historic structure. In 2008, with the pier slipping into further disrepair, the community decided they couldn't wait for someone else to solve it – they set up a trust to buy the pier themselves. That DIY approach has lasted through to the present day.
 
   ![](https://www.dropbox.com/scl/fi/nkkc4662rrjjgvop93bi1/_DSC2460-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=n3r84vphe44lwxm5p1bgnjii2&raw=1)
-  *Hastings Pier today*
+
+  _Hastings Pier today_
 
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
