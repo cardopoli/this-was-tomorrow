@@ -63,15 +63,11 @@ slug: hastings-commons
 
 Despite these efforts, gentrification pressure in Hastings has accelerated. Since 2020, rents have gone up steeply while wages have stagnated. The gap between Local Housing Allowance and market rent has widened from around £100 in 2015 to nearly £300 by 2023. The White Rock area has a very high density of private rented housing – up around 80% of properties – creating a precarious and unstable housing market.
 
-![](/images/DSC_9328-LOW%20RES_Jpeg_Hastings%20Commons_ACE%20TWT.jpg)
-
 The result: wave of displacement. By 2023, Hastings had 1,000 households in temporary accommodation, costing Hastings Borough Council £5 million per year – a third of the council's budget. This unsustainable pressure has led the council toward financial crisis (a "section 114," the local government equivalent of declaring bankruptcy). As Jess Steele notes, unlike Birmingham City Council, Hastings is "not too big to fail," so may well be allowed to fail, which would mean losing local democratic control entirely.
 
 Hastings Commons has had vital investment in responding. Funding has come from Power to Change (crucial early support), National Lottery Community Fund, ESCC Stalled Sites Fund, Community Renewal Fund, Community Ownership Fund, Architectural Heritage Fund, Big Issue Invest, COOP Foundation, and many individual community members.
 
 ## THE VISION AND VALUES
-
-<img src="https://www.dropbox.com/scl/fi/huh7fx2iotk4mrt6dq0qy/DSC_9298-LOW-RES_Jpeg_Hastings-Commons_ACE-TWT.jpg?rlkey=wvzy0yettzicq8x1fdz1g70nr&raw=1" alt="Hastings Pier" style="width:100%">
 
 Hastings Commons' overall purpose is to tackle dereliction, protect the character and diversity of the neighbourhood, and create an environment where people can shape their place and enhance their lives. It does this by bringing difficult and derelict properties into community ownership in perpetuity and renovating them to a high standard to provide affordable homes and workspaces, and spaces for learning, enterprise, and wellbeing.
 
