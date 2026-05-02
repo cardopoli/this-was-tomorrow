@@ -15,6 +15,8 @@ body_intro: |-
   New Ground is the UK's first completed senior cohousing project, built for single women over 50. The concept for New Ground was developed by a group of like-minded women who wanted to create a purpose-built development for single women over 50 to live in an inclusive community and provide each other with mutual support. This is unusual framing for cohousing, which has generally been thought of in the context of alternative accommodation in urban areas for young families.
 
   The idea emerged from a 1998 workshop in London where a Joseph Rowntree Foundation research study by Maria Brenton presented the concept of senior cohousing as developed in The Netherlands. A group of six women who already knew each other attended this workshop and decided that they would act on the Dutch example and create their own women's cohousing community in London. Prime movers were Madeleine Levius and Shirley Meredeen. The first meeting of what became OWCH (Older Women's Co-Housing Community) met in Shirley's home in August 1998.
+
+  <iframe src="https://archive.org/embed/twt-audio-owch-residents&amp;playlist=1" width="100%" height="300" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
 body_middle: |-
   ## THE LONG FIGHT FOR REALISATION
