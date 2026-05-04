@@ -5,151 +5,118 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TWT — Embed Tool</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f7f5f0;
-    font-family: 'Courier New', monospace;
-    min-height: 100vh;
-    padding: 48px 16px;
-    text-align: left;
-  }
-  .app { width: 100%; max-width: 680px; margin: 0 auto; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #f7f5f0;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  padding: 48px 16px;
+  text-align: left;
+}
+.app { width: 100%; max-width: 700px; margin: 0 auto; }
+h1 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #111; margin-bottom: 4px; }
+.tagline { font-size: 10px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 2px solid #111; }
 
-  h1 {
-    font-size: 13px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 2px; color: #111; margin-bottom: 4px;
-  }
-  .tagline {
-    font-size: 10px; color: #999; letter-spacing: 1px;
-    text-transform: uppercase; margin-bottom: 32px;
-    padding-bottom: 16px; border-bottom: 2px solid #111;
-  }
+/* TABS */
+.tabs { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 28px; border: 1px solid #ccc; }
+.tab {
+  font-family: 'Courier New', monospace; font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1px;
+  background: #fff; color: #999; border: none; border-right: 1px solid #ccc;
+  padding: 11px 10px; cursor: pointer; transition: all 0.15s;
+  text-align: center; line-height: 1.4; flex: 1;
+}
+.tab:last-child { border-right: none; }
+.tab:hover { background: #f0ede8; color: #111; }
+.tab.active { background: #111; color: #f7f5f0; }
 
-  /* MODE TABS */
-  .tabs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0;
-    margin-bottom: 28px;
-    border: 1px solid #ccc;
-  }
-  .tab {
-    font-family: 'Courier New', monospace;
-    font-size: 9px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1px;
-    background: #fff; color: #999;
-    border: none; border-right: 1px solid #ccc;
-    padding: 12px 8px; cursor: pointer;
-    transition: all 0.15s;
-    text-align: center; line-height: 1.4;
-  }
-  .tab:last-child { border-right: none; }
-  .tab:hover { background: #f0ede8; color: #111; }
-  .tab.active { background: #111; color: #f7f5f0; }
+.panel { display: none; }
+.panel.active { display: block; }
 
-  /* PANELS */
-  .panel { display: none; }
-  .panel.active { display: block; }
+label.fl { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 7px; }
+input[type="text"], textarea, select {
+  width: 100%; font-family: 'Courier New', monospace; font-size: 12px;
+  background: #fff; border: 1px solid #ccc; padding: 10px 12px;
+  color: #111; outline: none; resize: none; transition: border-color 0.15s;
+  text-align: left; -webkit-appearance: none; appearance: none;
+}
+input[type="text"]:focus, textarea:focus, select:focus { border-color: #111; }
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; cursor: pointer;
+}
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.sec { margin-bottom: 18px; }
+hr { border: none; border-top: 1px solid #ccc; margin: 18px 0; }
+.sub { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 10px; display: block; }
+.radios { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
+.radios label { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #444; cursor: pointer; }
+.hint { font-size: 10px; color: #999; margin-top: 5px; line-height: 1.5; }
 
-  .section { margin-bottom: 20px; }
-  label.fl {
-    display: block; font-size: 10px; text-transform: uppercase;
-    letter-spacing: 1.5px; color: #666; margin-bottom: 7px;
-  }
-  input[type="text"], textarea, select {
-    width: 100%; font-family: 'Courier New', monospace; font-size: 12px;
-    background: #fff; border: 1px solid #ccc; padding: 10px 12px;
-    color: #111; outline: none; resize: none; transition: border-color 0.15s;
-    text-align: left; -webkit-appearance: none; appearance: none;
-  }
-  input[type="text"]:focus, textarea:focus, select:focus { border-color: #111; }
+button.main {
+  width: 100%; font-family: 'Courier New', monospace; font-size: 11px;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+  background: #111; color: #f7f5f0; border: none; padding: 13px;
+  cursor: pointer; margin: 18px 0 0; transition: background 0.15s;
+}
+button.main:hover { background: #333; }
+button.main:disabled { background: #999; cursor: default; }
 
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-  hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
+.outs { display: none; margin-top: 22px; }
+.outs.on { display: block; }
+.og { margin-bottom: 14px; }
+textarea.out { font-size: 11px; line-height: 1.5; direction: ltr; height: 90px; }
+textarea.out.sm { height: 48px; }
+textarea.out.lg { height: 160px; }
+.br { display: flex; gap: 8px; margin-top: 7px; }
+button.cp {
+  font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 1.5px; background: #fff;
+  color: #111; border: 1px solid #111; padding: 7px 13px; cursor: pointer; transition: background 0.15s;
+}
+button.cp:hover { background: #f0ede8; }
+.err { font-size: 11px; color: #900; margin-top: 7px; display: none; }
+.err.on { display: block; }
 
-  .sub { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 10px; display: block; }
-  .radios { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
-  .radios label { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #444; cursor: pointer; }
-
-  select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; cursor: pointer;
-  }
-
-  button.main {
-    width: 100%; font-family: 'Courier New', monospace; font-size: 11px;
-    font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-    background: #111; color: #f7f5f0; border: none; padding: 14px;
-    cursor: pointer; margin: 20px 0 0; transition: background 0.15s;
-  }
-  button.main:hover { background: #333; }
-  button.main:disabled { background: #999; cursor: default; }
-
-  .out-section { display: none; margin-top: 24px; }
-  .out-section.on { display: block; }
-  .out-group { margin-bottom: 16px; }
-  textarea.out { font-size: 11px; line-height: 1.5; direction: ltr; height: 100px; }
-  textarea.out.sm { height: 52px; }
-  textarea.out.lg { height: 180px; }
-  .btn-row { display: flex; gap: 8px; margin-top: 8px; }
-  button.cp {
-    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 1.5px; background: #fff;
-    color: #111; border: 1px solid #111; padding: 8px 14px; cursor: pointer;
-    transition: background 0.15s;
-  }
-  button.cp:hover { background: #f0ede8; }
-
-  .err { font-size: 11px; color: #900; margin-top: 8px; display: none; }
-  .err.on { display: block; }
-  .loading { font-size: 11px; color: #666; margin-top: 12px; display: none; letter-spacing: 0.5px; }
-  .loading.on { display: block; }
-
-  /* PREVIEW */
-  .prev { margin-top: 20px; display: none; border: 1px solid #ccc; background: #fff; }
-  .prev.on { display: block; }
-  .prev-inner { padding: 16px; }
-  .prev-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 12px; display: block; }
-  .prev img { max-width: 100%; display: block; }
-  .prev-cap { font-size: 11px; color: #666; margin-top: 8px; font-style: italic; }
-  .prev audio { width: 100%; margin-top: 8px; }
-  .prev-track { padding: 12px 0; border-bottom: 1px solid #f0ede8; }
-  .prev-track:last-child { border-bottom: none; }
-  .prev-track-name { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; color: #111; }
+/* PREVIEW */
+.prev { margin-top: 18px; display: none; border: 1px solid #ccc; background: #fff; }
+.prev.on { display: block; }
+.pi { padding: 14px; }
+.pl { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 10px; display: block; }
+.prev img { max-width: 100%; display: block; }
+.prev-cap { font-size: 11px; color: #666; margin-top: 7px; font-style: italic; }
+.prev audio, .prev iframe, .prev video { width: 100%; margin-top: 8px; display: block; }
 </style>
 </head>
 <body>
 <div class="app">
   <h1>TWT — Embed Tool</h1>
-  <div class="tagline">Single image · Single audio · Photo gallery · Audio gallery</div>
+  <div class="tagline">Image · Audio · Video · Archive.org · iFrame · Photo Gallery</div>
 
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('img')">Single<br>Image</button>
-    <button class="tab" onclick="switchTab('audio')">Single<br>Audio</button>
-    <button class="tab" onclick="switchTab('gallery')">Photo<br>Gallery</button>
-    <button class="tab" onclick="switchTab('audiogallery')">Audio<br>Gallery</button>
+    <button class="tab active" onclick="sw('img')">Image</button>
+    <button class="tab" onclick="sw('aud')">Audio</button>
+    <button class="tab" onclick="sw('vid')">Video</button>
+    <button class="tab" onclick="sw('arc')">Archive.org</button>
+    <button class="tab" onclick="sw('ifr')">iFrame</button>
+    <button class="tab" onclick="sw('gal')">Gallery</button>
   </div>
 
-  <!-- ===================== PANEL: SINGLE IMAGE ===================== -->
+  <!-- ============ IMAGE ============ -->
   <div class="panel active" id="panel-img">
-    <div class="section">
+    <div class="sec">
       <label class="fl">Dropbox image URL</label>
       <input type="text" id="img-url" placeholder="https://www.dropbox.com/scl/fi/..." />
+      <div class="hint">Paste a shared Dropbox file link - any format (dl=0, raw=1, etc)</div>
       <div class="err" id="img-err">Not a valid Dropbox URL</div>
     </div>
     <div class="row3">
-      <div>
-        <label class="fl">Width</label>
-        <input type="text" id="img-width" value="100%" />
-      </div>
-      <div>
-        <label class="fl">Max width</label>
-        <input type="text" id="img-maxw" placeholder="e.g. 480px" />
-      </div>
+      <div><label class="fl">Width</label><input type="text" id="img-w" value="100%" /></div>
+      <div><label class="fl">Max width</label><input type="text" id="img-mw" placeholder="e.g. 480px" /></div>
       <div>
         <label class="fl">Alignment</label>
-        <select id="img-align">
+        <select id="img-al">
           <option value="">None</option>
           <option value="left">Left</option>
           <option value="center">Centre</option>
@@ -160,403 +127,412 @@
       </div>
     </div>
     <div class="row">
-      <div>
-        <label class="fl">Alt text</label>
-        <input type="text" id="img-alt" placeholder="Describe the image" />
-      </div>
-      <div>
-        <label class="fl">Caption (optional)</label>
-        <input type="text" id="img-caption" placeholder="Shown below image" />
-      </div>
+      <div><label class="fl">Alt text</label><input type="text" id="img-alt" placeholder="Describe the image" /></div>
+      <div><label class="fl">Caption</label><input type="text" id="img-cap" placeholder="Optional" /></div>
     </div>
     <hr>
     <span class="sub">Output format</span>
     <div class="radios">
-      <label><input type="radio" name="img-fmt" value="html" checked> HTML img</label>
-      <label><input type="radio" name="img-fmt" value="figure"> Figure + caption</label>
-      <label><input type="radio" name="img-fmt" value="markdown"> Markdown</label>
-      <label><input type="radio" name="img-fmt" value="url"> Raw URL only</label>
+      <label><input type="radio" name="ifmt" value="html" checked> HTML</label>
+      <label><input type="radio" name="ifmt" value="figure"> Figure + caption</label>
+      <label><input type="radio" name="ifmt" value="md"> Markdown</label>
+      <label><input type="radio" name="ifmt" value="url"> URL only</label>
     </div>
-    <button class="main" onclick="doImage()">Generate</button>
-    <div class="out-section" id="img-outs">
-      <div class="out-group" id="img-embed-grp">
-        <label class="fl" id="img-embed-lbl">Embed code</label>
+    <button class="main" onclick="doImg()">Generate</button>
+    <div class="outs" id="img-outs">
+      <div class="og" id="img-eg">
+        <label class="fl" id="img-el">Embed code</label>
         <textarea class="out" id="img-out" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('img-out',this)">Copy embed</button></div>
+        <div class="br"><button class="cp" onclick="cp('img-out',this)">Copy embed</button></div>
       </div>
-      <div class="out-group" style="margin-top:12px">
+      <div class="og" style="margin-top:12px">
         <label class="fl">Raw URL</label>
         <textarea class="out sm" id="img-raw" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('img-raw',this)">Copy URL</button></div>
+        <div class="br"><button class="cp" onclick="cp('img-raw',this)">Copy URL</button></div>
       </div>
       <div class="prev" id="img-prev">
-        <div class="prev-inner">
-          <span class="prev-lbl">Preview</span>
-          <img id="img-prev-img" src="" alt="" />
-          <div class="prev-cap" id="img-prev-cap" style="display:none"></div>
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <img id="img-pi" src="" alt="" />
+          <div class="prev-cap" id="img-pc" style="display:none"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===================== PANEL: SINGLE AUDIO ===================== -->
-  <div class="panel" id="panel-audio">
-    <div class="section">
+  <!-- ============ AUDIO ============ -->
+  <div class="panel" id="panel-aud">
+    <div class="sec">
       <label class="fl">Dropbox audio file URL</label>
       <input type="text" id="aud-url" placeholder="https://www.dropbox.com/scl/fi/...mp3..." />
+      <div class="hint">Single MP3, WAV, M4A or OGG file. Generates a native browser player - no JS needed.</div>
       <div class="err" id="aud-err">Not a valid Dropbox URL</div>
     </div>
     <div class="row">
-      <div>
-        <label class="fl">Track title (optional)</label>
-        <input type="text" id="aud-title" placeholder="Shown above player" />
-      </div>
-      <div>
-        <label class="fl">Width</label>
-        <input type="text" id="aud-width" value="100%" />
-      </div>
+      <div><label class="fl">Track title</label><input type="text" id="aud-title" placeholder="Optional - shown above player" /></div>
+      <div><label class="fl">Width</label><input type="text" id="aud-w" value="100%" /></div>
     </div>
-    <button class="main" onclick="doAudio()">Generate</button>
-    <div class="out-section" id="aud-outs">
-      <div class="out-group">
+    <button class="main" onclick="doAud()">Generate</button>
+    <div class="outs" id="aud-outs">
+      <div class="og">
         <label class="fl">Embed code</label>
         <textarea class="out" id="aud-out" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('aud-out',this)">Copy embed</button></div>
+        <div class="br"><button class="cp" onclick="cp('aud-out',this)">Copy embed</button></div>
       </div>
-      <div class="out-group" style="margin-top:12px">
+      <div class="og" style="margin-top:12px">
         <label class="fl">Raw URL</label>
         <textarea class="out sm" id="aud-raw" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('aud-raw',this)">Copy URL</button></div>
+        <div class="br"><button class="cp" onclick="cp('aud-raw',this)">Copy URL</button></div>
       </div>
       <div class="prev" id="aud-prev">
-        <div class="prev-inner">
-          <span class="prev-lbl">Preview</span>
-          <div id="aud-prev-title" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
-          <audio id="aud-prev-player" controls style="width:100%"></audio>
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <div id="aud-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;display:none"></div>
+          <audio id="aud-pp" controls style="width:100%"></audio>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===================== PANEL: PHOTO GALLERY ===================== -->
-  <div class="panel" id="panel-gallery">
-    <div class="section">
-      <label class="fl">Dropbox shared folder URL</label>
-      <input type="text" id="gal-url" placeholder="https://www.dropbox.com/scl/fo/..." />
-      <div class="err" id="gal-err">Not a valid Dropbox folder URL</div>
-    </div>
-    <div class="loading" id="gal-loading">Fetching files from Dropbox...</div>
-    <button class="main" id="gal-btn" onclick="doGallery()">Generate embed</button>
-    <div class="out-section" id="gal-outs">
-      <div class="out-group">
-        <label class="fl">Embed code — paste into Sveltia (raw mode)</label>
-        <textarea class="out lg" id="gal-out" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('gal-out',this)">Copy embed</button></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================== PANEL: AUDIO GALLERY ===================== -->
-  <div class="panel" id="panel-audiogallery">
-    <div class="section">
-      <label class="fl">Dropbox shared folder URL (MP3s)</label>
-      <input type="text" id="ag-url" placeholder="https://www.dropbox.com/scl/fo/..." />
-      <div class="err" id="ag-err">Not a valid Dropbox folder URL</div>
+  <!-- ============ VIDEO ============ -->
+  <div class="panel" id="panel-vid">
+    <div class="sec">
+      <label class="fl">Video URL</label>
+      <input type="text" id="vid-url" placeholder="YouTube, Vimeo, or any video URL" />
+      <div class="hint">YouTube: youtube.com/watch?v=... or youtu.be/... · Vimeo: vimeo.com/... · Also accepts direct MP4 links.</div>
+      <div class="err" id="vid-err">Enter a valid video URL</div>
     </div>
     <div class="row">
-      <div>
-        <label class="fl">Section title (optional)</label>
-        <input type="text" id="ag-title" placeholder="e.g. Interviews" />
-      </div>
-      <div>
-        <label class="fl">File name display</label>
-        <select id="ag-nameformat">
-          <option value="clean">Clean (remove extension)</option>
-          <option value="raw">Raw filename</option>
-          <option value="none">Hide filenames</option>
+      <div><label class="fl">Width</label><input type="text" id="vid-w" value="100%" /></div>
+      <div><label class="fl">Aspect ratio</label>
+        <select id="vid-ar">
+          <option value="56.25">16:9 (default)</option>
+          <option value="75">4:3</option>
+          <option value="100">1:1 square</option>
+          <option value="42.86">21:9 ultrawide</option>
         </select>
       </div>
     </div>
-    <div class="loading" id="ag-loading">Fetching files from Dropbox...</div>
-    <button class="main" id="ag-btn" onclick="doAudioGallery()">Generate embed</button>
-    <div class="out-section" id="ag-outs">
-      <div class="out-group">
-        <label class="fl">Embed code — paste into Sveltia (raw mode)</label>
-        <textarea class="out lg" id="ag-out" readonly onclick="this.select()"></textarea>
-        <div class="btn-row"><button class="cp" onclick="cp('ag-out',this)">Copy embed</button></div>
+    <div class="sec">
+      <label class="fl">Caption</label>
+      <input type="text" id="vid-cap" placeholder="Optional" />
+    </div>
+    <button class="main" onclick="doVid()">Generate</button>
+    <div class="outs" id="vid-outs">
+      <div class="og">
+        <label class="fl">Embed code</label>
+        <textarea class="out lg" id="vid-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('vid-out',this)">Copy embed</button></div>
       </div>
-      <div class="prev" id="ag-prev">
-        <div class="prev-inner">
-          <span class="prev-lbl">Preview</span>
-          <div id="ag-track-list"></div>
+      <div class="prev" id="vid-prev">
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <div id="vid-pp"></div>
+          <div class="prev-cap" id="vid-pc" style="display:none;margin-top:8px"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ARCHIVE.ORG ============ -->
+  <div class="panel" id="panel-arc">
+    <div class="sec">
+      <label class="fl">Archive.org URL</label>
+      <input type="text" id="arc-url" placeholder="https://archive.org/details/..." />
+      <div class="hint">Paste the page URL - e.g. archive.org/details/my-recording - the tool builds the embed automatically.</div>
+      <div class="err" id="arc-err">Enter a valid Archive.org URL</div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Width</label><input type="text" id="arc-w" value="100%" /></div>
+      <div><label class="fl">Height</label><input type="text" id="arc-h" value="60" /></div>
+    </div>
+    <div class="sec">
+      <label class="fl">Title / label</label>
+      <input type="text" id="arc-title" placeholder="Optional - shown above player" />
+    </div>
+    <hr>
+    <span class="sub">Player type</span>
+    <div class="radios">
+      <label><input type="radio" name="arctype" value="audio" checked> Audio player (slim)</label>
+      <label><input type="radio" name="arctype" value="playlist"> Playlist player</label>
+      <label><input type="radio" name="arctype" value="full"> Full embed</label>
+    </div>
+    <button class="main" onclick="doArc()">Generate</button>
+    <div class="outs" id="arc-outs">
+      <div class="og">
+        <label class="fl">Embed code</label>
+        <textarea class="out lg" id="arc-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('arc-out',this)">Copy embed</button></div>
+      </div>
+      <div class="prev" id="arc-prev">
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <div id="arc-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
+          <div id="arc-pp"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ IFRAME ============ -->
+  <div class="panel" id="panel-ifr">
+    <div class="sec">
+      <label class="fl">Any URL to embed</label>
+      <input type="text" id="ifr-url" placeholder="https://..." />
+      <div class="hint">Maps, custom players, websites, tools - anything that can be iframed.</div>
+      <div class="err" id="ifr-err">Enter a valid URL</div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Width</label><input type="text" id="ifr-w" value="100%" /></div>
+      <div><label class="fl">Height</label><input type="text" id="ifr-h" value="400px" /></div>
+    </div>
+    <div class="sec">
+      <label class="fl">Title / label</label>
+      <input type="text" id="ifr-title" placeholder="Optional - shown above" />
+    </div>
+    <button class="main" onclick="doIfr()">Generate</button>
+    <div class="outs" id="ifr-outs">
+      <div class="og">
+        <label class="fl">Embed code</label>
+        <textarea class="out" id="ifr-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('ifr-out',this)">Copy embed</button></div>
+      </div>
+      <div class="prev" id="ifr-prev">
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <div id="ifr-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
+          <div id="ifr-pp"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ GALLERY ============ -->
+  <div class="panel" id="panel-gal">
+    <div class="sec">
+      <label class="fl">Dropbox shared folder URL</label>
+      <input type="text" id="gal-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="hint">Shared folder containing photos. Generates the dynamic gallery embed for the site body field (raw mode).</div>
+      <div class="err" id="gal-err">Not a valid Dropbox folder URL</div>
+    </div>
+    <button class="main" onclick="doGal()">Generate</button>
+    <div class="outs" id="gal-outs">
+      <div class="og">
+        <label class="fl">Embed code — paste into Sveltia body field (raw mode)</label>
+        <textarea class="out lg" id="gal-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('gal-out',this)">Copy embed</button></div>
       </div>
     </div>
   </div>
 
 </div><!-- .app -->
-
 <script>
 var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
 
 /* ---- TABS ---- */
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach(function(t,i){
-    var names = ['img','audio','gallery','audiogallery'];
-    t.classList.toggle('active', names[i] === name);
-  });
-  document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
-  document.getElementById('panel-' + name).classList.add('active');
+var tabNames = ['img','aud','vid','arc','ifr','gal'];
+function sw(name) {
+  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', tabNames[i]===name); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('panel-'+name).classList.add('active');
 }
 
-/* ---- SHARED HELPERS ---- */
+/* ---- HELPERS ---- */
 function toRaw(url) {
-  if (/[?&]dl=[01]/.test(url)) return url.replace(/([?&])dl=[01]/, '$1raw=1');
-  return url + (url.indexOf('?') === -1 ? '?' : '&') + 'raw=1';
+  if (/[?&]dl=[01]/.test(url)) return url.replace(/([?&])dl=[01]/,'$1raw=1');
+  return url + (url.indexOf('?')===-1?'?':'&') + 'raw=1';
 }
 
-function buildStyle(w, mw, align) {
-  var p = [];
-  if (w) p.push('width:' + w);
-  if (mw) p.push('max-width:' + mw);
-  if (align === 'center') { p.push('display:block'); p.push('margin:0 auto'); }
-  else if (align === 'left') { p.push('display:block'); p.push('margin-right:auto'); }
-  else if (align === 'right') { p.push('display:block'); p.push('margin-left:auto'); }
-  else if (align === 'float-left') { p.push('float:left'); p.push('margin:0 24px 16px 0'); }
-  else if (align === 'float-right') { p.push('float:right'); p.push('margin:0 0 16px 24px'); }
-  return p.length ? ' style="' + p.join('; ') + '"' : '';
+function bldStyle(w,mw,al) {
+  var p=[];
+  if(w) p.push('width:'+w);
+  if(mw) p.push('max-width:'+mw);
+  if(al==='center'){p.push('display:block');p.push('margin:0 auto');}
+  else if(al==='left'){p.push('display:block');p.push('margin-right:auto');}
+  else if(al==='right'){p.push('display:block');p.push('margin-left:auto');}
+  else if(al==='float-left'){p.push('float:left');p.push('margin:0 24px 16px 0');}
+  else if(al==='float-right'){p.push('float:right');p.push('margin:0 0 16px 24px');}
+  return p.length?' style="'+p.join('; ')+'"':'';
 }
 
-function cp(id, btn) {
-  var el = document.getElementById(id);
-  el.select();
-  document.execCommand('copy');
-  var o = btn.textContent;
-  btn.textContent = 'Copied';
-  setTimeout(function() { btn.textContent = o; }, 1500);
+function cp(id,btn) {
+  var el=document.getElementById(id); el.select(); document.execCommand('copy');
+  var o=btn.textContent; btn.textContent='Copied';
+  setTimeout(function(){btn.textContent=o;},1500);
 }
 
-function proxyFetch(ep, body) {
-  return fetch(PROXY, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ endpoint: ep, body: body })
-  }).then(function(r) { return r.json(); });
-}
+function show(id){ document.getElementById(id).classList.add('on'); }
+function hide(id){ document.getElementById(id).classList.remove('on'); }
+function val(id){ return document.getElementById(id).value.trim(); }
+function set(id,v){ document.getElementById(id).value=v; }
 
-function cleanName(n) { return n.replace(/\.[^/.]+$/, '').replace(/[_-]/g, ' '); }
-
-/* ---- SINGLE IMAGE ---- */
-function doImage() {
-  var url = document.getElementById('img-url').value.trim();
-  var errEl = document.getElementById('img-err');
-  errEl.classList.remove('on');
-  document.getElementById('img-outs').classList.remove('on');
-  document.getElementById('img-prev').classList.remove('on');
-
-  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
-
-  var direct = toRaw(url);
-  var w = document.getElementById('img-width').value.trim();
-  var mw = document.getElementById('img-maxw').value.trim();
-  var al = document.getElementById('img-align').value;
-  var alt = document.getElementById('img-alt').value.trim();
-  var cap = document.getElementById('img-caption').value.trim();
-  var fmt = document.querySelector('input[name="img-fmt"]:checked').value;
-  var s = buildStyle(w, mw, al);
-
-  var embed = '', showEmbed = fmt !== 'url';
-  if (fmt === 'html') {
-    embed = '<img src="' + direct + '" alt="' + alt + '"' + s + '>';
-  } else if (fmt === 'figure') {
-    embed = '<figure' + (mw ? ' style="max-width:' + mw + '"' : '') + '>\n';
-    embed += '  <img src="' + direct + '" alt="' + alt + '" style="width:100%">\n';
-    if (cap) embed += '  <figcaption>' + cap + '</figcaption>\n';
-    embed += '</figure>';
-  } else if (fmt === 'markdown') {
-    embed = '![' + alt + '](' + direct + ')';
-    if (cap) embed += '\n*' + cap + '*';
+/* ---- IMAGE ---- */
+function doImg() {
+  var url=val('img-url');
+  hide('img-err'); hide('img-outs'); hide('img-prev');
+  if(!url||url.indexOf('dropbox.com')===-1){show('img-err');return;}
+  var direct=toRaw(url);
+  var w=val('img-w'), mw=val('img-mw'), al=val('img-al');
+  var alt=val('img-alt'), cap=val('img-cap');
+  var fmt=document.querySelector('input[name="ifmt"]:checked').value;
+  var s=bldStyle(w,mw,al);
+  var embed='', showE=fmt!=='url';
+  if(fmt==='html') embed='<img src="'+direct+'" alt="'+alt+'"'+s+'>';
+  else if(fmt==='figure'){
+    embed='<figure'+(mw?' style="max-width:'+mw+'"':'')+'>'+'\n';
+    embed+='  <img src="'+direct+'" alt="'+alt+'" style="width:100%">'+'\n';
+    if(cap) embed+='  <figcaption>'+cap+'</figcaption>'+'\n';
+    embed+='</figure>';
+  } else if(fmt==='md'){
+    embed='!['+alt+']('+direct+')';
+    if(cap) embed+='\n*'+cap+'*';
   }
-
-  document.getElementById('img-embed-grp').style.display = showEmbed ? 'block' : 'none';
-  if (showEmbed) {
-    document.getElementById('img-out').value = embed;
-    document.getElementById('img-embed-lbl').textContent =
-      fmt === 'figure' ? 'Figure code' : fmt === 'markdown' ? 'Markdown' : 'Embed code';
-  }
-  document.getElementById('img-raw').value = direct;
-  document.getElementById('img-outs').classList.add('on');
-
-  var img = document.getElementById('img-prev-img');
-  img.onload = function() { document.getElementById('img-prev').classList.add('on'); };
-  img.onerror = function() {};
-  img.style.width = (w && w !== '100%') ? w : '';
-  img.style.maxWidth = mw || '';
-  img.alt = alt;
-  img.src = direct;
-  var capEl = document.getElementById('img-prev-cap');
-  capEl.textContent = cap;
-  capEl.style.display = cap ? 'block' : 'none';
+  document.getElementById('img-eg').style.display=showE?'block':'none';
+  if(showE){ set('img-out',embed); document.getElementById('img-el').textContent=fmt==='figure'?'Figure code':fmt==='md'?'Markdown':'Embed code'; }
+  set('img-raw',direct); show('img-outs');
+  var img=document.getElementById('img-pi');
+  img.onload=function(){show('img-prev');};
+  img.onerror=function(){};
+  img.style.width=(w&&w!=='100%')?w:''; img.style.maxWidth=mw||''; img.alt=alt; img.src=direct;
+  var pc=document.getElementById('img-pc'); pc.textContent=cap; pc.style.display=cap?'block':'none';
 }
-
-document.querySelectorAll('input[name="img-fmt"]').forEach(function(r) {
-  r.addEventListener('change', function() {
-    if (document.getElementById('img-outs').classList.contains('on')) doImage();
-  });
+document.querySelectorAll('input[name="ifmt"]').forEach(function(r){
+  r.addEventListener('change',function(){if(document.getElementById('img-outs').classList.contains('on'))doImg();});
 });
-document.getElementById('img-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doImage(); });
+document.getElementById('img-url').addEventListener('keydown',function(e){if(e.key==='Enter')doImg();});
 
-/* ---- SINGLE AUDIO ---- */
-function doAudio() {
-  var url = document.getElementById('aud-url').value.trim();
-  var errEl = document.getElementById('aud-err');
-  errEl.classList.remove('on');
-  document.getElementById('aud-outs').classList.remove('on');
-  document.getElementById('aud-prev').classList.remove('on');
+/* ---- AUDIO ---- */
+function doAud() {
+  var url=val('aud-url');
+  hide('aud-err'); hide('aud-outs'); hide('aud-prev');
+  if(!url||url.indexOf('dropbox.com')===-1){show('aud-err');return;}
+  var direct=toRaw(url);
+  var title=val('aud-title'), w=val('aud-w')||'100%';
+  var embed='<div class="audio-track">\n';
+  if(title) embed+='  <p class="audio-track-name">'+title+'</p>\n';
+  embed+='  <audio controls preload="none" style="width:'+w+'" src="'+direct+'"></audio>\n</div>';
+  set('aud-out',embed); set('aud-raw',direct); show('aud-outs');
+  var pt=document.getElementById('aud-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
+  document.getElementById('aud-pp').src=direct; show('aud-prev');
+}
+document.getElementById('aud-url').addEventListener('keydown',function(e){if(e.key==='Enter')doAud();});
 
-  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
-
-  var direct = toRaw(url);
-  var title = document.getElementById('aud-title').value.trim();
-  var w = document.getElementById('aud-width').value.trim() || '100%';
-
-  var embed = '<div class="audio-track">\n';
-  if (title) embed += '  <p class="audio-track-name">' + title + '</p>\n';
-  embed += '  <audio controls preload="none" style="width:' + w + '" src="' + direct + '"></audio>\n';
-  embed += '</div>';
-
-  document.getElementById('aud-out').value = embed;
-  document.getElementById('aud-raw').value = direct;
-  document.getElementById('aud-outs').classList.add('on');
-
-  var titleEl = document.getElementById('aud-prev-title');
-  titleEl.textContent = title;
-  titleEl.style.display = title ? 'block' : 'none';
-  var player = document.getElementById('aud-prev-player');
-  player.src = direct;
-  document.getElementById('aud-prev').classList.add('on');
+/* ---- VIDEO ---- */
+function toEmbed(url) {
+  // YouTube
+  var yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  if(yt) return 'https://www.youtube-nocookie.com/embed/'+yt[1];
+  // Vimeo
+  var vi = url.match(/vimeo\.com\/(\d+)/);
+  if(vi) return 'https://player.vimeo.com/video/'+vi[1];
+  // Direct file
+  if(/\.(mp4|webm|mov)$/i.test(url)) return null; // handled separately
+  // Assume it's already an embed URL or generic URL
+  return url;
 }
 
-document.getElementById('aud-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doAudio(); });
+function doVid() {
+  var url=val('vid-url');
+  hide('vid-err'); hide('vid-outs'); hide('vid-prev');
+  if(!url){show('vid-err');return;}
+  var w=val('vid-w')||'100%', ar=val('vid-ar')||'56.25', cap=val('vid-cap');
+  var embed='', previewHtml='';
 
-/* ---- PHOTO GALLERY (dynamic - folder) ---- */
-function doGallery() {
-  var url = document.getElementById('gal-url').value.trim();
-  var errEl = document.getElementById('gal-err');
-  errEl.classList.remove('on');
-  document.getElementById('gal-outs').classList.remove('on');
-
-  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
-
-  // Generate dynamic embed - proxy called at page load time, not here
-  var embed = '<div class="dbx-gallery" id="dbx-gallery-embed" aria-live="polite">\n';
-  embed += '  <div class="dbx-skeleton">\n';
-  embed += '    <div class="dbx-skeleton-item"></div>\n';
-  embed += '    <div class="dbx-skeleton-item"></div>\n';
-  embed += '    <div class="dbx-skeleton-item"></div>\n';
-  embed += '    <div class="dbx-skeleton-item"></div>\n';
-  embed += '  </div>\n</div>\n';
-  embed += '<script>\n(function() {\n';
-  embed += "  window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', '" + url.replace(/'/g, "\\'") + "', 'dbx-gallery-embed');\n";
-  embed += '})();\n<\/script>';
-
-  document.getElementById('gal-out').value = embed;
-  document.getElementById('gal-outs').classList.add('on');
-}
-
-document.getElementById('gal-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doGallery(); });
-
-/* ---- AUDIO GALLERY (dynamic - folder) ---- */
-function doAudioGallery() {
-  var url = document.getElementById('ag-url').value.trim();
-  var errEl = document.getElementById('ag-err');
-  errEl.classList.remove('on');
-  document.getElementById('ag-outs').classList.remove('on');
-  document.getElementById('ag-prev').classList.remove('on');
-
-  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
-
-  var title = document.getElementById('ag-title').value.trim();
-  var nameformat = document.getElementById('ag-nameformat').value;
-  var showNames = nameformat !== 'none';
-
-  var embed = '<div class="audio-gallery" id="audio-gallery-embed">\n';
-  if (title) embed += '  <h2>' + title + '</h2>\n';
-  embed += '  <div class="audio-loading">Loading recordings...</div>\n</div>\n';
-  embed += '<script>\n(function() {\n';
-  embed += "  var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';\n";
-  embed += "  var URL = '" + url.replace(/'/g, "\\'") + "';\n";
-  embed += '  var gallery = document.getElementById(\'audio-gallery-embed\');\n';
-  embed += '  var loadEl = gallery.querySelector(\'.audio-loading\');\n';
-  embed += '  function pf(ep,body){return fetch(PROXY,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({endpoint:ep,body:body})}).then(function(r){return r.json();});}\n';
-  embed += '  pf("files/list_folder",{path:"",shared_link:{url:URL},recursive:false})\n';
-  embed += '  .then(function(data){\n';
-  embed += '    var files=(data.entries||[]).filter(function(f){return f[".tag"]==="file"&&/\\.(mp3|m4a|ogg|wav)$/i.test(f.name);});\n';
-  embed += '    if(!files.length){loadEl.textContent="No recordings found.";return;}\n';
-  embed += '    return Promise.all(files.map(function(f){return pf("files/get_temporary_link",{path:f.path_lower}).then(function(d){return{name:f.name,link:d.link};});}));\n';
-  embed += '  }).then(function(tracks){\n';
-  embed += '    if(!tracks)return;\n';
-  embed += '    loadEl.remove();\n';
-  embed += '    var ul=document.createElement("ul");ul.className="audio-track-list";\n';
-  embed += '    tracks.forEach(function(t){\n';
-  embed += '      var li=document.createElement("li");li.className="audio-track";\n';
-
-  if (showNames) {
-    if (nameformat === 'clean') {
-      embed += '      var label=t.name.replace(/\\.[^/.]+$/,"").replace(/[_-]/g," ");\n';
-    } else {
-      embed += '      var label=t.name;\n';
-    }
-    embed += '      if(label){var p=document.createElement("p");p.className="audio-track-name";p.textContent=label;li.appendChild(p);}\n';
+  if(/\.(mp4|webm|mov)$/i.test(url)) {
+    // Direct video file
+    embed='<video controls style="width:'+w+'" preload="metadata" src="'+url+'"></video>';
+    if(cap) embed+='\n<p class="photo-caption">'+cap+'</p>';
+    previewHtml='<video controls style="max-width:100%" src="'+url+'"></video>';
+  } else {
+    var embedUrl=toEmbed(url);
+    if(!embedUrl){show('vid-err');return;}
+    embed='<div style="position:relative;width:'+w+';padding-bottom:'+ar+'%;height:0;overflow:hidden">\n';
+    embed+='  <iframe src="'+embedUrl+'" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>\n';
+    embed+='</div>';
+    if(cap) embed+='\n<p class="photo-caption">'+cap+'</p>';
+    previewHtml='<div style="position:relative;width:100%;padding-bottom:'+ar+'%;height:0;overflow:hidden"><iframe src="'+embedUrl+'" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>';
   }
+  set('vid-out',embed); show('vid-outs');
+  document.getElementById('vid-pp').innerHTML=previewHtml;
+  var pc=document.getElementById('vid-pc'); pc.textContent=cap; pc.style.display=cap?'block':'none';
+  show('vid-prev');
+}
+document.getElementById('vid-url').addEventListener('keydown',function(e){if(e.key==='Enter')doVid();});
 
-  embed += '      var a=document.createElement("audio");a.controls=true;a.preload="none";a.src=t.link;\n';
-  embed += '      li.appendChild(a);ul.appendChild(li);\n';
-  embed += '    });\n';
-  embed += '    gallery.appendChild(ul);\n';
-  embed += '  }).catch(function(){loadEl.textContent="Could not load recordings.";});\n';
-  embed += '})();\n<\/script>';
-
-  document.getElementById('ag-out').value = embed;
-  document.getElementById('ag-outs').classList.add('on');
-
-  // Live preview - actually fetch from proxy
-  var agPrev = document.getElementById('ag-prev');
-  var agList = document.getElementById('ag-track-list');
-  agList.innerHTML = '<div style="font-size:11px;color:#666;padding:8px 0">Loading preview...</div>';
-  agPrev.classList.add('on');
-
-  proxyFetch('files/list_folder', { path: '', shared_link: { url: url }, recursive: false })
-  .then(function(data) {
-    var files = (data.entries || []).filter(function(f) {
-      return f['.tag'] === 'file' && /\.(mp3|m4a|ogg|wav)$/i.test(f.name);
-    });
-    if (!files.length) { agList.innerHTML = '<div style="font-size:11px;color:#666">No audio files found</div>'; return; }
-    return Promise.all(files.map(function(f) {
-      return proxyFetch('files/get_temporary_link', { path: f.path_lower })
-        .then(function(d) { return { name: f.name, link: d.link }; });
-    }));
-  })
-  .then(function(tracks) {
-    if (!tracks) return;
-    agList.innerHTML = '';
-    tracks.forEach(function(t) {
-      var label = nameformat === 'clean' ? cleanName(t.name) : nameformat === 'none' ? '' : t.name;
-      var div = document.createElement('div');
-      div.className = 'prev-track';
-      if (label) { var p = document.createElement('p'); p.className = 'prev-track-name'; p.textContent = label; div.appendChild(p); }
-      var a = document.createElement('audio');
-      a.controls = true; a.preload = 'none'; a.src = t.link;
-      div.appendChild(a);
-      agList.appendChild(div);
-    });
-  })
-  .catch(function() {
-    agList.innerHTML = '<div style="font-size:11px;color:#666">Preview unavailable (proxy only works on thiswastomorrow.co.uk)</div>';
-  });
+/* ---- ARCHIVE.ORG ---- */
+function toArchiveId(url) {
+  var m=url.match(/archive\.org\/details\/([^/?&#]+)/);
+  return m?m[1]:null;
 }
 
-document.getElementById('ag-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doAudioGallery(); });
+function doArc() {
+  var url=val('arc-url');
+  hide('arc-err'); hide('arc-outs'); hide('arc-prev');
+  if(!url||url.indexOf('archive.org')===-1){show('arc-err');return;}
+  var id=toArchiveId(url);
+  if(!id){show('arc-err');return;}
+  var w=val('arc-w')||'100%', h=val('arc-h')||'60';
+  var title=val('arc-title');
+  var type=document.querySelector('input[name="arctype"]:checked').value;
+  var iframeSrc='', iframeH=h;
+  if(type==='audio'){
+    iframeSrc='https://archive.org/embed/'+id+'&playlist=1&list_height=0';
+    iframeH=h||'60';
+  } else if(type==='playlist'){
+    iframeSrc='https://archive.org/embed/'+id+'&playlist=1';
+    iframeH=h||'300';
+  } else {
+    iframeSrc='https://archive.org/embed/'+id;
+    iframeH=h||'400';
+  }
+  var embed='';
+  if(title) embed+='<p class="audio-track-name">'+title+'</p>\n';
+  embed+='<iframe src="'+iframeSrc+'" width="'+w+'" height="'+iframeH+'px" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>';
+  set('arc-out',embed); show('arc-outs');
+  var pt=document.getElementById('arc-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
+  document.getElementById('arc-pp').innerHTML='<iframe src="'+iframeSrc+'" width="100%" height="'+iframeH+'px" frameborder="0" allowfullscreen></iframe>';
+  show('arc-prev');
+}
+document.getElementById('arc-url').addEventListener('keydown',function(e){if(e.key==='Enter')doArc();});
+document.querySelectorAll('input[name="arctype"]').forEach(function(r){
+  r.addEventListener('change',function(){if(document.getElementById('arc-outs').classList.contains('on'))doArc();});
+});
+
+/* ---- IFRAME ---- */
+function doIfr() {
+  var url=val('ifr-url');
+  hide('ifr-err'); hide('ifr-outs'); hide('ifr-prev');
+  if(!url||!url.startsWith('http')){show('ifr-err');return;}
+  var w=val('ifr-w')||'100%', h=val('ifr-h')||'400px';
+  var title=val('ifr-title');
+  var hVal=h.replace('px','');
+  var embed='';
+  if(title) embed+='<p class="audio-track-name">'+title+'</p>\n';
+  embed+='<iframe src="'+url+'" width="'+w+'" height="'+hVal+'" frameborder="0" allowfullscreen loading="lazy"></iframe>';
+  set('ifr-out',embed); show('ifr-outs');
+  var pt=document.getElementById('ifr-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
+  document.getElementById('ifr-pp').innerHTML='<iframe src="'+url+'" width="100%" height="'+hVal+'" frameborder="0" allowfullscreen></iframe>';
+  show('ifr-prev');
+}
+document.getElementById('ifr-url').addEventListener('keydown',function(e){if(e.key==='Enter')doIfr();});
+
+/* ---- GALLERY ---- */
+function doGal() {
+  var url=val('gal-url');
+  hide('gal-err'); hide('gal-outs');
+  if(!url||url.indexOf('dropbox.com')===-1){show('gal-err');return;}
+  var uid='gal-'+Math.random().toString(36).slice(2,7);
+  var embed='<div class="dbx-gallery" id="'+uid+'" aria-live="polite">\n';
+  embed+='  <div class="dbx-skeleton">\n';
+  embed+='    <div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div>\n';
+  embed+='    <div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div>\n';
+  embed+='  </div>\n</div>\n';
+  embed+='<script>(function(){\n';
+  embed+="  window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','"+url.replace(/'/g,"\\'")+"','"+uid+"');\n";
+  embed+='})();<\/script>';
+  set('gal-out',embed); show('gal-outs');
+}
+document.getElementById('gal-url').addEventListener('keydown',function(e){if(e.key==='Enter')doGal();});
 </script>
 </body>
 </html>
