@@ -6,7 +6,6 @@
   <div class="meta">
     <strong>Location:</strong> {{ .Params.location }}
     {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
-    {{ with .Params.visit_date }} | {{ . }}{{ end }}
   </div>
   {{ end }}
 
@@ -73,8 +72,57 @@
   </script>
   {{ end }}
 
+  <!-- MAIN CONTENT (body markdown) -->
   {{ .Content }}
 
+  <!-- DROPBOX AUDIO GALLERY -->
+  {{ if .Params.dropbox_audio }}
+  <div id="dropbox-audio-gallery" class="audio-gallery">
+    <div class="audio-loading">Loading recordings...</div>
+  </div>
+  <script>
+  (function() {
+    var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+    var FOLDER_URL = '{{ .Params.dropbox_audio }}';
+    var gallery = document.getElementById('dropbox-audio-gallery');
+    var loadEl = gallery.querySelector('.audio-loading');
+    function pf(ep, body) {
+      return fetch(PROXY, { method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({endpoint: ep, body: body}) }).then(function(r){return r.json();});
+    }
+    pf('files/list_folder', {path:'', shared_link:{url:FOLDER_URL}, recursive:false})
+    .then(function(data) {
+      var files = (data.entries||[]).filter(function(f){
+        return f['.tag']==='file' && /\.(mp3|m4a|ogg|wav)$/i.test(f.name);
+      });
+      if (files.length===0) { loadEl.textContent='No recordings found.'; return; }
+      return Promise.all(files.map(function(f){
+        return pf('files/get_temporary_link',{path:f.path_lower}).then(function(d){return {name:f.name,link:d.link};});
+      }));
+    })
+    .then(function(tracks) {
+      if (!tracks) return;
+      loadEl.remove();
+      var ul = document.createElement('ul');
+      ul.className = 'audio-track-list';
+      tracks.forEach(function(t){
+        var label = t.name.replace(/\.[^/.]+$/, '').replace(/[_-]/g, ' ');
+        var li = document.createElement('li');
+        li.className = 'audio-track';
+        if (label) { var p=document.createElement('p'); p.className='audio-track-name'; p.textContent=label; li.appendChild(p); }
+        var audio=document.createElement('audio');
+        audio.controls=true; audio.preload='none'; audio.src=t.link;
+        li.appendChild(audio);
+        ul.appendChild(li);
+      });
+      gallery.appendChild(ul);
+    })
+    .catch(function(){ loadEl.textContent='Could not load recordings.'; });
+  })();
+  </script>
+  {{ end }}
+
+  <!-- AUDIO -->
   {{ with .Params.audio }}
   <div class="audio-section">
     {{ range . }}
@@ -85,6 +133,7 @@
   </div>
   {{ end }}
 
+  <!-- ARCHIVE.ORG RECORDINGS -->
   {{ with .Params.archives }}
   <div class="archives-section">
     <h2>Recordings</h2>
@@ -97,6 +146,7 @@
   </div>
   {{ end }}
 
+  <!-- VIDEOS -->
   {{ with .Params.videos }}
   <div class="videos-section">
     <h2>Video</h2>
@@ -112,6 +162,7 @@
   </div>
   {{ end }}
 
+  <!-- SOURCES -->
   {{ with .Params.sources }}
   <div class="sources">
     <strong>Sources</strong><br>
@@ -121,6 +172,7 @@
   </div>
   {{ end }}
 
+  <!-- LINKS -->
   {{ with .Params.links }}
   <div class="links-section">
     {{ range . }}

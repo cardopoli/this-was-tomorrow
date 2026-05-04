@@ -1,48 +1,63 @@
 ---
-title: "Hastings Commons"
-location: "Hastings, East Sussex"
-slug: "hastings-commons"
+title: Hastings Commons
+location: Hastings, East Sussex
+status: visited
+visit_date: 27-04-2026
 draft: false
-photos: []
+description: ''
+photos:
+  - image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+    caption: ''
+image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+body_intro: |-
+  ## THE PLACE AND THE PROBLEM
+
+  Hastings is a coastal town in East Sussex facing decades of decline. Built in the 1920s to house a local newspaper, the Hastings and St Leonards Observer building became a local landmark. When the Observer moved out in 1985, it took 500 jobs with it. That exodus was a prelude to the White Rock area becoming economically deprived. The area is a conservation area with significant architectural assets, but suffered from problems of derelict and abandoned buildings, houses in multiple occupation, and absentee landlords.
+
+  By 2016, a new threat had emerged: gentrification. Rising property values and rental prices were beginning to displace long-term residents. Local community members began asking: "Is gentrification happening? If so, is it a problem? If so, is there anything we can do about it?" The answer they came up with was to bring property into community ownership and cap the rents forever at one-third of average local income – what they call "Hastings Living Rents."
+
+  ## THE ORIGINS: PIER TO COMMONS
+
+  The story begins in 2006 when activist and entrepreneur Jess Steele began work to restore the Hastings Pier, a closed historic structure. In 2008, with the pier slipping into further disrepair, the community decided they couldn't wait for someone else to solve it – they set up a trust to buy the pier themselves. That DIY approach has lasted through to the present day.
+
+  The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
+
+  <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview" width="100%" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+  _Listen to the interview with_ [_Jess Steele_](https://en.wikipedia.org/wiki/Jess_Steele) 
+
+  In 2014, Jess Steele (via her company [Jericho Road Solutions](https://www.jerichoroad.co.uk/)) partnered with Meanwhile Space CIC to establish [Hastings Commons Neighbourhood Ventures (HCNV)](https://hastingscommons.com/), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
+dropbox_gallery: https://www.dropbox.com/scl/fo/bnc5x98ncccxlq7f21lwo/ALH0aZpNjMjpwHFuy7zI04o?rlkey=ho9k7rd328x0dihag2ljreuvj&dl=0
+body_middle: |-
+  ## THE MODEL: RISK-SHARING AND PERMANENCE
+
+  The governance structure is deliberately designed to protect community assets while enabling risk-taking. Hastings Commons Neighbourhood Ventures is owned by three equal shareholders: Jericho Road Solutions, Meanwhile Space CIC, and Hastings Commons Community Land Trust (the CLT). This arrangement allows the CLT to have strong influence and governance voice (33% ownership) while protecting it from excessive risk – the most financially risky decisions are shared with the founder entrepreneurs.
+
+  The shareholder agreement includes a provision that once the buildings reach "steady state" (covering their own costs), the CLT will hold 100% of the shares and own and control the properties in perpetuity. This is the long-term strategy: the CLT as a "forever" organisation, holding assets on behalf of the community for the long term.
+
+  Hastings Commons CLT is member-led, democratic, and non-profit. It is jointly owned by over 600 shareholders (both individuals and community organisations), ensuring community ownership and voice. Any member can become involved in decision-making. This is not a traditional development company model – it is structured explicitly to keep affordability and community benefit permanent.
+
+  ## WHAT HAS BEEN BUILT
+
+  Over the past decade, Hastings Commons has:
+
+  - Acquired and renovated 11 rent-capped buildings
+  - Created 50+ workspaces
+  - Housed 120+ tenants
+  - Converted derelict historic buildings into homes, offices, creative studios, a youth club, and a digital arts hub (OBX)
+
+  Rents are set at the lower of Hastings Living Rents (one-third of local median wages) or 80% of market rent. Residents are selected from the Council's Housing Register using four criteria: 1) housing need, 2) local connection, 3) enthusiasm for the Hastings Commons ethos, and 4) willingness to contribute to the Commons and the wider community.
+
+  Projects include Rock House (residential and workspace), the Observer Building (residential apartments, offices, creative space, digital arts hub), Eagle House, Harper's Caves, and others in the Trinity Triangle and broader White Rock neighbourhood. The most recent project is OB Homes – 12 new flats (eleven 1-bedroom and one 2-bedroom) created from previously derelict floor space in the Observer Building, with rents set at or below Living Rent levels.
+
+  All spaces use sustainable design principles: triple glazing, roof insulation, air source heat pumps instead of gas, heat recovery systems, and rainwater harvesting.
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/ltr4oscq54hoajzfz73wa/AGVXFLnVMkDTywa2p4i9p1E?rlkey=zhpi5z9eh58um3lsrxm3tcyzd&dl=0
 audio: []
+archives: []
+videos: []
 sources: []
+slug: hastings-commons
 ---
-
-## THE PLACE AND THE PROBLEM
-
-Hastings is a coastal town in East Sussex facing decades of decline. Built in the 1920s to house a local newspaper, the Hastings and St Leonards Observer building became a local landmark. When the Observer moved out in 1985, it took 500 jobs with it. That exodus was a prelude to the White Rock area becoming economically deprived. The area is a conservation area with significant architectural assets, but suffered from problems of derelict and abandoned buildings, houses in multiple occupation, and absentee landlords.
-
-By 2016, a new threat had emerged: gentrification. Rising property values and rental prices were beginning to displace long-term residents. Local community members began asking: "Is gentrification happening? If so, is it a problem? If so, is there anything we can do about it?" The answer they came up with was to bring property into community ownership and cap the rents forever at one-third of average local income – what they call "Hastings Living Rents."
-
-## THE ORIGINS: PIER TO COMMONS
-
-The story begins in 2006 when activist and entrepreneur Jess Steele began work to restore the Hastings Pier, a closed historic structure. In 2008, with the pier slipping into further disrepair, the community decided they couldn't wait for someone else to solve it – they set up a trust to buy the pier themselves. That DIY approach has lasted through to the present day.
-
-The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
-
-In 2014, Jess Steele (via her company Jericho Road Solutions) partnered with Meanwhile Space CIC to establish Hastings Commons Neighbourhood Ventures (HCNV), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
-
-## THE MODEL: RISK-SHARING AND PERMANENCE
-
-The governance structure is deliberately designed to protect community assets while enabling risk-taking. Hastings Commons Neighbourhood Ventures is owned by three equal shareholders: Jericho Road Solutions, Meanwhile Space CIC, and Hastings Commons Community Land Trust (the CLT). This arrangement allows the CLT to have strong influence and governance voice (33% ownership) while protecting it from excessive risk – the most financially risky decisions are shared with the founder entrepreneurs.
-
-The shareholder agreement includes a provision that once the buildings reach "steady state" (covering their own costs), the CLT will hold 100% of the shares and own and control the properties in perpetuity. This is the long-term strategy: the CLT as a "forever" organisation, holding assets on behalf of the community for the long term.
-
-Hastings Commons CLT is member-led, democratic, and non-profit. It is jointly owned by over 600 shareholders (both individuals and community organisations), ensuring community ownership and voice. Any member can become involved in decision-making. This is not a traditional development company model – it is structured explicitly to keep affordability and community benefit permanent.
-
-## WHAT HAS BEEN BUILT
-
-Over the past decade, Hastings Commons has:
-- Acquired and renovated 11 rent-capped buildings
-- Created 50+ workspaces
-- Housed 120+ tenants
-- Converted derelict historic buildings into homes, offices, creative studios, a youth club, and a digital arts hub (OBX)
-
-Rents are set at the lower of Hastings Living Rents (one-third of local median wages) or 80% of market rent. Residents are selected from the Council's Housing Register using four criteria: 1) housing need, 2) local connection, 3) enthusiasm for the Hastings Commons ethos, and 4) willingness to contribute to the Commons and the wider community.
-
-Projects include Rock House (residential and workspace), the Observer Building (residential apartments, offices, creative space, digital arts hub), Eagle House, Harper's Caves, and others in the Trinity Triangle and broader White Rock neighbourhood. The most recent project is OB Homes – 12 new flats (eleven 1-bedroom and one 2-bedroom) created from previously derelict floor space in the Observer Building, with rents set at or below Living Rent levels.
-
-All spaces use sustainable design principles: triple glazing, roof insulation, air source heat pumps instead of gas, heat recovery systems, and rainwater harvesting.
 
 ## RESPONDING TO GENTRIFICATION
 
@@ -66,9 +81,10 @@ Hastings Commons represents a direct response to market failure and municipal cr
 
 The question posed is structural and urgent: in a context of gentrification, market-driven displacement, and council financial collapse, what does community ownership mean? What does permanence look like when built into property ownership and governance rather than rhetoric? The photographs document not just buildings but the active work of holding space for people who would otherwise be priced out.
 
----
+***
 
 **Sources:**
+
 - Hastings Commons official website (hastingscommons.com)
 - Hastings Commons CLT pages
 - Hastings Commons Governance & Finance pages

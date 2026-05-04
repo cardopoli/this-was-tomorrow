@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWT — Embed Tool</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f7f5f0;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+    padding: 48px 16px;
+    text-align: left;
+  }
+  .app { width: 100%; max-width: 680px; margin: 0 auto; }
+
+  h1 {
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 2px; color: #111; margin-bottom: 4px;
+  }
+  .tagline {
+    font-size: 10px; color: #999; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 32px;
+    padding-bottom: 16px; border-bottom: 2px solid #111;
+  }
+
+  /* MODE TABS */
+  .tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    margin-bottom: 28px;
+    border: 1px solid #ccc;
+  }
+  .tab {
+    font-family: 'Courier New', monospace;
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
+    background: #fff; color: #999;
+    border: none; border-right: 1px solid #ccc;
+    padding: 12px 8px; cursor: pointer;
+    transition: all 0.15s;
+    text-align: center; line-height: 1.4;
+  }
+  .tab:last-child { border-right: none; }
+  .tab:hover { background: #f0ede8; color: #111; }
+  .tab.active { background: #111; color: #f7f5f0; }
+
+  /* PANELS */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .section { margin-bottom: 20px; }
+  label.fl {
+    display: block; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 1.5px; color: #666; margin-bottom: 7px;
+  }
+  input[type="text"], textarea, select {
+    width: 100%; font-family: 'Courier New', monospace; font-size: 12px;
+    background: #fff; border: 1px solid #ccc; padding: 10px 12px;
+    color: #111; outline: none; resize: none; transition: border-color 0.15s;
+    text-align: left; -webkit-appearance: none; appearance: none;
+  }
+  input[type="text"]:focus, textarea:focus, select:focus { border-color: #111; }
+
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
+
+  .sub { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #999; margin-bottom: 10px; display: block; }
+  .radios { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
+  .radios label { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #444; cursor: pointer; }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; cursor: pointer;
+  }
+
+  button.main {
+    width: 100%; font-family: 'Courier New', monospace; font-size: 11px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+    background: #111; color: #f7f5f0; border: none; padding: 14px;
+    cursor: pointer; margin: 20px 0 0; transition: background 0.15s;
+  }
+  button.main:hover { background: #333; }
+  button.main:disabled { background: #999; cursor: default; }
+
+  .out-section { display: none; margin-top: 24px; }
+  .out-section.on { display: block; }
+  .out-group { margin-bottom: 16px; }
+  textarea.out { font-size: 11px; line-height: 1.5; direction: ltr; height: 100px; }
+  textarea.out.sm { height: 52px; }
+  textarea.out.lg { height: 180px; }
+  .btn-row { display: flex; gap: 8px; margin-top: 8px; }
+  button.cp {
+    font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.5px; background: #fff;
+    color: #111; border: 1px solid #111; padding: 8px 14px; cursor: pointer;
+    transition: background 0.15s;
+  }
+  button.cp:hover { background: #f0ede8; }
+
+  .err { font-size: 11px; color: #900; margin-top: 8px; display: none; }
+  .err.on { display: block; }
+  .loading { font-size: 11px; color: #666; margin-top: 12px; display: none; letter-spacing: 0.5px; }
+  .loading.on { display: block; }
+
+  /* PREVIEW */
+  .prev { margin-top: 20px; display: none; border: 1px solid #ccc; background: #fff; }
+  .prev.on { display: block; }
+  .prev-inner { padding: 16px; }
+  .prev-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 12px; display: block; }
+  .prev img { max-width: 100%; display: block; }
+  .prev-cap { font-size: 11px; color: #666; margin-top: 8px; font-style: italic; }
+  .prev audio { width: 100%; margin-top: 8px; }
+  .prev-track { padding: 12px 0; border-bottom: 1px solid #f0ede8; }
+  .prev-track:last-child { border-bottom: none; }
+  .prev-track-name { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; color: #111; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>TWT — Embed Tool</h1>
+  <div class="tagline">Single image · Single audio · Photo gallery · Audio gallery</div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('img')">Single<br>Image</button>
+    <button class="tab" onclick="switchTab('audio')">Single<br>Audio</button>
+    <button class="tab" onclick="switchTab('gallery')">Photo<br>Gallery</button>
+    <button class="tab" onclick="switchTab('audiogallery')">Audio<br>Gallery</button>
+  </div>
+
+  <!-- ===================== PANEL: SINGLE IMAGE ===================== -->
+  <div class="panel active" id="panel-img">
+    <div class="section">
+      <label class="fl">Dropbox image URL</label>
+      <input type="text" id="img-url" placeholder="https://www.dropbox.com/scl/fi/..." />
+      <div class="err" id="img-err">Not a valid Dropbox URL</div>
+    </div>
+    <div class="row3">
+      <div>
+        <label class="fl">Width</label>
+        <input type="text" id="img-width" value="100%" />
+      </div>
+      <div>
+        <label class="fl">Max width</label>
+        <input type="text" id="img-maxw" placeholder="e.g. 480px" />
+      </div>
+      <div>
+        <label class="fl">Alignment</label>
+        <select id="img-align">
+          <option value="">None</option>
+          <option value="left">Left</option>
+          <option value="center">Centre</option>
+          <option value="right">Right</option>
+          <option value="float-left">Float left</option>
+          <option value="float-right">Float right</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label class="fl">Alt text</label>
+        <input type="text" id="img-alt" placeholder="Describe the image" />
+      </div>
+      <div>
+        <label class="fl">Caption (optional)</label>
+        <input type="text" id="img-caption" placeholder="Shown below image" />
+      </div>
+    </div>
+    <hr>
+    <span class="sub">Output format</span>
+    <div class="radios">
+      <label><input type="radio" name="img-fmt" value="html" checked> HTML img</label>
+      <label><input type="radio" name="img-fmt" value="figure"> Figure + caption</label>
+      <label><input type="radio" name="img-fmt" value="markdown"> Markdown</label>
+      <label><input type="radio" name="img-fmt" value="url"> Raw URL only</label>
+    </div>
+    <button class="main" onclick="doImage()">Generate</button>
+    <div class="out-section" id="img-outs">
+      <div class="out-group" id="img-embed-grp">
+        <label class="fl" id="img-embed-lbl">Embed code</label>
+        <textarea class="out" id="img-out" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('img-out',this)">Copy embed</button></div>
+      </div>
+      <div class="out-group" style="margin-top:12px">
+        <label class="fl">Raw URL</label>
+        <textarea class="out sm" id="img-raw" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('img-raw',this)">Copy URL</button></div>
+      </div>
+      <div class="prev" id="img-prev">
+        <div class="prev-inner">
+          <span class="prev-lbl">Preview</span>
+          <img id="img-prev-img" src="" alt="" />
+          <div class="prev-cap" id="img-prev-cap" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PANEL: SINGLE AUDIO ===================== -->
+  <div class="panel" id="panel-audio">
+    <div class="section">
+      <label class="fl">Dropbox audio file URL</label>
+      <input type="text" id="aud-url" placeholder="https://www.dropbox.com/scl/fi/...mp3..." />
+      <div class="err" id="aud-err">Not a valid Dropbox URL</div>
+    </div>
+    <div class="row">
+      <div>
+        <label class="fl">Track title (optional)</label>
+        <input type="text" id="aud-title" placeholder="Shown above player" />
+      </div>
+      <div>
+        <label class="fl">Width</label>
+        <input type="text" id="aud-width" value="100%" />
+      </div>
+    </div>
+    <button class="main" onclick="doAudio()">Generate</button>
+    <div class="out-section" id="aud-outs">
+      <div class="out-group">
+        <label class="fl">Embed code</label>
+        <textarea class="out" id="aud-out" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('aud-out',this)">Copy embed</button></div>
+      </div>
+      <div class="out-group" style="margin-top:12px">
+        <label class="fl">Raw URL</label>
+        <textarea class="out sm" id="aud-raw" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('aud-raw',this)">Copy URL</button></div>
+      </div>
+      <div class="prev" id="aud-prev">
+        <div class="prev-inner">
+          <span class="prev-lbl">Preview</span>
+          <div id="aud-prev-title" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
+          <audio id="aud-prev-player" controls style="width:100%"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PANEL: PHOTO GALLERY ===================== -->
+  <div class="panel" id="panel-gallery">
+    <div class="section">
+      <label class="fl">Dropbox shared folder URL</label>
+      <input type="text" id="gal-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="err" id="gal-err">Not a valid Dropbox folder URL</div>
+    </div>
+    <div class="loading" id="gal-loading">Fetching files from Dropbox...</div>
+    <button class="main" id="gal-btn" onclick="doGallery()">Generate embed</button>
+    <div class="out-section" id="gal-outs">
+      <div class="out-group">
+        <label class="fl">Embed code — paste into Sveltia (raw mode)</label>
+        <textarea class="out lg" id="gal-out" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('gal-out',this)">Copy embed</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PANEL: AUDIO GALLERY ===================== -->
+  <div class="panel" id="panel-audiogallery">
+    <div class="section">
+      <label class="fl">Dropbox shared folder URL (MP3s)</label>
+      <input type="text" id="ag-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="err" id="ag-err">Not a valid Dropbox folder URL</div>
+    </div>
+    <div class="row">
+      <div>
+        <label class="fl">Section title (optional)</label>
+        <input type="text" id="ag-title" placeholder="e.g. Interviews" />
+      </div>
+      <div>
+        <label class="fl">File name display</label>
+        <select id="ag-nameformat">
+          <option value="clean">Clean (remove extension)</option>
+          <option value="raw">Raw filename</option>
+          <option value="none">Hide filenames</option>
+        </select>
+      </div>
+    </div>
+    <div class="loading" id="ag-loading">Fetching files from Dropbox...</div>
+    <button class="main" id="ag-btn" onclick="doAudioGallery()">Generate embed</button>
+    <div class="out-section" id="ag-outs">
+      <div class="out-group">
+        <label class="fl">Embed code — paste into Sveltia (raw mode)</label>
+        <textarea class="out lg" id="ag-out" readonly onclick="this.select()"></textarea>
+        <div class="btn-row"><button class="cp" onclick="cp('ag-out',this)">Copy embed</button></div>
+      </div>
+      <div class="prev" id="ag-prev">
+        <div class="prev-inner">
+          <span class="prev-lbl">Preview</span>
+          <div id="ag-track-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- .app -->
+
+<script>
+var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
+
+/* ---- TABS ---- */
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(function(t,i){
+    var names = ['img','audio','gallery','audiogallery'];
+    t.classList.toggle('active', names[i] === name);
+  });
+  document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+  document.getElementById('panel-' + name).classList.add('active');
+}
+
+/* ---- SHARED HELPERS ---- */
+function toRaw(url) {
+  if (/[?&]dl=[01]/.test(url)) return url.replace(/([?&])dl=[01]/, '$1raw=1');
+  return url + (url.indexOf('?') === -1 ? '?' : '&') + 'raw=1';
+}
+
+function buildStyle(w, mw, align) {
+  var p = [];
+  if (w) p.push('width:' + w);
+  if (mw) p.push('max-width:' + mw);
+  if (align === 'center') { p.push('display:block'); p.push('margin:0 auto'); }
+  else if (align === 'left') { p.push('display:block'); p.push('margin-right:auto'); }
+  else if (align === 'right') { p.push('display:block'); p.push('margin-left:auto'); }
+  else if (align === 'float-left') { p.push('float:left'); p.push('margin:0 24px 16px 0'); }
+  else if (align === 'float-right') { p.push('float:right'); p.push('margin:0 0 16px 24px'); }
+  return p.length ? ' style="' + p.join('; ') + '"' : '';
+}
+
+function cp(id, btn) {
+  var el = document.getElementById(id);
+  el.select();
+  document.execCommand('copy');
+  var o = btn.textContent;
+  btn.textContent = 'Copied';
+  setTimeout(function() { btn.textContent = o; }, 1500);
+}
+
+function proxyFetch(ep, body) {
+  return fetch(PROXY, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ endpoint: ep, body: body })
+  }).then(function(r) { return r.json(); });
+}
+
+function cleanName(n) { return n.replace(/\.[^/.]+$/, '').replace(/[_-]/g, ' '); }
+
+/* ---- SINGLE IMAGE ---- */
+function doImage() {
+  var url = document.getElementById('img-url').value.trim();
+  var errEl = document.getElementById('img-err');
+  errEl.classList.remove('on');
+  document.getElementById('img-outs').classList.remove('on');
+  document.getElementById('img-prev').classList.remove('on');
+
+  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
+
+  var direct = toRaw(url);
+  var w = document.getElementById('img-width').value.trim();
+  var mw = document.getElementById('img-maxw').value.trim();
+  var al = document.getElementById('img-align').value;
+  var alt = document.getElementById('img-alt').value.trim();
+  var cap = document.getElementById('img-caption').value.trim();
+  var fmt = document.querySelector('input[name="img-fmt"]:checked').value;
+  var s = buildStyle(w, mw, al);
+
+  var embed = '', showEmbed = fmt !== 'url';
+  if (fmt === 'html') {
+    embed = '<img src="' + direct + '" alt="' + alt + '"' + s + '>';
+  } else if (fmt === 'figure') {
+    embed = '<figure' + (mw ? ' style="max-width:' + mw + '"' : '') + '>\n';
+    embed += '  <img src="' + direct + '" alt="' + alt + '" style="width:100%">\n';
+    if (cap) embed += '  <figcaption>' + cap + '</figcaption>\n';
+    embed += '</figure>';
+  } else if (fmt === 'markdown') {
+    embed = '![' + alt + '](' + direct + ')';
+    if (cap) embed += '\n*' + cap + '*';
+  }
+
+  document.getElementById('img-embed-grp').style.display = showEmbed ? 'block' : 'none';
+  if (showEmbed) {
+    document.getElementById('img-out').value = embed;
+    document.getElementById('img-embed-lbl').textContent =
+      fmt === 'figure' ? 'Figure code' : fmt === 'markdown' ? 'Markdown' : 'Embed code';
+  }
+  document.getElementById('img-raw').value = direct;
+  document.getElementById('img-outs').classList.add('on');
+
+  var img = document.getElementById('img-prev-img');
+  img.onload = function() { document.getElementById('img-prev').classList.add('on'); };
+  img.onerror = function() {};
+  img.style.width = (w && w !== '100%') ? w : '';
+  img.style.maxWidth = mw || '';
+  img.alt = alt;
+  img.src = direct;
+  var capEl = document.getElementById('img-prev-cap');
+  capEl.textContent = cap;
+  capEl.style.display = cap ? 'block' : 'none';
+}
+
+document.querySelectorAll('input[name="img-fmt"]').forEach(function(r) {
+  r.addEventListener('change', function() {
+    if (document.getElementById('img-outs').classList.contains('on')) doImage();
+  });
+});
+document.getElementById('img-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doImage(); });
+
+/* ---- SINGLE AUDIO ---- */
+function doAudio() {
+  var url = document.getElementById('aud-url').value.trim();
+  var errEl = document.getElementById('aud-err');
+  errEl.classList.remove('on');
+  document.getElementById('aud-outs').classList.remove('on');
+  document.getElementById('aud-prev').classList.remove('on');
+
+  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
+
+  var direct = toRaw(url);
+  var title = document.getElementById('aud-title').value.trim();
+  var w = document.getElementById('aud-width').value.trim() || '100%';
+
+  var embed = '<div class="audio-track">\n';
+  if (title) embed += '  <p class="audio-track-name">' + title + '</p>\n';
+  embed += '  <audio controls preload="none" style="width:' + w + '" src="' + direct + '"></audio>\n';
+  embed += '</div>';
+
+  document.getElementById('aud-out').value = embed;
+  document.getElementById('aud-raw').value = direct;
+  document.getElementById('aud-outs').classList.add('on');
+
+  var titleEl = document.getElementById('aud-prev-title');
+  titleEl.textContent = title;
+  titleEl.style.display = title ? 'block' : 'none';
+  var player = document.getElementById('aud-prev-player');
+  player.src = direct;
+  document.getElementById('aud-prev').classList.add('on');
+}
+
+document.getElementById('aud-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doAudio(); });
+
+/* ---- PHOTO GALLERY (dynamic - folder) ---- */
+function doGallery() {
+  var url = document.getElementById('gal-url').value.trim();
+  var errEl = document.getElementById('gal-err');
+  errEl.classList.remove('on');
+  document.getElementById('gal-outs').classList.remove('on');
+
+  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
+
+  // Generate dynamic embed - proxy called at page load time, not here
+  var embed = '<div class="dbx-gallery" id="dbx-gallery-embed" aria-live="polite">\n';
+  embed += '  <div class="dbx-skeleton">\n';
+  embed += '    <div class="dbx-skeleton-item"></div>\n';
+  embed += '    <div class="dbx-skeleton-item"></div>\n';
+  embed += '    <div class="dbx-skeleton-item"></div>\n';
+  embed += '    <div class="dbx-skeleton-item"></div>\n';
+  embed += '  </div>\n</div>\n';
+  embed += '<script>\n(function() {\n';
+  embed += "  window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', '" + url.replace(/'/g, "\\'") + "', 'dbx-gallery-embed');\n";
+  embed += '})();\n<\/script>';
+
+  document.getElementById('gal-out').value = embed;
+  document.getElementById('gal-outs').classList.add('on');
+}
+
+document.getElementById('gal-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doGallery(); });
+
+/* ---- AUDIO GALLERY (dynamic - folder) ---- */
+function doAudioGallery() {
+  var url = document.getElementById('ag-url').value.trim();
+  var errEl = document.getElementById('ag-err');
+  errEl.classList.remove('on');
+  document.getElementById('ag-outs').classList.remove('on');
+  document.getElementById('ag-prev').classList.remove('on');
+
+  if (!url || url.indexOf('dropbox.com') === -1) { errEl.classList.add('on'); return; }
+
+  var title = document.getElementById('ag-title').value.trim();
+  var nameformat = document.getElementById('ag-nameformat').value;
+  var showNames = nameformat !== 'none';
+
+  var embed = '<div class="audio-gallery" id="audio-gallery-embed">\n';
+  if (title) embed += '  <h2>' + title + '</h2>\n';
+  embed += '  <div class="audio-loading">Loading recordings...</div>\n</div>\n';
+  embed += '<script>\n(function() {\n';
+  embed += "  var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';\n";
+  embed += "  var URL = '" + url.replace(/'/g, "\\'") + "';\n";
+  embed += '  var gallery = document.getElementById(\'audio-gallery-embed\');\n';
+  embed += '  var loadEl = gallery.querySelector(\'.audio-loading\');\n';
+  embed += '  function pf(ep,body){return fetch(PROXY,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({endpoint:ep,body:body})}).then(function(r){return r.json();});}\n';
+  embed += '  pf("files/list_folder",{path:"",shared_link:{url:URL},recursive:false})\n';
+  embed += '  .then(function(data){\n';
+  embed += '    var files=(data.entries||[]).filter(function(f){return f[".tag"]==="file"&&/\\.(mp3|m4a|ogg|wav)$/i.test(f.name);});\n';
+  embed += '    if(!files.length){loadEl.textContent="No recordings found.";return;}\n';
+  embed += '    return Promise.all(files.map(function(f){return pf("files/get_temporary_link",{path:f.path_lower}).then(function(d){return{name:f.name,link:d.link};});}));\n';
+  embed += '  }).then(function(tracks){\n';
+  embed += '    if(!tracks)return;\n';
+  embed += '    loadEl.remove();\n';
+  embed += '    var ul=document.createElement("ul");ul.className="audio-track-list";\n';
+  embed += '    tracks.forEach(function(t){\n';
+  embed += '      var li=document.createElement("li");li.className="audio-track";\n';
+
+  if (showNames) {
+    if (nameformat === 'clean') {
+      embed += '      var label=t.name.replace(/\\.[^/.]+$/,"").replace(/[_-]/g," ");\n';
+    } else {
+      embed += '      var label=t.name;\n';
+    }
+    embed += '      if(label){var p=document.createElement("p");p.className="audio-track-name";p.textContent=label;li.appendChild(p);}\n';
+  }
+
+  embed += '      var a=document.createElement("audio");a.controls=true;a.preload="none";a.src=t.link;\n';
+  embed += '      li.appendChild(a);ul.appendChild(li);\n';
+  embed += '    });\n';
+  embed += '    gallery.appendChild(ul);\n';
+  embed += '  }).catch(function(){loadEl.textContent="Could not load recordings.";});\n';
+  embed += '})();\n<\/script>';
+
+  document.getElementById('ag-out').value = embed;
+  document.getElementById('ag-outs').classList.add('on');
+
+  // Live preview - actually fetch from proxy
+  var agPrev = document.getElementById('ag-prev');
+  var agList = document.getElementById('ag-track-list');
+  agList.innerHTML = '<div style="font-size:11px;color:#666;padding:8px 0">Loading preview...</div>';
+  agPrev.classList.add('on');
+
+  proxyFetch('files/list_folder', { path: '', shared_link: { url: url }, recursive: false })
+  .then(function(data) {
+    var files = (data.entries || []).filter(function(f) {
+      return f['.tag'] === 'file' && /\.(mp3|m4a|ogg|wav)$/i.test(f.name);
+    });
+    if (!files.length) { agList.innerHTML = '<div style="font-size:11px;color:#666">No audio files found</div>'; return; }
+    return Promise.all(files.map(function(f) {
+      return proxyFetch('files/get_temporary_link', { path: f.path_lower })
+        .then(function(d) { return { name: f.name, link: d.link }; });
+    }));
+  })
+  .then(function(tracks) {
+    if (!tracks) return;
+    agList.innerHTML = '';
+    tracks.forEach(function(t) {
+      var label = nameformat === 'clean' ? cleanName(t.name) : nameformat === 'none' ? '' : t.name;
+      var div = document.createElement('div');
+      div.className = 'prev-track';
+      if (label) { var p = document.createElement('p'); p.className = 'prev-track-name'; p.textContent = label; div.appendChild(p); }
+      var a = document.createElement('audio');
+      a.controls = true; a.preload = 'none'; a.src = t.link;
+      div.appendChild(a);
+      agList.appendChild(div);
+    });
+  })
+  .catch(function() {
+    agList.innerHTML = '<div style="font-size:11px;color:#666">Preview unavailable (proxy only works on thiswastomorrow.co.uk)</div>';
+  });
+}
+
+document.getElementById('ag-url').addEventListener('keydown', function(e) { if(e.key==='Enter') doAudioGallery(); });
+</script>
+</body>
+</html>
