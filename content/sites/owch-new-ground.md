@@ -31,7 +31,7 @@ body_intro: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/4cz9grcnw1xe1gbbw0xzj/TWT_ITTFWWDO_NEW-GROUND_JUDE_02_24042206.mp3?rlkey=yyk7og3lmveym5oojqroykmbk&raw=1"></audio>
 
   </div>
-dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
+dropbox_gallery: https://www.dropbox.com/scl/fo/hy67fe613o6y02j2ofa2v/ABUb5-DkOTdF9fV_xKzmtJs?rlkey=cu0uc8m72mrohnk4ijcv0pm2b&dl=0
 body_middle: |-
   ## THE LONG FIGHT FOR REALISATION
 
