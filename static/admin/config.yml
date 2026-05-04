@@ -22,11 +22,46 @@ collections:
 
   - name: sites
     label: Sites
+    label_singular: Site
     folder: content/sites
     create: true
     extension: md
     format: frontmatter
     slug: "{{slug}}"
+
+    # Shows title · location · status in the Sveltia list view
+    summary: "{{title}} · {{location}} · {{status}}"
+
+    # Thumbnail from hero image in list view
+    thumbnail: image
+
+    # "View on site" button when editing
+    preview_path: "/sites/{{slug}}/"
+
+    # Sort options in Sveltia
+    sortable_fields:
+      fields: [title, location, visit_date, status]
+      default:
+        field: title
+        direction: ascending
+
+    # Quick filter buttons
+    view_filters:
+      - label: Visited
+        field: status
+        pattern: visited
+      - label: Scheduled
+        field: status
+        pattern: scheduled
+      - label: Drafts
+        field: draft
+        pattern: true
+
+    # Group by status
+    view_groups:
+      - label: Status
+        field: status
+
     fields:
       - { name: title, label: Site Title, widget: string }
       - { name: location, label: Location, widget: string, required: false }
