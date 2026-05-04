@@ -10,11 +10,7 @@ photos:
     caption: The guest house at Tinkers Bubble
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 body_intro: |-
-  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
-  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
-  ## The place and its origins
+  The place and its origins
 
   Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
 
@@ -41,6 +37,7 @@ body_middle: |-
 
   The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/a178hduq8jhe1g7lj68yn/AA7D4YPTemUkSbzn1eYRrMs?rlkey=h7fixgx5sohfiayvjelqu50m9&dl=0
+dropbox_audio: https://www.dropbox.com/scl/fo/950g59l6r2bhogy6phvxl/AMbHXB0Sejkb2aU8NNAAnXE?rlkey=ksotzrs7mdem47jes9yqz3asi&dl=0
 audio: []
 archives:
   - title: Tinkers Bubble Interview Cam + Meg
@@ -54,8 +51,6 @@ sources: []
 links: ''
 slug: tinkers-bubble
 ---
-
-<iframe src="https://archive.org/embed/twt_tinkers-bubble-soundscapes&amp;playlist=1&amp;list_height=150" width="100%" height="350" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 
 ## The broader significance
 
