@@ -36,15 +36,17 @@ collections:
 
       - { name: image, label: OG Share Image (optional override), widget: image, required: false, hint: "Used when sharing on social media. Leave blank to use hero photo." }
 
-      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false }
+      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false, modes: [rich_text, raw] }
 
       - { name: dropbox_gallery, label: Dropbox Gallery (first), widget: string, required: false, hint: "Paste the shared Dropbox folder link" }
 
-      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false }
+      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false, modes: [rich_text, raw] }
 
       - { name: dropbox_gallery_2, label: Dropbox Gallery (second), widget: string, required: false, hint: "Optional second Dropbox folder link" }
 
-      - { name: body, label: Main Content, widget: markdown, required: false }
+      - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, required: false, hint: "Shared Dropbox folder link containing MP3 files" }
+
+      - { name: body, label: Main Content, widget: markdown, required: false, modes: [rich_text, raw] }
 
       - name: audio
         label: Audio
@@ -100,7 +102,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: about }
-          - { name: body, label: Content, widget: markdown }
+          - { name: body, label: Content, widget: markdown, modes: [rich_text, raw] }
 
       - name: homepage
         label: Homepage
@@ -116,4 +118,3 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
-
