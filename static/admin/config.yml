@@ -8,6 +8,16 @@ display_url: https://thiswastomorrow.co.uk
 media_folder: "static/images"
 public_folder: "/images"
 
+media_libraries:
+  all:
+    slugify_filename: true
+    transformations:
+      raster_image:
+        format: webp
+        quality: 85
+        width: 2048
+        height: 2048
+
 collections:
 
   - name: sites
