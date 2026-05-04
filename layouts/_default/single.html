@@ -1,82 +1,25 @@
 {{ define "main" }}
 <article>
+
   <h1>{{ .Title }}</h1>
 
-  {{ if .Params.location }}
+  {{- if or .Params.location .Params.status .Params.visit_date }}
   <div class="meta">
-    <strong>Location:</strong> {{ .Params.location }}
-    {{ if .Params.status }} | <strong>Status:</strong> {{ .Params.status }}{{ end }}
+    {{- with .Params.location }}{{ . }}{{ end }}
+    {{- if and .Params.location .Params.status }} · {{ end }}
+    {{- with .Params.status }}{{ . }}{{ end }}
+    {{- with .Params.visit_date }} · {{ . }}{{ end }}
   </div>
   {{ end }}
 
-  {{ if .Params.description }}
-  <p>{{ .Params.description }}</p>
-  {{ end }}
-
-  {{ if .Params.photos }}
-    {{ $photos := .Params.photos }}
-    {{ $first := index $photos 0 }}
-
-    <div class="photo-hero">
-      {{ if reflect.IsMap $first }}
-        <img src="{{ $first.image }}" alt="{{ $first.caption | default "Photo" }}" loading="eager">
-        {{ with $first.caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
-      {{ else }}
-        <img src="{{ $first }}" alt="Photo" loading="eager">
-      {{ end }}
-    </div>
-
-    {{ if gt (len $photos) 1 }}
-    <div class="photos-grid">
-      {{ range after 1 $photos }}
-        <div class="photo-item">
-          {{ if reflect.IsMap . }}
-            <img src="{{ .image }}" alt="{{ .caption | default "Photo" }}" loading="lazy">
-            {{ with .caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
-          {{ else }}
-            <img src="{{ . }}" alt="Photo" loading="lazy">
-          {{ end }}
-        </div>
-      {{ end }}
-    </div>
-    {{ end }}
-  {{ end }}
-
-  {{ if .Params.body_intro }}
-    {{ .Params.body_intro | markdownify }}
-  {{ end }}
-
-  {{ if .Params.dropbox_gallery }}
-  {{ partial "dropbox-gallery.html" . }}
-  {{ end }}
-
-  {{ if .Params.body_middle }}
-    {{ .Params.body_middle | markdownify }}
-  {{ end }}
-
-  {{ if .Params.dropbox_gallery_2 }}
-  <div id="dropbox-gallery-2" class="dbx-gallery" aria-live="polite">
-    <div class="dbx-skeleton">
-      <div class="dbx-skeleton-item"></div>
-      <div class="dbx-skeleton-item"></div>
-      <div class="dbx-skeleton-item"></div>
-      <div class="dbx-skeleton-item"></div>
-    </div>
+  {{- with .Params.image }}
+  <div class="photo-hero">
+    <img src="{{ . }}" alt="{{ $.Params.image_caption | default $.Title }}" loading="eager">
+    {{- with $.Params.image_caption }}<div class="photo-caption">{{ . }}</div>{{ end }}
   </div>
-  <script>
-  (function() {
-    var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
-    var URL   = '{{ .Params.dropbox_gallery_2 }}';
-    window._twt.buildGallery(PROXY, URL, 'dropbox-gallery-2');
-  })();
-  </script>
   {{ end }}
 
-  <!-- MAIN CONTENT (body markdown) -->
-  {{ .Content }}
-
-  <!-- DROPBOX AUDIO GALLERY -->
-  {{ if .Params.dropbox_audio }}
+  {{- if .Params.dropbox_audio }}
   <div id="dropbox-audio-gallery" class="audio-gallery">
     <div class="audio-loading">Loading recordings...</div>
   </div>
@@ -88,16 +31,17 @@
     var loadEl = gallery.querySelector('.audio-loading');
     function pf(ep, body) {
       return fetch(PROXY, { method: 'POST', headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({endpoint: ep, body: body}) }).then(function(r){return r.json();});
+        body: JSON.stringify({endpoint: ep, body: body}) }).then(function(r){ return r.json(); });
     }
-    pf('files/list_folder', {path:'', shared_link:{url:FOLDER_URL}, recursive:false})
+    pf('files/list_folder', { path: '', shared_link: { url: FOLDER_URL }, recursive: false })
     .then(function(data) {
-      var files = (data.entries||[]).filter(function(f){
-        return f['.tag']==='file' && /\.(mp3|m4a|ogg|wav)$/i.test(f.name);
+      var files = (data.entries || []).filter(function(f) {
+        return f['.tag'] === 'file' && /\.(mp3|m4a|ogg|wav)$/i.test(f.name);
       });
-      if (files.length===0) { loadEl.textContent='No recordings found.'; return; }
-      return Promise.all(files.map(function(f){
-        return pf('files/get_temporary_link',{path:f.path_lower}).then(function(d){return {name:f.name,link:d.link};});
+      if (!files.length) { loadEl.textContent = 'No recordings found.'; return; }
+      return Promise.all(files.map(function(f) {
+        return pf('files/get_temporary_link', { path: f.path_lower })
+          .then(function(d) { return { name: f.name, link: d.link }; });
       }));
     })
     .then(function(tracks) {
@@ -105,81 +49,65 @@
       loadEl.remove();
       var ul = document.createElement('ul');
       ul.className = 'audio-track-list';
-      tracks.forEach(function(t){
+      tracks.forEach(function(t) {
         var label = t.name.replace(/\.[^/.]+$/, '').replace(/[_-]/g, ' ');
         var li = document.createElement('li');
         li.className = 'audio-track';
-        if (label) { var p=document.createElement('p'); p.className='audio-track-name'; p.textContent=label; li.appendChild(p); }
-        var audio=document.createElement('audio');
-        audio.controls=true; audio.preload='none'; audio.src=t.link;
-        li.appendChild(audio);
+        if (label) { var p = document.createElement('p'); p.className = 'audio-track-name'; p.textContent = label; li.appendChild(p); }
+        var a = document.createElement('audio');
+        a.controls = true; a.preload = 'none'; a.src = t.link;
+        li.appendChild(a);
         ul.appendChild(li);
       });
       gallery.appendChild(ul);
     })
-    .catch(function(){ loadEl.textContent='Could not load recordings.'; });
+    .catch(function() { loadEl.textContent = 'Could not load recordings.'; });
   })();
   </script>
   {{ end }}
 
-  <!-- AUDIO -->
-  {{ with .Params.audio }}
-  <div class="audio-section">
-    {{ range . }}
-    <div class="audio-title">{{ .title }}</div>
-    {{ with .duration }}<div class="audio-duration">{{ . }}</div>{{ end }}
-    <audio controls src="{{ .url }}"></audio>
-    {{ end }}
-  </div>
+  {{- if .Params.dropbox_gallery }}
+  {{ partial "dropbox-gallery.html" . }}
   {{ end }}
 
-  <!-- ARCHIVE.ORG RECORDINGS -->
-  {{ with .Params.archives }}
+  {{- if .Params.dropbox_gallery_2 }}
+  <div id="dropbox-gallery-2" class="dbx-gallery" aria-live="polite">
+    <div class="dbx-skeleton">
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+    </div>
+  </div>
+  <script>
+  (function() {
+    window._twt.buildGallery(
+      'https://dropbox-proxy.cardopoli.workers.dev',
+      '{{ .Params.dropbox_gallery_2 }}',
+      'dropbox-gallery-2'
+    );
+  })();
+  </script>
+  {{ end }}
+
+  {{ .Content }}
+
+  {{- with .Params.archives }}
   <div class="archives-section">
-    <h2>Recordings</h2>
     {{ range . }}
     <div class="archive-item">
       <h3><a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a></h3>
-      {{ with .note }}<p class="archive-note">{{ . }}</p>{{ end }}
+      {{- with .note }}<p class="archive-note">{{ . }}</p>{{ end }}
     </div>
     {{ end }}
   </div>
   {{ end }}
 
-  <!-- VIDEOS -->
-  {{ with .Params.videos }}
-  <div class="videos-section">
-    <h2>Video</h2>
-    {{ range . }}
-    <div class="video-item">
-      <h3>{{ .title }}</h3>
-      {{ with .description }}<p class="video-description">{{ . }}</p>{{ end }}
-      <div class="video-embed">
-        <iframe src="{{ .url }}" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  <!-- SOURCES -->
-  {{ with .Params.sources }}
+  {{- with .Params.sources }}
   <div class="sources">
     <strong>Sources</strong><br>
     {{ range . }}
     <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a><br>
-    {{ end }}
-  </div>
-  {{ end }}
-
-  <!-- LINKS -->
-  {{ with .Params.links }}
-  <div class="links-section">
-    {{ range . }}
-    <div class="link-item">
-      <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-      {{ with .source }}<span class="link-source">({{ . }})</span>{{ end }}
-    </div>
     {{ end }}
   </div>
   {{ end }}

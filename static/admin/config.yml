@@ -12,69 +12,46 @@ collections:
 
   - name: sites
     label: Sites
+    label_singular: Site
     folder: content/sites
     create: true
     extension: md
     format: frontmatter
     slug: "{{slug}}"
+    summary: "{{title}} — {{location}}"
     fields:
-      - { name: title, label: Site Title, widget: string }
+
+      # ---- IDENTITY ----
+      - { name: title, label: Title, widget: string }
       - { name: location, label: Location, widget: string, required: false }
-      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
-      - { name: visit_date, label: Visit Date, widget: string, required: false, hint: "e.g. April 2026" }
-      - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-      - { name: description, label: Short Description, widget: text, required: false }
+      - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], default: planned, required: false }
+      - { name: visit_date, label: Visit date, widget: string, required: false, hint: "e.g. April 2026" }
+      - { name: draft, label: Hide from site, widget: boolean, default: false, required: false }
 
-      - name: photos
-        label: Hero Photo
+      # ---- HERO ----
+      - { name: image, label: Hero image, widget: image, required: false }
+      - { name: image_caption, label: Hero image caption, widget: string, required: false }
+
+      # ---- CONTENT ----
+      - { name: body, label: Text, widget: markdown, required: false, modes: [rich_text, raw], hint: "Main page text. Switch to raw mode to paste HTML embeds." }
+
+      # ---- GALLERIES ----
+      - { name: dropbox_gallery, label: Photo gallery (Dropbox folder), widget: string, required: false, hint: "Shared Dropbox folder link containing photos" }
+      - { name: dropbox_gallery_2, label: Photo gallery 2 (Dropbox folder), widget: string, required: false, hint: "Optional second photo gallery" }
+      - { name: dropbox_audio, label: Audio gallery (Dropbox folder), widget: string, required: false, hint: "Shared Dropbox folder link containing MP3 files" }
+
+      # ---- ARCHIVE.ORG ----
+      - name: archives
+        label: Recordings (Archive.org)
         widget: list
         required: false
-        max: 1
-        fields:
-          - { name: image, label: Image, widget: image }
-          - { name: caption, label: Caption, widget: string, required: false }
-
-      - { name: image, label: OG Share Image (optional override), widget: image, required: false, hint: "Used when sharing on social media. Leave blank to use hero photo." }
-
-      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false, modes: [rich_text, raw] }
-
-      - { name: dropbox_gallery, label: Dropbox Gallery (first), widget: string, required: false, hint: "Paste the shared Dropbox folder link" }
-
-      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false, modes: [rich_text, raw] }
-
-      - { name: dropbox_gallery_2, label: Dropbox Gallery (second), widget: string, required: false, hint: "Optional second Dropbox folder link" }
-
-      - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, required: false, hint: "Shared Dropbox folder link containing MP3 files" }
-
-      - { name: body, label: Main Content, widget: markdown, required: false, modes: [rich_text, raw] }
-
-      - name: audio
-        label: Audio
-        widget: list
-        required: false
+        hint: "Individual Archive.org recording links"
         fields:
           - { name: title, label: Title, widget: string }
           - { name: url, label: Archive.org URL, widget: string }
-          - { name: duration, label: Duration (e.g. 24 min), widget: string, required: false }
-
-      - name: archives
-        label: Archive.org Recordings
-        widget: list
-        required: false
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: url, label: URL, widget: string }
           - { name: note, label: Note, widget: text, required: false }
 
-      - name: videos
-        label: Videos
-        widget: list
-        required: false
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: url, label: Embed URL, widget: string }
-          - { name: description, label: Description, widget: text, required: false }
-
+      # ---- SOURCES ----
       - name: sources
         label: Sources
         widget: list
@@ -82,15 +59,6 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
-
-      - name: links
-        label: Links (bottom of page)
-        widget: list
-        required: false
-        fields:
-          - { name: url, label: URL, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: source, label: Source, widget: string, required: false }
 
   - name: pages
     label: Pages
@@ -108,8 +76,8 @@ collections:
         label: Homepage
         file: content/_index.md
         fields:
-          - { name: title, label: Site title (browser tab), widget: string }
-          - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the list of sites." }
+          - { name: title, label: Site title, widget: string }
+          - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the site list." }
 
       - name: map
         label: Map
