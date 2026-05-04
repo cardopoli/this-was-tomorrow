@@ -47,6 +47,22 @@ sources: []
 slug: owch-new-ground
 ---
 
+<div class="audio-track">
+
+  <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // HILLARY</p>
+
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/jkbk73cn89apqu7qjxx6g/TWT_ITTFWWDO_NEW-GROUND_HILLARY_24042206.mp3?rlkey=zlt3e7m9no3648xgop7pbp4gn&raw=1"></audio>
+
+</div>
+
+<div class="audio-track">
+
+  <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // ANNE</p>
+
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/7h0iduw2155e393r15de0/TWT_AUDIO_OWCH_ANNE_24042206.mp3?rlkey=c2zjh9f7a59kp785yv2c7rj1b&raw=1"></audio>
+
+</div>
+
 ## THE DESIGN AND DELIVERY
 
 Hanover Housing Association, a not-for-profit retirement housing provider, eventually acquired the site – a former convent in High Barnet. Hanover's interest had been encouraged by visits to cohousing schemes in Continental Europe, particularly those documented in the HAPPI Report on older people's housing (2009). The group chose London-based architects Pollard, Thomas, Edwards (PTE) as their design partners in 2010. Critically, PTE involved the OWCH women in scoping out the site and designing the building, giving them a genuine sense of ownership of the project – unusually collaborative for a development process at that time.
