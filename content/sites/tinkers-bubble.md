@@ -9,6 +9,7 @@ photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
+dropbox_audio: https://www.dropbox.com/scl/fo/950g59l6r2bhogy6phvxl/AMbHXB0Sejkb2aU8NNAAnXE?rlkey=ksotzrs7mdem47jes9yqz3asi&dl=0
 body_intro: |-
   The place and its origins
 
@@ -37,7 +38,6 @@ body_middle: |-
 
   The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/a178hduq8jhe1g7lj68yn/AA7D4YPTemUkSbzn1eYRrMs?rlkey=h7fixgx5sohfiayvjelqu50m9&dl=0
-dropbox_audio: https://www.dropbox.com/scl/fo/950g59l6r2bhogy6phvxl/AMbHXB0Sejkb2aU8NNAAnXE?rlkey=ksotzrs7mdem47jes9yqz3asi&dl=0
 audio: []
 archives:
   - title: Tinkers Bubble Interview Cam + Meg
