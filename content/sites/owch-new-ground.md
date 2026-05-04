@@ -40,7 +40,7 @@ body_middle: |-
   Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
 
   For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/iq9hgzcftd2pms09bicou/AGOPfUZL2zvAmasp7KBUFVo?rlkey=vhg1zf894s8qwowylepiyakrk&dl=0
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/vmwhe0nmi1fb0ikte0kw3/AM5OidOdhuTYSanqr6_e6yQ?rlkey=p5shmspv8zspjymbmwahbkw8z&dl=0
 dropbox_audio: ''
 audio: []
 sources: []
