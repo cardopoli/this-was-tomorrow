@@ -22,7 +22,12 @@ body_intro: |-
 
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
-  <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview" width="100%" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+  <div class="audio-track">
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/r73wkv7zyiaslan5xyerj/Jess-Stele_TWT_AUDIO_HASTINGS.mp3?rlkey=4bjcul2vloqvsl5tsqk8gyzmh&raw=1"></audio>
+
+  </div>
 
   _Listen to the interview with_ [_Jess Steele_](https://en.wikipedia.org/wiki/Jess_Steele) 
 
