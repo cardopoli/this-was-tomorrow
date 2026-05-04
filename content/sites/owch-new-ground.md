@@ -27,6 +27,7 @@ body_middle: |-
 
   For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/iq9hgzcftd2pms09bicou/AGOPfUZL2zvAmasp7KBUFVo?rlkey=vhg1zf894s8qwowylepiyakrk&dl=0
+dropbox_audio: https://www.dropbox.com/scl/fo/bff0zghh2xyo6ygfymvnr/AFAq0sG7iKJoc7gJw2YVGU4?rlkey=7vzkflp1cf9eodc4ejrqn4tac&dl=0
 audio: []
 sources: []
 slug: owch-new-ground
