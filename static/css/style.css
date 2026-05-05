@@ -193,12 +193,25 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-index .intro {
-    font-size: 17px;
+    margin-bottom: 56px;
+}
+
+.site-index .intro p {
+    font-size: 15px;
     color: var(--text);
-    margin-bottom: 48px;
-    max-width: 100%;
-    line-height: 1.9;
+    line-height: 1.85;
+    margin-bottom: 20px;
     font-family: var(--sans);
+    max-width: 100%;
+}
+
+.site-index .intro p:last-child {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-style: italic;
+    letter-spacing: 0.3px;
 }
 
 .site-index .intro p {
