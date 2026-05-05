@@ -11,5 +11,3 @@ Utopia here is a method, not a promise.
 Before building community, you have to understand what community actually is. Not a shared postcode or a common interest. The Greek word *krisis* - the root of crisis - means the opposite of what we've made it: not something that happens to us, passive and imposed, but a tipping point, a moment of discernment, of active decision. Something lived through. Chosen through.
 
 A community might simply be a group of people who decide to respond to something together. The question isn't whether another way of living is possible. It's why we keep pretending it isn't.
-
-*Photography, audio, context.*
