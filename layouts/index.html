@@ -1,6 +1,11 @@
 {{ define "main" }}
 <div class="site-index">
-    <p class="intro">{{ .Params.intro }}</p>
+
+    {{ if .Content }}
+    <div class="intro">{{ .Content }}</div>
+    {{ else if .Params.intro }}
+    <div class="intro">{{ .Params.intro | markdownify }}</div>
+    {{ end }}
 
     <ul class="site-list">
         {{ range (where .Site.RegularPages "Section" "sites").ByTitle }}
