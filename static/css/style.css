@@ -206,13 +206,6 @@ img { max-width: 100%; height: auto; display: block; }
     max-width: 100%;
 }
 
-.site-index .intro p:last-child {
-    margin-bottom: 0;
-    font-size: 13px;
-    color: var(--muted);
-    font-family: var(--mono);
-    letter-spacing: 0.3px;
-}
 
 .site-list {
     list-style: none;
