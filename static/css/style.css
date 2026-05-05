@@ -69,7 +69,6 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 
 /* ---- VARIABLES ---- */
 
@@ -81,8 +80,8 @@
     --link: #111;
     --hover: #555;
     --mono: 'FreeMono', 'Courier New', Courier, monospace;
-    --sans: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --condensed: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --sans: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --condensed: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --averia: 'Averia Serif Libre', Georgia, serif;
     --max-w: 720px;
 }
