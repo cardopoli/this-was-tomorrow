@@ -42,6 +42,8 @@ body_middle: |-
 
   <div class="audio-track">
 
+    <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // HILLARY</p>
+
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/jkbk73cn89apqu7qjxx6g/TWT_ITTFWWDO_NEW-GROUND_HILLARY_24042206.mp3?rlkey=zlt3e7m9no3648xgop7pbp4gn&raw=1"></audio>
 
   </div>
@@ -56,6 +58,8 @@ slug: owch-new-ground
 ## THE DESIGN AND DELIVERY
 
 <div class="audio-track">
+
+  <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // ANNE</p>
 
   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/7h0iduw2155e393r15de0/TWT_AUDIO_OWCH_ANNE.mp3?rlkey=c2zjh9f7a59kp785yv2c7rj1b&raw=1"></audio>
 
