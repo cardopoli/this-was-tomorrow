@@ -1,7 +1,13 @@
 ---
 title: This Was Tomorrow
 intro: |-
-  This Was Tomorrow is a photographic investigation into community-led housing across the UK. Not the theory of it - the actual daily practice: land held in common, housing built and governed by the people who live in it, decisions made collectively. These places already exist. The project treats them not as proof that things could be different, but as evidence that they already are - quietly, imperfectly, without waiting for permission. Utopia here is a method, not a promise. The question isn't whether another way of living is possible. It's why we keep pretending it isn't.
+  Is this the future we were dreaming of?
+  Land held in common, housing built and governed by the people who live in it, decisions made collectively. These places already exist - quietly, imperfectly, without waiting for permission. This project treats them not as proof that things could be different, but as evidence that they already are.
 
-  An archive of site visits documenting how communities adapt and sustain places they inherit. Photography, audio, context.
+  Utopia here is a method, not a promise.
+
+  Before building community, you have to understand what community actually is. Not a shared postcode or a common interest. The Greek word krisis - the root of crisis - means the opposite of what we've made it: not something that happens to us, passive and imposed, but a tipping point, a moment of discernment, of active decision. Something lived through. Chosen through.
+
+  A community might simply be a group of people who decide to respond to something together. The question isn't whether another way of living is possible. It's why we keep pretending it isn't.
+  Photography, audio, context.
 ---
