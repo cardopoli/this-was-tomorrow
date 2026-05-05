@@ -6,31 +6,34 @@ visit_date: ''
 draft: false
 description: ''
 photos: []
-image: ''
 body_intro: ''
 dropbox_gallery: ''
 body_middle: ''
-dropbox_gallery_2: ''
 audio: []
-archives: []
-videos: []
 sources: []
-links: ''
 slug: gwavas-estate
 ---
 
-Not visited yet. Date to be confirmed.
+## The Site & Location
 
-## The place
+Gwavas is a residential council estate on the southern outskirts of Newlyn, a working fishing village in west Cornwall. The estate sits on hilly ground, immediately west of Gwavas Road, and takes its name from nearby Gwavas Farm. The name itself is Cornish: "gwaf" means winter, "bos" means abode – so Gwavas is literally "winter farm" or "winter dwelling." Nearby is Gwavas Lake, an area of relatively calm water situated outside the current harbour area of Newlyn.
 
-Gwavas is a council estate on the southern outskirts of Newlyn, a working fishing village in west Cornwall. Built in the 1930s under the Housing Act of 1936 to rehouse people displaced from what the state had declared slums. The name is Cornish: gwaf means winter, bos means abode - winter dwelling. Managed now by Cornwall Housing Ltd on behalf of Cornwall Council.
+## Historical Context: 1930s Slum Clearance
 
-The story of Gwavas includes an unusual moment of protest: in October 1937, the Rosebud - a local fishing lugger crewed by local fishermen - sailed up the Thames to Westminster to oppose the demolition of traditional village homes in Newlyn. The press called it the little man against the modernising bureaucrats. The Rosebud didn't stop the clearances, but it happened.
+Gwavas was built in the 1930s as part of a controversial slum clearance programme under the Housing Act of 1936. The original vision was far more ambitious – some 350 properties across 6.75 acres of old Newlyn were earmarked for demolition, including areas cleared for a proposed road widening scheme at the harbour's edge. Properties deemed slums were to be compulsorily purchased; owners were offered site value only in compensation. Neighbouring properties (marked for "administrative necessity") were offered market price.
 
-## How it works
+A five-day official inquiry into the proposals began in Penzance in July 1937. The clearance touched on intimate details of daily life: residents petitioned against the council's decision to install gas cookers rather than traditional Cornish cooking ranges (cast iron ranges that provided heating as well as oven and stove top). The council insisted the new facilities would prove more economical, though some residents later complained about cold and damp in the new homes.
 
-Council housing stock managed by Cornwall Housing Ltd. Standard tenancy arrangements. No community ownership model.
+## The Rosebud Campaign: 1937
 
-## Why I'm going
+The slum clearance scheme became the backdrop to one of the most resonant housing protests of the interwar period. In October 1937, the Rosebud – a local lugger (fishing vessel) crewed by local fishermen – sailed up the Thames to Westminster. The journey was romantically portrayed in the press as a protest of the "little man" against modernising bureaucrats. The Rosebud campaign was ostensibly against the demolition of traditional village homes; the reality was more complex, but the symbolic power was unmistakable: a working-class fishing community, represented by their own vessel, demanding to be heard about the future of their neighbourhood.
 
-Gwavas is not a community-led project - it is a product of top-down state intervention, the thing that came before the model. I'm including it in the project because the contrast matters: housing built for people without asking them what they wanted, in a tradition of paternalistic planning that the projects elsewhere are explicitly pushing back against. I want to photograph what that looks like now, nearly a century on.
+The Gwavas estate itself was not the focus of this protest – it was already under way. Rather, the estate exists within the historical context of this conflict: modernisation versus tradition, bureaucratic planning versus community continuity.
+
+## Present Status
+
+Today, Gwavas is a residential estate with properties owned and managed by Cornwall Housing Ltd, which manages approximately 10,200 council homes on behalf of Cornwall Council. The estate has weathered nearly a century since its construction, sitting as a physical record of 1930s housing policy and the social anxieties it embodied.
+
+## Why This Matters
+
+Gwavas is not a community-led housing project; it is a product of top-down post-war regeneration. Yet it carries profound historical weight. The estate stands as a monument to a moment when the state intervened decisively in how working people would live – for better and worse. It reminds us that housing policy has always been contentious, that "improvement" and "progress" can displace as much as they shelter, and that communities have always resisted being remade in others' visions. The contrast between Gwavas (imposed housing policy, loss of choice, slum clearance logic) and the community-led projects Enrico documents elsewhere is not incidental – it is fundamental to understanding what community housing means when people have genuine agency in shaping it.
