@@ -27,6 +27,8 @@ body_intro: |-
 
   <div class="audio-track">
 
+    <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // JUDE PT.2</p>
+
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/4cz9grcnw1xe1gbbw0xzj/TWT_ITTFWWDO_NEW-GROUND_JUDE_02_24042206.mp3?rlkey=yyk7og3lmveym5oojqroykmbk&raw=1"></audio>
 
   </div>
@@ -37,7 +39,6 @@ body_middle: |-
   The path to realisation was neither short nor simple. Housing for Women, a small housing association and charity, was represented at the initial workshop and offered support in developing the concept. In 1999 a formal partnership agreement was made between Housing for Women and the New Ground group. Maria Brenton and Elizabeth Clarson of Housing for Women approached the Housing Corporation (now Homes England) for support, resulting in a Corporation-funded 'Innovation and Good Practice' Study to examine the concept of cohousing in the context of British housing. However, few London councils were initially interested in the concept.
 
   Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
-
 
   <div class="audio-track">
 
