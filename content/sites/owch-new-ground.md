@@ -9,6 +9,7 @@ photos:
   - image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
     caption: ''
 image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
+dropbox_audio: ''
 body_intro: |-
   ## THE CONCEPT AND ITS ORIGINS
 
@@ -23,6 +24,12 @@ body_intro: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/oyvqmk3acv9cgkf0g4fw4/TWT_AUDIO_OWCH_JUDEINTERVIEW_01_ARCHIVE.mp3?rlkey=odg53cq1wlm28kns6xlu8o6a9&raw=1"></audio>
 
   </div>
+
+  <div class="audio-track">
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/4cz9grcnw1xe1gbbw0xzj/TWT_ITTFWWDO_NEW-GROUND_JUDE_02_24042206.mp3?rlkey=yyk7og3lmveym5oojqroykmbk&raw=1"></audio>
+
+  </div>
 dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
 body_middle: |-
   ## THE LONG FIGHT FOR REALISATION
@@ -31,9 +38,15 @@ body_middle: |-
 
   Many London sites were explored over the following years – among them buildings in Uxbridge Road, Kentish Town, Wembley and Kingsbury – all without success. The community persisted. In 2002, the Housing Corporation awarded OWCH a Social Housing Grant that was portable across London. However, this funding disappeared over time as the Housing Corporation went on to become the HCA.
 
+
+  <div class="audio-track">
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/jkbk73cn89apqu7qjxx6g/TWT_ITTFWWDO_NEW-GROUND_HILLARY_24042206.mp3?rlkey=zlt3e7m9no3648xgop7pbp4gn&raw=1"></audio>
+
+  </div>
+
   For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/iq9hgzcftd2pms09bicou/AGOPfUZL2zvAmasp7KBUFVo?rlkey=vhg1zf894s8qwowylepiyakrk&dl=0
-dropbox_audio: https://www.dropbox.com/scl/fo/bff0zghh2xyo6ygfymvnr/AFAq0sG7iKJoc7gJw2YVGU4?rlkey=7vzkflp1cf9eodc4ejrqn4tac&dl=0
 audio: []
 sources: []
 slug: owch-new-ground
@@ -41,6 +54,11 @@ slug: owch-new-ground
 
 ## THE DESIGN AND DELIVERY
 
+<div class="audio-track">
+
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/7h0iduw2155e393r15de0/TWT_AUDIO_OWCH_ANNE.mp3?rlkey=c2zjh9f7a59kp785yv2c7rj1b&raw=1"></audio>
+
+</div>
 Hanover Housing Association, a not-for-profit retirement housing provider, eventually acquired the site – a former convent in High Barnet. Hanover's interest had been encouraged by visits to cohousing schemes in Continental Europe, particularly those documented in the HAPPI Report on older people's housing (2009). The group chose London-based architects Pollard, Thomas, Edwards (PTE) as their design partners in 2010. Critically, PTE involved the OWCH women in scoping out the site and designing the building, giving them a genuine sense of ownership of the project – unusually collaborative for a development process at that time.
 
 A decisive factor in the granting of planning permission in early 2013 was support from the Director for Adult Social Care, who agreed with OWCH's argument that a senior cohousing community can actually reduce the need for health and social care services. Local organizations and neighbours were also consulted and supportive.
