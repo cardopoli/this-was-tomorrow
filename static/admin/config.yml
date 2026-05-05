@@ -28,24 +28,14 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{slug}}"
-
-    # Shows title · location · status in the Sveltia list view
     summary: "{{title}} · {{location}} · {{status}}"
-
-    # Thumbnail from hero image in list view
     thumbnail: image
-
-    # "View on site" button when editing
     preview_path: "/sites/{{slug}}/"
-
-    # Sort options in Sveltia
     sortable_fields:
       fields: [title, location, visit_date, status]
       default:
         field: title
         direction: ascending
-
-    # Quick filter buttons
     view_filters:
       - label: Visited
         field: status
@@ -56,8 +46,6 @@ collections:
       - label: Drafts
         field: draft
         pattern: true
-
-    # Group by status
     view_groups:
       - label: Status
         field: status
@@ -83,16 +71,27 @@ collections:
 
       - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, required: false, hint: "Shared Dropbox folder link containing MP3 files" }
 
-      - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false, modes: [rich_text, raw] }
+      - name: body_intro
+        label: Text Before Gallery
+        widget: markdown
+        required: false
+        modes: [rich_text, raw]
 
       - { name: dropbox_gallery, label: Dropbox Gallery (first), widget: string, required: false, hint: "Paste the shared Dropbox folder link" }
 
-      - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false, modes: [rich_text, raw] }
+      - name: body_middle
+        label: Text Between Galleries
+        widget: markdown
+        required: false
+        modes: [rich_text, raw]
 
       - { name: dropbox_gallery_2, label: Dropbox Gallery (second), widget: string, required: false, hint: "Optional second Dropbox folder link" }
 
-
-      - { name: body, label: Main Content, widget: markdown, required: false, modes: [rich_text, raw] }
+      - name: body
+        label: Main Content
+        widget: markdown
+        required: false
+        modes: [rich_text, raw]
 
       - name: audio
         label: Audio
@@ -141,6 +140,18 @@ collections:
   - name: pages
     label: Pages
     files:
+
+      - name: homepage
+        label: Homepage
+        file: content/_index.md
+        fields:
+          - { name: title, label: Site title (browser tab), widget: string }
+          - name: intro
+            label: Intro text
+            widget: markdown
+            modes: [rich_text, raw]
+            hint: "The text above the list of sites. Supports bold, italic, paragraphs."
+
       - name: about
         label: About
         file: content/about.md
@@ -148,14 +159,10 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: about }
-          - { name: body, label: Content, widget: markdown, modes: [rich_text, raw] }
-
-      - name: homepage
-        label: Homepage
-        file: content/_index.md
-        fields:
-          - { name: title, label: Site title (browser tab), widget: string }
-          - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the list of sites." }
+          - name: body
+            label: Content
+            widget: markdown
+            modes: [rich_text, raw]
 
       - name: map
         label: Map
@@ -164,3 +171,13 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
+
+  - name: settings
+    label: Site Settings
+    files:
+      - name: config
+        label: Global Settings
+        file: config.toml
+        fields:
+          - { name: title, label: Site Name, widget: string }
+          - { name: baseURL, label: Base URL, widget: string }

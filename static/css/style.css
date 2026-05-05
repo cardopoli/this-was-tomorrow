@@ -69,6 +69,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 
 /* ---- VARIABLES ---- */
 
@@ -80,8 +81,8 @@
     --link: #111;
     --hover: #555;
     --mono: 'FreeMono', 'Courier New', Courier, monospace;
-    --sans: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --condensed: 'FreeSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --sans: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --condensed: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --averia: 'Averia Serif Libre', Georgia, serif;
     --max-w: 720px;
 }
@@ -199,8 +200,8 @@ img { max-width: 100%; height: auto; display: block; }
 .site-index .intro p {
     font-size: 15px;
     color: var(--text);
-    line-height: 1.85;
-    margin-bottom: 20px;
+    line-height: 1.9;
+    margin-bottom: 22px;
     font-family: var(--sans);
     max-width: 100%;
 }
@@ -210,20 +211,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 13px;
     color: var(--muted);
     font-family: var(--mono);
-    font-style: italic;
     letter-spacing: 0.3px;
-}
-
-.site-index .intro p {
-    margin-bottom: 20px;
-}
-
-.site-index .intro p:last-child {
-    margin-bottom: 0;
-    color: var(--muted);
-    font-size: 13px;
-    font-family: var(--mono);
-    letter-spacing: 0.5px;
 }
 
 .site-list {
@@ -242,7 +230,7 @@ img { max-width: 100%; height: auto; display: block; }
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 16px 0;
+    padding: 18px 0;
     text-decoration: none;
     font-family: var(--sans);
     font-size: 15px;
@@ -607,10 +595,10 @@ article h2 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 56px;
-    margin-bottom: 20px;
+    margin-top: 64px;
+    margin-bottom: 24px;
     border-bottom: 1px solid var(--rule);
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 
 article h3 {
@@ -625,8 +613,8 @@ article h3 {
 }
 
 article p {
-    margin-bottom: 24px;
-    line-height: 1.7;
+    margin-bottom: 28px;
+    line-height: 1.8;
 }
 
 article img {
