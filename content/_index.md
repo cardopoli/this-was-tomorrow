@@ -2,6 +2,7 @@
 title: This Was Tomorrow
 intro: |-
   Is this the future we were dreaming of?
+
   Land held in common, housing built and governed by the people who live in it, decisions made collectively. These places already exist - quietly, imperfectly, without waiting for permission. This project treats them not as proof that things could be different, but as evidence that they already are.
 
   Utopia here is a method, not a promise.
