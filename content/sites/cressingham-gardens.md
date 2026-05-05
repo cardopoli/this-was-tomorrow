@@ -2,10 +2,14 @@
 title: Cressingham Gardens
 location: Lambeth, London
 status: visited
+visit_date: ''
+draft: false
 description: ''
 photos:
   - image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
     caption: ''
+image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+dropbox_audio: ''
 body_intro: |-
   ## THE PLACE AND ITS MAKING
 
@@ -23,7 +27,9 @@ body_intro: |-
 
   Westman prioritised eco-friendly architecture, and the estate, as a consequence, was planned to retain as many existing trees as possible, and a tongue of landscaping extends from the north of the plateau to Tulse Hill, giving views into the site to passers-by and providing a pedestrian route connecting to the nursery school and then on to Brockwell Park.
 
-  <iframe src="https://archive.org/embed/ace-twt-30032026-cressingham-gardens-andy-elizabeth&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+  <p class="audio-track-name">Listen to the interview with Andy and Elizabeth</p>
+
+  <iframe src="https://archive.org/embed/ace-twt-30032026-cressingham-gardens-andy-elizabeth" width="100%" height="60px" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 dropbox_gallery: https://www.dropbox.com/scl/fo/styjydduoyfwlfv5me0fo/AADfs4kAGpusa8a4vIZ4dCU?rlkey=f0wk85ul2vzkhlhpm9r0lalxj&dl=0
 body_middle: |-
   ## WHY IT MATTERS – THEN AND NOW
@@ -41,11 +47,9 @@ body_middle: |-
   In early 2023, Lambeth Council announced that it was pausing the redevelopment of Cressingham Gardens and two other estates (Fenwick and Central Hill) after a critical report recommended a 'fundamental reset' to the way it handles the long-running projects. In September 2024, Lambeth published a report highlighting the Council's plans to reset key estate renewal projects and regain control of properties previously under HfL's management.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/e7cvm2wia5pxeav6dwjgy/APLEYPVfGmeyJU54ZC-z6zA?rlkey=3wg0dgzk0fehgzmd2c5n10ty7&dl=0
 audio: []
-draft: false
-image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+sources: []
 slug: cressingham-gardens
 caption: ''
-sources: []
 ---
 
 ## THE ALTERNATIVE
