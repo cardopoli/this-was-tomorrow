@@ -19,20 +19,30 @@ links: ''
 slug: trevone-quarry
 ---
 
-Not visited yet. Contact is Rob Higgs - trevonequarry@gmail.com. Hope to stay a night or two with Rosamond. No people in photographs - agreed.
+Not visited yet.
 
 ## The place
 
-Trevone Quarry is a self-build residential and industrial community on the outskirts of Penryn in Cornwall, owned and developed by Rob Higgs over 17 years. Around 19 people currently live in self-built structures and caravans on a site that is trying to be four things at once: a residential community, a sustainable industrial estate, a rewilding project, and a working farm. Rob describes himself as an apocaloptimist - someone who believes the current model is failing and thinks it's sensible to build alternatives now, from love and pragmatism rather than despair.
+Trevone Quarry has been worked for granite since the early 1800s. The quarry ceased trading in the mid-1980s and was left derelict. In 2009, Rob Higgs and Sophie Miller purchased the 22-acre site. The planning permission at the time of purchase was either to extract granite - around a million tonnes still in the ground - or use the land for industrial agriculture. They did neither. Instead, they began building something that had no planning category and no precedent: a woodland, a nature reserve, a community of artists and craftspeople living and working in self-built structures on peppercorn rent.
 
-The site has survived 19 eviction and enforcement notices. The last planning inquiry took four years and cost £80,000. Every investigating officer has acknowledged that what happens here is a good thing. The legislation simply wasn't designed for it.
+Rob's original vision was to recreate the kind of creative community he had spent 20 years working in - a local boatyard where people tinkered in small home-made workshops making and restoring things. What the boatyard lacked was connection to natural wilderness and biodiversity, which he saw as essential to a healthy life and artistic creativity. The quarry gave him both.
+
+Today around 19 people live on the site in self-built structures and caravans. Twelve micro-businesses operate on peppercorn rent, supported by people living and working in harmony with the land. The site functions simultaneously as a residential community, a sustainable industrial estate, a rewilding project and a working farm - four things the planning system has no single box for.
 
 ## How it works
 
-Rent is £240 a month per pitch. Water is free. Electricity is paid annually. All rent goes into a Trevone account - no profit is extracted. Residents who want to contribute to the community can work and be paid living wage (£13/hour, invoiced to Trevone). Residents who can't or don't want to pay instead - the money funds others to do the work. Or: five hours of community contribution per week in exchange for effectively living cash-free. No cars for new residents. No pets beyond biodiversity-enriching ones. Whatever you build on your own pitch stays with Trevone when you leave, for the next person.
+The model is straightforward: anyone who wants a workshop builds it themselves to a pre-agreed standard and design, so that it stands a chance of retrospective planning permission if enforcement comes. The capital cost is mainly scrap and salvaged materials - usually around £6,000. Rent for the workshops can therefore be kept very low. The labour tenants put into building their workshops offsets their rent for the first few years. Whatever is built and then lived in becomes an abundant garden, providing a significant proportion of food, leisure and social life.
 
-Rob has subsidised the site from his own savings and income - around £10,000 to £20,000 a year for 17 years. He was briefly a well-paid artist. He is not drawing a wage. He describes it as a labour of love, a pension of sorts, and a proof of concept - something other landowners could replicate if they chose to.
+Rent is £240 a month per pitch. Water is free. Electricity paid annually. All rent goes into a Trevone account - no profit extracted. Residents can work on site at living wage, or contribute five hours a week in lieu of money. No cars for new residents. No pets beyond biodiversity-enriching ones - the site is a nature reserve with ground-nesting birds, otters and stoats. Whatever you build stays with Trevone when you leave, for whoever comes next.
+
+## What's at stake
+
+In 2022, a mix of bureaucratic delays, an overzealous enforcement officer and a hostile neighbour threatened to undo everything - eviction notices placed on every workshop, forge and shed on the site. The community fought back, compiling hundreds of pages of evidence and taking the case to appeal. In December 2023, they won - securing the legal right to stay, live, and continue restoring the land they had spent over two decades building.
+
+Cornwall's Climate Emergency Development Planning Document was introduced specifically to enable alternative, sustainable communities like Trevone to tackle the climate emergency - from food sovereignty to recycling construction materials. The law, in other words, was on their side. Getting the planning system to act on its own stated principles took a four-year legal battle.
+
+A documentary film about the community - *Trevone* - was made by 99p Films and released in 2024.
 
 ## Why I'm going
 
-Because this doesn't fit any of the standard typologies - it's not a CLT, not a cohousing project, not a cooperative in any formal sense. It's a landowner who looked at the world, decided it was going wrong, and started building something else on his own land with his own money and 17 years of his life. I want to photograph the place, not the people. I want to understand what an alternative looks like when it's been fought for that hard and is still standing.
+Trevone doesn't fit any of the standard typologies this project works with. It's not a CLT, not a cohousing project, not a cooperative in any formal sense. It's something older and harder to categorise - a place built by hand, on land that was bought to be destroyed, by people who decided to do something else with it instead. The planning system spent years trying to close it down and couldn't, because what was there was too evidently good to demolish. I want to understand what that looks like now - what 15 years of building something without permission feels like from inside, and what winning looks like after it.
