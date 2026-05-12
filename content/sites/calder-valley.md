@@ -38,13 +38,12 @@ body_middle: |-
   ### Hebden Bridge High Street
 
   One of CVCLT's most symbolically significant projects aims to bring new life back to High Street – the site of housing cleared during 1960s slum clearances. The original High Street was densely populated with over 70 dwellings as well as shops and workshops. Following the clearances, the street became a small tarmacked lane. Several residents of Hebden today remember living on High Street. Planning permission for 20 affordable rented homes on this site was unanimously approved by Calderdale's Planning Committee in March 2023. The scheme, developed in partnership with Connect Housing, represents a return of residential life to a place that was systematically erased.
-
-  ### 
-
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/5si6w1ygrwwv4cdb8ofe0/AJw9GjWQm-4jmZ9ozM6DlTE?rlkey=wl4lz5x1p8s1zykdowt6z924n&dl=0
+body_after: |-
   ### Retrofitted Properties
 
   In April 2024, CVCLT completed purchase of a property in Hebden Bridge below market cost, with grant funding from Homes England and favourable mortgage rates negotiated with the seller. Refurbishment is underway to social rent standards. Additionally, CVCLT is retrofitting the former warden's cottage at Jerusalem Farm (leased from Calderdale Council for 20 years), bringing the long-term empty and deteriorating property back into use.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/5si6w1ygrwwv4cdb8ofe0/AJw9GjWQm-4jmZ9ozM6DlTE?rlkey=wl4lz5x1p8s1zykdowt6z924n&dl=0
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/5e6a6y4gxpjq01plv99da/ANTBTXKpCSje3glXjtGokpI?rlkey=8ym6mdkkfq67o8ffnuqt878bs&dl=0
 audio: []
 sources: []
 slug: calder-valley
