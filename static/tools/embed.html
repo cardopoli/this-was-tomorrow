@@ -528,7 +528,10 @@ function doGal() {
   embed+='    <div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div>\n';
   embed+='  </div>\n</div>\n';
   embed+='<script>(function(){\n';
-  embed+="  window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','"+url.replace(/'/g,"\\'")+"','"+uid+"');\n";
+  embed+='  function run(){\n';
+  embed+="    window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','"+url.replace(/'/g,"\\'")+"','"+uid+"');\n";
+  embed+='  }\n';
+  embed+='  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}\n';
   embed+='})();<\/script>';
   set('gal-out',embed); show('gal-outs');
 }
