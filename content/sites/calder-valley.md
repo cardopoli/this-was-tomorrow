@@ -31,6 +31,10 @@ body_intro: |-
 
   ### **Ferney Lee: Housing & Enterprise Centre**
 
+  <div class="audio-track">
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/v0j2vd18fsj52j6oojoz0/TWT_CVCLT_FERNEY-LEE_AUDIO_OWCH.mp3?rlkey=2384jq3xlzn62ojdazkyx9n1d&raw=1"></audio>
+   <p class="audio-track-name">FERNEY LEE, Todmorden - visit to the building site</p></div>
+
   CVCLT is developing 19 homes for affordable rent and 23 affordable rental offices on the site of the former Ferney Lee Home for Older People in Todmorden. The development is part of the £17.5 million Todmorden Town Deal investment programme. Planning permission was granted in June 2024. The homes will be built to Passivhaus standard, meaning low energy use, low levels of embedded carbon, high thermal insulation and air-tightness. They will be powered and heated with air source heat pumps and solar panels with electric car-charging. Connect Housing will manage them once occupied. CVCLT aims to own one block, Connect the other. They will be let via the council's Keychoice system to local people in identified housing need.
 dropbox_gallery: https://www.dropbox.com/scl/fo/xfjhux9tiksgfwkvwcqgj/AO2Qb4O62poY9A3YvzQABTM?rlkey=9lj8fs1it25dim5qc6u3mt3en&dl=0
 body_middle: |-
