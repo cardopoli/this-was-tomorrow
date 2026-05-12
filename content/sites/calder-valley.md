@@ -5,7 +5,9 @@ status: visited
 visit_date: 11-05-2026
 draft: false
 description: ''
-photos: []
+photos:
+  - image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
+    caption: ''
 image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
 dropbox_audio: ''
 body_intro: |-
@@ -33,7 +35,6 @@ body_intro: |-
 dropbox_gallery: https://www.dropbox.com/scl/fo/xfjhux9tiksgfwkvwcqgj/AO2Qb4O62poY9A3YvzQABTM?rlkey=9lj8fs1it25dim5qc6u3mt3en&dl=0
 body_middle: |-
   ## Housing Projects
-
 
   ### Hebden Bridge High Street
 
