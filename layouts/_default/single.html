@@ -127,6 +127,30 @@
   </script>
   {{ end }}
 
+  {{- if .Params.body_after }}
+  {{ .Params.body_after | markdownify }}
+  {{ end }}
+
+  {{- if .Params.dropbox_gallery_3 }}
+  <div id="dropbox-gallery-3" class="dbx-gallery" aria-live="polite">
+    <div class="dbx-skeleton">
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+      <div class="dbx-skeleton-item"></div>
+    </div>
+  </div>
+  <script>
+  (function() {
+    window._twt.buildGallery(
+      'https://dropbox-proxy.cardopoli.workers.dev',
+      '{{ .Params.dropbox_gallery_3 }}',
+      'dropbox-gallery-3'
+    );
+  })();
+  </script>
+  {{ end }}
+
   {{ .Content }}
 
   {{- with .Params.audio }}
