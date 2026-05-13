@@ -20,7 +20,8 @@ body_intro: |-
   Two council flats in the centre of Hebden Bridge, empty for nine years. Originally tied housing - accommodation that came with certain public sector jobs, a model that has largely disappeared. Both flats are dry, bright and structurally sound. Windows are to be replaced and the properties brought to current thermal and energy efficiency standards. The plan is to bring them back as housing for refugees.
 
   Across the street from the entrance, embedded in the wall: the word **COOP**. A trace of the cooperative history that shaped this valley.
-
+dropbox_gallery: https://www.dropbox.com/scl/fo/etsgnxe9rrh3kwazzaui1/AEXxsmkpYf2lehjk_Oiwd0M?rlkey=7w7y1b5unbegujcn9uvqguand&dl=0
+body_middle: |-
   ## Ferney Lee, Todmorden
 
   <div class="audio-track">
@@ -33,8 +34,8 @@ body_intro: |-
   CVCLT Enterprise Ltd was set up specifically to build and operate the project - deliberately separate from the CLT, so that if it fails it does not jeopardise the organisation. Any surplus goes back to the CLT. Homes let via Calderdale's Keychoice system, managed by Connect Housing. CVCLT aims to own one block outright.
 
   The operation is designed for minimal staffing. QR code access throughout: a tenant can hire a meeting room for two hours, enter with a time-limited code, and leave. Twenty of the twenty-three office units have their own front door. Communal kitchen and meeting rooms are available to all. The model pushes against pure hot desking toward co-rented units where small groups share a space with their own autonomy.
-dropbox_gallery: https://www.dropbox.com/scl/fo/xfjhux9tiksgfwkvwcqgj/AO2Qb4O62poY9A3YvzQABTM?rlkey=9lj8fs1it25dim5qc6u3mt3en&dl=0
-body_middle: |-
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/xfjhux9tiksgfwkvwcqgj/AO2Qb4O62poY9A3YvzQABTM?rlkey=9lj8fs1it25dim5qc6u3mt3en&dl=0
+body_after: |-
   ## Fielden Hall, Todmorden
 
   <div class="audio-track">
@@ -49,14 +50,7 @@ body_middle: |-
   A £400,000 retrofit: roof insulation, secondary glazing, replacement of the original coal-fired heating. Air source heat pumps now feed radiant heat panels in the main hall. MVHR ventilation recovers heat from outgoing air. Below four or five degrees outside, the system struggles to maintain the contractually specified 21 degrees inside. A potential legal dispute with the contractor is unresolved.
 
   The hall is in regular use: choir practice, Tai Chi, Women's Open Talk, dog training, U3A arts and crafts, sound baths, weddings. Music for the Many runs free music lessons from the hall - set up because music education in schools has largely disappeared unless families can pay privately. The building has one resident, who has lived on site for around ten years and coordinates much of the day-to-day operation.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/etsgnxe9rrh3kwazzaui1/AEXxsmkpYf2lehjk_Oiwd0M?rlkey=7w7y1b5unbegujcn9uvqguand&dl=0
-body_after: |-
-  ## Hebden Bridge High Street
-
-  Twenty affordable rented homes planned for the site of the original High Street, cleared in the 1960s slum clearances. Over 70 dwellings demolished. Several residents of Hebden Bridge today remember the original street. Planning permission approved unanimously by Calderdale's Planning Committee in March 2023, developed in partnership with Connect Housing. Calderdale Council transferred the land at nil cost.
-
-  ##
-dropbox_gallery_3: https://www.dropbox.com/scl/fo/etsgnxe9rrh3kwazzaui1/AEXxsmkpYf2lehjk_Oiwd0M?rlkey=7w7y1b5unbegujcn9uvqguand&dl=0
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/5e6a6y4gxpjq01plv99da/ANTBTXKpCSje3glXjtGokpI?rlkey=8ym6mdkkfq67o8ffnuqt878bs&dl=0
 audio: []
 sources: []
 slug: calder-valley
