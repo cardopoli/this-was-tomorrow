@@ -272,7 +272,7 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 0;
+    margin-bottom: 48px;
 }
 
 .photo-hero .photo-caption {
