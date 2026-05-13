@@ -1028,8 +1028,8 @@ li:not(.status-visited) .location {
 }
 
 .audio-track-name {
-  font-family: var(--mono);
-  font-size: 11px;
+  font-family: var(--condensed);
+  font-size: 9px;
   color: var(--text);
   letter-spacing: 0.5px;
   margin-bottom: 10px;
