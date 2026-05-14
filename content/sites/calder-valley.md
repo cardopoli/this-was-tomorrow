@@ -15,6 +15,14 @@ body_intro: |-
 
   Hebden Bridge Town Hall was the first community asset transfer of its kind in the country. That history matters here. The valley already knew how to do this before the CLT existed.
 
+  <div class="audio-track">
+
+    <p class="audio-track-name">Paul Branning on CV CLT</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/y1nicxgaz01md9kuix1tk/Paul-Brannigan_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=9j5o386996tpbffc2ydp7k5r0&raw=1"></audio>
+
+  </div>
+
   ## Crown Street, Hebden Bridge
 
   Two council flats in the centre of Hebden Bridge, empty for nine years. Originally tied housing - accommodation that came with certain public sector jobs, a model that has largely disappeared. Both flats are dry, bright and structurally sound. Windows are to be replaced and the properties brought to current thermal and energy efficiency standards. The plan is to bring them back as housing for refugees.
@@ -24,12 +32,15 @@ dropbox_gallery: https://www.dropbox.com/scl/fo/etsgnxe9rrh3kwazzaui1/AEXxsmkpYf
 body_middle: |-
   ## Ferney Lee, Todmorden
 
-  <div class="audio-track">
-  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/626i94r9w3o4qv2o4bwa0/13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=vwsazmiswd7zu4q2hibhz9mg9&raw=1"></audio>
-  <p class="audio-track-name">Paul Brannigan, Executive Manager CVCLT - interview, 13 May 2026</p>
-  </div>
-
   Nineteen homes and twenty-three offices on the site of the former Ferney Lee Home for Older People, part of the £17.5 million Todmorden Town Deal investment programme. Planning permission granted June 2024. Built to Passivhaus standard: MVHR ventilation, very high levels of insulation, solar panels. No air source heat pumps - the insulation and solar do enough that only a light touch of electric heating is needed. Green roofs, EV charging ducted into every parking space. Flood water slow-release pipes run the length of the site.
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Ferney Lee Building Site w/ Paul Brannigan</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/wl63limalfvpopkbykoz7/TWT_CVCLT_FERNEY-LEE_AUDIO_Calder-Valley-CLT_128kbps.mp3?rlkey=b7twraas3od6o6enfsv42912x&raw=1"></audio>
+
+  </div>
 
   CVCLT Enterprise Ltd was set up specifically to build and operate the project - deliberately separate from the CLT, so that if it fails it does not jeopardise the organisation's housing work. Any operational surplus goes back to the CLT. Homes owned and managed by Connect Housing, who pay a ground rent to the CLT. Lets via Calderdale's B-with-us system.
 
@@ -39,8 +50,11 @@ body_after: |-
   ## Fielden Hall, Todmorden
 
   <div class="audio-track">
-  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/npuzb7dmlysawbjj2t0nn/TWT_CVCLT_FIELDEN_HALL_AUDIO_OWCH.mp3?rlkey=plrvbeevhtmqm2o1sjm7kg3ez&raw=1"></audio>
-  <p class="audio-track-name">Fielden Hall, Todmorden</p>
+
+    <p class="audio-track-name">Fielden Hall w/ Paul Brannigan</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/2iex1c8qfwrk7dtvu79lt/TWT-CVCLT-FIELDEN-HALL-AUDIO-Calder-Valley-CLT_Fielden-Hall_128kbps.mp3?rlkey=98ovjlwdmzx36si1o3y90nl5p&raw=1"></audio>
+
   </div>
 
   Grade II listed former school, built in the nineteenth century by a wealthy local family. Passed through various hands, eventually boarded up. Acquired by CVCLT in 2016 - a listed building with significant repair liability, but one that unlocked residential units and a substantial community space.
@@ -63,8 +77,11 @@ slug: calder-valley
 ## Danielle's House, Hebden Bridge
 
 <div class="audio-track">
-<audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/e5yajsfwm7540w1i399yn/Danielle_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=jwlpvc6ods1ikgheey19ntrv3&raw=1"></audio>
-<p class="audio-track-name">Danielle - interview, 13 May 2026</p>
+
+  <p class="audio-track-name">Danielle's house, Hebden Bridge</p>
+
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/e5yajsfwm7540w1i399yn/Danielle_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=jwlpvc6ods1ikgheey19ntrv3&raw=1"></audio>
+
 </div>
 
 A previous CVCLT project in Hebden Bridge: a property purchased below market cost in April 2024 with Homes England grant funding and a zero percent seller mortgage. Refurbished and retrofitted to social rent standards, it is now let to a local family. Danielle is the tenant.
