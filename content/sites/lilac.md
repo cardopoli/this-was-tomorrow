@@ -34,7 +34,7 @@ body_intro: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/imepgjojpaw8sju7o5dm2/14052026_PAUL-CHATTERTON_TWT_AUDIO_lilac_128kbps_edit.mp3?rlkey=z319r4euurbxrnznw4sacd9ii&raw=1"></audio>
 
   </div>
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/ym89f2q1sxn6g8kvo1jyc/AAAlEKj9NlZ6-xzdTD2w5gg?rlkey=yqi0a7sunm1y3fsz5jrzc7mat&dl=0
 body_middle: |-
   ## The Common House
 
@@ -53,7 +53,7 @@ body_middle: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/nd2d6wzqieulwb09ny4k5/14052026_TWT_Lilac-Keith128kbps.mp3?rlkey=x46ceviitfpquhtv36mjw8410&raw=1"></audio>
 
   </div>
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/eoixopgt7titiuwwxkb6l/ABfz9ZKv58ZB5X0g-nZjPXQ?rlkey=ylj8eoku9l9y0uq3c1z9780df&dl=0
 body_after: |-
   ## Living Here
 
@@ -68,7 +68,7 @@ body_after: |-
   Since 2015, Leeds Community Homes - co-founded by LILAC and Canopy - has supported community-led housing development across Leeds. Chapeltown Cohousing (ChaCo), the second cohousing project in the city, drew directly on LILAC's design and decision-making approach. Its chair has said ChaCo would not have happened without LILAC having gone first.
 
   Building costs have nearly tripled since LILAC was completed. Land prices have followed. The financial conditions that made it possible - cheap post-crash land, an ethical mortgage, a government pilot grant - have not returned. A group starting from scratch now would face a very different set of conditions.
-dropbox_gallery_3: ''
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/tsfkysq3ydte6ghbn96f7/ANLjYs_2mHILHxOMS_aCG7w?rlkey=fhn832iqa8u6dfsmub8f1or54&dl=0
 audio: []
 sources: []
 slug: lilac
