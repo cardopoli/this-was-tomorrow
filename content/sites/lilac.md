@@ -1,11 +1,13 @@
 ---
-title: "LILAC: Low Impact Living Affordable Community"
+title: 'LILAC: Low Impact Living Affordable Community'
 location: Leeds
 status: visited
 visit_date: 14/05/2026
 draft: false
 description: ''
-photos: []
+photos:
+  - image: /images/_dsc2794-twt_14052026_lilac-leeds_lowres.webp
+    caption: ''
 image: ''
 dropbox_audio: ''
 body_intro: |-
@@ -74,7 +76,7 @@ slug: lilac
 
 ### Further reading
 
-Paul Chatterton, co-founder and resident, is Professor of Urban Futures at the University of Leeds. His book *Low Impact Living: A Field Guide to Ecological, Affordable Community Building* (Routledge, 2015) documents the LILAC process in full. His most recent book, *How to Save the City* (Agenda Publishing, 2023), extends the argument into urban climate action.
+Paul Chatterton, co-founder and resident, is Professor of Urban Futures at the University of Leeds. His book _Low Impact Living: A Field Guide to Ecological, Affordable Community Building_ (Routledge, 2015) documents the LILAC process in full. His most recent book, _How to Save the City_ (Agenda Publishing, 2023), extends the argument into urban climate action.
 
 Chapeltown Cohousing (ChaCo): 29 homes on a hectare of former council land in Chapeltown, Leeds. Fully occupied. Built to AECB standard.
 
