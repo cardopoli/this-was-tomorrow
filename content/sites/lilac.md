@@ -31,7 +31,7 @@ body_intro: |-
 
     <p class="audio-track-name">Paul Chatterton, co-founder and resident</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/934ww25tttqu2vi46kq6n/14052026_PAUL-CHATTERTON_TWT_AUDIO_lilac_128kbps.mp3?rlkey=hhmer266ors3aeyodgcwu5h0i&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/imepgjojpaw8sju7o5dm2/14052026_PAUL-CHATTERTON_TWT_AUDIO_lilac_128kbps_edit.mp3?rlkey=z319r4euurbxrnznw4sacd9ii&raw=1"></audio>
 
   </div>
 dropbox_gallery: ''
