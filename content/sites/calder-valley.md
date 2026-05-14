@@ -61,7 +61,7 @@ body_after: |-
 
   The CLT owns the building and charges a small rent to the Fielden Centre Association, a separate charity that operates the hall. The CLT holds the asset; the community organisation runs it.
 
-  A £400,000 retrofit: roof insulation, secondary glazing, replacement of the original gas-fired heating. Air source heat pumps now feed radiant heat panels in the main hall. MVHR ventilation recovers heat from outgoing air. Below four or five degrees outside, the system struggles to maintain the contractually specified 21 degrees inside. A potential legal dispute with the contractor is unresolved.
+  A £400,000 retrofit: roof insulation, secondary glazing, replacement of the original gas-fired heating. Air source heat pumps now feed radiant heat panels in the main hall. MVHR ventilation recovers heat from outgoing air.
 
   The building has residents in each of the houses that bookend the Hall. They have lived on site for around ten years and are involved in the day-to-day operation.
 
@@ -86,9 +86,9 @@ slug: calder-valley
 
 </div>
 
-A previous CVCLT project in Hebden Bridge: a property purchased below market cost in April 2024 with Homes England grant funding and a zero percent seller mortgage. Refurbished and retrofitted to social rent standards, it is now let to a local family. Danielle is the tenant.
+CVCLT’s first property in Hebden Bridge: a property purchased from a CLT member at below market cost in April 2024 using Homes England grant funding and a zero percent mortgage from the seller. Refurbished and retrofitted to Decent Homes standard, and let to a local family at a social rent. Danielle is the tenant.
 
-The house sits close to Hebden Bridge High Street - the site of 1960s slum clearances that the CLT has spent years trying to bring back through new development. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
+The house sits close to Hebden Bridge Market Street on a site that avoided the 1960s slum clearances. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
 
 ### Other projects
 
