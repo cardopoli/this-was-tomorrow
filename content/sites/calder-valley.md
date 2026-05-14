@@ -71,9 +71,7 @@ A previous CVCLT project in Hebden Bridge: a property purchased below market cos
 
 The house sits close to Hebden Bridge High Street - the site of 1960s slum clearances that the CLT has spent years trying to bring back through new development. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
 
-## 
-
-Other projects
+### Other projects
 
 CVCLT has taken a lease from Network Rail on the decommissioned Grade II listed Hebden Bridge Signal Box. Renovation and partial conversion to holiday accommodation is due to be completed in 2026.
 
