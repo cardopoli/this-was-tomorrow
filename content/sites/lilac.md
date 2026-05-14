@@ -8,7 +8,7 @@ description: ''
 photos:
   - image: /images/_dsc2794-twt_14052026_lilac-leeds_lowres.webp
     caption: ''
-image: ''
+image: /images/_dsc2794-twt_14052026_lilac-leeds_lowres.webp
 dropbox_audio: ''
 body_intro: |-
   LILAC began in 2006 with a group of Leeds residents who wanted to build their own homes and live differently. The idea was urban from the start - deliberately so, close enough to the city that people could travel to work without cars. After years of research, planning and fundraising, they established LILAC Mutual Home Ownership Society Ltd as a registered co-operative in 2009. Construction began in 2012. First residents moved in May 2013.
