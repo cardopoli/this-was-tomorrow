@@ -76,6 +76,8 @@ slug: calder-valley
 
 ## Danielle's House, Hebden Bridge
 
+<img src="https://www.dropbox.com/scl/fi/6ovvljxqhl2gyocgqwfku/R0043576-TWT_Calder-Valley-CLT_Danielles_LOW.jpg?rlkey=v46v5136eov60z7tmnu4mn4bt&raw=1" alt="" style="width:100%">
+
 <div class="audio-track">
 
   <p class="audio-track-name">Danielle's house, Hebden Bridge</p>
