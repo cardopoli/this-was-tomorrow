@@ -19,6 +19,8 @@ body_intro: |-
 
   Financed through members' invested capital, a long-term mortgage from ethical bank Triodos, and a £420,000 government grant from the Homes and Communities Agency's Low Carbon Investment Fund - specifically to pilot ModCell straw construction at residential scale.
 
+  <img src="https://www.dropbox.com/scl/fi/rl3767nwmqp7v5oqqm80b/R0043678-TWT_14052026_LILAC-LEEDS_LOWRES-copy.jpg?rlkey=7jop4r9fu5rn1lu3hp26h6j91&raw=1" alt="" style="width:100%">
+
   ## The Mutual Home Ownership Model
 
   LILAC were the first co-operative in the UK to use the Mutual Home Ownership (MHO) model. Members pay 35% of their net monthly household income. That payment covers a house charge - maintenance, insurance - with the remainder building equity in the co-operative over time.
