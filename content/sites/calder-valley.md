@@ -53,23 +53,27 @@ body_after: |-
 
   The hall is in regular use: choir practice, Tai Chi, Women's Open Talk, dog training, U3A arts and crafts, sound baths, weddings. Music for the Many runs free music lessons from the hall - set up because music education in schools has largely disappeared unless families can pay privately.
 
-  ## Danielle's House, Hebden Bridge
-
-  <div class="audio-track">
-  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/e5yajsfwm7540w1i399yn/Danielle_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=jwlpvc6ods1ikgheey19ntrv3&raw=1"></audio>
-  <p class="audio-track-name">Danielle - interview, 13 May 2026</p>
-  </div>
-
-  A previous CVCLT project in Hebden Bridge: a property purchased below market cost in April 2024 with Homes England grant funding and a zero percent seller mortgage. Refurbished and retrofitted to social rent standards, it is now let to a local family. Danielle is the tenant.
-
-  The house sits close to Hebden Bridge High Street - the site of 1960s slum clearances that the CLT has spent years trying to bring back through new development. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
+  ##
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/5e6a6y4gxpjq01plv99da/ANTBTXKpCSje3glXjtGokpI?rlkey=8ym6mdkkfq67o8ffnuqt878bs&dl=0
 audio: []
 sources: []
 slug: calder-valley
 ---
 
-## Other projects
+## Danielle's House, Hebden Bridge
+
+<div class="audio-track">
+<audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/e5yajsfwm7540w1i399yn/Danielle_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=jwlpvc6ods1ikgheey19ntrv3&raw=1"></audio>
+<p class="audio-track-name">Danielle - interview, 13 May 2026</p>
+</div>
+
+A previous CVCLT project in Hebden Bridge: a property purchased below market cost in April 2024 with Homes England grant funding and a zero percent seller mortgage. Refurbished and retrofitted to social rent standards, it is now let to a local family. Danielle is the tenant.
+
+The house sits close to Hebden Bridge High Street - the site of 1960s slum clearances that the CLT has spent years trying to bring back through new development. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
+
+## 
+
+Other projects
 
 CVCLT has taken a lease from Network Rail on the decommissioned Grade II listed Hebden Bridge Signal Box. Renovation and partial conversion to holiday accommodation is due to be completed in 2026.
 
