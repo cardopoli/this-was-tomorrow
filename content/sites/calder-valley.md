@@ -17,7 +17,7 @@ body_intro: |-
 
   <div class="audio-track">
 
-    <p class="audio-track-name">Paul Branning on CV CLT</p>
+    <p class="audio-track-name">Paul Brannigan on CV CLT</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/y1nicxgaz01md9kuix1tk/Paul-Brannigan_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=9j5o386996tpbffc2ydp7k5r0&raw=1"></audio>
 
