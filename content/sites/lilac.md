@@ -63,6 +63,8 @@ body_after: |-
 
   The financial model does something structural to the community as well as to the economics. Because members cannot sell at market rate, there is no incentive to treat the place as an investment. Because there is one collective mortgage, there is a shared stake in making it work. Co-housing projects that operate on individual market ownership have found, in some cases, that units end up in private landlord hands and the community character is gradually lost. At LILAC that route is closed.
 
+  <img src="https://www.dropbox.com/scl/fi/yid3s0d06d84sdj19uc0h/DSC_0776-TWT_14052026_LILAC-LEEDS_LOWRES-copy.jpg?rlkey=rcxfel39396pbscd3ie3xvy6v&raw=1" alt="" style="width:100%">
+
   The workshop is where the commons works least well: tools hard to find, things left untidy. A small frustration in a place that mostly functions. COVID made something else visible - the support between residents during lockdown, navigating different vulnerabilities and risk tolerances across twenty households, showed what the intergenerational structure of the place actually meant when it was under pressure.
 
   A LILAC household produces around half the waste of an average UK household: 377kg compared to 755kg nationally. Bulk food purchasing from ethical suppliers, community composting, on-site food growing. The project was included in a UN report as an example of sustainable development goals in architectural practice.
