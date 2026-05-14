@@ -1,35 +1,81 @@
 ---
 title: "LILAC: Low Impact Living Affordable Community"
-location: "Leeds"
-slug: "lilac"
+location: Leeds
+status: visited
+visit_date: 14/05/2026
 draft: false
+description: ''
 photos: []
+image: ''
+dropbox_audio: ''
+body_intro: |-
+  LILAC began in 2006 with a group of Leeds residents who wanted to build their own homes and live differently. The idea was urban from the start - deliberately so, close enough to the city that people could travel to work without cars. After years of research, planning and fundraising, they established LILAC Mutual Home Ownership Society Ltd as a registered co-operative in 2009. Construction began in 2012. First residents moved in May 2013.
+
+  The site is a former primary school in Bramley, west Leeds. Twenty homes: a mix of one and two-bed flats and three and four-bed houses, and a Common House at the centre. Designed by White Design architects. Built using ModCell - prefabricated panels of timber frame packed with straw bale, assembled offsite in a temporary flying factory and joined on site. External walls in lime render. Triple-glazed windows. MVHR ventilation. Solar thermal panels and a 1.25kw solar PV array, with an additional 4kw on the Common House. A sustainable urban drainage system feeds a central pond.
+
+  Residents helped build it - collectively adding the straw bale insulation during construction. The choice of straw was deliberate: renewable, locally sourced, high-insulating, and a material that allowed the community to be physically involved in making where they would live.
+
+  Financed through members' invested capital, a long-term mortgage from ethical bank Triodos, and a £420,000 government grant from the Homes and Communities Agency's Low Carbon Investment Fund - specifically to pilot ModCell straw construction at residential scale.
+
+  ## The Mutual Home Ownership Model
+
+  LILAC were the first co-operative in the UK to use the Mutual Home Ownership (MHO) model. Members pay 35% of their net monthly household income. That payment covers a house charge - maintenance, insurance - with the remainder building equity in the co-operative over time.
+
+  Equity units are indexed to wage inflation at three-quarters rate - not to the property market. In the thirteen years since LILAC opened, local house prices have risen roughly 60%. Private rental in the area has gone up over 80%. LILAC's equity units have risen around 23%. The gap between those numbers is structural, and intentional: the place becomes relatively cheaper over time, not more expensive.
+
+  Members never own the property. They own equity in the co-op and take a portion of it on leaving. The land stays in trust. Affordability is locked in permanently for whoever comes next.
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Paul Chatterton, co-founder and resident</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/934ww25tttqu2vi46kq6n/14052026_PAUL-CHATTERTON_TWT_AUDIO_lilac_128kbps.mp3?rlkey=hhmer266ors3aeyodgcwu5h0i&raw=1"></audio>
+
+  </div>
+dropbox_gallery: ''
+body_middle: |-
+  ## The Common House
+
+  The Common House is at the centre of the site and at the centre of how LILAC functions. Shared kitchen and dining room, laundry, meeting rooms, a workshop with power tools and workbench, office, guest rooms, play area. Communal gardens, allotments, a pocket park that the wider neighbourhood uses. Around eight or nine cars between twenty households. Five washing machines. Two lawnmowers.
+
+  Meals together happen at least once a week - often two or three times. The dining room and kitchen were squeezed at the build stage to keep costs down. There is ongoing discussion about extending both. That decision, when it comes, will require all-member consensus.
+
+  Every month: a Tend and Mend day. Residents are expected to show up. Where they can, they maintain the place themselves.
+
+  Governance runs close to sociocracy. Major decisions - anything that touches vision and values, or exceeds a team's delegated budget - go to general all-member meetings. Consensus is the aim. If it cannot be reached after three meetings, a majority vote becomes available. That option has never been used. Day-to-day decisions are delegated to task teams: maintenance, finance, process, landscape, secretariat, Common House, food. Each sends a spokesperson to the Hub - an oversight body that functions closest to a board.
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Keith, resident</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/nd2d6wzqieulwb09ny4k5/14052026_TWT_Lilac-Keith128kbps.mp3?rlkey=x46ceviitfpquhtv36mjw8410&raw=1"></audio>
+
+  </div>
+dropbox_gallery_2: ''
+body_after: |-
+  ## Living Here
+
+  Ten years in, the place feels established. The pioneer energy of the early years - when residents were doing something genuinely unprecedented in this country - has settled into something closer to ordinary life. Values have spread across the membership; there is more range in what people believe and how they live than in the founding cohort.
+
+  The financial model does something structural to the community as well as to the economics. Because members cannot sell at market rate, there is no incentive to treat the place as an investment. Because there is one collective mortgage, there is a shared stake in making it work. Co-housing projects that operate on individual market ownership have found, in some cases, that units end up in private landlord hands and the community character is gradually lost. At LILAC that route is closed.
+
+  The workshop is where the commons works least well: tools hard to find, things left untidy. A small frustration in a place that mostly functions. COVID made something else visible - the support between residents during lockdown, navigating different vulnerabilities and risk tolerances across twenty households, showed what the intergenerational structure of the place actually meant when it was under pressure.
+
+  A LILAC household produces around half the waste of an average UK household: 377kg compared to 755kg nationally. Bulk food purchasing from ethical suppliers, community composting, on-site food growing. The project was included in a UN report as an example of sustainable development goals in architectural practice.
+
+  Since 2015, Leeds Community Homes - co-founded by LILAC and Canopy - has supported community-led housing development across Leeds. Chapeltown Cohousing (ChaCo), the second cohousing project in the city, drew directly on LILAC's design and decision-making approach. Its chair has said ChaCo would not have happened without LILAC having gone first.
+
+  Building costs have nearly tripled since LILAC was completed. Land prices have followed. The financial conditions that made it possible - cheap post-crash land, an ethical mortgage, a government pilot grant - have not returned. A group starting from scratch now would face a very different set of conditions.
+dropbox_gallery_3: ''
 audio: []
 sources: []
+slug: lilac
 ---
 
-## Overview
+### Further reading
 
-LILAC began in 2006 with a group of five Leeds residents interested in building their own homes to live and bring up their children in a different way. After three years of intensive research and planning, they established Lilac Mutual Home Ownership Society Ltd (MHOS) as a registered Co-operative Society in 2009. Building commenced in 2012, and the first residents moved in during May 2013.
+Paul Chatterton, co-founder and resident, is Professor of Urban Futures at the University of Leeds. His book *Low Impact Living: A Field Guide to Ecological, Affordable Community Building* (Routledge, 2015) documents the LILAC process in full. His most recent book, *How to Save the City* (Agenda Publishing, 2023), extends the argument into urban climate action.
 
-## The Site & Design
+Chapeltown Cohousing (ChaCo): 29 homes on a hectare of former council land in Chapeltown, Leeds. Fully occupied. Built to AECB standard.
 
-LILAC is built on an old school site in Bramley, west Leeds, comprising twenty self-contained homes – a mix of one and two bed flats and three and four bed houses. Most have private gardens; upper flats have balconies. The homes are finished to a very high standard. The buildings are constructed using ModCell®, which are pre-made sections of timber frame, straw bales and lime render, creating super-insulated houses with large, south-facing glazed panels to maximise sunlight and solar energy.
-
-## Ownership & Affordability Model
-
-LILAC were the first co-operative to use the Mutual Home Ownership (MHO) model, a collective approach to home ownership. MHO society members and residents pay a collective mortgage rather than traditional individual ones. Members contribute financially on the basis of their income levels – defined at LILAC as 35% of net household income. Members build equity that they can take with them based on a national income-based formula rather than property values, ensuring that homes remain affordable for future generations. LILAC has a 25-year fixed rate mortgage provided by ethical bank Triodos at 3.5% above base rate.
-
-## Shared Infrastructure & Community Life
-
-The common house is at the heart of the community and includes communal cooking and eating facilities, laundry facilities, meeting space, play area, office and guest rooms. The site design is based around a car-free home zone, communal gardens, beautiful green spaces, areas for growing food and ample cycle storage. Food plays an important role in LILAC – residents meet twice a week to eat together in the Common House, creating space to talk, share and build the links that sustain the community.
-
-## Impact & Recognition
-
-Residents report increased financial security, wellbeing, and carbon savings compared to typical UK households. The use of natural, high-insulating materials such as straw and lime, plus reduced car use, home composting, vegetarian diets, water-saving, and bulk food purchasing achieved an energy reduction of one-third compared to a typical UK house.
-
-The project has become a centre-stage example in the UK Government's announcement of a new £170 million community-led housing fund. It was recently included in a UN report as an excellent example of the UN's sustainable development goals in architectural practice. Since 2015, Leeds Community Homes (LCH) was founded by World Habitat Award winners Canopy and LILAC to support community-led housing across Leeds.
-
-## Why This Matters
-
-LILAC demonstrates that permanently affordable housing, genuine community participation, and ecological responsibility can coexist within an urban neighbourhood. The model works not because it retreats from the city, but because it reimagines what collective ownership and shared living can look like in the middle of it – keeping money circulating locally, allowing mixed incomes to live alongside each other, and building structures where decisions belong to the people who inhabit them. The scheme has inspired similar projects internationally, proving the concept travels beyond a single site or moment.
+Leeds Community Homes, co-founded by LILAC and Canopy in 2015, supports community-led housing across the city.
