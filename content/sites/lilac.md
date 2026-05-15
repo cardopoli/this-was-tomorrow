@@ -17,6 +17,8 @@ body_intro: |-
 
   Residents helped build it - collectively adding the straw bale insulation during construction. The choice of straw was deliberate: renewable, locally sourced, high-insulating, and a material that allowed the community to be physically involved in making where they would live.
 
+  And the smell of straw is very present, it permeates the environment of each interior and gives a sense of peace and security. Imagine being in a hitech version of a hystack where something primal tickles the nostrils and the brain and screams like you belong there.
+
   Financed through members' invested capital, a long-term mortgage from ethical bank Triodos, and a £420,000 government grant from the Homes and Communities Agency's Low Carbon Investment Fund - specifically to pilot ModCell straw construction at residential scale.
 
   <img src="https://www.dropbox.com/scl/fi/rl3767nwmqp7v5oqqm80b/R0043678-TWT_14052026_LILAC-LEEDS_LOWRES-copy.jpg?rlkey=7jop4r9fu5rn1lu3hp26h6j91&raw=1" alt="" style="width:100%">
@@ -59,7 +61,15 @@ dropbox_gallery_2: https://www.dropbox.com/scl/fo/eoixopgt7titiuwwxkb6l/ABfz9ZKv
 body_after: |-
   ## Living Here
 
-  Ten years in, the place feels established. The pioneer energy of the early years - when residents were doing something genuinely unprecedented in this country - has settled into something closer to ordinary life. Values have spread across the membership; there is more range in what people believe and how they live than in the founding cohort.
+  <div class="audio-track">
+
+    <p class="audio-track-name">Maria, LILAC resident</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/11qdmv32nshsj4fp5p857/15052026_MARIA-SANTOS_TWT_AUDIO_lilac_128kbps.mp3?rlkey=njwbcdbysqclo18b9zoj4gqhs&raw=1"></audio>
+
+  </div>
+
+  Ten years in, the place feels established. The pioneer energy of the early years - when residents were doing something genuinely unprecedented in this country - has settled into something closer to ordinary life with kids growing, career changes and safe gaze towards the future. This is what the place communicates, safety, stability a sense of home and warmth.
 
   The financial model does something structural to the community as well as to the economics. Because members cannot sell at market rate, there is no incentive to treat the place as an investment. Because there is one collective mortgage, there is a shared stake in making it work. Co-housing projects that operate on individual market ownership have found, in some cases, that units end up in private landlord hands and the community character is gradually lost. At LILAC that route is closed.
 
