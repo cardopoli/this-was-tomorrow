@@ -2,10 +2,12 @@
 title: Granby Four Streets Community Land Trust
 location: Liverpool
 status: visited
-visit_date: ''
+visit_date: 18/19-05-2026
 draft: false
 description: ''
-photos: []
+photos:
+  - image: /images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp
+    caption: ''
 image: ''
 dropbox_audio: ''
 body_intro: |-
