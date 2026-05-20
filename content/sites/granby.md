@@ -1,24 +1,27 @@
 ---
 title: Granby Four Streets Community Land Trust
 location: Liverpool
-status: planned
-visit_date: ''
+status: visited
+visit_date: 18>19-05-2026
 draft: false
 description: ''
-photos: []
+photos:
+  - image: /images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp
+    caption: ''
+image: /images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp
+dropbox_audio: ''
 body_intro: ''
 dropbox_gallery: ''
 body_middle: ''
+dropbox_gallery_2: ''
+body_after: ''
+dropbox_gallery_3: ''
 audio: []
 sources: []
 slug: granby
 ---
 
-## A Neighbourhood Written Off
-
-Granby is a neighbourhood in Toxteth, central Liverpool, comprising four Victorian terrace streets – Beaconsfield, Cairns, Jermyn and Ducie – designed by Welsh architect Richard Owens and built by Welsh workers during the late 19th century. A fifth street, Granby Street itself, connects the four and mostly contains commercial units. The area is among the oldest multicultural neighbourhoods in the country, due to immigration following Britain's post-war period.
-
-During the 1960s, the area was designated a 'twilight area', resulting in many residents moving out and properties being taken over by landlords with little interest in maintaining the houses. Following the 1981 Toxteth riots, the neighbourhood entered further decline. During the late 20th century, many streets were abandoned and demolished – except for the southernmost four streets which, almost miraculously, escaped demolition. By the early 2010s, these four streets were sparsely populated and filled with tinned-up houses. The message was clear: this area and its people were disposable, written off.
+## 
 
 ## A Two-Decade Fight Back
 
