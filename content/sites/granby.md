@@ -76,7 +76,9 @@ On the question of whether this was the future anyone dreamed of: "I never dream
 
 On how change happens: "Work collectively. Collective working can start with you and one person, because that's two people, and that person will know someone else. Recognise yourself and claim the bit of space that is around you. If your destination is always the stars, but you're only on top of the stepladder - that's not terrible. At least you got there."
 
-<img src="https://www.dropbox.com/scl/fi/2x1500bw7q7umauw3bofk/R0043909-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=wowf0uw7btkgkw8qy0efycwhq&raw=1" alt="" style="width:100%">
+<img src="https://www.dropbox.com/scl/fi/6b871t527ozdibeoe7n0r/R0043802-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fzbdefk7kpwy9swe273aodnju&raw=1" alt="" style="width:100%">
+
+https://www.dropbox.com/scl/fi/6b871t527ozdibeoe7n0r/R0043802-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fzbdefk7kpwy9swe273aodnju&raw=1
 
 ### Photography locations
 
