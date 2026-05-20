@@ -3,9 +3,10 @@ title: Homebaked Community Land Trust
 location: Liverpool
 status: scheduled
 visit_date: ''
-draft: true
+draft: false
 description: ''
 photos: []
+dropbox_audio: ''
 body_intro: ''
 dropbox_gallery: ''
 body_middle: ''
