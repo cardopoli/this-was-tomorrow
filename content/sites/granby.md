@@ -30,7 +30,7 @@ body_middle: |-
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/zxi11fhgqn3rdpa5dg8hk/TWT_AUDIO_Granby_Hazel_128kbps_edit.mp3?rlkey=s9m9rrc9uvg4jmnlcx5enpfpt&raw=1"></audio>
 
-  </div></div>
+  </div>
 
   As a residents association, the CLT had very little power because it had very little money. Then a social entrepreneur who had seen what the residents were doing lent the newly formed CLT half a million pounds. Suddenly there was power. The council had been paying lip service to community consultation - meetings, workshops, what colour would you like the tiles. Once the CLT could buy houses, the council took notice.
 
