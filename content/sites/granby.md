@@ -64,7 +64,9 @@ slug: granby
 
 The Granby Street Market has run since around 2007 - international poets and musicians alongside stalls selling Caribbean food, vintage clothes and handmade goods. First Saturday of the month. It started with a table sale from people who lived across the road. Six stalls. Then 90 gazebos. That is also the story of how this whole place works.
 
-"We're not tolerant, we're welcoming. Who wants to be tolerated? It means I'll just about put up with you."
+> "We're not tolerant, we're welcoming. Who wants to be tolerated? It means I'll just about put up with you."
+
+<img src="https://www.dropbox.com/scl/fi/r3zyinnzrgbschf8ee55l/R0043774-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=5r9iswm623safhrarex3zjrxf&raw=1" alt="" style="width:100%">
 
 Liverpool is a port city - the oldest Chinese community in Europe, Commonwealth immigration since before the war, a population that has always been mixed. The institutional racism that drove the 1981 riots was not the racism of individuals on the street. These are different things and the distinction matters here.
 
