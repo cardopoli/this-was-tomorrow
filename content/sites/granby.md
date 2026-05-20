@@ -17,8 +17,6 @@ body_intro: |-
 
   Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
 
-  <img src="https://www.dropbox.com/scl/fi/zcdycpz3dwm51juh7jjsx/DSC_0858-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=589ip6b4yi229yfiab9594iby&raw=1" alt="Boarded up houses on Ducie Street" style="width:100%">
-
   But residents had never stopped. For over two decades before any formal organisation existed, they cleared, planted, painted, and campaigned. It started with someone getting a brush out and cleaning the street. That went on to others joining, then a small grant, then a table sale that became a market. Six stalls became 90. A residents association formed 34 years ago, then ended, then became a Community Land Trust in November 2011.
 
   > "We formed a CLT on nothing but imagination. It was both common sense and utterly radical." - _Hazel Tilley, co-founder, Cairns Street resident for over 30 years._
