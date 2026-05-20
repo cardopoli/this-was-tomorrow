@@ -13,6 +13,8 @@ dropbox_audio: ''
 body_intro: |-
   Granby is a neighbourhood in Toxteth, Liverpool 8 - four Victorian terraces built in the 1870s for artisan workers, connected by Granby Street. Beaconsfield, Cairns, Jermyn and Ducie Streets. One of the oldest multicultural neighbourhoods in the country. After World War Two, Toxteth became a Commonwealth immigration hub: the streets had a wet fish shop, a supermarket, a launderette, a bakery, a haberdashers, cafes, the first Tesco in Liverpool. Thriving.
 
+  <img src="https://www.dropbox.com/scl/fi/vai7cbb7x72c1mb6c34ar/DSC_0815-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=bqhimd6qmtddv33u3jtr4sqqy&raw=1" alt="" style="width:100%">
+
   Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
 
   <img src="https://www.dropbox.com/scl/fi/zcdycpz3dwm51juh7jjsx/DSC_0858-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=589ip6b4yi229yfiab9594iby&raw=1" alt="Boarded up houses on Ducie Street" style="width:100%">
