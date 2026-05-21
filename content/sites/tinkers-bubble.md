@@ -54,10 +54,7 @@ body_middle: |-
 
   The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/a178hduq8jhe1g7lj68yn/AA7D4YPTemUkSbzn1eYRrMs?rlkey=h7fixgx5sohfiayvjelqu50m9&dl=0
-body_after: |-
-  <div class="twt-playlist" id="aud-pl-hyqao" data-twt-bg="#041801" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1" style=""><p style="font-family:monospace;font-size:11px;padding:14px 18px;color:#ffffff;background:#041801">Loading playlist…</p></div>
-
-  <script>(function(){function run(){window._twt.buildAudioPlaylist('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0','aud-pl-hyqao');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
+body_after: <div class="twt-playlist" id="aud-pl-hyqao" data-twt-bg="#041801" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1" style=""><p style="font-family:monospace;font-size:11px;padding:14px 18px;color:#ffffff;background:#041801">Loading playlist…</p></div>
 dropbox_gallery_3: ''
 audio: []
 archives: []
