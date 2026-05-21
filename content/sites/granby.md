@@ -34,7 +34,9 @@ body_intro: |-
   _- Hazel Tilley, co-founder, Cairns Street resident for over 30 years._
 dropbox_gallery: ''
 body_middle: |-
-  ## Power
+  ## On Power
+
+  As a residents association, the CLT had very little power because it had very little money. Then a social entrepreneur who had seen what the residents were doing lent the newly formed CLT half a million pounds. Suddenly there was power. The council had been paying lip service to community consultation - meetings, workshops, what colour would you like the tiles. Once the CLT could buy houses, the council took notice.
 
   <div class="audio-track">
 
@@ -44,7 +46,21 @@ body_middle: |-
 
   </div>
 
-  As a residents association, the CLT had very little power because it had very little money. Then a social entrepreneur who had seen what the residents were doing lent the newly formed CLT half a million pounds. Suddenly there was power. The council had been paying lip service to community consultation - meetings, workshops, what colour would you like the tiles. Once the CLT could buy houses, the council took notice.
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">Hazel's Tilley house</p>
 
   In 2012, thirteen properties were acquired from the council for £1 each. London architecture collective Assemble came in as partners - not to impose a masterplan but to learn from what residents had already begun. Working with low-cost materials and salvage from nearby demolitions, they renovated houses, designed new details, made the ordinary extraordinary.
 
@@ -65,7 +81,7 @@ body_middle: |-
   </div>
 
   Five of the ten renovated houses were sold at affordable prices, five retained for social rent. Each sale protected by an anti-gentrification clause: priority always to Liverpool locals and first-time buyers with a connection to the area. Four derelict shops on the corner of Granby and Cairns Street also passed into CLT ownership.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/y80rgw0xrwszmp4t7kzre/AEjqsXv-pGV4-ffC1--EpbA?rlkey=ly93yumuht8tjpoa0ijnyu46l&dl=0
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/6c1l89yn7quy4tpqe5q56/AL7nWH7vW_qYvdd8iyr8FiM?rlkey=w5i7gj0kslghe9c0czy1982d7&dl=0
 body_after: |-
   ## The Winter Garden
 
