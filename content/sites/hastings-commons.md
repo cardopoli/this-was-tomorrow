@@ -9,6 +9,7 @@ photos:
   - image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
     caption: ''
 image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
+dropbox_audio: ''
 body_intro: |-
   ## THE PLACE AND THE PROBLEM
 
@@ -22,7 +23,13 @@ body_intro: |-
 
   The pier project, though eventually lost to private ownership, created crucial community connection. Assembling the pier's former 5,000 shareholders built local solidarity and led to the establishment of the White Rock Trust to develop the neighbourhood. When governance problems resulted in the closure of that Trust, the work continued through other organisations.
 
-  <iframe src="https://archive.org/embed/ace-twt-27042026_jess-steel-hastings-commons-interview" width="100%" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+  <div class="audio-track" data-twt-bg="#FFD600" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+
+    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Jess Steele, OBE</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/74mx4rxp9ooj73qs7w9c3/Jess-Stele-TWT-AUDIO-HASTINGS_128kbps.mp3?rlkey=3ow0rfm5s82tt2dkuyzjhwejt&raw=1"></audio>
+
+  </div>
 
   _Listen to the interview with_ [_Jess Steele_](https://en.wikipedia.org/wiki/Jess_Steele) 
 
