@@ -69,6 +69,7 @@ button.main:disabled { background: #999; cursor: default; }
 textarea.out { font-size: 11px; line-height: 1.5; direction: ltr; height: 90px; }
 textarea.out.sm { height: 48px; }
 textarea.out.lg { height: 160px; }
+textarea.out.xl { height: 220px; }
 .br { display: flex; gap: 8px; margin-top: 7px; }
 button.cp {
   font-family: 'Courier New', monospace; font-size: 10px; font-weight: 700;
@@ -87,15 +88,59 @@ button.cp:hover { background: #f0ede8; }
 .prev img { max-width: 100%; display: block; }
 .prev-cap { font-size: 11px; color: #666; margin-top: 7px; font-style: italic; }
 .prev audio, .prev iframe, .prev video { width: 100%; margin-top: 8px; display: block; }
+
+/* IMAGE LAYOUT PANEL */
+.layout-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.layout-card {
+  border: 2px solid #ccc; padding: 14px 10px 10px; cursor: pointer;
+  background: #fff; transition: all 0.15s; text-align: center;
+}
+.layout-card:hover { border-color: #666; }
+.layout-card.selected { border-color: #111; background: #f7f5f0; }
+.layout-card .lc-icon { display: flex; gap: 3px; justify-content: center; align-items: stretch; height: 36px; margin-bottom: 8px; }
+.layout-card .lc-icon div { background: #ccc; border-radius: 1px; flex: 1; }
+.layout-card.selected .lc-icon div { background: #111; }
+.layout-card .lc-label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; }
+.layout-card.selected .lc-label { color: #111; font-weight: 700; }
+
+.img-slot { border: 1px solid #e0ddd8; padding: 14px; margin-bottom: 12px; background: #faf9f7; }
+.img-slot-title { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 10px; display: block; }
+.slot-hidden { display: none; }
+
+/* LIGHTBOX */
+.lb-overlay {
+  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.92); z-index: 9999; cursor: zoom-out;
+  align-items: center; justify-content: center;
+}
+.lb-overlay.open { display: flex; }
+.lb-inner { position: relative; max-width: 90vw; max-height: 90vh; }
+.lb-inner img { max-width: 90vw; max-height: 90vh; object-fit: contain; display: block; }
+.lb-cap { color: #ccc; font-size: 11px; font-family: 'Courier New', monospace; margin-top: 10px; text-align: center; font-style: italic; }
+.lb-close {
+  position: absolute; top: -32px; right: 0; color: #fff; font-size: 18px;
+  cursor: pointer; font-family: 'Courier New', monospace; font-weight: 700;
+  background: none; border: none; letter-spacing: 1px;
+}
+
+/* Layout preview mini-renders */
+.lc-icon.single div { height: 100%; }
+.lc-icon.double div { height: 100%; }
+.lc-icon.triple div { height: 100%; }
+.lc-icon.portrait div:first-child { flex: 0.7; }
+.lc-icon.portrait div:last-child { flex: 1.4; }
+.lc-icon.left-wide div:first-child { flex: 1.8; }
+.lc-icon.left-wide div:last-child { flex: 1; }
 </style>
 </head>
 <body>
 <div class="app">
   <h1>TWT — Embed Tool</h1>
-  <div class="tagline">Image · Audio · Video · Archive.org · iFrame · Photo Gallery</div>
+  <div class="tagline">Image · Image Layout · Audio · Video · Archive.org · iFrame · Photo Gallery</div>
 
   <div class="tabs">
     <button class="tab active" onclick="sw('img')">Image</button>
+    <button class="tab" onclick="sw('lay')">Image Layout</button>
     <button class="tab" onclick="sw('aud')">Audio</button>
     <button class="tab" onclick="sw('vid')">Video</button>
     <button class="tab" onclick="sw('arc')">Archive.org</button>
@@ -155,6 +200,107 @@ button.cp:hover { background: #f0ede8; }
           <span class="pl">Preview</span>
           <img id="img-pi" src="" alt="" />
           <div class="prev-cap" id="img-pc" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ IMAGE LAYOUT ============ -->
+  <div class="panel" id="panel-lay">
+    <span class="sub">Choose layout</span>
+    <div class="layout-cards">
+      <div class="layout-card selected" onclick="selectLayout('single',this)">
+        <div class="lc-icon single"><div></div></div>
+        <div class="lc-label">Single</div>
+      </div>
+      <div class="layout-card" onclick="selectLayout('double',this)">
+        <div class="lc-icon double"><div></div><div></div></div>
+        <div class="lc-label">Double — side by side</div>
+      </div>
+      <div class="layout-card" onclick="selectLayout('triple',this)">
+        <div class="lc-icon triple"><div></div><div></div><div></div></div>
+        <div class="lc-label">Triple — three across</div>
+      </div>
+      <div class="layout-card" onclick="selectLayout('portrait',this)">
+        <div class="lc-icon portrait"><div></div><div style="flex:1.4"></div></div>
+        <div class="lc-label">Portrait + Landscape</div>
+      </div>
+      <div class="layout-card" onclick="selectLayout('left-wide',this)">
+        <div class="lc-icon left-wide"><div></div><div></div></div>
+        <div class="lc-label">Wide left + Narrow right</div>
+      </div>
+      <div class="layout-card" onclick="selectLayout('stacked',this)">
+        <div class="lc-icon" style="flex-direction:column;gap:3px"><div style="flex:1;width:100%"></div><div style="flex:1;width:100%"></div></div>
+        <div class="lc-label">Stacked pair</div>
+      </div>
+    </div>
+
+    <div class="hint" style="margin-bottom:16px">All images open in lightbox when clicked. Gap between images is 4px.</div>
+
+    <!-- Slot 1 - always shown -->
+    <div class="img-slot" id="lay-slot-1">
+      <span class="img-slot-title">Image 1</span>
+      <div class="sec" style="margin-bottom:10px">
+        <label class="fl">Dropbox URL</label>
+        <input type="text" id="lay-url-1" placeholder="https://www.dropbox.com/scl/fi/..." />
+      </div>
+      <div class="row" style="margin-bottom:0">
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-1" placeholder="Describe the image" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-1" placeholder="Optional" /></div>
+      </div>
+    </div>
+
+    <!-- Slot 2 -->
+    <div class="img-slot slot-hidden" id="lay-slot-2">
+      <span class="img-slot-title">Image 2</span>
+      <div class="sec" style="margin-bottom:10px">
+        <label class="fl">Dropbox URL</label>
+        <input type="text" id="lay-url-2" placeholder="https://www.dropbox.com/scl/fi/..." />
+      </div>
+      <div class="row" style="margin-bottom:0">
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-2" placeholder="Describe the image" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-2" placeholder="Optional" /></div>
+      </div>
+    </div>
+
+    <!-- Slot 3 -->
+    <div class="img-slot slot-hidden" id="lay-slot-3">
+      <span class="img-slot-title">Image 3</span>
+      <div class="sec" style="margin-bottom:10px">
+        <label class="fl">Dropbox URL</label>
+        <input type="text" id="lay-url-3" placeholder="https://www.dropbox.com/scl/fi/..." />
+      </div>
+      <div class="row" style="margin-bottom:0">
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-3" placeholder="Describe the image" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-3" placeholder="Optional" /></div>
+      </div>
+    </div>
+
+    <div class="sec" style="margin-top:4px">
+      <label class="fl">Overall caption / group caption</label>
+      <input type="text" id="lay-group-cap" placeholder="Optional - shown below the layout" />
+    </div>
+
+    <hr>
+    <span class="sub">Lightbox</span>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="radio" name="lbox" value="yes" checked> Yes — images open in lightbox</label>
+      <label><input type="radio" name="lbox" value="no"> No — plain images</label>
+    </div>
+
+    <div class="err" id="lay-err">Add at least one valid Dropbox URL</div>
+    <button class="main" onclick="doLayout()">Generate</button>
+
+    <div class="outs" id="lay-outs">
+      <div class="og">
+        <label class="fl">Embed code — paste into Sveltia body field (raw mode)</label>
+        <textarea class="out xl" id="lay-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('lay-out',this)">Copy embed</button></div>
+      </div>
+      <div class="prev" id="lay-prev">
+        <div class="pi">
+          <span class="pl">Preview</span>
+          <div id="lay-pp"></div>
         </div>
       </div>
     </div>
@@ -326,11 +472,21 @@ button.cp:hover { background: #f0ede8; }
   </div>
 
 </div><!-- .app -->
+
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb-overlay" onclick="lbClose()">
+  <div class="lb-inner" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="lbClose()">✕ close</button>
+    <img id="lb-img" src="" alt="" />
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+</div>
+
 <script>
 var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
 
 /* ---- TABS ---- */
-var tabNames = ['img','aud','vid','arc','ifr','gal'];
+var tabNames = ['img','lay','aud','vid','arc','ifr','gal'];
 function sw(name) {
   document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', tabNames[i]===name); });
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
@@ -365,6 +521,21 @@ function show(id){ document.getElementById(id).classList.add('on'); }
 function hide(id){ document.getElementById(id).classList.remove('on'); }
 function val(id){ return document.getElementById(id).value.trim(); }
 function set(id,v){ document.getElementById(id).value=v; }
+
+/* ---- LIGHTBOX ---- */
+function lbOpen(src, alt, cap) {
+  var img = document.getElementById('lb-img');
+  img.src = src; img.alt = alt || '';
+  var capEl = document.getElementById('lb-cap');
+  capEl.textContent = cap || ''; capEl.style.display = cap ? 'block' : 'none';
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function lbClose() {
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') lbClose(); });
 
 /* ---- IMAGE ---- */
 function doImg() {
@@ -401,6 +572,117 @@ document.querySelectorAll('input[name="ifmt"]').forEach(function(r){
 });
 document.getElementById('img-url').addEventListener('keydown',function(e){if(e.key==='Enter')doImg();});
 
+/* ---- IMAGE LAYOUT ---- */
+var currentLayout = 'single';
+
+function selectLayout(name, card) {
+  currentLayout = name;
+  document.querySelectorAll('.layout-card').forEach(function(c){ c.classList.remove('selected'); });
+  card.classList.add('selected');
+  var slots = { single:1, double:2, triple:3, portrait:2, 'left-wide':2, stacked:2 };
+  var count = slots[name] || 1;
+  for(var i=1;i<=3;i++){
+    var s = document.getElementById('lay-slot-'+i);
+    if(s) s.classList.toggle('slot-hidden', i>count);
+  }
+  hide('lay-outs'); hide('lay-err');
+}
+
+function doLayout() {
+  hide('lay-err'); hide('lay-outs');
+  var useLightbox = document.querySelector('input[name="lbox"]:checked').value === 'yes';
+  var slots = { single:1, double:2, triple:3, portrait:2, 'left-wide':2, stacked:2 };
+  var count = slots[currentLayout] || 1;
+  var imgs = [];
+  for(var i=1;i<=count;i++){
+    var u = val('lay-url-'+i);
+    if(!u||u.indexOf('dropbox.com')===-1){show('lay-err');return;}
+    imgs.push({ src: toRaw(u), alt: val('lay-alt-'+i), cap: val('lay-cap-'+i) });
+  }
+  var groupCap = val('lay-group-cap');
+  var lbAttr = useLightbox ? ' style="cursor:zoom-in"' : '';
+
+  function imgTag(img, style) {
+    var tag = '<img src="'+img.src+'" alt="'+img.alt+'" style="'+style+' display:block;">';
+    if(useLightbox) {
+      tag = '<a href="'+img.src+'" onclick="lbOpen(\''+img.src.replace(/'/g,"\\'")
+        +'\',\''+img.alt.replace(/'/g,"\\'")+'\',\''+img.cap.replace(/'/g,"\\'")+'\');return false;"'+lbAttr+'>'
+        +tag+'</a>';
+    }
+    return tag;
+  }
+
+  var embed = '';
+  var lbScript = useLightbox
+    ? '\n<script>if(!window._lbReady){window._lbReady=1;document.addEventListener("keydown",function(e){if(e.key==="Escape"){var o=document.getElementById("lb-overlay");if(o)o.classList.remove("open");document.body.style.overflow="";}}); }<\/script>'
+    : '';
+
+  if(currentLayout === 'single') {
+    embed += '<figure style="margin:0">\n';
+    embed += '  '+imgTag(imgs[0], 'width:100%')+'\n';
+    if(imgs[0].cap||groupCap) embed += '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+(imgs[0].cap||groupCap)+'</figcaption>\n';
+    embed += '</figure>';
+
+  } else if(currentLayout === 'double') {
+    embed += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">\n';
+    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
+    embed += '</div>';
+    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+
+  } else if(currentLayout === 'triple') {
+    embed += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">\n';
+    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
+    embed += '</div>';
+    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+
+  } else if(currentLayout === 'portrait') {
+    embed += '<div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start;margin:0">\n';
+    embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
+    embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
+    embed += '</div>';
+    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+
+  } else if(currentLayout === 'left-wide') {
+    embed += '<div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start;margin:0">\n';
+    embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
+    embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
+    embed += '</div>';
+    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+
+  } else if(currentLayout === 'stacked') {
+    embed += '<div style="display:grid;grid-template-columns:1fr;gap:4px;margin:0">\n';
+    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%')+'</div>\n'; });
+    embed += '</div>';
+    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+  }
+
+  if(useLightbox) embed += lbScript;
+
+  set('lay-out', embed); show('lay-outs');
+
+  // Preview
+  var pp = document.getElementById('lay-pp');
+  pp.innerHTML = '';
+  var previewWrap = document.createElement('div');
+  var previewEmbed = embed
+    .replace(/onclick="lbOpen\([^"]*\);return false;"/g, '')
+    .replace(/<a [^>]*>/g,'').replace(/<\/a>/g,'')
+    .replace(/<script[\s\S]*?<\/script>/g,'');
+  previewWrap.innerHTML = previewEmbed;
+  // Make preview images clickable with live lightbox
+  previewWrap.querySelectorAll('img').forEach(function(img, i){
+    var src = imgs[i] ? imgs[i].src : img.src;
+    var alt = imgs[i] ? imgs[i].alt : img.alt;
+    var cap = imgs[i] ? imgs[i].cap : '';
+    img.style.cursor = useLightbox ? 'zoom-in' : 'default';
+    if(useLightbox) {
+      img.addEventListener('click', function(){ lbOpen(src, alt, cap); });
+    }
+  });
+  pp.appendChild(previewWrap);
+  document.getElementById('lay-prev').classList.add('on');
+}
+
 /* ---- AUDIO ---- */
 function doAud() {
   var url=val('aud-url');
@@ -419,15 +701,11 @@ document.getElementById('aud-url').addEventListener('keydown',function(e){if(e.k
 
 /* ---- VIDEO ---- */
 function toEmbed(url) {
-  // YouTube
   var yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
   if(yt) return 'https://www.youtube-nocookie.com/embed/'+yt[1];
-  // Vimeo
   var vi = url.match(/vimeo\.com\/(\d+)/);
   if(vi) return 'https://player.vimeo.com/video/'+vi[1];
-  // Direct file
-  if(/\.(mp4|webm|mov)$/i.test(url)) return null; // handled separately
-  // Assume it's already an embed URL or generic URL
+  if(/\.(mp4|webm|mov)$/i.test(url)) return null;
   return url;
 }
 
@@ -437,9 +715,7 @@ function doVid() {
   if(!url){show('vid-err');return;}
   var w=val('vid-w')||'100%', ar=val('vid-ar')||'56.25', cap=val('vid-cap');
   var embed='', previewHtml='';
-
   if(/\.(mp4|webm|mov)$/i.test(url)) {
-    // Direct video file
     embed='<video controls style="width:'+w+'" preload="metadata" src="'+url+'"></video>';
     if(cap) embed+='\n<p class="photo-caption">'+cap+'</p>';
     previewHtml='<video controls style="max-width:100%" src="'+url+'"></video>';
