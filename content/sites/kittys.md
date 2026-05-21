@@ -15,7 +15,7 @@ body_intro: |-
 
   <img src="https://www.dropbox.com/scl/fi/wta93ktj3tk4jilf473jv/DSC_0914-18_19_052026-Kittys_launderette-Liverpool_lowres-copy.jpg?rlkey=3kznv88e293netortbsc4olde&raw=1" alt="" style="width:100%">
 
-  Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
+  Kitty's Launderette opened in May 2019 in Anfield, Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
 
   <div class="audio-track" data-twt-bg="#27F5B0" data-twt-fg="#000000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
@@ -69,3 +69,15 @@ audio: []
 sources: []
 slug: kittys
 ---
+
+### Links
+
+Website: [kittyslaunderette.org.uk](https://www.kittyslaunderette.org.uk)
+
+Instagram: [@kittyslaundry](https://www.instagram.com/kittyslaundry/)
+
+Facebook: [Kitty's Launderette](https://www.facebook.com/kittyslaunderette/)
+
+Address: 77 Grasmere Street, Anfield, Liverpool, L5 6RH
+
+Email: [community@kittyslaunderette.org.uk](mailto:community@kittyslaunderette.org.uk)
