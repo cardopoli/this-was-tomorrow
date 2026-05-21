@@ -16,6 +16,3 @@ title = "This Was Tomorrow"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[markup.goldmark.renderer]
-  unsafe = true
