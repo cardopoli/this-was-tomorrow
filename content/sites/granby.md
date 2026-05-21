@@ -29,7 +29,9 @@ body_intro: |-
 
   But residents had never stopped. For over two decades before any formal organisation existed, they cleared, planted, painted, and campaigned. It started with someone getting a brush out and cleaning the street. That went on to others joining, then a small grant, then a table sale that became a market. Six stalls became 90. A residents association formed 34 years ago, then ended, then became a Community Land Trust in November 2011.
 
-  > "We formed a CLT on nothing but imagination. It was both common sense and utterly radical." - _Hazel Tilley, co-founder, Cairns Street resident for over 30 years._
+  > "We formed a CLT on nothing but imagination. It was both common sense and utterly radical." 
+
+  _- Hazel Tilley, co-founder, Cairns Street resident for over 30 years._
 dropbox_gallery: ''
 body_middle: |-
   ## Power
