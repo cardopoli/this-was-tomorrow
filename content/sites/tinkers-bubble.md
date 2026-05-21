@@ -9,14 +9,19 @@ photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
+dropbox_audio: ''
 body_intro: |-
-  <iframe src="https://archive.org/embed/twt-090426-tinkers-bubble-ree-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
-  <iframe src="https://archive.org/embed/twt-070426-tinkers-bubble-cam-meg-interview&amp;playlist=1" width="100%" height="75" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
-
   ## The place and its origins
 
   Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
+
+  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+
+    <p class="audio-track-name" style="font-size:12px;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Kam + Meg, Residents</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/9dbxxfs4g7zb50zv5rpen/TWT-070426-Tinkers-Bubble-Cam-Meg-Interview_128kbps.mp3?rlkey=37pjnnibqff4o63zqtt5druq2&raw=1"></audio>
+
+  </div>
 
   The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=7n34w64swc6wlfeszf1b4550u&dl=0
@@ -24,6 +29,14 @@ body_middle: |-
   ## How it works
 
   Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
+
+  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+
+    <p class="audio-track-name" style="font-size:12px;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Ree, Resident</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/9w1d79eu1xan8zgaf4gsn/TWT-090426-Tinkers-Bubble-Ree-Interview_128kbps.mp3?rlkey=ruyfe69bimokn173a1gvsd831&raw=1"></audio>
+
+  </div>
 
   The community has two cows, which they milk, and chickens, and they grow their own food, and manage around 28 acres of woodland, creating their own fuel. They make money from timber, as well as producing apple juice and cider. This mostly covers the monthly overheads of around £120 for each person. Tinkers Bubble earns a small income by selling organically grown produce at local farmers' markets and selling sustainably produced timber which is felled by hand, logged by horse and sawn by a wood-fired steam-engine driven sawmill.
 
