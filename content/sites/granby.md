@@ -69,7 +69,7 @@ dropbox_gallery_2: https://www.dropbox.com/scl/fo/y80rgw0xrwszmp4t7kzre/AEjqsXv-
 body_after: |-
   ## The Winter Garden
 
-  The Winter Garden on Ducie Street began as something else entirely. The original plan was ambitious: take two derelict houses, glass-roof the front sections, join them, create a covered communal space. Costed up. Too expensive. Shelved.
+  The Winter Garden on Cairns Street began as something else entirely. The original plan was ambitious: take two derelict houses, glass-roof the front sections, join them, create a covered communal space. Costed up. Too expensive. Shelved.
 
   Then an architect visiting two other derelict houses stepped through the door and fell through the floor into the cellar. The building was covered in pigeon droppings, had a tree growing up the middle and no floors left. It was in such bad condition that residential use was impossible. On a return visit, on a sunny day, someone remembered the glass roof idea. No idea is wasted. It just might not be the right idea at the right time for the right thing.
 
@@ -77,8 +77,24 @@ body_after: |-
 
   > "Architecture is the poetry of space. That's the Winter Garden. It's not what's on the outside - when you go in it becomes a magical space."
 
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The back alley gardens</p>
+
   The back alley behind the houses was cleared and planted at the same time. Another thing nobody had planned. Another dream that materialised sideways.
-dropbox_gallery_3: https://www.dropbox.com/scl/fo/6c1l89yn7quy4tpqe5q56/AL7nWH7vW_qYvdd8iyr8FiM?rlkey=w5i7gj0kslghe9c0czy1982d7&dl=0
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/oxwl1vj7kvyymw0fy01cq/AG0CbTWPQIFhpNdV9bGEnV0?rlkey=qltecb4iqwlav9iu24dxzszst&dl=0
 audio: []
 sources: []
 slug: granby
@@ -107,22 +123,6 @@ On housing and what it makes possible: "If you've got somewhere to live and you 
 </div>
 
 On the question of whether this was the future anyone dreamed of: "I never dreamt of a future. What we wanted was quite simple - we didn't want to move from our homes. We didn't want to see a multiracial place that is welcoming and accepting destroyed. That's it. And there was a recognition that if we don't do something, we're finished. Nobody else is going to."
-
-<div data-lb-group="1">
-
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
-
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-</div>
-
-</div>
-
-<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The back alley gardens</p>
 
 On how change happens: "Work collectively. Collective working can start with you and one person, because that's two people, and that person will know someone else. Recognise yourself and claim the bit of space that is around you. If your destination is always the stars, but you're only on top of the stepladder - that's not terrible. At least you got there."
 
