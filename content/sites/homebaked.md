@@ -1,47 +1,59 @@
 ---
 title: Homebaked Community Land Trust
 location: Liverpool
-status: scheduled
+status: visited
 visit_date: ''
 draft: false
 description: ''
 photos: []
+image: ''
 dropbox_audio: ''
-body_intro: ''
+body_intro: |-
+  Mitchell's Bakery has stood on Oakfield Road, Anfield since 1903. Known locally as The Pie Shop. It served pies to residents and football fans on match days for over eighty years - two families, one building, one neighbourhood.
+
+  In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned. The bakery, stripped of its customer base, closed in January 2011. It had been designated for demolition.
+
+  That is where this story begins.
 dropbox_gallery: ''
-body_middle: ''
+body_middle: |-
+  ## 2up2down
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Naomi, Homebaked CLT</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/[NAOMI-FILE]/[FILENAME].mp3?rlkey=[KEY]&raw=1"></audio>
+
+  </div>
+
+  In 2010, artist Jeanne van Heeswijk was commissioned for the Liverpool Biennial. Her project - 2up2down - used the empty bakery building as a base for people to come together, imagine, and plan for what the area could be. Her conviction was that art can create fields of interaction: relationships, debates, the conditions for people to shape their own surroundings.
+
+  In April 2012, the community formed Homebaked Community Land Trust to take on the development of the bakery building and future community assets, with a focus on affordable housing. The following June, Homebaked Bakery Co-operative was incorporated by local residents determined to reopen the bakery. The doors opened in October 2013.
+
+  The bakery now employs 16 people, turns over £500,000 a year, and runs training courses. It uses the space as a community hub. During the pandemic, it provided freshly baked bread to local foodbanks and organised free school meal deliveries. More than a pie, as the strapline says - though the pies are, by most accounts, worth the journey from anywhere in Liverpool.
+
+  ## Brick by Brick We Build Ourselves
+
+  In April 2016, Liverpool City Council purchased the bakery freehold and granted the CLT a lease, with an agreement to transfer the asset for £1 on completion of first-floor refurbishment. The CLT refurbished the ground floor bakery and the flat above - creating an affordable home for a new business and four local people.
+
+  In parallel, Homebaked CLT worked on the site adjacent to the bakery and the former recreation ground behind it. Working with URBED architects and LEDA, a participatory process ran from 2018: five community design workshops invited local residents to learn together, develop new skills, and contribute ideas. The resulting scheme included a mixture of different sized homes, community and business spaces.
+
+  The scheme was scheduled to be delivered in 2020, in partnership with Liverpool City Council and Your Housing. But setbacks came: the pandemic first, then significant issues within Liverpool City Council delayed proceedings for years. The community kept pursuing it. In 2025, Liverpool City Council decided instead to sell the properties to a traditional developer on the open market.
+
+  Homebaked CLT is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
 dropbox_gallery_2: ''
+body_after: |-
+  ## The Model
+
+  The CLT is co-owned by people who live and work in the area. The founding belief is simple: we all deserve to live well. For Homebaked CLT, that means homes and spaces that are high quality and kept affordable - not just now, but for future generations. It also means that how we work together is as important as what gets made. Local expertise is central to planning, design and development. Other expertise - architecture, finance, environmental sustainability - is invited to the table with no hierarchy between them.
+
+  ## What It Shows
+
+  Homebaked is a proof of something. That demolition is not the only answer to decline. That a building - a bakery - can hold the memory of a neighbourhood long enough for the neighbourhood to organise around it. That art, when it's serious, can be the first step toward something structural. That when communities are given the space and tools to design their own futures, what they build is more careful, more rooted, and more likely to last than what gets imposed from above.
+
+  The council sold the adjacent site to a developer in 2025. That is the condition Homebaked works in - not against a static enemy but against a system that keeps moving the goalposts. What stays constant is the neighbourhood. What stays constant is the CLT.
+dropbox_gallery_3: ''
 audio: []
 sources: []
 slug: homebaked
 ---
-
-## The Beginning: Housing Market Renewal & Loss
-
-Homebaked CLT began in 2010 as a response to crisis. In 2002, the neighbourhood around Anfield and Everton was identified as a 'market-failure' under the Housing Market Renewal Initiative (HMRI). This government-backed programme saw 1,800 residential and commercial properties demolished with 1,300 new homes intended to be built. However, the scheme was deeply unpopular with residents who felt it was undermining a once-thriving community. For home-owners, compensation was often insufficient to buy one of the new houses. The scheme was pulled in 2010, leaving the area effectively abandoned.
-
-At the heart of this story was Mitchell's Bakery – known locally as 'The Pie Shop' – serving pies to locals and football fans on match-days since 1903. By January 2011, stripped of its customer base as streets were emptied around it, the bakery closed. The building, like much of the local area, had been designated for demolition.
-
-## The Arts Project & Community Action
-
-What started as an arts initiative called '2up2down', supported by the Liverpool Biennial and artist Jeanne van Heeswijk, asked how the local community could take matters into their own hands. Core to van Heeswijk's philosophy is that art can create 'fields of interaction' that build relationships and trigger debates that can assist people to shape their surroundings. In June 2012, the community formed Homebaked Bakery Co-operative to re-open the space as a community-led business. In 2013, the Community Land Trust was formally established to take on responsibility for the bakery building and future community assets.
-
-## The Bakery Reopens
-
-In October 2013, Homebaked Bakery opened as a social enterprise dedicated to feed, employ and train the local community. Its strapline became 'more than a pie'. The bakery now employs 16 people, turns over £500,000 annually, and runs training courses. It uses the space as a community hub. Pre-COVID, 90% of the business's income came directly through trading. During the pandemic, the bakery provided freshly baked loaves and rolls to local foodbanks and organised delivery of free school meals.
-
-## The Regeneration Strategy: 'Brick by Brick and Loaf by Loaf'
-
-Through long negotiations with Liverpool City Council, the CLT secured removal of the bakery from the demolition plans. In April 2016, the council purchased the freehold and granted the CLT a lease with agreement to transfer the asset for one pound on completion of first-floor refurbishment. The CLT refurbished the ground floor bakery and the flat above.
-
-Parallel to this, Homebaked has concentrated on the potential of the site adjacent to the bakery and the former recreation ground at its rear, developing plans to refurbish the terrace of houses next to the bakery as part of longer-term aims to regenerate the local high street. Working with URBED architects and LEDA, a participatory process has been underway since 2018 – a series of five community design workshops invited local residents to contribute ideas. The Core Design Group developed plans for 26 affordable flats on the land next to the bakery. Residents helped choose windows, render colours, kitchen and bathroom fittings – creating a sense of ownership.
-
-## Community Ownership Model & Partnership
-
-The CLT is co-owned by people who live and work in the area. Their strategy is rooted in a simple belief: we all deserve to live well. For Homebaked, that means making sure homes and spaces created together are high quality and kept affordable – not just now, but for future generations. The 'how we work together' becomes just as important as what is actually made. The work is based on acknowledging local expertise as key to planning, design and development – and inviting other expertise to the table (architecture, finance, environmental sustainability) with no hierarchy of expertise.
-
-Homebaked has partnered with Your Housing for the actual build and will buy it back on completion; at that moment, the freehold of the land will be passed into community ownership for the CLT to hold and protect for future generations.
-
-## Why This Matters
-
-Homebaked demonstrates regeneration led not by developers or top-down council planning, but by residents who understand their own neighbourhood – its history, its gaps, its potential. It uses cultural practice (art, food, community gathering) as the entry point to economic and social transformation. It shows that a building – a bakery – can become the anchor for an entire area's reimagining. Most crucially, it proves that when communities are given the space and tools to design their own futures, they produce something more careful, more rooted, and more likely to last than schemes imposed from above.
