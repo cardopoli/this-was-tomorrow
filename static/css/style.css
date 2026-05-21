@@ -840,8 +840,8 @@ article li {
 }
 
 .about-page p {
-  margin-bottom: 20px;
-  line-height: 1.7;
+  margin-bottom: 28px;
+  line-height: 1.8;
 }
 
 .about-page ul {
@@ -925,10 +925,10 @@ li:not(.status-visited) .location {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 12px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 13px;
+  font-family: var(--sans);
+  font-size: 15px;
 }
 
 .map-site-list li:first-child {
@@ -946,7 +946,8 @@ li:not(.status-visited) .location {
 
 .map-location {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
+  font-family: var(--sans);
 }
 
 /* ============================================================
