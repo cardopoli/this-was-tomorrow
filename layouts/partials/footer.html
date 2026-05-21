@@ -2,6 +2,10 @@
     <div class="footer-project">
         <p>{{ with .Site.Params.footer_project }}{{ . }} {{ end }}<a href="/about/">About this project →</a></p>
     </div>
+    <nav class="footer-nav">
+        <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
+        <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
+    </nav>
     <div class="footer-contact">
         <p class="footer-contact-averia">For info and contact: <a href="mailto:{{ .Site.Params.email | default "info@enricopolicardo.com" }}">{{ .Site.Params.email | default "info@enricopolicardo.com" }}</a> &nbsp;·&nbsp; <a href="https://enricopolicardo.com" target="_blank" rel="noopener">enricopolicardo.com</a></p>
     </div>
