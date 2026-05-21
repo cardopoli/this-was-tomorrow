@@ -49,8 +49,6 @@ dropbox_gallery_2: https://www.dropbox.com/scl/fo/b2b2yh44uiuvqgcc5jtjh/AG9gmYX3
 body_after: |-
   ## What It Is
 
-  Bryn grew up in the area. His family never had a washing machine. He remembers launderettes from childhood the way people remember corner shops - as places where things happened, where people talked, where the ordinary friction of daily life produced something social. He went to Kitty's opening event and kept coming back. He left university because of mental health difficulties. He applied through the government's Kickstart scheme. He now coordinates events and leads on the finances.
-
   <div class="audio-track" data-twt-bg="#27F5B0" data-twt-fg="#000000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
     <p class="audio-track-name" style="font-size:10px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">AMBIENT #02</p>
@@ -58,8 +56,6 @@ body_after: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/gb3bvzxyw5p7bhresf4c0/00-19052026_Kittys-Anfield-Liverpool_TWT-AUDIO-19052026-ambient-01-KIttys-Anfield-Liverpool-TWT-AUDIO_128kpbs.mp3?rlkey=ubx48osgrslktp9lx2y0lhezc&raw=1"></audio>
 
   </div>
-
-  "Kitty's isn't a charity. It's about self-help, self-organising, self-respect. We should be investing in the local economy. We should re-occupy the high streets. There is as much ambition here in Liverpool as there is in Wall Street."
 
   In 2025, Kitty's launched a crowdfunder to buy an electric delivery van and install solar panels - to reach more of the city and cut costs further. The expansion is an extension of the founding logic: local money stays local, young people are trusted to build their own economy, basic infrastructure is not a luxury.
 
@@ -78,10 +74,20 @@ sources: []
 slug: kittys
 ---
 
-### Links
+### Further reading
 
-Website: [kittyslaunderette.org.uk](https://www.kittyslaunderette.org.uk)
+[kittyslaunderette.org.uk](https://www.kittyslaunderette.org.uk) - Kitty's Launderette website
+
+[Power to Change case study](https://www.powertochange.org.uk/evidence-and-ideas/case-studies/kittys-laundrette/) - funded the original project
+
+[Social Enterprise UK](https://www.socialenterprise.org.uk/member-updates/ground-breaking-kittys-launderette-plans-expansion-with-new-community-crowdfunder/) - Community-Based Social Enterprise Award 2023 and expansion crowdfunder
+
+[Stir to Action](https://www.stirtoaction.com/articles/kittys-launderette) - profile and replication discussion
+
+[Miele case study](https://www.miele.co.uk/p/kittys-launderette-4395.htm) - on the founding and model
+
 Instagram: [@kittyslaundry](https://www.instagram.com/kittyslaundry/)
+
 Facebook: [Kitty's Launderette](https://www.facebook.com/kittyslaunderette/)
+
 Address: 77 Grasmere Street, Anfield, Liverpool, L5 6RH
-Email: [community@kittyslaunderette.org.uk](mailto:community@kittyslaunderette.org.uk)
