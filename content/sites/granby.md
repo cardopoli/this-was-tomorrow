@@ -40,6 +40,10 @@ body_middle: |-
 
   Granby Workshop was set up alongside the Turner Prize nomination: a ceramics studio on Cairns Street making bespoke objects - fireplaces, tiles, household goods - from salvaged materials. The same objects that furnish the renovated houses. Made from rubble and sold to fund the work.
 
+  <img src="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1" alt="" style="width:100%">
+
+  <img src="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1" alt="" style="width:100%">
+
   Five of the ten renovated houses were sold at affordable prices, five retained for social rent. Each sale protected by an anti-gentrification clause: priority always to Liverpool locals and first-time buyers with a connection to the area. Four derelict shops on the corner of Granby and Cairns Street also passed into CLT ownership.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/gdrqph75yilitdj6wtqxo/APnJr_XwuDBOSYjqlBQt6tE?rlkey=01gzbvpdh6y6cl3dnm3yzvts4&dl=0
 body_after: |-
@@ -66,7 +70,15 @@ The Granby Street Market has run since around 2007 - international poets and mus
 
 > "We're not tolerant, we're welcoming. Who wants to be tolerated? It means I'll just about put up with you."
 
-<img src="https://www.dropbox.com/scl/fi/r3zyinnzrgbschf8ee55l/R0043774-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=5r9iswm623safhrarex3zjrxf&raw=1" alt="" style="width:100%">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+  <div><a href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1','','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  <div><a href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1','','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+</div>
+
+<script>if(!window._lbReady){window._lbReady=1;document.addEventListener("keydown",function(e){if(e.key==="Escape"){var o=document.getElementById("lb-overlay");if(o)o.classList.remove("open");document.body.style.overflow="";}}); }</script>
 
 Liverpool is a port city - the oldest Chinese community in Europe, Commonwealth immigration since before the war, a population that has always been mixed. The institutional racism that drove the 1981 riots was not the racism of individuals on the street. These are different things and the distinction matters here.
 
@@ -76,9 +88,7 @@ On the question of whether this was the future anyone dreamed of: "I never dream
 
 On how change happens: "Work collectively. Collective working can start with you and one person, because that's two people, and that person will know someone else. Recognise yourself and claim the bit of space that is around you. If your destination is always the stars, but you're only on top of the stepladder - that's not terrible. At least you got there."
 
-<img src="https://www.dropbox.com/scl/fi/6b871t527ozdibeoe7n0r/R0043802-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fzbdefk7kpwy9swe273aodnju&raw=1" alt="" style="width:100%">
-
-https://www.dropbox.com/scl/fi/6b871t527ozdibeoe7n0r/R0043802-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fzbdefk7kpwy9swe273aodnju&raw=1
+<img src="https://www.dropbox.com/scl/fi/r3zyinnzrgbschf8ee55l/R0043774-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=5r9iswm623safhrarex3zjrxf&raw=1" alt="" style="width:100%">
 
 ### Photography locations
 
