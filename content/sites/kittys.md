@@ -17,7 +17,7 @@ body_intro: |-
 
   Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
 
-  <div class="audio-track" data-twt-bg="#f7f5f0" data-twt-fg="#111111" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+  <div class="audio-track" data-twt-bg="#f7f5f0" data-twt-fg="#27F5B0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
     <p class="audio-track-name" style="font-size:10px;color:#111111;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Kitty's Launderette Ambient</p>
 
