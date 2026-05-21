@@ -23,7 +23,9 @@ body_intro: |-
 
   </div>
 
-  </div>Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
+  </div>
+
+  Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
 
   But residents had never stopped. For over two decades before any formal organisation existed, they cleared, planted, painted, and campaigned. It started with someone getting a brush out and cleaning the street. That went on to others joining, then a small grant, then a table sale that became a market. Six stalls became 90. A residents association formed 34 years ago, then ended, then became a Community Land Trust in November 2011.
 
