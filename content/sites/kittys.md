@@ -59,7 +59,7 @@ body_after: |-
 
   <div class="audio-track" data-twt-bg="#F54927" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
-    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Antho y, Lead of community engagement at Kitty's</p>
+    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Anthony, Lead of community engagement at Kitty's</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/q6yz8f95lman8loj4fpmi/19052026_Anthony_KIttys-Anfield-Liverpool_TWT-AUDIO_128kbps.mp3?rlkey=quky9fj99585c7s00dw2oiqn6&raw=1"></audio>
 
