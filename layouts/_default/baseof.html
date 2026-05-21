@@ -52,9 +52,10 @@
     <!-- STYLESHEET (includes @font-face declarations) -->
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
-    <!-- Gallery JS: loaded in <head> so window._twt exists
-         before inline gallery scripts run in the page body -->
+    <!-- JS: loaded in <head> so window._twt exists
+         before inline scripts run in the page body -->
     <script src="{{ "JS/gallery.js" | relURL }}"></script>
+    <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </head>
 <body>
     <div class="wrap">
@@ -64,7 +65,5 @@
     </div>
     <!-- Global lightbox DOM - shared by all gallery instances -->
     {{ partial "lightbox.html" . }}
-    <!-- UI enhancements: dark mode, smooth scroll, static image fade -->
-    <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
 </body>
 </html>
