@@ -13,14 +13,22 @@ dropbox_audio: ''
 body_intro: |-
   Granby is a neighbourhood in Toxteth, Liverpool 8 - four Victorian terraces built in the 1870s for artisan workers, connected by Granby Street. Beaconsfield, Cairns, Jermyn and Ducie Streets. One of the oldest multicultural neighbourhoods in the country. After World War Two, Toxteth became a Commonwealth immigration hub: the streets had a wet fish shop, a supermarket, a launderette, a bakery, a haberdashers, cafes, the first Tesco in Liverpool. Thriving.
 
-  <img src="https://www.dropbox.com/scl/fi/ww93h1d2de3hy1i6al6q1/DSC_0815-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=wxsoj4zf77bn4fu6yj01zzr6z&raw=1" alt="" style="width:100%">
+  <div data-lb-group="1">
 
-  Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
 
   But residents had never stopped. For over two decades before any formal organisation existed, they cleared, planted, painted, and campaigned. It started with someone getting a brush out and cleaning the street. That went on to others joining, then a small grant, then a table sale that became a market. Six stalls became 90. A residents association formed 34 years ago, then ended, then became a Community Land Trust in November 2011.
 
   > "We formed a CLT on nothing but imagination. It was both common sense and utterly radical." - _Hazel Tilley, co-founder, Cairns Street resident for over 30 years._
-dropbox_gallery: https://www.dropbox.com/scl/fo/66lxso1pji0qvt2uynig2/AGig2nl832Vp22K1MzkYTOA?rlkey=hq4qfx574pzh88ybqeopfu1k9&dl=0
+dropbox_gallery: ''
 body_middle: |-
   ## Power
 
@@ -53,7 +61,7 @@ body_middle: |-
   </div>
 
   Five of the ten renovated houses were sold at affordable prices, five retained for social rent. Each sale protected by an anti-gentrification clause: priority always to Liverpool locals and first-time buyers with a connection to the area. Four derelict shops on the corner of Granby and Cairns Street also passed into CLT ownership.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/gdrqph75yilitdj6wtqxo/APnJr_XwuDBOSYjqlBQt6tE?rlkey=01gzbvpdh6y6cl3dnm3yzvts4&dl=0
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/y80rgw0xrwszmp4t7kzre/AEjqsXv-pGV4-ffC1--EpbA?rlkey=ly93yumuht8tjpoa0ijnyu46l&dl=0
 body_after: |-
   ## The Winter Garden
 
@@ -78,21 +86,21 @@ The Granby Street Market has run since around 2007 - international poets and mus
 
 > "We're not tolerant, we're welcoming. Who wants to be tolerated? It means I'll just about put up with you."
 
+Liverpool is a port city - the oldest Chinese community in Europe, Commonwealth immigration since before the war, a population that has always been mixed. The institutional racism that drove the 1981 riots was not the racism of individuals on the street. These are different things and the distinction matters here.
+
+On housing and what it makes possible: "If you've got somewhere to live and you feel secure and safe and you can afford to live there, then a lot of issues have disappeared straight away."
+
 <div data-lb-group="1">
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
 
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-</div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
 
 </div>
 
-Liverpool is a port city - the oldest Chinese community in Europe, Commonwealth immigration since before the war, a population that has always been mixed. The institutional racism that drove the 1981 riots was not the racism of individuals on the street. These are different things and the distinction matters here.
-
-On housing and what it makes possible: "If you've got somewhere to live and you feel secure and safe and you can afford to live there, then a lot of issues have disappeared straight away."
+</div>
 
 On the question of whether this was the future anyone dreamed of: "I never dreamt of a future. What we wanted was quite simple - we didn't want to move from our homes. We didn't want to see a multiracial place that is welcoming and accepting destroyed. That's it. And there was a recognition that if we don't do something, we're finished. Nobody else is going to."
 
