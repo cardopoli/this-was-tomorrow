@@ -91,9 +91,3 @@ The photographs document a place that poses a quiet question: not "what if?" but
 - [The Land Is Ours: Planning Precedents - Tinker's Bubble](https://tlio.org.uk/chapter7/chapter-7-planning-precedents/)
 - [Diggers and Dreamers: Tinkers Bubble](https://diggersanddreamers.org.uk/community/tinkers-bubble)
 - [Landworkers Alliance: Celebrating 31 Years of Tinkers Bubble](https://landworkersalliance.org.uk/celebrating-31-years-of-tinkers-bubble/)
-
-
-<script>
-console.log('_twt exists:', typeof window._twt);
-console.log('buildAudioPlaylist exists:', typeof window._twt.buildAudioPlaylist);
-</script>
