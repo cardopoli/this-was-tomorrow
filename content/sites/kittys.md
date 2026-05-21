@@ -57,7 +57,7 @@ body_after: |-
 
   The washhouse movement Kitty Wilkinson started in 1842 lasted over a century before it was dismantled. What Kitty's Launderette is trying to work out is what it looks like now - not as nostalgia, but as urgent contemporary answer to the same persistent problem.
 
-  <div class="audio-track" data-twt-bg="#F54927" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+  <div class="audio-track" data-twt-bg="#27F5B0" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
     <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Anthony, Lead of community engagement at Kitty's</p>
 
