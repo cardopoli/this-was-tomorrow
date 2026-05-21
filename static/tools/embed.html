@@ -808,7 +808,7 @@ function doAudPlaylist(folderUrl) {
   else if(scheme==='custom'){ bg=val('aud-bg')||'#111111'; fg=val('aud-fg')||'#f7f5f0'; }
 
   var pad = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
-  var btnSize = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
+  var btnSize  = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
   var timeSize = size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
   var titleSize = size==='compact' ? '9px' : size==='large' ? '12px' : '10px';
   var borderStyle = '';
@@ -816,45 +816,26 @@ function doAudPlaylist(folderUrl) {
   else if(border==='box') borderStyle = 'border:1px solid '+fg+';';
 
   var uid = 'aud-pl-' + Math.random().toString(36).slice(2,7);
-  var dataAttrs = ' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad
-    +'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize
-    +'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
+  var dataAttrs = ' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad+'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize+'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
+  var safeUrl = folderUrl.replace(/'/g, "\'");
 
-  var embed = '';
-  if(title && showTitle){
-    embed += '<p class="audio-track-name" style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>
-';
-  }
-  embed += '<div class="twt-playlist" id="'+uid+'"'+dataAttrs+' style="'+borderStyle+'">
-';
-  embed += '  <p class="audio-loading" style="font-family:monospace;font-size:11px;padding:16px;color:'+fg+';background:'+bg+'">Loading playlist...</p>
-';
-  embed += '</div>
-';
-  embed += '<script>(function(){
-';
-  embed += '  function run(){
-';
-  embed += "    window._twt.buildAudioPlaylist('https://dropbox-proxy.cardopoli.workers.dev','"+folderUrl.replace(/'/g,"\'")+"','"+uid+"');
-";
-  embed += '  }
-';
-  embed += '  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}
-';
-  embed += '})();<\/script>';
+  var parts = [];
+  if(title && showTitle) parts.push('<p class="audio-track-name" style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>');
+  parts.push('<div class="twt-playlist" id="'+uid+'"'+dataAttrs+' style="'+borderStyle+'"><p style="font-family:monospace;font-size:11px;padding:'+pad+';color:'+fg+';background:'+bg+'">Loading playlist…</p></div>');
+  parts.push('<scr'+'ipt>(function(){function run(){window._twt.buildAudioPlaylist(\'https://dropbox-proxy.cardopoli.workers.dev\',\''+safeUrl+'\',\''+uid+'\');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</s'+'cript>');
 
+  var embed = parts.join('\n');
   set('aud-out', embed);
   set('aud-raw', folderUrl);
   show('aud-outs');
 
-  // Preview - static mock
   var pb = document.getElementById('aud-preview-block');
   pb.innerHTML = '';
   var mock = '<div style="background:'+bg+';padding:'+pad+';'+borderStyle+'">';
   mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.7;margin-bottom:12px">Playlist — tracks load from Dropbox folder on live site</div>';
   ['Track 01', 'Track 02', 'Track 03'].forEach(function(t, i){
     mock += '<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-top:'+(i===0?'none':'1px solid rgba(128,128,128,0.2)')+'">';
-    mock += '<div style="color:'+fg+';font-size:'+btnSize+'">▶</div>';
+    mock += '<div style="color:'+fg+';font-size:'+btnSize+'">&#9654;</div>';
     mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.8">'+t+'</div>';
     mock += '</div>';
   });
