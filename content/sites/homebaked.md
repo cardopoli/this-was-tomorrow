@@ -5,8 +5,10 @@ status: visited
 visit_date: ''
 draft: false
 description: ''
-photos: []
-image: ''
+photos:
+  - image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
+    caption: ''
+image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
 dropbox_audio: ''
 body_intro: |-
   Mitchell's Bakery has stood on Oakfield Road, Anfield since 1903. Known locally as The Pie Shop. It served pies to residents and football fans on match days for over eighty years - two families, one building, one neighbourhood.
@@ -18,19 +20,19 @@ dropbox_gallery: ''
 body_middle: |-
   ## 2up2down
 
-  <div class="audio-track">
-
-    <p class="audio-track-name">Naomi, Homebaked CLT</p>
-
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/[NAOMI-FILE]/[FILENAME].mp3?rlkey=[KEY]&raw=1"></audio>
-
-  </div>
-
   In 2010, artist Jeanne van Heeswijk was commissioned for the Liverpool Biennial. Her project - 2up2down - used the empty bakery building as a base for people to come together, imagine, and plan for what the area could be. Her conviction was that art can create fields of interaction: relationships, debates, the conditions for people to shape their own surroundings.
 
   In April 2012, the community formed Homebaked Community Land Trust to take on the development of the bakery building and future community assets, with a focus on affordable housing. The following June, Homebaked Bakery Co-operative was incorporated by local residents determined to reopen the bakery. The doors opened in October 2013.
 
   The bakery now employs 16 people, turns over £500,000 a year, and runs training courses. It uses the space as a community hub. During the pandemic, it provided freshly baked bread to local foodbanks and organised free school meal deliveries. More than a pie, as the strapline says - though the pies are, by most accounts, worth the journey from anywhere in Liverpool.
+
+  <div class="audio-track">
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/00-19052026_Homebaked-Anfield-Liverpool_TWT-AUDIO-19052026-NAOMI-Homebaked-Anfield-Liverpool-TWT-AUDIO.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
+
+    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Homebaked Community Land Trust</p>
+
+  </div>
 
   ## Brick by Brick We Build Ourselves
 
