@@ -17,11 +17,11 @@ body_intro: |-
 
   Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
 
-  <div class="audio-track" data-twt-bg="#f7f5f0" data-twt-fg="#27F5B0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+  <div class="audio-track" data-twt-bg="#27F5B0" data-twt-fg="#000000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name" style="font-size:10px;color:#111111;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Kitty's Launderette Ambient</p>
+    <p class="audio-track-name" style="font-size:10px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">AMBIENT #01</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/gb3bvzxyw5p7bhresf4c0/00-19052026_Kittys-Anfield-Liverpool_TWT-AUDIO-19052026-ambient-01-KIttys-Anfield-Liverpool-TWT-AUDIO_128kpbs.mp3?rlkey=ubx48osgrslktp9lx2y0lhezc&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/r0gm3h86bblvpgdn5pjvd/00-19052026_Kittys-Anfield-Liverpool_TWT-AUDIO-19052026-ambient-02-KIttys-Anfield-Liverpool-TWT-AUDIO_128kpbs.mp3?rlkey=xv22wiia34w7mcrihy9f61wdt&raw=1"></audio>
 
   </div>
 
