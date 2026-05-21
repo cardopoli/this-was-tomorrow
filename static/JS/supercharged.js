@@ -191,7 +191,7 @@
     return wrap;
   }
 
-  function initPlayers() {
+  window._twtInitPlayers = function initPlayers() {
     document.querySelectorAll('.audio-track audio').forEach(function (audio) {
       if (audio.dataset.playerBuilt) return;
       audio.dataset.playerBuilt = '1';
@@ -202,8 +202,86 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPlayers);
+    document.addEventListener('DOMContentLoaded', window._twtInitPlayers);
   } else {
-    initPlayers();
+    window._twtInitPlayers();
   }
+})();
+
+
+// ============================================================================
+// AUDIO PLAYLIST
+// Fetches a Dropbox folder via the proxy, filters audio files, renders
+// a track list using the same TWT custom player for each track.
+// Called by embed code generated in the embed tool's Audio tab (folder mode).
+// ============================================================================
+
+(function() {
+  window._twt = window._twt || {};
+
+  window._twt.buildAudioPlaylist = function(proxy, folderUrl, containerId) {
+    var container = document.getElementById(containerId);
+    if(!container) return;
+
+    var bg  = container.dataset.twtBg  || '#111111';
+    var fg  = container.dataset.twtFg  || '#f7f5f0';
+    var pad = container.dataset.twtPad || '14px 18px';
+    var btnSize  = container.dataset.twtBtnSize  || '14px';
+    var timeSize = container.dataset.twtTimeSize || '11px';
+    var showTimer = container.dataset.twtShowTimer !== '0';
+
+    var apiUrl = proxy + '?folder=' + encodeURIComponent(folderUrl) + '&list=1';
+
+    fetch(apiUrl)
+      .then(function(r){ return r.json(); })
+      .then(function(data) {
+        var files = (data.entries || data.files || []).filter(function(f){
+          return /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name || f.path_lower || '');
+        });
+
+        if(!files.length){
+          container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+'">No audio files found in folder.</p>';
+          return;
+        }
+
+        container.innerHTML = '';
+        container.style.background = bg;
+
+        files.forEach(function(file, idx) {
+          var name = (file.name || '').replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+          var src  = proxy + '?file=' + encodeURIComponent(file.path_lower || file.name);
+
+          var track = document.createElement('div');
+          track.className = 'audio-track';
+          track.dataset.twtBg = bg;
+          track.dataset.twtFg = fg;
+          track.dataset.twtPad = '10px ' + (parseInt(pad)||14) + 'px';
+          track.dataset.twtBtnSize = btnSize;
+          track.dataset.twtTimeSize = timeSize;
+          track.dataset.twtShowTimer = showTimer ? '1' : '0';
+          track.style.borderTop = idx > 0 ? '1px solid rgba(128,128,128,0.15)' : 'none';
+
+          var label = document.createElement('p');
+          label.className = 'audio-track-name';
+          label.textContent = name;
+          label.style.cssText = 'font-size:'+timeSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1px;margin-bottom:6px';
+
+          var audio = document.createElement('audio');
+          audio.preload = 'none';
+          audio.src = src;
+          audio.style.display = 'none';
+
+          track.appendChild(label);
+          track.appendChild(audio);
+          container.appendChild(track);
+        });
+
+        // Trigger the existing custom player builder on the new tracks
+        if(window._twtInitPlayers) window._twtInitPlayers();
+      })
+      .catch(function(e){
+        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+'">Could not load playlist. Check the folder is shared publicly.</p>';
+        console.error('TWT playlist error:', e);
+      });
+  };
 })();
