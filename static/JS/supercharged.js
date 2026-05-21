@@ -219,70 +219,253 @@
 (function() {
   window._twt = window._twt || {};
 
-  window._twt.buildAudioPlaylist = function(proxy, folderUrl, containerId) {
+  window._twt.buildAudioPlaylist = function(proxyUrl, sharedLink, containerId) {
     var container = document.getElementById(containerId);
-    if(!container) return;
+    if (!container || !sharedLink) return;
 
-    var bg  = container.dataset.twtBg  || '#111111';
-    var fg  = container.dataset.twtFg  || '#f7f5f0';
-    var pad = container.dataset.twtPad || '14px 18px';
+    var bg       = container.dataset.twtBg       || '#111111';
+    var fg       = container.dataset.twtFg       || '#f7f5f0';
+    var pad      = container.dataset.twtPad      || '14px 18px';
     var btnSize  = container.dataset.twtBtnSize  || '14px';
     var timeSize = container.dataset.twtTimeSize || '11px';
     var showTimer = container.dataset.twtShowTimer !== '0';
 
-    var apiUrl = proxy + '?folder=' + encodeURIComponent(folderUrl) + '&list=1';
+    function proxyFetch(endpoint, body) {
+      return fetch(proxyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ endpoint: endpoint, body: body })
+      }).then(function(r) {
+        if (!r.ok) throw new Error('Proxy ' + r.status);
+        return r.json();
+      });
+    }
 
-    fetch(apiUrl)
-      .then(function(r){ return r.json(); })
-      .then(function(data) {
-        var files = (data.entries || data.files || []).filter(function(f){
-          return /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name || f.path_lower || '');
+    function formatTime(s) {
+      if (!s || isNaN(s)) return '0:00';
+      var m = Math.floor(s / 60);
+      var sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    proxyFetch('files/list_folder', {
+      path: '', shared_link: { url: sharedLink }, recursive: false
+    })
+    .then(function(data) {
+      if (data.error) {
+        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">Could not load playlist.</p>';
+        return;
+      }
+
+      var files = (data.entries || []).filter(function(f) {
+        return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
+      });
+
+      if (!files.length) {
+        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">No audio files found.</p>';
+        return;
+      }
+
+      return Promise.all(
+        files.map(function(f) {
+          return proxyFetch('files/get_temporary_link', { path: f.path_lower })
+            .then(function(d) { return d.link || null; });
+        })
+      ).then(function(links) {
+        // Build track data
+        var tracks = [];
+        files.forEach(function(f, i) {
+          if (!links[i]) return;
+          tracks.push({
+            name: f.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+            src: links[i]
+          });
         });
 
-        if(!files.length){
-          container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+'">No audio files found in folder.</p>';
-          return;
+        if (!tracks.length) return;
+
+        // Build UI
+        container.style.background = bg;
+        container.style.color = fg;
+        container.innerHTML = '';
+
+        // Hidden audio element - one for the whole playlist
+        var audio = document.createElement('audio');
+        audio.preload = 'none';
+        audio.src = tracks[0].src;
+        audio.style.display = 'none';
+        container.appendChild(audio);
+
+        // Now playing label
+        var nowPlaying = document.createElement('div');
+        nowPlaying.className = 'twt-playlist-now';
+        nowPlaying.style.color = fg;
+        nowPlaying.textContent = tracks[0].name;
+        container.appendChild(nowPlaying);
+
+        // Player bar
+        var playerBar = document.createElement('div');
+        playerBar.className = 'twt-playlist-player';
+
+        var btn = document.createElement('button');
+        btn.className = 'twt-player-btn';
+        btn.innerHTML = '<span class="twt-play-icon" style="color:'+fg+';font-size:'+btnSize+'">&#9654;</span>';
+
+        var progress = document.createElement('div');
+        progress.className = 'twt-player-progress';
+        var bar = document.createElement('div');
+        bar.className = 'twt-player-bar';
+        var fill = document.createElement('div');
+        fill.className = 'twt-player-fill';
+        fill.style.background = fg;
+        var handle = document.createElement('div');
+        handle.className = 'twt-player-handle';
+        handle.style.background = fg;
+        bar.appendChild(fill); bar.appendChild(handle);
+        progress.appendChild(bar);
+
+        var time = document.createElement('div');
+        time.className = 'twt-player-time';
+        time.style.fontSize = timeSize;
+        time.style.color = 'rgba(247,245,240,0.6)';
+        time.textContent = '0:00 / 0:00';
+        if (!showTimer) time.style.display = 'none';
+
+        playerBar.appendChild(btn);
+        playerBar.appendChild(progress);
+        playerBar.appendChild(time);
+        container.appendChild(playerBar);
+
+        // Track list
+        var list = document.createElement('ul');
+        list.className = 'twt-playlist-list';
+
+        var currentIdx = 0;
+        var playing = false;
+
+        function loadTrack(idx) {
+          currentIdx = idx;
+          audio.src = tracks[idx].src;
+          nowPlaying.textContent = tracks[idx].name;
+          fill.style.width = '0%';
+          handle.style.left = '0%';
+          time.textContent = '0:00 / 0:00';
+          list.querySelectorAll('.twt-playlist-item').forEach(function(item, i) {
+            item.classList.toggle('active', i === idx);
+            var playIcon = item.querySelector('.twt-playlist-item-play');
+            if (playIcon) playIcon.textContent = i === idx ? '&#9654;' : '';
+          });
         }
 
-        container.innerHTML = '';
-        container.style.background = bg;
+        function playPause() {
+          if (playing) {
+            audio.pause();
+          } else {
+            audio.play();
+          }
+        }
 
-        files.forEach(function(file, idx) {
-          var name = (file.name || '').replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
-          var src  = proxy + '?file=' + encodeURIComponent(file.path_lower || file.name);
-
-          var track = document.createElement('div');
-          track.className = 'audio-track';
-          track.dataset.twtBg = bg;
-          track.dataset.twtFg = fg;
-          track.dataset.twtPad = '10px ' + (parseInt(pad)||14) + 'px';
-          track.dataset.twtBtnSize = btnSize;
-          track.dataset.twtTimeSize = timeSize;
-          track.dataset.twtShowTimer = showTimer ? '1' : '0';
-          track.style.borderTop = idx > 0 ? '1px solid rgba(128,128,128,0.15)' : 'none';
-
-          var label = document.createElement('p');
-          label.className = 'audio-track-name';
-          label.textContent = name;
-          label.style.cssText = 'font-size:'+timeSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1px;margin-bottom:6px';
-
-          var audio = document.createElement('audio');
-          audio.preload = 'none';
-          audio.src = src;
-          audio.style.display = 'none';
-
-          track.appendChild(label);
-          track.appendChild(audio);
-          container.appendChild(track);
+        audio.addEventListener('play', function() {
+          playing = true;
+          btn.querySelector('.twt-play-icon').innerHTML = '&#10074;&#10074;';
+        });
+        audio.addEventListener('pause', function() {
+          playing = false;
+          btn.querySelector('.twt-play-icon').innerHTML = '&#9654;';
+        });
+        audio.addEventListener('ended', function() {
+          playing = false;
+          btn.querySelector('.twt-play-icon').innerHTML = '&#9654;';
+          fill.style.width = '0%';
+          handle.style.left = '0%';
+          // Auto-advance
+          if (currentIdx < tracks.length - 1) {
+            loadTrack(currentIdx + 1);
+            audio.play();
+          }
+        });
+        audio.addEventListener('timeupdate', function() {
+          if (!audio.duration) return;
+          var pct = (audio.currentTime / audio.duration) * 100;
+          fill.style.width = pct + '%';
+          handle.style.left = pct + '%';
+          time.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+        });
+        audio.addEventListener('loadedmetadata', function() {
+          time.textContent = '0:00 / ' + formatTime(audio.duration);
+          // Update duration in list
+          var items = list.querySelectorAll('.twt-playlist-item');
+          if (items[currentIdx]) {
+            var durEl = items[currentIdx].querySelector('.twt-playlist-item-dur');
+            if (durEl) durEl.textContent = formatTime(audio.duration);
+          }
         });
 
-        // Trigger the existing custom player builder on the new tracks
-        if(window._twtInitPlayers) window._twtInitPlayers();
-      })
-      .catch(function(e){
-        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+'">Could not load playlist. Check the folder is shared publicly.</p>';
-        console.error('TWT playlist error:', e);
+        // Scrub
+        var scrubbing = false;
+        bar.addEventListener('mousedown', function(e) {
+          scrubbing = true;
+          var rect = bar.getBoundingClientRect();
+          audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * audio.duration;
+        });
+        document.addEventListener('mousemove', function(e) {
+          if (!scrubbing) return;
+          var rect = bar.getBoundingClientRect();
+          audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * audio.duration;
+        });
+        document.addEventListener('mouseup', function() { scrubbing = false; });
+
+        btn.addEventListener('click', playPause);
+
+        tracks.forEach(function(track, i) {
+          var item = document.createElement('li');
+          item.className = 'twt-playlist-item' + (i === 0 ? ' active' : '');
+          item.style.color = fg;
+
+          var num = document.createElement('span');
+          num.className = 'twt-playlist-item-num';
+          num.textContent = (i + 1);
+
+          var playIcon = document.createElement('span');
+          playIcon.className = 'twt-playlist-item-play';
+          playIcon.innerHTML = i === 0 ? '&#9654;' : '';
+          playIcon.style.color = fg;
+
+          var name = document.createElement('span');
+          name.className = 'twt-playlist-item-name';
+          name.textContent = track.name;
+
+          var dur = document.createElement('span');
+          dur.className = 'twt-playlist-item-dur';
+          dur.style.color = fg;
+
+          item.appendChild(num);
+          item.appendChild(playIcon);
+          item.appendChild(name);
+          item.appendChild(dur);
+
+          item.addEventListener('click', function() {
+            if (i === currentIdx) {
+              playPause();
+            } else {
+              loadTrack(i);
+              audio.play();
+            }
+          });
+
+          list.appendChild(item);
+        });
+
+        container.appendChild(list);
+
+        // Preload duration of first track
+        audio.load();
       });
+    })
+    .catch(function(err) {
+      container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">Playlist unavailable.</p>';
+      console.error('TWT playlist error:', err);
+    });
   };
 })();
 
