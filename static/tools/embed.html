@@ -308,14 +308,24 @@ button.cp:hover { background: #f0ede8; }
 
   <!-- ============ AUDIO ============ -->
   <div class="panel" id="panel-aud">
-    <div class="sec">
+    <span class="sub">Source</span>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="radio" name="aud-source" value="file" checked> Single file</label>
+      <label><input type="radio" name="aud-source" value="folder"> Folder playlist — all audio files in a Dropbox folder</label>
+    </div>
+    <div class="sec" id="aud-file-row">
       <label class="fl">Dropbox audio file URL</label>
       <input type="text" id="aud-url" placeholder="https://www.dropbox.com/scl/fi/...mp3..." />
-      <div class="hint">MP3, WAV, M4A or OGG. The custom TWT player loads automatically via supercharged.js.</div>
-      <div class="err" id="aud-err">Not a valid Dropbox URL</div>
+      <div class="hint">MP3, WAV, M4A or OGG. Paste a single shared file link.</div>
     </div>
-    <div class="row">
-      <div><label class="fl">Track title</label><input type="text" id="aud-title" placeholder="Shown above player" /></div>
+    <div class="sec" id="aud-folder-row" style="display:none">
+      <label class="fl">Dropbox folder URL</label>
+      <input type="text" id="aud-folder-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="hint">Shared folder containing audio files. All MP3/WAV/M4A/OGG files will be listed as a playlist.</div>
+    </div>
+    <div class="err" id="aud-err">Not a valid Dropbox URL</div>
+    <div class="row" id="aud-meta-row">
+      <div><label class="fl">Playlist / track title</label><input type="text" id="aud-title" placeholder="Shown above player" /></div>
       <div><label class="fl">Width</label><input type="text" id="aud-w" value="100%" /></div>
     </div>
     <hr>
@@ -690,6 +700,16 @@ function doLayout() {
 
 /* ---- AUDIO ---- */
 
+// Source toggle - file vs folder
+document.querySelectorAll('input[name="aud-source"]').forEach(function(r){
+  r.addEventListener('change', function(){
+    var isFolder = r.value === 'folder';
+    document.getElementById('aud-file-row').style.display = isFolder ? 'none' : 'block';
+    document.getElementById('aud-folder-row').style.display = isFolder ? 'block' : 'none';
+    hide('aud-outs'); hide('aud-err');
+  });
+});
+
 // Show/hide custom colour inputs
 document.querySelectorAll('input[name="aud-scheme"]').forEach(function(r){
   r.addEventListener('change', function(){
@@ -699,9 +719,11 @@ document.querySelectorAll('input[name="aud-scheme"]').forEach(function(r){
 });
 
 function doAud() {
-  var url=val('aud-url');
+  var isFolder = document.querySelector('input[name="aud-source"]:checked').value === 'folder';
+  var url = isFolder ? val('aud-folder-url') : val('aud-url');
   hide('aud-err'); hide('aud-outs');
   if(!url||url.indexOf('dropbox.com')===-1){show('aud-err');return;}
+  if(isFolder){ doAudPlaylist(url); return; }
   var direct=toRaw(url);
   var title=val('aud-title');
   var w=val('aud-w')||'100%';
@@ -770,6 +792,76 @@ document.querySelectorAll('input[name="aud-size"], #aud-show-timer, #aud-show-ti
   el.addEventListener('change',function(){if(document.getElementById('aud-outs').classList.contains('on'))doAud();});
 });
 document.getElementById('aud-border').addEventListener('change',function(){if(document.getElementById('aud-outs').classList.contains('on'))doAud();});
+
+/* ---- AUDIO PLAYLIST ---- */
+function doAudPlaylist(folderUrl) {
+  var title = val('aud-title');
+  var w = val('aud-w') || '100%';
+  var scheme = document.querySelector('input[name="aud-scheme"]:checked').value;
+  var size = document.querySelector('input[name="aud-size"]:checked').value;
+  var showTimer = document.getElementById('aud-show-timer').checked;
+  var showTitle = document.getElementById('aud-show-title').checked;
+  var border = val('aud-border');
+
+  var bg = '#111111', fg = '#f7f5f0';
+  if(scheme==='light'){ bg='#f7f5f0'; fg='#111111'; }
+  else if(scheme==='custom'){ bg=val('aud-bg')||'#111111'; fg=val('aud-fg')||'#f7f5f0'; }
+
+  var pad = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
+  var btnSize = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
+  var timeSize = size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
+  var titleSize = size==='compact' ? '9px' : size==='large' ? '12px' : '10px';
+  var borderStyle = '';
+  if(border==='rule') borderStyle = 'border-top:1px solid '+fg+';';
+  else if(border==='box') borderStyle = 'border:1px solid '+fg+';';
+
+  var uid = 'aud-pl-' + Math.random().toString(36).slice(2,7);
+  var dataAttrs = ' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad
+    +'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize
+    +'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
+
+  var embed = '';
+  if(title && showTitle){
+    embed += '<p class="audio-track-name" style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>
+';
+  }
+  embed += '<div class="twt-playlist" id="'+uid+'"'+dataAttrs+' style="'+borderStyle+'">
+';
+  embed += '  <p class="audio-loading" style="font-family:monospace;font-size:11px;padding:16px;color:'+fg+';background:'+bg+'">Loading playlist...</p>
+';
+  embed += '</div>
+';
+  embed += '<script>(function(){
+';
+  embed += '  function run(){
+';
+  embed += "    window._twt.buildAudioPlaylist('https://dropbox-proxy.cardopoli.workers.dev','"+folderUrl.replace(/'/g,"\'")+"','"+uid+"');
+";
+  embed += '  }
+';
+  embed += '  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}
+';
+  embed += '})();<\/script>';
+
+  set('aud-out', embed);
+  set('aud-raw', folderUrl);
+  show('aud-outs');
+
+  // Preview - static mock
+  var pb = document.getElementById('aud-preview-block');
+  pb.innerHTML = '';
+  var mock = '<div style="background:'+bg+';padding:'+pad+';'+borderStyle+'">';
+  mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.7;margin-bottom:12px">Playlist — tracks load from Dropbox folder on live site</div>';
+  ['Track 01', 'Track 02', 'Track 03'].forEach(function(t, i){
+    mock += '<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-top:'+(i===0?'none':'1px solid rgba(128,128,128,0.2)')+'">';
+    mock += '<div style="color:'+fg+';font-size:'+btnSize+'">▶</div>';
+    mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.8">'+t+'</div>';
+    mock += '</div>';
+  });
+  mock += '</div>';
+  pb.innerHTML = mock;
+  document.getElementById('aud-prev').classList.add('on');
+}
 
 /* ---- VIDEO ---- */
 function toEmbed(url) {
