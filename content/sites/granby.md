@@ -70,15 +70,17 @@ The Granby Street Market has run since around 2007 - international poets and mus
 
 > "We're not tolerant, we're welcoming. Who wants to be tolerated? It means I'll just about put up with you."
 
+<div data-lb-group="1">
+
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-  <div><a href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1','','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
 
-  <div><a href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1','','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
 
 </div>
 
-<script>if(!window._lbReady){window._lbReady=1;document.addEventListener("keydown",function(e){if(e.key==="Escape"){var o=document.getElementById("lb-overlay");if(o)o.classList.remove("open");document.body.style.overflow="";}}); }</script>
+</div>
 
 Liverpool is a port city - the oldest Chinese community in Europe, Commonwealth immigration since before the war, a population that has always been mixed. The institutional racism that drove the 1981 riots was not the racism of individuals on the street. These are different things and the distinction matters here.
 
