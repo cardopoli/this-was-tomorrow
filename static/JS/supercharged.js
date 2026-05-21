@@ -59,14 +59,34 @@
     return m + ':' + (sec < 10 ? '0' : '') + sec;
   }
 
+  function hexToRgb(hex) {
+    hex = hex.replace('#','');
+    if(hex.length===3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+    var n = parseInt(hex,16);
+    return ((n>>16)&255)+','+(((n>>8)&255))+','+(n&255);
+  }
+
   function buildPlayer(audio) {
+    // Read customisation from parent .audio-track data attributes
+    var track = audio.closest('.audio-track') || audio.parentNode;
+    var bg = track.dataset.twtBg || '#111111';
+    var fg = track.dataset.twtFg || '#f7f5f0';
+    var pad = track.dataset.twtPad || '14px 18px';
+    var btnSize = track.dataset.twtBtnSize || '14px';
+    var timeSize = track.dataset.twtTimeSize || '11px';
+    var showTimer = track.dataset.twtShowTimer !== '0';
+
     var wrap = document.createElement('div');
     wrap.className = 'twt-player';
+    wrap.style.background = bg;
+    wrap.style.padding = pad;
 
     var btn = document.createElement('button');
     btn.className = 'twt-player-btn';
     btn.setAttribute('aria-label', 'Play');
     btn.innerHTML = '<span class="twt-play-icon">▶</span>';
+    btn.querySelector('.twt-play-icon').style.color = fg;
+    btn.querySelector('.twt-play-icon').style.fontSize = btnSize;
 
     var progress = document.createElement('div');
     progress.className = 'twt-player-progress';
@@ -80,6 +100,8 @@
     var handle = document.createElement('div');
     handle.className = 'twt-player-handle';
 
+    fill.style.background = fg;
+    handle.style.background = fg;
     bar.appendChild(fill);
     bar.appendChild(handle);
     progress.appendChild(bar);
@@ -87,6 +109,9 @@
     var time = document.createElement('div');
     time.className = 'twt-player-time';
     time.textContent = '0:00 / 0:00';
+    time.style.fontSize = timeSize;
+    time.style.color = 'rgba('+hexToRgb(fg)+',0.6)';
+    if(!showTimer) time.style.display = 'none';
 
     wrap.appendChild(btn);
     wrap.appendChild(progress);
@@ -116,14 +141,16 @@
     audio.addEventListener('play', function () {
       playing = true;
       wrap.classList.add('playing');
-      btn.querySelector('.twt-play-icon').textContent = '❚❚';
+      var icon = btn.querySelector('.twt-play-icon');
+      icon.textContent = '❚❚'; icon.style.color = fg;
       btn.setAttribute('aria-label', 'Pause');
     });
 
     audio.addEventListener('pause', function () {
       playing = false;
       wrap.classList.remove('playing');
-      btn.querySelector('.twt-play-icon').textContent = '▶';
+      var icon = btn.querySelector('.twt-play-icon');
+      icon.textContent = '▶'; icon.style.color = fg;
       btn.setAttribute('aria-label', 'Play');
     });
 
