@@ -235,7 +235,7 @@ button.cp:hover { background: #f0ede8; }
       </div>
     </div>
 
-    <div class="hint" style="margin-bottom:16px">All images open in lightbox when clicked. Gap between images is 4px.</div>
+    <div class="hint" style="margin-bottom:16px">All images open in lightbox when clicked (requires supercharged.js on site). Gap between images is 4px.</div>
 
     <!-- Slot 1 - always shown -->
     <div class="img-slot" id="lay-slot-1">
@@ -473,14 +473,7 @@ button.cp:hover { background: #f0ede8; }
 
 </div><!-- .app -->
 
-<!-- LIGHTBOX -->
-<div class="lb-overlay" id="lb-overlay" onclick="lbClose()">
-  <div class="lb-inner" onclick="event.stopPropagation()">
-    <button class="lb-close" onclick="lbClose()">✕ close</button>
-    <img id="lb-img" src="" alt="" />
-    <div class="lb-cap" id="lb-cap"></div>
-  </div>
-</div>
+
 
 <script>
 var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
@@ -522,20 +515,7 @@ function hide(id){ document.getElementById(id).classList.remove('on'); }
 function val(id){ return document.getElementById(id).value.trim(); }
 function set(id,v){ document.getElementById(id).value=v; }
 
-/* ---- LIGHTBOX ---- */
-function lbOpen(src, alt, cap) {
-  var img = document.getElementById('lb-img');
-  img.src = src; img.alt = alt || '';
-  var capEl = document.getElementById('lb-cap');
-  capEl.textContent = cap || ''; capEl.style.display = cap ? 'block' : 'none';
-  document.getElementById('lb-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function lbClose() {
-  document.getElementById('lb-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e){ if(e.key==='Escape') lbClose(); });
+
 
 /* ---- IMAGE ---- */
 function doImg() {
@@ -600,22 +580,22 @@ function doLayout() {
     imgs.push({ src: toRaw(u), alt: val('lay-alt-'+i), cap: val('lay-cap-'+i) });
   }
   var groupCap = val('lay-group-cap');
-  var lbAttr = useLightbox ? ' style="cursor:zoom-in"' : '';
 
+
+  // imgTag: wraps in <a class="twt-lb"> for lightbox, plain <img> otherwise
   function imgTag(img, style) {
     var tag = '<img src="'+img.src+'" alt="'+img.alt+'" style="'+style+' display:block;">';
     if(useLightbox) {
-      tag = '<a href="'+img.src+'" onclick="lbOpen(\''+img.src.replace(/'/g,"\\'")
-        +'\',\''+img.alt.replace(/'/g,"\\'")+'\',\''+img.cap.replace(/'/g,"\\'")+'\');return false;"'+lbAttr+'>'
-        +tag+'</a>';
+      tag = '<a class="twt-lb" href="'+img.src+'" style="cursor:zoom-in;display:block">'+tag+'</a>';
     }
     return tag;
   }
 
+  // Multi-image layouts get data-lb-group so supercharged.js can do prev/next
+  var grpOpen  = useLightbox && count > 1 ? '<div data-lb-group="1">\n' : '';
+  var grpClose = useLightbox && count > 1 ? '</div>\n' : '';
+
   var embed = '';
-  var lbScript = useLightbox
-    ? '\n<script>if(!window._lbReady){window._lbReady=1;document.addEventListener("keydown",function(e){if(e.key==="Escape"){var o=document.getElementById("lb-overlay");if(o)o.classList.remove("open");document.body.style.overflow="";}}); }<\/script>'
-    : '';
 
   if(currentLayout === 'single') {
     embed += '<figure style="margin:0">\n';
@@ -624,61 +604,53 @@ function doLayout() {
     embed += '</figure>';
 
   } else if(currentLayout === 'double') {
+    embed += grpOpen;
     embed += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">\n';
     imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
-    embed += '</div>';
-    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+    embed += '</div>\n'+grpClose;
+    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
 
   } else if(currentLayout === 'triple') {
+    embed += grpOpen;
     embed += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">\n';
     imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
-    embed += '</div>';
-    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+    embed += '</div>\n'+grpClose;
+    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
 
   } else if(currentLayout === 'portrait') {
+    embed += grpOpen;
     embed += '<div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start;margin:0">\n';
     embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
     embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
-    embed += '</div>';
-    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+    embed += '</div>\n'+grpClose;
+    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
 
   } else if(currentLayout === 'left-wide') {
+    embed += grpOpen;
     embed += '<div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start;margin:0">\n';
     embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
     embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
-    embed += '</div>';
-    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+    embed += '</div>\n'+grpClose;
+    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
 
   } else if(currentLayout === 'stacked') {
+    embed += grpOpen;
     embed += '<div style="display:grid;grid-template-columns:1fr;gap:4px;margin:0">\n';
     imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%')+'</div>\n'; });
-    embed += '</div>';
-    if(groupCap) embed += '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+    embed += '</div>\n'+grpClose;
+    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
   }
-
-  if(useLightbox) embed += lbScript;
 
   set('lay-out', embed); show('lay-outs');
 
-  // Preview
+  // Preview - strip twt-lb links (lightbox only works on live site)
   var pp = document.getElementById('lay-pp');
   pp.innerHTML = '';
   var previewWrap = document.createElement('div');
   var previewEmbed = embed
-    .replace(/onclick="lbOpen\([^"]*\);return false;"/g, '')
-    .replace(/<a [^>]*>/g,'').replace(/<\/a>/g,'')
-    .replace(/<script[\s\S]*?<\/script>/g,'');
+    .replace(/<a class="twt-lb"[^>]*>/g,'')
+    .replace(/<\/a>/g,'');
   previewWrap.innerHTML = previewEmbed;
-  // Make preview images clickable with live lightbox
-  previewWrap.querySelectorAll('img').forEach(function(img, i){
-    var src = imgs[i] ? imgs[i].src : img.src;
-    var alt = imgs[i] ? imgs[i].alt : img.alt;
-    var cap = imgs[i] ? imgs[i].cap : '';
-    img.style.cursor = useLightbox ? 'zoom-in' : 'default';
-    if(useLightbox) {
-      img.addEventListener('click', function(){ lbOpen(src, alt, cap); });
-    }
-  });
   pp.appendChild(previewWrap);
   document.getElementById('lay-prev').classList.add('on');
 }
