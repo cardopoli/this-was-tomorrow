@@ -83,9 +83,23 @@ body_middle: |-
   Five of the ten renovated houses were sold at affordable prices, five retained for social rent. Each sale protected by an anti-gentrification clause: priority always to Liverpool locals and first-time buyers with a connection to the area. Four derelict shops on the corner of Granby and Cairns Street also passed into CLT ownership.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/6c1l89yn7quy4tpqe5q56/AL7nWH7vW_qYvdd8iyr8FiM?rlkey=w5i7gj0kslghe9c0czy1982d7&dl=0
 body_after: |-
-  ## The Winter Garden
+  ## The Winter Garden on Cairns Street
 
   The Winter Garden on Cairns Street began as something else entirely. The original plan was ambitious: take two derelict houses, glass-roof the front sections, join them, create a covered communal space. Costed up. Too expensive. Shelved.
+
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">Are we are the future (we were dreaming of)?</p>
 
   Then an architect visiting two other derelict houses stepped through the door and fell through the floor into the cellar. The building was covered in pigeon droppings, had a tree growing up the middle and no floors left. It was in such bad condition that residential use was impossible. On a return visit, on a sunny day, someone remembered the glass roof idea. No idea is wasted. It just might not be the right idea at the right time for the right thing.
 
