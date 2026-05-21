@@ -81,11 +81,7 @@ slug: kittys
 ### Links
 
 Website: [kittyslaunderette.org.uk](https://www.kittyslaunderette.org.uk)
-
 Instagram: [@kittyslaundry](https://www.instagram.com/kittyslaundry/)
-
 Facebook: [Kitty's Launderette](https://www.facebook.com/kittyslaunderette/)
-
 Address: 77 Grasmere Street, Anfield, Liverpool, L5 6RH
-
 Email: [community@kittyslaunderette.org.uk](mailto:community@kittyslaunderette.org.uk)
