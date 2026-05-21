@@ -174,6 +174,12 @@ The glazed communal garden inside a gutted terraced house. The threshold between
 
 **The gaps** - along Princes Road and into the triangle. Empty lots, the negative space of 32 demolished streets. The photograph that contextualises everything else.
 
+<figure style="margin:0">
+
+  <a class="twt-lb" href="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" alt="" style="width:100% display:block;"></a>
+
+</figure>
+
 ### Further reading
 
 Assemble: assemblestudio.co.uk. Turner Prize 2015. Publication: _Building Collective_.
