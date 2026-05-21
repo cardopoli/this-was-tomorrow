@@ -2,14 +2,18 @@
 title: Kitty's Launderette
 location: Liverpool
 status: visited
-visit_date: ''
+visit_date: 19-05-2026
 draft: false
 description: ''
-photos: []
-image: ''
+photos:
+  - image: /images/dsc_0912-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
+    caption: ''
+image: /images/dsc_0912-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
 dropbox_audio: ''
 body_intro: |-
   Kitty Wilkinson was an Irish immigrant to Liverpool who, during the cholera epidemic of 1832, opened her home to neighbours so they could wash their clothes and bedding. She understood that clean linen was a matter of survival. She lobbied Liverpool council for a decade. In 1842, the first public washhouse in the UK opened on Upper Frederick Street. She became known as the Saint of the Slums.
+
+  <img src="https://www.dropbox.com/scl/fi/wta93ktj3tk4jilf473jv/DSC_0914-18_19_052026-Kittys_launderette-Liverpool_lowres-copy.jpg?rlkey=3kznv88e293netortbsc4olde&raw=1" alt="" style="width:100%">
 
   Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
 
@@ -22,7 +26,7 @@ body_intro: |-
   </div>
 
   The project emerged from three years of community consultation led by Grace Harrison, a young artist and co-operative founder who maintained a cleaning job through the development years and lived as cheaply as possible to get it off the ground. She is open about what that kind of sweat equity requires - and about the fact that most young people cannot afford it. A Kickstarter campaign, community fundraising, and Big Lottery funding through Power to Change enabled the transformation of a disused builder's yard into something that now has a life of its own.
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/vpx9vxlavcs4e9p549isu/AA2HV17uKwqrF2cDEyuMLAo?rlkey=38mo01hjxym7j2l9gg3mfu8t0&dl=0
 body_middle: |-
   ## The Model
 
@@ -41,7 +45,7 @@ body_middle: |-
   Commercial income - contracts with hotels, bed and breakfasts, and local football clubs, plus ecological dry cleaning via the WetCare system - cross-subsidises the community work. A voucher scheme, run in partnership with Shelter, Whitechapel Centre, and local children's centres, gives people in crisis access to the machines at no cost. An independent Social Impact Report in 2024 found that for every £1 invested in Kitty's, £43 of social value is generated for the community.
 
   In 2023, Kitty's won the Community-Based Social Enterprise Award from Social Enterprise UK.
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/b2b2yh44uiuvqgcc5jtjh/AG9gmYX3Pegr1tuhCnW8nDY?rlkey=1sov1n90f1xgh4la9ob40h90v&dl=0
 body_after: |-
   ## What It Is
 
