@@ -1,5 +1,5 @@
 ---
-title: "Kitty's Launderette"
+title: Kitty's Launderette
 location: Liverpool
 status: visited
 visit_date: ''
@@ -12,6 +12,14 @@ body_intro: |-
   Kitty Wilkinson was an Irish immigrant to Liverpool who, during the cholera epidemic of 1832, opened her home to neighbours so they could wash their clothes and bedding. She understood that clean linen was a matter of survival. She lobbied Liverpool council for a decade. In 1842, the first public washhouse in the UK opened on Upper Frederick Street. She became known as the Saint of the Slums.
 
   Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
+
+  <div class="audio-track" data-twt-bg="#f7f5f0" data-twt-fg="#111111" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+
+    <p class="audio-track-name" style="font-size:10px;color:#111111;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Kitty's Launderette Ambient</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/gb3bvzxyw5p7bhresf4c0/00-19052026_Kittys-Anfield-Liverpool_TWT-AUDIO-19052026-ambient-01-KIttys-Anfield-Liverpool-TWT-AUDIO_128kpbs.mp3?rlkey=ubx48osgrslktp9lx2y0lhezc&raw=1"></audio>
+
+  </div>
 
   The project emerged from three years of community consultation led by Grace Harrison, a young artist and co-operative founder who maintained a cleaning job through the development years and lived as cheaply as possible to get it off the ground. She is open about what that kind of sweat equity requires - and about the fact that most young people cannot afford it. A Kickstarter campaign, community fundraising, and Big Lottery funding through Power to Change enabled the transformation of a disused builder's yard into something that now has a life of its own.
 dropbox_gallery: ''
