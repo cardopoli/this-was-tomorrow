@@ -248,10 +248,12 @@
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
 
+    console.log('[TWT playlist] calling proxyFetch for', sharedLink);
     proxyFetch('files/list_folder', {
       path: '', shared_link: { url: sharedLink }, recursive: false
     })
     .then(function(data) {
+      console.log('[TWT playlist] list_folder response:', JSON.stringify(data).slice(0, 300));
       if (data.error) {
         container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">Could not load playlist.</p>';
         return;
@@ -260,6 +262,8 @@
       var files = (data.entries || []).filter(function(f) {
         return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
       });
+
+      console.log('[TWT playlist] audio files found:', files.length);
 
       if (!files.length) {
         container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">No audio files found.</p>';
