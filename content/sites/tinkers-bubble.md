@@ -54,14 +54,10 @@ body_middle: |-
 
   The philosophy unites traditional land management with contemporary concerns about sustainability. Work is done with horses and hand tools, a Victorian apple press and sawmill powered by a vintage steam engine. All show the potential for embracing both traditional and alternative technologies in an effort to move away from reliance on fossil fuels.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/a178hduq8jhe1g7lj68yn/AA7D4YPTemUkSbzn1eYRrMs?rlkey=h7fixgx5sohfiayvjelqu50m9&dl=0
+body_after: ''
+dropbox_gallery_3: ''
 audio: []
-archives:
-  - title: Tinkers Bubble Interview Cam + Meg
-    url: https://archive.org/details/twt-070426-tinkers-bubble-cam-meg-interview
-    note: Cameron and Megan are long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
-  - title: Tinkers Bubble Interview Ree
-    url: https://archive.org/details/twt-090426-tinkers-bubble-ree-interview
-    note: Ree is a long term residents of Tinkers Bubble and they are interviewed about the place they live, their life story and ideas about the past and the future.
+archives: []
 videos: []
 sources: []
 links: ''
