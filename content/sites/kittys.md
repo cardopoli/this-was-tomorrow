@@ -3,7 +3,7 @@ title: Kitty's Launderette
 location: Liverpool
 status: visited
 visit_date: 19-05-2026
-draft: true
+draft: false
 description: ''
 photos:
   - image: /images/dsc_0918-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
