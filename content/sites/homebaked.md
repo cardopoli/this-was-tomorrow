@@ -2,7 +2,7 @@
 title: Homebaked Community Land Trust
 location: Liverpool
 status: visited
-visit_date: ''
+visit_date: 19-05-2026
 draft: false
 description: ''
 photos:
@@ -13,10 +13,22 @@ dropbox_audio: ''
 body_intro: |-
   Mitchell's Bakery has stood on Oakfield Road, Anfield since 1903. Known locally as The Pie Shop. It served pies to residents and football fans on match days for over eighty years - two families, one building, one neighbourhood.
 
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
+
   In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned. The bakery, stripped of its customer base, closed in January 2011. It had been designated for demolition.
 
   That is where this story begins.
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/lh1nbyacl6f9d8t90it63/AM15sGw3kcRJXRbbjliXFt0?rlkey=4kv1m4xquixyil1mpva0xb4fc&dl=0
 body_middle: |-
   ## 2up2down
 
@@ -42,8 +54,22 @@ body_middle: |-
 
   The scheme was scheduled to be delivered in 2020, in partnership with Liverpool City Council and Your Housing. But setbacks came: the pandemic first, then significant issues within Liverpool City Council delayed proceedings for years. The community kept pursuing it. In 2025, Liverpool City Council decided instead to sell the properties to a traditional developer on the open market.
 
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" alt="" style="width:100% display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hx89llanz9zded93frpsu/P1110812-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=go0t1d3iu58ytw3z5cxqq0wv0&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hx89llanz9zded93frpsu/P1110812-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=go0t1d3iu58ytw3z5cxqq0wv0&raw=1" alt="" style="width:100% display:block;"></a></div>
+
+  </div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The house recently sold by the council to a private developer</p>
+
   Homebaked CLT is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/lh1nbyacl6f9d8t90it63/AM15sGw3kcRJXRbbjliXFt0?rlkey=4kv1m4xquixyil1mpva0xb4fc&dl=0
 body_after: |-
   ## The Model
 
