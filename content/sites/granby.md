@@ -104,6 +104,22 @@ On housing and what it makes possible: "If you've got somewhere to live and you 
 
 On the question of whether this was the future anyone dreamed of: "I never dreamt of a future. What we wanted was quite simple - we didn't want to move from our homes. We didn't want to see a multiracial place that is welcoming and accepting destroyed. That's it. And there was a recognition that if we don't do something, we're finished. Nobody else is going to."
 
+<div data-lb-group="1">
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
+
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+</div>
+
+</div>
+
+<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The back alley gardens</p>
+
 On how change happens: "Work collectively. Collective working can start with you and one person, because that's two people, and that person will know someone else. Recognise yourself and claim the bit of space that is around you. If your destination is always the stars, but you're only on top of the stepladder - that's not terrible. At least you got there."
 
 <img src="https://www.dropbox.com/scl/fi/r3zyinnzrgbschf8ee55l/R0043774-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=5r9iswm623safhrarex3zjrxf&raw=1" alt="" style="width:100%">
