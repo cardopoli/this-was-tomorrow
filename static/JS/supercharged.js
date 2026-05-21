@@ -285,3 +285,103 @@
       });
   };
 })();
+
+
+// ============================================================================
+// AUDIO PLAYLIST
+// Same proxy pattern as buildGallery but filters for audio files.
+// Called by embed code generated in the embed tool's Audio tab (folder mode).
+// ============================================================================
+
+(function() {
+  window._twt = window._twt || {};
+
+  window._twt.buildAudioPlaylist = function(proxyUrl, sharedLink, containerId) {
+    var container = document.getElementById(containerId);
+    if (!container || !sharedLink) return;
+
+    var bg       = container.dataset.twtBg       || '#111111';
+    var fg       = container.dataset.twtFg       || '#f7f5f0';
+    var pad      = container.dataset.twtPad      || '14px 18px';
+    var btnSize  = container.dataset.twtBtnSize  || '14px';
+    var timeSize = container.dataset.twtTimeSize || '11px';
+    var showTimer = container.dataset.twtShowTimer !== '0';
+
+    function proxyFetch(endpoint, body) {
+      return fetch(proxyUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ endpoint: endpoint, body: body })
+      }).then(function(r) {
+        if (!r.ok) throw new Error('Proxy ' + r.status);
+        return r.json();
+      });
+    }
+
+    proxyFetch('files/list_folder', {
+      path: '', shared_link: { url: sharedLink }, recursive: false
+    })
+    .then(function(data) {
+      if (data.error) {
+        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+';background:'+bg+'">Could not load playlist.</p>';
+        return;
+      }
+
+      var files = (data.entries || []).filter(function(f) {
+        return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
+      });
+
+      if (!files.length) {
+        container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+';background:'+bg+'">No audio files found.</p>';
+        return;
+      }
+
+      // Get temporary links for all files
+      return Promise.all(
+        files.map(function(f) {
+          return proxyFetch('files/get_temporary_link', { path: f.path_lower })
+            .then(function(d) { return d.link || null; });
+        })
+      ).then(function(links) {
+        container.innerHTML = '';
+        container.style.background = bg;
+
+        files.forEach(function(f, i) {
+          if (!links[i]) return;
+          var name = f.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+
+          var track = document.createElement('div');
+          track.className = 'audio-track';
+          track.dataset.twtBg = bg;
+          track.dataset.twtFg = fg;
+          track.dataset.twtPad = '10px ' + (pad.split(' ')[1] || '18px');
+          track.dataset.twtBtnSize = btnSize;
+          track.dataset.twtTimeSize = timeSize;
+          track.dataset.twtShowTimer = showTimer ? '1' : '0';
+          track.style.borderTop = i > 0 ? '1px solid rgba(128,128,128,0.15)' : 'none';
+
+          var label = document.createElement('p');
+          label.className = 'audio-track-name';
+          label.textContent = name;
+          label.style.cssText = 'font-size:'+timeSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1px;margin-bottom:6px';
+
+          var audio = document.createElement('audio');
+          audio.preload = 'none';
+          audio.src = links[i];
+          audio.style.display = 'none';
+
+          track.appendChild(label);
+          track.appendChild(audio);
+          container.appendChild(track);
+        });
+
+        // Build players for the new tracks
+        if (window._twtInitPlayers) window._twtInitPlayers();
+      });
+    })
+    .catch(function(err) {
+      container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:'+pad+';background:'+bg+'">Playlist unavailable.</p>';
+      console.error('TWT playlist error:', err);
+    });
+  };
+})();
