@@ -64,7 +64,7 @@ body_after: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/q6yz8f95lman8loj4fpmi/19052026_Anthony_KIttys-Anfield-Liverpool_TWT-AUDIO_128kbps.mp3?rlkey=quky9fj99585c7s00dw2oiqn6&raw=1"></audio>
 
   </div>
-dropbox_gallery_3: ''
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/83voh0lwh6ryttchul7pb/AE0pvDv02F1EfQ5iyGRZo0A?rlkey=r5g6pc519qcmgv86ssngiv6oh&dl=0
 audio: []
 sources: []
 slug: kittys
