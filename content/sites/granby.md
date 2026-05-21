@@ -40,9 +40,17 @@ body_middle: |-
 
   Granby Workshop was set up alongside the Turner Prize nomination: a ceramics studio on Cairns Street making bespoke objects - fireplaces, tiles, household goods - from salvaged materials. The same objects that furnish the renovated houses. Made from rubble and sold to fund the work.
 
-  <img src="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1" alt="" style="width:100%">
+  <div data-lb-group="1">
 
-  <img src="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1" alt="" style="width:100%">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
 
   Five of the ten renovated houses were sold at affordable prices, five retained for social rent. Each sale protected by an anti-gentrification clause: priority always to Liverpool locals and first-time buyers with a connection to the area. Four derelict shops on the corner of Granby and Cairns Street also passed into CLT ownership.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/gdrqph75yilitdj6wtqxo/APnJr_XwuDBOSYjqlBQt6tE?rlkey=01gzbvpdh6y6cl3dnm3yzvts4&dl=0
