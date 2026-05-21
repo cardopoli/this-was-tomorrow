@@ -1,37 +1,51 @@
 ---
 title: "Kitty's Launderette"
-location: "Liverpool"
-slug: "kittys"
+location: Liverpool
+status: visited
+visit_date: ''
 draft: false
+description: ''
 photos: []
+image: ''
+dropbox_audio: ''
+body_intro: |-
+  Kitty Wilkinson was an Irish immigrant to Liverpool who, during the cholera epidemic of 1832, opened her home to neighbours so they could wash their clothes and bedding. She understood that clean linen was a matter of survival. She lobbied Liverpool council for a decade. In 1842, the first public washhouse in the UK opened on Upper Frederick Street. She became known as the Saint of the Slums.
+
+  Kitty's Launderette opened in May 2019 in Everton, north Liverpool - the first community washhouse to open in the city in several decades. The name is a lineage claim. The impulse is the same: clean clothes, warm space, dignity, somewhere to be.
+
+  The project emerged from three years of community consultation led by Grace Harrison, a young artist and co-operative founder who maintained a cleaning job through the development years and lived as cheaply as possible to get it off the ground. She is open about what that kind of sweat equity requires - and about the fact that most young people cannot afford it. A Kickstarter campaign, community fundraising, and Big Lottery funding through Power to Change enabled the transformation of a disused builder's yard into something that now has a life of its own.
+dropbox_gallery: ''
+body_middle: |-
+  ## The Model
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Bryn, co-operative member</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/[BRYN-FILE]/[FILENAME].mp3?rlkey=[KEY]&raw=1"></audio>
+
+  </div>
+
+  Kitty's is a workers' community co-operative. Nine staff, all local people, all co-operative members. The structure is flat - all work is valued equally, all workers paid the same hourly wage, the Real Living Wage. Nobody manages anybody else in the traditional sense. The model was chosen deliberately: to reflect the needs of both workers and the wider community, rather than extracting value from either.
+
+  The launderette runs affordable, eco-friendly washing and drying services. All machines are electric, powered by 100% renewable electricity. But the laundry is almost beside the point. The space has tea and coffee, free Wi-Fi, computer access, a community notice board. Film screenings are timed to last exactly as long as a wash and dry cycle. There are story-telling sessions for children, quiz nights, live music, knitting groups, language clubs, social history projects. It is warm and open and free to walk into.
+
+  Commercial income - contracts with hotels, bed and breakfasts, and local football clubs, plus ecological dry cleaning via the WetCare system - cross-subsidises the community work. A voucher scheme, run in partnership with Shelter, Whitechapel Centre, and local children's centres, gives people in crisis access to the machines at no cost. An independent Social Impact Report in 2024 found that for every £1 invested in Kitty's, £43 of social value is generated for the community.
+
+  In 2023, Kitty's won the Community-Based Social Enterprise Award from Social Enterprise UK.
+dropbox_gallery_2: ''
+body_after: |-
+  ## What It Is
+
+  Bryn grew up in the area. His family never had a washing machine. He remembers launderettes from childhood the way people remember corner shops - as places where things happened, where people talked, where the ordinary friction of daily life produced something social. He went to Kitty's opening event and kept coming back. He left university because of mental health difficulties. He applied through the government's Kickstart scheme. He now coordinates events and leads on the finances.
+
+  "Kitty's isn't a charity. It's about self-help, self-organising, self-respect. We should be investing in the local economy. We should re-occupy the high streets. There is as much ambition here in Liverpool as there is in Wall Street."
+
+  In 2025, Kitty's launched a crowdfunder to buy an electric delivery van and install solar panels - to reach more of the city and cut costs further. The expansion is an extension of the founding logic: local money stays local, young people are trusted to build their own economy, basic infrastructure is not a luxury.
+
+  The washhouse movement Kitty Wilkinson started in 1842 lasted over a century before it was dismantled. What Kitty's Launderette is trying to work out is what it looks like now - not as nostalgia, but as urgent contemporary answer to the same persistent problem.
+dropbox_gallery_3: ''
 audio: []
 sources: []
+slug: kittys
 ---
-
-## Namesake & Inheritance
-
-Kitty's Launderette is named after Kitty Wilkinson, an Irish immigrant to Liverpool credited as the pioneer of the wash house movement in the UK. During the cholera epidemic of 1832, Wilkinson opened her home to neighbours to allow them to wash their clothes and bedding. She lobbied the council for ten years, and in 1842, Liverpool opened the first public washhouse in the UK on Upper Frederick Street. Wilkinson became known as 'the saint of the slums' – recognising that clean clothes and communal gathering space were matters of dignity and survival.
-
-## The Contemporary Crisis
-
-Kitty's Launderette opened in May 2019, the first non-commercial, community washhouse to open in Liverpool in several decades. It emerged in response to contemporary poverty: rising levels of hygiene and fuel poverty, white goods debts, and social isolation in north Liverpool. Artist Grace Harrison and a co-operative of community members founded the project after three years of community consultation and fundraising. A successful Kickstarter campaign, community fundraising from local donors, and Big Lottery funding through Power to Change enabled the transformation of a disused builder's yard into a warm and welcoming social space.
-
-## The Model: Worker-Community Cooperative
-
-Kitty's Launderette operates as a workers' community co-operative with a staff team of nine, all local people and co-operative members. The structure is non-hierarchical and flat – all work is valued equally, and workers are paid the same hourly wage (the Real Living Wage). This model was chosen to ensure the organisation reflected the needs of both workers and the wider community. Grace Harrison founded the project as a young adult and maintained a cleaning job through the years of development, living as cheaply as possible to 'sweat equity' the project into existence – a condition many young people cannot afford, which she openly acknowledges.
-
-## More Than Laundry: Community Hub
-
-The launderette provides affordable, eco-friendly washing and drying services. All machines are electric and powered by 100% renewable electricity. But the work extends far beyond laundry. The space functions as a creative social hub with tea and coffee facilities, free WiFi, computer and printing access, and a community notice board for local information exchange. Film screenings are timed to last as long as a wash and dry cycle. The launderette hosts story-telling sessions for children, quiz nights, live music by local artists, knitting groups, language clubs, and social history projects. The space is warm, welcoming, and open to all.
-
-## Social Enterprise & Trading
-
-Kitty's Launderette is a social enterprise that generates revenue through trading – washroom services, ecological dry cleaning (using the WetCare system with no traditional chemicals), ironing, and commercial contracts with local football teams, hotels and bed and breakfasts. This diversified income enables the co-op to keep core services affordable for people in poverty. An independent Social Impact Report conducted in 2024 found that for every £1 spent or invested into Kitty's, they turn this into £43 of social value for the community. By 2023, Kitty's won the Community-Based Social Enterprise Award from Social Enterprise UK.
-
-## Current Expansion
-
-In 2025, Kitty's launched a crowdfunder to purchase an electric delivery van and charge point, plus install solar panels on the roof. This will enable them to reach more customers across the Liverpool city region and increase the long-term environmental sustainability of the business. The expansion reflects their commitment to self-help, self-organising, and self-respect – rooted in the belief that local money should stay local and that young people should be invested in as co-builders of their own economy.
-
-## Why This Matters
-
-Kitty's proves that basic infrastructure – washing machines – can be the seed for community infrastructure. It reclaims a practice nearly lost in the UK (the public washhouse) and restores it not through nostalgia but through urgent contemporary need. It demonstrates that a worker-co-op model can survive and thrive in a market economy, paying living wages while keeping services affordable. Most importantly, it shows that a launderette can be a sanctuary – a place where loneliness is interrupted, where dignity is protected, and where young people are trusted to lead.
