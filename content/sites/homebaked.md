@@ -34,6 +34,12 @@ body_middle: |-
 
   In 2010, artist Jeanne van Heeswijk was commissioned for the Liverpool Biennial. Her project - 2up2down - used the empty bakery building as a base for people to come together, imagine, and plan for what the area could be. Her conviction was that art can create fields of interaction: relationships, debates, the conditions for people to shape their own surroundings.
 
+  <figure style="margin:0">
+
+    <a class="twt-lb" href="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" alt="" style="width:100% display:block;"></a>
+
+  </figure>
+
   In April 2012, the community formed Homebaked Community Land Trust to take on the development of the bakery building and future community assets, with a focus on affordable housing. The following June, Homebaked Bakery Co-operative was incorporated by local residents determined to reopen the bakery. The doors opened in October 2013.
 
   The bakery now employs 16 people, turns over £500,000 a year, and runs training courses. It uses the space as a community hub. During the pandemic, it provided freshly baked bread to local foodbanks and organised free school meal deliveries. More than a pie, as the strapline says - though the pies are, by most accounts, worth the journey from anywhere in Liverpool.
@@ -45,6 +51,12 @@ body_middle: |-
     <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Homebaked Community Land Trust</p>
 
   </div>
+
+  <figure style="margin:0">
+
+    <a class="twt-lb" href="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" alt="" style="width:100% display:block;"></a>
+
+  </figure>
 
   ## Brick by Brick We Build Ourselves
 
