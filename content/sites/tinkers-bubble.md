@@ -64,9 +64,9 @@ links: ''
 slug: tinkers-bubble
 ---
 
-<div class="twt-playlist" id="aud-pl-k8ud9" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1" style=""><p style="font-family:monospace;font-size:11px;padding:14px 18px;color:#f7f5f0;background:#111111">Loading playlist…</p></div>
+<div class="twt-playlist" id="aud-pl-w2z57" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="10px 14px" data-twt-btn-size="12px" data-twt-time-size="10px" data-twt-show-timer="0" style=""><p style="font-family:monospace;font-size:11px;padding:10px 14px;color:#f7f5f0;background:#111111">Loading playlist…</p></div>
 
-<script>(function(){function run(){window._twt.buildAudioPlaylist('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0','aud-pl-k8ud9');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
+<script>(function(){function run(){window._twt.buildAudioPlaylist('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0','aud-pl-w2z57');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
 
 ## The broader significance
 
