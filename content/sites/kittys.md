@@ -26,11 +26,11 @@ dropbox_gallery: ''
 body_middle: |-
   ## The Model
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#F54927" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Bryn, co-operative member</p>
+    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Bryn, Lead of finance at Kitty's</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/[BRYN-FILE]/[FILENAME].mp3?rlkey=[KEY]&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/3a63ypph12cbiv6a1yo8p/00-19052026_Kittys-Anfield-Liverpool_TWT-AUDIO-19052026-bryn-KIttys-Anfield-Liverpool-TWT-AUDIO_128kpbs.mp3?rlkey=4wy7oiuyrcsk6xltmt0dh3r7r&raw=1"></audio>
 
   </div>
 
@@ -52,6 +52,14 @@ body_after: |-
   In 2025, Kitty's launched a crowdfunder to buy an electric delivery van and install solar panels - to reach more of the city and cut costs further. The expansion is an extension of the founding logic: local money stays local, young people are trusted to build their own economy, basic infrastructure is not a luxury.
 
   The washhouse movement Kitty Wilkinson started in 1842 lasted over a century before it was dismantled. What Kitty's Launderette is trying to work out is what it looks like now - not as nostalgia, but as urgent contemporary answer to the same persistent problem.
+
+  <div class="audio-track" data-twt-bg="#F54927" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+
+    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Antho y, Lead of community engagement at Kitty's</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/q6yz8f95lman8loj4fpmi/19052026_Anthony_KIttys-Anfield-Liverpool_TWT-AUDIO_128kbps.mp3?rlkey=quky9fj99585c7s00dw2oiqn6&raw=1"></audio>
+
+  </div>
 dropbox_gallery_3: ''
 audio: []
 sources: []
