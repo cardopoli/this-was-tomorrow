@@ -6,9 +6,9 @@ visit_date: 19-05-2026
 draft: false
 description: ''
 photos:
-  - image: /images/dsc_0912-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
+  - image: /images/dsc_0918-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
     caption: ''
-image: /images/dsc_0912-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
+image: /images/dsc_0918-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
 dropbox_audio: ''
 body_intro: |-
   Kitty Wilkinson was an Irish immigrant to Liverpool who, during the cholera epidemic of 1832, opened her home to neighbours so they could wash their clothes and bedding. She understood that clean linen was a matter of survival. She lobbied Liverpool council for a decade. In 1842, the first public washhouse in the UK opened on Upper Frederick Street. She became known as the Saint of the Slums.
