@@ -27,6 +27,20 @@ body_intro: |-
 
   Then the decline. From the 1960s, the area was designated a twilight zone. Landlords moved in, residents moved out. The 1981 Toxteth riots - themselves the product of decades of disinvestment and aggressive policing of young Black men - tipped it further. Streets were abandoned and demolished one by one. Of 36 streets, four remain. The Housing Market Renewal Initiative of 2002 designated what was left for clearance. When the coalition government cut that funding in 2010, the neighbourhood was left in limbo: houses boarded up, streets half-demolished, a landscape of punishment without replacement.
 
+  <div data-lb-group="1">
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">Are we are the future (we were dreaming of)?</p>
+
   But residents had never stopped. For over two decades before any formal organisation existed, they cleared, planted, painted, and campaigned. It started with someone getting a brush out and cleaning the street. That went on to others joining, then a small grant, then a table sale that became a market. Six stalls became 90. A residents association formed 34 years ago, then ended, then became a Community Land Trust in November 2011.
 
   > "We formed a CLT on nothing but imagination. It was both common sense and utterly radical." 
@@ -86,20 +100,6 @@ body_after: |-
   ## The Winter Garden on Cairns Street
 
   The Winter Garden on Cairns Street began as something else entirely. The original plan was ambitious: take two derelict houses, glass-roof the front sections, join them, create a covered communal space. Costed up. Too expensive. Shelved.
-
-  <div data-lb-group="1">
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
-
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
-
-  </div>
-
-  </div>
-
-  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">Are we are the future (we were dreaming of)?</p>
 
   Then an architect visiting two other derelict houses stepped through the door and fell through the floor into the cellar. The building was covered in pigeon droppings, had a tree growing up the middle and no floors left. It was in such bad condition that residential use was impossible. On a return visit, on a sunny day, someone remembered the glass roof idea. No idea is wasted. It just might not be the right idea at the right time for the right thing.
 
