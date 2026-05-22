@@ -1,12 +1,10 @@
 /* THIS WAS TOMORROW - supercharged.js
-   Vanilla JS, no dependencies.
-   Only includes what is actually wired up and used. */
+   Vanilla JS, no dependencies. */
 
 'use strict';
 
 // ============================================================================
 // SMOOTH SCROLL
-// Intercepts anchor clicks and scrolls smoothly.
 // ============================================================================
 
 (function() {
@@ -25,8 +23,6 @@
 
 // ============================================================================
 // STATIC IMAGE FADE-IN
-// For local images (hero + grid) that aren't in the Dropbox gallery.
-// Adds .loaded class once the image fires onload.
 // ============================================================================
 
 (function() {
@@ -34,7 +30,6 @@
   images.forEach(function(img) {
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.4s ease';
-
     if (img.complete && img.naturalWidth > 0) {
       img.style.opacity = '1';
     } else {
@@ -46,9 +41,74 @@
 
 
 // ============================================================================
+// INLINE IMAGE LIGHTBOX
+// ============================================================================
+
+(function() {
+  function initInlineLightbox() {
+    var lb      = document.getElementById('dbxLightbox');
+    var lbImg   = document.getElementById('dbxLightboxImg');
+    var lbClose = document.getElementById('dbxClose');
+    var lbPrev  = document.getElementById('dbxPrev');
+    var lbNext  = document.getElementById('dbxNext');
+    var lbCount = document.getElementById('dbxCounter');
+    if (!lb || !lbImg) return;
+
+    var triggers = Array.from(document.querySelectorAll('a.twt-lb'));
+    if (!triggers.length) return;
+
+    var current = 0;
+
+    function openAt(idx) {
+      current = idx;
+      var a = triggers[idx];
+      lbImg.src = a.href;
+      lbImg.alt = a.dataset.alt || '';
+      lbCount.textContent = (idx + 1) + ' / ' + triggers.length;
+      lbPrev.disabled = idx === 0;
+      lbNext.disabled = idx === triggers.length - 1;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+
+    triggers.forEach(function(a, i) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        openAt(i);
+      });
+    });
+
+    if (!lb.dataset.inlineBound) {
+      lb.dataset.inlineBound = '1';
+      lbClose.addEventListener('click', close);
+      lb.addEventListener('click', function(e) { if (e.target === lb) close(); });
+      document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft'  && !lbPrev.disabled) openAt(current - 1);
+        if (e.key === 'ArrowRight' && !lbNext.disabled) openAt(current + 1);
+      });
+      lbPrev.addEventListener('click', function() { if (current > 0) openAt(current - 1); });
+      lbNext.addEventListener('click', function() { if (current < triggers.length - 1) openAt(current + 1); });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initInlineLightbox);
+  } else {
+    initInlineLightbox();
+  }
+})();
+
+
+// ============================================================================
 // CUSTOM AUDIO PLAYER
-// Replaces every <audio> element with a styled TWT player.
-// Preserves the original <audio> for actual playback - just hides it.
 // ============================================================================
 
 (function () {
@@ -60,14 +120,14 @@
   }
 
   function hexToRgb(hex) {
-    hex = hex.replace('#','');
-    if(hex.length===3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-    var n = parseInt(hex,16);
+    hex = hex.replace('#', '');
+    if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+    var n = parseInt(hex, 16);
     return ((n>>16)&255)+','+(((n>>8)&255))+','+(n&255);
   }
 
   function buildPlayer(audio) {
-    var track = audio.closest('.audio-track') || audio.parentNode;
+    var track    = audio.closest('.audio-track') || audio.parentNode;
     var bg       = track.dataset.twtBg       || '#111111';
     var fg       = track.dataset.twtFg       || '#f7f5f0';
     var pad      = track.dataset.twtPad      || '14px 18px';
@@ -79,17 +139,6 @@
     wrap.className = 'twt-player';
     wrap.style.background = bg;
     wrap.style.padding = pad;
-    wrap.style.flexDirection = 'column';
-    wrap.style.gap = '6px';
-
-    // ---- ROW 1: skip-back | play | skip-forward | progress | time ----
-    var row1 = document.createElement('div');
-    row1.style.cssText = 'display:flex;align-items:center;gap:10px;width:100%';
-
-    var skipBack = document.createElement('button');
-    skipBack.setAttribute('aria-label', 'Skip back 15 seconds');
-    skipBack.style.cssText = 'background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;color:'+fg+';font-size:11px;opacity:0.7;line-height:1';
-    skipBack.innerHTML = '&#8630;15';
 
     var btn = document.createElement('button');
     btn.className = 'twt-player-btn';
@@ -98,21 +147,20 @@
     btn.querySelector('.twt-play-icon').style.color = fg;
     btn.querySelector('.twt-play-icon').style.fontSize = btnSize;
 
-    var skipFwd = document.createElement('button');
-    skipFwd.setAttribute('aria-label', 'Skip forward 15 seconds');
-    skipFwd.style.cssText = 'background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;color:'+fg+';font-size:11px;opacity:0.7;line-height:1';
-    skipFwd.innerHTML = '15&#8631;';
-
     var progress = document.createElement('div');
     progress.className = 'twt-player-progress';
+
     var bar = document.createElement('div');
     bar.className = 'twt-player-bar';
+
     var fill = document.createElement('div');
     fill.className = 'twt-player-fill';
     fill.style.background = fg;
+
     var handle = document.createElement('div');
     handle.className = 'twt-player-handle';
     handle.style.background = fg;
+
     bar.appendChild(fill);
     bar.appendChild(handle);
     progress.appendChild(bar);
@@ -121,46 +169,13 @@
     time.className = 'twt-player-time';
     time.textContent = '0:00 / 0:00';
     time.style.fontSize = timeSize;
-    time.style.color = 'rgba('+hexToRgb(fg)+',0.6)';
+    time.style.color = 'rgba(' + hexToRgb(fg) + ',0.6)';
     if (!showTimer) time.style.display = 'none';
 
-    row1.appendChild(skipBack);
-    row1.appendChild(btn);
-    row1.appendChild(skipFwd);
-    row1.appendChild(progress);
-    row1.appendChild(time);
-    wrap.appendChild(row1);
+    wrap.appendChild(btn);
+    wrap.appendChild(progress);
+    wrap.appendChild(time);
 
-    // ---- ROW 2: volume | speed ----
-    var row2 = document.createElement('div');
-    row2.style.cssText = 'display:flex;align-items:center;gap:10px;padding-top:4px';
-
-    var volIcon = document.createElement('span');
-    volIcon.innerHTML = '&#128266;';
-    volIcon.style.cssText = 'color:'+fg+';font-size:11px;opacity:0.6;flex-shrink:0';
-
-    var volSlider = document.createElement('input');
-    volSlider.type = 'range';
-    volSlider.min = '0'; volSlider.max = '1'; volSlider.step = '0.05'; volSlider.value = '1';
-    volSlider.style.cssText = 'flex:1;max-width:90px;accent-color:'+fg+';cursor:pointer';
-    volSlider.setAttribute('aria-label', 'Volume');
-
-    var speedSel = document.createElement('select');
-    speedSel.style.cssText = 'background:transparent;border:1px solid rgba('+hexToRgb(fg)+',0.3);color:'+fg+';font-size:10px;font-family:monospace;padding:2px 6px;cursor:pointer;flex-shrink:0;margin-left:auto';
-    speedSel.setAttribute('aria-label', 'Playback speed');
-    [['0.5','0.5x'],['0.75','0.75x'],['1','1x'],['1.25','1.25x'],['1.5','1.5x'],['2','2x']].forEach(function(o) {
-      var opt = document.createElement('option');
-      opt.value = o[0]; opt.textContent = o[1];
-      if (o[0] === '1') opt.selected = true;
-      speedSel.appendChild(opt);
-    });
-
-    row2.appendChild(volIcon);
-    row2.appendChild(volSlider);
-    row2.appendChild(speedSel);
-    wrap.appendChild(row2);
-
-    // ---- EVENTS ----
     var playing = false;
 
     btn.addEventListener('click', function () {
@@ -170,7 +185,7 @@
         document.querySelectorAll('.twt-player-btn').forEach(function (b) {
           if (b !== btn) {
             b.closest('.twt-player').classList.remove('playing');
-            b.querySelector('.twt-play-icon').textContent = '\u25B6';
+            b.querySelector('.twt-play-icon').innerHTML = '&#9654;';
             b.setAttribute('aria-label', 'Play');
           }
         });
@@ -185,7 +200,8 @@
       playing = true;
       wrap.classList.add('playing');
       var icon = btn.querySelector('.twt-play-icon');
-      icon.innerHTML = '&#10074;&#10074;'; icon.style.color = fg;
+      icon.innerHTML = '&#10074;&#10074;';
+      icon.style.color = fg;
       btn.setAttribute('aria-label', 'Pause');
     });
 
@@ -193,7 +209,8 @@
       playing = false;
       wrap.classList.remove('playing');
       var icon = btn.querySelector('.twt-play-icon');
-      icon.innerHTML = '&#9654;'; icon.style.color = fg;
+      icon.innerHTML = '&#9654;';
+      icon.style.color = fg;
       btn.setAttribute('aria-label', 'Play');
     });
 
@@ -217,7 +234,6 @@
       time.textContent = '0:00 / ' + formatTime(audio.duration);
     });
 
-    // Scrub
     var scrubbing = false;
     function scrubTo(e) {
       var rect = bar.getBoundingClientRect();
@@ -230,24 +246,6 @@
     bar.addEventListener('touchstart', function (e) { scrubTo(e.touches[0]); }, { passive: true });
     bar.addEventListener('touchmove', function (e) { scrubTo(e.touches[0]); }, { passive: true });
 
-    // Skip
-    skipBack.addEventListener('click', function () {
-      audio.currentTime = Math.max(0, audio.currentTime - 15);
-    });
-    skipFwd.addEventListener('click', function () {
-      audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 15);
-    });
-
-    // Volume
-    volSlider.addEventListener('input', function () {
-      audio.volume = parseFloat(volSlider.value);
-    });
-
-    // Speed
-    speedSel.addEventListener('change', function () {
-      audio.playbackRate = parseFloat(speedSel.value);
-    });
-
     return wrap;
   }
 
@@ -259,7 +257,7 @@
       var player = buildPlayer(audio);
       audio.parentNode.insertBefore(player, audio);
     });
-  }
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', window._twtInitPlayers);
@@ -271,9 +269,6 @@
 
 // ============================================================================
 // AUDIO PLAYLIST
-// Fetches a Dropbox folder via the proxy, filters audio files, renders
-// a track list using the same TWT custom player for each track.
-// Called by embed code generated in the embed tool's Audio tab (folder mode).
 // ============================================================================
 
 (function() {
@@ -308,12 +303,10 @@
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
 
-    console.log('[TWT playlist] calling proxyFetch for', sharedLink);
     proxyFetch('files/list_folder', {
       path: '', shared_link: { url: sharedLink }, recursive: false
     })
     .then(function(data) {
-      console.log('[TWT playlist] list_folder response:', JSON.stringify(data).slice(0, 300));
       if (data.error) {
         container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">Could not load playlist.</p>';
         return;
@@ -322,8 +315,6 @@
       var files = (data.entries || []).filter(function(f) {
         return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
       });
-
-      console.log('[TWT playlist] audio files found:', files.length);
 
       if (!files.length) {
         container.innerHTML = '<p style="color:'+fg+';font-family:monospace;font-size:11px;padding:16px;background:'+bg+'">No audio files found.</p>';
@@ -336,7 +327,6 @@
             .then(function(d) { return d.link || null; });
         })
       ).then(function(links) {
-        // Build track data
         var tracks = [];
         files.forEach(function(f, i) {
           if (!links[i]) return;
@@ -348,26 +338,22 @@
 
         if (!tracks.length) return;
 
-        // Build UI
         container.style.background = bg;
         container.style.color = fg;
         container.innerHTML = '';
 
-        // Hidden audio element - one for the whole playlist
         var audio = document.createElement('audio');
         audio.preload = 'none';
         audio.src = tracks[0].src;
         audio.style.display = 'none';
         container.appendChild(audio);
 
-        // Now playing label
         var nowPlaying = document.createElement('div');
         nowPlaying.className = 'twt-playlist-now';
         nowPlaying.style.color = fg;
         nowPlaying.textContent = tracks[0].name;
         container.appendChild(nowPlaying);
 
-        // Player bar
         var playerBar = document.createElement('div');
         playerBar.className = 'twt-playlist-player';
 
@@ -385,7 +371,8 @@
         var handle = document.createElement('div');
         handle.className = 'twt-player-handle';
         handle.style.background = fg;
-        bar.appendChild(fill); bar.appendChild(handle);
+        bar.appendChild(fill);
+        bar.appendChild(handle);
         progress.appendChild(bar);
 
         var time = document.createElement('div');
@@ -400,7 +387,6 @@
         playerBar.appendChild(time);
         container.appendChild(playerBar);
 
-        // Track list
         var list = document.createElement('ul');
         list.className = 'twt-playlist-list';
 
@@ -416,17 +402,13 @@
           time.textContent = '0:00 / 0:00';
           list.querySelectorAll('.twt-playlist-item').forEach(function(item, i) {
             item.classList.toggle('active', i === idx);
-            var playIcon = item.querySelector('.twt-playlist-item-play');
-            if (playIcon) playIcon.textContent = i === idx ? '&#9654;' : '';
+            var pi = item.querySelector('.twt-playlist-item-play');
+            if (pi) pi.innerHTML = i === idx ? '&#9654;' : '';
           });
         }
 
         function playPause() {
-          if (playing) {
-            audio.pause();
-          } else {
-            audio.play();
-          }
+          if (playing) { audio.pause(); } else { audio.play(); }
         }
 
         audio.addEventListener('play', function() {
@@ -442,7 +424,6 @@
           btn.querySelector('.twt-play-icon').innerHTML = '&#9654;';
           fill.style.width = '0%';
           handle.style.left = '0%';
-          // Auto-advance
           if (currentIdx < tracks.length - 1) {
             loadTrack(currentIdx + 1);
             audio.play();
@@ -457,7 +438,6 @@
         });
         audio.addEventListener('loadedmetadata', function() {
           time.textContent = '0:00 / ' + formatTime(audio.duration);
-          // Update duration in list
           var items = list.querySelectorAll('.twt-playlist-item');
           if (items[currentIdx]) {
             var durEl = items[currentIdx].querySelector('.twt-playlist-item-dur');
@@ -465,7 +445,6 @@
           }
         });
 
-        // Scrub
         var scrubbing = false;
         bar.addEventListener('mousedown', function(e) {
           scrubbing = true;
@@ -509,20 +488,13 @@
           item.appendChild(dur);
 
           item.addEventListener('click', function() {
-            if (i === currentIdx) {
-              playPause();
-            } else {
-              loadTrack(i);
-              audio.play();
-            }
+            if (i === currentIdx) { playPause(); } else { loadTrack(i); audio.play(); }
           });
 
           list.appendChild(item);
         });
 
         container.appendChild(list);
-
-        // Preload duration of first track
         audio.load();
       });
     })
@@ -532,10 +504,3 @@
     });
   };
 })();
-
-
-// ============================================================================
-// AUDIO PLAYLIST
-// Same proxy pattern as buildGallery but filters for audio files.
-// Called by embed code generated in the embed tool's Audio tab (folder mode).
-// ============================================================================
