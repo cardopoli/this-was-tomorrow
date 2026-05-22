@@ -54,7 +54,7 @@ body_middle: |-
 
   <div class="audio-track" data-twt-bg="#f03258" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
-    <p class="audio-track-name" style="font-size:12px;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Hazel Tilley, CLT founder and resident at Granby Four Street</p>
+    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Hazel Tilley, CLT founder and resident at Granby Four Street</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/zxi11fhgqn3rdpa5dg8hk/TWT_AUDIO_Granby_Hazel_128kbps_edit.mp3?rlkey=s9m9rrc9uvg4jmnlcx5enpfpt&raw=1&raw=1"></audio>
 
