@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
+
 /* THIS WAS TOMORROW - Site Visit Archive */
 
 /* ---- SELF-HOSTED FONTS ---- */
@@ -68,8 +71,6 @@
     font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
 
 /* ---- VARIABLES ---- */
 
@@ -1066,6 +1067,8 @@ li:not(.status-visited) .location {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .twt-play-icon {
