@@ -28,8 +28,6 @@ dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOP
 body_middle: |-
   ## How it works
 
-  {{< audio-playlist url="https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0" bg="#111111" fg="#f7f5f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
-
   Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
 
   <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
@@ -71,6 +69,8 @@ slug: tinkers-bubble
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
 
 Celebrating its 30th anniversary in January 2024, the village prides itself on being "fossil fuel free" and a pioneer in the UK's off-grid and intentional community sectors. There are times when they find it challenging - the inevitable irritations of living with other people, or getting up in the dark to milk the cows, or mending a fence in the rain. But the community persists.
+
+{{< audio-playlist url="https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0" bg="#f7f5f0" fg="#111111" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
 
 ## Context for this project
 
