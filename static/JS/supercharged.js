@@ -240,7 +240,7 @@
       var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
       audio.currentTime = pct * audio.duration;
     }
-    bar.addEventListener('mousedown', function (e) { scrubbing = true; scrubTo(e); });
+    bar.addEventListener('mousedown', function (e) { if (e.target === btn || btn.contains(e.target)) return; scrubbing = true; scrubTo(e); });
     document.addEventListener('mousemove', function (e) { if (scrubbing) scrubTo(e); });
     document.addEventListener('mouseup', function () { scrubbing = false; });
     bar.addEventListener('touchstart', function (e) { scrubTo(e.touches[0]); }, { passive: true });
