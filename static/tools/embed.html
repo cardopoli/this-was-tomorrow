@@ -863,7 +863,7 @@ function doAud() {
   else if(border==='box') borderStyle='border:1px solid '+fg+';';
   var dataAttrs=' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad+'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize+'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
   var embed='<div class="audio-track"'+dataAttrs+'>\n';
-  if(title&&showTitle) embed+='  <p class="audio-track-name" style="font-size:'+titleSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>\n';
+  if(title&&showTitle) embed+='  <p class="audio-track-name">'+title+'</p>\n';
   embed+='  <audio controls preload="none" style="width:'+w+'" src="'+direct+'"></audio>\n</div>';
   set('aud-out',embed); set('aud-raw',direct); show('aud-outs');
   var pb=document.getElementById('aud-preview-block'); pb.innerHTML='';
@@ -872,7 +872,7 @@ function doAud() {
   mock+='<div style="flex:1;height:2px;background:rgba(128,128,128,0.3)"></div>';
   if(showTimer) mock+='<div style="color:'+fg+';opacity:0.6;font-size:'+timeSize+';font-family:monospace">0:00 / 0:00</div>';
   mock+='</div>';
-  if(title&&showTitle) mock='<p style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">'+title+'</p>'+mock;
+  if(title&&showTitle) mock='<p class="audio-track-name" style="margin-bottom:6px">'+title+'</p>'+mock;
   pb.innerHTML=mock;
   document.getElementById('aud-prev').classList.add('on');
 }
