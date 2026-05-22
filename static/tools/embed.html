@@ -136,7 +136,7 @@ button.cp:hover { background: #f0ede8; }
 <body>
 <div class="app">
   <h1>TWT — Embed Tool</h1>
-  <div class="tagline">Image · Image Layout · Audio · Video · Archive.org · iFrame · Photo Gallery</div>
+  <div class="tagline">Image · Image Layout · Audio · Playlist · Video · Archive.org · iFrame · Gallery</div>
 
   <div class="tabs">
     <button class="tab active" onclick="sw('img')">Image</button>
@@ -146,6 +146,7 @@ button.cp:hover { background: #f0ede8; }
     <button class="tab" onclick="sw('arc')">Archive.org</button>
     <button class="tab" onclick="sw('ifr')">iFrame</button>
     <button class="tab" onclick="sw('gal')">Gallery</button>
+    <button class="tab" onclick="sw('pl')">Playlist</button>
   </div>
 
   <!-- ============ IMAGE ============ -->
@@ -308,23 +309,13 @@ button.cp:hover { background: #f0ede8; }
 
   <!-- ============ AUDIO ============ -->
   <div class="panel" id="panel-aud">
-    <span class="sub">Source</span>
-    <div class="radios" style="margin-bottom:14px">
-      <label><input type="radio" name="aud-source" value="file" checked> Single file</label>
-      <label><input type="radio" name="aud-source" value="folder"> Folder playlist — all audio files in a Dropbox folder</label>
-    </div>
     <div class="sec" id="aud-file-row">
       <label class="fl">Dropbox audio file URL</label>
       <input type="text" id="aud-url" placeholder="https://www.dropbox.com/scl/fi/...mp3..." />
-      <div class="hint">MP3, WAV, M4A or OGG. Paste a single shared file link.</div>
-    </div>
-    <div class="sec" id="aud-folder-row" style="display:none">
-      <label class="fl">Dropbox folder URL</label>
-      <input type="text" id="aud-folder-url" placeholder="https://www.dropbox.com/scl/fo/..." />
-      <div class="hint">Shared folder containing audio files. All MP3/WAV/M4A/OGG files will be listed as a playlist.</div>
+      <div class="hint">MP3, WAV, M4A or OGG. Single shared file link. For folder playlists use the Playlist tab.</div>
     </div>
     <div class="err" id="aud-err">Not a valid Dropbox URL</div>
-    <div class="row" id="aud-meta-row">
+    <div class="row">
       <div><label class="fl">Playlist / track title</label><input type="text" id="aud-title" placeholder="Shown above player" /></div>
       <div><label class="fl">Width</label><input type="text" id="aud-w" value="100%" /></div>
     </div>
@@ -514,6 +505,48 @@ button.cp:hover { background: #f0ede8; }
     </div>
   </div>
 
+
+  <!-- ============ PLAYLIST ============ -->
+  <div class="panel" id="panel-pl">
+    <div class="sec">
+      <label class="fl">Dropbox folder URL</label>
+      <input type="text" id="pl-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="hint">Shared Dropbox folder containing MP3/WAV/M4A/OGG files. Generates a Hugo shortcode — paste into any body field in Sveltia.</div>
+      <div class="err" id="pl-err">Not a valid Dropbox folder URL</div>
+    </div>
+    <hr>
+    <span class="sub">Colour scheme</span>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="radio" name="pl-scheme" value="dark" checked> Dark</label>
+      <label><input type="radio" name="pl-scheme" value="light"> Light</label>
+      <label><input type="radio" name="pl-scheme" value="custom"> Custom</label>
+    </div>
+    <div id="pl-custom-cols" style="display:none">
+      <div class="row">
+        <div><label class="fl">Background</label><input type="text" id="pl-bg" placeholder="#111111" /></div>
+        <div><label class="fl">Foreground</label><input type="text" id="pl-fg" placeholder="#f7f5f0" /></div>
+      </div>
+    </div>
+    <hr>
+    <span class="sub">Size</span>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="radio" name="pl-size" value="normal" checked> Normal</label>
+      <label><input type="radio" name="pl-size" value="compact"> Compact</label>
+      <label><input type="radio" name="pl-size" value="large"> Large</label>
+    </div>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="checkbox" id="pl-show-timer" checked> Show timer</label>
+    </div>
+    <button class="main" onclick="doPl()">Generate shortcode</button>
+    <div class="outs" id="pl-outs">
+      <div class="og">
+        <label class="fl">Hugo shortcode — paste into body_intro / body_middle / body_after in Sveltia</label>
+        <textarea class="out" id="pl-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('pl-out',this)">Copy shortcode</button></div>
+      </div>
+    </div>
+  </div>
+
 </div><!-- .app -->
 
 
@@ -522,7 +555,7 @@ button.cp:hover { background: #f0ede8; }
 var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
 
 /* ---- TABS ---- */
-var tabNames = ['img','lay','aud','vid','arc','ifr','gal'];
+var tabNames = ['img','lay','aud','vid','arc','ifr','gal','pl'];
 function sw(name) {
   document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', tabNames[i]===name); });
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
@@ -700,16 +733,6 @@ function doLayout() {
 
 /* ---- AUDIO ---- */
 
-// Source toggle - file vs folder
-document.querySelectorAll('input[name="aud-source"]').forEach(function(r){
-  r.addEventListener('change', function(){
-    var isFolder = r.value === 'folder';
-    document.getElementById('aud-file-row').style.display = isFolder ? 'none' : 'block';
-    document.getElementById('aud-folder-row').style.display = isFolder ? 'block' : 'none';
-    hide('aud-outs'); hide('aud-err');
-  });
-});
-
 // Show/hide custom colour inputs
 document.querySelectorAll('input[name="aud-scheme"]').forEach(function(r){
   r.addEventListener('change', function(){
@@ -719,11 +742,9 @@ document.querySelectorAll('input[name="aud-scheme"]').forEach(function(r){
 });
 
 function doAud() {
-  var isFolder = document.querySelector('input[name="aud-source"]:checked').value === 'folder';
-  var url = isFolder ? val('aud-folder-url') : val('aud-url');
+  var url = val('aud-url');
   hide('aud-err'); hide('aud-outs');
   if(!url||url.indexOf('dropbox.com')===-1){show('aud-err');return;}
-  if(isFolder){ doAudPlaylist(url); return; }
   var direct=toRaw(url);
   var title=val('aud-title');
   var w=val('aud-w')||'100%';
@@ -957,6 +978,47 @@ function doGal() {
   set('gal-out',embed); show('gal-outs');
 }
 document.getElementById('gal-url').addEventListener('keydown',function(e){if(e.key==='Enter')doGal();});
+
+/* ---- PLAYLIST SHORTCODE ---- */
+
+document.querySelectorAll('input[name="pl-scheme"]').forEach(function(r){
+  r.addEventListener('change', function(){
+    document.getElementById('pl-custom-cols').style.display = r.value==='custom' ? 'block' : 'none';
+  });
+});
+
+function doPl() {
+  var url = val('pl-url');
+  hide('pl-err'); hide('pl-outs');
+  if(!url || url.indexOf('dropbox.com') === -1){ show('pl-err'); return; }
+
+  var scheme = document.querySelector('input[name="pl-scheme"]:checked').value;
+  var size   = document.querySelector('input[name="pl-size"]:checked').value;
+  var timer  = document.getElementById('pl-show-timer').checked ? '1' : '0';
+
+  var bg = '#111111', fg = '#f7f5f0';
+  if(scheme==='light'){ bg='#f7f5f0'; fg='#111111'; }
+  else if(scheme==='custom'){ bg=val('pl-bg')||'#111111'; fg=val('pl-fg')||'#f7f5f0'; }
+
+  var pad     = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
+  var btnsize = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
+  var timesize= size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
+
+  var sc = '{{< audio-playlist';
+  sc += ' url="' + url + '"';
+  sc += ' bg="' + bg + '"';
+  sc += ' fg="' + fg + '"';
+  sc += ' pad="' + pad + '"';
+  sc += ' btnsize="' + btnsize + '"';
+  sc += ' timesize="' + timesize + '"';
+  sc += ' timer="' + timer + '"';
+  sc += ' >}}';
+
+  set('pl-out', sc);
+  show('pl-outs');
+}
+document.getElementById('pl-url').addEventListener('keydown', function(e){ if(e.key==='Enter') doPl(); });
+
 </script>
 </body>
 </html>
