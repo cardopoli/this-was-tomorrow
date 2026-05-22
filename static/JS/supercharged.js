@@ -112,6 +112,18 @@
 // ============================================================================
 
 (function () {
+  // Global scrub state - shared across all players to avoid listener accumulation
+  var _scrubbing = false;
+  var _scrubFn = null;
+
+  document.addEventListener('mousemove', function(e) {
+    if (_scrubbing && _scrubFn) _scrubFn(e);
+  });
+  document.addEventListener('mouseup', function() {
+    _scrubbing = false;
+    _scrubFn = null;
+  });
+
   function formatTime(s) {
     if (isNaN(s)) return '0:00';
     var m = Math.floor(s / 60);
@@ -234,15 +246,17 @@
       time.textContent = '0:00 / ' + formatTime(audio.duration);
     });
 
-    var scrubbing = false;
     function scrubTo(e) {
       var rect = bar.getBoundingClientRect();
       var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
       audio.currentTime = pct * audio.duration;
     }
-    bar.addEventListener('mousedown', function (e) { if (e.target === btn || btn.contains(e.target)) return; scrubbing = true; scrubTo(e); });
-    document.addEventListener('mousemove', function (e) { if (scrubbing) scrubTo(e); });
-    document.addEventListener('mouseup', function () { scrubbing = false; });
+    bar.addEventListener('mousedown', function (e) {
+      if (e.target === btn || btn.contains(e.target)) return;
+      _scrubbing = true;
+      _scrubFn = scrubTo;
+      scrubTo(e);
+    });
     bar.addEventListener('touchstart', function (e) { scrubTo(e.touches[0]); }, { passive: true });
     bar.addEventListener('touchmove', function (e) { scrubTo(e.touches[0]); }, { passive: true });
 
