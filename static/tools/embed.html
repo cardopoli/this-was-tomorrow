@@ -822,7 +822,7 @@ function doAudPlaylist(folderUrl) {
   var parts = [];
   if(title && showTitle) parts.push('<p class="audio-track-name" style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>');
   parts.push('<div class="twt-playlist" id="'+uid+'"'+dataAttrs+' style="'+borderStyle+'"><p style="font-family:monospace;font-size:11px;padding:'+pad+';color:'+fg+';background:'+bg+'">Loading playlist…</p></div>');
-  parts.push('<scr'+'ipt>(function(){function run(){window._twt.buildAudioPlaylist(\'https://dropbox-proxy.cardopoli.workers.dev\',\''+safeUrl+'\',\''+uid+'\');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</s'+'cript>');
+  parts.push('<scr'+'ipt>(function(){function run(){window._twt.buildAudioPlaylist(\'https://dropbox-proxy.cardopoli.workers.dev\',\''+safeUrl+'\',\''+uid+'\');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</scr'+'ipt>');
 
   var embed = parts.join('\n');
   set('aud-out', embed);
