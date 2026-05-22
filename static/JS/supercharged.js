@@ -190,7 +190,8 @@
 
     var playing = false;
 
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      console.log('[TWT] btn clicked, playing='+playing+', target='+e.target.className+', currentTarget='+e.currentTarget.className);
       if (playing) {
         audio.pause();
       } else {
