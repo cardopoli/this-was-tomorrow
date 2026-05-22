@@ -1,0 +1,35 @@
+{{ $url := .Get "url" }}
+{{ $bg := .Get "bg" | default "#111111" }}
+{{ $fg := .Get "fg" | default "#f7f5f0" }}
+{{ $pad := .Get "pad" | default "14px 18px" }}
+{{ $btnsize := .Get "btnsize" | default "14px" }}
+{{ $timesize := .Get "timesize" | default "11px" }}
+{{ $timer := .Get "timer" | default "1" }}
+{{ $id := printf "pl-%s" (now.UnixNano | string) }}
+
+<div class="twt-playlist" id="{{ $id }}"
+  data-twt-bg="{{ $bg }}"
+  data-twt-fg="{{ $fg }}"
+  data-twt-pad="{{ $pad }}"
+  data-twt-btn-size="{{ $btnsize }}"
+  data-twt-time-size="{{ $timesize }}"
+  data-twt-show-timer="{{ $timer }}"
+  style="">
+  <p style="font-family:monospace;font-size:11px;padding:{{ $pad }};color:{{ $fg }};background:{{ $bg }}">Loading playlist&hellip;</p>
+</div>
+<script>
+(function(){
+  function run(){
+    window._twt.buildAudioPlaylist(
+      'https://dropbox-proxy.cardopoli.workers.dev',
+      '{{ $url }}',
+      '{{ $id }}'
+    );
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
+</script>
