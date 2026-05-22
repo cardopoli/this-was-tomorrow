@@ -76,7 +76,11 @@ body_middle: |-
 
   <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">Hazel's Tilley house</p>
 
-  In 2012, thirteen properties were acquired from the council for £1 each. London architecture collective Assemble came in as partners - not to impose a masterplan but to learn from what residents had already begun. Working with low-cost materials and salvage from nearby demolitions, they renovated houses, designed new details, made the ordinary extraordinary.
+  In 2012, thirteen 10 properties were acquired from the council for £1 each. 
+
+  London architecture collective Assemble came in as partners - not to impose a masterplan but to learn from what residents had already begun. Working with low-cost materials and salvage from nearby demolitions, they renovated houses, designed new details, made the ordinary extraordinary.
+
+  The process of restoration started with five, then another 5, 2 of which became the Winter Garden. Then the CLT asked for 2 more houses to replace the 2 residential houses used for the Winter Garden to bring the total back to 10 houses. Later a 13th house was offered, which had been vacant for about 10 years,  had received grant works via Social Landlord and wasn't able to attract further funding. It needed less work to restore than the others. 
 
   In December 2015, Assemble won the Turner Prize - the first time a collective had won it, and the first time it went to architects. The judges praised what they called "a ground-up approach to regeneration, city planning and development in opposition to corporate gentrification." The prize money went back into the project.
 
