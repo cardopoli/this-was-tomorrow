@@ -425,7 +425,7 @@
         }
 
         function playPause() {
-          if (playing) { audio.pause(); } else { audio.play(); }
+          if (playing) { audio.pause(); } else { audio.play().catch(function(){}); }
         }
 
         audio.addEventListener('play', function() {
@@ -443,7 +443,7 @@
           handle.style.left = '0%';
           if (currentIdx < tracks.length - 1) {
             loadTrack(currentIdx + 1);
-            audio.play();
+            audio.play().catch(function(){});
           }
         });
         audio.addEventListener('timeupdate', function() {
@@ -466,12 +466,14 @@
         bar.addEventListener('mousedown', function(e) {
           scrubbing = true;
           var rect = bar.getBoundingClientRect();
-          audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * audio.duration;
+          var dur = audio.duration;
+          if (dur && isFinite(dur)) audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * dur;
         });
         document.addEventListener('mousemove', function(e) {
           if (!scrubbing) return;
           var rect = bar.getBoundingClientRect();
-          audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * audio.duration;
+          var dur = audio.duration;
+          if (dur && isFinite(dur)) audio.currentTime = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width)) * dur;
         });
         document.addEventListener('mouseup', function() { scrubbing = false; });
 
@@ -505,7 +507,7 @@
           item.appendChild(dur);
 
           item.addEventListener('click', function() {
-            if (i === currentIdx) { playPause(); } else { loadTrack(i); audio.play(); }
+            if (i === currentIdx) { playPause(); } else { loadTrack(i); audio.play().catch(function(){}); }
           });
 
           list.appendChild(item);
