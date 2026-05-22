@@ -64,6 +64,9 @@ archives: []
 videos: []
 sources: []
 links: ''
+dropbox_audio_playlist: 'https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0'
+playlist_bg: '#041801'
+playlist_fg: '#ffffff'
 slug: tinkers-bubble
 ---
 
