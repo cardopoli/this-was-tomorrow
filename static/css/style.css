@@ -1030,12 +1030,11 @@ li:not(.status-visited) .location {
 }
 
 .audio-track-name {
-  font-family: var(--condensed);
-  font-size: 9px;
-  color: var(--text);
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .audio-track audio {
