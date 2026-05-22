@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TWT — Embed Tool</title>
+<title>TWT — Studio</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -11,9 +11,8 @@ body {
   font-family: 'Courier New', monospace;
   min-height: 100vh;
   padding: 48px 16px;
-  text-align: left;
 }
-.app { width: 100%; max-width: 700px; margin: 0 auto; }
+.app { width: 100%; max-width: 740px; margin: 0 auto; }
 h1 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #111; margin-bottom: 4px; }
 .tagline { font-size: 10px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 2px solid #111; }
 
@@ -23,22 +22,22 @@ h1 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacin
   font-family: 'Courier New', monospace; font-size: 9px; font-weight: 700;
   text-transform: uppercase; letter-spacing: 1px;
   background: #fff; color: #999; border: none; border-right: 1px solid #ccc;
-  padding: 11px 10px; cursor: pointer; transition: all 0.15s;
-  text-align: center; line-height: 1.4; flex: 1;
+  padding: 11px 8px; cursor: pointer; transition: all 0.15s;
+  text-align: center; line-height: 1.4; flex: 1; min-width: 0;
 }
 .tab:last-child { border-right: none; }
 .tab:hover { background: #f0ede8; color: #111; }
 .tab.active { background: #111; color: #f7f5f0; }
-
 .panel { display: none; }
 .panel.active { display: block; }
 
+/* FORM ELEMENTS */
 label.fl { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 7px; }
 input[type="text"], textarea, select {
   width: 100%; font-family: 'Courier New', monospace; font-size: 12px;
   background: #fff; border: 1px solid #ccc; padding: 10px 12px;
   color: #111; outline: none; resize: none; transition: border-color 0.15s;
-  text-align: left; -webkit-appearance: none; appearance: none;
+  -webkit-appearance: none; appearance: none;
 }
 input[type="text"]:focus, textarea:focus, select:focus { border-color: #111; }
 select {
@@ -54,6 +53,7 @@ hr { border: none; border-top: 1px solid #ccc; margin: 18px 0; }
 .radios label { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #444; cursor: pointer; }
 .hint { font-size: 10px; color: #999; margin-top: 5px; line-height: 1.5; }
 
+/* BUTTONS */
 button.main {
   width: 100%; font-family: 'Courier New', monospace; font-size: 11px;
   font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
@@ -61,12 +61,12 @@ button.main {
   cursor: pointer; margin: 18px 0 0; transition: background 0.15s;
 }
 button.main:hover { background: #333; }
-button.main:disabled { background: #999; cursor: default; }
 
+/* OUTPUT */
 .outs { display: none; margin-top: 22px; }
 .outs.on { display: block; }
 .og { margin-bottom: 14px; }
-textarea.out { font-size: 11px; line-height: 1.5; direction: ltr; height: 90px; }
+textarea.out { font-size: 11px; line-height: 1.5; height: 90px; }
 textarea.out.sm { height: 48px; }
 textarea.out.lg { height: 160px; }
 textarea.out.xl { height: 220px; }
@@ -85,11 +85,29 @@ button.cp:hover { background: #f0ede8; }
 .prev.on { display: block; }
 .pi { padding: 14px; }
 .pl { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 10px; display: block; }
-.prev img { max-width: 100%; display: block; }
-.prev-cap { font-size: 11px; color: #666; margin-top: 7px; font-style: italic; }
-.prev audio, .prev iframe, .prev video { width: 100%; margin-top: 8px; display: block; }
 
-/* IMAGE LAYOUT PANEL */
+/* COLOUR PICKER */
+.palette { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.swatch {
+  width: 28px; height: 28px; border-radius: 2px; cursor: pointer;
+  border: 2px solid transparent; transition: border-color 0.15s;
+  flex-shrink: 0;
+}
+.swatch:hover, .swatch.sel { border-color: #111; }
+.color-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.color-input-wrap { position: relative; }
+.color-input-wrap input[type="color"] {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0; cursor: pointer; padding: 0; border: none;
+}
+.color-preview {
+  width: 100%; height: 40px; border: 1px solid #ccc; cursor: pointer;
+  display: flex; align-items: center; padding: 0 10px; gap: 8px;
+}
+.color-preview-swatch { width: 20px; height: 20px; flex-shrink: 0; }
+.color-preview-hex { font-family: 'Courier New', monospace; font-size: 12px; }
+
+/* LAYOUT CARDS */
 .layout-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
 .layout-card {
   border: 2px solid #ccc; padding: 14px 10px 10px; cursor: pointer;
@@ -123,30 +141,47 @@ button.cp:hover { background: #f0ede8; }
   background: none; border: none; letter-spacing: 1px;
 }
 
-/* Layout preview mini-renders */
-.lc-icon.single div { height: 100%; }
-.lc-icon.double div { height: 100%; }
-.lc-icon.triple div { height: 100%; }
-.lc-icon.portrait div:first-child { flex: 0.7; }
-.lc-icon.portrait div:last-child { flex: 1.4; }
-.lc-icon.left-wide div:first-child { flex: 1.8; }
-.lc-icon.left-wide div:last-child { flex: 1; }
+/* SNIPPETS */
+.snippet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.snippet-card {
+  border: 1px solid #ccc; padding: 14px; cursor: pointer;
+  background: #fff; transition: all 0.15s;
+}
+.snippet-card:hover { border-color: #111; background: #f7f5f0; }
+.snippet-card .sc-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.snippet-card .sc-desc { font-size: 10px; color: #666; line-height: 1.5; }
+
+/* TYPOGRAPHY */
+.type-preview {
+  border: 1px solid #ccc; padding: 24px; background: #fff; margin-top: 14px;
+}
+.type-preview-text { line-height: 1.7; }
+
+/* CHEATSHEET */
+.cheat-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.cheat-table td { padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+.cheat-table td:first-child { font-weight: 700; white-space: nowrap; width: 40%; }
+.cheat-table td code { background: #f0ede8; padding: 2px 5px; font-family: 'Courier New', monospace; font-size: 10px; }
 </style>
 </head>
 <body>
 <div class="app">
-  <h1>TWT — Embed Tool</h1>
-  <div class="tagline">Image · Image Layout · Audio · Playlist · Video · Archive.org · iFrame · Gallery</div>
+  <h1>TWT - Studio</h1>
+  <div class="tagline">Embed · Colour · CSS · Typography · Snippets · Cheatsheet</div>
 
   <div class="tabs">
     <button class="tab active" onclick="sw('img')">Image</button>
-    <button class="tab" onclick="sw('lay')">Image Layout</button>
+    <button class="tab" onclick="sw('lay')">Layout</button>
     <button class="tab" onclick="sw('aud')">Audio</button>
-    <button class="tab" onclick="sw('vid')">Video</button>
-    <button class="tab" onclick="sw('arc')">Archive.org</button>
-    <button class="tab" onclick="sw('ifr')">iFrame</button>
-    <button class="tab" onclick="sw('gal')">Gallery</button>
     <button class="tab" onclick="sw('pl')">Playlist</button>
+    <button class="tab" onclick="sw('vid')">Video</button>
+    <button class="tab" onclick="sw('gal')">Gallery</button>
+    <button class="tab" onclick="sw('ifr')">iFrame</button>
+    <button class="tab" onclick="sw('col')">Colour</button>
+    <button class="tab" onclick="sw('css')">CSS</button>
+    <button class="tab" onclick="sw('typ')">Type</button>
+    <button class="tab" onclick="sw('snip')">Snippets</button>
+    <button class="tab" onclick="sw('ref')">Ref</button>
   </div>
 
   <!-- ============ IMAGE ============ -->
@@ -154,7 +189,7 @@ button.cp:hover { background: #f0ede8; }
     <div class="sec">
       <label class="fl">Dropbox image URL</label>
       <input type="text" id="img-url" placeholder="https://www.dropbox.com/scl/fi/..." />
-      <div class="hint">Paste a shared Dropbox file link - any format (dl=0, raw=1, etc)</div>
+      <div class="hint">Paste a shared Dropbox file link</div>
       <div class="err" id="img-err">Not a valid Dropbox URL</div>
     </div>
     <div class="row3">
@@ -164,9 +199,7 @@ button.cp:hover { background: #f0ede8; }
         <label class="fl">Alignment</label>
         <select id="img-al">
           <option value="">None</option>
-          <option value="left">Left</option>
           <option value="center">Centre</option>
-          <option value="right">Right</option>
           <option value="float-left">Float left</option>
           <option value="float-right">Float right</option>
         </select>
@@ -182,27 +215,20 @@ button.cp:hover { background: #f0ede8; }
       <label><input type="radio" name="ifmt" value="html" checked> HTML</label>
       <label><input type="radio" name="ifmt" value="figure"> Figure + caption</label>
       <label><input type="radio" name="ifmt" value="md"> Markdown</label>
-      <label><input type="radio" name="ifmt" value="url"> URL only</label>
     </div>
     <button class="main" onclick="doImg()">Generate</button>
     <div class="outs" id="img-outs">
-      <div class="og" id="img-eg">
+      <div class="og">
         <label class="fl" id="img-el">Embed code</label>
         <textarea class="out" id="img-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('img-out',this)">Copy embed</button></div>
+        <div class="br"><button class="cp" onclick="cp('img-out',this)">Copy</button></div>
       </div>
-      <div class="og" style="margin-top:12px">
+      <div class="og" style="margin-top:10px">
         <label class="fl">Raw URL</label>
         <textarea class="out sm" id="img-raw" readonly onclick="this.select()"></textarea>
         <div class="br"><button class="cp" onclick="cp('img-raw',this)">Copy URL</button></div>
       </div>
-      <div class="prev" id="img-prev">
-        <div class="pi">
-          <span class="pl">Preview</span>
-          <img id="img-pi" src="" alt="" />
-          <div class="prev-cap" id="img-pc" style="display:none"></div>
-        </div>
-      </div>
+      <div class="prev" id="img-prev"><div class="pi"><span class="pl">Preview</span><img id="img-pi" src="" alt="" /><div class="prev-cap" id="img-pc" style="display:none;font-size:11px;color:#666;margin-top:7px;font-style:italic"></div></div></div>
     </div>
   </div>
 
@@ -216,120 +242,86 @@ button.cp:hover { background: #f0ede8; }
       </div>
       <div class="layout-card" onclick="selectLayout('double',this)">
         <div class="lc-icon double"><div></div><div></div></div>
-        <div class="lc-label">Double — side by side</div>
+        <div class="lc-label">Double</div>
       </div>
       <div class="layout-card" onclick="selectLayout('triple',this)">
         <div class="lc-icon triple"><div></div><div></div><div></div></div>
-        <div class="lc-label">Triple — three across</div>
+        <div class="lc-label">Triple</div>
       </div>
       <div class="layout-card" onclick="selectLayout('portrait',this)">
-        <div class="lc-icon portrait"><div></div><div style="flex:1.4"></div></div>
+        <div class="lc-icon portrait"><div style="flex:0.65"></div><div style="flex:1"></div></div>
         <div class="lc-label">Portrait + Landscape</div>
       </div>
       <div class="layout-card" onclick="selectLayout('left-wide',this)">
-        <div class="lc-icon left-wide"><div></div><div></div></div>
-        <div class="lc-label">Wide left + Narrow right</div>
+        <div class="lc-icon left-wide"><div style="flex:1.75"></div><div style="flex:1"></div></div>
+        <div class="lc-label">Wide left</div>
       </div>
       <div class="layout-card" onclick="selectLayout('stacked',this)">
         <div class="lc-icon" style="flex-direction:column;gap:3px"><div style="flex:1;width:100%"></div><div style="flex:1;width:100%"></div></div>
-        <div class="lc-label">Stacked pair</div>
+        <div class="lc-label">Stacked</div>
       </div>
     </div>
-
-    <div class="hint" style="margin-bottom:16px">All images open in lightbox when clicked (requires supercharged.js on site). Gap between images is 4px.</div>
-
-    <!-- Slot 1 - always shown -->
+    <div class="hint" style="margin-bottom:16px">Images open in lightbox when clicked. Gap: 4px.</div>
     <div class="img-slot" id="lay-slot-1">
       <span class="img-slot-title">Image 1</span>
-      <div class="sec" style="margin-bottom:10px">
-        <label class="fl">Dropbox URL</label>
-        <input type="text" id="lay-url-1" placeholder="https://www.dropbox.com/scl/fi/..." />
-      </div>
+      <div class="sec" style="margin-bottom:10px"><label class="fl">Dropbox URL</label><input type="text" id="lay-url-1" placeholder="https://www.dropbox.com/scl/fi/..." /></div>
       <div class="row" style="margin-bottom:0">
-        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-1" placeholder="Describe the image" /></div>
-        <div><label class="fl">Caption</label><input type="text" id="lay-cap-1" placeholder="Optional" /></div>
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-1" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-1" /></div>
       </div>
     </div>
-
-    <!-- Slot 2 -->
     <div class="img-slot slot-hidden" id="lay-slot-2">
       <span class="img-slot-title">Image 2</span>
-      <div class="sec" style="margin-bottom:10px">
-        <label class="fl">Dropbox URL</label>
-        <input type="text" id="lay-url-2" placeholder="https://www.dropbox.com/scl/fi/..." />
-      </div>
+      <div class="sec" style="margin-bottom:10px"><label class="fl">Dropbox URL</label><input type="text" id="lay-url-2" placeholder="https://www.dropbox.com/scl/fi/..." /></div>
       <div class="row" style="margin-bottom:0">
-        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-2" placeholder="Describe the image" /></div>
-        <div><label class="fl">Caption</label><input type="text" id="lay-cap-2" placeholder="Optional" /></div>
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-2" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-2" /></div>
       </div>
     </div>
-
-    <!-- Slot 3 -->
     <div class="img-slot slot-hidden" id="lay-slot-3">
       <span class="img-slot-title">Image 3</span>
-      <div class="sec" style="margin-bottom:10px">
-        <label class="fl">Dropbox URL</label>
-        <input type="text" id="lay-url-3" placeholder="https://www.dropbox.com/scl/fi/..." />
-      </div>
+      <div class="sec" style="margin-bottom:10px"><label class="fl">Dropbox URL</label><input type="text" id="lay-url-3" placeholder="https://www.dropbox.com/scl/fi/..." /></div>
       <div class="row" style="margin-bottom:0">
-        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-3" placeholder="Describe the image" /></div>
-        <div><label class="fl">Caption</label><input type="text" id="lay-cap-3" placeholder="Optional" /></div>
+        <div><label class="fl">Alt text</label><input type="text" id="lay-alt-3" /></div>
+        <div><label class="fl">Caption</label><input type="text" id="lay-cap-3" /></div>
       </div>
     </div>
-
-    <div class="sec" style="margin-top:4px">
-      <label class="fl">Overall caption / group caption</label>
-      <input type="text" id="lay-group-cap" placeholder="Optional - shown below the layout" />
-    </div>
-
-    <hr>
-    <span class="sub">Lightbox</span>
-    <div class="radios" style="margin-bottom:14px">
-      <label><input type="radio" name="lbox" value="yes" checked> Yes — images open in lightbox</label>
-      <label><input type="radio" name="lbox" value="no"> No — plain images</label>
-    </div>
-
+    <div class="sec" style="margin-top:4px"><label class="fl">Group caption</label><input type="text" id="lay-group-cap" placeholder="Optional - shown below layout" /></div>
     <div class="err" id="lay-err">Add at least one valid Dropbox URL</div>
     <button class="main" onclick="doLayout()">Generate</button>
-
     <div class="outs" id="lay-outs">
       <div class="og">
-        <label class="fl">Embed code — paste into Sveltia body field (raw mode)</label>
+        <label class="fl">Embed code</label>
         <textarea class="out xl" id="lay-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('lay-out',this)">Copy embed</button></div>
+        <div class="br"><button class="cp" onclick="cp('lay-out',this)">Copy</button></div>
       </div>
-      <div class="prev" id="lay-prev">
-        <div class="pi">
-          <span class="pl">Preview</span>
-          <div id="lay-pp"></div>
-        </div>
-      </div>
+      <div class="prev" id="lay-prev"><div class="pi"><span class="pl">Preview</span><div id="lay-pp"></div></div></div>
     </div>
   </div>
 
   <!-- ============ AUDIO ============ -->
   <div class="panel" id="panel-aud">
-    <div class="sec" id="aud-file-row">
+    <div class="sec">
       <label class="fl">Dropbox audio file URL</label>
       <input type="text" id="aud-url" placeholder="https://www.dropbox.com/scl/fi/...mp3..." />
-      <div class="hint">MP3, WAV, M4A or OGG. Single shared file link. For folder playlists use the Playlist tab.</div>
+      <div class="hint">Single MP3/WAV/M4A/OGG file. For folder playlists use the Playlist tab.</div>
+      <div class="err" id="aud-err">Not a valid Dropbox URL</div>
     </div>
-    <div class="err" id="aud-err">Not a valid Dropbox URL</div>
     <div class="row">
-      <div><label class="fl">Playlist / track title</label><input type="text" id="aud-title" placeholder="Shown above player" /></div>
+      <div><label class="fl">Track title</label><input type="text" id="aud-title" placeholder="Shown above player" /></div>
       <div><label class="fl">Width</label><input type="text" id="aud-w" value="100%" /></div>
     </div>
     <hr>
     <span class="sub">Colour scheme</span>
     <div class="radios" style="margin-bottom:14px">
-      <label><input type="radio" name="aud-scheme" value="dark" checked> Dark — black player, cream text</label>
-      <label><input type="radio" name="aud-scheme" value="light"> Light — cream player, black text</label>
-      <label><input type="radio" name="aud-scheme" value="custom"> Custom colours</label>
+      <label><input type="radio" name="aud-scheme" value="dark" checked> Dark</label>
+      <label><input type="radio" name="aud-scheme" value="light"> Light</label>
+      <label><input type="radio" name="aud-scheme" value="custom"> Custom</label>
     </div>
     <div id="aud-custom-cols" style="display:none">
       <div class="row">
         <div><label class="fl">Background</label><input type="text" id="aud-bg" placeholder="#111111" /></div>
-        <div><label class="fl">Foreground / text</label><input type="text" id="aud-fg" placeholder="#f7f5f0" /></div>
+        <div><label class="fl">Foreground</label><input type="text" id="aud-fg" placeholder="#f7f5f0" /></div>
       </div>
     </div>
     <hr>
@@ -339,179 +331,36 @@ button.cp:hover { background: #f0ede8; }
       <label><input type="radio" name="aud-size" value="compact"> Compact</label>
       <label><input type="radio" name="aud-size" value="large"> Large</label>
     </div>
-    <hr>
-    <span class="sub">Options</span>
-    <div class="radios" style="margin-bottom:6px">
+    <div class="radios" style="margin-bottom:14px">
       <label><input type="checkbox" id="aud-show-timer" checked> Show timer</label>
-      <label><input type="checkbox" id="aud-show-title" checked> Show title label</label>
+      <label><input type="checkbox" id="aud-show-title" checked> Show title</label>
     </div>
-    <div class="sec" style="margin-top:10px">
-      <label class="fl">Border style</label>
-      <select id="aud-border">
-        <option value="none">None</option>
-        <option value="rule">Top rule only</option>
-        <option value="box">Full border box</option>
-      </select>
+    <div class="sec">
+      <label class="fl">Border</label>
+      <select id="aud-border"><option value="none">None</option><option value="rule">Top rule</option><option value="box">Full box</option></select>
     </div>
     <button class="main" onclick="doAud()">Generate</button>
     <div class="outs" id="aud-outs">
       <div class="og">
         <label class="fl">Embed code</label>
         <textarea class="out lg" id="aud-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('aud-out',this)">Copy embed</button></div>
+        <div class="br"><button class="cp" onclick="cp('aud-out',this)">Copy</button></div>
       </div>
-      <div class="og" style="margin-top:12px">
+      <div class="og" style="margin-top:10px">
         <label class="fl">Raw URL</label>
         <textarea class="out sm" id="aud-raw" readonly onclick="this.select()"></textarea>
         <div class="br"><button class="cp" onclick="cp('aud-raw',this)">Copy URL</button></div>
       </div>
-      <div class="prev" id="aud-prev">
-        <div class="pi">
-          <span class="pl">Preview — colours only (player controls via supercharged.js on live site)</span>
-          <div id="aud-preview-block"></div>
-        </div>
-      </div>
+      <div class="prev" id="aud-prev"><div class="pi"><span class="pl">Preview</span><div id="aud-preview-block"></div></div></div>
     </div>
   </div>
-
-  <!-- ============ VIDEO ============ -->
-  <div class="panel" id="panel-vid">
-    <div class="sec">
-      <label class="fl">Video URL</label>
-      <input type="text" id="vid-url" placeholder="YouTube, Vimeo, or any video URL" />
-      <div class="hint">YouTube: youtube.com/watch?v=... or youtu.be/... · Vimeo: vimeo.com/... · Also accepts direct MP4 links.</div>
-      <div class="err" id="vid-err">Enter a valid video URL</div>
-    </div>
-    <div class="row">
-      <div><label class="fl">Width</label><input type="text" id="vid-w" value="100%" /></div>
-      <div><label class="fl">Aspect ratio</label>
-        <select id="vid-ar">
-          <option value="56.25">16:9 (default)</option>
-          <option value="75">4:3</option>
-          <option value="100">1:1 square</option>
-          <option value="42.86">21:9 ultrawide</option>
-        </select>
-      </div>
-    </div>
-    <div class="sec">
-      <label class="fl">Caption</label>
-      <input type="text" id="vid-cap" placeholder="Optional" />
-    </div>
-    <button class="main" onclick="doVid()">Generate</button>
-    <div class="outs" id="vid-outs">
-      <div class="og">
-        <label class="fl">Embed code</label>
-        <textarea class="out lg" id="vid-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('vid-out',this)">Copy embed</button></div>
-      </div>
-      <div class="prev" id="vid-prev">
-        <div class="pi">
-          <span class="pl">Preview</span>
-          <div id="vid-pp"></div>
-          <div class="prev-cap" id="vid-pc" style="display:none;margin-top:8px"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ ARCHIVE.ORG ============ -->
-  <div class="panel" id="panel-arc">
-    <div class="sec">
-      <label class="fl">Archive.org URL</label>
-      <input type="text" id="arc-url" placeholder="https://archive.org/details/..." />
-      <div class="hint">Paste the page URL - e.g. archive.org/details/my-recording - the tool builds the embed automatically.</div>
-      <div class="err" id="arc-err">Enter a valid Archive.org URL</div>
-    </div>
-    <div class="row">
-      <div><label class="fl">Width</label><input type="text" id="arc-w" value="100%" /></div>
-      <div><label class="fl">Height</label><input type="text" id="arc-h" value="60" /></div>
-    </div>
-    <div class="sec">
-      <label class="fl">Title / label</label>
-      <input type="text" id="arc-title" placeholder="Optional - shown above player" />
-    </div>
-    <hr>
-    <span class="sub">Player type</span>
-    <div class="radios">
-      <label><input type="radio" name="arctype" value="audio" checked> Audio player (slim)</label>
-      <label><input type="radio" name="arctype" value="playlist"> Playlist player</label>
-      <label><input type="radio" name="arctype" value="full"> Full embed</label>
-    </div>
-    <button class="main" onclick="doArc()">Generate</button>
-    <div class="outs" id="arc-outs">
-      <div class="og">
-        <label class="fl">Embed code</label>
-        <textarea class="out lg" id="arc-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('arc-out',this)">Copy embed</button></div>
-      </div>
-      <div class="prev" id="arc-prev">
-        <div class="pi">
-          <span class="pl">Preview</span>
-          <div id="arc-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
-          <div id="arc-pp"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ IFRAME ============ -->
-  <div class="panel" id="panel-ifr">
-    <div class="sec">
-      <label class="fl">Any URL to embed</label>
-      <input type="text" id="ifr-url" placeholder="https://..." />
-      <div class="hint">Maps, custom players, websites, tools - anything that can be iframed.</div>
-      <div class="err" id="ifr-err">Enter a valid URL</div>
-    </div>
-    <div class="row">
-      <div><label class="fl">Width</label><input type="text" id="ifr-w" value="100%" /></div>
-      <div><label class="fl">Height</label><input type="text" id="ifr-h" value="400px" /></div>
-    </div>
-    <div class="sec">
-      <label class="fl">Title / label</label>
-      <input type="text" id="ifr-title" placeholder="Optional - shown above" />
-    </div>
-    <button class="main" onclick="doIfr()">Generate</button>
-    <div class="outs" id="ifr-outs">
-      <div class="og">
-        <label class="fl">Embed code</label>
-        <textarea class="out" id="ifr-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('ifr-out',this)">Copy embed</button></div>
-      </div>
-      <div class="prev" id="ifr-prev">
-        <div class="pi">
-          <span class="pl">Preview</span>
-          <div id="ifr-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div>
-          <div id="ifr-pp"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============ GALLERY ============ -->
-  <div class="panel" id="panel-gal">
-    <div class="sec">
-      <label class="fl">Dropbox shared folder URL</label>
-      <input type="text" id="gal-url" placeholder="https://www.dropbox.com/scl/fo/..." />
-      <div class="hint">Shared folder containing photos. Generates the dynamic gallery embed for the site body field (raw mode).</div>
-      <div class="err" id="gal-err">Not a valid Dropbox folder URL</div>
-    </div>
-    <button class="main" onclick="doGal()">Generate</button>
-    <div class="outs" id="gal-outs">
-      <div class="og">
-        <label class="fl">Embed code — paste into Sveltia body field (raw mode)</label>
-        <textarea class="out lg" id="gal-out" readonly onclick="this.select()"></textarea>
-        <div class="br"><button class="cp" onclick="cp('gal-out',this)">Copy embed</button></div>
-      </div>
-    </div>
-  </div>
-
 
   <!-- ============ PLAYLIST ============ -->
   <div class="panel" id="panel-pl">
     <div class="sec">
       <label class="fl">Dropbox folder URL</label>
       <input type="text" id="pl-url" placeholder="https://www.dropbox.com/scl/fo/..." />
-      <div class="hint">Shared Dropbox folder containing MP3/WAV/M4A/OGG files. Generates a Hugo shortcode — paste into any body field in Sveltia.</div>
+      <div class="hint">Shared folder containing MP3/WAV/M4A/OGG. Generates a Hugo shortcode.</div>
       <div class="err" id="pl-err">Not a valid Dropbox folder URL</div>
     </div>
     <hr>
@@ -540,22 +389,326 @@ button.cp:hover { background: #f0ede8; }
     <button class="main" onclick="doPl()">Generate shortcode</button>
     <div class="outs" id="pl-outs">
       <div class="og">
-        <label class="fl">Hugo shortcode — paste into body_intro / body_middle / body_after in Sveltia</label>
+        <label class="fl">Hugo shortcode - paste into body_intro / body_middle / body_after</label>
         <textarea class="out" id="pl-out" readonly onclick="this.select()"></textarea>
         <div class="br"><button class="cp" onclick="cp('pl-out',this)">Copy shortcode</button></div>
       </div>
     </div>
   </div>
 
+  <!-- ============ VIDEO ============ -->
+  <div class="panel" id="panel-vid">
+    <hr>
+    <span class="sub">Source</span>
+    <div class="radios" style="margin-bottom:14px">
+      <label><input type="radio" name="vid-source" value="dropbox" checked> Dropbox file</label>
+      <label><input type="radio" name="vid-source" value="url"> YouTube / Vimeo / URL</label>
+    </div>
+    <div class="sec" id="vid-dropbox-row">
+      <label class="fl">Dropbox video file URL</label>
+      <input type="text" id="vid-dbx-url" placeholder="https://www.dropbox.com/scl/fi/...mp4..." />
+      <div class="hint">MP4, MOV or WebM. Generates a native video player - no YouTube branding.</div>
+    </div>
+    <div class="sec" id="vid-url-row" style="display:none">
+      <label class="fl">YouTube / Vimeo URL</label>
+      <input type="text" id="vid-url" placeholder="https://youtube.com/watch?v=... or vimeo.com/..." />
+    </div>
+    <div class="err" id="vid-err">Enter a valid video URL</div>
+    <div class="row">
+      <div><label class="fl">Width</label><input type="text" id="vid-w" value="100%" /></div>
+      <div><label class="fl">Aspect ratio</label>
+        <select id="vid-ar">
+          <option value="56.25">16:9</option>
+          <option value="75">4:3</option>
+          <option value="100">1:1</option>
+        </select>
+      </div>
+    </div>
+    <div class="sec"><label class="fl">Caption</label><input type="text" id="vid-cap" placeholder="Optional" /></div>
+    <button class="main" onclick="doVid()">Generate</button>
+    <div class="outs" id="vid-outs">
+      <div class="og">
+        <label class="fl">Embed code</label>
+        <textarea class="out lg" id="vid-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('vid-out',this)">Copy</button></div>
+      </div>
+      <div class="prev" id="vid-prev"><div class="pi"><span class="pl">Preview</span><div id="vid-pp"></div><div id="vid-pc" style="display:none;font-size:11px;color:#666;margin-top:8px;font-style:italic"></div></div></div>
+    </div>
+  </div>
+
+  <!-- ============ GALLERY ============ -->
+  <div class="panel" id="panel-gal">
+    <div class="sec">
+      <label class="fl">Dropbox shared folder URL</label>
+      <input type="text" id="gal-url" placeholder="https://www.dropbox.com/scl/fo/..." />
+      <div class="hint">Shared folder of photos. Generates a dynamic masonry gallery with lightbox.</div>
+      <div class="err" id="gal-err">Not a valid Dropbox folder URL</div>
+    </div>
+    <button class="main" onclick="doGal()">Generate</button>
+    <div class="outs" id="gal-outs">
+      <div class="og">
+        <label class="fl">Embed code - paste into Sveltia body field (raw mode)</label>
+        <textarea class="out lg" id="gal-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('gal-out',this)">Copy</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ IFRAME ============ -->
+  <div class="panel" id="panel-ifr">
+    <div class="sec">
+      <label class="fl">URL to embed</label>
+      <input type="text" id="ifr-url" placeholder="https://..." />
+      <div class="hint">Maps, tools, external content.</div>
+      <div class="err" id="ifr-err">Enter a valid URL</div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Width</label><input type="text" id="ifr-w" value="100%" /></div>
+      <div><label class="fl">Height</label><input type="text" id="ifr-h" value="400px" /></div>
+    </div>
+    <div class="sec"><label class="fl">Label</label><input type="text" id="ifr-title" placeholder="Optional" /></div>
+    <button class="main" onclick="doIfr()">Generate</button>
+    <div class="outs" id="ifr-outs">
+      <div class="og">
+        <label class="fl">Embed code</label>
+        <textarea class="out" id="ifr-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('ifr-out',this)">Copy</button></div>
+      </div>
+      <div class="prev" id="ifr-prev"><div class="pi"><span class="pl">Preview</span><div id="ifr-pt" style="font-size:11px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;display:none"></div><div id="ifr-pp"></div></div></div>
+    </div>
+  </div>
+
+  <!-- ============ COLOUR ============ -->
+  <div class="panel" id="panel-col">
+    <p style="font-size:11px;color:#666;margin-bottom:18px;line-height:1.6">Pick colours for your embeds. TWT palette presets below, or use the custom pickers.</p>
+    <span class="sub">TWT palette</span>
+    <div class="palette" id="col-palette"></div>
+    <hr>
+    <span class="sub">Custom pickers</span>
+    <div class="color-row">
+      <div>
+        <label class="fl">Colour A</label>
+        <div class="color-input-wrap">
+          <div class="color-preview" id="col-a-preview">
+            <div class="color-preview-swatch" id="col-a-swatch" style="background:#111111"></div>
+            <span class="color-preview-hex" id="col-a-hex">#111111</span>
+          </div>
+          <input type="color" id="col-a" value="#111111" oninput="updateColour('a')">
+        </div>
+      </div>
+      <div>
+        <label class="fl">Colour B</label>
+        <div class="color-input-wrap">
+          <div class="color-preview" id="col-b-preview">
+            <div class="color-preview-swatch" id="col-b-swatch" style="background:#f7f5f0"></div>
+            <span class="color-preview-hex" id="col-b-hex">#f7f5f0</span>
+          </div>
+          <input type="color" id="col-b" value="#f7f5f0" oninput="updateColour('b')">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <span class="sub">Output</span>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="flex:1;min-width:200px">
+        <label class="fl">Colour A</label>
+        <div style="position:relative">
+          <textarea class="out sm" id="col-a-out" readonly onclick="this.select()" style="height:40px;padding:10px 12px"></textarea>
+          <div class="br" style="margin-top:6px"><button class="cp" onclick="cp('col-a-out',this)">Copy A</button></div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:200px">
+        <label class="fl">Colour B</label>
+        <div style="position:relative">
+          <textarea class="out sm" id="col-b-out" readonly onclick="this.select()" style="height:40px;padding:10px 12px"></textarea>
+          <div class="br" style="margin-top:6px"><button class="cp" onclick="cp('col-b-out',this)">Copy B</button></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:10px">
+      <label class="fl">Preview - A on B / B on A</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px">
+        <div id="col-preview-ab" style="padding:20px;font-family:'Courier New',monospace;font-size:13px">Aa Bb Cc</div>
+        <div id="col-preview-ba" style="padding:20px;font-family:'Courier New',monospace;font-size:13px">Aa Bb Cc</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CSS TWEAKS ============ -->
+  <div class="panel" id="panel-css">
+    <p style="font-size:11px;color:#666;margin-bottom:18px;line-height:1.6">Generate CSS snippets for common tweaks. Copy into your style.css or Sveltia custom CSS field.</p>
+    <span class="sub">Element</span>
+    <div class="sec">
+      <select id="css-el" onchange="updateCssPreview()">
+        <option value="article p">Body text (article p)</option>
+        <option value="article h2">Section heading (article h2)</option>
+        <option value="article h3">Sub heading (article h3)</option>
+        <option value=".site-header h1">Site title</option>
+        <option value=".site-header .tagline">Tagline</option>
+        <option value=".audio-track-name">Audio track label</option>
+        <option value=".twt-player">Audio player</option>
+        <option value=".meta">Meta line</option>
+        <option value=".site-footer">Footer</option>
+        <option value="custom">Custom selector...</option>
+      </select>
+    </div>
+    <div class="sec" id="css-custom-sel" style="display:none">
+      <label class="fl">Custom selector</label>
+      <input type="text" id="css-custom" placeholder=".my-class" oninput="updateCssPreview()" />
+    </div>
+    <hr>
+    <span class="sub">Properties</span>
+    <div class="row">
+      <div><label class="fl">Font size</label><input type="text" id="css-fs" placeholder="e.g. 16px" oninput="updateCssPreview()" /></div>
+      <div><label class="fl">Line height</label><input type="text" id="css-lh" placeholder="e.g. 1.8" oninput="updateCssPreview()" /></div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Color</label><input type="text" id="css-col" placeholder="e.g. #111 or var(--text)" oninput="updateCssPreview()" /></div>
+      <div><label class="fl">Font family</label><input type="text" id="css-ff" placeholder="e.g. var(--mono)" oninput="updateCssPreview()" /></div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Margin top</label><input type="text" id="css-mt" placeholder="e.g. 32px" oninput="updateCssPreview()" /></div>
+      <div><label class="fl">Margin bottom</label><input type="text" id="css-mb" placeholder="e.g. 32px" oninput="updateCssPreview()" /></div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Letter spacing</label><input type="text" id="css-ls" placeholder="e.g. 1.5px" oninput="updateCssPreview()" /></div>
+      <div><label class="fl">Font weight</label><input type="text" id="css-fw" placeholder="e.g. 400 or 700" oninput="updateCssPreview()" /></div>
+    </div>
+    <div class="sec"><label class="fl">Other properties</label><textarea id="css-other" placeholder="e.g. text-transform: uppercase;" style="height:60px" oninput="updateCssPreview()"></textarea></div>
+    <div class="outs on">
+      <div class="og">
+        <label class="fl">Generated CSS</label>
+        <textarea class="out lg" id="css-out" readonly onclick="this.select()"></textarea>
+        <div class="br"><button class="cp" onclick="cp('css-out',this)">Copy CSS</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TYPOGRAPHY ============ -->
+  <div class="panel" id="panel-typ">
+    <p style="font-size:11px;color:#666;margin-bottom:18px;line-height:1.6">Preview your site fonts at different sizes before committing to CSS.</p>
+    <div class="sec">
+      <label class="fl">Sample text</label>
+      <input type="text" id="typ-text" value="Is This the Future We Were Dreaming Of?" oninput="updateTyp()" />
+    </div>
+    <div class="row">
+      <div>
+        <label class="fl">Font</label>
+        <select id="typ-font" onchange="updateTyp()">
+          <option value="'Geist', 'Helvetica Neue', sans-serif">Geist (--sans)</option>
+          <option value="'FreeMono', 'Courier New', monospace">FreeMono (--mono)</option>
+          <option value="'Averia Serif Libre', Georgia, serif">Averia Serif Libre (--averia)</option>
+          <option value="'Helvetica Neue', Helvetica, sans-serif">Helvetica Neue (fallback)</option>
+          <option value="'Courier New', monospace">Courier New (fallback)</option>
+        </select>
+      </div>
+      <div>
+        <label class="fl">Size</label>
+        <input type="text" id="typ-size" value="16px" oninput="updateTyp()" />
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label class="fl">Weight</label>
+        <select id="typ-weight" onchange="updateTyp()">
+          <option value="300">300 Light</option>
+          <option value="400" selected>400 Regular</option>
+          <option value="500">500 Medium</option>
+          <option value="600">600 SemiBold</option>
+          <option value="700">700 Bold</option>
+        </select>
+      </div>
+      <div>
+        <label class="fl">Style</label>
+        <select id="typ-style" onchange="updateTyp()">
+          <option value="normal">Normal</option>
+          <option value="italic">Italic</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div><label class="fl">Letter spacing</label><input type="text" id="typ-ls" value="0" oninput="updateTyp()" /></div>
+      <div><label class="fl">Line height</label><input type="text" id="typ-lh" value="1.7" oninput="updateTyp()" /></div>
+    </div>
+    <div style="margin-top:4px">
+      <label class="fl">Colour</label>
+      <div class="color-input-wrap" style="display:inline-block;width:100%">
+        <div class="color-preview" id="typ-col-preview">
+          <div class="color-preview-swatch" id="typ-col-swatch" style="background:#111111"></div>
+          <span class="color-preview-hex" id="typ-col-hex">#111111</span>
+        </div>
+        <input type="color" id="typ-col" value="#111111" oninput="updateTypColour()">
+      </div>
+    </div>
+    <div class="type-preview" id="typ-preview" style="margin-top:18px">
+      <div class="type-preview-text" id="typ-display">Is This the Future We Were Dreaming Of?</div>
+    </div>
+    <div style="margin-top:10px;font-size:10px;color:#999" id="typ-info"></div>
+  </div>
+
+  <!-- ============ SNIPPETS ============ -->
+  <div class="panel" id="panel-snip">
+    <p style="font-size:11px;color:#666;margin-bottom:18px;line-height:1.6">Ready-made HTML blocks for common patterns. Click a card to load it, then copy.</p>
+    <div class="snippet-grid" id="snip-grid"></div>
+    <div class="outs on" id="snip-outs" style="margin-top:0">
+      <div class="og">
+        <label class="fl" id="snip-label">Select a snippet above</label>
+        <textarea class="out xl" id="snip-out" readonly onclick="this.select()" placeholder="Select a snippet above..."></textarea>
+        <div class="br"><button class="cp" onclick="cp('snip-out',this)">Copy</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ REF / CHEATSHEET ============ -->
+  <div class="panel" id="panel-ref">
+    <p style="font-size:11px;color:#666;margin-bottom:18px;line-height:1.6">Quick reference for Markdown and Hugo patterns that work in TWT's body fields.</p>
+    <span class="sub">Markdown (works in body_intro / body_middle / body_after)</span>
+    <table class="cheat-table" style="margin-bottom:24px">
+      <tr><td># Heading</td><td>h1 (don't use - reserved for page title)</td></tr>
+      <tr><td>## Heading</td><td>h2 - section heading with rule</td></tr>
+      <tr><td>### Heading</td><td>h3 - sub heading in muted mono</td></tr>
+      <tr><td>**bold**</td><td><strong>bold text</strong></td></tr>
+      <tr><td>*italic*</td><td><em>italic text</em></td></tr>
+      <tr><td>[text](url)</td><td>link</td></tr>
+      <tr><td>![alt](url)</td><td>image (use Dropbox raw URL)</td></tr>
+      <tr><td>- item</td><td>unordered list</td></tr>
+      <tr><td>1. item</td><td>ordered list</td></tr>
+      <tr><td>&gt; text</td><td>blockquote</td></tr>
+      <tr><td>---</td><td>horizontal rule</td></tr>
+      <tr><td>blank line</td><td>new paragraph</td></tr>
+    </table>
+    <span class="sub">Raw HTML (works because unsafe = true)</span>
+    <table class="cheat-table" style="margin-bottom:24px">
+      <tr><td><code>&lt;img src="..." style="width:100%"&gt;</code></td><td>Full-width image</td></tr>
+      <tr><td><code>&lt;div class="audio-track" data-twt-bg="..."&gt;</code></td><td>Custom audio player</td></tr>
+      <tr><td><code>&lt;div style="display:grid;grid-template-columns:1fr 1fr;gap:4px"&gt;</code></td><td>Two-column image layout</td></tr>
+    </table>
+    <span class="sub">Hugo shortcodes (processed before markdown)</span>
+    <table class="cheat-table" style="margin-bottom:24px">
+      <tr><td><code>{{&lt; audio-playlist url="..." bg="..." fg="..." &gt;}}</code></td><td>Folder playlist</td></tr>
+    </table>
+    <span class="sub">Script embeds - DON'T work in body fields</span>
+    <table class="cheat-table">
+      <tr><td><code>&lt;script&gt;...&lt;/script&gt;</code></td><td>Stripped by markdownify even with unsafe=true. Use shortcodes instead.</td></tr>
+    </table>
+  </div>
+
 </div><!-- .app -->
 
-
+<!-- LIGHTBOX -->
+<div class="lb-overlay" id="lb-overlay" onclick="lbClose()">
+  <div class="lb-inner" onclick="event.stopPropagation()">
+    <button class="lb-close" onclick="lbClose()">x close</button>
+    <img id="lb-img" src="" alt="" />
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+</div>
 
 <script>
 var PROXY = 'https://dropbox-proxy.cardopoli.workers.dev';
 
 /* ---- TABS ---- */
-var tabNames = ['img','lay','aud','vid','arc','ifr','gal','pl'];
+var tabNames = ['img','lay','aud','pl','vid','gal','ifr','col','css','typ','snip','ref'];
 function sw(name) {
   document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', tabNames[i]===name); });
   document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
@@ -567,241 +720,160 @@ function toRaw(url) {
   if (/[?&]dl=[01]/.test(url)) return url.replace(/([?&])dl=[01]/,'$1raw=1');
   return url + (url.indexOf('?')===-1?'?':'&') + 'raw=1';
 }
-
-function bldStyle(w,mw,al) {
-  var p=[];
-  if(w) p.push('width:'+w);
-  if(mw) p.push('max-width:'+mw);
-  if(al==='center'){p.push('display:block');p.push('margin:0 auto');}
-  else if(al==='left'){p.push('display:block');p.push('margin-right:auto');}
-  else if(al==='right'){p.push('display:block');p.push('margin-left:auto');}
-  else if(al==='float-left'){p.push('float:left');p.push('margin:0 24px 16px 0');}
-  else if(al==='float-right'){p.push('float:right');p.push('margin:0 0 16px 24px');}
-  return p.length?' style="'+p.join('; ')+'"':'';
-}
-
 function cp(id,btn) {
   var el=document.getElementById(id); el.select(); document.execCommand('copy');
   var o=btn.textContent; btn.textContent='Copied';
   setTimeout(function(){btn.textContent=o;},1500);
 }
+function show(id){ var el=document.getElementById(id); if(el) el.classList.add('on'); }
+function hide(id){ var el=document.getElementById(id); if(el) el.classList.remove('on'); }
+function val(id){ var el=document.getElementById(id); return el?el.value.trim():''; }
+function set(id,v){ var el=document.getElementById(id); if(el) el.value=v; }
 
-function show(id){ document.getElementById(id).classList.add('on'); }
-function hide(id){ document.getElementById(id).classList.remove('on'); }
-function val(id){ return document.getElementById(id).value.trim(); }
-function set(id,v){ document.getElementById(id).value=v; }
-
-
+/* ---- LIGHTBOX ---- */
+function lbOpen(src,cap) {
+  document.getElementById('lb-img').src=src;
+  var c=document.getElementById('lb-cap'); c.textContent=cap||''; c.style.display=cap?'block':'none';
+  document.getElementById('lb-overlay').classList.add('open');
+}
+function lbClose() { document.getElementById('lb-overlay').classList.remove('open'); }
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
 
 /* ---- IMAGE ---- */
 function doImg() {
-  var url=val('img-url');
-  hide('img-err'); hide('img-outs'); hide('img-prev');
+  var url=val('img-url'); hide('img-err'); hide('img-outs');
   if(!url||url.indexOf('dropbox.com')===-1){show('img-err');return;}
   var direct=toRaw(url);
   var w=val('img-w'), mw=val('img-mw'), al=val('img-al');
   var alt=val('img-alt'), cap=val('img-cap');
   var fmt=document.querySelector('input[name="ifmt"]:checked').value;
-  var s=bldStyle(w,mw,al);
-  var embed='', showE=fmt!=='url';
+  var s=''; var p=[];
+  if(w) p.push('width:'+w);
+  if(mw) p.push('max-width:'+mw);
+  if(al==='center'){p.push('display:block');p.push('margin:0 auto');}
+  else if(al==='float-left'){p.push('float:left');p.push('margin:0 24px 16px 0');}
+  else if(al==='float-right'){p.push('float:right');p.push('margin:0 0 16px 24px');}
+  if(p.length) s=' style="'+p.join('; ')+'"';
+  var embed='';
   if(fmt==='html') embed='<img src="'+direct+'" alt="'+alt+'"'+s+'>';
-  else if(fmt==='figure'){
-    embed='<figure'+(mw?' style="max-width:'+mw+'"':'')+'>'+'\n';
-    embed+='  <img src="'+direct+'" alt="'+alt+'" style="width:100%">'+'\n';
-    if(cap) embed+='  <figcaption>'+cap+'</figcaption>'+'\n';
-    embed+='</figure>';
-  } else if(fmt==='md'){
-    embed='!['+alt+']('+direct+')';
-    if(cap) embed+='\n*'+cap+'*';
-  }
-  document.getElementById('img-eg').style.display=showE?'block':'none';
-  if(showE){ set('img-out',embed); document.getElementById('img-el').textContent=fmt==='figure'?'Figure code':fmt==='md'?'Markdown':'Embed code'; }
-  set('img-raw',direct); show('img-outs');
+  else if(fmt==='figure'){embed='<figure'+(mw?' style="max-width:'+mw+'"':'')+'>'+'\n  <img src="'+direct+'" alt="'+alt+'" style="width:100%">'+'\n'+(cap?'  <figcaption>'+cap+'</figcaption>\n':'')+'</figure>';}
+  else embed='!['+alt+']('+direct+')'+(cap?'\n*'+cap+'*':'');
+  set('img-out',embed); set('img-raw',direct); show('img-outs');
+  document.getElementById('img-el').textContent=fmt==='figure'?'Figure code':fmt==='md'?'Markdown':'Embed code';
   var img=document.getElementById('img-pi');
-  img.onload=function(){show('img-prev');};
-  img.onerror=function(){};
-  img.style.width=(w&&w!=='100%')?w:''; img.style.maxWidth=mw||''; img.alt=alt; img.src=direct;
+  img.onload=function(){document.getElementById('img-prev').classList.add('on');};
+  img.src=direct; img.alt=alt;
   var pc=document.getElementById('img-pc'); pc.textContent=cap; pc.style.display=cap?'block':'none';
 }
-document.querySelectorAll('input[name="ifmt"]').forEach(function(r){
-  r.addEventListener('change',function(){if(document.getElementById('img-outs').classList.contains('on'))doImg();});
-});
 document.getElementById('img-url').addEventListener('keydown',function(e){if(e.key==='Enter')doImg();});
 
 /* ---- IMAGE LAYOUT ---- */
-var currentLayout = 'single';
-
-function selectLayout(name, card) {
-  currentLayout = name;
-  document.querySelectorAll('.layout-card').forEach(function(c){ c.classList.remove('selected'); });
+var currentLayout='single';
+function selectLayout(name,card) {
+  currentLayout=name;
+  document.querySelectorAll('.layout-card').forEach(function(c){c.classList.remove('selected');});
   card.classList.add('selected');
-  var slots = { single:1, double:2, triple:3, portrait:2, 'left-wide':2, stacked:2 };
-  var count = slots[name] || 1;
+  var slots={single:1,double:2,triple:3,portrait:2,'left-wide':2,stacked:2};
   for(var i=1;i<=3;i++){
-    var s = document.getElementById('lay-slot-'+i);
-    if(s) s.classList.toggle('slot-hidden', i>count);
+    var s=document.getElementById('lay-slot-'+i);
+    if(s) s.classList.toggle('slot-hidden',i>(slots[name]||1));
   }
-  hide('lay-outs'); hide('lay-err');
+  hide('lay-outs');
 }
-
 function doLayout() {
   hide('lay-err'); hide('lay-outs');
-  var useLightbox = document.querySelector('input[name="lbox"]:checked').value === 'yes';
-  var slots = { single:1, double:2, triple:3, portrait:2, 'left-wide':2, stacked:2 };
-  var count = slots[currentLayout] || 1;
-  var imgs = [];
+  var slots={single:1,double:2,triple:3,portrait:2,'left-wide':2,stacked:2};
+  var count=slots[currentLayout]||1;
+  var imgs=[];
   for(var i=1;i<=count;i++){
-    var u = val('lay-url-'+i);
+    var u=val('lay-url-'+i);
     if(!u||u.indexOf('dropbox.com')===-1){show('lay-err');return;}
-    imgs.push({ src: toRaw(u), alt: val('lay-alt-'+i), cap: val('lay-cap-'+i) });
+    imgs.push({src:toRaw(u),alt:val('lay-alt-'+i),cap:val('lay-cap-'+i)});
   }
-  var groupCap = val('lay-group-cap');
-
-
-  // imgTag: wraps in <a class="twt-lb"> for lightbox, plain <img> otherwise
-  function imgTag(img, style) {
-    var tag = '<img src="'+img.src+'" alt="'+img.alt+'" style="'+style+' display:block;">';
-    if(useLightbox) {
-      tag = '<a class="twt-lb" href="'+img.src+'" style="cursor:zoom-in;display:block">'+tag+'</a>';
-    }
-    return tag;
+  var gc=val('lay-group-cap');
+  function imgTag(img,style){
+    var tag='<img src="'+img.src+'" alt="'+img.alt+'" style="'+style+' display:block;">';
+    return '<a href="'+img.src+'" onclick="lbOpen(\''+img.src.replace(/'/g,"\\'")
+      +'\',\''+img.cap.replace(/'/g,"\\'")+'\');return false;" style="cursor:zoom-in">'
+      +tag+'</a>';
   }
-
-  // Multi-image layouts get data-lb-group so supercharged.js can do prev/next
-  var grpOpen  = useLightbox && count > 1 ? '<div data-lb-group="1">\n' : '';
-  var grpClose = useLightbox && count > 1 ? '</div>\n' : '';
-
-  var embed = '';
-
-  if(currentLayout === 'single') {
-    embed += '<figure style="margin:0">\n';
-    embed += '  '+imgTag(imgs[0], 'width:100%')+'\n';
-    if(imgs[0].cap||groupCap) embed += '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+(imgs[0].cap||groupCap)+'</figcaption>\n';
-    embed += '</figure>';
-
-  } else if(currentLayout === 'double') {
-    embed += grpOpen;
-    embed += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">\n';
-    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
-    embed += '</div>\n'+grpClose;
-    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
-
-  } else if(currentLayout === 'triple') {
-    embed += grpOpen;
-    embed += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">\n';
-    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n'; });
-    embed += '</div>\n'+grpClose;
-    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
-
-  } else if(currentLayout === 'portrait') {
-    embed += grpOpen;
-    embed += '<div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start;margin:0">\n';
-    embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
-    embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
-    embed += '</div>\n'+grpClose;
-    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
-
-  } else if(currentLayout === 'left-wide') {
-    embed += grpOpen;
-    embed += '<div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start;margin:0">\n';
-    embed += '  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n';
-    embed += '  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n';
-    embed += '</div>\n'+grpClose;
-    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
-
-  } else if(currentLayout === 'stacked') {
-    embed += grpOpen;
-    embed += '<div style="display:grid;grid-template-columns:1fr;gap:4px;margin:0">\n';
-    imgs.forEach(function(img){ embed += '  <div>'+imgTag(img,'width:100%')+'</div>\n'; });
-    embed += '</div>\n'+grpClose;
-    if(groupCap) embed += '<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+groupCap+'</p>';
+  var embed='';
+  if(currentLayout==='single'){
+    embed='<figure style="margin:0">\n  '+imgTag(imgs[0],'width:100%')+'\n';
+    if(imgs[0].cap||gc) embed+='  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+(imgs[0].cap||gc)+'</figcaption>\n';
+    embed+='</figure>';
+  } else if(currentLayout==='double'){
+    embed='<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">\n';
+    imgs.forEach(function(img){embed+='  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n';});
+    embed+='</div>'; if(gc) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+gc+'</p>';
+  } else if(currentLayout==='triple'){
+    embed='<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">\n';
+    imgs.forEach(function(img){embed+='  <div>'+imgTag(img,'width:100%;height:100%;object-fit:cover')+'</div>\n';});
+    embed+='</div>'; if(gc) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+gc+'</p>';
+  } else if(currentLayout==='portrait'){
+    embed='<div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start">\n  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n</div>';
+    if(gc) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+gc+'</p>';
+  } else if(currentLayout==='left-wide'){
+    embed='<div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">\n  <div>'+imgTag(imgs[0],'width:100%')+'</div>\n  <div>'+imgTag(imgs[1],'width:100%')+'</div>\n</div>';
+    if(gc) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+gc+'</p>';
+  } else if(currentLayout==='stacked'){
+    embed='<div style="display:grid;grid-template-columns:1fr;gap:4px">\n';
+    imgs.forEach(function(img){embed+='  <div>'+imgTag(img,'width:100%')+'</div>\n';});
+    embed+='</div>'; if(gc) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+gc+'</p>';
   }
-
-  set('lay-out', embed); show('lay-outs');
-
-  // Preview - strip twt-lb links (lightbox only works on live site)
-  var pp = document.getElementById('lay-pp');
-  pp.innerHTML = '';
-  var previewWrap = document.createElement('div');
-  var previewEmbed = embed
-    .replace(/<a class="twt-lb"[^>]*>/g,'')
-    .replace(/<\/a>/g,'');
-  previewWrap.innerHTML = previewEmbed;
-  pp.appendChild(previewWrap);
+  set('lay-out',embed); show('lay-outs');
+  var pp=document.getElementById('lay-pp'); pp.innerHTML='';
+  var pw=document.createElement('div');
+  pw.innerHTML=embed.replace(/onclick="[^"]*"/g,'').replace(/<a [^>]*>/g,'').replace(/<\/a>/g,'');
+  pw.querySelectorAll('img').forEach(function(img,i){
+    img.style.cursor='zoom-in';
+    var src=imgs[i]?imgs[i].src:img.src; var cap=imgs[i]?imgs[i].cap:'';
+    img.addEventListener('click',function(){lbOpen(src,cap);});
+  });
+  pp.appendChild(pw);
   document.getElementById('lay-prev').classList.add('on');
 }
 
 /* ---- AUDIO ---- */
-
-// Show/hide custom colour inputs
 document.querySelectorAll('input[name="aud-scheme"]').forEach(function(r){
-  r.addEventListener('change', function(){
-    document.getElementById('aud-custom-cols').style.display = r.value==='custom' ? 'block' : 'none';
-    if(document.getElementById('aud-outs').classList.contains('on')) doAud();
+  r.addEventListener('change',function(){
+    document.getElementById('aud-custom-cols').style.display=r.value==='custom'?'block':'none';
+    if(document.getElementById('aud-outs').classList.contains('on'))doAud();
   });
 });
-
 function doAud() {
-  var url = val('aud-url');
-  hide('aud-err'); hide('aud-outs');
+  var url=val('aud-url'); hide('aud-err'); hide('aud-outs');
   if(!url||url.indexOf('dropbox.com')===-1){show('aud-err');return;}
   var direct=toRaw(url);
-  var title=val('aud-title');
-  var w=val('aud-w')||'100%';
+  var title=val('aud-title'), w=val('aud-w')||'100%';
   var scheme=document.querySelector('input[name="aud-scheme"]:checked').value;
   var size=document.querySelector('input[name="aud-size"]:checked').value;
   var showTimer=document.getElementById('aud-show-timer').checked;
   var showTitle=document.getElementById('aud-show-title').checked;
   var border=val('aud-border');
-
-  // Colours
-  var bg='#111111', fg='#f7f5f0';
-  if(scheme==='light'){ bg='#f7f5f0'; fg='#111111'; }
-  else if(scheme==='custom'){
-    bg=val('aud-bg')||'#111111';
-    fg=val('aud-fg')||'#f7f5f0';
-  }
-
-  // Padding by size
-  var pad = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
-  var btnSize = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
-  var timeSize = size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
-  var titleSize = size==='compact' ? '9px' : size==='large' ? '12px' : '10px';
-
-  // Border
-  var borderStyle = '';
-  if(border==='rule') borderStyle = 'border-top:1px solid '+fg+';';
-  else if(border==='box') borderStyle = 'border:1px solid '+fg+';';
-
-  // Build data attributes for supercharged.js to read
-  var dataAttrs = ' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad
-    +'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize
-    +'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
-
-  var embed = '<div class="audio-track"'+dataAttrs+'>\n';
-  if(title && showTitle){
-    embed += '  <p class="audio-track-name" style="font-size:'+titleSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>\n';
-  }
-  embed += '  <audio controls preload="none" style="width:'+w+'" src="'+direct+'"></audio>\n';
-  embed += '</div>';
-
-  set('aud-out', embed);
-  set('aud-raw', direct);
-  show('aud-outs');
-
-  // Preview block
-  var pb = document.getElementById('aud-preview-block');
-  pb.innerHTML = '';
-  var previewStyle = 'background:'+bg+';padding:'+pad+';'+borderStyle+'display:flex;align-items:center;gap:14px;';
-  var preview = '<div style="'+previewStyle+'">';
-  preview += '<div style="color:'+fg+';font-size:'+btnSize+'">▶</div>';
-  preview += '<div style="flex:1;height:2px;background:rgba(128,128,128,0.3);position:relative"><div style="width:0%;height:100%;background:'+fg+'"></div></div>';
-  if(showTimer) preview += '<div style="color:'+fg+';opacity:0.6;font-size:'+timeSize+';font-family:monospace;white-space:nowrap">0:00 / 0:00</div>';
-  preview += '</div>';
-  if(title && showTitle){
-    preview = '<p style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">'+title+'</p>' + preview;
-  }
-  pb.innerHTML = preview;
+  var bg='#111111',fg='#f7f5f0';
+  if(scheme==='light'){bg='#f7f5f0';fg='#111111';}
+  else if(scheme==='custom'){bg=val('aud-bg')||'#111111';fg=val('aud-fg')||'#f7f5f0';}
+  var pad=size==='compact'?'10px 14px':size==='large'?'20px 24px':'14px 18px';
+  var btnSize=size==='compact'?'12px':size==='large'?'18px':'14px';
+  var timeSize=size==='compact'?'10px':size==='large'?'13px':'11px';
+  var titleSize=size==='compact'?'9px':size==='large'?'12px':'10px';
+  var borderStyle='';
+  if(border==='rule') borderStyle='border-top:1px solid '+fg+';';
+  else if(border==='box') borderStyle='border:1px solid '+fg+';';
+  var dataAttrs=' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad+'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize+'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
+  var embed='<div class="audio-track"'+dataAttrs+'>\n';
+  if(title&&showTitle) embed+='  <p class="audio-track-name" style="font-size:'+titleSize+';color:'+fg+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>\n';
+  embed+='  <audio controls preload="none" style="width:'+w+'" src="'+direct+'"></audio>\n</div>';
+  set('aud-out',embed); set('aud-raw',direct); show('aud-outs');
+  var pb=document.getElementById('aud-preview-block'); pb.innerHTML='';
+  var mock='<div style="background:'+bg+';padding:'+pad+';'+borderStyle+'display:flex;align-items:center;gap:14px;">';
+  mock+='<div style="color:'+fg+';font-size:'+btnSize+'">&#9654;</div>';
+  mock+='<div style="flex:1;height:2px;background:rgba(128,128,128,0.3)"></div>';
+  if(showTimer) mock+='<div style="color:'+fg+';opacity:0.6;font-size:'+timeSize+';font-family:monospace">0:00 / 0:00</div>';
+  mock+='</div>';
+  if(title&&showTitle) mock='<p style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">'+title+'</p>'+mock;
+  pb.innerHTML=mock;
   document.getElementById('aud-prev').classList.add('on');
 }
 document.getElementById('aud-url').addEventListener('keydown',function(e){if(e.key==='Enter')doAud();});
@@ -809,215 +881,262 @@ document.getElementById('aud-url').addEventListener('keydown',function(e){if(e.k
   var el=document.getElementById(id);
   if(el) el.addEventListener('input',function(){if(document.getElementById('aud-outs').classList.contains('on'))doAud();});
 });
-document.querySelectorAll('input[name="aud-size"], #aud-show-timer, #aud-show-title').forEach(function(el){
+document.querySelectorAll('input[name="aud-size"],#aud-show-timer,#aud-show-title').forEach(function(el){
   el.addEventListener('change',function(){if(document.getElementById('aud-outs').classList.contains('on'))doAud();});
 });
 document.getElementById('aud-border').addEventListener('change',function(){if(document.getElementById('aud-outs').classList.contains('on'))doAud();});
 
-/* ---- AUDIO PLAYLIST ---- */
-function doAudPlaylist(folderUrl) {
-  var title = val('aud-title');
-  var w = val('aud-w') || '100%';
-  var scheme = document.querySelector('input[name="aud-scheme"]:checked').value;
-  var size = document.querySelector('input[name="aud-size"]:checked').value;
-  var showTimer = document.getElementById('aud-show-timer').checked;
-  var showTitle = document.getElementById('aud-show-title').checked;
-  var border = val('aud-border');
-
-  var bg = '#111111', fg = '#f7f5f0';
-  if(scheme==='light'){ bg='#f7f5f0'; fg='#111111'; }
-  else if(scheme==='custom'){ bg=val('aud-bg')||'#111111'; fg=val('aud-fg')||'#f7f5f0'; }
-
-  var pad = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
-  var btnSize  = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
-  var timeSize = size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
-  var titleSize = size==='compact' ? '9px' : size==='large' ? '12px' : '10px';
-  var borderStyle = '';
-  if(border==='rule') borderStyle = 'border-top:1px solid '+fg+';';
-  else if(border==='box') borderStyle = 'border:1px solid '+fg+';';
-
-  var uid = 'aud-pl-' + Math.random().toString(36).slice(2,7);
-  var dataAttrs = ' data-twt-bg="'+bg+'" data-twt-fg="'+fg+'" data-twt-pad="'+pad+'" data-twt-btn-size="'+btnSize+'" data-twt-time-size="'+timeSize+'" data-twt-show-timer="'+(showTimer?'1':'0')+'"';
-  var safeUrl = folderUrl.replace(/'/g, "\'");
-
-  var parts = [];
-  if(title && showTitle) parts.push('<p class="audio-track-name" style="font-size:'+titleSize+';text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">'+title+'</p>');
-  parts.push('<div class="twt-playlist" id="'+uid+'"'+dataAttrs+' style="'+borderStyle+'"><p style="font-family:monospace;font-size:11px;padding:'+pad+';color:'+fg+';background:'+bg+'">Loading playlist…</p></div>');
-  parts.push('<scr'+'ipt>(function(){function run(){window._twt.buildAudioPlaylist(\'https://dropbox-proxy.cardopoli.workers.dev\',\''+safeUrl+'\',\''+uid+'\');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</scr'+'ipt>');
-
-  var embed = parts.join('\n');
-  set('aud-out', embed);
-  set('aud-raw', folderUrl);
-  show('aud-outs');
-
-  var pb = document.getElementById('aud-preview-block');
-  pb.innerHTML = '';
-  var mock = '<div style="background:'+bg+';padding:'+pad+';'+borderStyle+'">';
-  mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.7;margin-bottom:12px">Playlist — tracks load from Dropbox folder on live site</div>';
-  ['Track 01', 'Track 02', 'Track 03'].forEach(function(t, i){
-    mock += '<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-top:'+(i===0?'none':'1px solid rgba(128,128,128,0.2)')+'">';
-    mock += '<div style="color:'+fg+';font-size:'+btnSize+'">&#9654;</div>';
-    mock += '<div style="color:'+fg+';font-size:'+timeSize+';font-family:monospace;opacity:0.8">'+t+'</div>';
-    mock += '</div>';
+/* ---- PLAYLIST ---- */
+document.querySelectorAll('input[name="pl-scheme"]').forEach(function(r){
+  r.addEventListener('change',function(){
+    document.getElementById('pl-custom-cols').style.display=r.value==='custom'?'block':'none';
   });
-  mock += '</div>';
-  pb.innerHTML = mock;
-  document.getElementById('aud-prev').classList.add('on');
+});
+function doPl() {
+  var url=val('pl-url'); hide('pl-err'); hide('pl-outs');
+  if(!url||url.indexOf('dropbox.com')===-1){show('pl-err');return;}
+  var scheme=document.querySelector('input[name="pl-scheme"]:checked').value;
+  var size=document.querySelector('input[name="pl-size"]:checked').value;
+  var timer=document.getElementById('pl-show-timer').checked?'1':'0';
+  var bg='#111111',fg='#f7f5f0';
+  if(scheme==='light'){bg='#f7f5f0';fg='#111111';}
+  else if(scheme==='custom'){bg=val('pl-bg')||'#111111';fg=val('pl-fg')||'#f7f5f0';}
+  var pad=size==='compact'?'10px 14px':size==='large'?'20px 24px':'14px 18px';
+  var btnsize=size==='compact'?'12px':size==='large'?'18px':'14px';
+  var timesize=size==='compact'?'10px':size==='large'?'13px':'11px';
+  var sc='{{< audio-playlist url="'+url+'" bg="'+bg+'" fg="'+fg+'" pad="'+pad+'" btnsize="'+btnsize+'" timesize="'+timesize+'" timer="'+timer+'" >}}';
+  set('pl-out',sc); show('pl-outs');
 }
+document.getElementById('pl-url').addEventListener('keydown',function(e){if(e.key==='Enter')doPl();});
 
 /* ---- VIDEO ---- */
-function toEmbed(url) {
-  var yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+document.querySelectorAll('input[name="vid-source"]').forEach(function(r){
+  r.addEventListener('change',function(){
+    document.getElementById('vid-dropbox-row').style.display=r.value==='dropbox'?'block':'none';
+    document.getElementById('vid-url-row').style.display=r.value==='url'?'block':'none';
+  });
+});
+function toEmbedUrl(url) {
+  var yt=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
   if(yt) return 'https://www.youtube-nocookie.com/embed/'+yt[1];
-  var vi = url.match(/vimeo\.com\/(\d+)/);
+  var vi=url.match(/vimeo\.com\/(\d+)/);
   if(vi) return 'https://player.vimeo.com/video/'+vi[1];
-  if(/\.(mp4|webm|mov)$/i.test(url)) return null;
   return url;
 }
-
 function doVid() {
-  var url=val('vid-url');
-  hide('vid-err'); hide('vid-outs'); hide('vid-prev');
-  if(!url){show('vid-err');return;}
+  hide('vid-err'); hide('vid-outs');
+  var isDbx=document.querySelector('input[name="vid-source"]:checked').value==='dropbox';
   var w=val('vid-w')||'100%', ar=val('vid-ar')||'56.25', cap=val('vid-cap');
   var embed='', previewHtml='';
-  if(/\.(mp4|webm|mov)$/i.test(url)) {
-    embed='<video controls style="width:'+w+'" preload="metadata" src="'+url+'"></video>';
-    if(cap) embed+='\n<p class="photo-caption">'+cap+'</p>';
-    previewHtml='<video controls style="max-width:100%" src="'+url+'"></video>';
+  if(isDbx){
+    var url=val('vid-dbx-url');
+    if(!url||url.indexOf('dropbox.com')===-1){show('vid-err');return;}
+    var direct=toRaw(url);
+    embed='<video controls style="width:'+w+'" preload="metadata" src="'+direct+'"></video>';
+    if(cap) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+cap+'</p>';
+    previewHtml='<video controls style="max-width:100%" src="'+direct+'"></video>';
   } else {
-    var embedUrl=toEmbed(url);
-    if(!embedUrl){show('vid-err');return;}
+    var url2=val('vid-url');
+    if(!url2){show('vid-err');return;}
+    var embedUrl=toEmbedUrl(url2);
     embed='<div style="position:relative;width:'+w+';padding-bottom:'+ar+'%;height:0;overflow:hidden">\n';
-    embed+='  <iframe src="'+embedUrl+'" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>\n';
-    embed+='</div>';
-    if(cap) embed+='\n<p class="photo-caption">'+cap+'</p>';
+    embed+='  <iframe src="'+embedUrl+'" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen loading="lazy"></iframe>\n</div>';
+    if(cap) embed+='\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">'+cap+'</p>';
     previewHtml='<div style="position:relative;width:100%;padding-bottom:'+ar+'%;height:0;overflow:hidden"><iframe src="'+embedUrl+'" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" allowfullscreen></iframe></div>';
   }
   set('vid-out',embed); show('vid-outs');
   document.getElementById('vid-pp').innerHTML=previewHtml;
   var pc=document.getElementById('vid-pc'); pc.textContent=cap; pc.style.display=cap?'block':'none';
-  show('vid-prev');
+  document.getElementById('vid-prev').classList.add('on');
 }
-document.getElementById('vid-url').addEventListener('keydown',function(e){if(e.key==='Enter')doVid();});
-
-/* ---- ARCHIVE.ORG ---- */
-function toArchiveId(url) {
-  var m=url.match(/archive\.org\/details\/([^/?&#]+)/);
-  return m?m[1]:null;
-}
-
-function doArc() {
-  var url=val('arc-url');
-  hide('arc-err'); hide('arc-outs'); hide('arc-prev');
-  if(!url||url.indexOf('archive.org')===-1){show('arc-err');return;}
-  var id=toArchiveId(url);
-  if(!id){show('arc-err');return;}
-  var w=val('arc-w')||'100%', h=val('arc-h')||'60';
-  var title=val('arc-title');
-  var type=document.querySelector('input[name="arctype"]:checked').value;
-  var iframeSrc='', iframeH=h;
-  if(type==='audio'){
-    iframeSrc='https://archive.org/embed/'+id+'&playlist=1&list_height=0';
-    iframeH=h||'60';
-  } else if(type==='playlist'){
-    iframeSrc='https://archive.org/embed/'+id+'&playlist=1';
-    iframeH=h||'300';
-  } else {
-    iframeSrc='https://archive.org/embed/'+id;
-    iframeH=h||'400';
-  }
-  var embed='';
-  if(title) embed+='<p class="audio-track-name">'+title+'</p>\n';
-  embed+='<iframe src="'+iframeSrc+'" width="'+w+'" height="'+iframeH+'px" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>';
-  set('arc-out',embed); show('arc-outs');
-  var pt=document.getElementById('arc-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
-  document.getElementById('arc-pp').innerHTML='<iframe src="'+iframeSrc+'" width="100%" height="'+iframeH+'px" frameborder="0" allowfullscreen></iframe>';
-  show('arc-prev');
-}
-document.getElementById('arc-url').addEventListener('keydown',function(e){if(e.key==='Enter')doArc();});
-document.querySelectorAll('input[name="arctype"]').forEach(function(r){
-  r.addEventListener('change',function(){if(document.getElementById('arc-outs').classList.contains('on'))doArc();});
-});
-
-/* ---- IFRAME ---- */
-function doIfr() {
-  var url=val('ifr-url');
-  hide('ifr-err'); hide('ifr-outs'); hide('ifr-prev');
-  if(!url||!url.startsWith('http')){show('ifr-err');return;}
-  var w=val('ifr-w')||'100%', h=val('ifr-h')||'400px';
-  var title=val('ifr-title');
-  var hVal=h.replace('px','');
-  var embed='';
-  if(title) embed+='<p class="audio-track-name">'+title+'</p>\n';
-  embed+='<iframe src="'+url+'" width="'+w+'" height="'+hVal+'" frameborder="0" allowfullscreen loading="lazy"></iframe>';
-  set('ifr-out',embed); show('ifr-outs');
-  var pt=document.getElementById('ifr-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
-  document.getElementById('ifr-pp').innerHTML='<iframe src="'+url+'" width="100%" height="'+hVal+'" frameborder="0" allowfullscreen></iframe>';
-  show('ifr-prev');
-}
-document.getElementById('ifr-url').addEventListener('keydown',function(e){if(e.key==='Enter')doIfr();});
 
 /* ---- GALLERY ---- */
 function doGal() {
-  var url=val('gal-url');
-  hide('gal-err'); hide('gal-outs');
+  var url=val('gal-url'); hide('gal-err'); hide('gal-outs');
   if(!url||url.indexOf('dropbox.com')===-1){show('gal-err');return;}
   var uid='gal-'+Math.random().toString(36).slice(2,7);
   var embed='<div class="dbx-gallery" id="'+uid+'" aria-live="polite">\n';
-  embed+='  <div class="dbx-skeleton">\n';
-  embed+='    <div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div>\n';
-  embed+='    <div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div>\n';
-  embed+='  </div>\n</div>\n';
-  embed+='<script>(function(){\n';
-  embed+='  function run(){\n';
-  embed+="    window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','"+url.replace(/'/g,"\\'")+"','"+uid+"');\n";
-  embed+='  }\n';
-  embed+='  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}\n';
-  embed+='})();<\/script>';
+  embed+='  <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>\n</div>\n';
+  embed+='<scr'+'ipt>(function(){function run(){window._twt.buildGallery(\''+PROXY+'\',\''+url.replace(/'/g,"\\'")+'\',\''+uid+'\');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</scr'+'ipt>';
   set('gal-out',embed); show('gal-outs');
 }
 document.getElementById('gal-url').addEventListener('keydown',function(e){if(e.key==='Enter')doGal();});
 
-/* ---- PLAYLIST SHORTCODE ---- */
+/* ---- IFRAME ---- */
+function doIfr() {
+  var url=val('ifr-url'); hide('ifr-err'); hide('ifr-outs');
+  if(!url||!url.startsWith('http')){show('ifr-err');return;}
+  var w=val('ifr-w')||'100%', h=val('ifr-h')||'400px', title=val('ifr-title');
+  var hVal=h.replace('px','');
+  var embed=(title?'<p class="audio-track-name">'+title+'</p>\n':'');
+  embed+='<iframe src="'+url+'" width="'+w+'" height="'+hVal+'" frameborder="0" allowfullscreen loading="lazy"></iframe>';
+  set('ifr-out',embed); show('ifr-outs');
+  var pt=document.getElementById('ifr-pt'); pt.textContent=title; pt.style.display=title?'block':'none';
+  document.getElementById('ifr-pp').innerHTML='<iframe src="'+url+'" width="100%" height="'+hVal+'" frameborder="0" allowfullscreen></iframe>';
+  document.getElementById('ifr-prev').classList.add('on');
+}
+document.getElementById('ifr-url').addEventListener('keydown',function(e){if(e.key==='Enter')doIfr();});
 
-document.querySelectorAll('input[name="pl-scheme"]').forEach(function(r){
-  r.addEventListener('change', function(){
-    document.getElementById('pl-custom-cols').style.display = r.value==='custom' ? 'block' : 'none';
+/* ---- COLOUR PICKER ---- */
+var TWT_PALETTE = [
+  {hex:'#111111',name:'Text'},
+  {hex:'#f7f5f0',name:'Background'},
+  {hex:'#666666',name:'Muted'},
+  {hex:'#cccccc',name:'Rule'},
+  {hex:'#077533',name:'Green'},
+  {hex:'#041801',name:'Dark green'},
+  {hex:'#F54927',name:'Orange'},
+  {hex:'#27F5B0',name:'Mint'},
+  {hex:'#ffffff',name:'White'},
+  {hex:'#000000',name:'Black'},
+];
+
+(function initColour(){
+  var palette=document.getElementById('col-palette');
+  TWT_PALETTE.forEach(function(c){
+    var s=document.createElement('div');
+    s.className='swatch'; s.style.background=c.hex;
+    s.title=c.name+' '+c.hex;
+    s.addEventListener('click',function(){
+      document.getElementById('col-a').value=c.hex;
+      updateColour('a');
+    });
+    s.addEventListener('dblclick',function(){
+      document.getElementById('col-b').value=c.hex;
+      updateColour('b');
+    });
+    palette.appendChild(s);
   });
+  set('col-a-out','#111111'); set('col-b-out','#f7f5f0');
+  updateColourPreview();
+})();
+
+function updateColour(which){
+  var hex=document.getElementById('col-'+which).value;
+  document.getElementById('col-'+which+'-swatch').style.background=hex;
+  document.getElementById('col-'+which+'-hex').textContent=hex;
+  set('col-'+which+'-out',hex);
+  updateColourPreview();
+}
+
+function updateColourPreview(){
+  var a=document.getElementById('col-a').value;
+  var b=document.getElementById('col-b').value;
+  document.getElementById('col-preview-ab').style.cssText='padding:20px;font-family:\'Courier New\',monospace;font-size:13px;background:'+a+';color:'+b;
+  document.getElementById('col-preview-ba').style.cssText='padding:20px;font-family:\'Courier New\',monospace;font-size:13px;background:'+b+';color:'+a;
+}
+
+/* ---- CSS TWEAKS ---- */
+document.getElementById('css-el').addEventListener('change',function(){
+  document.getElementById('css-custom-sel').style.display=this.value==='custom'?'block':'none';
+  updateCssPreview();
 });
 
-function doPl() {
-  var url = val('pl-url');
-  hide('pl-err'); hide('pl-outs');
-  if(!url || url.indexOf('dropbox.com') === -1){ show('pl-err'); return; }
-
-  var scheme = document.querySelector('input[name="pl-scheme"]:checked').value;
-  var size   = document.querySelector('input[name="pl-size"]:checked').value;
-  var timer  = document.getElementById('pl-show-timer').checked ? '1' : '0';
-
-  var bg = '#111111', fg = '#f7f5f0';
-  if(scheme==='light'){ bg='#f7f5f0'; fg='#111111'; }
-  else if(scheme==='custom'){ bg=val('pl-bg')||'#111111'; fg=val('pl-fg')||'#f7f5f0'; }
-
-  var pad     = size==='compact' ? '10px 14px' : size==='large' ? '20px 24px' : '14px 18px';
-  var btnsize = size==='compact' ? '12px' : size==='large' ? '18px' : '14px';
-  var timesize= size==='compact' ? '10px' : size==='large' ? '13px' : '11px';
-
-  var sc = '{{< audio-playlist';
-  sc += ' url="' + url + '"';
-  sc += ' bg="' + bg + '"';
-  sc += ' fg="' + fg + '"';
-  sc += ' pad="' + pad + '"';
-  sc += ' btnsize="' + btnsize + '"';
-  sc += ' timesize="' + timesize + '"';
-  sc += ' timer="' + timer + '"';
-  sc += ' >}}';
-
-  set('pl-out', sc);
-  show('pl-outs');
+function updateCssPreview(){
+  var elVal=val('css-el');
+  var sel=elVal==='custom'?val('css-custom'):elVal;
+  if(!sel) return;
+  var props=[];
+  var fs=val('css-fs'), lh=val('css-lh'), col=val('css-col');
+  var ff=val('css-ff'), mt=val('css-mt'), mb=val('css-mb');
+  var ls=val('css-ls'), fw=val('css-fw'), other=val('css-other');
+  if(fs) props.push('  font-size: '+fs+';');
+  if(fw) props.push('  font-weight: '+fw+';');
+  if(ff) props.push('  font-family: '+ff+';');
+  if(col) props.push('  color: '+col+';');
+  if(lh) props.push('  line-height: '+lh+';');
+  if(ls) props.push('  letter-spacing: '+ls+';');
+  if(mt) props.push('  margin-top: '+mt+';');
+  if(mb) props.push('  margin-bottom: '+mb+';');
+  if(other) other.split('\n').forEach(function(line){ if(line.trim()) props.push('  '+line.trim()); });
+  var css=sel+' {\n'+(props.length?props.join('\n'):'')+'\n}';
+  set('css-out',css);
 }
-document.getElementById('pl-url').addEventListener('keydown', function(e){ if(e.key==='Enter') doPl(); });
+updateCssPreview();
+
+/* ---- TYPOGRAPHY ---- */
+function updateTyp(){
+  var text=val('typ-text')||'The quick brown fox';
+  var font=val('typ-font');
+  var size=val('typ-size')||'16px';
+  var weight=val('typ-weight')||'400';
+  var style=val('typ-style')||'normal';
+  var ls=val('typ-ls')||'0';
+  var lh=val('typ-lh')||'1.7';
+  var col=document.getElementById('typ-col').value;
+  var d=document.getElementById('typ-display');
+  d.textContent=text;
+  d.style.fontFamily=font; d.style.fontSize=size; d.style.fontWeight=weight;
+  d.style.fontStyle=style; d.style.letterSpacing=ls; d.style.lineHeight=lh; d.style.color=col;
+  document.getElementById('typ-info').textContent=font.split(',')[0].replace(/'/g,'')+' '+size+' '+weight+(style!=='normal'?' italic':'')+' / lh '+lh+(ls&&ls!=='0'?' / ls '+ls:'');
+}
+function updateTypColour(){
+  var hex=document.getElementById('typ-col').value;
+  document.getElementById('typ-col-swatch').style.background=hex;
+  document.getElementById('typ-col-hex').textContent=hex;
+  updateTyp();
+}
+updateTyp();
+
+/* ---- SNIPPETS ---- */
+var SNIPPETS = [
+  {
+    title:'Pull quote',
+    desc:'Large italic quote with left border',
+    code:'<blockquote style="border-left:3px solid #111;padding-left:20px;margin:32px 0;font-size:18px;line-height:1.6;font-style:italic;color:#333">\n  "Quote text here."\n</blockquote>'
+  },
+  {
+    title:'Two-column text',
+    desc:'Two equal columns of body text',
+    code:'<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:32px 0">\n  <p>Left column text here.</p>\n  <p>Right column text here.</p>\n</div>'
+  },
+  {
+    title:'Caption / footnote',
+    desc:'Small muted text for captions or notes',
+    code:'<p style="font-family:\'Courier New\',monospace;font-size:11px;color:#666;margin-top:-20px;margin-bottom:32px;line-height:1.6">Caption or footnote text here.</p>'
+  },
+  {
+    title:'Highlighted text',
+    desc:'Inline highlight band',
+    code:'<mark style="background:#f0ede8;padding:2px 5px">highlighted text</mark>'
+  },
+  {
+    title:'Mono label',
+    desc:'Small uppercase label',
+    code:'<p style="font-family:\'Courier New\',monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#666;margin-bottom:8px">Label text</p>'
+  },
+  {
+    title:'Divider with label',
+    desc:'Horizontal rule with centred label',
+    code:'<div style="display:flex;align-items:center;gap:16px;margin:48px 0">\n  <div style="flex:1;height:1px;background:#ccc"></div>\n  <span style="font-family:\'Courier New\',monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#999">Section</span>\n  <div style="flex:1;height:1px;background:#ccc"></div>\n</div>'
+  },
+  {
+    title:'Info box',
+    desc:'Bordered box for asides or notes',
+    code:'<div style="border:1px solid #ccc;padding:20px 24px;margin:32px 0;background:#faf9f7">\n  <p style="font-family:\'Courier New\',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#666;margin-bottom:10px">Note</p>\n  <p style="margin:0;line-height:1.7">Content here.</p>\n</div>'
+  },
+  {
+    title:'Person quote',
+    desc:'Quote with attribution',
+    code:'<figure style="margin:32px 0">\n  <blockquote style="font-size:17px;line-height:1.7;font-style:italic;margin:0 0 12px;color:#333">"Quote text here."</blockquote>\n  <figcaption style="font-family:\'Courier New\',monospace;font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px">Name, Role</figcaption>\n</figure>'
+  },
+];
+
+(function initSnippets(){
+  var grid=document.getElementById('snip-grid');
+  SNIPPETS.forEach(function(s,i){
+    var card=document.createElement('div');
+    card.className='snippet-card';
+    card.innerHTML='<div class="sc-title">'+s.title+'</div><div class="sc-desc">'+s.desc+'</div>';
+    card.addEventListener('click',function(){
+      document.querySelectorAll('.snippet-card').forEach(function(c){c.style.borderColor='#ccc';c.style.background='#fff';});
+      card.style.borderColor='#111'; card.style.background='#f7f5f0';
+      set('snip-out',s.code);
+      document.getElementById('snip-label').textContent=s.title;
+    });
+    grid.appendChild(card);
+  });
+})();
 
 </script>
 </body>
