@@ -190,15 +190,16 @@
 
     var playing = false;
 
-    btn.addEventListener('click', function (e) {
-      console.log('[TWT] btn clicked, playing='+playing+', target='+e.target.className+', currentTarget='+e.currentTarget.className);
+    btn.addEventListener('click', function () {
       if (playing) {
         audio.pause();
       } else {
         document.querySelectorAll('.twt-player-btn').forEach(function (b) {
           if (b !== btn) {
-            b.closest('.twt-player').classList.remove('playing');
-            b.querySelector('.twt-play-icon').innerHTML = '&#9654;';
+            var p = b.closest('.twt-player');
+            if (p) p.classList.remove('playing');
+            var icon = b.querySelector('.twt-play-icon');
+            if (icon) icon.innerHTML = '&#9654;';
             b.setAttribute('aria-label', 'Play');
           }
         });
