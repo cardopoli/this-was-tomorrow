@@ -7,10 +7,14 @@ draft: false
 description: ''
 photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
-    caption: The guest house at Tinkers Bubble
+    caption: ''
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 dropbox_audio: ''
 body_intro: |-
+  ## Tinker's Bubble Audioscapes
+
+  {{< audio-playlist url="https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0" bg="#f7f5f0" fg="#111111" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
+
   ## The place and its origins
 
   Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
@@ -69,8 +73,6 @@ slug: tinkers-bubble
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
 
 Celebrating its 30th anniversary in January 2024, the village prides itself on being "fossil fuel free" and a pioneer in the UK's off-grid and intentional community sectors. There are times when they find it challenging - the inevitable irritations of living with other people, or getting up in the dark to milk the cows, or mending a fence in the rain. But the community persists.
-
-{{< audio-playlist url="https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0" bg="#f7f5f0" fg="#111111" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
 
 ## Context for this project
 
