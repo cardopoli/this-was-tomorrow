@@ -34,9 +34,9 @@ body_middle: |-
 
   Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
 
-  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
+  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
-    <p class="audio-track-name" style="font-size:12px;color:#000000;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Ree, Resident</p>
+    <p class="audio-track-name" style="font-size:12px;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Ree, Resident</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/9w1d79eu1xan8zgaf4gsn/TWT-090426-Tinkers-Bubble-Ree-Interview_128kbps.mp3?rlkey=ruyfe69bimokn173a1gvsd831&raw=1"></audio>
 
