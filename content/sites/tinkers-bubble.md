@@ -9,7 +9,7 @@ photos:
   - image: /images/DSC_8803_Tinkers Bubble Selected.jpg
     caption: The guest house at Tinkers Bubble
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
-dropbox_audio: ''
+dropbox_audio: https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0
 body_intro: |-
   ## The place and its origins
 
@@ -64,9 +64,6 @@ archives: []
 videos: []
 sources: []
 links: ''
-dropbox_audio_playlist: 'https://www.dropbox.com/scl/fo/s03pgu2eea9vmn6ekc02r/ABkexx0bSclv06Q5vF15IF4?rlkey=de8u3qthww92fkyanahe98rvk&dl=0'
-playlist_bg: '#041801'
-playlist_fg: '#ffffff'
 slug: tinkers-bubble
 ---
 
