@@ -52,11 +52,11 @@ body_middle: |-
 
   As a residents association, the CLT had very little power because it had very little money. Then a social entrepreneur who had seen what the residents were doing lent the newly formed CLT half a million pounds. Suddenly there was power. The council had been paying lip service to community consultation - meetings, workshops, what colour would you like the tiles. Once the CLT could buy houses, the council took notice.
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#f03258" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Hazel Tilley, CLT founder and resident at Granby Four Street</p>
+    <p class="audio-track-name" style="font-size:12px;color:#ffffff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Hazel Tilley, CLT founder and resident at Granby Four Street</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/zxi11fhgqn3rdpa5dg8hk/TWT_AUDIO_Granby_Hazel_128kbps_edit.mp3?rlkey=s9m9rrc9uvg4jmnlcx5enpfpt&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/zxi11fhgqn3rdpa5dg8hk/TWT_AUDIO_Granby_Hazel_128kbps_edit.mp3?rlkey=s9m9rrc9uvg4jmnlcx5enpfpt&raw=1&raw=1"></audio>
 
   </div>
 
