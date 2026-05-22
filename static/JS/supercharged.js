@@ -251,6 +251,7 @@
 
   window._twtInitPlayers = function initPlayers() {
     document.querySelectorAll('.audio-track audio').forEach(function (audio) {
+      if (audio.closest('.twt-playlist')) return;
       if (audio.dataset.playerBuilt) return;
       audio.dataset.playerBuilt = '1';
       audio.style.display = 'none';
