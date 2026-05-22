@@ -67,12 +67,11 @@
   }
 
   function buildPlayer(audio) {
-    // Read customisation from parent .audio-track data attributes
     var track = audio.closest('.audio-track') || audio.parentNode;
-    var bg = track.dataset.twtBg || '#111111';
-    var fg = track.dataset.twtFg || '#f7f5f0';
-    var pad = track.dataset.twtPad || '14px 18px';
-    var btnSize = track.dataset.twtBtnSize || '14px';
+    var bg       = track.dataset.twtBg       || '#111111';
+    var fg       = track.dataset.twtFg       || '#f7f5f0';
+    var pad      = track.dataset.twtPad      || '14px 18px';
+    var btnSize  = track.dataset.twtBtnSize  || '14px';
     var timeSize = track.dataset.twtTimeSize || '11px';
     var showTimer = track.dataset.twtShowTimer !== '0';
 
@@ -80,27 +79,39 @@
     wrap.className = 'twt-player';
     wrap.style.background = bg;
     wrap.style.padding = pad;
+    wrap.style.flexDirection = 'column';
+    wrap.style.gap = '6px';
+
+    // ---- ROW 1: skip-back | play | skip-forward | progress | time ----
+    var row1 = document.createElement('div');
+    row1.style.cssText = 'display:flex;align-items:center;gap:10px;width:100%';
+
+    var skipBack = document.createElement('button');
+    skipBack.setAttribute('aria-label', 'Skip back 15 seconds');
+    skipBack.style.cssText = 'background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;color:'+fg+';font-size:11px;opacity:0.7;line-height:1';
+    skipBack.innerHTML = '&#8630;15';
 
     var btn = document.createElement('button');
     btn.className = 'twt-player-btn';
     btn.setAttribute('aria-label', 'Play');
-    btn.innerHTML = '<span class="twt-play-icon">▶</span>';
+    btn.innerHTML = '<span class="twt-play-icon">&#9654;</span>';
     btn.querySelector('.twt-play-icon').style.color = fg;
     btn.querySelector('.twt-play-icon').style.fontSize = btnSize;
 
+    var skipFwd = document.createElement('button');
+    skipFwd.setAttribute('aria-label', 'Skip forward 15 seconds');
+    skipFwd.style.cssText = 'background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;color:'+fg+';font-size:11px;opacity:0.7;line-height:1';
+    skipFwd.innerHTML = '15&#8631;';
+
     var progress = document.createElement('div');
     progress.className = 'twt-player-progress';
-
     var bar = document.createElement('div');
     bar.className = 'twt-player-bar';
-
     var fill = document.createElement('div');
     fill.className = 'twt-player-fill';
-
+    fill.style.background = fg;
     var handle = document.createElement('div');
     handle.className = 'twt-player-handle';
-
-    fill.style.background = fg;
     handle.style.background = fg;
     bar.appendChild(fill);
     bar.appendChild(handle);
@@ -111,21 +122,55 @@
     time.textContent = '0:00 / 0:00';
     time.style.fontSize = timeSize;
     time.style.color = 'rgba('+hexToRgb(fg)+',0.6)';
-    if(!showTimer) time.style.display = 'none';
+    if (!showTimer) time.style.display = 'none';
 
+    row1.appendChild(skipBack);
+    row1.appendChild(btn);
+    row1.appendChild(skipFwd);
+    row1.appendChild(progress);
+    row1.appendChild(time);
+    wrap.appendChild(row1);
 
+    // ---- ROW 2: volume | speed ----
+    var row2 = document.createElement('div');
+    row2.style.cssText = 'display:flex;align-items:center;gap:10px;padding-top:4px';
 
-    // Play/pause
+    var volIcon = document.createElement('span');
+    volIcon.innerHTML = '&#128266;';
+    volIcon.style.cssText = 'color:'+fg+';font-size:11px;opacity:0.6;flex-shrink:0';
+
+    var volSlider = document.createElement('input');
+    volSlider.type = 'range';
+    volSlider.min = '0'; volSlider.max = '1'; volSlider.step = '0.05'; volSlider.value = '1';
+    volSlider.style.cssText = 'flex:1;max-width:90px;accent-color:'+fg+';cursor:pointer';
+    volSlider.setAttribute('aria-label', 'Volume');
+
+    var speedSel = document.createElement('select');
+    speedSel.style.cssText = 'background:transparent;border:1px solid rgba('+hexToRgb(fg)+',0.3);color:'+fg+';font-size:10px;font-family:monospace;padding:2px 6px;cursor:pointer;flex-shrink:0;margin-left:auto';
+    speedSel.setAttribute('aria-label', 'Playback speed');
+    [['0.5','0.5x'],['0.75','0.75x'],['1','1x'],['1.25','1.25x'],['1.5','1.5x'],['2','2x']].forEach(function(o) {
+      var opt = document.createElement('option');
+      opt.value = o[0]; opt.textContent = o[1];
+      if (o[0] === '1') opt.selected = true;
+      speedSel.appendChild(opt);
+    });
+
+    row2.appendChild(volIcon);
+    row2.appendChild(volSlider);
+    row2.appendChild(speedSel);
+    wrap.appendChild(row2);
+
+    // ---- EVENTS ----
     var playing = false;
+
     btn.addEventListener('click', function () {
       if (playing) {
         audio.pause();
       } else {
-        // Pause all other players first
         document.querySelectorAll('.twt-player-btn').forEach(function (b) {
           if (b !== btn) {
             b.closest('.twt-player').classList.remove('playing');
-            b.querySelector('.twt-play-icon').textContent = '▶';
+            b.querySelector('.twt-play-icon').textContent = '\u25B6';
             b.setAttribute('aria-label', 'Play');
           }
         });
@@ -140,7 +185,7 @@
       playing = true;
       wrap.classList.add('playing');
       var icon = btn.querySelector('.twt-play-icon');
-      icon.textContent = '❚❚'; icon.style.color = fg;
+      icon.innerHTML = '&#10074;&#10074;'; icon.style.color = fg;
       btn.setAttribute('aria-label', 'Pause');
     });
 
@@ -148,19 +193,18 @@
       playing = false;
       wrap.classList.remove('playing');
       var icon = btn.querySelector('.twt-play-icon');
-      icon.textContent = '▶'; icon.style.color = fg;
+      icon.innerHTML = '&#9654;'; icon.style.color = fg;
       btn.setAttribute('aria-label', 'Play');
     });
 
     audio.addEventListener('ended', function () {
       playing = false;
       wrap.classList.remove('playing');
-      btn.querySelector('.twt-play-icon').textContent = '▶';
+      btn.querySelector('.twt-play-icon').innerHTML = '&#9654;';
       fill.style.width = '0%';
       handle.style.left = '0%';
     });
 
-    // Progress
     audio.addEventListener('timeupdate', function () {
       if (!audio.duration) return;
       var pct = (audio.currentTime / audio.duration) * 100;
@@ -185,6 +229,24 @@
     document.addEventListener('mouseup', function () { scrubbing = false; });
     bar.addEventListener('touchstart', function (e) { scrubTo(e.touches[0]); }, { passive: true });
     bar.addEventListener('touchmove', function (e) { scrubTo(e.touches[0]); }, { passive: true });
+
+    // Skip
+    skipBack.addEventListener('click', function () {
+      audio.currentTime = Math.max(0, audio.currentTime - 15);
+    });
+    skipFwd.addEventListener('click', function () {
+      audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 15);
+    });
+
+    // Volume
+    volSlider.addEventListener('input', function () {
+      audio.volume = parseFloat(volSlider.value);
+    });
+
+    // Speed
+    speedSel.addEventListener('change', function () {
+      audio.playbackRate = parseFloat(speedSel.value);
+    });
 
     return wrap;
   }
