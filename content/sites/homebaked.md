@@ -81,7 +81,7 @@ body_middle: |-
   <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The house recently sold by the council to a private developer</p>
 
   Homebaked CLT is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/lh1nbyacl6f9d8t90it63/AM15sGw3kcRJXRbbjliXFt0?rlkey=4kv1m4xquixyil1mpva0xb4fc&dl=0
+dropbox_gallery_2: ''
 body_after: |-
   ## The Model
 
