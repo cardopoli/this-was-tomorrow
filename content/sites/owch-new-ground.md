@@ -17,19 +17,19 @@ body_intro: |-
 
   The idea emerged from a 1998 workshop in London where a Joseph Rowntree Foundation research study by Maria Brenton presented the concept of senior cohousing as developed in The Netherlands. A group of six women who already knew each other attended this workshop and decided that they would act on the Dutch example and create their own women's cohousing community in London. Prime movers were Madeleine Levius and Shirley Meredeen. The first meeting of what became OWCH (Older Women's Co-Housing Community) met in Shirley's home in August 1998.
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#4a8ecf" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // JUDE PT.1</p>
+    <p class="audio-track-name">Jude, resident at New Ground</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/oyvqmk3acv9cgkf0g4fw4/TWT_AUDIO_OWCH_JUDEINTERVIEW_01_ARCHIVE.mp3?rlkey=odg53cq1wlm28kns6xlu8o6a9&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/wp225fuxhr6arviidp5md/TWT-ITTFWWDO-NEW-GROUND-JUDE-01_24042206_128kbps.mp3?rlkey=cm4yovpsgxiw66gsilgm0mse8&raw=1"></audio>
 
   </div>
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#4a8ecf" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">TWT: IS THIS THE FUTURE WE DREAMING OF? - NEW GROUND // JUDE PT.2</p>
+    <p class="audio-track-name">Jude, resident at New Ground // pt.2</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/4cz9grcnw1xe1gbbw0xzj/TWT_ITTFWWDO_NEW-GROUND_JUDE_02_24042206.mp3?rlkey=yyk7og3lmveym5oojqroykmbk&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/qnjue4ytuvhh2p60msn18/TWT-ITTFWWDO-NEW-GROUND-JUDE-02_24042206_128kbps.mp3?rlkey=5n0t7p11t54pq3gwynfjbqpga&raw=1"></audio>
 
   </div>
 dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
