@@ -3,8 +3,6 @@ title: This Was Tomorrow
 intro: |-
   Is this the future we were dreaming of?
 
-  <img src="/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" alt="" width="100%" margin-bottom="25px">
-
   Land held in common, housing built and governed by the people who live in it, decisions made collectively. These places already exist - quietly, imperfectly, without waiting for permission. This project treats them not as proof that things could be different, but as evidence that they already are.
 
   Utopia here is a method, not a promise.
