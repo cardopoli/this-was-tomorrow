@@ -1,11 +1,15 @@
 ---
-title: "Newquay Community Orchard"
-location: "Cornwall"
-slug: "newquay"
-draft: false
+title: Newquay Community Orchard
+location: Cornwall
+visit_date: ''
+draft: true
+description: ''
 photos: []
+dropbox_audio: ''
+body_intro: ''
 audio: []
 sources: []
+slug: newquay
 ---
 
 ## From Neglect to Greenspace
