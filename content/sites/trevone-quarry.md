@@ -3,10 +3,11 @@ title: Trevone Quarry
 location: Mabe Burnthouse, Penryn, Cornwall
 status: planned
 visit_date: ''
-draft: false
-description: 'A former granite quarry outside Penryn, worked from the early 1800s to the 1980s, now a woodland, a nature reserve, and a community of around twenty people living in self-built structures and caravans on rewilded land.'
+draft: true
+description: A former granite quarry outside Penryn, worked from the early 1800s to the 1980s, now a woodland, a nature reserve, and a community of around twenty people living in self-built structures and caravans on rewilded land.
 photos: []
 image: ''
+dropbox_audio: ''
 body_intro: ''
 dropbox_gallery: ''
 body_middle: ''
