@@ -3,7 +3,7 @@ title: Kesoberi Community Farm
 location: Paul, West Penwith, Cornwall
 status: planned
 visit_date: ''
-draft: true
+draft: false
 description: 20 acres of formerly intensive farmland in recovery, held by a small community of five adults and two children who are building something from the ground up - no blueprint, no finished model, just people deciding what the land becomes.
 dropbox_audio: ''
 body_intro: ''
