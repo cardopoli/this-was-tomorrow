@@ -34,7 +34,7 @@ body_middle: |-
 
   ## The planning fight
 
-  Nineteen eviction and enforcement notices over the years. Investigations citing slum landlord regulations, fire safety, child welfare. The claim that what was happening at Trevone was "visually objectionable, unsustainable, and doing significant harm to the delicate fabric of the local community." Every investigating officer acknowledged that what was happening was a good thing. The legislation simply wasn't designed for it.
+  Nineteen eviction and enforcement notices over the years. Every investigating officer acknowledged that what was happening was a good thing. The legislation simply wasn't designed for it.
 
   Rob appealed on 96 grounds, went to public inquiry, self-represented. Won on virtually everything. The last planning battle took four years and cost £80,000 to fight.
 
@@ -111,5 +111,7 @@ slug: trevone-quarry
 ### Further reading
 
 *Trevone* - documentary film, 99p Films, 2024.
+
+Rob Higgs: higgsrob@yahoo.com | 07866224414
 
 Oli Sword makes sculpture under the name Wysax.
