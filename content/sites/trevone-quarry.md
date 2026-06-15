@@ -110,8 +110,5 @@ slug: trevone-quarry
 
 ### Further reading
 
-*Trevone* - documentary film, 99p Films, 2024.
-
-Rob Higgs: higgsrob@yahoo.com | 07866224414
-
+_Trevone_ - documentary film, 99p Films, 2024
 Oli Sword makes sculpture under the name Wysax.
