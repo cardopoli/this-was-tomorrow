@@ -1,33 +1,39 @@
 ---
 title: "Treneere Estate"
-location: "Penzance, West Cornwall"
-slug: "treneere-estate"
+location: Penzance, Cornwall
+status: visited
+visit_date: 16/06/2026
 draft: false
+description: ''
 photos: []
+image: ''
+dropbox_audio: ''
+body_intro: |-
+  Treneere is a social housing estate on the western edge of Penzance. Fifteen minutes on foot from the town centre - far enough that people from town don't just wander in, close enough that residents can get to everything they need. Penzance is the end of the line. Literally: you cannot go further by train from London. That fact shapes the place in ways that are hard to separate out.
+
+  Whole Again Communities - WACC - has been here since 2013. It was started by Lizzie Sullivan, who had spent years working in the voluntary sector and kept running into the same thing: gatekeeping. Services that were technically for everyone but in practice required you to fit a particular profile, carry a particular diagnosis, present in a particular way. She had ADHD and dyslexia and found the system she was working inside could not accommodate her, let alone the people it was supposed to serve. So she set up WACC on the estate where she lived.
+
+  The hub is open access. No referral needed, no criteria to meet, no means test. You can come in because you need help with a form, or because you want to learn to cook, or because you just need somewhere warm to sit with a cup of tea and a book. The team runs cooking workshops for all ages - children, adults, single-gender groups - a garden group, walking groups, exercise programmes, a monthly ND Café for neurodivergent residents, a children's club, and a lunch delivery service for people who cannot come in. The NHS uses the space to run vaccination clinics and cancer awareness workshops. Oxford University researchers have come to hear residents' views on cancer trials. Social prescribers meet clients here.
+
+  None of the staff are full time. Most live on the estate or nearby. The model, quietly and without making a point of it, is that the people running the thing are the same kind of people as the people coming through the door.
+dropbox_gallery: ''
+body_middle: |-
+  Emma Nicholls grew up on Treneere. She came to WACC in 2022 by accident - her sister, who is a hairdresser on the estate, happened to mention they were looking for an admin person while Lizzie was having her hair done. Emma walked in on that conversation with a three-year-old and a two-year-old and a job she had just left. She had spent ten years in estate agency in Penzance town centre. At one of those agencies, the owner's wife offered her elocution lessons. Did not offer them to anyone else. Emma declined. She is Cornish, she speaks how she speaks, that was not going to change. It is only now, she says, that she thinks back and wonders: was that a dig?
+
+  She has been at WACC four years. She does considerably more than admin now.
+
+  The organisation employs two sessional workers, both just turned eighteen. Both came to WACC as children. The hub trained them, got them their safeguarding qualifications, their DBS, their food safety certificates. One of them is now training as a youth worker. She wants to give back to the community. Emma tells this story without fanfare. It is just what happens here, apparently.
+
+  [AUDIO EMBED - Emma Nicholls interview - archive.org URL TBC]
+dropbox_gallery_2: ''
+body_after: |-
+  When Emma was growing up on Treneere there was nothing like WACC. She was not into sports so the after-school clubs were not for her. She knows what it would have meant to have had somewhere like this - the options it would have opened up, the things it would have made possible that were not possible. She says this plainly, without self-pity. It is just true.
+
+  She is asked whether this is the future she was dreaming of. Yes and no, she says. There is a lot they still want to do. But she thinks it still lies with the government, ultimately - and the government does not understand real people. WACC is partly funded, indirectly, by the NHS: community hubs like this one are supposed to keep people out of hospital. The money they receive does not cover a month of running costs. The funds that exist, Emma says, are not what people need and not what people want. She would love to say more, publicly, about what people actually need. Simone, the CEO, has told her they cannot - funders do not want to hear it. She understands. She says it anyway, here, quietly.
+
+  People on the estate, Emma says, are proud to live on Treneere. She does not think you get that from any other estate in Penzance. She grew up with the stigma of the address. She has dealt with it in estate agents' offices, in casual remarks, in the assumptions people carry about where you are from and what that means about who you are. She has never cared, she says. She still lives here. She is raising her children here. She would not raise them anywhere else.
+dropbox_gallery_3: ''
 audio: []
 sources: []
+slug: treneere-estate
 ---
-
-## The Site & Location
-
-Treneere is a residential council estate on the outskirts of Penzance, West Cornwall. It takes its name from the nearby manor of Treneere, which until the 1930s was the principal landowner in the area. Treneere Manor itself is a Grade II* listed small mansion built in 1758, originally one of the bartons (subsidiary farms) of the Manor of Alverton. The manor now accommodates the Penwith campus administration of Truro and Penwith College. The estate was built in the 1930s as part of a government-backed slum clearance programme aimed at removing housing deemed unfit for habitation.
-
-## The 1930s Slum Clearance Context
-
-Like Gwavas in nearby Newlyn, Treneere emerged from the Housing Act of 1936 and the era of state-mandated urban renewal. The 1930s represented a particular moment in British housing policy – a moment when the state determined it had both the moral obligation and the authority to demolish "slums" and rehouse their occupants in new, rationalized estates. The logic was modernisation and public health; the reality was displacement and loss of community networks.
-
-In 2002, decades after its construction, Treneere's neighbourhood was officially identified as a "market failure" under the Housing Market Renewal Initiative (HMRI). This dual designation – built as a slum-clearance solution, later classified as a "failed" market area needing renewal – reflects the deep paradox: state-built housing estates, intended to solve one crisis, later became framed as problems requiring new solutions.
-
-## Present Status & Deprivation
-
-Most housing within Treneere is owned and operated by Penwith Housing Association. The estate falls within the Penzance East Ward of Cornwall Council. In 2017, an Index of Multiple Deprivation report described Treneere as "the most deprived neighbourhood in Cornwall." Deprivation here is not accidental or incidental – it is systemic and persistent. The majority of residents have been poor for generations, living in an estate built in an era of paternalistic state intervention, now marked by concentrated disadvantage.
-
-## The Contrast: Housing Policy Across Time
-
-Treneere and the community-led housing projects Enrico documents elsewhere represent two fundamentally opposed approaches to housing low-income people. Treneere was built in an era of "we know what's best for you" – centralized planning, one-size-fits-all design, residents as passive recipients of state benevolence. The community-led projects – CLTs, cohousing, cooperatives – are built on the conviction that people should have voice, choice, and genuine ownership of where they live.
-
-Treneere was not built because residents demanded it; it was built because planners decided their homes were slums. No one asked what the community wanted; they were told what they would get. Over nearly a century, this top-down logic has not created lasting community wealth, security, or wellbeing. Instead, it created estates that carry the weight of that original displacement, marked now by concentrated poverty and the endless cycle of "regeneration" schemes that treat symptoms without addressing root causes.
-
-## Why This Matters
-
-Treneere is essential context for understanding what "community housing" means. It is not simply about building homes for poor people; it is about whether poor people have agency in deciding how they live. Treneere reminds us that housing policy without community voice is ultimately a tool of containment, not liberation. The estate stands as a historical record of paternalism – well-intentioned but fundamentally disempowering. By contrast, the sites Enrico documents show what becomes possible when communities lead: ownership, participation, dignity, and the chance to shape your own future rather than accept what others have decided for you.
