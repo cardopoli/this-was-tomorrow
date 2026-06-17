@@ -9,45 +9,41 @@ photos: []
 image: ''
 dropbox_audio: ''
 body_intro: |-
-  Treneere is a social housing estate on the western edge of Penzance. Fifteen minutes on foot from the town centre - far enough that people from town don't tend to wander in, close enough that residents can reach most things they need on foot. Penzance is the end of the line. Literally: you cannot go further by train from London. That fact shapes the place in ways that are hard to separate out - seasonal homelessness, scarce year-round employment, shops closing, a town that feels increasingly like it is at the edge of something rather than the centre of it.
+  Treneere is a social housing estate on the western edge of Penzance, around fifteen minutes' walk from the town centre. Penzance is the last stop on the rail line from London - the end of the line, in the words of one resident - a fact that shapes the area's economy and its sense of itself: seasonal employment, a shrinking high street, distance from anywhere larger.
 
-  Treneere sits within that, but apart from it. People here are proud to be from here. The estate has green spaces, a park, a school up the road. Children play out. People know each other. Families stay. The address carries stigma - has always carried it - but the people who live here, by and large, do not care.
+  Whole Again Communities (WAC) has run a community hub on the estate since 2013. It was founded by Lizzie Sullivan, who had worked across the voluntary sector and encountered persistent gatekeeping - services that were nominally open but in practice required a referral, a diagnosis, a fit with someone else's criteria. Sullivan, who has ADHD and dyslexia, found the system could not accommodate her, let alone the people it was meant to serve. WAC was set up as a deliberate alternative: open access, no referral, no means test, no condition to meet.
 
-  Whole Again Communities has been on the estate since 2013. It was started by Lizzie Sullivan, who had spent years working in the voluntary sector and kept running into the same thing: gatekeeping. Services that were technically for everyone but in practice required you to fit a particular profile, carry a particular diagnosis, present in a particular way. She had ADHD and dyslexia and found the system she was working inside could not accommodate her, let alone the people it was supposed to serve. She set up WAC on the estate where she lived.
-
-  Open access. No referral needed, no criteria to meet, no means test. You can come in because you need help with a form, or because you want to learn to cook, or because you just need somewhere warm to sit. The team runs cooking workshops for all ages, a garden group, walking groups, exercise programmes, a monthly ND Café for neurodivergent residents, a children's club, and a lunch delivery service for people who cannot come in. The NHS uses the space to run vaccination clinics and cancer awareness workshops. Oxford University researchers have come here to hear residents' views on cancer trials.
-
-  None of the staff are full time. Most live on the estate or nearby. The model, quietly and without making a point of it, is that the people running the thing are the same kind of people as the people coming through the door.
+  Sullivan retired in November 2025. Simone, who had job-shared the role with her since around 2020, became CEO. The current team is small and entirely part time: Simone, Emma Nicholls, Steph (one day a week), and Maggie and Louise in the kitchen. Two sessional workers, both around eighteen, both former child attendees of WAC's programmes, are employed and supported through formal training - safeguarding, DBS, food hygiene.
 dropbox_gallery: ''
 body_middle: |-
-  ## The estate
+  ## What it does
 
-  Emma Nicholls grew up on Treneere. She came to WAC in 2022 by accident - her sister, who is a hairdresser on the estate, happened to mention they were looking for an admin person while Lizzie was having her hair done. Emma had a three-year-old and a two-year-old and a job she had just left. She has been here since, doing considerably more than admin.
+  WAC's programme covers cooking workshops across all ages, a garden group, walking groups, exercise classes, a children's club, and a monthly ND Café for neurodivergent residents. A lunch delivery service reaches people who cannot attend in person. The hub also hosts services it does not itself provide: NHS vaccination clinics, cancer awareness sessions, social prescribing appointments, and on one occasion a consultation with Oxford University researchers on cancer trial design.
 
-  Before WAC she spent ten years in estate agency in Penzance town centre. At one agency, the owner's wife offered her elocution lessons. Did not offer them to anyone else. Emma declined. She is Cornish, she speaks how she speaks. It is only now, she says, that she thinks back and wonders: was that a dig?
+  Funding for community hubs of this kind is often indirect - WAC receives some support tied to NHS objectives around keeping people out of hospital - but the amount does not cover a month of operating costs. Emma Nicholls, who works at the hub, put it plainly: the funds that exist are not what people need and are not what people want.
 
-  She grew up on this estate. As a child she was called posh by her friends here because her parents were both working and still married. That was classed as posh. She never went to after-school clubs - she was not into sports and there was nothing else. She knows what it would have meant to have had somewhere like WAC. The options it would have opened up. The things it would have made possible that were not possible.
+  Emma grew up on Treneere and still lives there. She joined WAC in 2022, initially in an administrative capacity, after a chance conversation - her sister, a hairdresser on the estate, was cutting Lizzie Sullivan's hair when the vacancy came up. Before WAC she spent ten years in estate agency in Penzance.
 
-  Treneere, she says, is a place where people stay. A lot of the people she grew up with she still speaks to now. They went to the same schools, went through the same things, know they are always there for each other. You meet your lifelong friends on a social housing estate.
+  Emma Nicholls, resident and WAC team member
 
-  [AUDIO EMBED - Emma Nicholls interview - archive.org URL TBC]
+  [DROPBOX AUDIO LINK TBC - format: https://www.dropbox.com/scl/fi/.../filename_128kbps.mp3?rlkey=...&raw=1]
 dropbox_gallery_2: ''
 body_after: |-
-  ## What the place does
+  ## On the estate
 
-  WAC employs two sessional workers, both just turned eighteen. Both came to the hub as children. The organisation trained them up - safeguarding, DBS, food safety certificates. One of them is now training as a youth worker. She wants to give back to the community. Emma tells this story without fanfare. It is just what happens here, apparently.
+  A persistent misconception, according to Emma, is that WAC's services require unemployment or a diagnosed condition. They do not. The hub has worked for years to correct this, with mixed success - in summer it operates at capacity, drawing visitors from St Ives, St Just, and Porthleven, and there are plans for pop-up sessions in Penzance town centre to reach people for whom even a fifteen-minute walk is a barrier.
 
-  There is a young man who came to a cooking workshop as a child, more or less forced by his mother. Had no interest. Did not like it. Went to college, studied catering, now runs a restaurant. He is just from Treneere.
+  Treneere residents describe a particular pride in the estate that, in Emma's account, is not matched elsewhere in Penzance. Long-term residents stay; friendships formed in childhood persist into adulthood. The estate carries a degree of social stigma in the wider town - something Emma has encountered directly in previous employment - but this does not appear to affect residents' own sense of the place.
 
-  The hub is trying to get the word out that it is open access - not for a specific group, not for people with a particular condition or employment status, not just for residents of this one estate. People still assume otherwise. The assumption is hard to shift when most other organisations do have criteria. WAC does not. In summer the building is full. People come from St Ives, from St Just, from Porthleven. They are planning pop-ups in town again, because fifteen minutes is far enough to be a barrier for some people.
+  ## Context for this project
 
-  Lizzie Sullivan retired in November 2025. Simone, who had been job-sharing with her since around 2020, took over as CEO. The organisation she is running is indirectly funded by the NHS - community hubs like WAC are supposed to keep people out of hospital. The money they receive does not cover a month of running costs. The funds that exist, Emma says, are not what people need and not what people want. She would love to say more, publicly, about what people actually need. Simone has told her they cannot - funders do not want to hear it.
-
-  Asked whether this is the future she was dreaming of: yes and no. There is a lot still to do. She still thinks it lies with the government, ultimately, and the government does not understand real people.
-
-  What she hates: dishonesty. And thieves.
+  WAC sits outside the categories most directly addressed elsewhere in this project - it is not a housing model, cooperative, or land trust, but a community-run service infrastructure operating inside existing social housing. Its relevance here is structural: an organisation founded explicitly against institutional gatekeeping, staffed substantially by the community it serves, and funded in a way that does not match its function. The same tension recurs across most sites in this project in different forms - models that work are persistently underfunded relative to what they demonstrably do.
 dropbox_gallery_3: ''
 audio: []
 sources: []
 slug: treneere-estate
 ---
+
+### Further reading
+
+Whole Again Communities: based on Treneere Estate, Penzance.
