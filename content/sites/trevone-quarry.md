@@ -110,5 +110,5 @@ slug: trevone-quarry
 
 ### Further reading
 
-_Trevone_ - documentary film, 99p Films, 2024
+[_Trevone_](https://www.crowdfunder.co.uk/p/trevone-quarry---help-us-tell-this-story) - documentary film, 99p Films, 2024. Crowdfunded December 2024; check 99p Films' channels for release and screening updates.
 Oli Sword makes sculpture under the name Wysax.
