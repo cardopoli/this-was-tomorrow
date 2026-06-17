@@ -31,8 +31,6 @@ body_intro: |-
 
   </div>
 
-  _Listen to the interview with_ [_Jess Steele_](https://en.wikipedia.org/wiki/Jess_Steele) 
-
   In 2014, Jess Steele (via her company [Jericho Road Solutions](https://www.jerichoroad.co.uk/)) partnered with Meanwhile Space CIC to establish [Hastings Commons Neighbourhood Ventures (HCNV)](https://hastingscommons.com/), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
 dropbox_gallery: https://www.dropbox.com/scl/fo/bnc5x98ncccxlq7f21lwo/ALH0aZpNjMjpwHFuy7zI04o?rlkey=ho9k7rd328x0dihag2ljreuvj&dl=0
 body_middle: |-
@@ -46,12 +44,7 @@ body_middle: |-
 
   ## WHAT HAS BEEN BUILT
 
-  Over the past decade, Hastings Commons has:
-
-  - Acquired and renovated 11 rent-capped buildings
-  - Created 50+ workspaces
-  - Housed 120+ tenants
-  - Converted derelict historic buildings into homes, offices, creative studios, a youth club, and a digital arts hub (OBX)
+  Over the past decade, Hastings Commons has acquired and renovated 11 rent-capped buildings, created more than 50 workspaces, and housed over 120 tenants - converting derelict historic buildings into homes, offices, creative studios, a youth club, and a digital arts hub known as OBX.
 
   Rents are set at the lower of Hastings Living Rents (one-third of local median wages) or 80% of market rent. Residents are selected from the Council's Housing Register using four criteria: 1) housing need, 2) local connection, 3) enthusiasm for the Hastings Commons ethos, and 4) willingness to contribute to the Commons and the wider community.
 
