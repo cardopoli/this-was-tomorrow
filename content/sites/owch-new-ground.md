@@ -99,7 +99,7 @@ Photographically, the project poses questions about thresholds: between private 
 
 ***
 
-**Sources:**
+### Further reading
 
 - OWCH official website (owch.org.uk, now newgroundcohousing.uk)
 - OWCH History pages
