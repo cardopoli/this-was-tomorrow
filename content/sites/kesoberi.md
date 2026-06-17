@@ -31,11 +31,15 @@ body_after: |-
 
   Plans have shifted in scale and structure several times - between nine and sixteen affordable homes, and between two different planning routes. One path, requiring borrowing in the millions through a registered social housing provider, would have meant relinquishing direct control of the site to that provider; Fi and Richie have moved away from this, toward a smaller self-build model using ecological construction methods - straw bale, cob, timber frame - accepting slower progress in exchange for keeping the project in the cooperative's hands.
 
+  The current plan is to apply for nine homes, with two or three built first. Alongside the housing, there's an intention to build some form of community hub on-site - a space open to the wider, pre-existing local community around the farm, not just to cooperative members.
+
   Fi trained formally in horticulture, with a thesis on biodynamics, before training as a psychotherapist - work she now combines, taking clients outdoors rather than running sessions indoors. "Being a gardener, it is becoming resilient," she says, "because you have so many losses, so much that is not in your control."
 
   Asked whether this is the future she was dreaming of: "It's never how you think it's gonna be... The reality is so much harder than I could have imagined, and so much more incredible." She points to a recurring sense of synchronicity through the project's hardest moments - land appearing at the right time, support arriving from unexpected places - as something she has come to trust.
 
   Her closing reference is to the Shambhala warrior prophecy, recorded by Joanna Macy: a prediction that the weapons threatening the world are made of mind, and because they are made of mind, they can be unmade - by insight and by compassion, working together.
+
+  I stayed in the camper at the bottom of the site. No water on the camper itself, but two compost toilets and a hot shower a short walk up the field, and water for washing up there too. The camper's great - cosy, something I can't quite place about it, retro-futurist, somehow seventies even the ones built decades later. No electricity, no signal. A very first-world problem to call it that, and genuinely refreshing. It was misty the entire time I was there - the kind of mist that doesn't lift, sitting low between the sea and the inland rise toward the tip of Cornwall. One morning I noticed the gate wasn't fastened the way I'd left it, and walked up to find a white van and someone I didn't recognise working in the far field. I never found out who.
 dropbox_gallery_3: ''
 audio: []
 sources: []
