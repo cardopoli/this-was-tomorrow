@@ -2,7 +2,7 @@
 title: Gwavas
 location: Newlyn, Cornwall
 status: visited
-visit_date: 16/06/2026
+visit_date: 17/06/2026
 draft: false
 description: ''
 photos: []
