@@ -5,7 +5,9 @@ status: visited
 visit_date: 12/06/2026
 draft: false
 description: ''
-photos: []
+photos:
+  - image: /images/image-12_15_06_2026_trevone-quarry_falmouth_cornwall-low-res_jpeg-9-large.webp
+    caption: ''
 image: ''
 dropbox_audio: ''
 body_intro: |-
