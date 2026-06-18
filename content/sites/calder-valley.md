@@ -32,7 +32,7 @@ dropbox_gallery: https://www.dropbox.com/scl/fo/etsgnxe9rrh3kwazzaui1/AEXxsmkpYf
 body_middle: |-
   ## Ferney Lee, Todmorden
 
-  Nineteen homes and twenty-three offices on the site of the former Ferney Lee Home for Older People, part of the £17.5 million Todmorden Town Deal investment programme. Planning permission granted June 2024. Built to Passivhaus standard: MVHR ventilation, very high levels of insulation, solar panels. No air source heat pumps - the insulation and solar do enough that only a light touch of electric heating is needed. Green roofs, EV charging ducted into every parking space. Flood water slow-release pipes run the length of the site.
+  Nineteen homes and twenty-three offices on the site of the former Ferney Lee Home for Older People, part of the £17.5 million Todmorden Town Deal investment programme. Planning permission granted June 2024. Built to the Passive House Institute Low Energy Building Standard: draught-free, whole house mechanical ventilation with heat recovery, very high levels of insulation, solar panels. No air source heat pumps - the insulation and solar do enough that only a light touch of electric heating is needed. Green roofs, power ducted into every parking space ready for more EV chargers to be added in future. Flood water slow-release pipes run the length of the site to reduce stormwater run-off into local watercourses.
 
   <div class="audio-track">
 
@@ -42,7 +42,7 @@ body_middle: |-
 
   </div>
 
-  CVCLT Enterprise Ltd was set up specifically to build and operate the project - deliberately separate from the CLT, so that if it fails it does not jeopardise the organisation's housing work. Any operational surplus goes back to the CLT. Homes owned and managed by Connect Housing, who pay a ground rent to the CLT. Lets via Calderdale's B-with-us system.
+  CVCLT retains ownership of the overall site. CVCLT Enterprise Ltd was set up specifically to build and operate the project - deliberately separate from the CLT, so that if it fails it does not jeopardise the organisation's housing work. Any operational surplus goes back to the CLT. Homes are developed, owned and managed by CVCLT's longstanding housing delivery partner Connect Housing, with part funding from Homes England through the UK Government's Affordable Homes Programme. Connect is a West Yorkshire based charitable housing association and Registered Provider of Social Housing in its own right, and pays a nominal ground rent to the CLT for each home. Lettings via Calderdale's B-with-us system. The site is managed jointly by CVCLT, TodWorks, and Connect.
 
   The operation is designed for minimal staffing. QR code access throughout: a tenant can hire a meeting room for two hours, enter with a time-limited code, and leave. Twenty of the twenty-three office units have their own front door. Communal kitchen and meeting rooms are available to all. The model pushes against pure hot desking toward co-rented units where small groups share a space with their own autonomy.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/xfjhux9tiksgfwkvwcqgj/AO2Qb4O62poY9A3YvzQABTM?rlkey=9lj8fs1it25dim5qc6u3mt3en&dl=0
