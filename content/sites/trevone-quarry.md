@@ -6,9 +6,9 @@ visit_date: 12>15/06/2026
 draft: false
 description: ''
 photos:
-  - image: /images/image-12_15_06_2026_trevone-quarry_falmouth_cornwall-low-res_jpeg-9-large.webp
+  - image: /images/image-low-res_3000px_60-_jpeg-9.webp
     caption: ''
-image: ''
+image: /images/image-low-res_3000px_60-_jpeg-9.webp
 dropbox_audio: ''
 body_intro: |-
   In 2009, Rob Higgs bought a derelict granite quarry outside Penryn in Cornwall. The planning permission said: extract the remaining granite, or convert to industrial agriculture. He did neither.
