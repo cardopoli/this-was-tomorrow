@@ -6,7 +6,7 @@ visit_date: 12>15/06/2026
 draft: false
 description: ''
 photos:
-  - image: /images/image-low-res_3000px_60-_jpeg-9.webp
+  - image: /images/image-low-res_3000px_60jpeg-9.webp
     caption: ''
 image: /images/image-low-res_3000px_60-_jpeg-9.webp
 dropbox_audio: ''
