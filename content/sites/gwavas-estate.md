@@ -1,5 +1,5 @@
 ---
-title: Gwavas
+title: Gwavas Estate
 location: Newlyn, Cornwall
 status: visited
 visit_date: 17/06/2026
