@@ -22,19 +22,16 @@ body_middle: |-
 
   The programme covers cooking workshops across all ages, a garden group, walking groups, exercise classes, a children's club, and a monthly café for neurodivergent residents. A delivery service brings food to people who cannot attend in person. The hub also lends its space to services it doesn't itself run - NHS vaccination clinics, cancer awareness sessions, social prescribing appointments, and on one occasion a research consultation with Oxford University academics on cancer trial design.
 
-  <div style="margin:0 0 32;">
-
-    <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
-
-      <div><img src="https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1" alt="" style="width:100%;object-fit:contain" onclick="lbOpen('https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1','',event)" style="cursor:zoom-in"></div>
-
-      <div><img src="https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1" alt="" style="width:100%;object-fit:contain" onclick="lbOpen('https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1','',event)" style="cursor:zoom-in"></div>
-
-    </div>
-
-  </div>
 
   Funding follows a familiar pattern for this kind of work: indirect, tied to outcomes elsewhere in the system rather than the work itself. WAC receives some support connected to NHS objectives around reducing hospital admissions, but the amount doesn't cover a month of running costs. The gap between what funders will pay for and what the hub actually does - cooking, company, somewhere warm to sit, a person who knows your name - is the recurring frustration among the staff who run it.
+
+  <div style="margin:0 0 32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">
+      <div><img src="https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1" alt="" style="width:100%;height:100%;object-fit:cover" onclick="lbOpen('https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1','',event)" style="cursor:zoom-in"></div>
+      <div><img src="https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1" alt="" style="width:100%;height:100%;object-fit:cover" onclick="lbOpen('https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1','',event)" style="cursor:zoom-in"></div>
+      <div><img src="https://www.dropbox.com/scl/fi/3wps65ogh93a8ajcz0rm1/Image-LOW-RES_3000PX_60_JPEG-29-Large.jpeg?rlkey=xogcwzd6bfcr0afaxrphm64qd&raw=1" alt="" style="width:100%;height:100%;object-fit:cover" onclick="lbOpen('https://www.dropbox.com/scl/fi/3wps65ogh93a8ajcz0rm1/Image-LOW-RES_3000PX_60_JPEG-29-Large.jpeg?rlkey=xogcwzd6bfcr0afaxrphm64qd&raw=1','',event)" style="cursor:zoom-in"></div>
+    </div>
+  </div>
 
   Emma Nicholls, who works at the hub, grew up on Treneere and still lives there. She joined WAC in 2022 after a chance conversation - her sister, a hairdresser on the estate, happened to be cutting Lizzie Sullivan's hair when a vacancy came up. Before WAC she spent ten years in estate agency in Penzance town centre.
 
