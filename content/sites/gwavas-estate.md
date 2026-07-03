@@ -6,20 +6,20 @@ visit_date: 17/06/2026
 draft: false
 description: ''
 photos: []
-image: ''
+image: /images/image-low-res_3000px_60_jpeg-2.webp
 dropbox_audio: ''
 body_intro: |-
   Gwavas sits on the hill above Newlyn, reached by a steep climb that residents complained about from the day it was built. The estate went up in the late 1930s as council housing for people cleared out of the old fishing village below - 242 homes built on twenty acres of greenfield land, replacing cottages without running water or sewerage, where toilets were a bucket emptied over the cliff at night. The clearances that made way for it became one of the more resonant housing protests of the interwar period: in October 1937, a Newlyn fishing boat sailed up the Thames to Westminster to protest the demolition of the old village. I found this history by accident, reading Municipal Dreams' account of the Newlyn Clearances, and it's the reason I went to look at Gwavas at all - that, and the name, which is too good not to.
 
   I have no contact at Gwavas, no interview, no association with anyone who lives there now. This isn't a site visit in the way the rest of this project means that phrase. I was staying at Kesoberi, a few minutes away, and walked there and back most days for something else entirely. This is what I saw from the footpath.
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/0xnq1r8okjwknuoqgcbsg/AI4kcfLo5iJuCvtC38nZyDM?rlkey=6p17lhsqtzq6r323thnhy3s0y&dl=0
 body_middle: |-
   I walked there daily on the way to and from Paul, taking the number 1 bus into the estate's core and going the rest on foot - sometimes the back way, from the caravan, uphill through mizzle, mist and drizzle, Cornish style. On one stretch I walked between fields next to a quarry, now closed, that I was tempted to enter and wasn't geared up for. The footpaths there are an odd mix - English public right of way signage running through something that looks almost tropical. Cornwall sits low, and it shows.
 
   On a small tarmac corner of that back lane, in the rain, I heard two people behind the hedge - one of them sounding like they were mid-therapy session, the words audible, the heads just visible above the bramble. I assumed at first they were guarding the entrance to the quarry. They weren't, and they couldn't have cared less that I was there, despite me being the stranger in that scene - alone, soaked, carrying a camera. I suppose it's all a matter of where your threshold for weird sits.
 
   The lane in is lined with second and third homes, the kind that get turned into Airbnbs and Booking.com listings under names like Seaview and Restwell - the whole genre of names the British love for houses they don't live in.
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/2oxr00lzhjne0rnjt48sk/AFmJutTWPnRJNaO3rDEgwFA?rlkey=0q7pkwel82gi1olts7qrnxiuq&dl=0
 body_after: |-
   The estate itself is marked off by a kind of cement moat - elevated, staired into, steep, labyrinthine, mirroring in a flatter, sadder register the shape of the fishing town below it. The footpaths through it are blocked in places not by design but by neglect - lumps of rubbish, piles of trash, connections nobody seems to be using. Nothing like the clever revamping Granby has done with its back alleys; here it's just utility, misused and left to rot. Lots of England flags, a couple of Cornish ones. Right where the bus loops round on Chywoone Avenue and heads back out, an off licence I didn't take a picture of - purple and yellow.
 
@@ -30,7 +30,7 @@ body_after: |-
   In the hands of the enlightened and the well-resourced, Gwavas could be beautiful - it has the bones for it. As it stands: a horizontal council estate by the sea, not vertical, and one I'd happily live in.
 
   Source: ["The Newlyn Clearances, part I: the Gwavas Estate"](https://municipaldreams.wordpress.com/2019/01/01/newlyn_clearances_i/), Municipal Dreams, 1 January 2019.
-dropbox_gallery_3: ''
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/vi0h6ng2xoxxazc9v4yfq/AKpyQe6qixYoDJ1zHIqNnx0?rlkey=eff9qtk7pd3vls4f79zrk83yr&dl=0
 audio: []
 sources: []
 slug: gwavas
