@@ -6,7 +6,7 @@ visit_date: 16/06/2026
 draft: false
 description: ''
 photos: []
-image: ''
+image: /images/image-low-res_3000px_60_jpeg-44-large.webp
 dropbox_audio: ''
 body_intro: |-
   Kesoberi Community Farm occupies 20 acres of former agricultural land on the edge of Newlyn, near Penzance, held cooperatively through Kesoberi Housing Cooperative, incorporated in 2012. The land had been farmed industrially for decades - potato monoculture, sprayed before harvest, left bare. Fi Garrard, who has driven the project alongside her partner Richie since the mid-2000s, describes the land's condition on first encountering it as visibly depleted.
@@ -14,7 +14,7 @@ body_intro: |-
   The current site was bought in August 2023, after an earlier proposed site nearby fell through following several years of preparatory work, for reasons outside the group's control. Within the first winter, the new owners planted 3,600 trees. The land's recovery since has been rapid: ground that had been bare gave way within a year to a field of flowering chamomile.
 
   The project's roots go back further still - to a flyer Fi made in 2005 asking whether anyone wanted to live in an eco-village, and a series of earlier groups and sites across nearly two decades before this one held.
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/itajj7dbj1rbtjxfh2308/AFuVrbUAB9UZYunNDLV4RqE?rlkey=rshap34e9ai6fxjjpnqkvwebm&dl=0
 body_middle: |-
   ## Structure
 
@@ -22,10 +22,11 @@ body_middle: |-
 
   This structure exists because an earlier core group, working together for several years, dissolved under sustained strain in early 2024. Long-running tension surfaced under the physical and financial pressure of the project's early stages, and the group came close to ending entirely; several members left, and land was nearly sold off to cover what was owed. Fi describes a period of deciding to let go of the project altogether, followed by an unexpected investment that allowed the remaining members to buy out those who wished to leave and continue. The current sociocratic structure was put in place specifically to prevent a repeat.
 
-  [DROPBOX AUDIO LINK TBC - format: https://www.dropbox.com/scl/fi/.../filename_128kbps.mp3?rlkey=...&raw=1]
+
+
 
   Fi Garrard, Kesoberi Community Farm
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/o1j2rglpwy22g7iq3fgoh/AOqJWVR-l4OL4OV15hMgeV4?rlkey=e37w0ouzvmjmxourecwixrkcx&dl=0
 body_after: |-
   ## What's being built
 
@@ -39,8 +40,8 @@ body_after: |-
 
   Her closing reference is to the Shambhala warrior prophecy, recorded by Joanna Macy: a prediction that the weapons threatening the world are made of mind, and because they are made of mind, they can be unmade - by insight and by compassion, working together.
 
-  I stayed in the camper at the bottom of the site. No water on the camper itself, but two compost toilets and a hot shower a short walk up the field, and water for washing up there too. The camper's great - cosy, something I can't quite place about it, retro-futurist, somehow seventies even the ones built decades later. No electricity, no signal. A very first-world problem to call it that, and genuinely refreshing. It was misty the entire time I was there - the kind of mist that doesn't lift, sitting low between the sea and the inland rise toward the tip of Cornwall. One morning I noticed the gate wasn't fastened the way I'd left it, and walked up to find a white van and someone I didn't recognise working in the far field. I never found out who.
-dropbox_gallery_3: ''
+  I stayed in the camper at the bottom of the site. The camper was great - cosy, something I can't quite place about it, retro-futurist, somehow seventies even the ones built decades later. No electricity, no signal. A very first-world problem to call it that, and genuinely refreshing. It was misty the entire time I was there - the kind of mist that doesn't lift, sitting low between the sea and the inland rise toward the tip of Cornwall.
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/rgagscmhkawdj5sh3astd/AM-Du4Fdk_tlHpNgeLhxnhw?rlkey=g6f8db2rm2prow1kpijcnl0dc&dl=0
 audio: []
 sources: []
 slug: kesoberi-community-farm
