@@ -15,6 +15,8 @@ body_intro: |-
 
   The original idea was simple - replicate the freedom he'd found at a boatyard in Pendennis: rent a bit of space by the water, do your life as long as you pay the rent, no questions asked. Get sculptors and musicians and people who can fix things together on a bit of land. Plant trees everywhere. That would be enough.
 
+
+
   The focus shifted. Environmental crisis, refugee crisis, biodiversity loss. The woodland at Trevone turned out to be temperate rainforest - one of the rarest habitats in the UK. Restoring it became as central as housing people.
 
   What exists now holds four things together at once: a residential community of around 19 people living in self-built structures and caravans, a sustainable industrial estate, a rewilding and species reintroduction project, and a working farm. The hope, in Rob's words, is that the four benefit each other the way an ecosystem does.
@@ -72,30 +74,6 @@ body_after: |-
   "This year we had 56 days of solid rain in the winter and that was really hard. Just the relentlessness of it. At the beginning it's beautiful down in the woods when it rains, it really is lovely. And you can have that and you can also have every fucking thing is wet and everyone's stuff is wet. And you wake up in the morning and you just hear the rain again."
 
   No cars on site. Five-minute walk to the washing machine in a barn at the top of the hill. "I'm a 50-year-old woman and I'm five foot three and not built in a particularly strong way. So I lean on other members of the community for the more practical physical tasks and I bring my elements. We don't all have to do everything."
-
-  <div class="audio-track">
-
-    <p class="audio-track-name">Sophie Miller, resident</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
-
-  </div>
-
-  <div class="audio-track">
-
-    <p class="audio-track-name">Oli Sword, resident and artist</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
-
-  </div>
-
-  <div class="audio-track">
-
-    <p class="audio-track-name">Dave and Lisa, residents</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
-
-  </div>
 
   Dave and Lisa: "We feel we're living in the height of luxury. We're incredibly lucky living in this utter privilege. But if people are used to a more convenient world, to them, I suppose we're peasants."
 
