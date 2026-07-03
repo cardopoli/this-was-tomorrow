@@ -8,7 +8,7 @@ description: ''
 photos:
   - image: /images/image-low-res_3000px_60_jpeg-31-large.webp
     caption: ''
-image: ''
+image: /images/image-low-res_3000px_60_jpeg-31-large.webp
 dropbox_audio: ''
 body_intro: |-
   Treneere is a social housing estate on the western edge of Penzance, about fifteen minutes' walk from the town centre. Penzance is the last stop on the rail line from London, and the area's economy reflects it: seasonal work, a contracting high street, and a sense of distance from anywhere larger that residents describe as both a limitation and part of what holds the place together.
