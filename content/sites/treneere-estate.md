@@ -22,7 +22,6 @@ body_middle: |-
 
   The programme covers cooking workshops across all ages, a garden group, walking groups, exercise classes, a children's club, and a monthly café for neurodivergent residents. A delivery service brings food to people who cannot attend in person. The hub also lends its space to services it doesn't itself run - NHS vaccination clinics, cancer awareness sessions, social prescribing appointments, and on one occasion a research consultation with Oxford University academics on cancer trial design.
 
-
   Funding follows a familiar pattern for this kind of work: indirect, tied to outcomes elsewhere in the system rather than the work itself. WAC receives some support connected to NHS objectives around reducing hospital admissions, but the amount doesn't cover a month of running costs. The gap between what funders will pay for and what the hub actually does - cooking, company, somewhere warm to sit, a person who knows your name - is the recurring frustration among the staff who run it.
 
   <div style="margin:0 0 32px;">
