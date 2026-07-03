@@ -13,6 +13,18 @@ dropbox_audio: ''
 body_intro: |-
   Treneere is a social housing estate on the western edge of Penzance, about fifteen minutes' walk from the town centre. Penzance is the last stop on the rail line from London, and the area's economy reflects it: seasonal work, a contracting high street, and a sense of distance from anywhere larger that residents describe as both a limitation and part of what holds the place together.
 
+  <div style="margin:0 0 32;">
+
+    <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
+
+      <div><img src="https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1" alt="" style="width:100%;object-fit:contain" onclick="lbOpen('https://www.dropbox.com/scl/fi/bmmkdynzshfr87ilro2dk/Image-LOW-RES_3000PX_60_JPEG-22-Large.jpeg?rlkey=f4hiv4d6zmrbqtcfnyjenbexn&raw=1','',event)" style="cursor:zoom-in"></div>
+
+      <div><img src="https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1" alt="" style="width:100%;object-fit:contain" onclick="lbOpen('https://www.dropbox.com/scl/fi/jnaao63o73rkuqhpxf68d/Image-LOW-RES_3000PX_60_JPEG-23-Large.jpeg?rlkey=xfxk99glh4muaapr6e540acvr&raw=1','',event)" style="cursor:zoom-in"></div>
+
+    </div>
+
+  </div>
+
   Whole Again Communities (WAC) has run a hub on the estate since 2013, founded by Lizzie Sullivan after years working across the voluntary sector encountering the same obstacle repeatedly: services that were nominally open to everyone but in practice required a referral, a diagnosis, or a fit with someone else's idea of who deserved help. Sullivan has ADHD and dyslexia and found the system could not accommodate her, let alone the people it was supposed to serve. WAC was built as the alternative - open access, no referral, no means test, no condition to meet before you're allowed through the door.
 
   Sullivan retired in November 2025. Simone, who had job-shared the role with her since around 2020, took over as CEO. The team running it now is small and entirely part time: Simone, Emma Nicholls, one staff member working a single day a week, and two in the kitchen. Two sessional workers, both around eighteen, both former child attendees of the hub's own programmes, are now employed there and supported through formal qualifications - safeguarding, DBS checks, food hygiene.
@@ -29,7 +41,7 @@ body_middle: |-
   Emma Nicholls, resident and WAC team member
 
   [DROPBOX AUDIO LINK TBC - format: https://www.dropbox.com/scl/fi/.../filename_128kbps.mp3?rlkey=...&raw=1]
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/kk87l3m33owavew0cf6pg/AIffp2uaPnOym4OiicYID1g?rlkey=khl8afgohsx1pc2t9jcbuefzz&dl=0
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/5gudnupshcreq4at3qyme/AD4m7XE-RETPR7nIFShGrC8?rlkey=8nhppo0djksod10mcnvabh37p&dl=0
 body_after: |-
   ## On the estate
 
@@ -42,7 +54,7 @@ body_after: |-
   ## Context for this project
 
   WAC sits outside the categories most directly addressed elsewhere in this project - it isn't a housing model, a cooperative, or a land trust, but a community-run service operating inside existing social housing. Its relevance here is structural: an organisation built explicitly against institutional gatekeeping, staffed substantially by the community it serves, and funded in a way that consistently undervalues what it does. The same imbalance recurs across most sites in this project in different forms - models that demonstrably work remain chronically underfunded relative to their actual function.
-dropbox_gallery_3: https://www.dropbox.com/scl/fo/5gudnupshcreq4at3qyme/AD4m7XE-RETPR7nIFShGrC8?rlkey=8nhppo0djksod10mcnvabh37p&dl=0
+dropbox_gallery_3: ''
 audio: []
 sources: []
 slug: treneere-estate
