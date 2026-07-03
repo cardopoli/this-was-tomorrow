@@ -13,12 +13,13 @@ dropbox_audio: ''
 body_intro: |-
   In 2009, Rob Higgs bought a derelict granite quarry outside Penryn in Cornwall. The planning permission said: extract the remaining granite, or convert to industrial agriculture. He did neither.
 
-
   <div class="audio-track" data-twt-bg="#f54927" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
-    <p class="audio-track-name">Rob Higgs, Trevone Quarry</p>
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/2tabosy2qvb7ciyaqnvqu/AUDIO-TWT-AUDIO-TREVONE-Rob.mp3?rlkey=6hsh83ttec04kicgngzh2xmfe&raw=1"></audio>
-  </div>
 
+    <p class="audio-track-name">Rob Higgs, Trevone Quarry</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/2tabosy2qvb7ciyaqnvqu/AUDIO-TWT-AUDIO-TREVONE-Rob.mp3?rlkey=6hsh83ttec04kicgngzh2xmfe&raw=1"></audio>
+
+  </div>
 
   The original idea was simple - replicate the freedom he'd found at a boatyard in Pendennis: rent a bit of space by the water, do your life as long as you pay the rent, no questions asked. Get sculptors and musicians and people who can fix things together on a bit of land. Plant trees everywhere. That would be enough.
 
