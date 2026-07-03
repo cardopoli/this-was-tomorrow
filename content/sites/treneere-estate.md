@@ -13,6 +13,15 @@ dropbox_audio: ''
 body_intro: |-
   Treneere is a social housing estate on the western edge of Penzance, about fifteen minutes' walk from the town centre. Penzance is the last stop on the rail line from London, and the area's economy reflects it: seasonal work, a contracting high street, and a sense of distance from anywhere larger that residents describe as both a limitation and part of what holds the place together.
 
+  Whole Again Communities (WAC) has run a hub on the estate since 2013, founded by Lizzie Sullivan after years working across the voluntary sector encountering the same obstacle repeatedly: services that were nominally open to everyone but in practice required a referral, a diagnosis, or a fit with someone else's idea of who deserved help. Sullivan has ADHD and dyslexia and found the system could not accommodate her, let alone the people it was supposed to serve. WAC was built as the alternative - open access, no referral, no means test, no condition to meet before you're allowed through the door.
+
+  Sullivan retired in November 2025. Simone, who had job-shared the role with her since around 2020, took over as CEO. The team running it now is small and entirely part time: Simone, Emma Nicholls, one staff member working a single day a week, and two in the kitchen. Two sessional workers, both around eighteen, both former child attendees of the hub's own programmes, are now employed there and supported through formal qualifications - safeguarding, DBS checks, food hygiene.
+dropbox_gallery: https://www.dropbox.com/scl/fo/e4p1r8chzvq6uyufj7027/AIkAzeUdC1zSD12VcPwS96o?rlkey=cgpfktt1gyxm22w8e00hlqivg&dl=0
+body_middle: |-
+  ## What it does
+
+  The programme covers cooking workshops across all ages, a garden group, walking groups, exercise classes, a children's club, and a monthly café for neurodivergent residents. A delivery service brings food to people who cannot attend in person. The hub also lends its space to services it doesn't itself run - NHS vaccination clinics, cancer awareness sessions, social prescribing appointments, and on one occasion a research consultation with Oxford University academics on cancer trial design.
+
   <div style="margin:0 0 32;">
 
     <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
@@ -25,22 +34,11 @@ body_intro: |-
 
   </div>
 
-  Whole Again Communities (WAC) has run a hub on the estate since 2013, founded by Lizzie Sullivan after years working across the voluntary sector encountering the same obstacle repeatedly: services that were nominally open to everyone but in practice required a referral, a diagnosis, or a fit with someone else's idea of who deserved help. Sullivan has ADHD and dyslexia and found the system could not accommodate her, let alone the people it was supposed to serve. WAC was built as the alternative - open access, no referral, no means test, no condition to meet before you're allowed through the door.
-
-  Sullivan retired in November 2025. Simone, who had job-shared the role with her since around 2020, took over as CEO. The team running it now is small and entirely part time: Simone, Emma Nicholls, one staff member working a single day a week, and two in the kitchen. Two sessional workers, both around eighteen, both former child attendees of the hub's own programmes, are now employed there and supported through formal qualifications - safeguarding, DBS checks, food hygiene.
-dropbox_gallery: https://www.dropbox.com/scl/fo/e4p1r8chzvq6uyufj7027/AIkAzeUdC1zSD12VcPwS96o?rlkey=cgpfktt1gyxm22w8e00hlqivg&dl=0
-body_middle: |-
-  ## What it does
-
-  The programme covers cooking workshops across all ages, a garden group, walking groups, exercise classes, a children's club, and a monthly café for neurodivergent residents. A delivery service brings food to people who cannot attend in person. The hub also lends its space to services it doesn't itself run - NHS vaccination clinics, cancer awareness sessions, social prescribing appointments, and on one occasion a research consultation with Oxford University academics on cancer trial design.
-
   Funding follows a familiar pattern for this kind of work: indirect, tied to outcomes elsewhere in the system rather than the work itself. WAC receives some support connected to NHS objectives around reducing hospital admissions, but the amount doesn't cover a month of running costs. The gap between what funders will pay for and what the hub actually does - cooking, company, somewhere warm to sit, a person who knows your name - is the recurring frustration among the staff who run it.
 
   Emma Nicholls, who works at the hub, grew up on Treneere and still lives there. She joined WAC in 2022 after a chance conversation - her sister, a hairdresser on the estate, happened to be cutting Lizzie Sullivan's hair when a vacancy came up. Before WAC she spent ten years in estate agency in Penzance town centre.
 
   Emma Nicholls, resident and WAC team member
-
-  [DROPBOX AUDIO LINK TBC - format: https://www.dropbox.com/scl/fi/.../filename_128kbps.mp3?rlkey=...&raw=1]
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/5gudnupshcreq4at3qyme/AD4m7XE-RETPR7nIFShGrC8?rlkey=8nhppo0djksod10mcnvabh37p&dl=0
 body_after: |-
   ## On the estate
@@ -54,7 +52,7 @@ body_after: |-
   ## Context for this project
 
   WAC sits outside the categories most directly addressed elsewhere in this project - it isn't a housing model, a cooperative, or a land trust, but a community-run service operating inside existing social housing. Its relevance here is structural: an organisation built explicitly against institutional gatekeeping, staffed substantially by the community it serves, and funded in a way that consistently undervalues what it does. The same imbalance recurs across most sites in this project in different forms - models that demonstrably work remain chronically underfunded relative to their actual function.
-dropbox_gallery_3: ''
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
 audio: []
 sources: []
 slug: treneere-estate
