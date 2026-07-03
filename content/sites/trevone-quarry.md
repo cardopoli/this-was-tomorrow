@@ -22,7 +22,7 @@ body_intro: |-
   The model for housing is this: you pay for the materials, you build your own workshop or living space, and you don't pay rent for however long the build takes - six months to five years depending on the scale. Then you pay low rent because the building cost very little. No cars for new residents, not as a rule but as a condition of the offer. Whatever you build on your pitch stays with Trevone when you leave, for whoever comes next.
 
   Rob calls the people drawn to this place "apocalypti-optimists." "If it's all going to shit, who do you want in your village? Not necessarily traditional crafts - a carpenter and a potter - but who can get shit working. Blacksmiths, recording studios, musicians. How to have a beautiful lovely time with a bunch of people that can fix and sort out everything."
-dropbox_gallery: ''
+dropbox_gallery: https://www.dropbox.com/scl/fo/8rxpn3i3jk2bku5dtxbo3/ADlD2SFmc64T8sfSJKwmHzE?rlkey=12696e0g6188fwzsnoour809z&dl=0
 body_middle: |-
   ## The forge
 
@@ -57,7 +57,7 @@ body_middle: |-
   The woodland at Trevone is temperate rainforest. This is not a metaphor or an aspiration - it is a classification, one of the rarest habitat types in the UK and globally. Rob had bought an oak forest without quite knowing what he had.
 
   He now works with the Woodland Trust and thinks in whole ecological chains: the relationship between the rainforest canopy and the estuary, the fish cycle, the carbon locked in the nutrient soup that feeds out before the North Atlantic brings it back in via krill. The site has moved from an artist community to something that holds artistic, residential, ecological, and agricultural functions simultaneously - not as separate programmes but as a single system.
-dropbox_gallery_2: ''
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/gzmd2h446lj3we93erxu7/AJvYvScm2mHgVFXKZGs3bQs?rlkey=31xw8iqxw8pccws955ezaifqu&dl=0
 body_after: |-
   ## Living here
 
@@ -104,7 +104,7 @@ body_after: |-
   Sophie's closing thought: "Spend as much time in nature as possible. Even whatever small part of nature you have. It doesn't have to be big. It doesn't have to be an amazing beautiful place. Just find tiny little bits of nature and spend time in it. Push your face into a rose and inhale it. Bury your face in the moss on a tree. Have those sensory experiences with nature - we're designed for it, we need it to feed us. It's free. It's not monetized. It doesn't perpetuate the system that we're in. And probably that's another reason why it's incredibly important to do it."
 
   Rob's final word: "Don't seek permission. Seek forgiveness. The legislation is still in your favour. Everyone I know who's done it hasn't lost. They can give up, but it takes five, ten, fifteen years of bureaucratic fighting - and it's getting easier and easier. Just get on with it."
-dropbox_gallery_3: ''
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/gzmd2h446lj3we93erxu7/AJvYvScm2mHgVFXKZGs3bQs?rlkey=31xw8iqxw8pccws955ezaifqu&dl=0
 audio: []
 sources: []
 slug: trevone-quarry
