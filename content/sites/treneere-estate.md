@@ -16,7 +16,7 @@ body_intro: |-
   Whole Again Communities (WAC) has run a hub on the estate since 2013, founded by Lizzie Sullivan after years working across the voluntary sector encountering the same obstacle repeatedly: services that were nominally open to everyone but in practice required a referral, a diagnosis, or a fit with someone else's idea of who deserved help. Sullivan has ADHD and dyslexia and found the system could not accommodate her, let alone the people it was supposed to serve. WAC was built as the alternative - open access, no referral, no means test, no condition to meet before you're allowed through the door.
 
   Sullivan retired in November 2025. Simone, who had job-shared the role with her since around 2020, took over as CEO. The team running it now is small and entirely part time: Simone, Emma Nicholls, one staff member working a single day a week, and two in the kitchen. Two sessional workers, both around eighteen, both former child attendees of the hub's own programmes, are now employed there and supported through formal qualifications - safeguarding, DBS checks, food hygiene.
-dropbox_gallery: https://www.dropbox.com/scl/fo/k2bax0apzb4cdq0o3qqnq/AHe0HgYrqsCEfHJ3M6FawUY?rlkey=za6murqmwv6avkfuwoq8dqlye&dl=0
+dropbox_gallery: https://www.dropbox.com/scl/fo/e4p1r8chzvq6uyufj7027/AIkAzeUdC1zSD12VcPwS96o?rlkey=cgpfktt1gyxm22w8e00hlqivg&dl=0
 body_middle: |-
   ## What it does
 
@@ -35,7 +35,7 @@ body_middle: |-
   Emma Nicholls, who works at the hub, grew up on Treneere and still lives there. She joined WAC in 2022 after a chance conversation - her sister, a hairdresser on the estate, happened to be cutting Lizzie Sullivan's hair when a vacancy came up. Before WAC she spent ten years in estate agency in Penzance town centre.
 
   Emma Nicholls, resident and WAC team member
-dropbox_gallery_2: https://www.dropbox.com/scl/fo/8rxpn3i3jk2bku5dtxbo3/ADlD2SFmc64T8sfSJKwmHzE?rlkey=12696e0g6188fwzsnoour809z&dl=0
+dropbox_gallery_2: https://www.dropbox.com/scl/fo/5gudnupshcreq4at3qyme/AD4m7XE-RETPR7nIFShGrC8?rlkey=8nhppo0djksod10mcnvabh37p&dl=0
 body_after: |-
   ## On the estate
 
@@ -48,7 +48,7 @@ body_after: |-
   ## Context for this project
 
   WAC sits outside the categories most directly addressed elsewhere in this project - it isn't a housing model, a cooperative, or a land trust, but a community-run service operating inside existing social housing. Its relevance here is structural: an organisation built explicitly against institutional gatekeeping, staffed substantially by the community it serves, and funded in a way that consistently undervalues what it does. The same imbalance recurs across most sites in this project in different forms - models that demonstrably work remain chronically underfunded relative to their actual function.
-dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7ahttps://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=028eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
 audio: []
 sources: []
 slug: treneere-estate
