@@ -69,23 +69,18 @@ body_after: |-
 
   <div class="audio-track" data-twt-bg="#63ff38" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1">
+  <p class="audio-track-name">Oli Sword, artist and resident at Trevone</p>
 
-    <p class="audio-track-name">Oli Sword, artist and resident at Trevone</p>
-
-  </audio>
-
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1"></audio>
   </div>
 
   Sophie Miller has been here six years, since her late forties. Trained in theatre, then art, then activism. Has children. The adjustment was real.
 
   <div class="audio-track" data-twt-bg="#809fff" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/hf74jsqayjwodz10j12d7/AUDIO-TWT-AUDIO-TREVONE-Sophie.mp3?rlkey=j225du6rug4hp2givsk2o3orz&raw=1">
+  <p class="audio-track-name">Sophie Miller, artist, activist and Trevone resident</p>
 
-    <p class="audio-track-name">Sophie MIller, artist, activist and Trevone resident</p>
-
-  </audio>
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/hf74jsqayjwodz10j12d7/AUDIO-TWT-AUDIO-TREVONE-Sophie.mp3?rlkey=j225du6rug4hp2givsk2o3orz&raw=1"></audio>
 
   </div>
 
@@ -97,12 +92,9 @@ body_after: |-
 
   <div class="audio-track" data-twt-bg="#ffa200" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/tmcw6hye341v818e57560/AUDIO-TWT-AUDIO-TREVONE-Dave-LIsa.mp3?rlkey=8wi95om69ufd2xhbfb9cozbi9&raw=1">
+  <p class="audio-track-name">Dave and Lisa, artists and residents at Trevone</p>
 
-    <p class="audio-track-name">Dave and Lisa, artists and residents at Trevone</p>
-
-  </audio>
-
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/tmcw6hye341v818e57560/AUDIO-TWT-AUDIO-TREVONE-Dave-LIsa.mp3?rlkey=8wi95om69ufd2xhbfb9cozbi9&raw=1"></audio>
   </div>
 
   Lisa's advice to anyone thinking about it: "Jump and do it and be poor and happy. There's a lot more happiness to be found in this type of life than in striving for money and wealth and property ownership. You can be poor and fulfilled - perhaps even more so than if you were wealthy."
