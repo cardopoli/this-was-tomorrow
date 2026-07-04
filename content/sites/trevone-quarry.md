@@ -13,15 +13,15 @@ dropbox_audio: ''
 body_intro: |-
   In 2009, Rob Higgs bought a derelict granite quarry outside Penryn in Cornwall. The planning permission said: extract the remaining granite, or convert to industrial agriculture. He did neither.
 
-  The original idea was simple - replicate the freedom he'd found at a boatyard in Pendennis: rent a bit of space by the water, do your life as long as you pay the rent, no questions asked. Get sculptors and musicians and people who can fix things together on a bit of land. Plant trees everywhere. That would be enough.
+  The original idea was simple - replicate the freedom he'd found at a boatyard in Ponsharden: rent a bit of space by the water, do your life as long as you pay the rent, no questions asked. (Ponsharden, not Pendennis. Pendennis is the superyacht marina. Ponsharden is the ratty working end - which is precisely the point.) Get sculptors and musicians and people who can fix things together on a bit of land. Plant trees everywhere. That would be enough.
 
   The focus shifted. Environmental crisis, refugee crisis, biodiversity loss. The woodland at Trevone turned out to be temperate rainforest - one of the rarest habitats in the UK. Restoring it became as central as housing people.
 
   What exists now holds four things together at once: a residential community of around 19 people living in self-built structures and caravans, a sustainable industrial estate, a rewilding and species reintroduction project, and a working farm. The hope, in Rob's words, is that the four benefit each other the way an ecosystem does.
 
-  The model for housing is this: you pay for the materials, you build your own workshop or living space, and you don't pay rent for however long the build takes - six months to five years depending on the scale. Then you pay low rent because the building cost very little. No cars for new residents, not as a rule but as a condition of the offer. Whatever you build on your pitch stays with Trevone when you leave, for whoever comes next.
+  The model for housing is this: Trevone pays for the materials, you build your own workshop or living space, and you don't pay rent for however long the build takes - six months to five years depending on the scale. Then you pay low rent because the building cost very little. The distinction matters: arriving with no money is not a barrier. If the will is there, the build can happen. No cars for new residents, not as a rule but as a condition of the offer. Whatever you build on your pitch stays with Trevone when you leave, for whoever comes next.
 
-  Rob calls the people drawn to this place "apocalypti-optimists." "If it's all going to shit, who do you want in your village? Not necessarily traditional crafts - a carpenter and a potter - but who can get shit working. Blacksmiths, recording studios, musicians. How to have a beautiful lovely time with a bunch of people that can fix and sort out everything."
+  Rob calls the people drawn to this place "apocaloptimists." "If it's all going to shit, who do you want in your village? Not necessarily traditional crafts - a carpenter and a potter - but who can get shit working. Blacksmiths, recording studios, musicians. How to have a beautiful lovely time with a bunch of people that can fix and sort out everything."
 dropbox_gallery: https://www.dropbox.com/scl/fo/8rxpn3i3jk2bku5dtxbo3/ADlD2SFmc64T8sfSJKwmHzE?rlkey=12696e0g6188fwzsnoour809z&dl=0
 body_middle: |-
   ## The forge
@@ -67,15 +67,39 @@ body_after: |-
 
   On his degree: "I've got more inspiration from being up here and being surrounded by interested people than in the education system. Our work was never graded - our writing was graded, and it's like, I'm not here to be a writer."
 
+  <div class="audio-track">
+
+    <p class="audio-track-name">Oli Sword, Trevone Quarry</p>
+
+    <audio controls preload="none" style="width:100%" src=""></audio>
+
+  </div>
+
   Sophie Miller has been here six years, since her late forties. Trained in theatre, then art, then activism. Has children. The adjustment was real.
 
   "This year we had 56 days of solid rain in the winter and that was really hard. Just the relentlessness of it. At the beginning it's beautiful down in the woods when it rains, it really is lovely. And you can have that and you can also have every fucking thing is wet and everyone's stuff is wet. And you wake up in the morning and you just hear the rain again."
 
   No cars on site. Five-minute walk to the washing machine in a barn at the top of the hill. "I'm a 50-year-old woman and I'm five foot three and not built in a particularly strong way. So I lean on other members of the community for the more practical physical tasks and I bring my elements. We don't all have to do everything."
 
+  <div class="audio-track">
+
+    <p class="audio-track-name">Sophie Miller, Trevone Quarry</p>
+
+    <audio controls preload="none" style="width:100%" src=""></audio>
+
+  </div>
+
   Dave and Lisa: "We feel we're living in the height of luxury. We're incredibly lucky living in this utter privilege. But if people are used to a more convenient world, to them, I suppose we're peasants."
 
   Lisa's advice to anyone thinking about it: "Jump and do it and be poor and happy. There's a lot more happiness to be found in this type of life than in striving for money and wealth and property ownership. You can be poor and fulfilled - perhaps even more so than if you were wealthy."
+
+  <div class="audio-track">
+
+    <p class="audio-track-name">Dave and Lisa, Trevone Quarry</p>
+
+    <audio controls preload="none" style="width:100%" src=""></audio>
+
+  </div>
 
   Sophie's closing thought: "Spend as much time in nature as possible. Even whatever small part of nature you have. It doesn't have to be big. It doesn't have to be an amazing beautiful place. Just find tiny little bits of nature and spend time in it. Push your face into a rose and inhale it. Bury your face in the moss on a tree. Have those sensory experiences with nature - we're designed for it, we need it to feed us. It's free. It's not monetized. It doesn't perpetuate the system that we're in. And probably that's another reason why it's incredibly important to do it."
 
