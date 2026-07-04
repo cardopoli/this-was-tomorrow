@@ -69,7 +69,9 @@ body_after: |-
 
   <div class="audio-track" data-twt-bg="#63ff38" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1"></audio>
+  Oli Sword, artist and resident at Trevone
+
+   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1"></audio>
 
   </div>
 
@@ -78,6 +80,8 @@ body_after: |-
   "This year we had 56 days of solid rain in the winter and that was really hard. Just the relentlessness of it. At the beginning it's beautiful down in the woods when it rains, it really is lovely. And you can have that and you can also have every fucking thing is wet and everyone's stuff is wet. And you wake up in the morning and you just hear the rain again."
 
   No cars on site. Five-minute walk to the washing machine in a barn at the top of the hill. "I'm a 50-year-old woman and I'm five foot three and not built in a particularly strong way. So I lean on other members of the community for the more practical physical tasks and I bring my elements. We don't all have to do everything."
+
+  Dave and Lisa, artists and residents ad Trevone
 
   <div class="audio-track" data-twt-bg="#809fff" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
@@ -88,6 +92,8 @@ body_after: |-
   Dave and Lisa: "We feel we're living in the height of luxury. We're incredibly lucky living in this utter privilege. But if people are used to a more convenient world, to them, I suppose we're peasants."
 
   Lisa's advice to anyone thinking about it: "Jump and do it and be poor and happy. There's a lot more happiness to be found in this type of life than in striving for money and wealth and property ownership. You can be poor and fulfilled - perhaps even more so than if you were wealthy."
+
+  Sophie Miller, artist and resident at Trevone
 
   <div class="audio-track" data-twt-bg="#ffa200" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
