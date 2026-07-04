@@ -24,6 +24,8 @@ body_middle: |-
 
   <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
+    <p class="audio-track-name">Fi Garrard, one of Kesoberi founders</p>
+
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/v7fcjamfyzza6msodj4i0/audio-TWT-AUDIO-KESOBERI-FI-GARRARD.mp3?rlkey=2xwln7wqa1irb1u6celde43om&raw=1"></audio>
 
   </div>
