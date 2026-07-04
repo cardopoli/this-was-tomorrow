@@ -22,10 +22,11 @@ body_middle: |-
 
   This structure exists because an earlier core group, working together for several years, dissolved under sustained strain in early 2024. Long-running tension surfaced under the physical and financial pressure of the project's early stages, and the group came close to ending entirely; several members left, and land was nearly sold off to cover what was owed. Fi describes a period of deciding to let go of the project altogether, followed by an unexpected investment that allowed the remaining members to buy out those who wished to leave and continue. The current sociocratic structure was put in place specifically to prevent a repeat.
 
+  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/v7fcjamfyzza6msodj4i0/audio-TWT-AUDIO-KESOBERI-FI-GARRARD.mp3?rlkey=2xwln7wqa1irb1u6celde43om&raw=1"></audio>
 
-
-  Fi Garrard, Kesoberi Community Farm
+  </div>
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/o1j2rglpwy22g7iq3fgoh/AOqJWVR-l4OL4OV15hMgeV4?rlkey=e37w0ouzvmjmxourecwixrkcx&dl=0
 body_after: |-
   ## What's being built
