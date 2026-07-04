@@ -67,11 +67,9 @@ body_after: |-
 
   On his degree: "I've got more inspiration from being up here and being surrounded by interested people than in the education system. Our work was never graded - our writing was graded, and it's like, I'm not here to be a writer."
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#63ff38" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Oli Sword, Trevone Quarry</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1"></audio>
 
   </div>
 
@@ -81,11 +79,9 @@ body_after: |-
 
   No cars on site. Five-minute walk to the washing machine in a barn at the top of the hill. "I'm a 50-year-old woman and I'm five foot three and not built in a particularly strong way. So I lean on other members of the community for the more practical physical tasks and I bring my elements. We don't all have to do everything."
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#809fff" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Sophie Miller, Trevone Quarry</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/hf74jsqayjwodz10j12d7/AUDIO-TWT-AUDIO-TREVONE-Sophie.mp3?rlkey=j225du6rug4hp2givsk2o3orz&raw=1"></audio>
 
   </div>
 
@@ -93,11 +89,9 @@ body_after: |-
 
   Lisa's advice to anyone thinking about it: "Jump and do it and be poor and happy. There's a lot more happiness to be found in this type of life than in striving for money and wealth and property ownership. You can be poor and fulfilled - perhaps even more so than if you were wealthy."
 
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#ffa200" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Dave and Lisa, Trevone Quarry</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/tmcw6hye341v818e57560/AUDIO-TWT-AUDIO-TREVONE-Dave-LIsa.mp3?rlkey=8wi95om69ufd2xhbfb9cozbi9&raw=1"></audio>
 
   </div>
 
