@@ -34,9 +34,9 @@ body_middle: |-
 
   Emma Nicholls, who works at the hub, grew up on Treneere and still lives there. She joined WAC in 2022 after a chance conversation - her sister, a hairdresser on the estate, happened to be cutting Lizzie Sullivan's hair when a vacancy came up. Before WAC she spent ten years in estate agency in Penzance town centre.
 
-  Emma Nicholls, WAC employee and resident
+  <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-  <div class="audio-track" data-twt-bg="#ffa200" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+    <p class="audio-track-name">Emma Nicholls, WAC employee and Treneere resident</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/xfw1kavtdc8bk3zj7mh1t/AUDIO-TWT-AUDIO-Treneere-Whole-Again.mp3?rlkey=ct7h3bhl6g55ozo5l223bxkay&raw=1"></audio>
 
