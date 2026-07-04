@@ -21,7 +21,9 @@ body_intro: |-
 
   The model for housing is this: Trevone pays for the materials, you build your own workshop or living space, and you don't pay rent for however long the build takes - six months to five years depending on the scale. Then you pay low rent because the building cost very little. The distinction matters: arriving with no money is not a barrier. If the will is there, the build can happen. No cars for new residents, not as a rule but as a condition of the offer. Whatever you build on your pitch stays with Trevone when you leave, for whoever comes next.
 
-  Rob calls the people drawn to this place "apocaloptimists." "If it's all going to shit, who do you want in your village? Not necessarily traditional crafts - a carpenter and a potter - but who can get shit working. Blacksmiths, recording studios, musicians. How to have a beautiful lovely time with a bunch of people that can fix and sort out everything."
+  Rob calls the people drawn to this place "apocaloptimists." "If it's all going to shit, who do you want in your village? Not necessarily traditional crafts only like carpenters and a potters - but also  who can get shit working and people to have a good time with, blacksmiths, recording studios, musicians. 
+
+  "A beautiful lovely time with a bunch of people that can fix and sort out everything."
 dropbox_gallery: https://www.dropbox.com/scl/fo/8rxpn3i3jk2bku5dtxbo3/ADlD2SFmc64T8sfSJKwmHzE?rlkey=12696e0g6188fwzsnoour809z&dl=0
 body_middle: |-
   ## The forge
