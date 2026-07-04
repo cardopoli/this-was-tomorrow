@@ -54,7 +54,7 @@ body_after: |-
   ## Context for this project
 
   WAC sits outside the categories most directly addressed elsewhere in this project - it isn't a housing model, a cooperative, or a land trust, but a community-run service operating inside existing social housing. Its relevance here is structural: an organisation built explicitly against institutional gatekeeping, staffed substantially by the community it serves, and funded in a way that consistently undervalues what it does. The same imbalance recurs across most sites in this project in different forms - models that demonstrably work remain chronically underfunded relative to their actual function.
-dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7ahttps://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=028eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
+dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
 audio: []
 sources: []
 slug: treneere-estate
