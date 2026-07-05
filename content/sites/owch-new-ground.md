@@ -21,15 +21,7 @@ body_intro: |-
 
     <p class="audio-track-name">Jude, resident at New Ground</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/wp225fuxhr6arviidp5md/TWT-ITTFWWDO-NEW-GROUND-JUDE-01_24042206_128kbps.mp3?rlkey=cm4yovpsgxiw66gsilgm0mse8&raw=1"></audio>
-
-  </div>
-
-  <div class="audio-track" data-twt-bg="#4a8ecf" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
-
-    <p class="audio-track-name">Jude, resident at New Ground // pt.2</p>
-
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/qnjue4ytuvhh2p60msn18/TWT-ITTFWWDO-NEW-GROUND-JUDE-02_24042206_128kbps.mp3?rlkey=5n0t7p11t54pq3gwynfjbqpga&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/wtjwzb866vgoqf8hj9zrd/TWT_New-Ground_Jude.mp3?rlkey=lomug0w4fk3uju46cnh5dipg0&raw=1"></audio>
 
   </div>
 dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
