@@ -1153,6 +1153,7 @@ li:not(.status-visited) .location {
 
 .twt-playlist {
   overflow: hidden;
+  margin: 28px 0;      /* match your normal paragraph block spacing */
 }
 
 /* Active player bar - sits at top */
@@ -1168,7 +1169,7 @@ li:not(.status-visited) .location {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 0 18px 10px;
+  padding: 14px 18px 10px;   /* was 0 18px 10px - adds top air */
   opacity: 0.6;
   white-space: nowrap;
   overflow: hidden;
