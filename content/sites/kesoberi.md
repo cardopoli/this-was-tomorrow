@@ -43,7 +43,7 @@ body_after: |-
 
   Her closing reference is to the Shambhala warrior prophecy, recorded by Joanna Macy: a prediction that the weapons threatening the world are made of mind, and because they are made of mind, they can be unmade - by insight and by compassion, working together.
 
-  {{< audio-playlist url="https://www.dropbox.com/scl/fo/0823e05obpcrvs0ju6mbw/AAEA36IQ_iOeZarxkquE85k?rlkey=6czbgkkixg5kwiwuy17vkqxlr&dl=0" bg="#077533" fg="#f7f5f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
+  {{< audio-playlist url="https://www.dropbox.com/scl/fo/0823e05obpcrvs0ju6mbw/AAEA36IQ_iOeZarxkquE85k?rlkey=6czbgkkixg5kwiwuy17vkqxlr&dl=0" bg="#077533" fg="#f7f5f0" pad="20px 18px 20px" btnsize="14px" timesize="11px" timer="1" >}}
 
   I stayed in the camper at the bottom of the site. The camper was great - cosy, something I can't quite place about it, retro-futurist, somehow seventies even the ones built decades later. No electricity, no signal. A very first-world problem to call it that, and genuinely refreshing. It was misty the entire time I was there - the kind of mist that doesn't lift, sitting low between the sea and the inland rise toward the tip of Cornwall.
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/rgagscmhkawdj5sh3astd/AM-Du4Fdk_tlHpNgeLhxnhw?rlkey=g6f8db2rm2prow1kpijcnl0dc&dl=0
