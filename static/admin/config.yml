@@ -154,6 +154,10 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{slug}}"
+
+     fields:
+      - { name: title, label: Site Title, widget: string }
+      - { name: location, label: Location, widget: string, required: false }
   
   
   
