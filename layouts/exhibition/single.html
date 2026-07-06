@@ -124,7 +124,7 @@
           data-twt-btn-size="14px"
           data-twt-time-size="11px"
           data-twt-show-timer="1">
-          <p class="audio-track-name">{{ .Params.exhibit_speaker | default .Params.location }}</p>
+          <p class="audio-track-name">{{ $.Params.exhibit_speaker | default $.Params.location }}</p>
           <audio controls preload="none" style="width:100%" src="{{ . }}"></audio>
         </div>
       {{ end }}
@@ -133,6 +133,6 @@
 
   </div>
 
-  <script src="static/JS/supercharged.js"></script>
+  <script src="JS/supercharged.js"></script>
 </body>
 </html>
