@@ -148,7 +148,7 @@ collections:
 
   - name: exhibition
     label: Exhibition
-    label_singular: Exhibit
+    label_singular: Exhibition
     folder: content/exhibition
     create: true
     extension: md
