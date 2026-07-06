@@ -6,18 +6,19 @@
   <title>{{ .Title }} — This Was Tomorrow</title>
   <meta name="robots" content="noindex, nofollow">
 
-  {{/* Self-hosted fonts - same as main site */}}
   <style>
     @font-face {
       font-family: 'AkzidenzGrotesk';
       src: url('/fonts/agpro-regular.ttf') format('truetype');
       font-weight: 400;
     }
+
     @font-face {
       font-family: 'AkzidenzGrotesk';
       src: url('/fonts/agpro-bold.ttf') format('truetype');
       font-weight: 700;
     }
+
     @font-face {
       font-family: 'AkzidenzGroteskExt';
       src: url('/fonts/agpro-ext.otf') format('opentype');
@@ -52,18 +53,18 @@
       padding: 0 0 4rem;
     }
 
-   .exhibit-image {
-  display: flex;
-  justify-content: center;
-  padding: 3rem 1.5rem 2rem;
-}
+    .exhibit-image {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1.5rem 2rem;
+    }
 
-.exhibit-image img {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  display: block;
-}
+    .exhibit-image img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+    }
 
     .exhibit-player {
       padding: 2rem 1.5rem 0;
@@ -76,14 +77,8 @@
       color: var(--exhibit-muted);
       margin-bottom: 1.5rem;
     }
-
-    {{/* Playlist player overrides for dark context */}}
-    .twt-playlist {
-      margin-top: 0;
-    }
   </style>
 
-  {{/* Dropbox proxy + supercharged JS - same as main site */}}
   <script>
     window._twt = window._twt || {};
   </script>
@@ -104,21 +99,24 @@
         <p class="exhibit-location">{{ . }}</p>
       {{ end }}
 
-      {{ with .Params.dropbox_folder }}
-  <div id="twt-exhibit-playlist"></div>
+      <!-- IMPORTANT: enables shortcode execution -->
+      {{ .Content }}
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window._twt && window._twt.buildAudioPlaylist) {
-        window._twt.buildAudioPlaylist(
-          'https://dropbox-proxy.cardopoli.workers.dev',
-          '{{ . }}',
-          'twt-exhibit-playlist'
-        );
-      }
-    });
-  </script>
-{{ end }}
+      {{ with .Params.dropbox_folder }}
+        <div id="twt-exhibit-playlist"></div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            if (window._twt && window._twt.buildAudioPlaylist) {
+              window._twt.buildAudioPlaylist(
+                'https://dropbox-proxy.cardopoli.workers.dev',
+                '{{ . }}',
+                'twt-exhibit-playlist'
+              );
+            }
+          });
+        </script>
+      {{ end }}
 
       {{ with .Params.dropbox_audio_single }}
         <div class="audio-track"
@@ -128,7 +126,11 @@
           data-twt-btn-size="14px"
           data-twt-time-size="11px"
           data-twt-show-timer="1">
-          <p class="audio-track-name">{{ $.Params.exhibit_speaker | default $.Params.location }}</p>
+
+          <p class="audio-track-name">
+            {{ $.Params.exhibit_speaker | default $.Params.location }}
+          </p>
+
           <audio controls preload="none" style="width:100%" src="{{ . }}"></audio>
         </div>
       {{ end }}
