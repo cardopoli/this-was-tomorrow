@@ -8,6 +8,6 @@ dropbox_folder: https://www.dropbox.com/scl/fo/PLACEHOLDER/KESOBERI?rlkey=PLACEH
 exhibit_speaker: Fi Garrard
 exhibit_image: /images/kesoberi-exhibit.webp
 location: Newlyn, Cornwall
-layout: exhibit
+layout: exhibition
 slug: kesoberi
 ---
