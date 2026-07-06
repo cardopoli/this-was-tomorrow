@@ -1,5 +1,12 @@
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  <link rel="icon" href="{{ "favicon.png" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
 <body>
   <div class="wrap">
 
@@ -13,31 +20,10 @@
       <div class="meta">{{ . }}</div>
     {{ end }}
 
-    {{ with .Params.dropbox_folder }}
-      <div id="twt-exhibit-playlist"></div>
-
-      <script>
-      (function() {
-        function init() {
-          if (window._twt && window._twt.buildAudioPlaylist) {
-            window._twt.buildAudioPlaylist(
-              'https://dropbox-proxy.cardopoli.workers.dev',
-              '{{ . }}',
-              'twt-exhibit-playlist'
-            );
-          }
-        }
-
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', init);
-        } else {
-          init();
-        }
-      })();
-      </script>
-    {{ end }}
+    {{ .Content }}
 
   </div>
 
-  <script src="/JS/supercharged.js"></script>
+  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
+</html>
