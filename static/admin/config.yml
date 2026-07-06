@@ -146,6 +146,17 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: source, label: Source, widget: string, required: false }
 
+  - name: exhibition
+    label: Exhibition
+    label_singular: exhibition
+    folder: content/exhibition
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+  
+  
+  
   - name: pages
     label: Pages
     files:
