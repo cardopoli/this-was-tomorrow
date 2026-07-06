@@ -104,14 +104,16 @@
         <p class="exhibit-location">{{ . }}</p>
       {{ end }}
 
-    {{ with .Params.dropbox_folder }}
+      {{ with .Params.dropbox_folder }}
   <div id="twt-exhibit-playlist"></div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       if (window._twt && window._twt.buildAudioPlaylist) {
         window._twt.buildAudioPlaylist(
-          document.getElementById('twt-exhibit-playlist'),
-          '{{ . }}'
+          'https://dropbox-proxy.cardopoli.workers.dev',
+          '{{ . }}',
+          'twt-exhibit-playlist'
         );
       }
     });
@@ -135,6 +137,6 @@
 
   </div>
 
-  <script src="JS/supercharged.js"></script>
+  <script src="/JS/supercharged.js"></script>
 </body>
 </html>
