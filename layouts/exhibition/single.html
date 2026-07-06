@@ -1,144 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }} — This Was Tomorrow</title>
-  <meta name="robots" content="noindex, nofollow">
-
-  <style>
-    @font-face {
-      font-family: 'AkzidenzGrotesk';
-      src: url('/fonts/agpro-regular.ttf') format('truetype');
-      font-weight: 400;
-    }
-
-    @font-face {
-      font-family: 'AkzidenzGrotesk';
-      src: url('/fonts/agpro-bold.ttf') format('truetype');
-      font-weight: 700;
-    }
-
-    @font-face {
-      font-family: 'AkzidenzGroteskExt';
-      src: url('/fonts/agpro-ext.otf') format('opentype');
-      font-weight: 900;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --exhibit-bg: #0a0a0a;
-      --exhibit-text: #f0ede8;
-      --exhibit-muted: #888;
-      --exhibit-max: 960px;
-    }
-
-    html, body {
-      background: var(--exhibit-bg);
-      color: var(--exhibit-text);
-      font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.5;
-      min-height: 100vh;
-    }
-
-    .exhibit-wrap {
-      max-width: var(--exhibit-max);
-      margin: 0 auto;
-      padding: 0 0 4rem;
-    }
-
-    .exhibit-image {
-      display: flex;
-      justify-content: center;
-      padding: 3rem 1.5rem 2rem;
-    }
-
-    .exhibit-image img {
-      width: 100%;
-      max-width: 420px;
-      height: auto;
-      display: block;
-    }
-
-    .exhibit-player {
-      padding: 2rem 1.5rem 0;
-    }
-
-    .exhibit-location {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--exhibit-muted);
-      margin-bottom: 1.5rem;
-    }
-  </style>
-
-  <script>
-    window._twt = window._twt || {};
-  </script>
-</head>
-
 <body>
-  <div class="exhibit-wrap">
+  <div class="wrap">
 
-    <div class="exhibit-image">
-      {{ with .Params.exhibit_image }}
+    {{ with .Params.exhibit_image }}
+      <div class="photo-hero">
         <img src="{{ . }}" alt="{{ $.Params.location }}">
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
 
-    <div class="exhibit-player">
+    {{ with .Params.location }}
+      <div class="meta">{{ . }}</div>
+    {{ end }}
 
-      {{ with .Params.location }}
-        <p class="exhibit-location">{{ . }}</p>
-      {{ end }}
+    {{ with .Params.dropbox_folder }}
+      <div id="twt-exhibit-playlist"></div>
 
-      <!-- IMPORTANT: enables shortcode execution -->
-      {{ .Content }}
+      <script>
+      (function() {
+        function init() {
+          if (window._twt && window._twt.buildAudioPlaylist) {
+            window._twt.buildAudioPlaylist(
+              'https://dropbox-proxy.cardopoli.workers.dev',
+              '{{ . }}',
+              'twt-exhibit-playlist'
+            );
+          }
+        }
 
-     {{ with .Params.dropbox_folder }}
-<div id="twt-exhibit-playlist"></div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  if (window._twt && window._twt.buildAudioPlaylist) {
-    window._twt.buildAudioPlaylist(
-      'https://dropbox-proxy.cardopoli.workers.dev',
-      '{{ . }}',
-      'twt-exhibit-playlist'
-    );
-  }
-});
-</script>
-{{ end }}
-
-      {{ with .Params.dropbox_audio_single }}
-        <div class="audio-track"
-          data-twt-bg="#111"
-          data-twt-fg="#f0ede8"
-          data-twt-pad="14px 18px"
-          data-twt-btn-size="14px"
-          data-twt-time-size="11px"
-          data-twt-show-timer="1">
-
-          <p class="audio-track-name">
-            {{ $.Params.exhibit_speaker | default $.Params.location }}
-          </p>
-
-          <audio controls preload="none" style="width:100%" src="{{ . }}"></audio>
-        </div>
-      {{ end }}
-
-    </div>
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+      })();
+      </script>
+    {{ end }}
 
   </div>
 
   <script src="/JS/supercharged.js"></script>
 </body>
-</html>
