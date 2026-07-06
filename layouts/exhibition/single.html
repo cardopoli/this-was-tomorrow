@@ -102,21 +102,21 @@
       <!-- IMPORTANT: enables shortcode execution -->
       {{ .Content }}
 
-      {{ with .Params.dropbox_folder }}
-        <div id="twt-exhibit-playlist"></div>
+     {{ with .Params.dropbox_folder }}
+<div id="twt-exhibit-playlist"></div>
 
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            if (window._twt && window._twt.buildAudioPlaylist) {
-              window._twt.buildAudioPlaylist(
-                'https://dropbox-proxy.cardopoli.workers.dev',
-                '{{ . }}',
-                'twt-exhibit-playlist'
-              );
-            }
-          });
-        </script>
-      {{ end }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window._twt && window._twt.buildAudioPlaylist) {
+    window._twt.buildAudioPlaylist(
+      'https://dropbox-proxy.cardopoli.workers.dev',
+      '{{ . }}',
+      'twt-exhibit-playlist'
+    );
+  }
+});
+</script>
+{{ end }}
 
       {{ with .Params.dropbox_audio_single }}
         <div class="audio-track"
