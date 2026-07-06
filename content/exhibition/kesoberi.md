@@ -9,4 +9,4 @@ layout: exhibition
 slug: kesoberi
 ---
 
-{{< audio-playlist url="https://www.dropbox.com/scl/fo/dr39p0cvuhqk1in0jcda7/AOISUkLE7-78ujCfZTPMmi0?rlkey=96g55tv7046no4z27rquh9ngu&dl=0" bg="#27f5b0" fg="#f7f5f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
+{{< audio-playlist url="https://www.dropbox.com/scl/fo/0823e05obpcrvs0ju6mbw/AAEA36IQ_iOeZarxkquE85k?rlkey=6czbgkkixg5kwiwuy17vkqxlr&dl=0" bg="#27f5b0" fg="#f7f7f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
