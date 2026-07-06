@@ -145,6 +145,30 @@ collections:
           - { name: url, label: URL, widget: string }
           - { name: title, label: Title, widget: string }
           - { name: source, label: Source, widget: string, required: false }
+
+     - name: exhibition
+    label: Exhibition
+    label_singular: Exhibit
+    folder: content/exhibition
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+
+    summary: "{{title}}"
+
+    preview_path: "/exhibition/{{slug}}/"
+
+    fields:
+      - { name: title, label: Title, widget: string }
+
+      - { name: draft, label: Draft, widget: boolean, default: false, required: false }
+
+      - { name: image, label: Hero Image, widget: image }
+
+      - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, hint: "Shared Dropbox folder containing the audio playlist" }
+
+      - { name: body, label: Optional Text, widget: markdown, required: false, modes: [rich_text, raw] }       
  
   
   - name: pages
