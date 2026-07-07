@@ -1,6 +1,6 @@
 ---
 title: Calder Valley Community Land Trust
-draft: true
+draft: false
 exhibit_speaker: Paul Brannigan
 location: Hebden Bridge
 image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
