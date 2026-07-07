@@ -160,10 +160,31 @@ collections:
     preview_path: "/exhibition/{{slug}}/"
 
     fields:
+      # core
       - { name: title, label: Title, widget: string }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
-      - { name: image, label: Hero Image, widget: image }
-      - { name: body, label: Optional Text, widget: markdown, required: false, modes: [rich_text, raw] }
+      - { name: exhibit_speaker, label: Speaker, widget: string, required: false }
+      - { name: location, label: Location, widget: string, required: false }
+      # images
+      - { name: image, label: Hero image (social / listing), widget: image }
+      - { name: exhibit_image, label: Backdrop image (blurred), widget: image, required: false, hint: "Leave empty for a flat-colour page" }
+      # the question
+      - { name: exhibit_question, label: Question, widget: string, required: false, hint: "Leave blank to hide it" }
+      # colour
+      - { name: exhibit_bg, label: Page background, widget: color, required: false, default: "#0a0a0a", enableAlpha: false }
+      - { name: exhibit_text, label: Text colour, widget: color, required: false, default: "#f7f5f0", enableAlpha: false }
+      - { name: exhibit_accent, label: Accent (speaker name), widget: color, required: false, default: "#27f5b0", enableAlpha: false }
+      # image tuning (only affects pages with a backdrop image)
+      - { name: exhibit_dim, label: Scrim darkness, widget: number, required: false, value_type: float, min: 0, max: 0.7, step: 0.05, default: 0.25, hint: "Raise for a bright print, drop for a dark one" }
+      - { name: exhibit_blur, label: Backdrop blur, widget: string, required: false, default: "30px" }
+      - { name: exhibit_image_pos, label: Image position, widget: string, required: false, default: "center", hint: "center, top, bottom, or a pair like 30% 60%" }
+      # frame (leave these to keep every exhibit reading as one show)
+      - { name: exhibit_card, label: Card tint, widget: color, required: false, default: "rgba(12,14,11,0.42)", enableAlpha: true }
+      - { name: exhibit_radius, label: Card corners, widget: string, required: false, default: "20px" }
+      - { name: exhibit_title_size, label: Title size, widget: string, required: false, default: "27px" }
+      - { name: exhibit_width, label: Content width, widget: string, required: false, default: "460px" }
+      # body - holds the audio-playlist shortcode (edit in raw mode)
+      - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
   
   - name: pages
     label: Pages
