@@ -21,6 +21,8 @@
     .exhibit-who{ font-family:var(--mono); font-size:12px; letter-spacing:0.5px; color: {{ .Params.exhibit_accent | default "#27f5b0" }}; margin-bottom:2px; }
     .exhibit-where{ font-family:var(--mono); font-size:11px; letter-spacing:0.5px; opacity:0.55; margin-bottom:18px; }
     .exhibit-card .twt-playlist{ background:transparent !important; margin:0; }
+    .exhibit-fulllink{ display:inline-block; margin-top:18px; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:inherit; opacity:0.55; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:2px; }
+    .exhibit-fulllink:hover{ opacity:1; }
 
     @media (min-width: 700px){
       .exhibit-inner{ justify-content:center; gap:38px; }
@@ -47,6 +49,9 @@
         {{ with .Params.exhibit_speaker }}<div class="exhibit-who">{{ . }}</div>{{ end }}
         {{ with .Params.location }}<div class="exhibit-where">{{ . }}</div>{{ end }}
         {{ .Content }}
+        {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
+          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Read the full page</a>
+        {{ end }}
       </div>
 
     </div>
