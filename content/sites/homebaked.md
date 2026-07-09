@@ -3,7 +3,7 @@ title: Homebaked Community Land Trust
 location: Liverpool
 status: visited
 visit_date: 19-05-2026
-draft: false
+draft: true
 description: ''
 photos:
   - image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
