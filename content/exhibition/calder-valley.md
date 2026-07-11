@@ -3,7 +3,7 @@ title: Calder Valley Community Land Trust
 draft: false
 exhibit_speaker: Paul Brannigan
 location: Hebden Bridge, Todmorden
-image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
+image: /images/dsc_0531-twt_calder-valley_todworks_low.webp
 exhibit_image: /images/dsc_0531-twt_calder-valley_todworks_low.webp
 exhibit_width: ''
 exhibit_title_size: ''
