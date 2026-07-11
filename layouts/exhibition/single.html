@@ -68,14 +68,6 @@
       color: inherit;
     }
 
-    .exhibit-question {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-      font-style: italic;
-      line-height: 1.7;
-    }
 
     /* Right column */
     .exhibit-title {
@@ -149,9 +141,6 @@
         {{ end }}
         <div class="exhibit-image-caption">
           <div class="exhibit-site-title"><a href="/">This Was Tomorrow</a></div>
-          {{- with .Params.exhibit_question }}
-          <div class="exhibit-question">{{ . }}</div>
-          {{ end }}
         </div>
       </div>
 
