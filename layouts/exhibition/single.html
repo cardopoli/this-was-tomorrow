@@ -230,9 +230,15 @@
 <div class="exhibit-main">
 
   <div class="exhibit-grid">
+    
+      {{ with .Site.GetPage "/exhibition" }}
+        <a class="exhibit-fulllink" href="{{ .RelPermalink }}" style="margin-bottom:20px">
+          ← {{ .Title }}
+        </a>
+      {{ end }}
 
      <!-- IMAGE -->
-
+    
     <div class="exhibit-image-wrap">
 
       {{ with .Params.exhibit_image }}
@@ -256,12 +262,6 @@
     <!-- RIGHT CONTENT -->
 
     <div class="exhibit-right">
-
-      {{ with .Site.GetPage "/exhibition" }}
-        <a class="exhibit-fulllink" href="{{ .RelPermalink }}" style="margin-bottom:20px">
-          ← {{ .Title }}
-        </a>
-      {{ end }}
 
 
       <div class="exhibit-title">
