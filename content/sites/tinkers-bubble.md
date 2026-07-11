@@ -17,7 +17,7 @@ body_intro: |-
 
   ## The place and its origins
 
-  Tinkers Bubble is an intentional community located at Norton Sub Hamdon near Little Norton in south Somerset, England. It was established in 1994 on 40 acres of land consisting of about 20 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
+  Tinkers Bubble is an intentional community located near Norton Sub Hamdon in south Somerset, England. It was established in 1994 on 42 acres of land consisting of about 28 acres of woodland as well as orchards and pasture. The name derives from the spring that flows through the woodland and ends in a small waterfall by the road - historically, gypsies brought their horses to this "bubble" (the gypsy name for waterfall) to water them.
 
   <div class="audio-track" data-twt-bg="#f54927" data-twt-fg="#ffffff" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
@@ -32,7 +32,7 @@ dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOP
 body_middle: |-
   ## How it works
 
-  Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The community has a ban on the use of fossil fuels on site (with the exception of lighting such as paraffin lamps) and use solar powered 12v electricity. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
+  Tinkers Bubble is a small off-grid woodland community that uses environmentally sound methods of working the land without using fossil fuels. The community has planning permission for self-built houses on the condition that they make a living from the land. The buildings are temporary structures built with a very low environmental impact when compared to conventional housing.
 
   <div class="audio-track" data-twt-bg="#077533" data-twt-fg="#000000" data-twt-pad="20px 24px" data-twt-btn-size="18px" data-twt-time-size="13px" data-twt-show-timer="1">
 
@@ -42,9 +42,9 @@ body_middle: |-
 
   </div>
 
-  The community has two cows, which they milk, and chickens, and they grow their own food, and manage around 28 acres of woodland, creating their own fuel. They make money from timber, as well as producing apple juice and cider. This mostly covers the monthly overheads of around £120 for each person. Tinkers Bubble earns a small income by selling organically grown produce at local farmers' markets and selling sustainably produced timber which is felled by hand, logged by horse and sawn by a wood-fired steam-engine driven sawmill.
+  Over the years the community has tended a range of livestock, including cows, goats, horses, pigs, sheep and poultry. They currently keep horses, chickens and ducks. They grow their own food and manage around 28 acres of woodland, creating their own fuel. Tinkers Bubble produce organic apple juice, cider and cider vinegar which they sell to local shops and at events. They also sell sustainably produced timber which is felled by hand, logged by horse and sawn by a wood-fired steam-engine driven sawmill. The monthly contribution of around £120 for each person covers the community's shared costs.
 
-  The land is held in freehold ownership by a cooperative entitled Tinker's Bubble Land Ltd. All decisions about the project are made collectively at monthly meetings in which all participate. On rare occasions of dispute, the fully paid-up shareholders (the landholding cooperative) have the power of arbitration or veto. Weekly Monday morning meetings handle practical decisions about the land and community.
+  The land is held in freehold ownership by a cooperative entitled Tinker's Bubble Land Ltd. All decisions about the project are made collectively at monthly meetings in which all participate. On rare occasions of dispute, the fully paid-up shareholders (the landholding cooperative) have the power of arbitration or veto. Work meetings once a week help to decide the practicalities of day-to-day land management, community rotas and hosting volunteers.
 
   ### The planning battle and symbolic significance
 
@@ -72,7 +72,7 @@ slug: tinkers-bubble
 
 Many of those who have lived at Tinkers Bubble have gone on to buy land and set up agroecological land projects. Probably the most well-known is Fivepenny Farm, established when two families, including LWA's Jyoti Fernandes, bought 43 acres at auction in 2003. The community has become a de facto training ground and inspiration for land-based sustainable living across the UK.
 
-Celebrating its 30th anniversary in January 2024, the village prides itself on being "fossil fuel free" and a pioneer in the UK's off-grid and intentional community sectors. There are times when they find it challenging - the inevitable irritations of living with other people, or getting up in the dark to milk the cows, or mending a fence in the rain. But the community persists.
+Celebrating its 30th anniversary in January 2024, the village prides itself on being "fossil fuel free" and a pioneer in the UK's off-grid and intentional community sectors. There are times when they find it challenging - the inevitable irritations of living with other people, or getting up in the dark to tend the animals, or mending a fence in the rain. But the community persists.
 
 ## Context for this project
 
