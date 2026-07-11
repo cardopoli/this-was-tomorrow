@@ -7,55 +7,146 @@
   <link rel="icon" href="{{ "favicon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
-    body.exhibit{ background: {{ .Params.exhibit_bg | default "#0a0a0a" }}; color: {{ .Params.exhibit_text | default "#f7f5f0" }}; min-height:100vh; }
-    .exhibit-stage{ position:relative; min-height:100vh; overflow:hidden; }
-    .exhibit-bg{ position:absolute; inset:0; z-index:0; background-size:cover; transform:scale(1.18); }
-    .exhibit-scrim{ position:absolute; inset:0; z-index:1;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.6) 100%),
-        rgba(0,0,0, var(--dim, 0.25)); }
-    .exhibit-inner{ position:relative; z-index:2; min-height:100vh; display:flex; flex-direction:column; max-width: {{ .Params.exhibit_width | default "460px" }}; margin:0 auto; width:100%; padding:34px 26px 30px; box-sizing:border-box; }
-    .exhibit-question{ font-family:var(--mono); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; line-height:1.9; opacity:0.72; max-width:240px; }
-    .exhibit-card{ margin-top:auto; background: {{ .Params.exhibit_card | default "rgba(12,14,11,0.42)" }}; backdrop-filter:blur(18px) saturate(1.1); -webkit-backdrop-filter:blur(18px) saturate(1.1); border:0.5px solid rgba(247,245,240,0.14); border-radius: {{ .Params.exhibit_radius | default "20px" }}; padding:22px; }
-    .exhibit-title{ font-size: {{ .Params.exhibit_title_size | default "27px" }}; font-weight:800; line-height:1.05; letter-spacing:-0.4px; margin-bottom:10px; }
-    .exhibit-who{ font-family:var(--mono); font-size:12px; letter-spacing:0.5px; color: {{ .Params.exhibit_accent | default "#27f5b0" }}; margin-bottom:2px; }
-    .exhibit-where{ font-family:var(--mono); font-size:11px; letter-spacing:0.5px; opacity:0.55; margin-bottom:18px; }
-    .exhibit-card .twt-playlist{ background:transparent !important; margin:0; }
-    .exhibit-fulllink{ display:inline-block; margin-top:18px; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:inherit; opacity:0.55; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:2px; }
-    .exhibit-fulllink:hover{ opacity:1; }
+    body.exhibit {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-    @media (min-width: 700px){
-      .exhibit-inner{ justify-content:center; gap:38px; }
-      .exhibit-card{ margin-top:0; }
+    .exhibit-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+    }
+
+    /* TWO COLUMNS */
+    .exhibit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* LEFT - IMAGE */
+    .exhibit-image {
+      position: sticky;
+      top: 32px;
+    }
+
+    .exhibit-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* RIGHT - CONTENT */
+    .exhibit-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .exhibit-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .exhibit-title {
+      font-family: var(--sans);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .exhibit-speaker {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* PLAYER - inherits site styles, no overrides needed */
+    .exhibit-player {
+      margin-bottom: 24px;
+    }
+
+    .exhibit-fulllink {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .exhibit-fulllink:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    /* MOBILE - stack vertically */
+    @media (max-width: 640px) {
+      .exhibit-wrap { padding: 28px 20px 60px; }
+      .exhibit-grid { grid-template-columns: 1fr; gap: 28px; }
+      .exhibit-image { position: static; }
     }
   </style>
 </head>
 <body class="exhibit">
-  <div class="exhibit-stage">
+  {{ partial "header.html" . }}
 
-    {{ with .Params.exhibit_image }}
-      <div class="exhibit-bg" style="background-image:url('{{ . }}'); background-position: {{ $.Params.exhibit_image_pos | default "center" }}; filter: blur({{ $.Params.exhibit_blur | default "30px" }}) saturate(1.08);"></div>
-      <div class="exhibit-scrim" style="--dim: {{ $.Params.exhibit_dim | default "0.25" }};"></div>
-    {{ end }}
+  <div class="exhibit-wrap">
+    <div class="exhibit-grid">
 
-    <div class="exhibit-inner">
-
-      {{ with .Params.exhibit_question }}
-        <div class="exhibit-question">{{ . }}</div>
-      {{ end }}
-
-      <div class="exhibit-card">
-        {{ with .Title }}<div class="exhibit-title">{{ . }}</div>{{ end }}
-        {{ with .Params.exhibit_speaker }}<div class="exhibit-who">{{ . }}</div>{{ end }}
-        {{ with .Params.location }}<div class="exhibit-where">{{ . }}</div>{{ end }}
-        {{ .Content }}
-        {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
-          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Read the full page</a>
+      <!-- LEFT: IMAGE -->
+      <div class="exhibit-image">
+        {{ with .Params.exhibit_image }}
+          <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
         {{ end }}
       </div>
 
+      <!-- RIGHT: CONTENT -->
+      <div class="exhibit-content">
+
+        {{ with .Params.exhibit_question }}
+        <div class="exhibit-meta">{{ . }}</div>
+        {{ end }}
+
+        {{ with .Title }}<div class="exhibit-title">{{ . }}</div>{{ end }}
+
+        {{ with .Params.exhibit_speaker }}
+        <div class="exhibit-speaker">{{ . }}</div>
+        {{ end }}
+
+        {{ with .Params.location }}
+        <div class="exhibit-speaker">{{ . }}</div>
+        {{ end }}
+
+        <div class="exhibit-player">
+          {{ .Content }}
+        </div>
+
+        {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
+        <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
+        {{ end }}
+
+      </div>
     </div>
   </div>
-  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
+
+  {{ partial "footer.html" . }}
+  <script src="{{ "JS/gallery.js" | relURL }}"></script>
+  <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
 </body>
 </html>
