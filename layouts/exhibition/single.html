@@ -4,170 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} · {{ .Site.Title }}</title>
-  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
+  <link rel="icon" href="{{ "favicon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
-    body.exhibit {
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    body.exhibit{ background: {{ .Params.exhibit_bg | default "#0a0a0a" }}; color: {{ .Params.exhibit_text | default "#f7f5f0" }}; min-height:100vh; }
+    .exhibit-stage{ position:relative; min-height:100vh; overflow:hidden; }
+    .exhibit-bg{ position:absolute; inset:0; z-index:0; background-size:cover; transform:scale(1.18); }
+    .exhibit-scrim{ position:absolute; inset:0; z-index:1;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.05) 35%, rgba(0,0,0,0.6) 100%),
+        rgba(0,0,0, var(--dim, 0.25)); }
+    .exhibit-inner{ position:relative; z-index:2; min-height:100vh; display:flex; flex-direction:column; max-width: {{ .Params.exhibit_width | default "460px" }}; margin:0 auto; width:100%; padding:34px 26px 30px; box-sizing:border-box; }
+    .exhibit-question{ font-family:var(--mono); font-size:11px; letter-spacing:1.5px; text-transform:uppercase; line-height:1.9; opacity:0.72; max-width:240px; }
+    .exhibit-card{ margin-top:auto; background: {{ .Params.exhibit_card | default "rgba(12,14,11,0.42)" }}; backdrop-filter:blur(18px) saturate(1.1); -webkit-backdrop-filter:blur(18px) saturate(1.1); border:0.5px solid rgba(247,245,240,0.14); border-radius: {{ .Params.exhibit_radius | default "20px" }}; padding:22px; }
+    .exhibit-title{ font-size: {{ .Params.exhibit_title_size | default "27px" }}; font-weight:800; line-height:1.05; letter-spacing:-0.4px; margin-bottom:10px; }
+    .exhibit-who{ font-family:var(--mono); font-size:12px; letter-spacing:0.5px; color: {{ .Params.exhibit_accent | default "#27f5b0" }}; margin-bottom:2px; }
+    .exhibit-where{ font-family:var(--mono); font-size:11px; letter-spacing:0.5px; opacity:0.55; margin-bottom:18px; }
+    .exhibit-card .twt-playlist{ background:transparent !important; margin:0; }
+    .exhibit-fulllink{ display:inline-block; margin-top:18px; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:inherit; opacity:0.55; text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:2px; }
+    .exhibit-fulllink:hover{ opacity:1; }
+    .exhibit-back{ position:absolute; top:22px; left:24px; z-index:3; font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:inherit; opacity:0.6; text-decoration:none; }
+    .exhibit-back:hover{ opacity:1; }
 
-    .exhibit-main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      padding: 64px 48px;
-    }
-
-    .exhibit-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .exhibit-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .exhibit-right {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    /* Left column - image + caption below */
-    .exhibit-image-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exhibit-image-caption {
-      margin-top: 16px;
-    }
-
-    .exhibit-site-title {
-      font-family: var(--mono);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .exhibit-site-title a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-
-    /* Right column */
-    .exhibit-title {
-      font-family: var(--sans);
-      font-size: clamp(18px, 2.5vw, 26px);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .exhibit-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    /* Player */
-    .exhibit-player {
-      margin-bottom: 24px;
-    }
-
-    /* Link */
-    .exhibit-fulllink {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 2px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .exhibit-fulllink:hover {
-      color: var(--text);
-      border-color: var(--text);
-    }
-
-    /* Footer */
-    .site-footer {
-      border-top: none;
-      margin-top: 0;
-      padding-top: 125px;
-    }
-
-    /* Mobile */
-    @media (max-width: 700px) {
-      .exhibit-main { padding: 32px 20px 48px; }
-      .exhibit-grid { grid-template-columns: 1fr; gap: 36px; align-items: start; }
+    @media (min-width: 700px){
+      .exhibit-inner{ justify-content:center; gap:38px; }
+      .exhibit-card{ margin-top:0; }
     }
   </style>
 </head>
 <body class="exhibit">
+  <div class="exhibit-stage">
 
-  <div class="exhibit-main">
-    <div class="exhibit-grid">
+    {{ with .Site.GetPage "/exhibition" }}
+      <a class="exhibit-back" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
+    {{ end }}
 
-      <!-- LEFT: IMAGE -->
-      <!-- LEFT: IMAGE + TWT LABEL + QUESTION -->
-      <div class="exhibit-image-wrap">
-        {{ with .Params.exhibit_image }}
-          <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
-        {{ end }}
-        <div class="exhibit-image-caption">
-          <div class="exhibit-site-title"><a href="/">This Was Tomorrow. Is this the future we were dreaming of?</a></div>
-        </div>
-      </div>
+    {{ with .Params.exhibit_image }}
+      <div class="exhibit-bg" style="background-image:url('{{ . }}'); background-position: {{ $.Params.exhibit_image_pos | default "center" }}; filter: blur({{ $.Params.exhibit_blur | default "30px" }}) saturate(1.08);"></div>
+      <div class="exhibit-scrim" style="--dim: {{ $.Params.exhibit_dim | default "0.25" }};"></div>
+    {{ end }}
 
-      <!-- RIGHT: TITLE + LOCATION + PLAYER + LINK -->
-      <div class="exhibit-right">
+    <div class="exhibit-inner">
 
-        <div class="exhibit-title">{{ .Title }}</div>
+      {{ with .Params.exhibit_question }}
+        <div class="exhibit-question">{{ . }}</div>
+      {{ end }}
 
-        <div class="exhibit-meta">
-          {{- with .Params.location }}{{ . }}{{ end }}
-        </div>
-
-        <div class="exhibit-player">
-          {{ .Content }}
-        </div>
-
+      <div class="exhibit-card">
+        {{ with .Title }}<div class="exhibit-title">{{ . }}</div>{{ end }}
+        {{ with .Params.exhibit_speaker }}<div class="exhibit-who">{{ . }}</div>{{ end }}
+        {{ with .Params.location }}<div class="exhibit-where">{{ . }}</div>{{ end }}
+        {{ .Content }}
         {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
-          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
+          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Read the full page</a>
         {{ end }}
-
       </div>
+
     </div>
   </div>
-
-  <div class="wrap">{{ partial "footer.html" . }}</div>
-
-  <script src="{{ "JS/gallery.js" | relURL }}"></script>
-  <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
+  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
 </html>
