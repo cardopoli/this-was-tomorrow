@@ -19,13 +19,13 @@
       flex: 1;
       display: flex;
       align-items: center;
-      padding: 48px 32px;
+      padding: 64px 48px;
     }
 
     .exhibit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      gap: 64px;
       align-items: center;
       width: 100%;
       max-width: 1200px;
@@ -38,12 +38,73 @@
       display: block;
     }
 
-    .exhibit-player {
+    .exhibit-right {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 0;
     }
 
+    /* Site title */
+    .exhibit-site-title {
+      font-family: var(--condensed);
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+
+    .exhibit-site-title a {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    /* Meta */
+    .exhibit-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 8px;
+    }
+
+    /* Page title */
+    .exhibit-title {
+      font-family: var(--sans);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+
+    /* Speaker */
+    .exhibit-speaker {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    /* Question */
+    .exhibit-question {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+
+    /* Player */
+    .exhibit-player {
+      margin-bottom: 24px;
+    }
+
+    /* Link */
     .exhibit-fulllink {
       display: inline-block;
       font-family: var(--mono);
@@ -62,16 +123,17 @@
       border-color: var(--text);
     }
 
-    @media (max-width: 640px) {
-      .exhibit-main { padding: 28px 20px; }
-      .exhibit-grid { grid-template-columns: 1fr; gap: 32px; align-items: start; }
-    }
-
-    /* Footer - same content as rest of site, just no border and less top space */
+    /* Footer */
     .site-footer {
       border-top: none;
+      margin-top: 0;
       padding-top: 24px;
-      margin-top: 150px;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      .exhibit-main { padding: 32px 20px 48px; }
+      .exhibit-grid { grid-template-columns: 1fr; gap: 36px; align-items: start; }
     }
   </style>
 </head>
@@ -80,19 +142,43 @@
   <div class="exhibit-main">
     <div class="exhibit-grid">
 
+      <!-- LEFT: IMAGE -->
       <div class="exhibit-image">
         {{ with .Params.exhibit_image }}
           <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
         {{ end }}
       </div>
 
-      <div class="exhibit-player">
-        {{ .Content }}
+      <!-- RIGHT: INFO + PLAYER -->
+      <div class="exhibit-right">
+
+        <div class="exhibit-site-title">
+          <a href="/">This Was Tomorrow</a>
+        </div>
+
+        <div class="exhibit-meta">
+          {{- with .Params.location }}{{ . }}{{ end }}
+        </div>
+
+        <div class="exhibit-title">{{ .Title }}</div>
+
+        {{- with .Params.exhibit_speaker }}
+        <div class="exhibit-speaker">{{ . }}</div>
+        {{ end }}
+
+        {{- with .Params.exhibit_question }}
+        <div class="exhibit-question">{{ . }}</div>
+        {{ end }}
+
+        <div class="exhibit-player">
+          {{ .Content }}
+        </div>
+
         {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
           <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
         {{ end }}
-      </div>
 
+      </div>
     </div>
   </div>
 
