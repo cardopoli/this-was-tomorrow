@@ -5,200 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} · {{ .Site.Title }}</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
-  {{/* pulled in only for the site fonts (--sans Akzidenz, --mono Letter Gothic) */}}
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --fluo: #c6f500; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; color: var(--fluo); font-family: var(--sans); min-height: 100vh; }
 
-    :root { --ink: #f0ede8; --muted: rgba(240,237,232,0.55); }
+    /* bitmapped B&W backdrop — a bit visible */
+    .bmp { position: fixed; inset: 0; z-index: 0; background-size: cover; background-position: center;
+           filter: grayscale(1) contrast(1.5) brightness(1.05); }
+    .bmp::after { content: ""; position: absolute; inset: 0;
+           background-image: radial-gradient(circle, #000 0.7px, transparent 0.8px);
+           background-size: 3px 3px; mix-blend-mode: multiply; opacity: 0.6; }
+    .veil { position: fixed; inset: 0; z-index: 1; background: rgba(0,0,0,0.4); }
 
-    html, body { height: 100%; }
-    body {
-      background: #12140d;
-      color: var(--ink);
-      font-family: var(--sans);
-      min-height: 100vh;
-      overflow: hidden;
-    }
+    .content { position: relative; z-index: 2; max-width: 520px; margin: 0 auto; padding: 34px 22px 48px; }
+    .kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+    .title  { font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.5px; margin: 10px 0 6px; }
+    .where  { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
 
-    .exhibit { position: fixed; inset: 0; overflow: hidden; }
-
-    /* breathing vector field */
-    .field { position: absolute; inset: -15%; filter: blur(46px) saturate(1.05); }
-    .blob { position: absolute; border-radius: 50%; opacity: 0.9; will-change: transform; }
-    .b1 { width: 70%; height: 60%; top: 6%;  left: 2%;   background: radial-gradient(circle,#6b7a3a 0,transparent 65%); animation: drift1 34s ease-in-out infinite alternate; }
-    .b2 { width: 66%; height: 60%; top: 12%; right: -4%; background: radial-gradient(circle,#c9a24b 0,transparent 65%); animation: drift2 42s ease-in-out infinite alternate; }
-    .b3 { width: 85%; height: 70%; bottom: -8%; left: 8%; background: radial-gradient(circle,#3a4326 0,transparent 62%); animation: drift3 38s ease-in-out infinite alternate; }
-    .b4 { width: 50%; height: 46%; top: 40%; left: 30%;  background: radial-gradient(circle,#8a7f3a 0,transparent 60%); animation: drift4 30s ease-in-out infinite alternate; }
-
-    @keyframes drift1 { from{transform:translate(0,0) scale(1)}   to{transform:translate(10%,8%) scale(1.18)} }
-    @keyframes drift2 { from{transform:translate(0,0) scale(1.1)} to{transform:translate(-9%,10%) scale(0.95)} }
-    @keyframes drift3 { from{transform:translate(0,0) scale(1)}   to{transform:translate(6%,-8%) scale(1.2)} }
-    @keyframes drift4 { from{transform:translate(0,0) scale(0.9);opacity:0.5} to{transform:translate(-8%,-6%) scale(1.15);opacity:0.85} }
-
-    .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.32) 45%, rgba(10,10,10,0.72) 100%); }
-
-    .layer { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 40px 30px 46px; max-width: 560px; margin: 0 auto; }
-
-    /* top-left recap */
-    .recap { display: block; max-width: 250px; text-decoration: none; color: inherit; }
-    .recap .kicker { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-    .recap .line { display: block; font-size: 16px; font-weight: 700; line-height: 1.25; letter-spacing: -0.2px; }
-
-    /* centre — the big button */
-    .centre { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-    .play {
-      width: 134px; height: 134px; border-radius: 50%;
-      background: var(--ink); border: none;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: transform .18s;
-    }
-    .play:hover { transform: scale(1.04); }
-    .play:active { transform: scale(0.97); }
-    .play svg { width: 48px; height: 48px; }
-
-    .nowplaying { text-align: center; }
-    .nowplaying .np { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    .nowplaying .who { font-size: 23px; font-weight: 700; line-height: 1.15; margin-bottom: 5px; min-height: 1.15em; }
-    .nowplaying .where { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--muted); }
-
-    .transport { display: none; align-items: center; justify-content: center; gap: 18px; margin-top: 18px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--muted); }
-    .skip { background: none; border: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; padding: 2px 6px; }
-    .skip:hover { color: var(--ink); }
-    .skip:disabled { opacity: 0.3; cursor: default; }
-
-    @media (min-width: 700px) { .play { width: 152px; height: 152px; } .play svg { width: 54px; height: 54px; } }
-
-    @media (prefers-reduced-motion: reduce) { .blob { animation: none !important; } }
+    /* transparent punk player — fluo text on the image */
+    .content .twt-playlist,
+    .content .twt-playlist * { background: transparent !important; color: var(--fluo) !important; border-color: var(--fluo) !important; }
+    .content .twt-playlist svg { fill: var(--fluo) !important; }
   </style>
 </head>
-
 <body>
-  <div class="exhibit">
 
-    <div class="field">
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
-      <div class="blob b3"></div>
-      <div class="blob b4"></div>
-    </div>
-    <div class="scrim"></div>
+  {{ with .Params.exhibit_image }}<div class="bmp" style="background-image:url('{{ . }}')"></div>{{ end }}
+  <div class="veil"></div>
 
-    <div class="layer">
-
-      <a class="recap" href="/">
-        <span class="kicker">This Was Tomorrow</span>
-        <span class="line">Is this the future we were dreaming of?</span>
-      </a>
-
-      <div class="centre">
-
-        <button class="play" id="playBtn" type="button" aria-label="Play">
-          <svg id="playIcon" viewBox="0 0 24 24" fill="#12140d"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-
-        <div class="nowplaying">
-          <div class="np">Now playing</div>
-          <div class="who" id="who">{{ .Params.exhibit_speaker | default .Title }}</div>
-          <div class="where">{{ .Title }}{{ with .Params.location }} · {{ . }}{{ end }}</div>
-          <div class="transport" id="transport">
-            <button class="skip" id="prev" type="button" aria-label="Previous voice">&lsaquo;</button>
-            <span id="counter">1 / 1</span>
-            <button class="skip" id="next" type="button" aria-label="Next voice">&rsaquo;</button>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
+  <div class="content">
+    <div class="kicker">This Was Tomorrow</div>
+    <div class="title">{{ .Title }}</div>
+    {{ with .Params.location }}<div class="where">{{ . }}</div>{{ end }}
+    {{ .Content }}
   </div>
 
-  <script>
-    (function () {
-      var PROXY  = 'https://dropbox-proxy.cardopoli.workers.dev';
-      var FOLDER = {{ .Params.dropbox_folder | jsonify }};
-
-      var btn   = document.getElementById('playBtn');
-      var icon  = document.getElementById('playIcon');
-      var whoEl = document.getElementById('who');
-      var tEl   = document.getElementById('transport');
-      var cEl   = document.getElementById('counter');
-      var prev  = document.getElementById('prev');
-      var next  = document.getElementById('next');
-
-      var PLAY  = '<path d="M8 5v14l11-7z"/>';
-      var PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
-
-      if (!FOLDER) return;
-
-      var audio = new Audio();
-      audio.preload = 'none';
-      var tracks = [], idx = 0, ready = false, wantPlay = false;
-
-      function proxyFetch(endpoint, body) {
-        return fetch(PROXY, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ endpoint: endpoint, body: body })
-        }).then(function (r) { if (!r.ok) throw new Error('proxy ' + r.status); return r.json(); });
-      }
-
-      function setIcon(p) { icon.innerHTML = p ? PAUSE : PLAY; btn.setAttribute('aria-label', p ? 'Pause' : 'Play'); }
-
-      function refresh() {
-        if (tracks[idx]) whoEl.textContent = tracks[idx].name;
-        if (tracks.length > 1) {
-          tEl.style.display = 'flex';
-          cEl.textContent = (idx + 1) + ' / ' + tracks.length;
-          prev.disabled = (idx === 0);
-          next.disabled = (idx === tracks.length - 1);
-        }
-      }
-
-      function load(i) { idx = i; audio.src = tracks[idx].src; refresh(); }
-
-      function boot() {
-        return proxyFetch('files/list_folder', { path: '', shared_link: { url: FOLDER }, recursive: false })
-          .then(function (data) {
-            if (!data || data.error) throw new Error('folder');
-            var files = (data.entries || []).filter(function (f) {
-              return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
-            });
-            files.sort(function (a, b) { return a.name.localeCompare(b.name); });
-            return Promise.all(files.map(function (f) {
-              return proxyFetch('files/get_temporary_link', { path: f.path_lower })
-                .then(function (d) { return { name: f.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '), src: d.link || null }; });
-            }));
-          })
-          .then(function (list) {
-            tracks = (list || []).filter(function (t) { return t.src; });
-            if (!tracks.length) { whoEl.textContent = 'No audio found'; return; }
-            ready = true;
-            load(0);
-            if (wantPlay) audio.play();
-          })
-          .catch(function () { whoEl.textContent = 'Audio unavailable'; });
-      }
-
-      btn.addEventListener('click', function () {
-        if (!ready) { wantPlay = true; whoEl.textContent = 'Loading…'; boot(); return; }
-        if (audio.paused) audio.play(); else audio.pause();
-      });
-
-      audio.addEventListener('play',  function () { setIcon(true); });
-      audio.addEventListener('pause', function () { setIcon(false); });
-      audio.addEventListener('ended', function () {
-        if (idx < tracks.length - 1) { load(idx + 1); audio.play(); }
-        else { setIcon(false); load(0); }
-      });
-
-      prev.addEventListener('click', function () { if (ready && idx > 0) { load(idx - 1); audio.play(); } });
-      next.addEventListener('click', function () { if (ready && idx < tracks.length - 1) { load(idx + 1); audio.play(); } });
-
-      /* resolve the folder up front so the first voice's name shows and the first tap is instant */
-      boot();
-    })();
-  </script>
+  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
 </html>
