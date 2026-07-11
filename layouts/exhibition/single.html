@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>{{ .Title }} · {{ .Site.Title }}</title>
+
   <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
   <style>
+
     body.exhibit {
       background: var(--bg);
       color: var(--text);
@@ -32,27 +36,28 @@
       margin: 0 auto;
     }
 
-    .exhibit-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
 
-    .exhibit-right {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    /* IMAGE */
 
-    /* Left column - image + caption below */
     .exhibit-image-wrap {
       display: flex;
       flex-direction: column;
+      width: 100%;
+    }
+
+    .exhibit-image-wrap img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
     .exhibit-image-caption {
       margin-top: 16px;
     }
+
+
+    /* PROJECT LABEL */
 
     .exhibit-site-title {
       font-family: var(--mono);
@@ -64,22 +69,30 @@
     }
 
     .exhibit-site-title a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
 
-    /* Right column */
+    /* RIGHT */
+
+    .exhibit-right {
+      display: flex;
+      flex-direction: column;
+    }
+
     .exhibit-title {
       font-family: var(--sans);
       font-size: clamp(18px, 2.5vw, 26px);
       font-weight: 700;
       line-height: 1.15;
       margin-bottom: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
     }
+
 
     .exhibit-meta {
       font-family: var(--mono);
@@ -90,12 +103,25 @@
       margin-bottom: 28px;
     }
 
-    /* Player */
+
+    /* PLAYER */
+
     .exhibit-player {
       margin-bottom: 24px;
+      width: 100%;
     }
 
-    /* Link */
+    .exhibit-player iframe,
+    .exhibit-player embed,
+    .exhibit-player object,
+    .exhibit-player video {
+      width: 100%;
+      max-width: 100%;
+    }
+
+
+    /* LINKS */
+
     .exhibit-fulllink {
       display: inline-block;
       font-family: var(--mono);
@@ -106,7 +132,7 @@
       text-decoration: none;
       border-bottom: 1px solid var(--rule);
       padding-bottom: 2px;
-      transition: color 0.15s, border-color 0.15s;
+      transition: color .15s, border-color .15s;
     }
 
     .exhibit-fulllink:hover {
@@ -114,62 +140,170 @@
       border-color: var(--text);
     }
 
-    /* Footer */
+
+    /* FOOTER */
+
     .site-footer {
       border-top: none;
       margin-top: 0;
       padding-top: 125px;
     }
 
-    /* Mobile */
+
+    /* MOBILE */
+
     @media (max-width: 600px) {
-    html, body { overflow-x: hidden; }
-      .wrap { padding: 0 16px; max-width: 100%; }
-      .exhibit-main { padding: 32px 20px 48px; }
-      .exhibit-grid { grid-template-columns: 1fr; gap: 36px; align-items: start; }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+
+      .wrap {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+      }
+
+
+      .exhibit-main {
+        padding: 24px 16px 40px;
+        display: block;
+      }
+
+
+      .exhibit-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+
+      /* Text first */
+      .exhibit-right {
+        order: 1;
+      }
+
+
+      /* Image second */
+      .exhibit-image-wrap {
+        order: 2;
+      }
+
+
+      .exhibit-title {
+        font-size: 22px;
+        line-height: 1.15;
+        white-space: normal;
+      }
+
+
+      .exhibit-meta {
+        margin-bottom: 20px;
+      }
+
+
+      .exhibit-image-caption {
+        margin-top: 12px;
+      }
+
+
+      .site-footer {
+        padding-top: 64px;
+      }
+
     }
+
   </style>
+
 </head>
+
+
 <body class="exhibit">
 
-  <div class="exhibit-main">
-    <div class="exhibit-grid">
 
-      <!-- LEFT: IMAGE -->
-      <!-- LEFT: IMAGE + TWT LABEL + QUESTION -->
-      <div class="exhibit-image-wrap">
-        {{ with .Params.exhibit_image }}
-          <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
-        {{ end }}
-        <div class="exhibit-image-caption">
-          <div class="exhibit-site-title"><a href="/">This Was Tomorrow. Is this the future we were dreaming of?</a></div>
-        </div>
+<div class="exhibit-main">
+
+  <div class="exhibit-grid">
+
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="exhibit-right">
+
+      {{ with .Site.GetPage "/exhibition" }}
+        <a class="exhibit-fulllink" href="{{ .RelPermalink }}" style="margin-bottom:20px">
+          ← {{ .Title }}
+        </a>
+      {{ end }}
+
+
+      <div class="exhibit-title">
+        {{ .Title }}
       </div>
 
-      <!-- RIGHT: TITLE + LOCATION + PLAYER + LINK -->
-      <div class="exhibit-right">
-{{ with .Site.GetPage "/exhibition" }}<a class="exhibit-fulllink" href="{{ .RelPermalink }}" style="margin-bottom:20px">← {{ .Title }}</a>{{ end }}
-        <div class="exhibit-title">{{ .Title }}</div>
 
-        <div class="exhibit-meta">
-          {{- with .Params.location }}{{ . }}{{ end }}
-        </div>
-
-        <div class="exhibit-player">
-          {{ .Content }}
-        </div>
-
-        {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
-          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
+      <div class="exhibit-meta">
+        {{ with .Params.location }}
+          {{ . }}
         {{ end }}
-
       </div>
+
+
+      <div class="exhibit-player">
+        {{ .Content }}
+      </div>
+
+
+      {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
+        <a class="exhibit-fulllink" href="{{ .RelPermalink }}">
+          Full site page →
+        </a>
+      {{ end }}
+
     </div>
+
+
+
+    <!-- IMAGE -->
+
+    <div class="exhibit-image-wrap">
+
+      {{ with .Params.exhibit_image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
+      {{ end }}
+
+
+      <div class="exhibit-image-caption">
+
+        <div class="exhibit-site-title">
+          <a href="/">
+            This Was Tomorrow. Is this the future we were dreaming of?
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+
   </div>
 
-  <div class="wrap">{{ partial "footer.html" . }}</div>
+</div>
 
-  <script src="{{ "JS/gallery.js" | relURL }}"></script>
-  <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
+
+
+<div class="wrap">
+  {{ partial "footer.html" . }}
+</div>
+
+
+<script src="{{ "JS/gallery.js" | relURL }}"></script>
+<script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
+
+
 </body>
 </html>
