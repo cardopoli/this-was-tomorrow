@@ -20,4 +20,4 @@ layout: exhibition
 slug: calder-valley
 ---
 
-{{< audio-playlist url="PASTE_EXHIBIT_FOLDER_URL_HERE" fg="#f7f5f0" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
+{{< audio-playlist url="https://www.dropbox.com/scl/fo/ks7pu4ovl5ljlnuczmlb9/AAiLQ8WUFXfZ6D5IwOeKQaE?rlkey=4zqn03y3wdu6gqny2hyu8909w&dl=0" bg="#b5b800" fg="#f7f5f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
