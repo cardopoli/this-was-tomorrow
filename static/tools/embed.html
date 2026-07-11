@@ -182,7 +182,6 @@ button.cp:hover { background: #f0ede8; }
     <button class="tab" onclick="sw('typ')">Type</button>
     <button class="tab" onclick="sw('snip')">Snippets</button>
     <button class="tab" onclick="sw('ref')">Ref</button>
-    <button class="tab" onclick="sw('qr')">QR</button>
   </div>
 
   <!-- ============ IMAGE ============ -->
@@ -703,41 +702,6 @@ button.cp:hover { background: #f0ede8; }
     <img id="lb-img" src="" alt="" />
     <div class="lb-cap" id="lb-cap"></div>
   </div>
-  <!-- ============ QR ============ -->
-  <div class="panel" id="panel-qr">
-    <div class="sec">
-      <label class="fl">URL</label>
-      <input type="text" id="qr-url" placeholder="https://thiswastomorrow.co.uk/exhibition/kesoberi/" />
-      <div class="hint">Any link. For an exhibit tile: https://thiswastomorrow.co.uk/exhibition/&lt;slug&gt;/</div>
-    </div>
-    <div class="row">
-      <div>
-        <label class="fl">Error correction</label>
-        <select id="qr-ec">
-          <option value="H" selected>High - best for print</option>
-          <option value="Q">Quartile</option>
-          <option value="M">Medium</option>
-          <option value="L">Low</option>
-        </select>
-      </div>
-      <div>
-        <label class="fl">Quiet margin</label>
-        <input type="text" id="qr-margin" value="4" />
-      </div>
-    </div>
-    <button class="main" onclick="qrGen()">Generate</button>
-    <div id="qr-outs" style="display:none;margin-top:18px">
-      <div style="text-align:center;padding:22px;background:#fff;border:1px solid #ccc">
-        <div id="qr-prev"></div>
-      </div>
-      <div style="display:flex;gap:12px;margin-top:14px">
-        <button class="main" style="flex:1" onclick="qrDownload('svg')">Download SVG</button>
-        <button class="main" style="flex:1" onclick="qrDownload('png')">Download PNG</button>
-      </div>
-      <div class="hint" style="margin-top:8px">SVG scales to any print size with no blur - use it for the wall labels. PNG for quick digital use.</div>
-    </div>
-  </div>
-
 </div>
 
 <script>
@@ -1174,46 +1138,6 @@ var SNIPPETS = [
   });
 })();
 
-</script>
-<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@2.0.4/dist/qrcode.js"></script>
-<script>
-/* QR generator - encodes any URL; outputs scalable SVG + PNG */
-function qrBuild(){
-  var url=document.getElementById('qr-url').value.trim();
-  if(!url) return null;
-  var qr=qrcode(0, document.getElementById('qr-ec').value);
-  qr.addData(url); qr.make();
-  return qr;
-}
-function qrMargin(){ var m=parseInt(document.getElementById('qr-margin').value,10); return isNaN(m)?4:m; }
-function qrSvgStr(qr,m){
-  var n=qr.getModuleCount(), dim=n+m*2, rects='';
-  for(var r=0;r<n;r++){ for(var c=0;c<n;c++){ if(qr.isDark(r,c)) rects+='<rect x="'+(c+m)+'" y="'+(r+m)+'" width="1" height="1"/>'; } }
-  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+dim+' '+dim+'" shape-rendering="crispEdges"><rect width="'+dim+'" height="'+dim+'" fill="#ffffff"/><g fill="#111111">'+rects+'</g></svg>';
-}
-function qrName(url){ return 'qr-'+url.replace(/https?:\/\//,'').replace(/[^a-z0-9]+/gi,'-').replace(/^-+|-+$/g,'').toLowerCase(); }
-function qrSave(href,fn){ var a=document.createElement('a'); a.href=href; a.download=fn; document.body.appendChild(a); a.click(); document.body.removeChild(a); }
-function qrGen(){
-  var qr=qrBuild(); if(!qr) return;
-  var prev=document.getElementById('qr-prev');
-  prev.innerHTML=qrSvgStr(qr,qrMargin());
-  var s=prev.querySelector('svg'); if(s){ s.setAttribute('width','200'); s.setAttribute('height','200'); }
-  document.getElementById('qr-outs').style.display='block';
-}
-function qrDownload(fmt){
-  var url=document.getElementById('qr-url').value.trim(); if(!url) return;
-  var qr=qrBuild(); if(!qr) return; var m=qrMargin();
-  if(fmt==='svg'){
-    var blob=new Blob([qrSvgStr(qr,m)],{type:'image/svg+xml'});
-    qrSave(URL.createObjectURL(blob), qrName(url)+'.svg');
-  } else {
-    var n=qr.getModuleCount(), cs=24, dim=(n+m*2)*cs;
-    var cv=document.createElement('canvas'); cv.width=dim; cv.height=dim;
-    var x=cv.getContext('2d'); x.fillStyle='#ffffff'; x.fillRect(0,0,dim,dim); x.fillStyle='#111111';
-    for(var r=0;r<n;r++){ for(var c=0;c<n;c++){ if(qr.isDark(r,c)) x.fillRect((c+m)*cs,(r+m)*cs,cs,cs); } }
-    qrSave(cv.toDataURL('image/png'), qrName(url)+'.png');
-  }
-}
 </script>
 </body>
 </html>
