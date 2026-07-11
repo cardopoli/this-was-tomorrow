@@ -88,7 +88,7 @@ slug: calder-valley
 
 CVCLT’s first property in Hebden Bridge: a property purchased from a CLT member at below market cost in April 2024 using Homes England grant funding and a zero percent mortgage from the seller. Refurbished and retrofitted to Decent Homes standard, and let to a local family at a social rent. Danielle is the tenant.
 
-The house sits close to Hebden Bridge Market Street on a site that avoided the 1960s slum clearances. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
+The house sits close to the heart of Hebden Bridge on a site that avoided the 1960s slum clearances. This house is what that ambition looks like when it works at the scale of one family: a secure, affordable, retrofitted home in a town where that combination is rare.
 
 ### Other projects
 
