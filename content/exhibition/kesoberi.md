@@ -18,6 +18,5 @@ exhibit_title_size: 27px
 exhibit_width: 460px
 layout: exhibition
 slug: kesoberi
+dropbox_folder: "https://www.dropbox.com/scl/fo/dr39p0cvuhqk1in0jcda7/AOISUkLE7-78ujCfZTPMmi0?rlkey=96g55tv7046no4z27rquh9ngu&dl=0"
 ---
-
-{{< audio-playlist url="https://www.dropbox.com/scl/fo/dr39p0cvuhqk1in0jcda7/AOISUkLE7-78ujCfZTPMmi0?rlkey=96g55tv7046no4z27rquh9ngu&dl=0" bg="#ff6666" fg="#f7f5f0" pad="14px 18px" btnsize="14px" timesize="11px" timer="1" >}}
