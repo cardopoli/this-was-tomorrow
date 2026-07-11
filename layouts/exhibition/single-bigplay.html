@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
+  {{/* pulled in only for the site fonts (--sans Akzidenz, --mono Letter Gothic) */}}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root { --ink: #f0ede8; --muted: rgba(240,237,232,0.55); }
+
+    html, body { height: 100%; }
+    body {
+      background: #12140d;
+      color: var(--ink);
+      font-family: var(--sans);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .exhibit { position: fixed; inset: 0; overflow: hidden; }
+
+    /* breathing vector field */
+    .field { position: absolute; inset: -15%; filter: blur(46px) saturate(1.05); }
+    .blob { position: absolute; border-radius: 50%; opacity: 0.9; will-change: transform; }
+    .b1 { width: 70%; height: 60%; top: 6%;  left: 2%;   background: radial-gradient(circle,#6b7a3a 0,transparent 65%); animation: drift1 34s ease-in-out infinite alternate; }
+    .b2 { width: 66%; height: 60%; top: 12%; right: -4%; background: radial-gradient(circle,#c9a24b 0,transparent 65%); animation: drift2 42s ease-in-out infinite alternate; }
+    .b3 { width: 85%; height: 70%; bottom: -8%; left: 8%; background: radial-gradient(circle,#3a4326 0,transparent 62%); animation: drift3 38s ease-in-out infinite alternate; }
+    .b4 { width: 50%; height: 46%; top: 40%; left: 30%;  background: radial-gradient(circle,#8a7f3a 0,transparent 60%); animation: drift4 30s ease-in-out infinite alternate; }
+
+    @keyframes drift1 { from{transform:translate(0,0) scale(1)}   to{transform:translate(10%,8%) scale(1.18)} }
+    @keyframes drift2 { from{transform:translate(0,0) scale(1.1)} to{transform:translate(-9%,10%) scale(0.95)} }
+    @keyframes drift3 { from{transform:translate(0,0) scale(1)}   to{transform:translate(6%,-8%) scale(1.2)} }
+    @keyframes drift4 { from{transform:translate(0,0) scale(0.9);opacity:0.5} to{transform:translate(-8%,-6%) scale(1.15);opacity:0.85} }
+
+    .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.32) 45%, rgba(10,10,10,0.72) 100%); }
+
+    .layer { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 40px 30px 46px; max-width: 560px; margin: 0 auto; }
+
+    /* top-left recap */
+    .recap { display: block; max-width: 250px; text-decoration: none; color: inherit; }
+    .recap .kicker { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .recap .line { display: block; font-size: 16px; font-weight: 700; line-height: 1.25; letter-spacing: -0.2px; }
+
+    /* centre — the big button */
+    .centre { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+    .play {
+      width: 134px; height: 134px; border-radius: 50%;
+      background: var(--ink); border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: transform .18s;
+    }
+    .play:hover { transform: scale(1.04); }
+    .play:active { transform: scale(0.97); }
+    .play svg { width: 48px; height: 48px; }
+
+    .nowplaying { text-align: center; }
+    .nowplaying .np { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .nowplaying .who { font-size: 23px; font-weight: 700; line-height: 1.15; margin-bottom: 5px; }
+    .nowplaying .where { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--muted); }
+
+    @media (min-width: 700px) { .play { width: 152px; height: 152px; } .play svg { width: 54px; height: 54px; } }
+
+    /* hold still for anyone who asks for reduced motion */
+    @media (prefers-reduced-motion: reduce) { .blob { animation: none !important; } }
+  </style>
+</head>
+
+<body>
+  <div class="exhibit">
+
+    <div class="field">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="blob b4"></div>
+    </div>
+    <div class="scrim"></div>
+
+    <div class="layer">
+
+      <a class="recap" href="/">
+        <span class="kicker">This Was Tomorrow</span>
+        <span class="line">Is this the future we were dreaming of?</span>
+      </a>
+
+      <div class="centre">
+
+        <button class="play" id="playBtn" type="button" aria-label="Play">
+          <svg id="playIcon" viewBox="0 0 24 24" fill="#12140d"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+
+        <div class="nowplaying">
+          <div class="np">Now playing</div>
+          <div class="who">{{ .Params.exhibit_speaker | default .Title }}</div>
+          <div class="where">
+            {{- if .Params.exhibit_speaker }}{{ .Title }}{{ with .Params.location }} · {{ . }}{{ end }}
+            {{- else }}{{ with .Params.location }}{{ . }}{{ end }}{{ end -}}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {{ with .Params.exhibit_audio }}
+    <audio id="exhibitAudio" src="{{ . }}" preload="none"></audio>
+  {{ end }}
+
+  <script>
+    (function () {
+      var a = document.getElementById('exhibitAudio');
+      var b = document.getElementById('playBtn');
+      var icon = document.getElementById('playIcon');
+      if (!a || !b) return;
+      var PLAY  = '<path d="M8 5v14l11-7z"/>';
+      var PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+      function set(playing) { icon.innerHTML = playing ? PAUSE : PLAY; b.setAttribute('aria-label', playing ? 'Pause' : 'Play'); }
+      b.addEventListener('click', function () { if (a.paused) { a.play(); } else { a.pause(); } });
+      a.addEventListener('play',  function () { set(true); });
+      a.addEventListener('pause', function () { set(false); });
+      a.addEventListener('ended', function () { set(false); });
+    })();
+  </script>
+</body>
+</html>
