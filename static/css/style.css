@@ -1241,5 +1241,5 @@ li:not(.status-visited) .location {
 @media (max-width: 600px) {
   .twt-playlist-item { padding: 10px 14px; }
   .twt-playlist-player { padding: 14px; }
-  .twt-playlist-now { padding: 0 14px 8px; }
+  .twt-playlist-now { padding: 14px 14px 8px; }
 }
