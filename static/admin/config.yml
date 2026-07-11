@@ -162,11 +162,10 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
-      - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "Metadata - the current grid layout doesn't display it" }
+      - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "The voice - shown under the play button" }
       - { name: location, label: Location, widget: string, required: false }
-      - { name: image, label: Hero image (social / listing), widget: image }
-      - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
-      - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
+      - { name: dropbox_folder, label: Audio folder (Dropbox), widget: string, required: false, hint: "Dropbox shared-folder URL - plays every audio file inside it, in filename order" }
+      - { name: image, label: Hero image (social / listing), widget: image, required: false }
   
   - name: pages
     label: Pages
