@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} · {{ .Site.Title }}</title>
-  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">  
+  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
     body.exhibit {
@@ -44,58 +44,56 @@
       gap: 0;
     }
 
-    /* Site title */
+    /* Left column - image + caption below */
+    .exhibit-image-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exhibit-image-caption {
+      margin-top: 16px;
+    }
+
     .exhibit-site-title {
-      font-family: var(--condensed);
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 900;
+      font-family: var(--mono);
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: -0.5px;
-      line-height: 0.95;
-      margin-bottom: 24px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
 
     .exhibit-site-title a {
       text-decoration: none;
-      color: var(--text);
+      color: inherit;
     }
 
-    /* Meta */
-    .exhibit-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-      line-height: 2;
-      margin-bottom: 8px;
-    }
-
-    /* Page title */
-    .exhibit-title {
-      font-family: var(--sans);
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 4px;
-    }
-
-    /* Speaker */
-    .exhibit-speaker {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    /* Question */
     .exhibit-question {
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.5px;
       color: var(--muted);
       font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* Right column */
+    .exhibit-title {
+      font-family: var(--condensed);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 0.95;
+      margin-bottom: 12px;
+    }
+
+    .exhibit-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
       margin-bottom: 28px;
     }
 
@@ -143,32 +141,27 @@
     <div class="exhibit-grid">
 
       <!-- LEFT: IMAGE -->
-      <div class="exhibit-image">
+      <!-- LEFT: IMAGE + TWT LABEL + QUESTION -->
+      <div class="exhibit-image-wrap">
         {{ with .Params.exhibit_image }}
           <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
         {{ end }}
+        <div class="exhibit-image-caption">
+          <div class="exhibit-site-title"><a href="/">This Was Tomorrow</a></div>
+          {{- with .Params.exhibit_question }}
+          <div class="exhibit-question">{{ . }}</div>
+          {{ end }}
+        </div>
       </div>
 
-      <!-- RIGHT: INFO + PLAYER -->
+      <!-- RIGHT: TITLE + LOCATION + PLAYER + LINK -->
       <div class="exhibit-right">
 
-        <div class="exhibit-site-title">
-          <a href="/">This Was Tomorrow</a>
-        </div>
+        <div class="exhibit-title">{{ .Title }}</div>
 
         <div class="exhibit-meta">
           {{- with .Params.location }}{{ . }}{{ end }}
         </div>
-
-        <div class="exhibit-title">{{ .Title }}</div>
-
-        {{- with .Params.exhibit_speaker }}
-        <div class="exhibit-speaker">{{ . }}</div>
-        {{ end }}
-
-        {{- with .Params.exhibit_question }}
-        <div class="exhibit-question">{{ . }}</div>
-        {{ end }}
 
         <div class="exhibit-player">
           {{ .Content }}
