@@ -11,26 +11,25 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    .exhibit-wrap {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 48px 32px 80px;
+    .exhibit-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 48px 32px;
     }
 
-    /* TWO COLUMNS */
     .exhibit-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 48px;
-      align-items: start;
-    }
-
-    /* LEFT - IMAGE */
-    .exhibit-image {
-      position: sticky;
-      top: 32px;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .exhibit-image img {
@@ -39,42 +38,10 @@
       display: block;
     }
 
-    /* RIGHT - CONTENT */
-    .exhibit-content {
+    .exhibit-player {
       display: flex;
       flex-direction: column;
-      gap: 0;
-    }
-
-    .exhibit-meta {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 24px;
-      line-height: 1.8;
-    }
-
-    .exhibit-title {
-      font-family: var(--sans);
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 6px;
-    }
-
-    .exhibit-speaker {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    /* PLAYER - inherits site styles, no overrides needed */
-    .exhibit-player {
-      margin-bottom: 24px;
+      gap: 24px;
     }
 
     .exhibit-fulllink {
@@ -95,57 +62,35 @@
       border-color: var(--text);
     }
 
-    /* MOBILE - stack vertically */
     @media (max-width: 640px) {
-      .exhibit-wrap { padding: 28px 20px 60px; }
-      .exhibit-grid { grid-template-columns: 1fr; gap: 28px; }
-      .exhibit-image { position: static; }
+      .exhibit-main { padding: 28px 20px; }
+      .exhibit-grid { grid-template-columns: 1fr; gap: 32px; align-items: start; }
     }
   </style>
 </head>
 <body class="exhibit">
-  {{ partial "header.html" . }}
 
-  <div class="exhibit-wrap">
+  <div class="exhibit-main">
     <div class="exhibit-grid">
 
-      <!-- LEFT: IMAGE -->
       <div class="exhibit-image">
         {{ with .Params.exhibit_image }}
           <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
         {{ end }}
       </div>
 
-      <!-- RIGHT: CONTENT -->
-      <div class="exhibit-content">
-
-        {{ with .Params.exhibit_question }}
-        <div class="exhibit-meta">{{ . }}</div>
-        {{ end }}
-
-        {{ with .Title }}<div class="exhibit-title">{{ . }}</div>{{ end }}
-
-        {{ with .Params.exhibit_speaker }}
-        <div class="exhibit-speaker">{{ . }}</div>
-        {{ end }}
-
-        {{ with .Params.location }}
-        <div class="exhibit-speaker">{{ . }}</div>
-        {{ end }}
-
-        <div class="exhibit-player">
-          {{ .Content }}
-        </div>
-
+      <div class="exhibit-player">
+        {{ .Content }}
         {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
-        <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
+          <a class="exhibit-fulllink" href="{{ .RelPermalink }}">Full site page →</a>
         {{ end }}
-
       </div>
+
     </div>
   </div>
 
   {{ partial "footer.html" . }}
+
   <script src="{{ "JS/gallery.js" | relURL }}"></script>
   <script src="{{ "JS/supercharged.js" | relURL }}" defer></script>
 </body>
