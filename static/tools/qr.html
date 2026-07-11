@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWT — QR</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f7f5f0; font-family: 'Courier New', monospace; min-height: 100vh; padding: 48px 16px; color: #111; }
+.app { width: 100%; max-width: 620px; margin: 0 auto; }
+h1 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+.tagline { font-size: 10px; color: #999; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 2px solid #111; }
+label.fl { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #666; margin-bottom: 7px; }
+input[type="text"], select {
+  width: 100%; font-family: 'Courier New', monospace; font-size: 12px;
+  background: #fff; border: 1px solid #ccc; padding: 10px 12px; color: #111; outline: none;
+  -webkit-appearance: none; appearance: none;
+}
+input[type="text"]:focus, select:focus { border-color: #111; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0; }
+.sec { margin-bottom: 18px; }
+.hint { font-size: 10px; color: #999; margin-top: 6px; line-height: 1.5; }
+button.main {
+  width: 100%; font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 2px; background: #111; color: #f7f5f0;
+  border: none; padding: 13px; cursor: pointer;
+}
+button.main:hover { background: #333; }
+.picks { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 22px; }
+.pick {
+  font-family: 'Courier New', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px;
+  background: #fff; color: #444; border: 1px solid #ccc; padding: 6px 8px; cursor: pointer;
+}
+.pick:hover { background: #111; color: #f7f5f0; border-color: #111; }
+#outs { display: none; margin-top: 20px; }
+.prev { text-align: center; padding: 24px; background: #fff; border: 1px solid #ccc; }
+.dls { display: flex; gap: 12px; margin-top: 14px; }
+.dls button { flex: 1; }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>TWT - QR</h1>
+  <div class="tagline">Code generator · print-ready SVG</div>
+
+  <div class="sec">
+    <label class="fl">URL</label>
+    <input type="text" id="qr-url" placeholder="https://thiswastomorrow.co.uk/exhibition/kesoberi/" />
+    <div class="hint">Any link. Or tap an exhibit below to fill and generate.</div>
+  </div>
+
+  <div class="picks" id="picks"></div>
+
+  <div class="row">
+    <div>
+      <label class="fl">Error correction</label>
+      <select id="qr-ec">
+        <option value="H" selected>High - best for print</option>
+        <option value="Q">Quartile</option>
+        <option value="M">Medium</option>
+        <option value="L">Low</option>
+      </select>
+    </div>
+    <div>
+      <label class="fl">Quiet margin</label>
+      <input type="text" id="qr-margin" value="4" />
+    </div>
+  </div>
+
+  <button class="main" onclick="qrGen()">Generate</button>
+
+  <div id="outs">
+    <div class="prev"><div id="qr-prev"></div></div>
+    <div class="dls">
+      <button class="main" onclick="qrDownload('svg')">Download SVG</button>
+      <button class="main" onclick="qrDownload('png')">Download PNG</button>
+    </div>
+    <div class="hint">SVG scales to any print size with no blur - use it for the wall labels. PNG for quick digital use.</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@2.0.4/dist/qrcode.js"></script>
+<script>
+var BASE = 'https://thiswastomorrow.co.uk/exhibition/';
+var SLUGS = ['calder-valley','cressingham-gardens','granby','gwavas-estate','hastings-commons','homebaked','kesoberi','kittys','lilac','owch-new-ground','tinkers-bubble','treneere-estate','trevone-quarry'];
+
+(function(){
+  var wrap = document.getElementById('picks');
+  SLUGS.forEach(function(s){
+    var b = document.createElement('button');
+    b.className = 'pick'; b.textContent = s;
+    b.onclick = function(){ document.getElementById('qr-url').value = BASE + s + '/'; qrGen(); };
+    wrap.appendChild(b);
+  });
+})();
+
+function qrBuild(){
+  var url = document.getElementById('qr-url').value.trim();
+  if(!url) return null;
+  if(typeof qrcode !== 'function'){ alert('QR library not loaded - check your connection and refresh.'); return null; }
+  var qr = qrcode(0, document.getElementById('qr-ec').value);
+  qr.addData(url); qr.make();
+  return qr;
+}
+function qrMargin(){ var m = parseInt(document.getElementById('qr-margin').value,10); return isNaN(m)?4:m; }
+function qrSvgStr(qr,m){
+  var n = qr.getModuleCount(), dim = n + m*2, rects = '';
+  for(var r=0;r<n;r++){ for(var c=0;c<n;c++){ if(qr.isDark(r,c)) rects += '<rect x="'+(c+m)+'" y="'+(r+m)+'" width="1" height="1"/>'; } }
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+dim+' '+dim+'" shape-rendering="crispEdges"><rect width="'+dim+'" height="'+dim+'" fill="#ffffff"/><g fill="#111111">'+rects+'</g></svg>';
+}
+function qrName(url){ return 'qr-' + url.replace(/https?:\/\//,'').replace(/[^a-z0-9]+/gi,'-').replace(/^-+|-+$/g,'').toLowerCase(); }
+function qrSave(href,fn){ var a = document.createElement('a'); a.href = href; a.download = fn; document.body.appendChild(a); a.click(); document.body.removeChild(a); }
+function qrGen(){
+  var qr = qrBuild(); if(!qr) return;
+  var prev = document.getElementById('qr-prev');
+  prev.innerHTML = qrSvgStr(qr, qrMargin());
+  var s = prev.querySelector('svg'); if(s){ s.setAttribute('width','220'); s.setAttribute('height','220'); }
+  document.getElementById('outs').style.display = 'block';
+}
+function qrDownload(fmt){
+  var url = document.getElementById('qr-url').value.trim(); if(!url) return;
+  var qr = qrBuild(); if(!qr) return; var m = qrMargin();
+  if(fmt === 'svg'){
+    var blob = new Blob([qrSvgStr(qr,m)], {type:'image/svg+xml'});
+    qrSave(URL.createObjectURL(blob), qrName(url)+'.svg');
+  } else {
+    var n = qr.getModuleCount(), cs = 24, dim = (n + m*2) * cs;
+    var cv = document.createElement('canvas'); cv.width = dim; cv.height = dim;
+    var x = cv.getContext('2d'); x.fillStyle = '#ffffff'; x.fillRect(0,0,dim,dim); x.fillStyle = '#111111';
+    for(var r=0;r<n;r++){ for(var c=0;c<n;c++){ if(qr.isDark(r,c)) x.fillRect((c+m)*cs,(r+m)*cs,cs,cs); } }
+    qrSave(cv.toDataURL('image/png'), qrName(url)+'.png');
+  }
+}
+</script>
+</body>
+</html>
