@@ -60,12 +60,16 @@
 
     .nowplaying { text-align: center; }
     .nowplaying .np { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    .nowplaying .who { font-size: 23px; font-weight: 700; line-height: 1.15; margin-bottom: 5px; }
+    .nowplaying .who { font-size: 23px; font-weight: 700; line-height: 1.15; margin-bottom: 5px; min-height: 1.15em; }
     .nowplaying .where { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--muted); }
+
+    .transport { display: none; align-items: center; justify-content: center; gap: 18px; margin-top: 18px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; color: var(--muted); }
+    .skip { background: none; border: none; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; padding: 2px 6px; }
+    .skip:hover { color: var(--ink); }
+    .skip:disabled { opacity: 0.3; cursor: default; }
 
     @media (min-width: 700px) { .play { width: 152px; height: 152px; } .play svg { width: 54px; height: 54px; } }
 
-    /* hold still for anyone who asks for reduced motion */
     @media (prefers-reduced-motion: reduce) { .blob { animation: none !important; } }
   </style>
 </head>
@@ -96,10 +100,12 @@
 
         <div class="nowplaying">
           <div class="np">Now playing</div>
-          <div class="who">{{ .Params.exhibit_speaker | default .Title }}</div>
-          <div class="where">
-            {{- if .Params.exhibit_speaker }}{{ .Title }}{{ with .Params.location }} · {{ . }}{{ end }}
-            {{- else }}{{ with .Params.location }}{{ . }}{{ end }}{{ end -}}
+          <div class="who" id="who">{{ .Params.exhibit_speaker | default .Title }}</div>
+          <div class="where">{{ .Title }}{{ with .Params.location }} · {{ . }}{{ end }}</div>
+          <div class="transport" id="transport">
+            <button class="skip" id="prev" type="button" aria-label="Previous voice">&lsaquo;</button>
+            <span id="counter">1 / 1</span>
+            <button class="skip" id="next" type="button" aria-label="Next voice">&rsaquo;</button>
           </div>
         </div>
 
@@ -108,23 +114,90 @@
     </div>
   </div>
 
-  {{ with .Params.exhibit_audio }}
-    <audio id="exhibitAudio" src="{{ . }}" preload="none"></audio>
-  {{ end }}
-
   <script>
     (function () {
-      var a = document.getElementById('exhibitAudio');
-      var b = document.getElementById('playBtn');
-      var icon = document.getElementById('playIcon');
-      if (!a || !b) return;
+      var PROXY  = 'https://dropbox-proxy.cardopoli.workers.dev';
+      var FOLDER = {{ .Params.dropbox_folder | jsonify }};
+
+      var btn   = document.getElementById('playBtn');
+      var icon  = document.getElementById('playIcon');
+      var whoEl = document.getElementById('who');
+      var tEl   = document.getElementById('transport');
+      var cEl   = document.getElementById('counter');
+      var prev  = document.getElementById('prev');
+      var next  = document.getElementById('next');
+
       var PLAY  = '<path d="M8 5v14l11-7z"/>';
       var PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
-      function set(playing) { icon.innerHTML = playing ? PAUSE : PLAY; b.setAttribute('aria-label', playing ? 'Pause' : 'Play'); }
-      b.addEventListener('click', function () { if (a.paused) { a.play(); } else { a.pause(); } });
-      a.addEventListener('play',  function () { set(true); });
-      a.addEventListener('pause', function () { set(false); });
-      a.addEventListener('ended', function () { set(false); });
+
+      if (!FOLDER) return;
+
+      var audio = new Audio();
+      audio.preload = 'none';
+      var tracks = [], idx = 0, ready = false, wantPlay = false;
+
+      function proxyFetch(endpoint, body) {
+        return fetch(PROXY, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ endpoint: endpoint, body: body })
+        }).then(function (r) { if (!r.ok) throw new Error('proxy ' + r.status); return r.json(); });
+      }
+
+      function setIcon(p) { icon.innerHTML = p ? PAUSE : PLAY; btn.setAttribute('aria-label', p ? 'Pause' : 'Play'); }
+
+      function refresh() {
+        if (tracks[idx]) whoEl.textContent = tracks[idx].name;
+        if (tracks.length > 1) {
+          tEl.style.display = 'flex';
+          cEl.textContent = (idx + 1) + ' / ' + tracks.length;
+          prev.disabled = (idx === 0);
+          next.disabled = (idx === tracks.length - 1);
+        }
+      }
+
+      function load(i) { idx = i; audio.src = tracks[idx].src; refresh(); }
+
+      function boot() {
+        return proxyFetch('files/list_folder', { path: '', shared_link: { url: FOLDER }, recursive: false })
+          .then(function (data) {
+            if (!data || data.error) throw new Error('folder');
+            var files = (data.entries || []).filter(function (f) {
+              return f['.tag'] === 'file' && /\.(mp3|wav|m4a|ogg|aac)$/i.test(f.name);
+            });
+            files.sort(function (a, b) { return a.name.localeCompare(b.name); });
+            return Promise.all(files.map(function (f) {
+              return proxyFetch('files/get_temporary_link', { path: f.path_lower })
+                .then(function (d) { return { name: f.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '), src: d.link || null }; });
+            }));
+          })
+          .then(function (list) {
+            tracks = (list || []).filter(function (t) { return t.src; });
+            if (!tracks.length) { whoEl.textContent = 'No audio found'; return; }
+            ready = true;
+            load(0);
+            if (wantPlay) audio.play();
+          })
+          .catch(function () { whoEl.textContent = 'Audio unavailable'; });
+      }
+
+      btn.addEventListener('click', function () {
+        if (!ready) { wantPlay = true; whoEl.textContent = 'Loading…'; boot(); return; }
+        if (audio.paused) audio.play(); else audio.pause();
+      });
+
+      audio.addEventListener('play',  function () { setIcon(true); });
+      audio.addEventListener('pause', function () { setIcon(false); });
+      audio.addEventListener('ended', function () {
+        if (idx < tracks.length - 1) { load(idx + 1); audio.play(); }
+        else { setIcon(false); load(0); }
+      });
+
+      prev.addEventListener('click', function () { if (ready && idx > 0) { load(idx - 1); audio.play(); } });
+      next.addEventListener('click', function () { if (ready && idx < tracks.length - 1) { load(idx + 1); audio.play(); } });
+
+      /* resolve the folder up front so the first voice's name shows and the first tap is instant */
+      boot();
     })();
   </script>
 </body>
