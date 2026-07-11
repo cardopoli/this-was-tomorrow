@@ -3,19 +3,19 @@ title: Kitty's Launderette
 draft: false
 exhibit_speaker: ''
 location: Anfield, Liverpool
-image: /images/dsc_0918-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
-exhibit_image: /images/dsc_0918-18_19_052026-kittys_launderette-liverpool_lowres-copy.webp
-exhibit_question: ''
-exhibit_bg: ''
-exhibit_text: ''
-exhibit_accent: ''
-exhibit_dim: null
-exhibit_blur: ''
-exhibit_image_pos: ''
-exhibit_card: ''
-exhibit_radius: ''
-exhibit_title_size: ''
+image: /images/dsc_0925-18_19_052026-kittys_launderette-liverpool_lowres.webp
+exhibit_image: /images/dsc_0925-18_19_052026-kittys_launderette-liverpool_lowres.webp
 exhibit_width: ''
+exhibit_title_size: ''
+exhibit_radius: ''
+exhibit_card: ''
+exhibit_image_pos: ''
+exhibit_blur: ''
+exhibit_dim: null
+exhibit_accent: ''
+exhibit_text: ''
+exhibit_bg: ''
+exhibit_question: ''
 layout: exhibition
 slug: kittys
 ---
