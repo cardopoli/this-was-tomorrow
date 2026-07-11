@@ -1,8 +1,8 @@
 ---
 title: Tinker's Bubble
-draft: true
-exhibit_speaker: Cameron, Meg
-location: Somerset
+draft: false
+exhibit_speaker: Cameron, Meg, Ree
+location: Norton Sub Hamdon, Somerset
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 exhibit_image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 exhibit_question: ''
