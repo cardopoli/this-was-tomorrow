@@ -122,7 +122,9 @@
     }
 
     /* Mobile */
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
+    html, body { overflow-x: hidden; }
+      .wrap { padding: 0 16px; max-width: 100%; }
       .exhibit-main { padding: 32px 20px 48px; }
       .exhibit-grid { grid-template-columns: 1fr; gap: 36px; align-items: start; }
     }
