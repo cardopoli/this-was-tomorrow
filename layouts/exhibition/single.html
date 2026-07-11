@@ -28,6 +28,13 @@
     .content .twt-playlist,
     .content .twt-playlist * { background: transparent !important; color: var(--fluo) !important; border-color: var(--fluo) !important; }
     .content .twt-playlist svg { fill: var(--fluo) !important; }
+    /* play glyph is the ▶ character — needs a font that has it */
+    .content .twt-play-icon { font-family: Arial, "Segoe UI Symbol", sans-serif !important; }
+
+    @media (max-width: 600px) {
+      .title { font-size: 34px; }
+      .content { padding: 30px 20px 44px; }
+    }
   </style>
 </head>
 <body>
