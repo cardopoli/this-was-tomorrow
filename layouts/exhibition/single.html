@@ -229,6 +229,27 @@
 
   <div class="exhibit-grid">
 
+     <!-- IMAGE -->
+
+    <div class="exhibit-image-wrap">
+
+      {{ with .Params.exhibit_image }}
+        <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
+      {{ end }}
+
+
+      <div class="exhibit-image-caption">
+
+        <div class="exhibit-site-title">
+          <a href="/">
+            This Was Tomorrow. Is this the future we were dreaming of?
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
 
     <!-- RIGHT CONTENT -->
 
@@ -266,28 +287,6 @@
 
     </div>
 
-
-
-    <!-- IMAGE -->
-
-    <div class="exhibit-image-wrap">
-
-      {{ with .Params.exhibit_image }}
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="eager">
-      {{ end }}
-
-
-      <div class="exhibit-image-caption">
-
-        <div class="exhibit-site-title">
-          <a href="/">
-            This Was Tomorrow. Is this the future we were dreaming of?
-          </a>
-        </div>
-
-      </div>
-
-    </div>
 
 
   </div>
