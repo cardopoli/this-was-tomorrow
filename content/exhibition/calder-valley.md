@@ -4,18 +4,18 @@ draft: false
 exhibit_speaker: Paul Brannigan
 location: Hebden Bridge, Todmorden
 image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
-exhibit_image: /images/_dsc2741-twt_calder-valley_todworks_low.webp
-exhibit_question: ''
-exhibit_bg: ''
-exhibit_text: ''
-exhibit_accent: ''
-exhibit_dim: null
-exhibit_blur: ''
-exhibit_image_pos: ''
-exhibit_card: ''
-exhibit_radius: ''
-exhibit_title_size: ''
+exhibit_image: /images/dsc_0531-twt_calder-valley_todworks_low.webp
 exhibit_width: ''
+exhibit_title_size: ''
+exhibit_radius: ''
+exhibit_card: ''
+exhibit_image_pos: ''
+exhibit_blur: ''
+exhibit_dim: null
+exhibit_accent: ''
+exhibit_text: ''
+exhibit_bg: ''
+exhibit_question: ''
 layout: exhibition
 slug: calder-valley
 ---
