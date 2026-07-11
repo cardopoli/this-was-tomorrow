@@ -122,7 +122,21 @@
 
     /* LINKS */
 
-    .exhibit-fulllink {
+     .exhibit-fulllink-top{
+      display: inline-block;
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color .15s, border-color .15s;
+    }
+
+    .exhibit-fulllink-bottom {
       display: inline-block;
       text-align: right;
       font-family: var(--mono);
@@ -237,7 +251,7 @@
     <div class="exhibit-image-wrap">
 
        {{ with .Site.GetPage "/exhibition" }}
-        <a class="exhibit-fulllink" href="{{ .RelPermalink }}" style="margin-bottom:20px">
+        <a class="exhibit-fulllink-top" href="{{ .RelPermalink }}" style="margin-bottom:20px">
           ← {{ .Title }}
         </a>
       {{ end }}
@@ -283,7 +297,7 @@
 
 
       {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
-        <a class="exhibit-fulllink" href="{{ .RelPermalink }}">
+        <a class="exhibit-fulllink-bottom" href="{{ .RelPermalink }}">
           Full site page →
         </a>
       {{ end }}
