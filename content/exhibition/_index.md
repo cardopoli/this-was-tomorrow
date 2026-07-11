@@ -1,3 +1,3 @@
 ---
-title: "Exhibition"
+title: "Voices and places"
 ---
