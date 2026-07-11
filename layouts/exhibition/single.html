@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }} · {{ .Site.Title }}</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
     :root { --fluo: #c6f500; }
@@ -23,6 +24,7 @@
     .kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
     .title  { font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.5px; margin: 10px 0 6px; }
     .where  { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
+    .back   { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); text-decoration: none; border-bottom: 1px solid var(--fluo); padding-bottom: 2px; margin-bottom: 26px; }
 
     /* transparent punk player — fluo text on the image */
     .content .twt-playlist,
@@ -43,6 +45,7 @@
   <div class="veil"></div>
 
   <div class="content">
+    {{ with .Site.GetPage "/exhibition" }}<a class="back" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
     <div class="kicker">This Was Tomorrow</div>
     <div class="title">{{ .Title }}</div>
     {{ with .Params.location }}<div class="where">{{ . }}</div>{{ end }}
