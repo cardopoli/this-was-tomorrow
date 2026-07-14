@@ -30,11 +30,14 @@
     .content .twt-playlist,
     .content .twt-playlist * { background: transparent !important; color: var(--fluo) !important; border-color: var(--fluo) !important; }
     .content .twt-playlist svg { fill: var(--fluo) !important; }
-    /* draw the play triangle in CSS — no font glyph, so no emoji fallback anywhere */
-    .content .twt-play-icon { font-size: 0 !important; line-height: 0 !important; display: inline-block; }
-    .content .twt-play-icon::before {
-      content: ""; display: block; width: 0; height: 0;
-      border-style: solid; border-width: 9px 0 9px 15px;
+    /* emoji-proof: remove the ▶ glyph element entirely, draw the triangle on the button */
+    .content .twt-play-icon { display: none !important; }
+    .content .twt-player-btn { position: relative !important; }
+    .content .twt-player-btn::before {
+      content: ""; position: absolute; top: 50%; left: 50%;
+      transform: translate(-40%, -50%);
+      width: 0; height: 0; border-style: solid;
+      border-width: 9px 0 9px 15px;
       border-color: transparent transparent transparent var(--fluo);
     }
     /* progress: bring the fill + position dot back (my blanket rule had hidden them), in fluo, phone-sized */
