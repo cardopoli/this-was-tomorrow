@@ -164,10 +164,20 @@ collections:
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
       - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "Metadata - the current grid layout doesn't display it" }
       - { name: location, label: Location, widget: string, required: false }
+      - { name: cap, label: Page text (optional), widget: text, required: false, hint: "Custom caption for this audio page - leave blank for none" }
       - { name: image, label: Hero image (social / listing), widget: image }
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
   
+  - name: exhibition_page
+    label: Exhibition page
+    files:
+      - name: intro
+        label: Intro statement
+        file: content/exhibition/_index.md
+        fields:
+          - { name: title, label: Heading, widget: string }
+          - { name: body, label: Statement text, widget: markdown }
   - name: pages
     label: Pages
     files:
