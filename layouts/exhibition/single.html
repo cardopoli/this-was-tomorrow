@@ -25,6 +25,8 @@
     .title  { font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.5px; margin: 10px 0 6px; }
     .where  { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
     .back   { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); text-decoration: none; border-bottom: 1px solid var(--fluo); padding-bottom: 2px; margin-bottom: 26px; }
+    .cap    { font-size: 15px; line-height: 1.55; color: var(--fluo); max-width: 46ch; margin-bottom: 30px; }
+    .cap p  { margin-bottom: 0.8em; }
 
     /* transparent punk player — fluo text on the image */
     .content .twt-playlist,
@@ -63,6 +65,7 @@
     <div class="kicker">This Was Tomorrow</div>
     <div class="title">{{ .Title }}</div>
     {{ with .Params.location }}<div class="where">{{ . }}</div>{{ end }}
+    {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
     {{ .Content }}
   </div>
 
