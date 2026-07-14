@@ -7,7 +7,7 @@
     {{ end }}
 
     <ul class="site-list">
-        {{ range .Pages.ByTitle }}
+{{ range (where .Site.RegularPages "Section" "exhibition").ByTitle }}        
         <li class="status-{{ .Params.status | default "planned" }}">
             <a href="{{ .RelPermalink }}">
                 <span class="name">
