@@ -2,12 +2,12 @@
 <div class="site-index">
     <h1 style="margin: 0 0 24px;">{{ .Title }}</h1>
 
-    {{ if .Content }}
-    <div class="intro">{{ .Content }}</div>
+    {{ if .Params.intro }}
+    <div class="intro">{{ .Params.intro | markdownify }}</div>
     {{ end }}
 
     <ul class="site-list">
-{{ range (where .Site.RegularPages "Section" "exhibition").ByTitle }}        
+        {{ range (where .Site.RegularPages "Section" "exhibition").ByTitle }}
         <li class="status-{{ .Params.status | default "planned" }}">
             <a href="{{ .RelPermalink }}">
                 <span class="name">
