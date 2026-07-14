@@ -1,7 +1,7 @@
 ---
 title: OWCH / New Ground Cohousing
-draft: true
-exhibit_speaker: Jude, Hillary
+draft: false
+exhibit_speaker: Jude, Hillary, Anne
 location: Barnet, London
 image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
 exhibit_image: /images/R0043262-LOWRES_24042026_OWCH_New Ground_Barnet_London, United Kingdom.jpg
