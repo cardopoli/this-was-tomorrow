@@ -9,4 +9,8 @@ layout: exhibition
 slug: cressingham-gardens
 ---
 
-{{< audio-playlist url="PASTE_EXHIBIT_FOLDER_URL_HERE" fg="#f7f5f0" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
+<div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+
+  <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/o2hrpxt3ht6fk2pgww2nw/ACE_TWT_30032026_Cressingham-Gardens_Andy_Elizabeth_01_128kbps.mp3?rlkey=4rvrtbiqjaozb6o44yx4jzeg5&raw=1"></audio>
+
+</div>
