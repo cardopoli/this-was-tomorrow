@@ -150,7 +150,6 @@ collections:
     label: Exhibition
     label_singular: Exhibition
     folder: content/exhibition
-    filter: { field: layout, value: exhibition }
     index_file:
       name: _index
       label: Exhibition page
