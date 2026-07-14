@@ -151,6 +151,12 @@ collections:
     label_singular: Exhibition
     folder: content/exhibition
     filter: { field: layout, value: exhibition }
+    index_file:
+      name: _index
+      label: Exhibition page
+      fields:
+        - { name: title, label: Heading, widget: string }
+        - { name: intro, label: Statement text, widget: text }
     create: true
     extension: md
     format: frontmatter
@@ -173,13 +179,6 @@ collections:
   - name: pages
     label: Pages
     files:
-      - name: exhibition_intro
-        label: Exhibition page
-        file: content/exhibition/_index.md
-        fields:
-          - { name: title, label: Heading, widget: string }
-          - { name: intro, label: Statement text, widget: text }
-
       - name: about
         label: About
         file: content/about.md
