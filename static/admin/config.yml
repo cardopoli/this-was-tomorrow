@@ -178,7 +178,7 @@ collections:
         file: content/exhibition/_index.md
         fields:
           - { name: title, label: Heading, widget: string }
-          - { name: body, label: Statement text, widget: markdown }
+          - { name: intro, label: Statement text, widget: text }
 
       - name: about
         label: About
