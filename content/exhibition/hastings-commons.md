@@ -1,6 +1,6 @@
 ---
 title: Hastings Commons
-draft: true
+draft: false
 exhibit_speaker: Jess Steele
 location: Hastings
 image: /images/DSC_9194-LOW RES_Jpeg_Hastings Commons_ACE TWT.jpg
