@@ -1,12 +1,12 @@
 ---
-title: "Granby Four Streets Community Land Trust"
-draft: true              # scaffold - flip to false once audio is pasted and details are checked
+title: Granby Four Streets Community Land Trust
+draft: false
+exhibit_speaker: Hazel Tilley
+location: Toxteth, Liverpool
+image: /images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp
+exhibit_image: /images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp
 layout: exhibition
 slug: granby
-location: "Toxteth, Liverpool"    # VERIFY
-exhibit_speaker: "Hazel Tilley"   # VERIFY
-image: "/images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp"
-exhibit_image: "/images/dsc_0865-lowres_17052026-granby-four-street-liverpool.webp"       # backdrop - swap to the exhibition print if it differs
 ---
 
-{{< audio-playlist url="PASTE_EXHIBIT_FOLDER_URL_HERE" fg="#f7f5f0" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
+{{< audio-playlist url="https://www.dropbox.com/scl/fo/8iapnp04sj7i5waoh3ew8/AFhwontsE6uk6uFxsTtolJU?rlkey=vp7ppvyzjpei0brmhwnebcgdm&dl=0" fg="#f7f5f0" pad="10px 14px" btnsize="12px" timesize="10px" timer="1" >}}
