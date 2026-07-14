@@ -169,18 +169,16 @@ collections:
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
   
-  - name: exhibition_page
-    label: Exhibition page
+  - name: pages
+    label: Pages
     files:
-      - name: intro
-        label: Intro statement
+      - name: exhibition_intro
+        label: Exhibition page
         file: content/exhibition/_index.md
         fields:
           - { name: title, label: Heading, widget: string }
           - { name: body, label: Statement text, widget: markdown }
-  - name: pages
-    label: Pages
-    files:
+
       - name: about
         label: About
         file: content/about.md
