@@ -3,8 +3,9 @@ title: Cressingham Gardens
 draft: false
 exhibit_speaker: Andy Plant, Elizabeth Fraser
 location: Lambeth, London
-image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
-exhibit_image: /images/30032026_Cressingham Gardens_LondonMarch 30, 2026_DSC_8608.jpg
+cap: ''
+image: /images/30032026_cressingham-gardens_londonmarch-30-2026_dsc_8556.webp
+exhibit_image: /images/30032026_cressingham-gardens_londonmarch-30-2026_dsc_8556.webp
 layout: exhibition
 slug: cressingham-gardens
 ---
