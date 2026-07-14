@@ -1,74 +1,25 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} · {{ .Site.Title }}</title>
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-  <style>
-    :root { --fluo: #c6f500; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #000; color: var(--fluo); font-family: var(--sans); min-height: 100vh; }
+{{ define "main" }}
+<div class="site-index">
+    <h1 style="margin: 0 0 24px;">{{ .Title }}</h1>
 
-    /* bitmapped B&W backdrop — a bit visible */
-    .bmp { position: fixed; inset: 0; z-index: 0; background-size: cover; background-position: center;
-           filter: grayscale(1) contrast(1.5) brightness(1.05); }
-    .bmp::after { content: ""; position: absolute; inset: 0;
-           background-image: radial-gradient(circle, #000 0.7px, transparent 0.8px);
-           background-size: 3px 3px; mix-blend-mode: multiply; opacity: 0.6; }
-    .veil { position: fixed; inset: 0; z-index: 1; background: rgba(0,0,0,0.4); }
+    {{ if .Params.intro }}
+    <div class="intro">{{ .Params.intro | markdownify }}</div>
+    {{ end }}
 
-    .content { position: relative; z-index: 2; max-width: 520px; margin: 0 auto; padding: 34px 22px 48px; }
-    .kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
-    .title  { font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.5px; margin: 10px 0 6px; }
-    .where  { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
-    .back   { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); text-decoration: none; border-bottom: 1px solid var(--fluo); padding-bottom: 2px; margin-bottom: 26px; }
-    .cap    { font-size: 15px; line-height: 1.55; color: var(--fluo); max-width: 46ch; margin-bottom: 30px; }
-    .cap p  { margin-bottom: 0.8em; }
-
-    /* transparent punk player — fluo text on the image */
-    .content .twt-playlist,
-    .content .twt-playlist * { background: transparent !important; color: var(--fluo) !important; border-color: var(--fluo) !important; }
-    .content .twt-playlist svg { fill: var(--fluo) !important; }
-    /* emoji-proof: remove the ▶ glyph element entirely, draw the triangle on the button */
-    .content .twt-play-icon,
-    .content .twt-playlist-item-play { display: none !important; }
-    .content .twt-player-btn { position: relative !important; }
-    .content .twt-player-btn::before {
-      content: ""; position: absolute; top: 50%; left: 50%;
-      transform: translate(-40%, -50%);
-      width: 0; height: 0; border-style: solid;
-      border-width: 9px 0 9px 15px;
-      border-color: transparent transparent transparent var(--fluo);
-    }
-    /* progress: bring the fill + position dot back (my blanket rule had hidden them), in fluo, phone-sized */
-    .content .twt-player-fill,
-    .content .twt-player-handle { background: var(--fluo) !important; }
-    .content .twt-player-bar    { background: rgba(198,245,0,0.28) !important; height: 4px !important; }
-    .content .twt-player-handle { width: 14px !important; height: 14px !important; }
-
-    @media (max-width: 600px) {
-      .title { font-size: 34px; }
-      .content { padding: 30px 20px 44px; }
-    }
-  </style>
-</head>
-<body>
-
-  {{ with .Params.exhibit_image }}<div class="bmp" style="background-image:url('{{ . }}')"></div>{{ end }}
-  <div class="veil"></div>
-
-  <div class="content">
-    {{ with .Site.GetPage "/exhibition" }}<a class="back" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
-    <div class="kicker">This Was Tomorrow</div>
-    <div class="title">{{ .Title }}</div>
-    {{ with .Params.location }}<div class="where">{{ . }}</div>{{ end }}
-    {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
-    {{ .Content }}
-  </div>
-
-  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
-</body>
-</html>
+    <ul class="site-list">
+        {{ range (where .Site.RegularPages "Section" "exhibition").ByTitle }}
+        <li class="status-{{ .Params.status | default "planned" }}">
+            <a href="{{ .RelPermalink }}">
+                <span class="name">
+                    {{ if eq .Params.status "visited" }}<span class="status-dot"></span>{{ end }}{{ .Title }}
+                </span>
+                <span class="location">
+                    {{ .Params.location }}
+                    {{ if eq .Params.status "visited" }}<span class="visited-badge">Visited</span>{{ end }}
+                </span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
