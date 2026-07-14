@@ -1,15 +1,25 @@
 {{ define "main" }}
-  <section class="list-page">
-    <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div class="list-intro">{{ . }}</div>{{ end }}
+<div class="site-index">
+    <h1 style="margin: 0 0 24px;">{{ .Title }}</h1>
+
+    {{ if .Content }}
+    <div class="intro">{{ .Content }}</div>
+    {{ end }}
+
     <ul class="site-list">
-      {{ range .Pages.ByTitle }}
-        <li>
-          <a href="{{ .RelPermalink }}">
-            <span class="name">{{ .Title }}</span>
-          </a>
+        {{ range .Pages.ByTitle }}
+        <li class="status-{{ .Params.status | default "planned" }}">
+            <a href="{{ .RelPermalink }}">
+                <span class="name">
+                    {{ if eq .Params.status "visited" }}<span class="status-dot"></span>{{ end }}{{ .Title }}
+                </span>
+                <span class="location">
+                    {{ .Params.location }}
+                    {{ if eq .Params.status "visited" }}<span class="visited-badge">Visited</span>{{ end }}
+                </span>
+            </a>
         </li>
-      {{ end }}
+        {{ end }}
     </ul>
-  </section>
+</div>
 {{ end }}
