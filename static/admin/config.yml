@@ -150,6 +150,7 @@ collections:
     label: Exhibition
     label_singular: Exhibition
     folder: content/exhibition
+    filter: { field: layout, value: exhibition }
     create: true
     extension: md
     format: frontmatter
