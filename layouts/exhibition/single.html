@@ -43,6 +43,10 @@
       border-width: 9px 0 9px 15px;
       border-color: transparent transparent transparent var(--fluo);
     }
+    /* link to full page */
+.full { display: inline-block; margin-top: 44px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.55; text-decoration: none; }
+.full:hover { opacity: 1; }
+    
     /* progress: bring the fill + position dot back (my blanket rule had hidden them), in fluo, phone-sized */
     .content .twt-player-fill,
     .content .twt-player-handle { background: var(--fluo) !important; }
@@ -67,6 +71,9 @@
     {{ with .Params.location }}<div class="where">{{ . }}</div>{{ end }}
     {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
     {{ .Content }}
+{{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
+<a class="full" href="{{ .RelPermalink }}">the full page &rarr;</a>
+{{ end }}    
   </div>
 
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
