@@ -58,7 +58,7 @@ body_middle: |-
 
   The scheme was scheduled to be delivered in 2020, in partnership with Liverpool City Council and Your Housing Group. But setbacks came: the pandemic first, then significant issues within Liverpool City Council delayed proceedings for years. The community kept pursuing it. In 2025, Liverpool City Council decided instead to sell the properties to a traditional developer on the open market.
 
-  <div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start">
+  <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
 
     <div><a href="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" alt="" style="width:100% display:block;"></a></div>
 
