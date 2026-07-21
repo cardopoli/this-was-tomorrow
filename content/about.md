@@ -1,10 +1,10 @@
 ---
 title: About
-description: A photographic investigation into community-led housing across the UK - cohousing, CLTs, cooperative living, retrofit and repair.
+description: A audio-visual investigation into community-led housing across the UK - cohousing, CLTs, cooperative living, retrofit and repair.
 layout: about
 ---
 
-*This Was Tomorrow: Is This the Future We Were Dreaming Of?* is a long-term photographic investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
+_This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term  investigation into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
 This phase looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
 
