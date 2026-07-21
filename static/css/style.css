@@ -616,8 +616,20 @@ article img {
     margin-bottom: 40px;
 }
 
-article [data-lb-group],
-article div[style*="display:grid"] { margin-bottom: 40px; }
+/* space between an image block and the body text that follows */
+article div[style*="display:grid"] + p,
+article figure + p,
+article [data-lb-group] + p {
+    margin-top: 36px;
+}
+
+/* ...but an italic caption hugs its image, then spaces off the body */
+article div[style*="display:grid"] + p[style*="italic"],
+article figure + p[style*="italic"],
+article [data-lb-group] + p[style*="italic"] {
+    margin-top: 6px;
+    margin-bottom: 36px;
+}
 
 article ul, article ol {
     margin-left: 20px;
