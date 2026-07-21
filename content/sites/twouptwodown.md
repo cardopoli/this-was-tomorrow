@@ -3,7 +3,7 @@ title: Two Up Two Down
 location: Anfield, Liverpool
 status: visited
 visit_date: 19/05/2026
-draft: true
+draft: false
 description: ''
 photos:
   - image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
