@@ -11,7 +11,15 @@ photos:
 image: /images/PLACEHOLDER-P1110801.webp
 dropbox_audio: ''
 body_intro: |-
-  *Note: This organisation was formerly known as Homebaked Community Land Trust. It changed its name to Two Up Two Down in 2025. Naomi's interview, recorded in May 2026, refers to Homebaked CLT - this is the same organisation.*
+  _Note: This organisation was formerly known as Homebaked Community Land Trust. It changed its name to Two Up Two Down in 2025. Naomi's interview, recorded in May 2026, refers to Homebaked CLT - this is the same organisation._
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+
+    <div><a href="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+    <div><a href="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+
+  </div>
 
   In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned.
 
@@ -21,20 +29,24 @@ body_intro: |-
 
   Over the following years, her project invited the community to take matters into their own hands, with a people-centred, intimate approach to re-imagining the area. A group of more than 20 local people worked with architects and other design specialists to re-use a block of empty property comprising a former bakery building and adjoining terraced houses. Taking the community as their client, they designed an affordable housing scheme and shop, as well as meeting and project spaces. The buildings remained earmarked for demolition.
 
-  <img src="/images/PLACEHOLDER-P1110801.webp" alt="Homebaked, Liverpool" style="width:49%; display:inline-block; margin-right:2%"><img src="/images/PLACEHOLDER-R0043865.webp" alt="Homebaked, Liverpool" style="width:49%; display:inline-block">
+  <figure style="margin:0">
 
-  <img src="/images/PLACEHOLDER-R0043944.webp" alt="Homebaked, Liverpool" style="width:100%">
+    <a href="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" alt="" style="width:100% display:block;"></a>
+
+  </figure>
 dropbox_gallery: ''
 body_middle: |-
-  <div class="audio-track">
+  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead, Two Up Two Down</p>
-
-    <audio controls preload="none" style="width:100%" src=""></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
 
   </div>
 
-  <img src="/images/PLACEHOLDER-R0043951.webp" alt="Homebaked, Liverpool" style="width:100%">
+  <figure style="margin:0">
+
+    <a href="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" alt="" style="width:100% display:block;"></a>
+
+  </figure>
 
   ## Brick by Brick We Build Ourselves
 
@@ -46,9 +58,15 @@ body_middle: |-
 
   The scheme was scheduled to be delivered in 2020, in partnership with Liverpool City Council and Your Housing Group. But setbacks came: the pandemic first, then significant issues within Liverpool City Council delayed proceedings for years. The community kept pursuing it. In 2025, Liverpool City Council decided instead to sell the properties to a traditional developer on the open market.
 
-  <img src="/images/PLACEHOLDER-P1110793.webp" alt="Homebaked, Liverpool" style="width:49%; display:inline-block; margin-right:2%"><img src="/images/PLACEHOLDER-P1110812.webp" alt="The house recently sold by the council to a private developer" style="width:49%; display:inline-block">
+  <div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start">
 
-  <p class="caption">The house recently sold by the council to a private developer</p>
+    <div><a href="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/bn3vfqhpiq8wll8sc9zr2/P1110793-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=xj7uqkoj6vyhq2gizyu2ysxp0&raw=1" alt="" style="width:100% display:block;"></a></div>
+
+    <div><a href="https://www.dropbox.com/scl/fi/hx89llanz9zded93frpsu/P1110812-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=go0t1d3iu58ytw3z5cxqq0wv0&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/hx89llanz9zded93frpsu/P1110812-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=go0t1d3iu58ytw3z5cxqq0wv0&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/hx89llanz9zded93frpsu/P1110812-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=go0t1d3iu58ytw3z5cxqq0wv0&raw=1" alt="" style="width:100% display:block;"></a></div>
+
+  </div>
+
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The house recently sold by the council to a private developer</p>
 
   Two Up Two Down is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
 dropbox_gallery_2: ''
