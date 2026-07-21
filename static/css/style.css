@@ -287,6 +287,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* PHOTOS GRID */
 
+
 .photos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -614,6 +615,8 @@ article p {
 article img {
     margin-bottom: 40px;
 }
+
+article [data-lb-group] { margin-bottom: 40px; }
 
 article ul, article ol {
     margin-left: 20px;
