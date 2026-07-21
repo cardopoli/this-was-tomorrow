@@ -616,7 +616,8 @@ article img {
     margin-bottom: 40px;
 }
 
-article [data-lb-group] { margin-bottom: 40px; }
+article [data-lb-group],
+article div[style*="display:grid"] { margin-bottom: 40px; }
 
 article ul, article ol {
     margin-left: 20px;
