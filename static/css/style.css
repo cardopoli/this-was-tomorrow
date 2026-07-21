@@ -308,7 +308,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .photo-caption {
-    padding: 8px 0 4px;
+    padding: 16px 0 4px;
     font-size: 11px;
     color: var(--muted);
     line-height: 1.5;
