@@ -291,7 +291,7 @@ img { max-width: 100%; height: auto; display: block; }
 .photos-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 6px;
     margin: 12px 0 56px;
 }
 
