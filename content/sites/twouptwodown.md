@@ -3,7 +3,7 @@ title: Two Up Two Down
 location: Anfield, Liverpool
 status: visited
 visit_date: 19/05/2026
-draft: true
+draft: false
 description: ''
 photos:
   - image: /images/PLACEHOLDER-P1110787.webp
@@ -11,7 +11,7 @@ photos:
 image: /images/PLACEHOLDER-P1110787.webp
 dropbox_audio: ''
 body_intro: |-
-  *Note: This organisation was formerly known as Homebaked Community Land Trust. It changed its name to Two Up Two Down in 2025. Naomi's interview, recorded in May 2026, refers to Homebaked CLT - this is the same organisation.*
+  _Note: This organisation was formerly known as Homebaked Community Land Trust. It changed its name to Two Up Two Down in 2025. Naomi's interview, recorded in May 2026, refers to Homebaked CLT - this is the same organisation._
 
   In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned.
 
