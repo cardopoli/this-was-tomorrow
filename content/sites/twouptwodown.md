@@ -28,15 +28,18 @@ body_intro: |-
   That year, artist Jeanne van Heeswijk was commissioned by Liverpool Biennial. Her conviction was that art can create fields of interaction: relationships, debates, the conditions for people to shape their own surroundings. The initiating question was simple: what does it mean to live well?
 
   Over the following years, her project invited the community to take matters into their own hands, with a people-centred, intimate approach to re-imagining the area. A group of more than 20 local people worked with architects and other design specialists to re-use a block of empty property comprising a former bakery building and adjoining terraced houses. Taking the community as their client, they designed an affordable housing scheme and shop, as well as meeting and project spaces. The buildings remained earmarked for demolition.
-
+dropbox_gallery: ''
+body_middle: |-
   <figure style="margin:0">
 
     <a href="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" onclick="lbOpen('https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1','');return false;" style="cursor:zoom-in"><img src="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" alt="" style="width:100% display:block;"></a>
 
   </figure>
-dropbox_gallery: ''
-body_middle: |-
-  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
+
+
+  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
+
+    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Two Up Two Down CLT</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
 
