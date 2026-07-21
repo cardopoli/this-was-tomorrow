@@ -34,9 +34,9 @@ body_middle: |-
 
   <div class="audio-track" data-twt-bg="#4a8ecf" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Hillary, resident at New Ground</p>
+    <p class="audio-track-name">Hilary, resident at New Ground</p>
 
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/jyrbdp3cegcr5xtikd7bq/TWT-ITTFWWDO-NEW-GROUND-HILLARY-24042206_128kbps.mp3?rlkey=s4yc799bqkg88aptxxw0pyb48&raw=1"></audio>
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/jyrbdp3cegcr5xtikd7bq/TWT-ITTFWWDO-NEW-GROUND-HILARY-24042206_128kbps.mp3?rlkey=s4yc799bqkg88aptxxw0pyb48&raw=1"></audio>
 
   </div>
 
@@ -81,7 +81,7 @@ Shirley Meredeen, 84 at the time the building opened and one of only two foundin
 
 This was the first of its kind in the UK – a purpose-designed, purpose-managed cohousing development for older women. That it took 15 years from first meeting to completion speaks to both the novelty of the model and the structural barriers to community-led housing. The financial model alone was unusual: a confluence of grant funding, charitable support, and social landlord partnership that would be difficult to replicate.
 
-The scheme stands as evidence that cohousing can work for older people, that community care and support is preferable to isolation, and that women in their 50s, 60s, 70s and 80s have the agency and capacity to design and manage their own housing. The careful balance between individual privacy and collective responsibility that the architects achieved – and that OWCH maintains – has become a model for subsequent cohousing schemes.
+The scheme stands as evidence that cohousing can work for older people, that community  belonging and support is preferable to isolation, and that not just women in their 50s, 60s, 70s, 80s  and 90s, but all people, have the agency and capacity to design and manage their own housing, their own lives. The careful balance between individual privacy and collective responsibility that has been achieved at New Ground could be a model for subsequent cohousing schemes.
 
 ## CONTEXT FOR THIS PROJECT
 
