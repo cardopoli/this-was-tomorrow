@@ -719,22 +719,24 @@ BUILD.layout = function (o) {
   warn('lay-warn', missing && imgs.length > 0);
   if (imgs.length !== n) return;
   var gcap = esc(v('lay-gcap'));
+  var lbGroup = 'g' + Math.random().toString(36).slice(2, 6);
   function tag(im, st) {
-    return '<a href="' + im.src + '" onclick="lbOpen(\'' + im.src + '\',\'' + im.cap.replace(/'/g, "\\'") + '\');return false;" style="cursor:zoom-in">'
-         + '<img src="' + im.src + '" alt="' + im.alt + '" style="' + st + ' display:block;"></a>';
+    return '<a class="twt-lb" href="' + im.src + '" style="cursor:zoom-in;display:block">'
+         + '<img src="' + im.src + '" alt="' + im.alt + '" style="' + st + ';display:block">'
+         + '</a>';
   }
   var capLine = function (t) { return t ? '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + t + '</p>' : ''; };
   var code = '';
   if (layout === 'single') {
-    code = '<figure style="margin:0">\n  ' + tag(imgs[0], 'width:100%') + '\n'
-         + ((imgs[0].cap || gcap) ? '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + (imgs[0].cap || gcap) + '</figcaption>\n' : '') + '</figure>';
+    code = '<div data-lb-group="' + lbGroup + '">\n<figure style="margin:0">\n  ' + tag(imgs[0], 'width:100%') + '\n'
+         + ((imgs[0].cap || gcap) ? '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + (imgs[0].cap || gcap) + '</figcaption>\n' : '') + '</figure>\n</div>';
   } else {
     var cols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
              : layout === 'left-wide' ? '1.75fr 1fr' : layout === 'stacked' ? '1fr' : '1fr 1fr';
     var fit = (layout === 'double' || layout === 'triple') ? 'width:100%;height:100%;object-fit:cover' : 'width:100%';
-    code = '<div style="display:grid;grid-template-columns:' + cols + ';gap:4px;align-items:start">\n';
+    code = '<div data-lb-group="' + lbGroup + '">\n<div style="display:grid;grid-template-columns:' + cols + ';gap:4px;align-items:start">\n';
     imgs.forEach(function (im) { code += '  <div>' + tag(im, fit) + '</div>\n'; });
-    code += '</div>' + capLine(gcap);
+    code += '</div>\n</div>' + capLine(gcap);
   }
   o.code = code; o.title = 'Layout — ' + layout;
   var pcols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
