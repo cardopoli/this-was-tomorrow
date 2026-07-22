@@ -17,9 +17,9 @@ body_intro: |-
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/7q42ehs2kdwclrroi3jmv/R0043912-LOWRES_17052026-Granby-Four-Street-Liverpool-1-copy.jpg?rlkey=ug3wf99tzhwxdgilul66izxk2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/yt41oy08a88hn5s405lf6/P1110772-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=9jwxb3680f6jgad1qqo356db6&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
   </div>
 
@@ -31,9 +31,9 @@ body_intro: |-
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/5y3hdqjcxa2ael8yzgex5/DSC_0837-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fgn1ayvly1ipk813aejskffih&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/6wuujkpninfz8rl6dr3dm/DSC_0817-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=6vfed0j5mw6sl5qv0vmcy1nov&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
   </div>
 
@@ -64,11 +64,11 @@ body_middle: |-
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/uu0tvcs4vtwj4wfb73qib/R0043897-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=q1pn7n520iyuwu3y9u9ey6ux2&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/k8m1w0c4dom35urfnb1tv/R0043895-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=fqrc41tm1ikmq1msmb5jqhpt8&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/361zsz74cukjgqv1kaqvn/R0043896-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=oygu645c35wwzhglhet0ekeca&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
   </div>
 
@@ -90,9 +90,9 @@ body_middle: |-
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hp2o1ihhcggunqb0dmlct/DSC_0840-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=00jevc5qr3kz0aenc6uakaoml&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hohqz82i3wromz0a7akxb/DSC_0839-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rykxf4ilyeg8cusgvqviwmpbt&raw=1&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
   </div>
 
@@ -115,11 +115,11 @@ body_after: |-
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/3c214ot2dz9e1bro4mu4b/_DSC2816-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=kk09sj4ioweuct6dc7gb6zabo&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/m37k56fzgkvsyignc6sdl/_DSC2823-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=rkxlvx6fmnx7hkhol112l9z3c&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/p1gsnamdhkwxidub8itdh/_DSC2830-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=c5fvmjhin6hr0wj9jwpjrdejt&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
   </div>
 
@@ -148,9 +148,9 @@ On housing and what it makes possible: "If you've got somewhere to live and you 
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0">
 
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/gj4fnsr4a2naluu13h1bi/_DSC2882-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=vta9rrvylke9j9ed4j5758cmi&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
-  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" alt="" style="width:100%;height:100%;object-fit:cover display:block;"></a></div>
+  <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/0orp015dhfpiu2fugoqmr/DSC_0851-LOWRES_17052026-Granby-Four-Street-Liverpool-copy.jpg?rlkey=2228p85hxvv3wehhz9r0awxet&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
 
 </div>
 
@@ -180,7 +180,7 @@ The glazed communal garden inside a gutted terraced house. The threshold between
 
 <figure style="margin:0">
 
-  <a class="twt-lb" href="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" alt="" style="width:100% display:block;"></a>
+  <a class="twt-lb" href="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/8hi7iq83do1xdiwuzwil7/R0043879-LOWRES_17052026-Granby-Four-Street-Liverpool.jpg?rlkey=qldehmlpzc29056n5lzq14f4e&raw=1" alt="" style="width:100%;display:block;"></a>
 
 </figure>
 
