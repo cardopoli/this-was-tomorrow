@@ -1,6 +1,23 @@
 {{ define "main" }}
+<style>
+  /* exhibition list — inverted for this page only */
+  body {
+    --bg: #12130f;
+    --text: #f0ede8;
+    --muted: #8c8880;
+    --rule: #33362c;
+    --link: #f0ede8;
+    --hover: #c6f500;
+  }
+  .exhibition-hero { width: 100%; height: auto; display: block; margin: 4px 0 34px; }
+  .site-footer img { filter: invert(1) brightness(1.15); }
+</style>
+
 <div class="site-index">
     <h1 style="margin: 0 0 24px;">{{ .Title }}</h1>
+
+    <img class="exhibition-hero" src="{{ "/images/exhibition-hero.jpeg" | relURL }}"
+         alt="This Was Tomorrow — is this the future we were dreaming of?">
 
     {{ if .Params.intro }}
     <div class="intro">{{ .Params.intro | markdownify }}</div>
