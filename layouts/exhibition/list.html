@@ -23,11 +23,6 @@
     <div class="intro">{{ .Params.intro | markdownify }}</div>
     {{ end }}
 
-<div class="dbx-gallery" id="gal-4gkb9" aria-live="polite">
-  <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>
-</div>
-<script>(function(){function run(){window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/yjowbdyczmejvg2n87swa/ABfNsZrLGvevYa8ajc5HHNc?rlkey=47x3hoaq725w4ov7mraayyek4&dl=0','gal-4gkb9');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
-  
     <ul class="site-list">
         {{ range (where .Site.RegularPages "Section" "exhibition").ByTitle }}
         <li class="status-{{ .Params.status | default "planned" }}">
