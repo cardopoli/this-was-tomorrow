@@ -175,6 +175,22 @@ collections:
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
   
+  - name: quotes_data
+    label: Quotes
+    files:
+      - name: quotes
+        label: Quote deck
+        file: static/data/twt_quotes.json
+        description: The rotating quotes shown at /quotes
+        fields:
+          - name: quotes
+            label: Quotes
+            widget: list
+            summary: "{{fields.speaker}} — {{fields.quote}}"
+            fields:
+              - { name: quote, label: Quote, widget: text }
+              - { name: speaker, label: Speaker, widget: string }
+              - { name: location, label: Location, widget: string }
   - name: pages
     label: Pages
     files:
