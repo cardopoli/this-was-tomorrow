@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is This the Future We Were Dreaming Of?</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    @font-face {
+      font-family: 'AkzidenzGrotesk';
+      src: url('/fonts/agpro-regular.ttf') format('truetype');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'AkzidenzGrotesk';
+      src: url('/fonts/agpro-bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'AkzidenzGroteskExt';
+      src: url('/fonts/agpro-ext.otf') format('opentype');
+      font-weight: 900;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #0a0a0a;
+      color: #f0ede8;
+      font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 2.5rem;
+    }
+
+    .quote {
+      font-size: clamp(1.3rem, 3.5vw, 2rem);
+      line-height: 1.45;
+      font-weight: 400;
+      text-align: left;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .quote.visible {
+      opacity: 1;
+    }
+
+    .attribution {
+      margin-top: 2rem;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      opacity: 0;
+      transition: opacity 0.6s ease 0.2s;
+    }
+
+    .attribution.visible {
+      opacity: 1;
+    }
+
+    .attribution span {
+      color: #888;
+    }
+
+    .next {
+      margin-top: 3.5rem;
+      background: none;
+      border: none;
+      color: #333;
+      font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      transition: color 0.2s;
+      opacity: 0;
+      transition: opacity 0.6s ease 0.4s, color 0.2s;
+    }
+
+    .next.visible {
+      opacity: 1;
+    }
+
+    .next:hover {
+      color: #f0ede8;
+    }
+
+    .project {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    .project a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project a:hover {
+      color: #888;
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        padding: 2rem 1.5rem;
+        justify-content: flex-start;
+        padding-top: 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <p class="label">This Was Tomorrow</p>
+    <blockquote class="quote" id="quote"></blockquote>
+    <p class="attribution" id="attribution"></p>
+    <button class="next" id="next" onclick="newQuote()">Next quote →</button>
+  </div>
+
+  <p class="project"><a href="/">thiswastomorrow.co.uk</a></p>
+
+  <script>
+    let quotes = [];
+
+    let lastIndex = -1;
+
+    function newQuote() {
+      const quoteEl = document.getElementById('quote');
+      const attrEl = document.getElementById('attribution');
+      const nextEl = document.getElementById('next');
+
+      // Fade out
+      quoteEl.classList.remove('visible');
+      attrEl.classList.remove('visible');
+      nextEl.classList.remove('visible');
+
+      setTimeout(() => {
+        // Pick a new quote, not the same one twice
+        let index;
+        do {
+          index = Math.floor(Math.random() * quotes.length);
+        } while (index === lastIndex && quotes.length > 1);
+        lastIndex = index;
+
+        const q = quotes[index];
+        quoteEl.textContent = '\u201C' + q.quote + '\u201D';
+        attrEl.innerHTML = q.speaker + ' <span>— ' + q.location + '</span>';
+
+        // Fade in
+        quoteEl.classList.add('visible');
+        attrEl.classList.add('visible');
+        nextEl.classList.add('visible');
+      }, 400);
+    }
+
+    // Load quotes, then show the first
+    fetch('/data/twt_quotes.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) { quotes = Array.isArray(data) ? data : (data.quotes || []); newQuote(); })
+      .catch(function () { document.getElementById('quote').textContent = 'Quotes could not be loaded.'; });
+
+    // Also allow spacebar or right arrow to cycle
+    document.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        newQuote();
+      }
+    });
+  </script>
+
+</body>
+</html>
