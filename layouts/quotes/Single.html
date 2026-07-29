@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Is This the Future We Were Dreaming Of?</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp">
   <style>
     @font-face {
       font-family: 'AkzidenzGrotesk';
@@ -35,7 +36,17 @@
       font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
     }
 
+    .bg {
+      position: fixed; inset: 0; z-index: 0;
+      background-size: cover; background-position: center;
+    }
+    .bg-scrim {
+      position: fixed; inset: 0; z-index: 1;
+      background: rgba(10, 10, 10, 0.72);   /* dial this: higher = darker = safer for reading */
+    }
+
     .wrap {
+      position: relative; z-index: 2;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -140,6 +151,11 @@
   </style>
 </head>
 <body>
+
+  {{ with .Params.background }}
+  <div class="bg" style="background-image:url('{{ . }}')"></div>
+  <div class="bg-scrim"></div>
+  {{ end }}
 
   <div class="wrap">
     <p class="label">This Was Tomorrow</p>
