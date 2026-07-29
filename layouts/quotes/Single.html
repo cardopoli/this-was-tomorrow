@@ -36,17 +36,7 @@
       font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
     }
 
-    .bg {
-      position: fixed; inset: 0; z-index: 0;
-      background-size: cover; background-position: center;
-    }
-    .bg-scrim {
-      position: fixed; inset: 0; z-index: 1;
-      background: rgba(10, 10, 10, 0.72);   /* dial this: higher = darker = safer for reading */
-    }
-
     .wrap {
-      position: relative; z-index: 2;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -100,7 +90,7 @@
       margin-top: 3.5rem;
       background: none;
       border: none;
-      color: #333;
+      color: #8ba800;
       font-family: 'AkzidenzGrotesk', helvetica, arial, sans-serif;
       font-size: 11px;
       letter-spacing: 0.18em;
@@ -117,7 +107,7 @@
     }
 
     .next:hover {
-      color: #f0ede8;
+      color: #c6f500;
     }
 
     .project {
@@ -151,11 +141,6 @@
   </style>
 </head>
 <body>
-
-  {{ with .Params.background }}
-  <div class="bg" style="background-image:url('{{ . }}')"></div>
-  <div class="bg-scrim"></div>
-  {{ end }}
 
   <div class="wrap">
     <p class="label">This Was Tomorrow</p>
