@@ -12,6 +12,14 @@ The title holds the distance between what was promised and what is lived. The wo
 
 <img src="/images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg" alt="" width="100%">
 
+## Who I am
+
+Enrico Policardo (b. 1982, Gorizia, Italy) is a photographer and artist based in London. His work examines how systems of power organise everyday life - housing and who gets to shape it, waste and what a consumer economy throws away, and the contested ground of borders. _This Was Tomorrow_, supported by Arts Council England, documents communities across the UK who took housing into their own hands.
+
+He is Creative Director of ReThinkable Festival on the Italy-Slovenia border (Nova Gorica / Gorizia, European Capital of Culture 2024-2026) and an Affiliate Research Fellow at the University of Nova Gorica.
+
+More work at [enricopolicardo.com](https://enricopolicardo.com).
+
 ## How this evolved
 
 The investigation began in 2022, documenting endangered council estates in London and the utopian ideals embedded in their material form. A residency at ESAD IDEA in Porto shifted the focus. Rather than documenting loss, the work now examines how places actually function - across different models of collective ownership, adaptation, repair, and resilience.
