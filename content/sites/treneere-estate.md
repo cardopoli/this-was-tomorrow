@@ -1,5 +1,5 @@
 ---
-title: Treneere Estate
+title: Treneere Estate - Whole Again Communities
 location: Penzance, Cornwall
 status: visited
 visit_date: 16/06/2026
@@ -57,6 +57,10 @@ body_after: |-
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/rd7a28eyfpunxeb2ai7g7/AJqbwYJ05AXORmuTOTDBbQM?rlkey=oqcjmplm05zk7b1b8i9aeqbtu&dl=0
 audio: []
 sources: []
+links:
+  - url: https://www.wholeagaincommunities.co.uk/
+    title: WAC - Whole Again Communities
+    source: ''
 slug: treneere-estate
 ---
 
