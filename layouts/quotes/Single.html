@@ -155,6 +155,13 @@
     let quotes = [];
 
     let lastIndex = -1;
+    let bag = [];
+    function refillBag(avoidFirst) {
+      bag = quotes.map(function (_, i) { return i; });
+      for (var i = bag.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = bag[i]; bag[i] = bag[j]; bag[j] = t; }
+      // don't let a reshuffle immediately repeat the quote just read
+      if (avoidFirst != null && bag.length > 1 && bag[0] === avoidFirst) { var sw = bag[0]; bag[0] = bag[1]; bag[1] = sw; }
+    }
 
     function newQuote() {
       const quoteEl = document.getElementById('quote');
@@ -167,11 +174,9 @@
       nextEl.classList.remove('visible');
 
       setTimeout(() => {
-        // Pick a new quote, not the same one twice
-        let index;
-        do {
-          index = Math.floor(Math.random() * quotes.length);
-        } while (index === lastIndex && quotes.length > 1);
+        // Deal the next card; reshuffle once the whole deck has been seen
+        if (!bag.length) refillBag(lastIndex);
+        const index = bag.shift();
         lastIndex = index;
 
         const q = quotes[index];
