@@ -5,7 +5,7 @@ exhibit_speaker: Cameron, Meg, Ree
 location: Norton Sub Hamdon, Somerset
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/tui9opkmac8ytivogbw9n/all35.jpg?rlkey=mmidnoqkfs0apqq38dhsp121i&dl=0
+  - https://www.dropbox.com/scl/fi/orbk8tk65322jxq72x4ho/00_sheet6.jpg?rlkey=0w4bkll85a1fcnhrbsvsgo698&dl=0
   - https://www.dropbox.com/scl/fi/zwlrhtyq75lxeaapo04si/all36.jpg?rlkey=j4r115q6quuf3je7nj5tycj2r&dl=0
   - https://www.dropbox.com/scl/fi/hs5pd7xuuszg903tl3oac/all37.jpg?rlkey=uhhakosti3e0zzva9fwjb9fjl&dl=0
   - https://www.dropbox.com/scl/fi/w1rbyk6kh1jd9nl48aap9/all38.jpg?rlkey=whndeqnkdm6i9lah4dwg3knio&dl=0
