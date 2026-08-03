@@ -59,10 +59,10 @@
     }
 
     /* photographs: plain fluo trigger + self-contained carousel (no external deps) */
-    .photos-btn { display:block; margin:40px 0 0; padding:0; background:none; border:none; cursor:pointer; text-align:left;
-      font-family:var(--sans); font-size:20px; font-weight:700; letter-spacing:-0.3px; line-height:1.15; color:var(--fluo); }
-    .photos-btn:hover { opacity:0.8; }
-    .photos-btn small { display:block; font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:0.5px; opacity:0.6; margin-top:8px; text-transform:none; }
+    .photos-btn { display:block; margin:36px 0 0; padding:0; background:none; border:none; cursor:pointer; text-align:left;
+      font-family:var(--mono); font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--fluo); opacity:0.85; }
+    .photos-btn:hover { opacity:1; }
+    .photos-btn small { display:block; font-family:var(--mono); font-size:10px; letter-spacing:0.5px; opacity:0.5; margin-top:6px; text-transform:none; }
     .photos-btn .px-arrow { display:inline-block; transition:transform .3s ease; }
     .photos-btn.open .px-arrow { transform:rotate(180deg); }
     /* inline expanding panel — never covers the screen */
@@ -91,7 +91,7 @@
     {{ .Content }}
 
     {{ with .Params.exhibit_gallery }}
-    <button class="photos-btn" id="pxbtn" type="button" onclick="pxToggle()">{{ $.Params.gallery_label | default "The other photographs" }} <span class="px-arrow">&darr;</span><small>{{ $.Params.gallery_note | default "The print here is one of a set. Open to see them all." }}</small></button>
+    <button class="photos-btn" id="pxbtn" type="button" onclick="pxToggle()">{{ $.Params.gallery_label | default "The other photographs" }} <span class="px-arrow">&darr;</span>{{ with $.Params.gallery_note }}<small>{{ . }}</small>{{ end }}</button>
     <div class="px-panel" id="pxpanel">
       <div class="px-stage">
         <button class="px-prev" type="button" onclick="pxGo(-1)" aria-label="Previous">&lsaquo;</button>
