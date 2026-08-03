@@ -5,7 +5,7 @@ exhibit_speaker: Andy Plant, Elizabeth Fraser
 location: Lambeth, London
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/w8n9rhugia1lkj5tnsx0r/00.jpg?rlkey=ues021dl7075q9nlxtvtmxpcf&dl=0
+  - https://www.dropbox.com/scl/fi/ogvy9b9crf4ub6oeeamew/00_sheet.jpg?rlkey=giyjxpynza83kvtzmcujwbqbc&dl=0
   - https://www.dropbox.com/scl/fi/0ro1wuww6u8pncauxex0b/Exhibit-panels_PORTABLE-SMALL_A4_PANELS_v2.jpg?rlkey=5x6xz9upqtm6fn1bs53nrjkoa&dl=0
   - https://www.dropbox.com/scl/fi/z1kqeybj3a0q0qzvosy33/Exhibit-panels_PORTABLE-SMALL_A4_PANELS_v22.jpg?rlkey=pfamvvmr7oax56a2rrh7o7t3q&dl=0
   - https://www.dropbox.com/scl/fi/17acrudlvv59wzozj8qek/Exhibit-panels_PORTABLE-SMALL_A4_PANELS_v23.jpg?rlkey=4n8l3txs4a8se1c7lvqje0vbz&dl=0
