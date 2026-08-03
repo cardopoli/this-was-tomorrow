@@ -58,15 +58,14 @@
       .content { padding: 30px 20px 44px; }
     }
 
-    /* photographs: a single fluo trigger that opens the carousel lightbox — no grid on the page */
+    /* photographs: plain fluo trigger, opens the carousel — no grid, no border */
     .photos-btn {
-      display: block; width: 100%; text-align: left; margin: 36px 0 0;
-      background: none; border: none; border-top: 1px solid var(--fluo);
-      padding: 15px 0; cursor: pointer;
+      display: inline-block; margin: 40px 0 0; padding: 0;
+      background: none; border: none; cursor: pointer;
       font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-      color: var(--fluo);
+      color: var(--fluo); opacity: 0.72;
     }
-    .photos-btn:hover { opacity: 0.7; }
+    .photos-btn:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -82,8 +81,10 @@
     {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
     {{ .Content }}
 
-    {{ with .Params.exhibit_embed }}
-    <div class="photos-src" hidden>{{ . | safeHTML }}</div>
+    {{ with .Params.exhibit_gallery }}
+    <div class="photos-src" hidden>
+      {{ range . }}<a class="twt-lb" href="{{ . }}"><img src="{{ . }}" alt=""></a>{{ end }}
+    </div>
     <button class="photos-btn" type="button" onclick="openPhotos()">Photographs &rarr;</button>
     {{ end }}
 
@@ -93,9 +94,7 @@
   </div>
 
   {{ partial "lightbox.html" . }}
-  <script>
-    function openPhotos(){ var a = document.querySelector('.photos-src a.twt-lb'); if (a) a.click(); }
-  </script>
+  <script>function openPhotos(){ var a = document.querySelector('.photos-src a.twt-lb'); if (a) a.click(); }</script>
   <script src="{{ "JS/gallery.js" | relURL }}"></script>
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
