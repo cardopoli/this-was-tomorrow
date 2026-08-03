@@ -1,6 +1,6 @@
 ---
 title: Two Up Two Down
-draft: true
+draft: false
 exhibit_speaker: Naomi Cull
 location: Anfield, Liverpool
 cap: ''
