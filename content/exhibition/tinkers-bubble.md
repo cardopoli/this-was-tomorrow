@@ -3,19 +3,27 @@ title: Tinker's Bubble
 draft: false
 exhibit_speaker: Cameron, Meg, Ree
 location: Norton Sub Hamdon, Somerset
+cap: ''
+exhibit_gallery:
+  - https://www.dropbox.com/scl/fi/tui9opkmac8ytivogbw9n/all35.jpg?rlkey=mmidnoqkfs0apqq38dhsp121i&dl=0
+  - https://www.dropbox.com/scl/fi/zwlrhtyq75lxeaapo04si/all36.jpg?rlkey=j4r115q6quuf3je7nj5tycj2r&dl=0
+  - https://www.dropbox.com/scl/fi/hs5pd7xuuszg903tl3oac/all37.jpg?rlkey=uhhakosti3e0zzva9fwjb9fjl&dl=0
+  - https://www.dropbox.com/scl/fi/w1rbyk6kh1jd9nl48aap9/all38.jpg?rlkey=whndeqnkdm6i9lah4dwg3knio&dl=0
+gallery_label: Not on the wall
+gallery_note: ''
 image: /images/_DSC1962_Tinkers Bubble Selected.jpg
 exhibit_image: /images/_DSC1962_Tinkers Bubble Selected.jpg
-exhibit_question: ''
-exhibit_bg: ''
-exhibit_text: ''
-exhibit_accent: ''
-exhibit_dim: null
-exhibit_blur: ''
-exhibit_image_pos: ''
-exhibit_card: ''
-exhibit_radius: ''
-exhibit_title_size: ''
 exhibit_width: ''
+exhibit_title_size: ''
+exhibit_radius: ''
+exhibit_card: ''
+exhibit_image_pos: ''
+exhibit_blur: ''
+exhibit_dim: null
+exhibit_accent: ''
+exhibit_text: ''
+exhibit_bg: ''
+exhibit_question: ''
 layout: exhibition
 slug: tinkers-bubble
 ---
