@@ -88,7 +88,7 @@
     {{ .Content }}
 
     {{ with .Params.exhibit_gallery }}
-    <button class="photos-btn" type="button" onclick="pxOpen(0)">{{ .Params.gallery_label | default "See all the photographs" }} &rarr;<small>{{ .Params.gallery_note | default "The print here is one of a set. Tap to see them all." }}</small></button>
+    <button class="photos-btn" type="button" onclick="pxOpen(0)">{{ $.Params.gallery_label | default "See all the photographs" }} &rarr;<small>{{ $.Params.gallery_note | default "The print here is one of a set. Tap to see them all." }}</small></button>
     <div class="px-lb" id="pxlb">
       <button class="px-close" type="button" onclick="pxClose()" aria-label="Close">&times;</button>
       <button class="px-prev" type="button" onclick="pxGo(-1)" aria-label="Previous">&lsaquo;</button>
