@@ -58,14 +58,19 @@
       .content { padding: 30px 20px 44px; }
     }
 
-    /* photographs: plain fluo trigger, opens the carousel — no grid, no border */
-    .photos-btn {
-      display: inline-block; margin: 40px 0 0; padding: 0;
-      background: none; border: none; cursor: pointer;
-      font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
-      color: var(--fluo); opacity: 0.72;
-    }
-    .photos-btn:hover { opacity: 1; }
+    /* photographs: plain fluo trigger + self-contained carousel (no external deps) */
+    .photos-btn { display:inline-block; margin:40px 0 0; padding:0; background:none; border:none; cursor:pointer;
+      font-family:var(--mono); font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--fluo); opacity:.72; }
+    .photos-btn:hover { opacity:1; }
+    .px-lb { display:none; position:fixed; inset:0; z-index:80; background:rgba(8,8,6,.96); align-items:center; justify-content:center; }
+    .px-lb.on { display:flex; }
+    .px-img { max-width:92vw; max-height:86vh; object-fit:contain; display:block; }
+    .px-close,.px-prev,.px-next { position:absolute; background:none; border:none; color:var(--fluo); cursor:pointer; font-family:var(--mono); opacity:.7; }
+    .px-close:hover,.px-prev:hover,.px-next:hover { opacity:1; }
+    .px-close { top:16px; right:20px; font-size:22px; }
+    .px-prev,.px-next { top:50%; transform:translateY(-50%); font-size:38px; padding:0 16px; }
+    .px-prev { left:2px; } .px-next { right:2px; }
+    .px-count { position:absolute; bottom:18px; left:0; right:0; text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--fluo); opacity:.7; }
   </style>
 </head>
 <body>
@@ -82,10 +87,27 @@
     {{ .Content }}
 
     {{ with .Params.exhibit_gallery }}
-    <div class="photos-src" hidden>
-      {{ range . }}<a class="twt-lb" href="{{ . }}"><img src="{{ . }}" alt=""></a>{{ end }}
+    <button class="photos-btn" type="button" onclick="pxOpen(0)">Photographs &rarr;</button>
+    <div class="px-lb" id="pxlb">
+      <button class="px-close" type="button" onclick="pxClose()" aria-label="Close">&times;</button>
+      <button class="px-prev" type="button" onclick="pxGo(-1)" aria-label="Previous">&lsaquo;</button>
+      <img class="px-img" id="pximg" src="" alt="">
+      <button class="px-next" type="button" onclick="pxGo(1)" aria-label="Next">&rsaquo;</button>
+      <div class="px-count" id="pxcount"></div>
     </div>
-    <button class="photos-btn" type="button" onclick="openPhotos()">Photographs &rarr;</button>
+    <script>
+      var PX = [{{ range . }}{{ $u := . }}{{ if in $u "dl=0" }}{{ $u = replace $u "dl=0" "raw=1" }}{{ else if not (in $u "raw=1") }}{{ $u = printf "%s%sraw=1" $u (cond (in $u "?") "&" "?") }}{{ end }}'{{ $u }}',{{ end }}];
+      var pxi = 0;
+      function pxShow(){ document.getElementById('pximg').src = PX[pxi]; document.getElementById('pxcount').textContent = (pxi+1) + ' / ' + PX.length; }
+      function pxOpen(i){ pxi = i; pxShow(); document.getElementById('pxlb').classList.add('on'); }
+      function pxClose(){ document.getElementById('pxlb').classList.remove('on'); }
+      function pxGo(d){ pxi = (pxi + d + PX.length) % PX.length; pxShow(); }
+      (function(){ var lb=document.getElementById('pxlb');
+        lb.addEventListener('click', function(e){ if(e.target===lb) pxClose(); });
+        document.addEventListener('keydown', function(e){ if(!lb.classList.contains('on')) return;
+          if(e.key==='Escape') pxClose(); else if(e.key==='ArrowLeft') pxGo(-1); else if(e.key==='ArrowRight') pxGo(1); });
+      })();
+    </script>
     {{ end }}
 
 {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
@@ -93,9 +115,6 @@
 {{ end }}    
   </div>
 
-  {{ partial "lightbox.html" . }}
-  <script>function openPhotos(){ var a = document.querySelector('.photos-src a.twt-lb'); if (a) a.click(); }</script>
-  <script src="{{ "JS/gallery.js" | relURL }}"></script>
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
 </html>
