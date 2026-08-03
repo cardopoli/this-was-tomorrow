@@ -5,7 +5,7 @@ exhibit_speaker: Jess Steele
 location: Hastings
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fo/u51qirkbjjlnfswf9p4ho/AHS8CnvDDGsUojo-z-eoAyM?rlkey=h2nfw13wy1mptzwwrpjk81ao6&dl=0
+  - https://www.dropbox.com/scl/fi/aifurgtw5hp8ocv52di9f/00_sheet2.jpg?rlkey=igfj4g7kni031mq3w5bcgpx0m&dl=0
   - https://www.dropbox.com/scl/fi/6wgyslcoywjhnd69hcbl9/all17.jpg?rlkey=fuycsyd8yfini36zrexbdaigg&dl=0
   - https://www.dropbox.com/scl/fi/a4x7aft1908n9fqax6fzn/all18.jpg?rlkey=9axjh95pw4c0tb5sdan4wd2uu&dl=0
   - https://www.dropbox.com/scl/fi/7futboh9um4ukdj9ntrum/all19.jpg?rlkey=s8mqea5rojfxxzot9it36obc8&dl=0
