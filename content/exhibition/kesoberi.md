@@ -5,7 +5,7 @@ exhibit_speaker: Fi Garrard
 location: Newlyn, Cornwall
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/8334l890pe0l3yhzdq09p/all53.jpg?rlkey=eb3ceuqgshujpgm0u3bu0l0vi&dl=0
+  - https://www.dropbox.com/scl/fi/se8hz2ei71ge88fw8vjv3/00_sheet11.jpg?rlkey=4jb6fh6lbw8prc7nzhcr1katu&dl=0
   - https://www.dropbox.com/scl/fi/0inib3vju6z9cbzcejqv4/all54.jpg?rlkey=h0bhtzy5mnjrl4raga65odpiy&dl=0
   - https://www.dropbox.com/scl/fi/efl7a52cxhzmxkj6cjrqj/all55.jpg?rlkey=mh7eivr5pyxfijs9e2wj6mngq&dl=0
   - https://www.dropbox.com/scl/fi/4awrpbusp7fuczny5duih/all56.jpg?rlkey=me6m3a7carb2hck3mde47yufh&dl=0
