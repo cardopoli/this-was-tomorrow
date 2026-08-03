@@ -59,10 +59,10 @@
     }
 
     /* photographs: plain fluo trigger + self-contained carousel (no external deps) */
-    .photos-btn { display:inline-block; margin:40px 0 0; padding:13px 18px; background:var(--fluo); color:#0a0a0a; border:none; cursor:pointer;
-      font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; line-height:1.3; text-align:left; }
-    .photos-btn:hover { filter:brightness(1.08); }
-    .photos-btn small { display:block; font-weight:400; font-size:10px; letter-spacing:0.5px; opacity:0.72; margin-top:3px; text-transform:none; }
+    .photos-btn { display:block; margin:40px 0 0; padding:0; background:none; border:none; cursor:pointer; text-align:left;
+      font-family:var(--sans); font-size:20px; font-weight:700; letter-spacing:-0.3px; line-height:1.15; color:var(--fluo); }
+    .photos-btn:hover { opacity:0.8; }
+    .photos-btn small { display:block; font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:0.5px; opacity:0.6; margin-top:8px; text-transform:none; }
     .px-lb { display:none; position:fixed; inset:0; z-index:80; background:rgba(8,8,6,.96); align-items:center; justify-content:center; }
     .px-lb.on { display:flex; }
     .px-img { max-width:92vw; max-height:86vh; object-fit:contain; display:block; }
