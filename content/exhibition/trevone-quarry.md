@@ -10,6 +10,13 @@ cap: |-
 
   if you can't see, listen to the audio only - ask someone to scan the QR code for you on your phone.
   If you can't hear look at the image and absorb anything you can. There' a dream waiting to be caught in there.
+exhibit_gallery:
+  - https://www.dropbox.com/scl/fi/8hrpjeen7pb0eloznkm6m/all49.jpg?rlkey=ue9l3o2k0uh43v1cxe6twwv5q&dl=0
+  - https://www.dropbox.com/scl/fi/a1jf3lba0tbm1cp4p4uhb/all50.jpg?rlkey=w46bjn2o1njdwcox4lpvt13br&dl=0
+  - https://www.dropbox.com/scl/fi/e0dlvo24k2xixq2775r2s/all51.jpg?rlkey=ujbwfno7dx5vyihe829p2fpuv&dl=0
+  - https://www.dropbox.com/scl/fi/w3p02eaunf6rzp3oq7731/all52.jpg?rlkey=8zihujhgcuxd4m4gmcb8irb6m&dl=0
+gallery_label: Not on the wall
+gallery_note: ''
 image: /images/image-low-res_3000px_60-_jpeg-9.webp
 exhibit_image: /images/image-low-res_3000px_60-_jpeg-9.webp
 layout: exhibition
