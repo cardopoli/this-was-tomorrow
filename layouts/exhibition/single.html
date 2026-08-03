@@ -63,9 +63,9 @@
     .px-panel { max-height: 0; overflow: hidden; opacity: 0; margin-top: 0;
       transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease, margin-top .3s ease; }
     .px-panel.on { max-height: 78vh; opacity: 1; margin-top: 20px; }
-    .px-advance { display: block; width: 100%; padding: 0; background: none; border: none; cursor: pointer; }
+    .px-advance { display: block; width: 100%; padding: 0; background: none; border: none; cursor: pointer; overflow: hidden; touch-action: none; }
     .px-img { max-width: 100%; max-height: 60vh; object-fit: contain; display: block; margin: 0 auto;
-      opacity: 0; transition: opacity .8s ease; }
+      transform-origin: center center; opacity: 0; transition: opacity .8s ease; }
     .px-img.shown { opacity: 1; }
     .px-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
     .px-dot { width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%; background: var(--fluo); opacity: 0.28; cursor: pointer; transition: opacity .3s ease; }
@@ -108,7 +108,7 @@
     <section class="photos" aria-label="Photographs">
       <button class="photos-btn" id="pxbtn" type="button" aria-expanded="false" aria-controls="pxpanel" onclick="pxToggle()">{{ $.Params.gallery_label | default "The other photographs" }} <span class="px-arrow" aria-hidden="true">&darr;</span>{{ with $.Params.gallery_note }}<small>{{ . }}</small>{{ end }}</button>
       <div class="px-panel" id="pxpanel" data-place="{{ $.Params.location }}">
-        <button class="px-advance" type="button" onclick="pxGo(1)" aria-label="Next photograph">
+        <button class="px-advance" type="button" aria-label="Next photograph, pinch to zoom">
           <img class="px-img" id="pximg" src="" alt="">
         </button>
         <div class="px-dots" id="pxdots">{{ range $i, $u := . }}<button class="px-dot" type="button" onclick="pxJump({{ $i }})" aria-label="Photograph {{ add $i 1 }}"></button>{{ end }}</div>
@@ -121,13 +121,23 @@
         var img   = document.getElementById('pximg');
         var panel = document.getElementById('pxpanel');
         var btn   = document.getElementById('pxbtn');
+        var adv   = document.querySelector('.px-advance');
         var dots  = document.querySelectorAll('.px-dot');
         var place = panel.getAttribute('data-place') || '';
 
+        // zoom / pan state
+        var scale = 1, tx = 0, ty = 0, gestured = false;
+        var startDist = 0, startScale = 1, panX = 0, panY = 0, startTx = 0, startTy = 0;
+        function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+        function applyT(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
+        function resetZoom(){ scale = 1; tx = 0; ty = 0; img.style.transition = 'transform .3s ease'; applyT(); }
+        function dist(t){ return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY); }
+
         function paintDots(){ for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('on', k === pxi); }
         function show(){
-          img.classList.remove('shown');                 // fade current out
-          setTimeout(function(){                          // load next, fade up as it arrives
+          resetZoom();
+          img.classList.remove('shown');
+          setTimeout(function(){
             img.onload = function(){ img.classList.add('shown'); };
             img.alt = 'Photograph ' + (pxi + 1) + ' of ' + PX.length + (place ? ' — ' + place : '');
             img.src = PX[pxi];
@@ -142,6 +152,29 @@
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
           if (open) show();
         };
+
+        // pinch to zoom, drag to pan (when zoomed), tap to advance
+        adv.addEventListener('touchstart', function(e){
+          if (e.touches.length === 2){ startDist = dist(e.touches); startScale = scale; img.style.transition = 'none'; }
+          else if (e.touches.length === 1 && scale > 1){ panX = e.touches[0].clientX; panY = e.touches[0].clientY; startTx = tx; startTy = ty; img.style.transition = 'none'; }
+        }, { passive: false });
+        adv.addEventListener('touchmove', function(e){
+          if (e.touches.length === 2){ e.preventDefault(); gestured = true; scale = clamp(startScale * (dist(e.touches) / startDist), 1, 4); applyT(); }
+          else if (e.touches.length === 1 && scale > 1){ e.preventDefault(); gestured = true; tx = startTx + (e.touches[0].clientX - panX); ty = startTy + (e.touches[0].clientY - panY); applyT(); }
+        }, { passive: false });
+        adv.addEventListener('touchend', function(){ if (scale <= 1.02) resetZoom(); });
+
+        adv.addEventListener('click', function(){
+          if (gestured){ gestured = false; return; }   // that was a pinch/pan, not a tap
+          if (scale > 1) return;                        // zoomed in — a tap shouldn't advance
+          window.pxGo(1);
+        });
+        adv.addEventListener('wheel', function(e){       // desktop zoom
+          e.preventDefault(); img.style.transition = 'none';
+          scale = clamp(scale - e.deltaY * 0.0015, 1, 4);
+          if (scale <= 1){ tx = 0; ty = 0; } applyT();
+        }, { passive: false });
+
         document.addEventListener('keydown', function(e){
           if (!open) return;
           if (e.key === 'ArrowLeft') window.pxGo(-1);
