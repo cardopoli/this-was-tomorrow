@@ -12,8 +12,8 @@ exhibit_embed: |-
     <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/17acrudlvv59wzozj8qek/Exhibit-panels_PORTABLE-SMALL_A4_PANELS_v23.jpg?rlkey=4n8l3txs4a8se1c7lvqje0vbz&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/17acrudlvv59wzozj8qek/Exhibit-panels_PORTABLE-SMALL_A4_PANELS_v23.jpg?rlkey=4n8l3txs4a8se1c7lvqje0vbz&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
   </div>
   </div>
-image: /images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg
-exhibit_image: /images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg
+image: /images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp
+exhibit_image: ''
 exhibit_gallery:
   - https://www.dropbox.com/scl/fo/tugkb9wtr7tgnee9qege2/AP1scI2xWJTdIOk0MZcKxHU?rlkey=fp4k9pcwbvn6fdhf8amufktg9&dl=0
 dropbox_gallery: https://www.dropbox.com/scl/fo/tugkb9wtr7tgnee9qege2/AP1scI2xWJTdIOk0MZcKxHU?rlkey=fp4k9pcwbvn6fdhf8amufktg9&dl=0
