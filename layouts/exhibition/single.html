@@ -69,12 +69,13 @@
     .px-panel { max-height:0; overflow:hidden; opacity:0; margin-top:0;
       transition:max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease, margin-top .3s ease; }
     .px-panel.on { max-height:78vh; opacity:1; margin-top:20px; }
-    .px-stage { position:relative; display:flex; align-items:center; justify-content:center; }
-    .px-img { max-width:100%; max-height:60vh; object-fit:contain; display:block; }
-    .px-prev,.px-next { position:absolute; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--fluo); cursor:pointer; font-family:var(--mono); font-size:34px; padding:0 10px; opacity:.7; }
-    .px-prev:hover,.px-next:hover { opacity:1; }
-    .px-prev { left:0; } .px-next { right:0; }
-    .px-count { text-align:center; font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--fluo); opacity:.7; margin-top:12px; }
+    .px-stage { display:flex; align-items:center; justify-content:center; }
+    .px-img { max-width:100%; max-height:60vh; object-fit:contain; display:block; cursor:pointer;
+      opacity:0; transition:opacity .8s ease; }
+    .px-img.shown { opacity:1; }
+    .px-dots { display:flex; gap:8px; justify-content:center; margin-top:18px; }
+    .px-dot { width:6px; height:6px; border-radius:50%; background:var(--fluo); opacity:0.28; cursor:pointer; transition:opacity .3s ease; }
+    .px-dot.on { opacity:1; }
   </style>
 </head>
 <body>
@@ -94,16 +95,21 @@
     <button class="photos-btn" id="pxbtn" type="button" onclick="pxToggle()">{{ $.Params.gallery_label | default "The other photographs" }} <span class="px-arrow">&darr;</span>{{ with $.Params.gallery_note }}<small>{{ . }}</small>{{ end }}</button>
     <div class="px-panel" id="pxpanel">
       <div class="px-stage">
-        <button class="px-prev" type="button" onclick="pxGo(-1)" aria-label="Previous">&lsaquo;</button>
-        <img class="px-img" id="pximg" src="" alt="">
-        <button class="px-next" type="button" onclick="pxGo(1)" aria-label="Next">&rsaquo;</button>
+        <img class="px-img" id="pximg" src="" alt="" onclick="pxGo(1)">
       </div>
-      <div class="px-count" id="pxcount"></div>
+      <div class="px-dots" id="pxdots">{{ range $i, $u := . }}<span class="px-dot" data-i="{{ $i }}" onclick="pxJump({{ $i }})"></span>{{ end }}</div>
     </div>
     <script>
       var PX = [{{ range . }}{{ $u := . }}{{ if in $u "dl=0" }}{{ $u = replace $u "dl=0" "raw=1" }}{{ else if not (in $u "raw=1") }}{{ $u = printf "%s%sraw=1" $u (cond (in $u "?") "&" "?") }}{{ end }}'{{ $u }}',{{ end }}];
       var pxi = 0;
-      function pxShow(){ document.getElementById('pximg').src = PX[pxi]; document.getElementById('pxcount').textContent = (pxi+1) + ' / ' + PX.length; }
+      function pxDots(){ var ds=document.querySelectorAll('.px-dot'); for(var k=0;k<ds.length;k++) ds[k].classList.toggle('on', k===pxi); }
+      function pxShow(){ var img=document.getElementById('pximg');
+        img.classList.remove('shown');                 /* fade current out */
+        setTimeout(function(){                          /* then load next, fade up as it arrives */
+          img.onload=function(){ img.classList.add('shown'); };
+          img.src=PX[pxi]; pxDots();
+        }, 260); }
+      function pxJump(i){ pxi=i; pxShow(); }
       var pxIsOpen = false;
       function pxToggle(){ var p=document.getElementById('pxpanel'), b=document.getElementById('pxbtn');
         pxIsOpen = !pxIsOpen;
