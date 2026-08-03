@@ -58,7 +58,7 @@
       .content { padding: 30px 20px 44px; }
     }
 
-    /* expandable photographs — collapsed by default, kept apart from the audio */
+    /* expandable photographs — collapsed, kept apart from the audio; the gallery uses the site's own masonry + lightbox */
     .photos { margin: 36px 0 0; border-top: 1px solid var(--fluo); }
     .photos > summary {
       list-style: none; cursor: pointer; padding: 15px 0;
@@ -68,12 +68,7 @@
     .photos > summary::-webkit-details-marker { display: none; }
     .photos > summary::after { content: "+"; font-size: 15px; line-height: 1; }
     .photos[open] > summary::after { content: "\2013"; }
-    .photos-grid { display: grid; gap: 8px; padding-bottom: 6px; }
-    .photos-grid img { width: 100%; display: block; cursor: zoom-in; }
-    /* on-page lightbox */
-    .exlb { display: none; position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,0.94); align-items: center; justify-content: center; cursor: zoom-out; }
-    .exlb.on { display: flex; }
-    .exlb img { max-width: 92vw; max-height: 90vh; display: block; }
+    .photos .dbx-gallery { padding-bottom: 8px; }
   </style>
 </head>
 <body>
@@ -89,13 +84,25 @@
     {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
     {{ .Content }}
 
-    {{ with .Params.exhibit_gallery }}
-    <details class="photos">
+    {{ with .Params.dropbox_gallery }}
+    <details class="photos" id="ex-photos">
       <summary>Photographs</summary>
-      <div class="photos-grid">
-        {{ range . }}<img src="{{ . }}" loading="lazy" alt="" onclick="exlb(this.src)">{{ end }}
+      <div id="ex-gallery" class="dbx-gallery" aria-live="polite">
+        <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>
       </div>
     </details>
+    <script>
+      (function () {
+        var d = document.getElementById('ex-photos'); if (!d) return;
+        var built = false;
+        d.addEventListener('toggle', function () {
+          if (d.open && !built && window._twt && window._twt.buildGallery) {
+            built = true;
+            window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', {{ . | jsonify }}, 'ex-gallery');
+          }
+        });
+      })();
+    </script>
     {{ end }}
 
 {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}
@@ -103,11 +110,7 @@
 {{ end }}    
   </div>
 
-  <div class="exlb" id="exlb" onclick="this.classList.remove('on')"><img id="exlbimg" src="" alt=""></div>
-  <script>
-    function exlb(src){ document.getElementById('exlbimg').src = src; document.getElementById('exlb').classList.add('on'); }
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ document.getElementById('exlb').classList.remove('on'); } });
-  </script>
+  <script src="{{ "JS/gallery.js" | relURL }}"></script>
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
 </body>
 </html>
