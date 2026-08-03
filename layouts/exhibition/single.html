@@ -58,7 +58,6 @@
       .content { padding: 30px 20px 44px; }
     }
 
-    /* expandable photographs — collapsed, kept apart from the audio; the gallery uses the site's own masonry + lightbox */
     .photos { margin: 36px 0 0; border-top: 1px solid var(--fluo); }
     .photos > summary {
       list-style: none; cursor: pointer; padding: 15px 0;
@@ -94,11 +93,12 @@
     <script>
       (function () {
         var d = document.getElementById('ex-photos'); if (!d) return;
+        var GALLERY_URL = '{{ . }}';
         var built = false;
         d.addEventListener('toggle', function () {
           if (d.open && !built && window._twt && window._twt.buildGallery) {
             built = true;
-            window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', {{ . | jsonify }}, 'ex-gallery');
+            window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', GALLERY_URL, 'ex-gallery');
           }
         });
       })();
