@@ -5,7 +5,7 @@ exhibit_speaker: Paul Brannigan
 location: Hebden Bridge, Todmorden
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/xr540ayjydeefiga2xloz/all39.jpg?rlkey=owbiv668901vjcoy1ew4p9gga&dl=0
+  - https://www.dropbox.com/scl/fi/xippu2xz59oghynqqwh2k/00_sheet7.jpg?rlkey=lgrgiyrtqsuo9h91zh8vovk9r&dl=0
   - https://www.dropbox.com/scl/fi/hxfrjhp0axncjtzvu0n5s/all40.jpg?rlkey=3h9fvbz0bcrdq0kj262zpb8gd&dl=0
   - https://www.dropbox.com/scl/fi/orj8p47h9wmb0ri6q0332/all41.jpg?rlkey=73hqsghj1vzakk8uewgt5oxzt&dl=0
   - https://www.dropbox.com/scl/fi/05hnnh38xiseuombs76j2/all42.jpg?rlkey=bda24iisw7fpji3ncrx04teol&dl=0
