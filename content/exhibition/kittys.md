@@ -5,7 +5,7 @@ exhibit_speaker: Bryn, Anthony
 location: Anfield, Liverpool
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/dnfw01mvbg7k7yjxnzv47/all31.jpg?rlkey=ajtxrmc8l47t0okn6spsfhvmf&dl=0
+  - https://www.dropbox.com/scl/fi/2gtbmc506imyfa61m9q9q/00_sheet5.jpg?rlkey=0j8ouuo095xaztut5t9ptokwk&dl=0
   - https://www.dropbox.com/scl/fi/8k8liy6kh49rkofgpy399/all32.jpg?rlkey=kf2ndhrpwq9rcgxz86096hy9q&dl=0
   - https://www.dropbox.com/scl/fi/rvdqi5qj2rze6p4ixflaq/all33.jpg?rlkey=bc026r1ie0ah4s00z6u54898v&dl=0
   - https://www.dropbox.com/scl/fi/7sp3wwuu6jpu14lvizjwa/all34.jpg?rlkey=i3kr9zg61562u107hnz22jnnz&dl=0
