@@ -5,7 +5,7 @@ exhibit_speaker: Paul, Maria, Keith
 location: Leeds
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/5ilwcmh80us4djuutxchj/all43.jpg?rlkey=pnjdedvyjrzxnh649yh5ajwsz&dl=0
+  - https://www.dropbox.com/scl/fi/sllnnaj92dosz9k715v49/00_sheet8.jpg?rlkey=niug6sn0cq0d3pwlgiaj9ggr2&dl=0
   - https://www.dropbox.com/scl/fi/pm00qgtpu46yw88zxhod2/all44.jpg?rlkey=iv4pxclz5cidh3bkr5ztfehqw&dl=0
   - https://www.dropbox.com/scl/fi/n6ymha8og3450fyte4vf4/all45.jpg?rlkey=9ljb4kuv6e9izrxx93gdnvwzs&dl=0
 gallery_label: ''
