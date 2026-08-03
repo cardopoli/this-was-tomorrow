@@ -5,7 +5,7 @@ exhibit_speaker: Emma Nicholls
 location: Penzance
 cap: ''
 exhibit_gallery:
-  - https://www.dropbox.com/scl/fi/2nqo3rqrbetudeb64cmqu/all57.jpg?rlkey=xtp50rhilm8wjvzsq0705f8ud&dl=0
+  - https://www.dropbox.com/scl/fi/qq7efsrqhpo192edvocui/00_sheet12.jpg?rlkey=cuct7co4acpzryctns4h94hvy&dl=0
   - https://www.dropbox.com/scl/fi/4kzbqe3kxdzpuwfr2v866/all58.jpg?rlkey=rrfgh42nkjwayqv6ge6up4i4i&dl=0
   - https://www.dropbox.com/scl/fi/dal9jvlvoierfv3jdf77y/all59.jpg?rlkey=qxoil6ryp7lfbtmkm0wqvp7mt&dl=0
 gallery_label: ''
