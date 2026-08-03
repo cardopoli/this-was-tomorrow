@@ -1,8 +1,15 @@
 ---
 title: 'LILAC: Low Impact Living Affordable Community'
 draft: false
-exhibit_speaker: Paul Chatterton
+exhibit_speaker: Paul, Maria, Keith
 location: Leeds
+cap: ''
+exhibit_gallery:
+  - https://www.dropbox.com/scl/fi/5ilwcmh80us4djuutxchj/all43.jpg?rlkey=pnjdedvyjrzxnh649yh5ajwsz&dl=0
+  - https://www.dropbox.com/scl/fi/pm00qgtpu46yw88zxhod2/all44.jpg?rlkey=iv4pxclz5cidh3bkr5ztfehqw&dl=0
+  - https://www.dropbox.com/scl/fi/n6ymha8og3450fyte4vf4/all45.jpg?rlkey=9ljb4kuv6e9izrxx93gdnvwzs&dl=0
+gallery_label: ''
+gallery_note: ''
 image: /images/_dsc2794-twt_14052026_lilac-leeds_lowres.webp
 exhibit_image: /images/_dsc2794-twt_14052026_lilac-leeds_lowres.webp
 layout: exhibition
