@@ -6,8 +6,6 @@ intro: |-
   This isn’t a record of what these communities built. I’m not here to show you finished proof and have you admire other people’s achievements. What I wanted was for people to listen, and look, and feel the way you do after a good book - the life-changing kind - when you close it and want to do something. Nothing big, necessarily. Just a little rip in the routine. That voice in the back of your head whispering _that’s possible_, getting louder, getting clearer.
 ---
 
-## Host this work
-
 Each site comes as a set of three photographs, printed large and pasted straight to the wall - unframed, sometimes over what is already there, left to weather as part of the piece. Where a wall will not take paste, the prints hang on fishing line. Sizes scale to the space, and the arrangement is not fixed.
 
 Every print carries a QR code to the voice recorded at that site. The audio and the images are kept apart on purpose - a visitor listens and looks separately, and joins the two for themselves.
