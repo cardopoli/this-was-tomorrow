@@ -11,6 +11,14 @@
   }
   .exhibition-hero { width: 100%; height: auto; display: block; margin: 4px 0 34px; }
   .site-footer img { filter: invert(1) brightness(1.15); }
+  .exhibition-extra { margin-top: 56px; padding-top: 38px; border-top: 1px solid var(--rule); }
+  .exhibition-extra h2 { font-size: 19px; font-weight: 700; margin: 34px 0 12px; }
+  .exhibition-extra h2:first-child { margin-top: 0; }
+  .exhibition-extra p { line-height: 1.7; margin-bottom: 16px; }
+  .exhibition-extra ul { list-style: none; padding: 0; margin: 0 0 20px; }
+  .exhibition-extra li { margin-bottom: 12px; line-height: 1.55; }
+  .exhibition-extra a { color: var(--hover); text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); }
+  .exhibition-extra a:hover { border-color: var(--hover); }
 </style>
 
 <div class="site-index">
@@ -38,5 +46,7 @@
         </li>
         {{ end }}
     </ul>
+
+    {{ with .Content }}<div class="exhibition-extra">{{ . }}</div>{{ end }}
 </div>
 {{ end }}
