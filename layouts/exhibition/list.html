@@ -11,9 +11,15 @@
   }
   .exhibition-hero { width: 100%; height: auto; display: block; margin: 4px 0 34px; }
   .site-footer img { filter: invert(1) brightness(1.15); }
-  .exhibition-extra { margin-top: 56px; padding-top: 38px; border-top: 1px solid var(--rule); }
-  .exhibition-extra h2 { font-size: 19px; font-weight: 700; margin: 34px 0 12px; }
-  .exhibition-extra h2:first-child { margin-top: 0; }
+  .host { margin-top: 48px; border-top: 1px solid var(--rule); }
+  .host > summary { list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+  .host > summary::-webkit-details-marker { display: none; }
+  .host > summary::after { content: "+"; font-size: 18px; line-height: 1; }
+  .host[open] > summary::after { content: "\2013"; }
+  .host[open] > summary { color: var(--text); }
+  .exhibition-extra { padding-bottom: 8px; }
+  .exhibition-extra h2 { font-size: 18px; font-weight: 700; margin: 26px 0 12px; }
   .exhibition-extra p { line-height: 1.7; margin-bottom: 16px; }
   .exhibition-extra ul { list-style: none; padding: 0; margin: 0 0 20px; }
   .exhibition-extra li { margin-bottom: 12px; line-height: 1.55; }
@@ -47,6 +53,11 @@
         {{ end }}
     </ul>
 
-    {{ with .Content }}<div class="exhibition-extra">{{ . }}</div>{{ end }}
+    {{ with .Content }}
+    <details class="host">
+      <summary>Host this work</summary>
+      <div class="exhibition-extra">{{ . }}</div>
+    </details>
+    {{ end }}
 </div>
 {{ end }}
