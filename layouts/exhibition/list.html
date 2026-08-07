@@ -11,6 +11,9 @@
   }
   .exhibition-hero { width: 100%; height: auto; display: block; margin: 4px 0 34px; }
   .site-footer img { filter: invert(1) brightness(1.15); }
+  .exhibition-links { margin-top: 30px; font-size: 14px; line-height: 1.7; color: var(--muted); }
+  .exhibition-links a { color: var(--hover); text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); }
+  .exhibition-links a:hover { border-color: var(--hover); }
   .host { margin-top: 48px; border-top: 1px solid var(--rule); }
   .host > summary { list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
     font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
@@ -52,6 +55,8 @@
         </li>
         {{ end }}
     </ul>
+
+    <p class="exhibition-links">Hear the voices in the <a href="{{ "quotes/" | relURL }}">quotes</a>, or find every place on the <a href="{{ "map/" | relURL }}">map</a>.</p>
 
     {{ with .Content }}
     <details class="host">
