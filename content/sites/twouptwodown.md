@@ -76,13 +76,13 @@ body_middle: |-
 
   Two Up Two Down is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
 
-  <div data-lb-group="go3gp">
+  <div data-lb-group="g776w">
 
-  <div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:start">
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" alt="" style="width:100%;display:block"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
 
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" alt="" style="width:100%;display:block"></a></div>
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
 
   </div>
 
