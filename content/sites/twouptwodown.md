@@ -11,15 +11,9 @@ photos:
 image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
 dropbox_audio: ''
 body_intro: |-
-  _Note: This organisation was formerly known as Homebaked Community Land Trust. It changed its name to Two Up Two Down in 2025. Naomi's interview, recorded in May 2026, refers to Homebaked CLT - this is the same organisation._
+  _Note: This organisation was formerly known as Homebaked Community Land Trust, adopting the trading name Two Up Two Down in June 2026. The two interviews you’ll see on this page were conducted either side of this date, and so reflect both the old and new names of the organisation._
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
-
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/iwkgsjag5vnzmwc9fg5ji/P1110801-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=c0u06m2suxaq28o846dfiluz4&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-
-    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/xxdyjvw1px05jmruwsreg/R0043865-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=r259gcxf62vqgz8uecmoc6zus&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
-
-  </div>
+  <img src="https://www.dropbox.com/scl/fi/47jz4moozs11xasev4awf/R0043949-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=7usdg2mh67li09dtsbt4p8g1b&raw=1" alt="" style="width:100%">
 
   In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned.
 
@@ -28,6 +22,16 @@ body_intro: |-
   That year, artist Jeanne van Heeswijk was commissioned by Liverpool Biennial. Her conviction was that art can create fields of interaction: relationships, debates, the conditions for people to shape their own surroundings. The initiating question was simple: what does it mean to live well?
 
   Over the following years, her project invited the community to take matters into their own hands, with a people-centred, intimate approach to re-imagining the area. A group of more than 20 local people worked with architects and other design specialists to re-use a block of empty property comprising a former bakery building and adjoining terraced houses. Taking the community as their client, they designed an affordable housing scheme and shop, as well as meeting and project spaces. The buildings remained earmarked for demolition.
+
+  <img src="https://www.dropbox.com/scl/fi/abh0rzqf6l4s7k39zrdba/P1110795-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=z50tepsw6ovjgkwhq63l4mf3x&raw=1" alt="" style="width:100%">
+
+  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
+
+    <p class="audio-track-name">Note: At the time of recording this interview the organisation was still called Homebaked CLT. Its name changed to Two Up Two Down the following month.</p>
+
+  </div>
 dropbox_gallery: ''
 body_middle: |-
   <figure style="margin:0">
@@ -36,10 +40,9 @@ body_middle: |-
 
   </figure>
 
-
   <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
 
-    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Two Up Two Down CLT</p>
+    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Two Up Two Down</p>
 
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
 
@@ -69,9 +72,21 @@ body_middle: |-
 
   </div>
 
-  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The house recently sold by the council to a private developer</p>
+  <p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">The properties recently sold by the council to a private developer</p>
 
   Two Up Two Down is now pursuing multiple other sites across the neighbourhood, carrying the skills and experience from this process forward. The vision has not changed: a neighbourhood where all can live well, now and in the future.
+
+  <div data-lb-group="go3gp">
+
+  <div style="display:grid;grid-template-columns:0.65fr 1fr;gap:4px;align-items:start">
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/g6ifm27hhvgkz6l6fsvs7/R0043942-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=akfo3ebasb9zcj71pln1g8i1s&raw=1" alt="" style="width:100%;display:block"></a></div>
+
+    <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" alt="" style="width:100%;display:block"></a></div>
+
+  </div>
+
+  </div>
 dropbox_gallery_2: ''
 body_after: |-
   ## The Model
