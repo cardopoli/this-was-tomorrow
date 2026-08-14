@@ -2,6 +2,14 @@
 <article class="map-page">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
+
+  {{ $sites := slice }}
+  {{ range (where (where .Site.RegularPages "Section" "sites") ".Params.status" "visited").ByTitle }}
+    {{ if .Params.lat }}{{ $sites = $sites | append (dict "name" .Title "location" .Params.location "lat" .Params.lat "lng" .Params.lng "url" .RelPermalink) }}{{ end }}
+  {{ end }}
+
+  <div id="twt-map" data-sites="{{ $sites | jsonify }}"></div>
+
   <ul class="map-site-list">
     {{ range (where (where .Site.RegularPages "Section" "sites") ".Params.status" "visited").ByTitle }}
     <li>
@@ -11,4 +19,41 @@
     {{ end }}
   </ul>
 </article>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  #twt-map { width:100%; height:65vh; min-height:420px; background:var(--bg); margin:20px 0 28px; }
+  .leaflet-tile { filter:grayscale(100%) contrast(0.85) brightness(1.05); }
+  .leaflet-popup-content-wrapper { background:var(--bg); border:1px solid var(--text); border-radius:0; box-shadow:none; font-family:var(--mono); }
+  .leaflet-popup-tip { background:var(--text); }
+  .leaflet-popup-content { margin:12px 16px; font-size:12px; line-height:1.5; color:var(--text); }
+  .leaflet-popup-content a { color:var(--text); text-decoration:none; border-bottom:1px solid var(--fluo); font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
+  .leaflet-popup-content a:hover { background:var(--fluo); }
+  .twt-popup-title { font-size:13px; font-weight:bold; text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
+  .twt-popup-loc { color:var(--muted); font-size:11px; margin-bottom:8px; }
+  .leaflet-control-attribution { font-family:var(--mono); font-size:10px; background:rgba(247,245,240,.85); color:var(--muted); }
+  .leaflet-control-zoom a { background:var(--bg); color:var(--text); border:1px solid var(--rule); font-family:var(--mono); border-radius:0; }
+  .leaflet-control-zoom a:hover { background:var(--fluo); color:var(--text); }
+</style>
+<script>
+  (function () {
+    var el = document.getElementById('twt-map');
+    if (!el || typeof L === 'undefined') return;
+    var sites = [];
+    try { sites = JSON.parse(el.getAttribute('data-sites') || '[]'); } catch (e) { sites = []; }
+    var map = L.map('twt-map', { center:[52.5,-1.8], zoom:6, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom:18
+    }).addTo(map);
+    var icon = L.divIcon({ className:'', html:'<div style="width:10px;height:10px;background:#c6f500;border:1.5px solid #111;border-radius:50%"></div>', iconSize:[10,10], iconAnchor:[5,5], popupAnchor:[0,-8] });
+    var pts = [];
+    sites.forEach(function (s) {
+      var m = L.marker([s.lat, s.lng], { icon:icon });
+      m.bindPopup('<div class="twt-popup-title">'+s.name+'</div><div class="twt-popup-loc">'+(s.location||'')+'</div><a href="'+s.url+'">Visit page →</a>', { closeButton:false, maxWidth:220 });
+      m.addTo(map); pts.push([s.lat, s.lng]);
+    });
+    if (pts.length) map.fitBounds(pts, { padding:[40,40], maxZoom:9 });
+  })();
+</script>
 {{ end }}

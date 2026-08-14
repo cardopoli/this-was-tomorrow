@@ -1,6 +1,8 @@
 ---
 title: Kesoberi Community Farm
 location: Paul, Newlyn, Cornwall
+lat: 50.1001
+lng: -5.5538
 status: visited
 visit_date: 16/06/2026
 draft: false

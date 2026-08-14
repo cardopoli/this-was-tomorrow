@@ -1,6 +1,8 @@
 ---
 title: Tinker's Bubble
 location: Norton Sub Hamdon, Somerset
+lat: 50.9521
+lng: -2.6849
 status: visited
 visit_date: 4>10/04/2026
 draft: false

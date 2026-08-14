@@ -1,6 +1,8 @@
 ---
 title: Calder Valley Community Land Trust
 location: Hebden Bridge & Todmorden
+lat: 53.7187
+lng: -2.096
 status: visited
 visit_date: 11/05/2026
 draft: false

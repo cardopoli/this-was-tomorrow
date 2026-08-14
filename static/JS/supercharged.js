@@ -62,7 +62,7 @@
     function openAt(idx) {
       current = idx;
       var a = triggers[idx];
-      lbImg.src = a.href;
+      lbImg.src = a.getAttribute('data-full') || a.href;
       lbImg.alt = a.dataset.alt || '';
       lbCount.textContent = (idx + 1) + ' / ' + triggers.length;
       lbPrev.disabled = idx === 0;

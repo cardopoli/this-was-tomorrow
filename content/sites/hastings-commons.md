@@ -1,6 +1,8 @@
 ---
 title: Hastings Commons
 location: Hastings, East Sussex
+lat: 50.8553
+lng: 0.5733
 status: visited
 visit_date: 27-04-2026
 draft: false

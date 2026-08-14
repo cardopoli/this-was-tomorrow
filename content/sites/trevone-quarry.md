@@ -1,6 +1,8 @@
 ---
 title: Trevone Quarry
 location: Penryn, Cornwall
+lat: 50.1577
+lng: -5.1032
 status: visited
 visit_date: 12>15/06/2026
 draft: false

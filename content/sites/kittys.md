@@ -1,6 +1,8 @@
 ---
 title: Kitty's Launderette
 location: Liverpool
+lat: 53.4372
+lng: -2.9618
 status: visited
 visit_date: 19-05-2026
 draft: false

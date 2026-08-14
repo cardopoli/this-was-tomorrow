@@ -1,6 +1,8 @@
 ---
 title: Cressingham Gardens
 location: Lambeth, London
+lat: 51.4441
+lng: -0.1128
 status: visited
 visit_date: ''
 draft: false

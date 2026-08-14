@@ -1,6 +1,8 @@
 ---
 title: 'LILAC: Low Impact Living Affordable Community'
 location: Leeds
+lat: 53.8045
+lng: -1.5979
 status: visited
 visit_date: 14/05/2026
 draft: false

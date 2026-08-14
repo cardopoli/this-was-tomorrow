@@ -1,6 +1,8 @@
 ---
 title: OWCH / New Ground Cohousing
 location: High Barnet, London
+lat: 51.6262
+lng: -0.1954
 status: visited
 visit_date: 24-04-2026
 draft: false

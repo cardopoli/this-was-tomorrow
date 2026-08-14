@@ -721,7 +721,7 @@ BUILD.layout = function (o) {
   var gcap = esc(v('lay-gcap'));
   var lbGroup = 'g' + Math.random().toString(36).slice(2, 6);
   function tag(im, st) {
-    return '<a class="twt-lb" href="' + im.src + '" style="cursor:zoom-in;display:block">'
+    return '<a class="twt-lb" data-full="' + im.src + '" style="cursor:zoom-in;display:block">'
          + '<img src="' + im.src + '" alt="' + im.alt + '" style="' + st + ';display:block">'
          + '</a>';
   }
