@@ -8,7 +8,7 @@ description: ''
 photos:
   - image: /images/r0043949-18_19_052026-homebaked-liverpool-lowres.webp
     caption: ''
-image: ''
+image: /images/r0043949-18_19_052026-homebaked-liverpool-lowres.webp
 dropbox_audio: ''
 body_intro: |-
   _Note: This organisation was formerly known as Homebaked Community Land Trust, adopting the trading name Two Up Two Down in June 2026. The two interviews you’ll see on this page were conducted either side of this date, and so reflect both the old and new names of the organisation._
