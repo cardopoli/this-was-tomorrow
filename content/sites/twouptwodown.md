@@ -13,8 +13,6 @@ dropbox_audio: ''
 body_intro: |-
   _Note: This organisation was formerly known as Homebaked Community Land Trust, adopting the trading name Two Up Two Down in June 2026. The two interviews you’ll see on this page were conducted either side of this date, and so reflect both the old and new names of the organisation._
 
-  <img src="https://www.dropbox.com/scl/fi/47jz4moozs11xasev4awf/R0043949-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=7usdg2mh67li09dtsbt4p8g1b&raw=1" alt="" style="width:100%">
-
   In 2002, the Housing Market Renewal Initiative designated the area around Anfield and Everton a market failure. 1,800 residential and commercial properties were demolished. 1,300 new homes were planned to replace them. The scheme was deeply unpopular - compensation for homeowners was rarely enough to buy one of the new properties, and a community that had survived on proximity and density was being systematically dismantled. When the coalition government pulled the funding in 2010, the streets were left abandoned.
 
   ## What does it mean to live well?
@@ -34,26 +32,6 @@ body_intro: |-
   </div>
 dropbox_gallery: ''
 body_middle: |-
-  <figure style="margin:0">
-
-    <a class="twt-lb" href="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/a41wguu2csgtj6f9uf4ez/R0043944-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=4dpi8bb55l4704bxvt6sjotal&raw=1" alt="" style="width:100%;display:block;"></a>
-
-  </figure>
-
-  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
-
-    <p class="audio-track-name">Naomi Cull, Communications and Engagement Lead at Two Up Two Down</p>
-
-    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
-
-  </div>
-
-  <figure style="margin:0">
-
-    <a class="twt-lb" href="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/b0wrzrzzus1o7mejde71v/R0043951-18_19_052026-Homebaked-Liverpool-LOwRES_medium.jpg?rlkey=8p0vudcqrldm927adcl1ackap&raw=1" alt="" style="width:100%;display:block;"></a>
-
-  </figure>
-
   ## Brick by Brick We Build Ourselves
 
   In April 2012, the community formed Homebaked Community Land Trust (now known as Two Up Two Down) to take on the development of the buildings and future community assets, with a focus on affordable housing. The following June, Homebaked Co-operative Bakery was incorporated, becoming the CLT's first tenant.
@@ -85,6 +63,15 @@ body_middle: |-
     <div><a class="twt-lb" href="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
 
   </div>
+
+  </div>
+
+
+  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
+
+    <p class="audio-track-name">Tom Murphy, Coordinator at Two Up Two Down</p>
+
+    <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/rni86cnhqyszzyhy3ztwx/19052026_2UP2DOWN_Naomi-Cull_128kbps.mp3?rlkey=b3lee6j9z7zm0o2b2j1ofzuyy&raw=1"></audio>
 
   </div>
 dropbox_gallery_2: ''
