@@ -8,7 +8,7 @@ _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audi
 
 It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now? The title holds the distance between what was promised and what is lived, and the work tries to make that distance visible - not as failure, but as the actual terrain of collective life.
 
-<img src="/images/tumblr_67bb3c17ca8ca7bae92346d7706f65f4_d3a8ef74_2048.jpg" alt="" width="100%">
+![](/images/image-low-res_3000px_60_jpeg-moshed-08-15-09-43-15-559.webp)
 
 ## Who I am
 
