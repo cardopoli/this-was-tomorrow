@@ -6,6 +6,16 @@ intro: |-
   I kept the images and the voices apart on purpose. You see the places - the rooms, the objects, the light - but not the people. You hear the people, but you don’t see them. Neither explains the other. It’s closer to a book than a film: a film hands you everything and you take it in; a book gives you a thread and you do the rest, the imagining, the picturing. I wanted that gap left open.
 
   This isn’t a record of what these communities built. I’m not here to show you finished proof and have you admire other people’s achievements. What I wanted was for people to listen, and look, and feel the way you do after a good book - the life-changing kind - when you close it and want to do something. Nothing big, necessarily. Just a little rip in the routine. That voice in the back of your head whispering _that’s possible_, getting louder, getting clearer.
+downloads:
+  - label: The exhibit pack (PDF)
+    file: /downloads/exhibit-pack.pdf
+    note: "the full set: about the project, the artist statement, curation and print notes, and a plate for each site."
+  - label: One-page overview (PDF)
+    file: /downloads/one-pager.pdf
+    note: the project on a single sheet.
+  - label: Curation and print notes (PDF)
+    file: /downloads/curation-notes.pdf
+    note: install sizes, materials and method, for venues and printers.
 ---
 
 Each site comes as a set of photographs, printed large and pasted straight to the wall - unframed, sometimes over what is already there, left to weather as part of the piece. Where a wall will not take paste, the prints hang on fishing line. Sizes scale to the space, and the arrangement is not fixed.
@@ -17,9 +27,3 @@ One thing holds throughout: a community sees images from the other sites, not it
 The prints are left with the host at the end. Hosting needs a wall and a bit of room; everything else travels with the work.
 
 To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )
-
-## Downloads
-
-- [The exhibit pack (PDF)](/downloads/exhibit-pack.pdf) - the full set: about the project, the artist statement, curation and print notes, and a plate for each site.
-- [One-page overview (PDF)](/downloads/one-pager.pdf) - the project on a single sheet.
-- [Curation and print notes (PDF)](/downloads/curation-notes.pdf) - install sizes, materials and method, for venues and printers.
