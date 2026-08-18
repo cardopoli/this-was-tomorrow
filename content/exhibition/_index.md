@@ -8,13 +8,13 @@ hero: /images/exhibition-hero.webp
 links_line: Hear the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
 downloads:
   - label: The exhibit pack (PDF)
-    file: /downloads/enrico_policardo_twt_xhbt-pack.pdf
+    file: downloads/enrico_policardo_twt_xhbt-pack.pdf
     note: 'the full set: about the project, the artist statement, curation and print notes, and a plate for each site.'
   - label: One-page overview (PDF)
-    file: /downloads/enrico_policardo_twt_one-pager.pdf
+    file: downloads/enrico_policardo_twt_one-pager.pdf
     note: the project on a single sheet.
   - label: Curation and print notes (PDF)
-    file: /downloads/enrico_policardo_twt_curation-info.pdf
+    file: downloads/enrico_policardo_twt_curation-info.pdf
     note: install sizes, materials and method, for venues and printers.
 ---
 
