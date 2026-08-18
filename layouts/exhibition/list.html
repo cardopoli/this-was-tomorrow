@@ -31,7 +31,7 @@
 </style>
 
 <div class="site-index">
-        <img class="exhibition-hero" src="{{ "/images/exhibition-hero.webp" | relURL }}"
+        <img class="exhibition-hero" src="{{ (.Params.hero | default "/images/exhibition-hero.webp") | relURL }}"
          alt="This Was Tomorrow — is this the future we were dreaming of?">
 
 <h1 style="margin: 12px 0 24px;">{{ .Title }}</h1>
@@ -56,7 +56,7 @@
         {{ end }}
     </ul>
 
-    <p class="exhibition-links">Hear the voices in the <a href="{{ "quotes/" | relURL }}">quotes</a>, or find every place on the <a href="{{ "map/" | relURL }}">map</a>.</p>
+    {{ with .Params.links_line }}<p class="exhibition-links">{{ . | markdownify }}</p>{{ end }}
 
     {{ with .Content }}
     <details class="host">
