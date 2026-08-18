@@ -1,5 +1,7 @@
 ---
 title: Voices and Places
+hero: /images/exhibition-hero.webp
+links_line: "Hear the voices in the [quotes](/quotes/), or find every place on the [map](/map/)."
 intro: |-
   I kept the images and the voices apart on purpose. You see the places - the rooms, the objects, the light - but not the people. You hear the people, but you don’t see them. Neither explains the other. It’s closer to a book than a film: a film hands you everything and you take it in; a book gives you a thread and you do the rest, the imagining, the picturing. I wanted that gap left open.
 
