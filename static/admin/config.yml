@@ -157,6 +157,8 @@ collections:
       fields:
         - { name: title, label: Heading, widget: string }
         - { name: intro, label: Statement text, widget: text }
+        - { name: hero, label: Hero image, widget: image, required: false, hint: "Top image on the exhibition page" }
+        - { name: links_line, label: Quotes / map line, widget: string, required: false, hint: "The line under the site list. Markdown links allowed." }
     create: true
     extension: md
     format: frontmatter
