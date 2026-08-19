@@ -63,13 +63,11 @@ body_middle: |-
 
   <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
 
+   <div class="audio-track" data-twt-bg="#f54927" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
+
     <p class="audio-track-name">Tom Murphy, Coordinator at Two Up Two Down</p>
 
-  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/f40pqhtvctvg2qpvcg0hn/19082026_TOm-Murphy_2UP2DOWN_Anfield_Liverpool_TWT-AUDIO.mp3?rlkey=zrtx8vu3papuxayxu6tf7kb3e&raw=1"></audio>
-
-  </div>
 
   </div>
 dropbox_gallery_2: ''
