@@ -1,30 +1,18 @@
 <footer class="site-footer">
-
-  {{/* Project description — gives cold arrivals immediate context */}}
-  {{ with .Site.Params.footer_project }}
-  <p class="footer-desc">{{ . }}</p>
-  {{ end }}
-
-  {{/* Two-column: nav left, contact right */}}
-  <div class="footer-body">
-    <nav class="footer-nav" aria-label="Site navigation">
-      <a href="/exhibition/"{{ if eq .RelPermalink "/exhibition/" }} class="active"{{ end }}>Exhibition</a>
-      <a href="/quotes/"{{ if eq .RelPermalink "/quotes/" }} class="active"{{ end }}>Quotes</a>
-      <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
-      <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
+    <div class="footer-project">
+        <p>{{ with .Site.Params.footer_project }}{{ . }}{{ end }}</p>
+    </div>
+    <nav class="footer-nav">
+        <a href="/exhibition/"{{ if eq .RelPermalink "/exhibition/" }} class="active"{{ end }}>Exhibition</a>
+        <a href="/quotes/"{{ if eq .RelPermalink "/quotes/" }} class="active"{{ end }}>Quotes</a>
+        <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
+        <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
     </nav>
     <div class="footer-contact">
-      <a href="mailto:{{ .Site.Params.email | default "info@enricopolicardo.com" }}" class="footer-email">{{ .Site.Params.email | default "info@enricopolicardo.com" }}</a>
-      <a href="https://enricopolicardo.com" target="_blank" rel="noopener" class="footer-site">enricopolicardo.com</a>
+        <p class="footer-contact-averia"><a href="mailto:{{ .Site.Params.email | default "info@enricopolicardo.com" }}">{{ .Site.Params.email | default "info@enricopolicardo.com" }}</a> &nbsp;·&nbsp; <a href="https://enricopolicardo.com" target="_blank" rel="noopener">enricopolicardo.com</a></p>
     </div>
-  </div>
-
-  {{/* ACE logo + copyright bar */}}
-  <div class="footer-base">
-    <a href="https://www.artscouncil.org.uk/dycp" target="_blank" rel="noopener" class="footer-ace-link">
-      <img src="/images/lottery_Logo_Black_RGB.png" alt="Supported using public funding by Arts Council England" class="footer-ace-img">
-    </a>
+    <div class="footer-ace">
+        <a href="https://www.artscouncil.org.uk/dycp" target="_blank" rel="noopener"><img src="/images/lottery_Logo_Black_RGB.png" alt="Supported using public funding by Arts Council England"></a>
+    </div>
     <p class="footer-copyright">© Enrico Policardo 2026</p>
-  </div>
-
 </footer>
