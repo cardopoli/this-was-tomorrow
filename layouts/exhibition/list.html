@@ -58,11 +58,11 @@
 
     {{ with .Params.links_line }}<p class="exhibition-links">{{ . | markdownify }}</p>{{ end }}
 
-    {{ if or .Content .Params.downloads }}
+    {{ if or .Params.host_text .Params.downloads }}
     <details class="host">
       <summary>Host this work</summary>
       <div class="exhibition-extra">
-        {{ .Content }}
+        {{ with .Params.host_text }}{{ . | markdownify }}{{ end }}
         {{ with .Params.downloads }}
         <h2>Downloads</h2>
         <ul>

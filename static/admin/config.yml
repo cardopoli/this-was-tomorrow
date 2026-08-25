@@ -159,6 +159,7 @@ collections:
         - { name: intro, label: Statement text, widget: text }
         - { name: hero, label: Hero image, widget: image, required: false, hint: "Top image on the exhibition page" }
         - { name: links_line, label: Quotes / map line, widget: string, required: false, hint: "The line under the site list. Markdown links allowed." }
+        - { name: host_text, label: Host this work (text), widget: markdown, required: false, hint: "The venue-facing text under the Host this work toggle." }
         - name: downloads
           label: Downloads
           widget: list
