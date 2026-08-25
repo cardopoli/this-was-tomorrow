@@ -52,29 +52,13 @@
     .content .twt-player-bar    { background: rgba(198,245,0,0.28) !important; height: 4px !important; }
     .content .twt-player-handle { width: 14px !important; height: 14px !important; }
 
-    /* ---- photographs: quiet trigger + slow inline reveal ---- */
-    .photos-btn { display: block; margin: 36px 0 0; padding: 0; background: none; border: none; cursor: pointer; text-align: left;
-      font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.9; }
-    .photos-btn:hover { opacity: 1; }
-    .photos-btn small { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.5px; opacity: 0.6; margin-top: 6px; text-transform: none; }
-    .photos-btn .px-arrow { display: inline-block; transition: transform .3s ease; }
-    .photos-btn[aria-expanded="true"] .px-arrow { transform: rotate(180deg); }
-
-    .px-panel { max-height: 0; overflow: hidden; opacity: 0; margin-top: 0;
-      transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease, margin-top .3s ease; }
-    .px-panel.on { max-height: 78vh; opacity: 1; margin-top: 20px; }
-    .px-advance { display: block; width: 100%; padding: 0; background: none; border: none; overflow: hidden; touch-action: none; cursor: zoom-in; }
-    .px-advance.zoomed { cursor: move; }
-    .px-img { max-width: 100%; max-height: 60vh; object-fit: contain; display: block; margin: 0 auto;
-      transform-origin: center center; opacity: 0; transition: opacity .8s ease; }
-    .px-img.shown { opacity: 1; }
-    .px-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
-    .px-dot { width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%; background: var(--fluo); opacity: 0.28; cursor: pointer; transition: opacity .3s ease; }
-    .px-dot.on { opacity: 1; }
-
-    /* ---- foot: two quiet doors ---- */
+    /* ---- foot navigation: index (top), siblings + deep link (here) — one congruent set ---- */
     .full { display: inline-block; margin-top: 40px; font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.9; text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); padding-bottom: 3px; }
     .full:hover { opacity: 1; }
+    .pager { display: flex; justify-content: space-between; gap: 18px; margin-top: 34px; }
+    .pg    { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.75; text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); padding-bottom: 3px; max-width: 46%; }
+    .pg:hover { opacity: 1; }
+    .pg-next { margin-left: auto; text-align: right; }
 
     @media (max-width: 600px) {
       .title { font-size: 34px; }
@@ -105,103 +89,19 @@
 
     {{ .Content }}
 
-    {{ with .Params.exhibit_gallery }}
-    <section class="photos" aria-label="Photographs">
-      <button class="photos-btn" id="pxbtn" type="button" aria-expanded="false" aria-controls="pxpanel" onclick="pxToggle()">{{ $.Params.gallery_label | default "The other photographs" }} <span class="px-arrow" aria-hidden="true">&darr;</span>{{ with $.Params.gallery_note }}<small>{{ . }}</small>{{ end }}</button>
-      <div class="px-panel" id="pxpanel" data-place="{{ $.Params.location }}">
-        <button class="px-advance" type="button" aria-label="Photograph — tap to advance, click or pinch to zoom">
-          <img class="px-img" id="pximg" src="" alt="">
-        </button>
-        <div class="px-dots" id="pxdots">{{ range $i, $u := . }}<button class="px-dot" type="button" onclick="pxJump({{ $i }})" aria-label="Photograph {{ add $i 1 }}"></button>{{ end }}</div>
-      </div>
-    </section>
-    <script>
-      (function () {
-        var PX = [{{ range . }}{{ $u := . }}{{ if in $u "dl=0" }}{{ $u = replace $u "dl=0" "raw=1" }}{{ else if not (in $u "raw=1") }}{{ $u = printf "%s%sraw=1" $u (cond (in $u "?") "&" "?") }}{{ end }}'{{ $u }}',{{ end }}];
-        var pxi = 0, open = false;
-        var img   = document.getElementById('pximg');
-        var panel = document.getElementById('pxpanel');
-        var btn   = document.getElementById('pxbtn');
-        var adv   = document.querySelector('.px-advance');
-        var dots  = document.querySelectorAll('.px-dot');
-        var place = panel.getAttribute('data-place') || '';
-
-        // zoom / pan state
-        var scale = 1, tx = 0, ty = 0, gestured = false, justTouched = false;
-        var startDist = 0, startScale = 1, panX = 0, panY = 0, startTx = 0, startTy = 0;
-        function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
-        function applyT(){ img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')'; }
-        function resetZoom(){ scale = 1; tx = 0; ty = 0; adv.classList.remove('zoomed'); img.style.transition = 'transform .3s ease'; applyT(); }
-        function dist(t){ return Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY); }
-
-        function paintDots(){ for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('on', k === pxi); }
-        function show(){
-          resetZoom();
-          img.classList.remove('shown');
-          setTimeout(function(){
-            img.onload = function(){ img.classList.add('shown'); };
-            img.alt = 'Photograph ' + (pxi + 1) + ' of ' + PX.length + (place ? ' — ' + place : '');
-            img.src = PX[pxi];
-            paintDots();
-          }, 260);
-        }
-        window.pxGo   = function(d){ pxi = (pxi + d + PX.length) % PX.length; show(); };
-        window.pxJump = function(i){ pxi = i; show(); };
-        window.pxToggle = function(){
-          open = !open;
-          panel.classList.toggle('on', open);
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          if (open) show();
-        };
-
-        // pinch to zoom, drag to pan (when zoomed), tap to advance
-        adv.addEventListener('touchstart', function(e){
-          if (e.touches.length === 2){ startDist = dist(e.touches); startScale = scale; img.style.transition = 'none'; }
-          else if (e.touches.length === 1 && scale > 1){ panX = e.touches[0].clientX; panY = e.touches[0].clientY; startTx = tx; startTy = ty; img.style.transition = 'none'; }
-        }, { passive: false });
-        adv.addEventListener('touchmove', function(e){
-          if (e.touches.length === 2){ e.preventDefault(); gestured = true; scale = clamp(startScale * (dist(e.touches) / startDist), 1, 4); applyT(); }
-          else if (e.touches.length === 1 && scale > 1){ e.preventDefault(); gestured = true; tx = startTx + (e.touches[0].clientX - panX); ty = startTy + (e.touches[0].clientY - panY); applyT(); }
-        }, { passive: false });
-        adv.addEventListener('touchend', function(){ if (scale <= 1.02) resetZoom(); justTouched = true; setTimeout(function(){ justTouched = false; }, 400); });
-
-        function panToCursor(e){                         // map cursor position to pan offset
-          var r = adv.getBoundingClientRect();
-          var fx = clamp((e.clientX - r.left) / r.width, 0, 1);
-          var fy = clamp((e.clientY - r.top)  / r.height, 0, 1);
-          tx = (0.5 - fx) * (r.width  * (scale - 1));
-          ty = (0.5 - fy) * (r.height * (scale - 1));
-          applyT();
-        }
-        adv.addEventListener('click', function(e){
-          if (justTouched){                              // touch tap → advance
-            if (gestured){ gestured = false; return; }
-            if (scale > 1) return;
-            window.pxGo(1); return;
-          }
-          if (scale <= 1){                               // mouse: click to zoom in at the cursor
-            scale = 2.5; adv.classList.add('zoomed'); img.style.transition = 'transform .3s ease'; panToCursor(e);
-          } else {                                       // click again to zoom out
-            resetZoom();
-          }
-        });
-        adv.addEventListener('mousemove', function(e){   // desktop: move to pan while zoomed
-          if (justTouched || scale <= 1) return;
-          img.style.transition = 'none'; panToCursor(e);
-        });
-
-        document.addEventListener('keydown', function(e){
-          if (!open) return;
-          if (e.key === 'ArrowLeft') window.pxGo(-1);
-          else if (e.key === 'ArrowRight') window.pxGo(1);
-        });
-      })();
-    </script>
-    {{ end }}
-
     <footer>
       {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}<a class="full" href="{{ .RelPermalink }}">the full page &rarr;</a>{{ end }}
-      <noscript><p style="margin-top:24px;font-family:var(--mono);font-size:11px;opacity:0.8">Turn on JavaScript for the audio and photographs — or open the full page above.</p></noscript>
+
+      {{/* move across the show — prev / next location. Swap PrevInSection/NextInSection if the direction reads reversed for your ordering. */}}
+      {{ if or .PrevInSection .NextInSection }}
+      <nav class="pager" aria-label="Other locations">
+        {{ with .PrevInSection }}<a class="pg" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+        {{ with .NextInSection }}<a class="pg pg-next" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+      </nav>
+      {{ end }}
+
+      <noscript><p style="margin-top:24px;font-family:var(--mono);font-size:11px;opacity:0.8">Turn on JavaScript for the audio — or open the full page above.</p></noscript>
+      <p class="ex-copyright">© Enrico Policardo 2026. All rights reserved. No reproduction without written permission. Moral rights asserted.</p>
     </footer>
   </main>
 
