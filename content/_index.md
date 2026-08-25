@@ -1,11 +1,9 @@
 ---
-title: This Was Tomorrow
+title: 'This Was Tomorrow: Is this the future you were dreaming of?'
 intro: |-
-  A project by Enrico Policardo on cohousing, community land trusts, self-build, cooperative living and other hard-to-categorise place-shaping world-making human initiatives across the UK.
+  A project by Enrico Policardo on cohousing, community land trusts, self-build, cooperative living and other hard-to-categorise practical action toward collective, sustainable home-making across the UK.
 
-  These places already exist - quietly, imperfectly, without waiting for permission. This project treats them not as proof that things could be different, but as evidence that they already are.
+  Is this the future you were dreaming of?
 
-  Is this the future we were dreaming of?
-
-  A question as a speculative tool to unlock different versions of the future.
+  A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
 ---
