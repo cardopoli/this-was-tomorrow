@@ -18,6 +18,11 @@ media_libraries:
         quality: 85
         width: 2048
         height: 2048
+        types:
+          - image/jpeg
+          - image/png
+          - image/avif
+          - image/tiff
 
 collections:
 
