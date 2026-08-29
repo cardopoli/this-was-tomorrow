@@ -4,6 +4,8 @@ description: A photographic investigation by Enrico Policardo into community-led
 layout: about
 ---
 
+![](/images/twt_wobble.gif)
+
 _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
 It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
@@ -12,7 +14,7 @@ The work began in 2022, with the fundamental input of architectural historian Ju
 
 This phase turns to what people are doing now, from the bottom up - not waiting for the institutions once meant to enable and protect them, but acting for themselves. The aim was never to document these places from the outside, but to distil, in images and voices, what moved such different people into action - and to carry some of their energy and their dreams to you.
 
-![](/images/image-low-res_3000px_60_jpeg-moshed-08-15-09-43-15-559.webp)
+![](/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp)
 
 ## How the work is made
 
@@ -28,9 +30,7 @@ This work has been made possible by Arts Council England through the Developing 
 
 _This Was Tomorrow_ grew out of an earlier iteration and two editions of a book of the same title.
 
-<img src="/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" alt="" width="100%">
-
-## About the author
+# About the author
 
 Enrico Policardo (b. 1982, Gorizia, Italy) is a photographer and artist based in London. His work examines how systems of power organise everyday life - housing and who gets to shape it, waste and what a consumer economy throws away, and the contested ground of borders. Creative Director of ReThinkable Festival on the Italy-Slovenia border (Nova Gorica / Gorizia, European Capital of Culture 2024-2026) and an Affiliate Research Fellow at the University of Nova Gorica.
 
