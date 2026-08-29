@@ -1,15 +1,14 @@
 ---
 title: Voices and Places
 intro: |-
-  I kept the images and the voices apart on purpose. You see the places - the rooms, the objects, the light - but not the people. You hear the people, but you don’t see them. Neither explains the other. It’s closer to a book than a film: a film hands you everything and you take it in; a book gives you a thread and you do the rest, the imagining, the picturing. I wanted that gap left open.
+  The photographs presented shown without the people who live in these places; their voices are kept separate, and never explain the image. Beside each print, an A4 sheet tells you about that place, with a QR code to listen to the people there. A second code opens the quote generator - lines drawn at random from all the interviews. Scan, listen, read, in any order. You do the rest.
 
-  This isn’t a record of what these communities built. I’m not here to show you finished proof and have you admire other people’s achievements. What I wanted was for people to listen, and look, and feel the way you do after a good book - the life-changing kind - when you close it and want to do something. Nothing big, necessarily. Just a little rip in the routine. That voice in the back of your head whispering _that’s possible_, getting louder, getting clearer.
+  This work has been made possible by Arts Council England through the Developing Your Creative Practice (DYCP) scheme, and supported by Simon Vickery (Open House Festival Programme Manager), writer and photographer Thaddeus Zupancic (London Estates: Modernist Council Housing 1946-1981), and architectural historian Judith Martin, co-author of the original This Was Tomorrow publication.
+
+  This Was Tomorrow grew out of an earlier iteration and two editions of a book of the same title.
 hero: /images/twt_wobble.gif
 links_line: Hear the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
-host_text: |-
-  Each site comes as a set of photographs, printed large and pasted straight to the wall - unframed, sometimes over what is already there, left to weather as part of the piece. Sizes scale to the space, and the arrangement is not fixed.
-
-  To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )
+host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
 downloads:
   - label: The exhibit pack (PDF)
     file: /downloads/enrico_policardo_twt_xhbt-pack.pdf
@@ -20,4 +19,7 @@ downloads:
   - label: Curation and print notes (PDF)
     file: /downloads/enrico_policardo_twt_curation-info.pdf
     note: install sizes, materials and method, for venues and printers.
+  - label: Press Kit
+    file: /downloads/enrico_policardo_twt_press_kit.pdf
+    note: ''
 ---
