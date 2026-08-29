@@ -227,6 +227,30 @@ collections:
               - { name: quote, label: Quote, widget: text }
               - { name: speaker, label: Speaker, widget: string }
               - { name: location, label: Location, widget: string }
+  - name: thankyou
+    label: Thank You page
+    files:
+      - name: thankyou
+        label: Thank you
+        file: content/thankyou.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: note, label: Opening note, widget: text, required: false }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - name: people
+                label: People
+                widget: list
+                required: false
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: role, label: Role, widget: string, required: false }
+              - { name: text, label: Text block, widget: text, required: false }
+          - { name: funder_note, label: Funder note, widget: string, required: false }
+          - { name: copyright, label: Copyright line, widget: string, required: false }
   - name: pages
     label: Pages
     files:
