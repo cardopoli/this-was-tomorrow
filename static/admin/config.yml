@@ -227,6 +227,28 @@ collections:
               - { name: quote, label: Quote, widget: text }
               - { name: speaker, label: Speaker, widget: string }
               - { name: location, label: Location, widget: string }
+  - name: thoughts
+    label: Thoughts page
+    files:
+      - name: thoughts
+        label: Thoughts
+        file: content/thoughts.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: datestamp, label: Datestamp, widget: string, required: false }
+          - name: blocks
+            label: Blocks
+            widget: list
+            label_singular: Block
+            summary: "{{fields.type}}: {{fields.text}}"
+            fields:
+              - name: type
+                label: Type
+                widget: select
+                options: [heading, body, quote, statement, line]
+              - { name: text, label: Text, widget: text }
+              - { name: attribution, label: Attribution (quotes only), widget: string, required: false }
+
   - name: thankyou
     label: Thank You page
     files:
