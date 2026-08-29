@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} · This Was Tomorrow</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --fluo: #c6f500; --vt: 'VT323', monospace; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: var(--fluo);
+      font-family: var(--vt);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--fluo); }
+    a:hover { opacity: 0.7; }
+
+    a:focus-visible,
+    button:focus-visible { outline: 2px solid var(--fluo); outline-offset: 3px; }
+
+    /* ---- BACK LINK ---- */
+    .back {
+      display: inline-block;
+      font-family: var(--mono, monospace);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--fluo);
+      text-decoration: none;
+      border-bottom: 1px solid var(--fluo);
+      padding-bottom: 2px;
+      margin-bottom: 48px;
+    }
+
+    /* ---- PAGE HEADER ---- */
+    .page-header {
+      padding: 40px 0 32px;
+      border-bottom: 3px solid var(--fluo);
+      margin-bottom: 56px;
+    }
+
+    .page-header .kicker {
+      font-family: var(--mono, monospace);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 10px;
+    }
+
+    .page-header h1 {
+      font-family: var(--vt);
+      font-size: clamp(56px, 12vw, 110px);
+      line-height: 0.92;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .page-header .datestamp {
+      font-family: var(--mono, monospace);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    /* ---- COLUMN RULE WRAPPER ---- */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ---- BLOCKS: common ---- */
+    .block {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      margin-bottom: 52px;
+    }
+
+    .block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---- BLOCK: heading ---- */
+    .block-heading {
+      border-top: 2px solid var(--fluo);
+      padding-top: 14px;
+    }
+
+    .block-heading h2 {
+      font-family: var(--vt);
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    /* ---- BLOCK: body ---- */
+    .block-body p {
+      font-family: var(--vt);
+      font-size: clamp(22px, 3.5vw, 30px);
+      line-height: 1.35;
+      max-width: 64ch;
+    }
+
+    /* ---- BLOCK: pull quote ---- */
+    .block-quote {
+      border-left: 4px solid var(--fluo);
+      padding-left: 24px;
+    }
+
+    .block-quote blockquote {
+      font-family: var(--vt);
+      font-size: clamp(30px, 6vw, 56px);
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .block-quote .attribution {
+      font-family: var(--mono, monospace);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    /* ---- BLOCK: rule / single line ---- */
+    .block-line {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .block-line::before,
+    .block-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--fluo);
+      opacity: 0.3;
+    }
+
+    .block-line span {
+      font-family: var(--mono, monospace);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.4;
+      white-space: nowrap;
+    }
+
+    /* ---- BLOCK: big single statement ---- */
+    .block-statement {
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    .block-statement p {
+      font-family: var(--vt);
+      font-size: clamp(40px, 8vw, 80px);
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    /* ---- FOOTER ---- */
+    .page-footer {
+      border-top: 2px solid rgba(198,245,0,0.25);
+      padding: 32px 0 48px;
+      margin-top: 24px;
+    }
+
+    .page-footer a {
+      font-family: var(--mono, monospace);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(198,245,0,0.4);
+      padding-bottom: 2px;
+    }
+
+    .page-footer a:hover { opacity: 1; border-color: var(--fluo); }
+
+    /* ---- REDUCED MOTION ---- */
+    @media (prefers-reduced-motion: reduce) {
+      .block {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content { padding: 0 16px 60px; }
+      .page-header h1 { font-size: 52px; }
+      .block-body p { font-size: 20px; }
+      .block-quote blockquote { font-size: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="content">
+
+    <a class="back" href="/">&larr; This Was Tomorrow</a>
+
+    <header class="page-header">
+      <p class="kicker">This Was Tomorrow &mdash; Notes</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.datestamp }}<p class="datestamp">{{ . }}</p>{{ end }}
+    </header>
+
+    {{/* Render each block from front-matter */}}
+    {{ range .Params.blocks }}
+
+      {{ if eq .type "heading" }}
+      <div class="block block-heading" data-block>
+        <h2>{{ .text }}</h2>
+      </div>
+
+      {{ else if eq .type "body" }}
+      <div class="block block-body" data-block>
+        <p>{{ .text | markdownify }}</p>
+      </div>
+
+      {{ else if eq .type "quote" }}
+      <div class="block block-quote" data-block>
+        <blockquote>{{ .text }}</blockquote>
+        {{ with .attribution }}<p class="attribution">— {{ . }}</p>{{ end }}
+      </div>
+
+      {{ else if eq .type "line" }}
+      <div class="block block-line" data-block>
+        <span>{{ .text | default "* * *" }}</span>
+      </div>
+
+      {{ else if eq .type "statement" }}
+      <div class="block block-statement" data-block>
+        <p>{{ .text }}</p>
+      </div>
+
+      {{ end }}
+    {{ end }}
+
+    {{/* Fallback: render markdown body if no blocks defined */}}
+    {{ if not .Params.blocks }}
+    <div class="block block-body visible">
+      {{ .Content }}
+    </div>
+    {{ end }}
+
+    <footer class="page-footer">
+      <a href="/">&larr; back to the archive</a>
+    </footer>
+
+  </main>
+
+  <script>
+    (function () {
+      var blocks = document.querySelectorAll('[data-block]');
+      if (!blocks.length) return;
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      blocks.forEach(function (b) { io.observe(b); });
+    })();
+  </script>
+</body>
+</html>
