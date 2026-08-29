@@ -227,52 +227,6 @@ collections:
               - { name: quote, label: Quote, widget: text }
               - { name: speaker, label: Speaker, widget: string }
               - { name: location, label: Location, widget: string }
-  - name: thoughts
-    label: Thoughts page
-    files:
-      - name: thoughts
-        label: Thoughts
-        file: content/thoughts.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: datestamp, label: Datestamp, widget: string, required: false }
-          - name: blocks
-            label: Blocks
-            widget: list
-            label_singular: Block
-            summary: "{{fields.type}}: {{fields.text}}"
-            fields:
-              - name: type
-                label: Type
-                widget: select
-                options: [heading, body, quote, statement, line]
-              - { name: text, label: Text, widget: text }
-              - { name: attribution, label: Attribution (quotes only), widget: string, required: false }
-
-  - name: thankyou
-    label: Thank You page
-    files:
-      - name: thankyou
-        label: Thank you
-        file: content/thankyou.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: note, label: Opening note, widget: text, required: false }
-          - name: sections
-            label: Sections
-            widget: list
-            fields:
-              - { name: heading, label: Heading, widget: string, required: false }
-              - name: people
-                label: People
-                widget: list
-                required: false
-                fields:
-                  - { name: name, label: Name, widget: string }
-                  - { name: role, label: Role, widget: string, required: false }
-              - { name: text, label: Text block, widget: text, required: false }
-          - { name: funder_note, label: Funder note, widget: string, required: false }
-          - { name: copyright, label: Copyright line, widget: string, required: false }
   - name: pages
     label: Pages
     files:
@@ -299,3 +253,44 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
+
+      - name: thoughts
+        label: Thoughts
+        file: content/thoughts.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: datestamp, label: Datestamp, widget: string, required: false }
+          - name: blocks
+            label: Blocks
+            widget: list
+            label_singular: Block
+            summary: "{{fields.type}}: {{fields.text}}"
+            fields:
+              - name: type
+                label: Type
+                widget: select
+                options: [heading, body, quote, statement, line]
+              - { name: text, label: Text, widget: text }
+              - { name: attribution, label: Attribution (quotes only), widget: string, required: false }
+
+      - name: thankyou
+        label: Thank You
+        file: content/thankyou.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: note, label: Opening note, widget: text, required: false }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string, required: false }
+              - name: people
+                label: People
+                widget: list
+                required: false
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: role, label: Role, widget: string, required: false }
+              - { name: text, label: Text block, widget: text, required: false }
+          - { name: funder_note, label: Funder note, widget: string, required: false }
+          - { name: copyright, label: Copyright line, widget: string, required: false }
