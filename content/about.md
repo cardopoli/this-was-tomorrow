@@ -4,9 +4,11 @@ description: A photographic investigation by Enrico Policardo into community-led
 layout: about
 ---
 
-![](/images/twt_wobble.gif)
-
 _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
+
+It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
+
+![](/images/twt_wobble.gif)
 
 It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
 
@@ -30,7 +32,7 @@ This work has been made possible by Arts Council England through the Developing 
 
 _This Was Tomorrow_ grew out of an earlier iteration and two editions of a book of the same title.
 
-# About the author
+## About the author
 
 Enrico Policardo (b. 1982, Gorizia, Italy) is a photographer and artist based in London. His work examines how systems of power organise everyday life - housing and who gets to shape it, waste and what a consumer economy throws away, and the contested ground of borders. Creative Director of ReThinkable Festival on the Italy-Slovenia border (Nova Gorica / Gorizia, European Capital of Culture 2024-2026) and an Affiliate Research Fellow at the University of Nova Gorica.
 
