@@ -30,8 +30,6 @@ _This Was Tomorrow_ grew out of an earlier iteration and two editions of a book 
 
 <img src="/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp" alt="" width="100%">
 
-## 
-
 ## About the author
 
 Enrico Policardo (b. 1982, Gorizia, Italy) is a photographer and artist based in London. His work examines how systems of power organise everyday life - housing and who gets to shape it, waste and what a consumer economy throws away, and the contested ground of borders. Creative Director of ReThinkable Festival on the Italy-Slovenia border (Nova Gorica / Gorizia, European Capital of Culture 2024-2026) and an Affiliate Research Fellow at the University of Nova Gorica.
