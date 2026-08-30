@@ -1275,9 +1275,9 @@ li:not(.status-visited) .location {
 .footer-body {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
 }
 
 .footer-left {
@@ -1289,14 +1289,14 @@ li:not(.status-visited) .location {
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.1;
+    line-height: 1.2;
     color: var(--text);
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .footer-desc {
     font-size: 11px;
-    line-height: 1.4;
+    line-height: 1.6;
     color: var(--muted);
 }
 
