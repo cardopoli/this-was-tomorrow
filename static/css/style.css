@@ -208,10 +208,8 @@ img { max-width: 100%; height: auto; display: block; }
 .site-header .tagline {
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-style: italic;
-    font-family: var(--sans);
+    font-weight: 400;
     font-size: clamp(18px, 4vw, 28px);
-    font-weight: 700;
-    font-style: italic;
     color: var(--text);
     letter-spacing: 0;
     line-height: 1.1;
