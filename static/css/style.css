@@ -91,15 +91,29 @@
 }
 @font-face {
     font-family: 'AGProExt';
-    src: url('/fonts/agpro-ext.otf') format('opentype');
-    font-weight: 900;
+    src: url('/fonts/akzidenzgroteskpro_ext.otf') format('opentype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'AGProExt';
-    src: url('/fonts/agpro-ext-italic.otf') format('opentype');
-    font-weight: 900;
+    src: url('/fonts/akzidenzgroteskpro_extitalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AGProExt';
+    src: url('/fonts/akzidenzgroteskpro_boldex.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AGProExt';
+    src: url('/fonts/akzidenzgroteskpro_boldexit.otf') format('opentype');
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -194,8 +208,10 @@ img { max-width: 100%; height: auto; display: block; }
 .site-header .tagline {
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-style: italic;
+    font-family: var(--sans);
     font-size: clamp(18px, 4vw, 28px);
-    font-weight: 900;
+    font-weight: 700;
+    font-style: italic;
     color: var(--text);
     letter-spacing: 0;
     line-height: 1.1;
@@ -270,10 +286,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-list .name {
-    font-family: 'AGProExt', 'AGPro', Arial, sans-serif !important;
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-weight: 900;
-    font-size: 18px;
-    letter-spacing: -0.3px;
+    font-size: 16px;
+    letter-spacing: -0.2px;
 }
 
 .site-list .location {
