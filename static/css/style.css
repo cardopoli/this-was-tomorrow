@@ -192,6 +192,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header .tagline {
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
+    font-style: italic;
     font-family: var(--sans);
     font-size: clamp(18px, 4vw, 28px);
     font-weight: 700;
@@ -256,7 +258,7 @@ img { max-width: 100%; height: auto; display: block; }
     align-items: baseline;
     padding: 18px 0;
     text-decoration: none;
-    font-family: var(--sans);
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-size: 15px;
     transition: background 0.1s;
 }
@@ -270,14 +272,17 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-list .name {
-    font-weight: 600;
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: -0.2px;
 }
 
 .site-list .location {
+    font-family: 'VT323', monospace;
     font-weight: 400;
     color: var(--muted);
-    font-size: 13px;
-    font-family: var(--sans);
+    font-size: 18px;
     text-align: right;
     white-space: nowrap;
     margin-left: 16px;
@@ -630,7 +635,9 @@ article li {
     html, body { overflow-x: hidden; }
     .wrap { padding: 0 16px; max-width: 100%; }
     .site-header h1 { font-size: 44px; letter-spacing: -0.5px; }
-    .site-header .tagline { font-size: 17px; }
+    .site-header .tagline {
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
+    font-style: italic; font-size: 17px; }
     .site-list a { flex-direction: column; gap: 2px; }
     .site-list .name { white-space: normal; }
     .site-list .location { text-align: left; margin-left: 0; white-space: normal; }
