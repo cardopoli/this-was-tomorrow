@@ -1,7 +1,9 @@
 ---
 title: 'This Was Tomorrow: Is this the future you were dreaming of?'
 intro: |-
-  A project by Enrico Policardo on cohousing, community land trusts, self-build, cooperative living and other hard-to-categorise practical action toward collective, sustainable home-making across the UK.
+  This Was Tomorrow: Is This the Future We Were Dreaming Of? is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
+
+  It looks at places that are functioning in the present, without framing them as models or solutions. 
 
   Is this the future you were dreaming of?
 
