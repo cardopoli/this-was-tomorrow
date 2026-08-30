@@ -45,12 +45,19 @@ sections:
         role: Devity Studio
     text: ''
   - heading: Special thanks
-    people: []
-    text: ''
-  - heading: My dear friends
     people:
-      - name: Marco Busolini
-        role: for his unquestioning support, presence and radical honesty
+      - name: Susanna Gregori & Giorgio Gregori
+        role: For being the spirit behind my very inquisitive mind. For their enthusiasm from afar. For the full fridges, the lifts. For being my family.
+      - name: The Martin Family
+        role: For their support ideological, spiritual and practical. For being my home away from home.
+      - name: Eiichi Sawado
+        role: for the support to my work and for delivering the best taglines to my photos
+      - name: David Marques
+        role: for unlocking versions of the futures I didn't know existed.
+      - name: Judith Martin
+        role: for being not only the spark to all this but a constant positive reinforcement
+      - name: Rosamond Martin
+        role: for being the spirited, intelligent, caring and kind person she is. towards each and every single individual she come across. to be an inspiration, a motivation and a general point of reference for so many things in my life. for giving me so much on daily basis
     text: ''
 funder_note: Supported using public funding by Arts Council England through the Developing Your Creative Practice programme.
 copyright: © Enrico Policardo 2026. All rights reserved. No reproduction without written permission. Moral rights asserted.
