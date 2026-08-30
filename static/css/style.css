@@ -74,6 +74,36 @@
 
 /* ---- VARIABLES ---- */
 
+/* AGPro (Akzidenz Grotesk Pro) — self-hosted */
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AGPro';
+    src: url('/fonts/agpro-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AGProExt';
+    src: url('/fonts/agpro-ext.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'AGProExt';
+    src: url('/fonts/agpro-ext-italic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     --bg: #f7f5f0;
     --text: #111;
@@ -82,7 +112,7 @@
     --link: #111;
     --hover: #555;
     --mono: 'FreeMono', 'Courier New', Courier, monospace;
-    --sans: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --sans: 'VT323', monospace;
     --condensed: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --averia: 'Averia Serif Libre', Georgia, serif;
     --max-w: 720px;
@@ -97,7 +127,7 @@ html {
 body {
     font-family: var(--sans);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.7;
     color: var(--text);
     background: var(--bg);
@@ -147,7 +177,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header h1 {
-    font-family: var(--sans);
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-size: clamp(48px, 10vw, 88px);
     font-weight: 700;
     text-transform: uppercase;
@@ -527,14 +557,14 @@ img { max-width: 100%; height: auto; display: block; }
 /* CONTENT BODY */
 
 article h1 {
-    font-family: var(--sans);
+    font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 article h2 {
-    font-family: var(--mono);
+    font-family: 'AGPro', Arial, sans-serif;
     font-size: 11px;
     font-weight: 400;
     text-transform: uppercase;

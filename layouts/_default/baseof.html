@@ -22,7 +22,7 @@
     {{- $ogTitle := .Site.Title -}}
     {{- if not .IsHome }}{{- $ogTitle = printf "%s - %s" .Title .Site.Title -}}{{- end }}
 
-    {{- $ogImage := "https://64.media.tumblr.com/3d00e55fb38d8b65bb11700ee4db779f/bf5b75c0c8a48cda-30/s640x960/9b15eaf272f6e614a494ad334b4cd8394742bed3.gifv" -}}
+    {{- $ogImage := printf "%s%s" $.Site.BaseURL "images/exhibition-hero.jpeg" -}}
     {{- with .Params.image -}}
       {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
     {{- else -}}
@@ -50,6 +50,9 @@
     <meta name="twitter:image"       content="{{ $ogImage }}">
 
     <!-- STYLESHEET (includes @font-face declarations) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
     <!-- JS: loaded in <head> so window._twt exists
