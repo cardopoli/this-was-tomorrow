@@ -141,8 +141,8 @@ html {
 body {
     font-family: var(--sans);
     font-weight: 400;
-    font-size: 20px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.6;
     color: var(--text);
     background: var(--bg);
     padding: 0;
@@ -271,7 +271,7 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 18px 0;
     text-decoration: none;
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     transition: background 0.1s;
 }
 
@@ -286,7 +286,7 @@ img { max-width: 100%; height: auto; display: block; }
 .site-list .name {
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: -0.2px;
 }
 
@@ -294,7 +294,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-family: 'VT323', monospace;
     font-weight: 400;
     color: var(--muted);
-    font-size: 18px;
+    font-size: 15px;
     text-align: right;
     white-space: nowrap;
     margin-left: 16px;
@@ -575,9 +575,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 article h1 {
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 article h2 {
@@ -604,8 +604,8 @@ article h3 {
 }
 
 article p {
-    margin-bottom: 28px;
-    line-height: 1.8;
+    margin-bottom: 24px;
+    line-height: 1.7;
 }
 
 article img {
