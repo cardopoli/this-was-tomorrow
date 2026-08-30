@@ -1275,9 +1275,9 @@ li:not(.status-visited) .location {
 .footer-body {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 }
 
 .footer-left {
@@ -1289,14 +1289,14 @@ li:not(.status-visited) .location {
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.1;
     color: var(--text);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .footer-desc {
     font-size: 11px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--muted);
 }
 
@@ -1304,7 +1304,7 @@ li:not(.status-visited) .location {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;
+    gap: 4px;
     flex-shrink: 0;
 }
 
