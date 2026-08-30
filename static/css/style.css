@@ -141,7 +141,7 @@ html {
 body {
     font-family: var(--sans);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     color: var(--text);
     background: var(--bg);
@@ -243,7 +243,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .site-index .intro p {
-    font-size: 15px;
+    font-size: 17px;
     color: var(--text);
     line-height: 1.9;
     margin-bottom: 22px;
