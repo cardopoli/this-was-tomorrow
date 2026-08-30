@@ -195,7 +195,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: clamp(48px, 10vw, 88px);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     line-height: 0.9;
     margin-bottom: 8px;
 }
