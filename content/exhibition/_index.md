@@ -1,13 +1,8 @@
 ---
 title: Voices and Places
-intro: |-
-  The photographs presented shown without the people who live in these places; their voices are kept separate, and never explain the image. Beside each print, an A4 sheet tells you about that place, with a QR code to listen to the people there. A second code opens the quote generator - lines drawn at random from all the interviews. Scan, listen, read, in any order. You do the rest.
-
-  This work has been made possible by Arts Council England through the Developing Your Creative Practice (DYCP) scheme, and supported by Simon Vickery (Open House Festival Programme Manager), writer and photographer Thaddeus Zupancic (London Estates: Modernist Council Housing 1946-1981), and architectural historian Judith Martin, co-author of the original This Was Tomorrow publication.
-
-  This Was Tomorrow grew out of an earlier iteration and two editions of a book of the same title.
+intro: 'The audio from the project: the people who live in these places, in their own words. No images, no captions - just the voices.'
 hero: /images/twt_wobble.gif
-links_line: Hear the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
+links_line: Read the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
 host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
 downloads:
   - label: The exhibit pack (PDF)
