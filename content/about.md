@@ -6,23 +6,21 @@ layout: about
 
 _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
-It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
+It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not _does this work_ but something closer to _what futures are still imaginable from where we are now_.
 
 ![](/images/twt_wobble.gif)
 
-It looks at places that are functioning in the present, without framing them as models or solutions. The question throughout is not "does this work?" but something closer to: what futures are still imaginable from where we are now?
+The work began in 2022, with the fundamental input of architectural historian Judith Martin, documenting endangered council estates in London and the utopian ideals held in their concrete. A residency at ESAD IDEA in Porto, made possible by David Marques (Devity Studio), shifted the focus from documenting past utopias to watching the present, and asking why we seem to have lost the postwar momentum that once drove us to build, to house, to look at the future with pragmatism, hope and most importantly for the people.
 
-The work began in 2022, with the fundamental input of architectural historian Judith Martin, documenting endangered council estates in London and the utopian ideals held in their concrete. A residency at ESAD IDEA in Porto, made possible by David Marques (Devity Studio), shifted the focus - from documenting past utopias to watching the present, and asking why we seem to have lost the postwar momentum that once drove us to build, to house, to look at the future with pragmatism and hope.
-
-This phase turns to what people are doing now, from the bottom up - not waiting for the institutions once meant to enable and protect them, but acting for themselves. The aim was never to document these places from the outside, but to distil, in images and voices, what moved such different people into action - and to carry some of their energy and their dreams to you.
+This phase turns to what people are doing now, from the bottom up - not waiting for the institutions once meant to enable and protect them, but acting for themselves. The aim was never to document these places from the outside - though some of that is inevitable - but to distil, in images and voices, what moved such different people into action, and to amplify their energy and their dreams for everyone who needs to see and hear that a different version of the world is still possible, and already happening.
 
 ![](/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp)
 
 ## How the work is made
 
-The photographs are shown without the people who live in these places. Their voices are kept separate, and never explain the image. The work doesn't take people as its primary subject, focusing instead on places, interiors, objects, traces of use and spatial relationships. Images and sound are kept apart to leave room for interpretation rather than produce explanatory case studies.
+The work doesn't take people as its primary subject. It looks instead at places, interiors, objects, traces of use. Image and sound are kept apart, to leave room for interpretation rather than produce explanatory case studies.
 
-All recording is optional, and every image and recording is used only with explicit consent.
+People are everywhere in this work, just not in the frame.
 
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/X0tGY-LgxSc?si=3YkaHN0GPBMAA0or&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
