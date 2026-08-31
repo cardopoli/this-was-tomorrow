@@ -235,10 +235,14 @@
       <p>{{ .Params.funder_note | default "Supported using public funding by Arts Council England through the Developing Your Creative Practice programme." }}</p>
     </div>
 
-    <footer class="ty-footer">
-      <a href="/">&larr; back to the archive</a>
-      <p class="ty-copyright">{{ .Params.copyright | default "© Enrico Policardo 2026. All rights reserved. No reproduction without written permission. Moral rights asserted." }}</p>
-    </footer>
+  <style>
+    .site-footer {
+      --text: #f0ede8; --muted: rgba(240,237,232,0.5); --rule: rgba(240,237,232,0.15);
+      border-top-color: #f0ede8;
+    }
+    .site-footer img { filter: invert(1) brightness(1.15); }
+  </style>
+  {{ partial "footer.html" . }}
 
   </main>
 

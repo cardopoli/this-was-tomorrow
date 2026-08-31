@@ -1369,3 +1369,17 @@ li:not(.status-visited) .location {
     .footer-base { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 /* ── END FOOTER ──────────────────────────────────────────── */
+
+
+/* dark page footer (exhibit single, quotes, thank you) */
+.site-footer-dark {
+    padding: 24px 22px 28px;
+    text-align: center;
+}
+.footer-dark-copy {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    color: rgba(198,245,0,0.35);
+    line-height: 1.5;
+}
