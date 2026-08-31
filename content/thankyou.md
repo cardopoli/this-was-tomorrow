@@ -2,9 +2,7 @@
 title: Thank you
 note: |-
   Twenty-two people sat down with me and answered the same question. 
-  This project exists because they did.
-
-  And to all those that, even without knowing, helped me along the way.
+  This project exists because they did. And to all those that, even without knowing, helped me along the way.
 sections:
   - heading: The communities
     people:
