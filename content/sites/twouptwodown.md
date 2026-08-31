@@ -61,8 +61,6 @@ body_middle: |-
     <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/x0b22ewczalei9wh8yc6s/R0043947-18_19_052026-Homebaked-Liverpool-LOwRES.jpg?rlkey=l308zx376244ccy6h8470k6ur&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></a></div>
   </div>
 
-  <div class="audio-track" data-twt-bg="#111111" data-twt-fg="#f7f5f0" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
-
    <div class="audio-track" data-twt-bg="#f54927" data-twt-fg="#ffffff" data-twt-pad="14px 18px" data-twt-btn-size="16px" data-twt-time-size="12px" data-twt-show-timer="1">
 
     <p class="audio-track-name">Tom Murphy, Coordinator at Two Up Two Down</p>

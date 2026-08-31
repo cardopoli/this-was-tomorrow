@@ -2,9 +2,7 @@
 title: Thank you
 note: |-
   Twenty-two people sat down with me and answered the same question. 
-  This project exists because they did.
-
-  And to all those that, even without knowing, helped me along the way.
+  This project exists because they did. And to all those that, even without knowing, helped me along the way.
 sections:
   - heading: The communities
     people:
@@ -46,19 +44,18 @@ sections:
     text: ''
   - heading: Special thanks
     people:
-      - name: Susanna Gregori & Giorgio Gregori
-        role: For being the spirit behind my very inquisitive mind. For their enthusiasm from afar. For the full fridges, the lifts. For being my family.
+      - name: Rosamond Martin
+        role: For her intelligence, her generosity, and her spirit. For giving so much, to so many, every single day. And for everything she gives me.
       - name: The Martin Family
         role: For their support ideological, spiritual and practical. For being my home away from home.
-      - name: Eiichi Sawado
-        role: for the support to my work and for delivering the best taglines to my photos
+      - name: Susanna Gregori & Giorgio Gregori
+        role: For being the spirit behind my very inquisitive mind. For their enthusiasm from afar. For the full fridges, the lifts. For being my family.
       - name: David Marques
         role: for unlocking versions of the futures I didn't know existed.
-      - name: Judith Martin
-        role: for being not only the spark to all this but a constant positive reinforcement
-      - name: Rosamond Martin
-        role: for being the spirited, intelligent, caring and kind person she is. towards each and every single individual she come across. to be an inspiration, a motivation and a general point of reference for so many things in my life. for giving me so much on daily basis
     text: ''
+  - heading: for their presence and encouragement
+    people: []
+    text: Richard Grainger, Eiichi Sawado, Marco Busolini, Roberto Rosolin, Marco Bensa, Diogo Atadini
 funder_note: Supported using public funding by Arts Council England through the Developing Your Creative Practice programme.
 copyright: © Enrico Policardo 2026. All rights reserved. No reproduction without written permission. Moral rights asserted.
 slug: twtthanks
