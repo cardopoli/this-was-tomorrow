@@ -1359,9 +1359,7 @@ li:not(.status-visited) .location {
 .footer-ace img {
     height: 44px;
     width: auto;
-    max-width: 100%;
     display: block;
-    object-fit: contain;
 }
 
 /* mobile: stack */
