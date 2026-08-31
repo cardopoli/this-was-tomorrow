@@ -1,259 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} · This Was Tomorrow</title>
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
   <style>
-    :root { --fluo: #c6f500; --vt: 'VT323', monospace; }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --fluo: #c6f500; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; color: var(--fluo); font-family: var(--sans); min-height: 100vh; }
 
-    body {
-      background: #000;
-      color: var(--fluo);
-      font-family: var(--vt);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+    /* keyboard focus — visible, on-brand */
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--fluo); outline-offset: 3px; }
 
-    a { color: var(--fluo); }
-    a:hover { opacity: 0.7; }
+    /* ---- bitmapped B&W backdrop (CSS filter — swap for real 1-bit exports later) ---- */
+    .bmp { position: fixed; inset: 0; z-index: 0; background-size: cover; background-position: center;
+           filter: grayscale(1) contrast(1.5) brightness(1.05); }
+    .bmp::after { content: ""; position: absolute; inset: 0;
+           background-image: radial-gradient(circle, #000 0.7px, transparent 0.8px);
+           background-size: 3px 3px; mix-blend-mode: multiply; opacity: 0.6; }
+    .veil { position: fixed; inset: 0; z-index: 1; background: rgba(0,0,0,0.4); }
 
-    a:focus-visible { outline: 2px solid var(--fluo); outline-offset: 3px; }
+    /* ---- layout ---- */
+    .content { position: relative; z-index: 2; max-width: 520px; margin: 0 auto; padding: 34px 22px 48px; }
+    .back   { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); text-decoration: none; border-bottom: 1px solid var(--fluo); padding-bottom: 2px; margin-bottom: 26px; }
+    .kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+    .title  { font-size: 30px; font-weight: 800; line-height: 1.05; letter-spacing: -0.5px; margin: 10px 0 6px; }
+    .where  { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
+    .cap    { font-size: 15px; line-height: 1.55; color: var(--fluo); max-width: 46ch; margin-bottom: 30px; }
+    .cap p  { margin-bottom: 0.8em; }
 
-    .content {
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
+    /* ---- audio: transparent fluo player over the image ---- */
+    .content .twt-playlist,
+    .content .twt-playlist * { background: transparent !important; color: var(--fluo) !important; border-color: var(--fluo) !important; }
+    .content .twt-playlist svg { fill: var(--fluo) !important; }
+    .content .twt-play-icon,
+    .content .twt-playlist-item-play { display: none !important; }               /* emoji-proof: kill the ▶ glyph */
+    .content .twt-player-btn { position: relative !important; }
+    .content .twt-player-btn::before {                                            /* draw the triangle instead */
+      content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-40%, -50%);
+      width: 0; height: 0; border-style: solid; border-width: 9px 0 9px 15px;
+      border-color: transparent transparent transparent var(--fluo); }
+    .content .twt-player-btn.is-playing::before {          /* playing = pause bars (standard), CSS-drawn so no emoji */
+      border: none; width: 13px; height: 15px;
+      background: linear-gradient(to right, var(--fluo) 0 4px, transparent 4px 9px, var(--fluo) 9px 13px);
+      transform: translate(-50%, -50%); }
+    .content .twt-player-fill,
+    .content .twt-player-handle { background: var(--fluo) !important; }
+    .content .twt-player-bar    { background: rgba(198,245,0,0.28) !important; height: 4px !important; }
+    .content .twt-player-handle { width: 14px !important; height: 14px !important; }
 
-    /* ---- BACK ---- */
-    .back {
-      display: inline-block;
-      font-family: var(--mono, monospace);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--fluo);
-      text-decoration: none;
-      border-bottom: 1px solid var(--fluo);
-      padding-bottom: 2px;
-      margin-bottom: 56px;
-    }
-
-    /* ---- HEADER ---- */
-    .ty-header {
-      border-bottom: 2px solid var(--fluo);
-      padding-bottom: 24px;
-      margin-bottom: 48px;
-    }
-
-    .ty-header .kicker {
-      font-family: var(--mono, monospace);
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      opacity: 0.5;
-      margin-bottom: 10px;
-    }
-
-    .ty-header h1 {
-      font-family: var(--vt);
-      font-size: clamp(52px, 11vw, 96px);
-      line-height: 0.92;
-      text-transform: uppercase;
-    }
-
-    /* ---- OPENING NOTE ---- */
-    .ty-note {
-      font-family: var(--vt);
-      font-size: clamp(22px, 3.5vw, 28px);
-      line-height: 1.35;
-      margin-bottom: 48px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .ty-note.visible { opacity: 1; transform: none; }
-
-    /* ---- THANKS SECTIONS ---- */
-    .ty-section {
-      margin-bottom: 40px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .ty-section.visible { opacity: 1; transform: none; }
-
-    .ty-section h2 {
-      font-family: var(--mono, monospace);
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      opacity: 0.45;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(198,245,0,0.2);
-    }
-
-    .ty-section ul {
-      list-style: none;
-    }
-
-    .ty-section ul li {
-      font-family: var(--vt);
-      font-size: clamp(20px, 3vw, 26px);
-      line-height: 1.3;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(198,245,0,0.08);
-    }
-
-    .ty-section ul li:last-child { border-bottom: none; }
-
-    .ty-section ul li .role {
-      font-family: var(--mono, monospace);
-      font-size: 9px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.4;
-      margin-left: 8px;
-    }
-
-    /* ---- FUNDER BLOCK ---- */
-    .ty-funder {
-      margin-top: 48px;
-      padding-top: 28px;
-      border-top: 2px solid rgba(198,245,0,0.2);
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .ty-funder.visible { opacity: 1; transform: none; }
-
-    .ty-funder img {
-      height: 44px;
-      width: auto;
-      filter: invert(1) brightness(1.15);
-      /* maps white/grey logos to fluo - adjust if ACE logo looks off */
-      margin-bottom: 14px;
-    }
-
-    .ty-funder p {
-      font-family: var(--mono, monospace);
-      font-size: 10px;
-      letter-spacing: 1px;
-      line-height: 1.7;
-      opacity: 0.5;
-      max-width: 48ch;
-    }
-
-    /* ---- FOOTER ---- */
-    .ty-footer {
-      margin-top: 56px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(198,245,0,0.15);
-    }
-
-    .ty-footer a {
-      font-family: var(--mono, monospace);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(198,245,0,0.4);
-      padding-bottom: 2px;
-    }
-
-    .ty-footer a:hover { opacity: 1; border-color: var(--fluo); }
-
-    .ty-copyright {
-      margin-top: 20px;
-      font-family: var(--mono, monospace);
-      font-size: 9px;
-      letter-spacing: 1px;
-      opacity: 0.3;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .ty-note, .ty-section, .ty-funder {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-    }
+    /* ---- foot navigation: index (top), siblings + deep link (here) — one congruent set ---- */
+    .full { display: inline-block; margin-top: 40px; font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.9; text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); padding-bottom: 3px; }
+    .full:hover { opacity: 1; }
+    .pager { display: flex; justify-content: space-between; gap: 18px; margin-top: 34px; }
+    .pg    { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.75; text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); padding-bottom: 3px; max-width: 46%; }
+    .pg:hover { opacity: 1; }
+    .pg-next { margin-left: auto; text-align: right; }
 
     @media (max-width: 600px) {
-      .content { padding: 32px 16px 60px; }
+      .title { font-size: 34px; }
+      .content { padding: 30px 20px 44px; }
+    }
+
+    /* respect reduced-motion — hold the fades still */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
   </style>
 </head>
 
 <body>
+  {{ with .Params.exhibit_image }}<div class="bmp" style="background-image:url('{{ . }}')"></div>{{ end }}
+  <div class="veil"></div>
+
   <main class="content">
+    {{ with .Site.GetPage "/exhibition" }}<a class="back" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
 
-    <a class="back" href="/">&larr; This Was Tomorrow</a>
-
-    <header class="ty-header">
+    <header>
       <p class="kicker">This Was Tomorrow</p>
-      <h1>{{ .Title }}</h1>
+      <h1 class="title">{{ .Title }}</h1>
+      {{ with .Params.location }}<p class="where">{{ . }}</p>{{ end }}
     </header>
 
-    {{ with .Params.note }}
-    <p class="ty-note" data-fade>{{ . | markdownify }}</p>
-    {{ end }}
+    {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
 
-    {{ range .Params.sections }}
-    <div class="ty-section" data-fade>
-      {{ with .heading }}<h2>{{ . }}</h2>{{ end }}
-      {{ with .people }}
-      <ul>
-        {{ range . }}
-        <li>
-          {{ .name }}{{ with .role }}<span class="role">{{ . }}</span>{{ end }}
-        </li>
-        {{ end }}
-      </ul>
+    {{ .Content }}
+
+    <footer>
+      {{ with .GetPage (printf "/sites/%s" .File.ContentBaseName) }}<a class="full" href="{{ .RelPermalink }}">the full page &rarr;</a>{{ end }}
+
+      {{/* move across the show — prev / next location. Swap PrevInSection/NextInSection if the direction reads reversed for your ordering. */}}
+      {{ if or .PrevInSection .NextInSection }}
+      <nav class="pager" aria-label="Other locations">
+        {{ with .PrevInSection }}<a class="pg" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ end }}
+        {{ with .NextInSection }}<a class="pg pg-next" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+      </nav>
       {{ end }}
-      {{ with .text }}
-      <p style="font-family:var(--vt);font-size:clamp(20px,3vw,26px);line-height:1.35;">{{ . | markdownify }}</p>
-      {{ end }}
-    </div>
-    {{ end }}
 
-    <div class="ty-funder" data-fade>
-      <img src="{{ "/images/lottery_Logo_Black_RGB.png" | relURL }}" alt="Supported by Arts Council England">
-      <p>{{ .Params.funder_note | default "Supported using public funding by Arts Council England through the Developing Your Creative Practice programme." }}</p>
-    </div>
-
-
-
+      <noscript><p style="margin-top:24px;font-family:var(--mono);font-size:11px;opacity:0.8">Turn on JavaScript for the audio — or open the full page above.</p></noscript>
+    </footer>
   </main>
 
+  <script src="{{ "JS/supercharged.js" | relURL }}"></script>
   <script>
     (function () {
-      var items = document.querySelectorAll('[data-fade]');
-      if (!items.length) return;
-
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      items.forEach(function (el) { io.observe(el); });
+      function wire() {
+        var au = document.querySelector('.content audio');
+        var btn = document.querySelector('.content .twt-player-btn');
+        if (!au || !btn) { setTimeout(wire, 150); return; }   // player builds after this runs
+        function sync() { btn.classList.toggle('is-playing', !au.paused); }
+        au.addEventListener('play', sync);
+        au.addEventListener('pause', sync);
+        au.addEventListener('ended', sync);
+      }
+      wire();
     })();
   </script>
 </body>
