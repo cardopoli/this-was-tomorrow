@@ -230,12 +230,11 @@
     </div>
     {{ end }}
 
-    <div class="ty-funder" data-fade>
-      <img src="{{ "/images/lottery_Logo_Black_RGB.png" | relURL }}" alt="Supported by Arts Council England">
-      <p>{{ .Params.funder_note | default "Supported using public funding by Arts Council England through the Developing Your Creative Practice programme." }}</p>
-    </div>
-
-
+  <style>
+    .site-footer { --text:#f0ede8; --muted:rgba(240,237,232,0.5); --rule:rgba(240,237,232,0.15); border-top-color:#f0ede8; }
+    .site-footer img { filter:invert(1) brightness(1.15); }
+  </style>
+  {{ partial "footer.html" . }}
 
   </main>
 
