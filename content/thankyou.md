@@ -57,7 +57,7 @@ sections:
       - name: Judith Martin
         role: for being not only the spark to all this but a constant positive reinforcement
       - name: Rosamond Martin
-        role: Rosamond Martin - for her intelligence, her generosity, and her spirit. For giving so much, to so many, every single day. And for everything she gives me.
+        role: For her intelligence, her generosity, and her spirit. For giving so much, to so many, every single day. And for everything she gives me.
     text: ''
 funder_note: Supported using public funding by Arts Council England through the Developing Your Creative Practice programme.
 copyright: © Enrico Policardo 2026. All rights reserved. No reproduction without written permission. Moral rights asserted.
