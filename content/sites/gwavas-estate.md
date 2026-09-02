@@ -5,7 +5,7 @@ lat: 50.1027
 lng: -5.5477
 status: visited
 visit_date: 17/06/2026
-draft: false
+draft: true
 description: ''
 photos: []
 image: /images/image-low-res_3000px_60_jpeg-2.webp
