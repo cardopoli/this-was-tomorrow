@@ -1,11 +1,9 @@
 ---
 title: Gwavas Estate
 location: Newlyn, Cornwall
-lat: 50.1027
-lng: -5.5477
 status: visited
 visit_date: 17/06/2026
-draft: true
+draft: false
 description: ''
 photos: []
 image: /images/image-low-res_3000px_60_jpeg-2.webp
@@ -35,5 +33,7 @@ body_after: |-
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/vi0h6ng2xoxxazc9v4yfq/AKpyQe6qixYoDJ1zHIqNnx0?rlkey=eff9qtk7pd3vls4f79zrk83yr&dl=0
 audio: []
 sources: []
+lng: -5.5477
+lat: 50.1027
 slug: gwavas
 ---
