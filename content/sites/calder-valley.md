@@ -99,3 +99,9 @@ CVCLT has taken a lease from Network Rail on the decommissioned Grade II listed 
 The former warden's cottage at Jerusalem Farm - leased from Calderdale Council for 20 years - is now retrofitted and let at an affordable rent to a local family, after years empty and deteriorating.
 
 In partnership with a Todmorden Almshouse charity, CVCLT developed six two-bedroom bungalows for independent living in Walsden. They are let to people aged 65 and over with a strong connection to the local area or a strong need to be there.
+
+### Further reading
+
+- [Calder Valley Community Land Trust](https://caldervalleyclt.org.uk/)
+- [CPRE: Calder Valley CLT case study](https://www.cpre.org.uk/what-we-care-about/better-places-to-live/homes-people-can-afford/rural-affordable-housing-case-studies/calder-valley-community-land-trust/)
+- [MyCommunity: Calder Valley CLT](https://mycommunity.org.uk/calder-valley-community-land-trust-new-housing-solutions-for-hebden-bridge)

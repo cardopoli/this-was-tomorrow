@@ -95,10 +95,10 @@ Photographically, the project poses questions about thresholds: between private 
 
 ### Further reading
 
-- OWCH official website (owch.org.uk, now newgroundcohousing.uk)
-- OWCH History pages
-- New Ground Cohousing pages
-- Architecture Foundation: New Ground co-housing
+- [New Ground Cohousing](https://www.newgroundcohousing.uk/)
+- [OWCH history](https://www.owch.org.uk/history/)
+- [UK Cohousing Network: New Ground](https://cohousing.org.uk/case-study/new-ground-older-womens-cohousing-community-owch-high-barnet/)
+- [Right to Build Toolkit: New Ground case study](https://righttobuildtoolkit.org.uk/case-studies/new-ground/)
 - RIBA: This is how to live
 - Dezeen: Pollard Thomas Edwards completes UK's first over 50s co-housing scheme
 - UK Cohousing Network: New Ground cohousing development case study

@@ -97,3 +97,10 @@ The question posed is structural and urgent: in a context of gentrification, mar
 - Confederation of Co-operative Housing: The Hastings Commons – A large scale urban community led housing ecosystem case study
 - Jess Steele blog: Community Housing in Hastings (Hastings Commons CEO)
 - Various Hastings Commons project pages (Rock House, Observer Building, OB Homes, etc.)
+
+### Further reading
+
+- [Hastings Commons](https://hastingscommons.com/)
+- [Jericho Road Solutions: Hastings](http://www.jerichoroad.co.uk/reinvestment/hastings/)
+- [Power to Change: White Rock Neighbourhood Ventures](https://powertochange.org.uk/case_study/white-rock-neighbourhood-ventures)
+- [CCH case study: Hastings Commons](https://www.cch.coop/wp-content/uploads/2020/08/cch_casestudy_Hastings-Commons-WEB-SINGLES.pdf)

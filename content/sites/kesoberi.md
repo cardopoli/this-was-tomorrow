@@ -56,4 +56,4 @@ slug: kesoberi-community-farm
 
 ### Further reading
 
-Kesoberi Housing Cooperative, near Newlyn, Cornwall.
+[Kesoberi Community Farm](https://kesoberi.org.uk/) - housing cooperative near Newlyn, Cornwall.

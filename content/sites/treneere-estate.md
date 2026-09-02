@@ -68,4 +68,4 @@ slug: treneere-estate
 
 ### Further reading
 
-Whole Again Communities: based on Treneere Estate, Penzance.
+[Whole Again Communities](https://www.wholeagaincommunities.org.uk/) - based on Treneere Estate, Penzance.
