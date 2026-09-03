@@ -5,7 +5,7 @@ hero: /images/twt_wobble.gif
 links_line: Read the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
 host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
 downloads:
-  - label: Press Kit
+  - label: Curation /// Info Packs
     file: /downloads/enrico_policardo_twt_press_kit.pdf
     note: Press kit with essential info about the project
   - label: One-page overview (PDF)
