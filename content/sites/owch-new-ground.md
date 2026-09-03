@@ -97,8 +97,13 @@ Photographically, the project poses questions about thresholds: between private 
 
 - [New Ground Cohousing](https://www.newgroundcohousing.uk/)
 - [OWCH history](https://www.owch.org.uk/history/)
-- [UK Cohousing Network: New Ground](https://cohousing.org.uk/case-study/new-ground-older-womens-cohousing-community-owch-high-barnet/)
-- [Right to Build Toolkit: New Ground case study](https://righttobuildtoolkit.org.uk/case-studies/new-ground/)
+- [RIBA Journal: This is how to live](https://www.ribaj.com/buildings/new-ground) - review of New Ground by the RIBA Journal
+- [Dezeen: Pollard Thomas Edwards completes UK's first over-50s co-housing scheme](https://www.dezeen.com/2016/12/09/pollard-thomas-edwards-architecture-first-older-co-housing-scheme-owch-uk/)
+- [Pollard Thomas Edwards: New Ground Cohousing](https://www.pollardthomasedwards.co.uk/what-we-do/index/new-ground-cohousing/) - the architects' own project page
+- [UK Cohousing Network: New Ground case study](https://cohousing.org.uk/case-study/new-ground-cohousing-development-inspiring-example-not-might-live-get-older-live-cities/)
+- [Housing LIN: OWCH case study](https://www.housinglin.org.uk/_assets/Resources/Housing/Practice_examples/Housing_LIN_case_studies/HLIN_CaseStudy-139_OWCH.pdf) - PDF
+- [HAPPI Report (2009)](https://www.gov.uk/government/publications/housing-our-ageing-population-panel-for-innovation) - Housing our Ageing Population: Panel for Innovation; the policy context for New Ground
+- [New Ground resources page](https://www.newgroundcohousing.uk/resources) - comprehensive reading list compiled by the residents
 - RIBA: This is how to live
 - Dezeen: Pollard Thomas Edwards completes UK's first over 50s co-housing scheme
 - UK Cohousing Network: New Ground cohousing development case study
