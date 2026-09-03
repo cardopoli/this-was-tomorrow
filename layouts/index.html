@@ -7,6 +7,10 @@
     <div class="intro">{{ .Content }}</div>
     {{ end }}
 
+    {{ with .Params.framing }}
+    <div class="site-framing">{{ . | markdownify }}</div>
+    {{ end }}
+
     <ul class="site-list">
         {{ range (where .Site.RegularPages "Section" "sites").ByTitle }}
         <li class="status-{{ .Params.status | default "planned" }}">

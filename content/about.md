@@ -40,4 +40,9 @@ More work at [enricopolicardo.com](https://enricopolicardo.com).
 
 [info@enricopolicardo.com](mailto:info@enricopolicardo.com)
 
-[Thank you →](/twtthanks/)
+[enricopolicardo.com](https://enricopolicardo.com)
+
+---
+
+[Thoughts →](/thoughts/) · [Thank you →](/twtthanks/)
+
