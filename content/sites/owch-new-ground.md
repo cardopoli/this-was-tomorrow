@@ -1,8 +1,6 @@
 ---
 title: OWCH / New Ground Cohousing
 location: High Barnet, London
-lat: 51.6262
-lng: -0.1954
 status: visited
 visit_date: 24-04-2026
 draft: false
@@ -48,6 +46,8 @@ body_after: ''
 dropbox_gallery_3: ''
 audio: []
 sources: []
+lng: -0.1954
+lat: 51.6262
 slug: owch-new-ground
 ---
 
@@ -104,9 +104,3 @@ Photographically, the project poses questions about thresholds: between private 
 - [Housing LIN: OWCH case study](https://www.housinglin.org.uk/_assets/Resources/Housing/Practice_examples/Housing_LIN_case_studies/HLIN_CaseStudy-139_OWCH.pdf) - PDF
 - [HAPPI Report (2009)](https://www.gov.uk/government/publications/housing-our-ageing-population-panel-for-innovation) - Housing our Ageing Population: Panel for Innovation; the policy context for New Ground
 - [New Ground resources page](https://www.newgroundcohousing.uk/resources) - comprehensive reading list compiled by the residents
-- RIBA: This is how to live
-- Dezeen: Pollard Thomas Edwards completes UK's first over 50s co-housing scheme
-- UK Cohousing Network: New Ground cohousing development case study
-- Housing LIN case studies on OWCH
-- Maria Brenton publications on senior cohousing
-- HAPPI Report (2009)
