@@ -46,7 +46,6 @@ drop a line [info@enricopolicardo.com](mailto:info@enricopolicardo.com) or visit
 
 [Some thoughts](https://thiswastomorrow.co.uk/thoughts/)
 
-
-
+[Some thanks](https://thiswastomorrow.co.uk/twtthanks/)
 
 ######
