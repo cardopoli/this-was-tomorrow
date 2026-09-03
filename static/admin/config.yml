@@ -254,6 +254,14 @@ collections:
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
 
+      - name: press
+        label: Press
+        file: content/press.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: body, label: Content, widget: markdown }
+
       - name: thoughts
         label: Thoughts
         file: content/thoughts.md
