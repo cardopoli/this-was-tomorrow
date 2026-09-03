@@ -375,19 +375,6 @@ img { max-width: 100%; height: auto; display: block; }
     font-family: var(--mono);
 }
 
-.site-framing {
-    margin: 32px 0 28px;
-    padding: 24px 0;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    font-family: var(--mono);
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--muted);
-}
-.site-framing p { margin: 0; }
-.site-framing p + p { margin-top: 4px; }
-
 /* AUDIO */
 
 .audio-section {
