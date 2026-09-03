@@ -3,6 +3,8 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
+  {{ with .Content }}<div class="map-intro">{{ . }}</div>{{ end }}
+
   {{ $sites := slice }}
   {{ range (where (where .Site.RegularPages "Section" "sites") ".Params.status" "visited").ByTitle }}
     {{ if .Params.lat }}{{ $sites = $sites | append (dict "name" .Title "location" .Params.location "lat" .Params.lat "lng" .Params.lng "url" .RelPermalink) }}{{ end }}

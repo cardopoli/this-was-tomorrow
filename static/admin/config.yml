@@ -245,6 +245,7 @@ collections:
         fields:
           - { name: title, label: Site title (browser tab), widget: string }
           - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the list of sites." }
+          - { name: framing, label: Framing block, widget: text, required: false, hint: "The line before the site list - the question and speculative tool line." }
 
       - name: map
         label: Map
@@ -253,6 +254,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
+          - { name: body, label: Intro text, widget: markdown, required: false, hint: "Text shown above the map." }
 
       - name: press
         label: Press
