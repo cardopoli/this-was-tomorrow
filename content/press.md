@@ -6,20 +6,14 @@ layout: about
 
 _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
 
-Thirteen sites. Thirteen communities. Photographs shown without the people who live in them. Voices kept separate, never explaining the image.
-
 Supported by Arts Council England through the Developing Your Creative Practice (DYCP) scheme.
 
 ## Downloads
 
-- [Exhibit pack (PDF)](/downloads/enrico_policardo_twt_xhbt-pack.pdf) - full documentation: project statement, curation notes, print specifications, and a plate for each site.
-- [One-page overview (PDF)](/downloads/enrico_policardo_twt_one-pager.pdf) - the project on a single sheet.
-- [Curation and print notes (PDF)](/downloads/enrico_policardo_twt_curation-info.pdf) - install sizes, materials and method.
+Press Kit available for download [here](https://thiswastomorrow.co.uk/downloads/enrico_policardo_twt_press_kit.pdf).
 
 ## Contact
 
-For press enquiries, image requests, and interview opportunities:
+For press enquiries, image requests, and anything else please drop and email to [info@enricopolicardo.com](mailto:info@enricopolicardo.com)
 
-[info@enricopolicardo.com](mailto:info@enricopolicardo.com)
-
-[enricopolicardo.com](https://enricopolicardo.com)
+For more work please visit [enricopolicardo.com](https://enricopolicardo.com)
