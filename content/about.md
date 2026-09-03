@@ -38,9 +38,15 @@ More work at [enricopolicardo.com](https://enricopolicardo.com).
 
 ## Get in touch
 
-[info@enricopolicardo.com](mailto:info@enricopolicardo.com)
-
-[enricopolicardo.com](https://enricopolicardo.com)
+drop a line [info@enricopolicardo.com](mailto:info@enricopolicardo.com) or visit [enricopolicardo.com](https://enricopolicardo.com)
 
 ***
-[Thoughts]→(/thoughts/) · [Thank you ]→(/twtthanks/)
+
+###### A couple of other things
+
+[Some thoughts](https://thiswastomorrow.co.uk/thoughts/)
+
+
+
+
+######
