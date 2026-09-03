@@ -42,7 +42,5 @@ More work at [enricopolicardo.com](https://enricopolicardo.com).
 
 [enricopolicardo.com](https://enricopolicardo.com)
 
----
-
-[Thoughts →](/thoughts/) · [Thank you →](/twtthanks/)
-
+***
+[Thoughts]→(/thoughts/) · [Thank you ]→(/twtthanks/)
