@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- TITLE -->
-    <title>{{ if .IsHome }}{{ .Site.Title }} - Site Visit Archive{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · This Was Tomorrow{{ end }}</title>
 
     <!-- DESCRIPTION -->
     {{- $desc := .Site.Params.description -}}

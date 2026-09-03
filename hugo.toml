@@ -1,7 +1,7 @@
 baseURL = "https://thiswastomorrow.co.uk/"
 enableRobotsTXT = true
 languageCode = "en-gb"
-title = "This Was Tomorrow"
+title = "This Was Tomorrow: Is This the Future We Were Dreaming Of?"
 
 [params]
   description = "A long-term audio-visual investigation by Enrico Policardo into community-led housing across the UK."
