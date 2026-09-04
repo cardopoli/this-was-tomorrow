@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <style>
+    :root { --fluo: #c6f500; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: #f0ede8;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      min-height: 100vh;
+      padding: 0 0 48px;
+    }
+
+    a { color: var(--fluo); text-decoration: none; }
+    a:hover { opacity: 0.75; }
+    a:focus-visible { outline: 2px solid var(--fluo); outline-offset: 3px; }
+
+    /* ---- header ---- */
+    .lib-header {
+      padding: 32px 24px 20px;
+      border-bottom: 1px solid rgba(198,245,0,0.2);
+      margin-bottom: 32px;
+    }
+    .lib-title {
+      font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(22px, 6vw, 36px);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      color: #f0ede8;
+      margin-bottom: 6px;
+    }
+    .lib-tagline {
+      font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(13px, 3.5vw, 18px);
+      color: rgba(240,237,232,0.6);
+      line-height: 1.2;
+    }
+
+    /* ---- sections ---- */
+    .lib-section {
+      padding: 0 24px;
+      margin-bottom: 36px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .lib-section.visible { opacity: 1; transform: none; }
+
+    .lib-section-label {
+      font-family: 'FreeMono', 'Courier New', monospace;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(198,245,0,0.5);
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(198,245,0,0.15);
+      padding-bottom: 8px;
+    }
+
+    /* ---- links ---- */
+    .lib-link {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(240,237,232,0.08);
+      color: #f0ede8;
+    }
+    .lib-link:last-child { border-bottom: none; }
+    .lib-link-label { flex: 1; }
+    .lib-link-arrow { color: var(--fluo); font-family: 'FreeMono', monospace; font-size: 14px; flex-shrink: 0; }
+    .lib-link.download .lib-link-label::after {
+      content: " ↓";
+      font-size: 12px;
+      color: var(--fluo);
+      opacity: 0.6;
+    }
+
+    /* ---- exhibition updates ---- */
+    .lib-event {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(240,237,232,0.08);
+    }
+    .lib-event:last-child { border-bottom: none; }
+    .lib-event-date {
+      font-family: 'FreeMono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--fluo);
+      opacity: 0.7;
+      margin-bottom: 4px;
+    }
+    .lib-event-title { color: #f0ede8; }
+    .lib-event-location { color: rgba(240,237,232,0.5); font-size: 15px; }
+
+    /* ---- footer ---- */
+    .lib-footer {
+      padding: 24px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(198,245,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .lib-footer-text { font-family: 'FreeMono', monospace; font-size: 10px; color: rgba(240,237,232,0.4); line-height: 1.6; }
+    .lib-footer-text a { color: rgba(240,237,232,0.4); }
+    .lib-footer-text a:hover { color: var(--fluo); }
+    .lib-footer-logo img { height: 36px; width: auto; filter: invert(1) brightness(1.15); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lib-section { transition: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="lib-header" data-fade>
+    <p class="lib-title">{{ .Site.Title }}</p>
+    <p class="lib-tagline">{{ .Site.Params.tagline }}</p>
+  </header>
+
+  {{ with .Params.updates }}
+  <section class="lib-section" data-fade aria-label="Exhibition updates">
+    <p class="lib-section-label">What's on</p>
+    {{ range . }}
+    <div class="lib-event">
+      <p class="lib-event-date">{{ .date }}</p>
+      {{ if .url }}<a href="{{ .url }}">{{ else }}<div>{{ end }}
+        <p class="lib-event-title">{{ .title }}</p>
+        {{ with .location }}<p class="lib-event-location">{{ . }}</p>{{ end }}
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{ with .Params.links }}
+  <section class="lib-section" data-fade aria-label="Links">
+    <p class="lib-section-label">Links</p>
+    {{ range . }}
+    <a class="lib-link{{ if .download }} download{{ end }}" href="{{ .url }}">
+      <span class="lib-link-label">{{ .label }}</span>
+      <span class="lib-link-arrow">→</span>
+    </a>
+    {{ end }}
+  </section>
+  {{ end }}
+
+  <div class="lib-footer">
+    <div class="lib-footer-text">
+      <p><a href="https://thiswastomorrow.co.uk">thiswastomorrow.co.uk</a> · <a href="https://enricopolicardo.com">enricopolicardo.com</a></p>
+      <p>Supported using public funding by Arts Council England (DYCP)</p>
+    </div>
+    <div class="lib-footer-logo">
+      <a href="https://www.artscouncil.org.uk/dycp" target="_blank" rel="noopener">
+        <img src="/images/lottery_logo_white-rgb.webp" alt="Supported using public funding by Arts Council England">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll('[data-fade]');
+      if (!items.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>

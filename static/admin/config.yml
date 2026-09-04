@@ -25,6 +25,34 @@ media_libraries:
           - image/tiff
 
 collections:
+  - name: linkinbio
+    label: Link in Bio
+    files:
+      - name: linkinbio
+        label: Instagram link-in-bio page
+        file: content/linkinbio.md
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - name: updates
+            label: "What's on"
+            widget: list
+            label_singular: Event
+            summary: "{{fields.date}} - {{fields.title}}"
+            fields:
+              - { name: date, label: Date, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: url, label: Link URL, widget: string, required: false }
+          - name: links
+            label: Links
+            widget: list
+            label_singular: Link
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+              - { name: download, label: Download, widget: boolean, default: false, required: false }
+
 
   - name: sites
     label: Sites
