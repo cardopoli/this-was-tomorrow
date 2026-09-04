@@ -2,20 +2,21 @@
 title: Voices and Places
 intro: |-
   Communities across the UK who have taken housing into their own hands.
+
   Large photographs, pasted to walls, unframed.
 
-  No people portrayed in the images. 
+  No people portrayed in the images.
   Instead, a QR code beside each one links to the voice of someone who lives there.
 
-  The gap between what you see and what you hear isn't just aesthetic, it's functional. The gap forces you to do something. To complete the picture yourself. And that act of completion, however small, is the same as the creative act required to imagine futures that don't exist yet. 
+  The gap between what you see and what you hear isn't just aesthetic, it's functional. The gap forces you to do something. To complete the picture yourself. And that act of completion, however small, is the same as the creative act required to imagine futures that don't exist yet. 
 
-  We live in a time that hands us finished things - finished products, finished stories, finished futures. The people with the resources to dream and build at scale get more practice. 
+  We live in a time that hands us finished things - finished products, finished stories, finished futures. The people with the resources to dream and build at scale get more practice. 
   We get their futures to live in.
 
-  These places you see are proof that something else is still possible.
-  Pick one. If you can, listen - for something to read click here: https://thiswastomorrow.co.uk/quotes/
+  This website also hosts [full information](https://thiswastomorrow.co.uk), with photographs and interviews from [each location](https://thiswastomorrow.co.uk/map/), as well as a selection of [quotes](https://thiswastomorrow.co.uk/quotes/) taken from all the interviews.
 
-  The people you hear are the people already doing it.
+  These places are proof that something else is still possible.
+  The people you see, read about, and listen to here, are the people already doing it.
 hero: /images/twt_wobble.gif
 links_line: Read the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
 host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
