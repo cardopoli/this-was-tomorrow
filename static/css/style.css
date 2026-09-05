@@ -266,9 +266,11 @@ img { max-width: 100%; height: auto; display: block; }
 
 .site-list {
     list-style: none;
+    padding-left: 0;
 }
 
 .site-list li {
+    list-style: none;
     border-bottom: 1px solid var(--rule);
 }
 
@@ -657,15 +659,16 @@ article li {
 
 @media (max-width: 600px) {
     html, body { overflow-x: hidden; }
+    body { font-size: 16px; line-height: 1.4; }
     .wrap { padding: 0 16px; max-width: 100%; }
     .site-header h1 { font-size: 44px; letter-spacing: -0.5px; }
     .site-header .tagline {
     font-family: 'AGProExt', 'AGPro', Arial, sans-serif;
     font-style: italic; font-size: 17px; }
-    .site-list a { flex-direction: column; gap: 2px; }
+    .site-list a { flex-direction: column; gap: 4px; }
     .site-list .name { white-space: normal; }
-    .site-list .location { text-align: left; margin-left: 0; white-space: normal; }
-    .visited-badge { margin-left: 6px; }
+    .site-list .location { text-align: left; margin-left: 0; white-space: normal; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .visited-badge { margin-left: 0; }
     .audio-section { padding: 16px; }
     .photos-grid { grid-template-columns: 1fr; }
     .map-embed iframe { height: 360px; }
