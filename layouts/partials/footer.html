@@ -2,7 +2,7 @@
 
   <div class="footer-body">
     <div class="footer-left">
-      {{ with .Site.Params.tagline }}<p class="footer-tagline">{{ . }}</p>{{ end }}
+      {{ with .Site.Params.tagline }}<p class="footer-tagline">{{ replace . "Dreaming Of?" "Dreaming Of?" | safeHTML }}</p>{{ end }}
       {{ with .Site.Params.footer_project }}<p class="footer-desc">{{ . }}</p>{{ end }}
     </div>
     <nav class="footer-nav" aria-label="Site navigation">
