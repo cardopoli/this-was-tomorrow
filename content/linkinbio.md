@@ -6,7 +6,7 @@ updates:
     location: London
     url: https://pollardthomasedwards.co.uk/journal/open-house-festival-saturday-12-september-2026/
   - date: 12/09/2026 > Onwards
-    title: Is This The Future We Dreaming Of? - Hastings Commons
+    title: Is This The Future We Were Dreaming Of? - Hastings Commons
     location: Hastings
     url: https://www.heritageopendays.org.uk/submission-event/the-alley-and-the-commons.html
   - date: 19 – 20 Sep 2026
