@@ -26,7 +26,7 @@ People are everywhere in this work, just not in the frame.
 
 ## Supporters
 
-This work has been made possible by Arts Council England through the Developing Your Creative Practice (DYCP) scheme, and supported by Simon Vickery (Open House Festival Programme Manager), writer and photographer Thaddeus Zupančič, and architectural historian Judith Martin, co-author of the original _This Was Tomorrow_ publication.
+This work has been made possible by Arts Council England, and supported by Simon Vickery (Open House Festival Programme Manager), writer and photographer Thaddeus Zupančič, and architectural historian Judith Martin, co-author of the original _This Was Tomorrow_ publication.
 
 _This Was Tomorrow_ grew out of an earlier iteration and two editions of a book of the same title.
 
