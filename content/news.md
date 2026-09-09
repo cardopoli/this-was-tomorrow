@@ -5,7 +5,7 @@ layout: news
 kicker: This Was Tomorrow
 heading: Is this the future we were dreaming of?
 intro: |-
-  ![](/images/round-hero.png)
+  <img src="https://www.dropbox.com/scl/fi/340k22erd6s81ha7c1lya/round-hero.png?rlkey=nj02ymxhjmfjb5svj6ksxbns6&raw=1" alt="" style="width:75; max-width:450; display:block; margin-bottom:50px; ">
 
   For the past year I've been photographing community-led housing across the UK - cohousing, community land trusts, self-build, co-ops. A dozen communities the length of the country, shown as large prints with the residents' own voices beside them.
 
