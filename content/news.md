@@ -1,7 +1,7 @@
 ---
-title: What's On
+title: News
 description: Exhibitions and showings of This Was Tomorrow by Enrico Policardo.
-layout: whatson
+layout: news
 kicker: This Was Tomorrow
 heading: Is this the future we were dreaming of?
 intro: |-
