@@ -23,7 +23,7 @@ exhibitions:
   - name: Hastings Commons
     venue: Hastings Commons
     address: Hastings
-    dates: 12 >20 September 2026
+    dates: 12 September 2026 > Onwards
     times: ''
     status: confirmed
     note: ''
