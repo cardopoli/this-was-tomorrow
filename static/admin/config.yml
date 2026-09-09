@@ -304,3 +304,42 @@ collections:
               - { name: text, label: Text block, widget: text, required: false }
           - { name: funder_note, label: Funder note, widget: string, required: false }
           - { name: copyright, label: Copyright line, widget: string, required: false }
+
+
+      - name: news
+        label: News
+        file: content/news.md
+        description: The News / What's On page - project intro and the live exhibitions list.
+        fields:
+          - { name: title, label: Title, widget: hidden, default: News }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: layout, label: Layout, widget: hidden, default: news }
+          - { name: kicker, label: Kicker (small line above heading), widget: string, required: false }
+          - { name: heading, label: Heading, widget: string }
+          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw], required: false }
+
+          - name: exhibitions
+            label: Exhibitions
+            label_singular: Exhibition
+            widget: list
+            required: false
+            summary: "{{fields.name}} — {{fields.dates}} ({{fields.status}})"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: venue, label: Venue, widget: string, required: false }
+              - { name: address, label: Address, widget: string, required: false }
+              - { name: dates, label: Dates, widget: string, required: false, hint: "e.g. Saturday 12 September 2026" }
+              - { name: times, label: Times, widget: string, required: false, hint: "e.g. Drop in, 10am - 4pm" }
+              - name: status
+                label: Status
+                widget: select
+                options: [confirmed, tbc, past]
+                default: tbc
+                hint: "confirmed = green label, tbc = 'Coming up', past = greyed out"
+              - { name: note, label: Note, widget: text, required: false }
+              - { name: link, label: Link (optional), widget: string, required: false, hint: "e.g. Open House booking URL" }
+              - { name: link_label, label: Link button text, widget: string, required: false, hint: "e.g. Book on Open House" }
+
+          - { name: communities_line, label: Communities line, widget: text, required: false }
+          - { name: press_note, label: Press note, widget: markdown, modes: [rich_text, raw], required: false }
+          - { name: tagline, label: Tagline (italic, bottom), widget: string, required: false }
