@@ -20,22 +20,24 @@ exhibitions:
     note: Part of Open House Festival, celebrating ten years of New Ground cohousing.
     link: https://programme.openhouse.org.uk/listings/1375
     link_label: Book on Open House
-  - name: Cressingham Gardens Rotunda
-    venue: Cressingham Gardens
-    address: Rotunda, Cressingham Gardens, London SW2
-    dates: 19-20 September 2026
-    times: ''
-    status: confirmed
-    note: Part of Open House Festival. A talk on Cressingham accompanies the show on the 19th.
-    link: ''
-    link_label: ''
   - name: Hastings Commons
     venue: Hastings Commons
     address: Hastings
-    dates: September 2026
+    dates: 12 >20 September 2026
     times: ''
-    status: tbc
-    note: Dates being confirmed.
+    status: confirmed
+    note: ''
+    link: ''
+    link_label: ''
+  - name: Cressingham Gardens Rotunda
+    venue: Cressingham Gardens
+    address: Rotunda, Cressingham Gardens, London SW2
+    dates: 20 September 2026
+    times: ''
+    status: confirmed
+    note: |-
+      Part of Open House Festival. 
+      A talk on Cressingham accompanies event.
     link: ''
     link_label: ''
   - name: Calder Valley Community Land Trust
@@ -49,9 +51,9 @@ exhibitions:
     link_label: ''
 communities_line: Featuring the communities of Cressingham Gardens, OWCH / New Ground, Granby Four Streets, Two Up Two Down, Kitty's Launderette, LILAC, Calder Valley CLT, Hastings Commons, Tinker's Bubble, Trevone Quarry, Kesoberi and Treneere.
 press_note: |-
-  ![](/images/twt_wobble.gif)
-
   Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
+
+  ![](/images/twt_wobble.gif)
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
 slug: news
 ---
