@@ -1,0 +1,106 @@
+{{/*  Save as: layouts/whatson/single.html
+      Page uses:  layout: whatson  in its front matter.
+      Styled to match the thoughts / exhibition pages (black, fluo, VT323 heading + serif body). */}}
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} · This Was Tomorrow</title>
+  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --fluo:#c6f500; --vt:'VT323',monospace; --serif:'Averia Serif Libre',Georgia,serif; }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:#000; color:#fff; font-family:var(--serif); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    a { color:var(--fluo); }
+    a:hover { opacity:.7; }
+    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+
+    .kicker { font-family:var(--vt); font-size:20px; letter-spacing:2px; text-transform:uppercase; color:var(--fluo); margin-bottom:12px; }
+    h1 { font-family:var(--vt); font-size:64px; line-height:1; color:#fff; margin-bottom:32px; }
+    @media(max-width:600px){ h1{ font-size:44px; } }
+
+    .intro { font-size:18px; margin-bottom:16px; }
+    .intro p { margin-bottom:16px; }
+
+    .rule { border:0; border-top:1px solid #333; margin:48px 0; }
+
+    h2 { font-family:var(--vt); font-size:30px; letter-spacing:1px; text-transform:uppercase; color:var(--fluo); margin-bottom:28px; }
+
+    /* exhibition cards */
+    .exh { border-top:1px solid #333; padding:24px 0; }
+    .exh:last-of-type { border-bottom:1px solid #333; }
+    .exh .status { font-family:var(--vt); font-size:16px; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+    .exh .status.confirmed { color:var(--fluo); }
+    .exh .status.tbc { color:#888; }
+    .exh .status.past { color:#555; }
+    .exh h3 { font-size:22px; font-weight:700; margin-bottom:4px; color:#fff; }
+    .exh .venue { font-size:16px; color:#ccc; margin-bottom:10px; }
+    .exh .when { font-size:16px; margin-bottom:4px; }
+    .exh .when strong { color:#fff; }
+    .exh .addr { font-size:14px; color:#999; margin-bottom:10px; }
+    .exh .note { font-size:15px; color:#ccc; margin-bottom:12px; }
+    .exh .cta { display:inline-block; font-family:var(--vt); font-size:18px; letter-spacing:1px; text-transform:uppercase; border:1px solid var(--fluo); padding:8px 18px; text-decoration:none; }
+    .exh .cta:hover { background:var(--fluo); color:#000; opacity:1; }
+
+    .communities { font-size:15px; color:#ccc; margin-bottom:24px; }
+    .press-note { font-size:15px; color:#ccc; margin-bottom:48px; }
+    .tagline { font-family:var(--serif); font-style:italic; font-size:18px; color:#fff; text-align:center; margin:48px 0; }
+
+    /* ACE credit */
+    .ace { text-align:center; border-top:1px solid #333; padding-top:40px; margin-top:48px; }
+    .ace p { font-size:12px; color:#999; margin-bottom:14px; }
+    .ace img { height:56px; width:auto; }
+
+    .foot-links { text-align:center; font-family:var(--vt); font-size:18px; letter-spacing:1px; margin-top:40px; }
+    .foot-links a { margin:0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    {{ with .Params.kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+    <h1>{{ .Params.heading | default .Title }}</h1>
+
+    {{ with .Params.intro }}<div class="intro">{{ . | markdownify }}</div>{{ end }}
+
+    <hr class="rule">
+
+    <h2>What's on</h2>
+
+    {{ range .Params.exhibitions }}
+    <div class="exh">
+      {{ with .status }}<div class="status {{ . }}">{{ if eq . "tbc" }}Coming up{{ else if eq . "past" }}Past{{ else }}Confirmed{{ end }}</div>{{ end }}
+      <h3>{{ .name }}</h3>
+      {{ with .venue }}<div class="venue">{{ . }}</div>{{ end }}
+      {{ with .dates }}<div class="when"><strong>{{ . }}</strong></div>{{ end }}
+      {{ with .times }}<div class="when">{{ . }}</div>{{ end }}
+      {{ with .address }}<div class="addr">{{ . }}</div>{{ end }}
+      {{ with .note }}<div class="note">{{ . }}</div>{{ end }}
+      {{ if .link }}<a class="cta" href="{{ .link }}">{{ .link_label | default "More" }}</a>{{ end }}
+    </div>
+    {{ end }}
+
+    <hr class="rule">
+
+    {{ with .Params.communities_line }}<p class="communities">{{ . }}</p>{{ end }}
+    {{ with .Params.press_note }}<p class="press-note">{{ . | markdownify }}</p>{{ end }}
+
+    {{ with .Params.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
+
+    <div class="ace">
+      <p>Supported using public funding by the National Lottery through Arts Council England</p>
+      <a href="https://www.artscouncil.org.uk/dycp"><img src="/images/ace-logo-white.png" alt="Arts Council England"></a>
+    </div>
+
+    <div class="foot-links">
+      <a href="https://thiswastomorrow.co.uk">thiswastomorrow.co.uk</a> ·
+      <a href="https://www.instagram.com/cardopoli/">Instagram</a> ·
+      <a href="https://enricopolicardo.com">enricopolicardo.com</a>
+    </div>
+
+  </div>
+</body>
+</html>
