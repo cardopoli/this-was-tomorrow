@@ -1,89 +1,78 @@
-{{/*  Save as: layouts/news/single.html
-      Page uses:  layout: news  in its front matter.
-      Styled to match the thoughts / exhibition pages (black, fluo, VT323 heading + serif body). */}}
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="{{ .Site.LanguageCode | default "en-gb" }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }} · This Was Tomorrow</title>
-  <link rel="icon" href="{{ "/images/tumblr_3d00e55fb38d8b65bb11700ee4db779f_9b15eaf2_640.webp" | relURL }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <title>{{ .Title }} · {{ .Site.Title }}</title>
+  {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ else }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
-    :root { --fluo:#c6f500; --vt:'VT323',monospace; --serif:'Averia Serif Libre',Georgia,serif; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    body { background:#000; color:#fff; font-family:var(--serif); line-height:1.6; -webkit-font-smoothing:antialiased; }
-    a { color:var(--fluo); }
-    a:hover { opacity:.7; }
-    .wrap { max-width:760px; margin:0 auto; padding:48px 24px 96px; }
+    :root { --fluo: #c6f500; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; color: #f0ede8; font-family: 'VT323', monospace; font-size: 18px; line-height: 1.5; }
+    a { color: var(--fluo); text-decoration: none; }
+    a:hover { opacity: .75; }
+    a:focus-visible { outline: 2px solid var(--fluo); outline-offset: 3px; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
 
-    .kicker { font-family:var(--vt); font-size:20px; letter-spacing:2px; text-transform:uppercase; color:var(--fluo); margin-bottom:12px; }
-    h1 { font-family:var(--vt); font-size:64px; line-height:1; color:#fff; margin-bottom:32px; }
-    @media(max-width:600px){ h1{ font-size:44px; } }
+    .news-kicker { font-family: 'FreeMono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(198,245,0,0.6); margin-bottom: 12px; }
+    .news-heading { font-family: 'AGProExt', 'AGPro', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 7vw, 56px); line-height: 1.0; letter-spacing: -0.5px; color: #f0ede8; margin-bottom: 32px; }
+    .news-intro { font-family: 'AGPro', Arial, sans-serif; font-size: 16px; line-height: 1.65; color: rgba(240,237,232,0.85); margin-bottom: 40px; }
+    .news-intro p { margin-bottom: 14px; }
+    .news-intro img { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+    .rule { border: 0; border-top: 1px solid rgba(198,245,0,0.15); margin: 40px 0; }
+    .news-section-label { font-family: 'FreeMono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(198,245,0,0.5); margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid rgba(198,245,0,0.15); }
 
-    .intro { font-size:18px; margin-bottom:16px; }
-    .intro p { margin-bottom:16px; }
+    .exh { border-top: 1px solid rgba(240,237,232,0.08); padding: 20px 0; opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+    .exh.visible { opacity: 1; transform: none; }
+    .exh:last-of-type { border-bottom: 1px solid rgba(240,237,232,0.08); }
+    .exh-status { font-family: 'FreeMono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .exh-status.confirmed { color: var(--fluo); }
+    .exh-status.tbc { color: rgba(240,237,232,0.4); }
+    .exh-status.past { color: rgba(240,237,232,0.25); }
+    .exh-name { font-family: 'AGProExt', 'AGPro', Arial, sans-serif; font-weight: 700; font-size: 20px; color: #f0ede8; margin-bottom: 4px; }
+    .exh-venue { font-size: 15px; color: rgba(240,237,232,0.6); margin-bottom: 8px; }
+    .exh-when { font-size: 15px; color: rgba(240,237,232,0.85); margin-bottom: 2px; }
+    .exh-addr { font-size: 13px; color: rgba(240,237,232,0.4); margin-top: 6px; font-family: 'FreeMono', monospace; }
+    .exh-note { font-size: 15px; color: rgba(240,237,232,0.6); margin-top: 8px; font-style: italic; font-family: 'AGPro', Arial, sans-serif; }
+    .exh-cta { display: inline-block; margin-top: 12px; font-family: 'FreeMono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); border-bottom: 1px solid rgba(198,245,0,0.3); padding-bottom: 2px; }
 
-    .rule { border:0; border-top:1px solid #333; margin:48px 0; }
+    .news-communities { font-size: 15px; color: rgba(240,237,232,0.5); margin-bottom: 16px; font-family: 'AGPro', Arial, sans-serif; }
+    .news-press { font-size: 15px; color: rgba(240,237,232,0.5); margin-bottom: 40px; font-family: 'AGPro', Arial, sans-serif; }
+    .news-press a { color: var(--fluo); }
+    .news-tagline { font-family: 'AGProExt', 'AGPro', Arial, sans-serif; font-style: italic; font-weight: 400; font-size: clamp(16px, 4vw, 22px); color: rgba(240,237,232,0.7); text-align: center; margin: 48px 0; }
 
-    h2 { font-family:var(--vt); font-size:30px; letter-spacing:1px; text-transform:uppercase; color:var(--fluo); margin-bottom:28px; }
-
-    /* exhibition cards */
-    .exh { border-top:1px solid #333; padding:24px 0; }
-    .exh:last-of-type { border-bottom:1px solid #333; }
-    .exh .status { font-family:var(--vt); font-size:16px; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
-    .exh .status.confirmed { color:var(--fluo); }
-    .exh .status.tbc { color:#888; }
-    .exh .status.past { color:#555; }
-    .exh h3 { font-size:22px; font-weight:700; margin-bottom:4px; color:#fff; }
-    .exh .venue { font-size:16px; color:#ccc; margin-bottom:10px; }
-    .exh .when { font-size:16px; margin-bottom:4px; }
-    .exh .when strong { color:#fff; }
-    .exh .addr { font-size:14px; color:#999; margin-bottom:10px; }
-    .exh .note { font-size:15px; color:#ccc; margin-bottom:12px; }
-    .exh .cta { display:inline-block; font-family:var(--vt); font-size:18px; letter-spacing:1px; text-transform:uppercase; border:1px solid var(--fluo); padding:8px 18px; text-decoration:none; }
-    .exh .cta:hover { background:var(--fluo); color:#000; opacity:1; }
-
-    .communities { font-size:15px; color:#ccc; margin-bottom:24px; }
-    .press-note { font-size:15px; color:#ccc; margin-bottom:48px; }
-    .tagline { font-family:var(--serif); font-style:italic; font-size:18px; color:#fff; text-align:center; margin:48px 0; }
-
-    /* ACE credit */
-    .ace { text-align:center; border-top:1px solid #333; padding-top:40px; margin-top:48px; }
-    .ace p { font-size:12px; color:#999; margin-bottom:14px; }
-    .ace img { height:56px; width:auto; }
-
-    .foot-links { text-align:center; font-family:var(--vt); font-size:18px; letter-spacing:1px; margin-top:40px; }
-    .foot-links a { margin:0 8px; }
+    @media (prefers-reduced-motion: reduce) { .exh { transition: none; opacity: 1; transform: none; } }
   </style>
 </head>
 <body>
   <div class="wrap">
-
-    {{ with .Params.kicker }}<p class="kicker">{{ . }}</p>{{ end }}
-    <h1>{{ .Params.heading | default .Title }}</h1>
-
-    {{ with .Params.intro }}<div class="intro">{{ . | markdownify }}</div>{{ end }}
-
+    {{ with .Params.kicker }}<p class="news-kicker" data-fade>{{ . }}</p>{{ end }}
+    <h1 class="news-heading" data-fade>{{ .Params.heading | default .Title }}</h1>
+    {{ with .Params.intro }}<div class="news-intro" data-fade>{{ . | markdownify }}</div>{{ end }}
     <hr class="rule">
-
-    <h2>What's on</h2>
-
-    {{ range .Params.exhibitions }}
-    <div class="exh">
-      {{ with .status }}<div class="status {{ . }}">{{ if eq . "tbc" }}Coming up{{ else if eq . "past" }}Past{{ else }}Confirmed{{ end }}</div>{{ end }}
-      <h3>{{ .name }}</h3>
-      {{ with .venue }}<div class="venue">{{ . }}</div>{{ end }}
-      {{ with .dates }}<div class="when"><strong>{{ . }}</strong></div>{{ end }}
-      {{ with .times }}<div class="when">{{ . }}</div>{{ end }}
-      {{ with .address }}<div class="addr">{{ . }}</div>{{ end }}
-      {{ with .note }}<div class="note">{{ . }}</div>{{ end }}
-      {{ if .link }}<a class="cta" href="{{ .link }}">{{ .link_label | default "More" }}</a>{{ end }}
+    {{ with .Params.exhibitions }}
+    <p class="news-section-label">What's on</p>
+    {{ range . }}
+    <div class="exh" data-fade>
+      {{ with .status }}<div class="exh-status {{ . }}">{{ if eq . "tbc" }}Coming up{{ else if eq . "past" }}Past{{ else }}Confirmed{{ end }}</div>{{ end }}
+      <div class="exh-name">{{ .name }}</div>
+      {{ with .venue }}<div class="exh-venue">{{ . }}</div>{{ end }}
+      {{ with .dates }}<div class="exh-when"><strong>{{ . }}</strong></div>{{ end }}
+      {{ with .times }}<div class="exh-when">{{ . }}</div>{{ end }}
+      {{ with .address }}<div class="exh-addr">{{ . }}</div>{{ end }}
+      {{ with .note }}<div class="exh-note">{{ . }}</div>{{ end }}
+      {{ if .link }}<a class="exh-cta" href="{{ .link }}">{{ .link_label | default "More info" }}</a>{{ end }}
     </div>
     {{ end }}
-
+    {{ end }}
     <hr class="rule">
+<<<<<<< Updated upstream
 
     {{ with .Params.communities_line }}<p class="communities">{{ . }}</p>{{ end }}
     {{ with .Params.press_note }}<p class="press-note">{{ . | markdownify }}</p>{{ end }}
@@ -101,6 +90,30 @@
       <a href="https://enricopolicardo.com">enricopolicardo.com</a>
     </div>
 
+=======
+    {{ with .Params.communities_line }}<p class="news-communities">{{ . }}</p>{{ end }}
+    {{ with .Params.press_note }}<p class="news-press">{{ . | markdownify }}</p>{{ end }}
+    {{ with .Params.tagline }}<p class="news-tagline">{{ . }}</p>{{ end }}
+>>>>>>> Stashed changes
   </div>
+
+  <style>
+    .site-footer { --text:#f0ede8; --muted:rgba(240,237,232,0.5); --rule:rgba(240,237,232,0.15); border-top-color:#f0ede8; }
+    .site-footer img { filter:invert(1) brightness(1.15); }
+  </style>
+  {{ partial "footer.html" . }}
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll('[data-fade]');
+      if (!items.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
