@@ -5,7 +5,7 @@ layout: news
 kicker: This Was Tomorrow
 heading: Is this the future we were dreaming of?
 intro: |-
-  ![](/images/round-hero.webp)
+  ![](/images/round-hero.png)
 
   For the past year I've been photographing community-led housing across the UK - cohousing, community land trusts, self-build, co-ops. A dozen communities the length of the country, shown as large prints with the residents' own voices beside them.
 
@@ -49,7 +49,7 @@ exhibitions:
     link_label: ''
 communities_line: Featuring the communities of Cressingham Gardens, OWCH / New Ground, Granby Four Streets, Two Up Two Down, Kitty's Launderette, LILAC, Calder Valley CLT, Hastings Commons, Tinker's Bubble, Trevone Quarry, Kesoberi and Treneere.
 press_note: |-
-  ![](/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp)
+  ![](/images/twt_wobble.gif)
 
   Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
