@@ -42,7 +42,7 @@ drop a line [info@enricopolicardo.com](mailto:info@enricopolicardo.com) or visit
 
 ***
 
-###### A couple of other things
+## A couple of other things
 
 [Some thoughts](https://thiswastomorrow.co.uk/thoughts/)
 
