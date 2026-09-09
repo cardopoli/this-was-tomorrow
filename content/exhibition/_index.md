@@ -22,8 +22,8 @@ links_line: Read the voices in the [quotes](/quotes/), or find every place on th
 host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
 downloads:
   - label: Curation /// Info Packs
-    file: /downloads/enrico_policardo_twt_press_kit.pdf
-    note: Press kit with essential info about the project
+    file: /downloads/enrico_policardo_twt_press_pack.pdf
+    note: Press pack with essential info about the project
   - label: One-page overview (PDF)
     file: /downloads/enrico_policardo_twt_one-pager.pdf
     note: the project on a single A5
