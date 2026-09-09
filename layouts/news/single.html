@@ -72,29 +72,9 @@
     {{ end }}
     {{ end }}
     <hr class="rule">
-<<<<<<< Updated upstream
-
-    {{ with .Params.communities_line }}<p class="communities">{{ . }}</p>{{ end }}
-    {{ with .Params.press_note }}<p class="press-note">{{ . | markdownify }}</p>{{ end }}
-
-    {{ with .Params.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
-
-    <div class="ace">
-      <p>Supported using public funding by the National Lottery through Arts Council England</p>
-      <a href="https://www.artscouncil.org.uk/dycp"><img src="/images/lottery_logo_white-rgb.webp" alt="Arts Council England"></a>
-    </div>
-
-    <div class="foot-links">
-      <a href="https://thiswastomorrow.co.uk">thiswastomorrow.co.uk</a> ·
-      <a href="https://www.instagram.com/cardopoli/">Instagram</a> ·
-      <a href="https://enricopolicardo.com">enricopolicardo.com</a>
-    </div>
-
-=======
     {{ with .Params.communities_line }}<p class="news-communities">{{ . }}</p>{{ end }}
     {{ with .Params.press_note }}<p class="news-press">{{ . | markdownify }}</p>{{ end }}
     {{ with .Params.tagline }}<p class="news-tagline">{{ . }}</p>{{ end }}
->>>>>>> Stashed changes
   </div>
 
   <style>
