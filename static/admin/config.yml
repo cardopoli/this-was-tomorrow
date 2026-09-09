@@ -308,7 +308,7 @@ collections:
 
       - name: news
         label: News
-        file: content/whatson.md
+        file: content/news.md
         description: The News / What's On page - project intro and the live exhibitions list.
         fields:
           - { name: title, label: Title, widget: hidden, default: News }
