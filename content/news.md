@@ -51,7 +51,6 @@ communities_line: Featuring the communities of Cressingham Gardens, OWCH / New G
 press_note: |-
   ![](/images/tumblr_2faebda859b93ab2f63270887d01a624_7296c395_400.webp)
 
-
   Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
 slug: news
