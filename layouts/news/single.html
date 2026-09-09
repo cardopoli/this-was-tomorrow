@@ -47,6 +47,22 @@
     .news-press a { color: var(--fluo); }
     .news-tagline { font-family: 'AGProExt', 'AGPro', Arial, sans-serif; font-style: italic; font-weight: 400; font-size: clamp(16px, 4vw, 22px); color: rgba(240,237,232,0.7); text-align: center; margin: 48px 0; }
 
+ /* ---- footer ---- */
+    .lib-footer {
+      padding: 24px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(198,245,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .lib-footer-text { font-family: 'FreeMono', monospace; font-size: 10px; color: rgba(240,237,232,0.4); line-height: 1.6; }
+    .lib-footer-text a { color: rgba(240,237,232,0.4); }
+    .lib-footer-text a:hover { color: var(--fluo); }
+    .lib-footer-logo img { height: 36px; width: auto; filter: invert(0) brightness(1.15); }
+    
     @media (prefers-reduced-motion: reduce) { .exh { transition: none; opacity: 1; transform: none; } }
   </style>
 </head>
@@ -77,11 +93,17 @@
     {{ with .Params.tagline }}<p class="news-tagline">{{ . }}</p>{{ end }}
   </div>
 
-  <style>
-    .site-footer { --text:#f0ede8; --muted:rgba(240,237,232,0.5); --rule:rgba(240,237,232,0.15); border-top-color:#f0ede8; }
-    .site-footer img { filter:invert(1) brightness(1.15); }
-  </style>
-  {{ partial "footer.html" . }}
+ <div class="lib-footer">
+    <div class="lib-footer-text">
+      <p><a href="https://thiswastomorrow.co.uk">thiswastomorrow.co.uk</a> · <a href="https://enricopolicardo.com">enricopolicardo.com</a></p>
+      <p>Supported using public funding by Arts Council England (DYCP)</p>
+    </div>
+    <div class="lib-footer-logo">
+      <a href="https://www.artscouncil.org.uk/dycp" target="_blank" rel="noopener">
+        <img src="/images/lottery_logo_white-rgb.webp" alt="Supported using public funding by Arts Council England">
+      </a>
+    </div>
+  </div>
 
   <script>
     (function () {
