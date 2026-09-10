@@ -50,7 +50,12 @@ exhibitions:
     link: ''
     link_label: ''
 communities_line: Featuring the communities of Cressingham Gardens, OWCH / New Ground, Granby Four Streets, Two Up Two Down, Kitty's Launderette, LILAC, Calder Valley CLT, Hastings Commons, Tinker's Bubble, Trevone Quarry, Kesoberi and Treneere.
-press_note: Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
+press_note: |-
+  Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
+
+  # DON'T WE NEED UTOPIAS?
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/X0tGY-LgxSc?si=idBZnwBsAUy-gXa7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
 slug: news
 ---
