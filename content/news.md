@@ -51,7 +51,7 @@ exhibitions:
     link_label: ''
 communities_line: Featuring the communities of Cressingham Gardens, OWCH / New Ground, Granby Four Streets, Two Up Two Down, Kitty's Launderette, LILAC, Calder Valley CLT, Hastings Commons, Tinker's Bubble, Trevone Quarry, Kesoberi and Treneere.
 press_note: |-
-  Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
+  ## Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
 
   With thanks to everyone who gave me their time - the communities who sat down with me and showed me how they live, and the collaborators, supporters and friends who helped this project happen. It's yours as much as mine.
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
