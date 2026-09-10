@@ -22,6 +22,8 @@ links:
     url: https://thiswastomorrow.co.uk/about/
   - label: Press and downloads
     url: https://thiswastomorrow.co.uk/press/
+  - label: Quotes Generator
+    url: https://thiswastomorrow.co.uk/quotes/
 slug: linkinbio
 layout: linkinbio
 ---

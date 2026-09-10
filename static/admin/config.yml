@@ -309,31 +309,34 @@ collections:
       - name: linkinbio
         label: Link in Bio
         file: content/linkinbio.md
-        description: The Link in Bio page with current updates and useful project links.
+        description: Link in Bio page
         fields:
           - { name: title, label: Title, widget: string }
+
           - name: updates
             label: Updates
-            label_singular: Update
             widget: list
             required: false
-            summary: "{{fields.date}} — {{fields.title}}"
+            label_singular: Update
+            summary: "{{fields.title}} — {{fields.date}}"
             fields:
               - { name: date, label: Date, widget: string }
               - { name: title, label: Title, widget: string }
               - { name: location, label: Location, widget: string, required: false }
-              - { name: url, label: Link, widget: string, required: false }
+              - { name: url, label: URL, widget: string, required: false }
+
           - name: links
             label: Links
-            label_singular: Link
             widget: list
             required: false
+            label_singular: Link
             summary: "{{fields.label}}"
             fields:
               - { name: label, label: Label, widget: string }
               - { name: url, label: URL, widget: string }
-          - { name: slug, label: Slug, widget: hidden, default: linkinbio }
-          - { name: layout, label: Layout, widget: hidden, default: linkinbio }
+
+          - { name: slug, label: Slug, widget: hidden }
+          - { name: layout, label: Layout, widget: hidden }
 
       - name: news
         label: News
