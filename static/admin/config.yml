@@ -373,7 +373,15 @@ collections:
               - { name: link, label: Link URL, widget: string, required: false }
               - { name: link_label, label: Link label, widget: string, required: false }
 
-          - { name: communities_line, label: Communities, widget: string, required: false, hint: "The list of communities shown - use · as separator" }
+          - name: communities
+            label: Communities
+            widget: list
+            required: false
+            label_singular: Community
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: url, label: Site page URL, widget: string, required: false, hint: "e.g. /sites/granby/" }
           - { name: press_link, label: Press link text, widget: markdown, modes: [rich_text, raw], required: false, hint: "e.g. Press pack is [here](/downloads/...)" }
           - { name: thanks, label: Thanks / closing note, widget: markdown, modes: [rich_text, raw], required: false }
           - { name: video_label, label: Video heading, widget: string, required: false, hint: "e.g. Don't we need utopias?" }
