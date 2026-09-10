@@ -2,14 +2,16 @@
 title: News
 description: Exhibitions and showings of This Was Tomorrow by Enrico Policardo.
 layout: news
+slug: news
 kicker: This Was Tomorrow
 heading: Is this the future we were dreaming of?
 intro: |-
-  <img src="/images/round-hero.png" alt="" style="width:85%; display:block; margin-top:25px; margin-bottom:50px;">
+  <img src="/images/round-hero.png" alt="" style="width:60%; display:block; margin:0 auto 24px;">
 
   For the past year I've been photographing community-led housing across the UK - cohousing, community land trusts, self-build, co-ops. A dozen communities the length of the country, shown as large prints with the residents' own voices beside them.
 
   It's starting to go up on walls, and I'd love you to come and see it.
+
 exhibitions:
   - name: New Ground - 10 Years
     venue: Pollard Thomas Edwards
@@ -23,7 +25,7 @@ exhibitions:
   - name: Hastings Commons
     venue: Hastings Commons
     address: Hastings
-    dates: 12 September 2026 > Onwards
+    dates: 12 September 2026 onwards
     times: ''
     status: confirmed
     note: ''
@@ -35,9 +37,7 @@ exhibitions:
     dates: 20 September 2026
     times: ''
     status: confirmed
-    note: |-
-      Part of Open House Festival. 
-      A talk on Cressingham accompanies event.
+    note: Part of Open House Festival. A talk on Cressingham accompanies the event.
     link: ''
     link_label: ''
   - name: Calder Valley Community Land Trust
@@ -49,13 +49,15 @@ exhibitions:
     note: Venue being finalised.
     link: ''
     link_label: ''
-communities_line: Featuring the communities of Cressingham Gardens, OWCH / New Ground, Granby Four Streets, Two Up Two Down, Kitty's Launderette, LILAC, Calder Valley CLT, Hastings Commons, Tinker's Bubble, Trevone Quarry, Kesoberi and Treneere.
-press_note: |-
-  Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
 
-  # DON'T WE NEED UTOPIAS?
+communities_line: "Cressingham Gardens · OWCH / New Ground · Granby Four Streets · Two Up Two Down · Kitty's Launderette · LILAC · Calder Valley CLT · Hastings Commons · Tinker's Bubble · Trevone Quarry · Kesoberi · Treneere"
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/X0tGY-LgxSc?si=idBZnwBsAUy-gXa7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+press_link: "Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf)."
+
+thanks: "With thanks to everyone who gave me their time - the communities who sat down with me and showed me how they live, and the collaborators, supporters and friends who made this possible. It's yours as much as mine."
+
+video_label: "Don't we need utopias?"
+video_url: "https://www.youtube.com/embed/X0tGY-LgxSc?si=idBZnwBsAUy-gXa7"
+
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
-slug: news
 ---
