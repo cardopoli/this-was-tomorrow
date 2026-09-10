@@ -74,7 +74,7 @@ collections:
       - { name: status, label: Status, widget: select, options: ["visited", "scheduled", "planned"], required: false }
       - { name: visit_date, label: Visit Date, widget: string, required: false, hint: "e.g. April 2026" }
       - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-      - { name: description, label: Short Description, widget: text, required: false }
+      - { name: description, label: Short Description, widget: markdown, modes: [rich_text, raw], required: false }
 
       - name: photos
         label: Hero Photo
@@ -124,7 +124,7 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
-          - { name: note, label: Note, widget: text, required: false }
+          - { name: note, label: Note, widget: markdown, modes: [rich_text, raw], required: false }
 
       - name: videos
         label: Videos
@@ -133,7 +133,7 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: url, label: Embed URL, widget: string }
-          - { name: description, label: Description, widget: text, required: false }
+          - { name: description, label: Description, widget: markdown, modes: [rich_text, raw], required: false }
 
       - name: sources
         label: Sources
@@ -200,10 +200,11 @@ collections:
 
     fields:
       - { name: title, label: Title, widget: string }
+      - { name: description, label: Meta description, widget: string, required: false }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
       - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "Metadata - the current grid layout doesn't display it" }
       - { name: location, label: Location, widget: string, required: false }
-      - { name: cap, label: Page text (optional), widget: text, required: false, hint: "Custom caption for this audio page - leave blank for none" }
+      - { name: cap, label: Page text (optional), widget: markdown, modes: [rich_text, raw], required: false, hint: "Custom caption for this audio page - leave blank for none" }
       - { name: exhibit_gallery, label: Photographs (online), widget: list, required: false, hint: "Dropbox image URLs, one per row (dl=0 links are fine). Put the curation sheet first if you upload one." }
       - { name: gallery_label, label: Photographs button text, widget: string, required: false, hint: "Default: See all the photographs" }
       - { name: gallery_note, label: Photographs button note, widget: string, required: false, hint: "The small line under the button. Default explains one-of-a-set." }
@@ -244,8 +245,8 @@ collections:
         file: content/_index.md
         fields:
           - { name: title, label: Site title (browser tab), widget: string }
-          - { name: intro, label: Intro text, widget: text, hint: "The paragraph above the list of sites." }
-          - { name: framing, label: Framing block, widget: text, required: false, hint: "The line before the site list - the question and speculative tool line." }
+          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw], hint: "The paragraph above the list of sites." }
+          - { name: framing, label: Framing block, widget: markdown, modes: [rich_text, raw], required: false, hint: "The line before the site list." }
 
       - name: map
         label: Map
@@ -280,7 +281,7 @@ collections:
                 label: Type
                 widget: select
                 options: [heading, body, quote, statement, line]
-              - { name: text, label: Text, widget: text }
+              - { name: text, label: Text, widget: markdown, modes: [rich_text, raw] }
               - { name: attribution, label: Attribution (quotes only), widget: string, required: false }
 
       - name: thankyou
@@ -288,7 +289,7 @@ collections:
         file: content/thankyou.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: note, label: Opening note, widget: text, required: false }
+          - { name: note, label: Opening note, widget: markdown, modes: [rich_text, raw], required: false }
           - name: sections
             label: Sections
             widget: list
@@ -301,7 +302,7 @@ collections:
                 fields:
                   - { name: name, label: Name, widget: string }
                   - { name: role, label: Role, widget: string, required: false }
-              - { name: text, label: Text block, widget: text, required: false }
+              - { name: text, label: Text block, widget: markdown, modes: [rich_text, raw], required: false }
           - { name: funder_note, label: Funder note, widget: string, required: false }
           - { name: copyright, label: Copyright line, widget: string, required: false }
 
@@ -343,7 +344,7 @@ collections:
         file: content/news.md
         description: The News / What's On page - project intro and the live exhibitions list.
         fields:
-          - { name: title, label: Title, widget: hidden, default: News }
+          - { name: title, label: Page title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: news }
           - { name: kicker, label: Kicker (small line above heading), widget: string, required: false }
@@ -368,10 +369,10 @@ collections:
                 options: [confirmed, tbc, past]
                 default: tbc
                 hint: "confirmed = green label, tbc = 'Coming up', past = greyed out"
-              - { name: note, label: Note, widget: text, required: false }
+              - { name: note, label: Note, widget: markdown, modes: [rich_text, raw], required: false }
               - { name: link, label: Link (optional), widget: string, required: false, hint: "e.g. Open House booking URL" }
               - { name: link_label, label: Link button text, widget: string, required: false, hint: "e.g. Book on Open House" }
 
-          - { name: communities_line, label: Communities line, widget: text, required: false }
+          - { name: communities_line, label: Communities line, widget: markdown, modes: [rich_text, raw], required: false }
           - { name: press_note, label: Press note, widget: markdown, modes: [rich_text, raw], required: false }
           - { name: tagline, label: Tagline (italic, bottom), widget: string, required: false }
