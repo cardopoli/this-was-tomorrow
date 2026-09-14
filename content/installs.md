@@ -13,10 +13,10 @@ installs:
     image: /images/_DSC1962_Tinkers Bubble Selected.jpg
     info: Drop-in viewing, 10am–4pm. Part of Open House Festival, celebrating ten years of New Ground cohousing. Wall graphic by Tim Metcalfe.
     embed_code: |-
-      <div class="dbx-gallery" id="gal-putr2" aria-live="polite">
+      <div class="dbx-gallery" id="gal-ngiy9" aria-live="polite">
         <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>
       </div>
-      <script>(function(){function run(){window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/4upu0wb5wm0ixrb0y0i2l/AFPRRCy0zNRJz4XgaFGuf2o?rlkey=01o564tg5u6n9l8gvsdm6hrcx&dl=0','gal-putr2');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
+      <script>(function(){function run(){window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/lgqsyq4zuu59jkiyknr9k/AHU2uIPuCA-kdPrfKRvxLPY?rlkey=paxigeadgn65vcqzr122atruz&dl=0','gal-ngiy9');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
   - title: Cressingham Gardens
     site_link: cressingham-gardens
     venue: Rotunda
