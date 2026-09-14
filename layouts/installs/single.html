@@ -262,8 +262,15 @@
 {{ partial "installs/modal" . }}
 
 <script>
-  // Make installs data available to modal JS
-  window.installsData = {{ .Params.installs | jsonify }};
+  // Make installs data available to modal JS - convert array to object keyed by site_link
+  (function() {
+    var installsArray = {{ .Params.installs | jsonify }};
+    window.installsData = {};
+    for (var i = 0; i < installsArray.length; i++) {
+      var install = installsArray[i];
+      window.installsData[install.site_link] = install;
+    }
+  })();
 </script>
 
 <script src="{{ "JS/installs-modal.js" | relURL }}"></script>
