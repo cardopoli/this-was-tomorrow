@@ -339,37 +339,6 @@ collections:
           - { name: slug, label: Slug, widget: hidden }
           - { name: layout, label: Layout, widget: hidden }
 
-      - name: installs
-        label: Installs
-        file: content/installs.md
-        description: Modular gallery of installations across venues.
-        fields:
-          - { name: title, label: Page title, widget: string }
-          - { name: description, label: Meta description, widget: string, required: false }
-          - { name: layout, label: Layout, widget: hidden, default: installs }
-          - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-
-          - name: installs
-            label: Installations
-            label_singular: Installation
-            widget: list
-            required: false
-            summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
-              - { name: venue, label: Venue name, widget: string, required: false }
-              - { name: location, label: Location, widget: string, required: false }
-              - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
-              - name: status
-                label: Status
-                widget: select
-                options: [live, upcoming, past]
-                default: upcoming
-              - { name: image, label: Hero image, widget: image, required: false }
-              - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false, hint: "Exhibition details, hours, etc." }
-              - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code or Dropbox gallery link here" }
-
       - name: news
         label: News
         file: content/news.md
@@ -418,3 +387,4 @@ collections:
           - { name: video_label, label: Video heading, widget: string, required: false, hint: "e.g. Don't we need utopias?" }
           - { name: video_url, label: Video embed URL, widget: string, required: false, hint: "YouTube embed URL (use /embed/ format)" }
           - { name: tagline, label: Closing tagline, widget: string, required: false }
+

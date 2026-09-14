@@ -2,3 +2,7 @@ static/.DS_Store
 content/.DS_Store
 .DS_Store
 .DS_Store
+.DS_Store
+layouts/news/single_latest.html
+static/admin/config_latest.yml
+content/news_latest.md

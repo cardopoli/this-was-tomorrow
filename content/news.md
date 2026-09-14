@@ -50,7 +50,31 @@ exhibitions:
     link: ''
     link_label: ''
 
-communities_line: "Cressingham Gardens · OWCH / New Ground · Granby Four Streets · Two Up Two Down · Kitty's Launderette · LILAC · Calder Valley CLT · Hastings Commons · Tinker's Bubble · Trevone Quarry · Kesoberi · Treneere"
+communities:
+  - name: Cressingham Gardens
+    url: /sites/cressingham-gardens/
+  - name: OWCH / New Ground
+    url: /sites/owch-new-ground/
+  - name: Granby Four Streets
+    url: /sites/granby/
+  - name: Two Up Two Down
+    url: /sites/two-up-two-down/
+  - name: "Kitty's Launderette"
+    url: /sites/kittys/
+  - name: LILAC
+    url: /sites/lilac/
+  - name: Calder Valley CLT
+    url: /sites/calder-valley/
+  - name: Hastings Commons
+    url: /sites/hastings-commons/
+  - name: "Tinker's Bubble"
+    url: /sites/tinkers-bubble/
+  - name: Trevone Quarry
+    url: /sites/trevone-quarry/
+  - name: Kesoberi
+    url: /sites/kesoberi/
+  - name: Treneere
+    url: /sites/treneere-estate/
 
 press_link: "Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf)."
 

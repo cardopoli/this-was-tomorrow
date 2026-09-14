@@ -107,10 +107,10 @@
   {{ end }}
   {{ end }}
 
-  {{ with .Params.communities_line }}
+  {{ with .Params.communities }}
   <hr class="n-rule">
   <p class="n-label">The communities</p>
-  <p class="n-communities" data-fade>{{ . | markdownify }}</p>
+  <p class="n-communities" data-fade>{{ range $i, $c := . }}{{ if $i }} · {{ end }}{{ if $c.url }}<a href="{{ $c.url }}">{{ $c.name }}</a>{{ else }}{{ $c.name }}{{ end }}{{ end }}</p>
   {{ end }}
 
   {{ if or .Params.press_link .Params.thanks }}
