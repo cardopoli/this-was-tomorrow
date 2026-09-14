@@ -263,19 +263,14 @@
 
 <script>
   // Make installs data available to modal JS
-  window.installsData = {};
-  {{ range .Params.installs }}
-    window.installsData["{{ .site_link }}"] = {
-      title: "{{ .title | safeJS }}",
-      venue: "{{ .venue | safeJS }}",
-      location: "{{ .location | safeJS }}",
-      date_range: "{{ .date_range | safeJS }}",
-      status: "{{ .status | safeJS }}",
-      info: "{{ .info | safeJS }}",
-      embed_code: "{{ .embed_code | safeJS }}",
-      site_link: "{{ .site_link | safeJS }}"
-    };
-  {{ end }}
+  window.installsData = {{ .Params.installs | jsonify }};
+  
+  // Convert array to keyed object
+  var installsByKey = {};
+  window.installsData.forEach(function(install) {
+    installsByKey[install.site_link] = install;
+  });
+  window.installsData = installsByKey;
 </script>
 
 <script src="{{ "JS/installs-modal.js" | relURL }}"></script>
