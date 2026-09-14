@@ -177,12 +177,14 @@
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 6px;
+    word-break: break-word;
   }
 
   .modal-date {
     font-size: 14px;
     color: var(--text);
     margin-bottom: 4px;
+    word-break: break-word;
   }
 
   .modal-info {
@@ -190,6 +192,8 @@
     line-height: 1.7;
     margin-bottom: 32px;
     color: var(--text);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .modal-info p {
@@ -199,13 +203,17 @@
   .modal-embed {
     margin-bottom: 32px;
     border: 1px solid var(--rule);
-    padding: 20px;
+    padding: 0;
     background: var(--shade);
+    overflow: hidden;
+    height: 500px;
   }
 
   .modal-embed iframe {
     width: 100%;
+    height: 100%;
     border: none;
+    display: block;
   }
 
   .modal-link {
