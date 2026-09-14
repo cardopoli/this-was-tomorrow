@@ -263,21 +263,19 @@
 
 <script>
   // Make installs data available to modal JS
-  window.installsData = {
-    {{ range $i, $install := .Params.installs }}
-      {{ if $i }},{{ end }}
-      "{{ $install.site_link }}": {
-        title: {{ $install.title | jsonify }},
-        venue: {{ $install.venue | jsonify }},
-        location: {{ $install.location | jsonify }},
-        date_range: {{ $install.date_range | jsonify }},
-        status: {{ $install.status | jsonify }},
-        info: {{ $install.info | jsonify }},
-        embed_code: {{ $install.embed_code | jsonify }},
-        site_link: {{ $install.site_link | jsonify }}
-      }
-    {{ end }}
-  };
+  window.installsData = {};
+  {{ range .Params.installs }}
+    window.installsData["{{ .site_link }}"] = {
+      title: "{{ .title | safeJS }}",
+      venue: "{{ .venue | safeJS }}",
+      location: "{{ .location | safeJS }}",
+      date_range: "{{ .date_range | safeJS }}",
+      status: "{{ .status | safeJS }}",
+      info: "{{ .info | safeJS }}",
+      embed_code: "{{ .embed_code | safeJS }}",
+      site_link: "{{ .site_link | safeJS }}"
+    };
+  {{ end }}
 </script>
 
 <script src="{{ "JS/installs-modal.js" | relURL }}"></script>
