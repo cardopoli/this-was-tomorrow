@@ -264,13 +264,6 @@
 <script>
   // Make installs data available to modal JS
   window.installsData = {{ .Params.installs | jsonify }};
-  
-  // Convert array to keyed object
-  var installsByKey = {};
-  window.installsData.forEach(function(install) {
-    installsByKey[install.site_link] = install;
-  });
-  window.installsData = installsByKey;
 </script>
 
 <script src="{{ "JS/installs-modal.js" | relURL }}"></script>
