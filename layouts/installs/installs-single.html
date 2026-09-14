@@ -258,15 +258,15 @@
   window.installsData = {
     {{ range $i, $install := .Params.installs }}
       {{ if $i }},{{ end }}
-      "{{ .site_link }}": {
-        title: {{ .title | jsonify }},
-        venue: {{ .venue | jsonify }},
-        location: {{ .location | jsonify }},
-        date_range: {{ .date_range | jsonify }},
-        status: {{ .status | jsonify }},
-        info: {{ .info | jsonify }},
-        embed_code: {{ .embed_code | jsonify }},
-        site_link: {{ .site_link | jsonify }}
+      "{{ $install.site_link }}": {
+        title: {{ $install.title | jsonify }},
+        venue: {{ $install.venue | jsonify }},
+        location: {{ $install.location | jsonify }},
+        date_range: {{ $install.date_range | jsonify }},
+        status: {{ $install.status | jsonify }},
+        info: {{ $install.info | jsonify }},
+        embed_code: {{ $install.embed_code | jsonify }},
+        site_link: {{ $install.site_link | jsonify }}
       }
     {{ end }}
   };
