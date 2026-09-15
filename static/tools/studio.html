@@ -728,7 +728,7 @@ BUILD.layout = function (o) {
   var capLine = function (t) { return t ? '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + t + '</p>' : ''; };
   var code = '';
   if (layout === 'single') {
-    code = '<div data-lb-group="' + lbGroup + '" style="margin-bottom:4px">\n<figure style="margin:0">\n  ' + tag(imgs[0], 'width:100%') + '\n'
+    code = '<div data-lb-group="' + lbGroup + '" style="margin-bottom:4px">\n<figure style="margin:0;width:100%">\n  ' + tag(imgs[0], 'width:100%') + '\n'
          + ((imgs[0].cap || gcap) ? '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + (imgs[0].cap || gcap) + '</figcaption>\n' : '') + '</figure>\n</div>';
   } else {
     var cols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
