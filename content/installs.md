@@ -19,8 +19,8 @@ installs:
     embed_code: |-
       <div data-lb-group="gp5gh" style="margin-bottom:4px">
       <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:stretch">
-        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></a></div>
-        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" alt="" style="width:100%;height:100%;object-fit:contain;display:block"></a></div>
+        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
+        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
       </div>
       </div>
 
