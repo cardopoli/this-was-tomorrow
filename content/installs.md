@@ -10,23 +10,38 @@ installs:
     location: Diespeker Wharf, London
     date_range: 12 September 2026
     status: live
-    image: /images/twt-install_pte_120926-p1010227_medium.webp
+    image: /images/twt-install_pte_120926-p1010266_medium.webp
     info: |-
       Part of Open House Festival, celebrating ten years of New Ground cohousing. 
       Thanks to Tim Metcalfe and PTE Architects for the curation.
+
+      All photos from the install [here](https://www.dropbox.com/scl/fo/68fre7ryutcyor49exmyz/AIWyCuu0aYt-l_OGlFjkGzY?rlkey=6e3yajmnc7jylrxi8i17673sn&dl=0).
     embed_code: |-
-      <div data-lb-group="gwcpt">
+      <div data-lb-group="gp5gh">
       <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
-        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" alt="" style="width:100%;display:block"></a></div>
-        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" alt="" style="width:100%; height:100%; display:block"></a></div>
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/e572ql28b33xbj62rvum2/TWT-INSTALL_PTE_120926-Open-House-2026-1.jpg?rlkey=hg0whgnecctd2f31n3ghn4djh&raw=1" alt="" style="width:100%;object-fit:cover;display:block"></a></div>
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/ic3717v67tbdoxkmnohxn/TWT-INSTALL_PTE_120926-P1010290_medium.jpg?rlkey=53bgvvxvgzb68a8zgr8ow3jjm&raw=1" alt="" style="width:100%;object-fit:cover;display:block"></a></div>
       </div>
       </div>
 
-      <div data-lb-group="gkomp">
+      <div data-lb-group="gk96n">
+      <figure style="margin:0">
+        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/k2xl4vhfi2220d6amti7g/TWT-INSTALL_PTE_120926-P1010287_medium.jpg?rlkey=77uok59jza3a7j9ci8kmuv8dx&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/k2xl4vhfi2220d6amti7g/TWT-INSTALL_PTE_120926-P1010287_medium.jpg?rlkey=77uok59jza3a7j9ci8kmuv8dx&raw=1" alt="" style="width:100%;display:block"></a>
+      </figure>
+      </div>
+
+      <div data-lb-group="ghnot">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:start">
         <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/hvvo5zodf2k5vor258rgm/TWT-INSTALL_PTE_120926-P1010246_medium.jpg?rlkey=pu7xmiv8cocwx5j0adur4v70y&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hvvo5zodf2k5vor258rgm/TWT-INSTALL_PTE_120926-P1010246_medium.jpg?rlkey=pu7xmiv8cocwx5j0adur4v70y&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
         <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/0vh8fegb52bzht5z0jcos/TWT-INSTALL_PTE_120926-P1010256_medium.jpg?rlkey=dnov82z53m67u0orhqbe6aobk&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/0vh8fegb52bzht5z0jcos/TWT-INSTALL_PTE_120926-P1010256_medium.jpg?rlkey=dnov82z53m67u0orhqbe6aobk&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
       </div>
+      </div>
+
+
+      <div data-lb-group="g7fkh">
+      <figure style="margin:0">
+        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/k4fczjfk1n9eu7yvvalpv/TWT-INSTALL_PTE_120926-P1010266_medium.jpg?rlkey=6v2z1glx4pfw9llvknohpa8sx&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/k4fczjfk1n9eu7yvvalpv/TWT-INSTALL_PTE_120926-P1010266_medium.jpg?rlkey=6v2z1glx4pfw9llvknohpa8sx&raw=1" alt="" style="width:100%;display:block"></a>
+      </figure>
       </div>
   - title: Cressingham Gardens
     site_link: cressingham-gardens
