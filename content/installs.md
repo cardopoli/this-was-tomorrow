@@ -10,13 +10,22 @@ installs:
     location: Diespeker Wharf, London
     date_range: 12 September 2026
     status: live
-    image: /images/_DSC1962_Tinkers Bubble Selected.jpg
+    image: /images/twt-install_pte_120926-p1010227_medium.webp
     info: Drop-in viewing, 10am–4pm. Part of Open House Festival, celebrating ten years of New Ground cohousing. Wall graphic by Tim Metcalfe.
     embed_code: |-
-      <div class="dbx-gallery" id="gal-ngiy9" aria-live="polite">
-        <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>
+      <div data-lb-group="gwcpt">
+      <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" alt="" style="width:100%;display:block"></a></div>
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" alt="" style="width:100%;display:block"></a></div>
       </div>
-      <script>(function(){function run(){window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/lgqsyq4zuu59jkiyknr9k/AHU2uIPuCA-kdPrfKRvxLPY?rlkey=paxigeadgn65vcqzr122atruz&dl=0','gal-ngiy9');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
+      </div>
+
+      <div data-lb-group="gkomp">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:start">
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/hvvo5zodf2k5vor258rgm/TWT-INSTALL_PTE_120926-P1010246_medium.jpg?rlkey=pu7xmiv8cocwx5j0adur4v70y&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/hvvo5zodf2k5vor258rgm/TWT-INSTALL_PTE_120926-P1010246_medium.jpg?rlkey=pu7xmiv8cocwx5j0adur4v70y&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/0vh8fegb52bzht5z0jcos/TWT-INSTALL_PTE_120926-P1010256_medium.jpg?rlkey=dnov82z53m67u0orhqbe6aobk&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/0vh8fegb52bzht5z0jcos/TWT-INSTALL_PTE_120926-P1010256_medium.jpg?rlkey=dnov82z53m67u0orhqbe6aobk&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
+      </div>
+      </div>
   - title: Cressingham Gardens
     site_link: cressingham-gardens
     venue: Rotunda
