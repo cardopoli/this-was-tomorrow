@@ -9,7 +9,7 @@ installs:
     venue: The Rosa Cottage, Gotham Alley - Hastings Commons
     location: Hastings
     date_range: from 12 September 2026
-    status: upcoming
+    status: live
     image: /images/twt-install_hastings_110926-p1010197_medium.webp
     info: |-
       The installation is (im)perm(e)anent and free to visit. Find it at Gotham Alley, Hastings Commons.
