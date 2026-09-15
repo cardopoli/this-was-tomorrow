@@ -15,6 +15,8 @@ installs:
       The installation is (im)perm(e)anent and free to visit. Find it at Gotham Alley, Hastings Commons.
 
       To plan your visit or for more information, contact the venue [directly](mailto:michaela@jerichoroad.co.uk).
+
+      For all the photos of the install click [here](https://www.dropbox.com/scl/fo/m8f4b791g6o8347kbobk0/ABS21tHusQBWQesVyoAnW9Q?rlkey=amd9lq1q5j0z0u967pidn2pw6&dl=0).
     embed_code: |-
       <div data-lb-group="gszjj" style="margin-bottom:4px">
       <figure style="margin:0;width:100%">
