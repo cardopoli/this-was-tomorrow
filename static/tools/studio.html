@@ -955,8 +955,8 @@ var SNIPPETS = [
    '<div style="border:1px solid #ccc;padding:20px 24px;margin:32px 0;background:#faf9f7">\n  <p style="font-family:\'Courier New\',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#666;margin-bottom:10px">Note</p>\n  <p style="margin:0;line-height:1.7">Content here.</p>\n</div>'],
   ['Highlight','Inline highlight band',
    '<mark style="background:#f0ede8;padding:2px 5px">highlighted text</mark>'],
-  ['Gallery embed','Dropbox gallery with buildGallery',
-   '<div class="dbx-gallery" id="gal-[ID]" aria-live="polite">\n  <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>\n</div>\n<script>(function(){function run(){window._twt.buildGallery(\'https://dropbox-proxy.cardopoli.workers.dev\',\'[DROPBOX_URL]\',\'gal-[ID]\');}if(document.readyState===\"loading\"){document.addEventListener(\"DOMContentLoaded\",run);}else{run();}})()</script>']
+  ['Gallery','Dropbox gallery',
+   '<div class="dbx-gallery" id="gal-[ID]">\n  <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>\n</div>\n<scr' + 'ipt>(function(){function run(){window._twt.buildGallery(\'https://dropbox-proxy.cardopoli.workers.dev\',\'[DROPBOX_URL]\',\'gal-[ID]\');}if(document.readyState===\"loading\"){document.addEventListener(\"DOMContentLoaded\",run);}else{run();}})()</scr' + 'ipt>']
 ];
 (function initSnippets() {
   var grid = $('snip-grid');
