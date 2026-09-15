@@ -11,12 +11,14 @@ installs:
     date_range: 12 September 2026
     status: live
     image: /images/twt-install_pte_120926-p1010227_medium.webp
-    info: Drop-in viewing, 10am–4pm. Part of Open House Festival, celebrating ten years of New Ground cohousing. Wall graphic by Tim Metcalfe.
+    info: |-
+      Part of Open House Festival, celebrating ten years of New Ground cohousing. 
+      Thanks to Tim Metcalfe and PTE Architects for the curation.
     embed_code: |-
       <div data-lb-group="gwcpt">
       <div style="display:grid;grid-template-columns:1.75fr 1fr;gap:4px;align-items:start">
         <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/rvfvt85eub31hyu8l0n0g/TWT-INSTALL_PTE_120926-P1010218_medium.jpg?rlkey=rrx9kabhjn6x4cxjd0j11en3u&raw=1" alt="" style="width:100%;display:block"></a></div>
-        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" alt="" style="width:100%;display:block"></a></div>
+        <div><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" style="cursor:zoom-in;display:block"><img src="https://www.dropbox.com/scl/fi/nzhq711ddd56z6titj81a/TWT-INSTALL_PTE_120926-P1010237_medium.jpg?rlkey=3wwupc0ztspah4n6fw6j1t1gz&raw=1" alt="" style="width:100%; height:100%; display:block"></a></div>
       </div>
       </div>
 
