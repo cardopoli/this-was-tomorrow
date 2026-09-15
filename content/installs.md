@@ -30,10 +30,19 @@ installs:
       </div>
       </div>
 
-      <div class="dbx-gallery" id="gal-qmlwv" aria-live="polite">
-        <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>
+      <div data-lb-group="gckga" style="margin-bottom:4px">
+      <figure style="margin:0;width:100%">
+        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/1u2je8w8jlfmr80et1j9w/TWT-INSTALL_hastings_120926-IMG_5444.jpg?rlkey=lhxaltbphizgn263w1lhd9ybk&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/1u2je8w8jlfmr80et1j9w/TWT-INSTALL_hastings_120926-IMG_5444.jpg?rlkey=lhxaltbphizgn263w1lhd9ybk&raw=1" alt="" style="width:100%;display:block"></a>
+      </figure>
       </div>
-      <script>(function(){function run(){window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev','https://www.dropbox.com/scl/fo/cuzqx89w8c6jsar93l51x/AHzHaovn6TL6jsHPxUWwTLo?rlkey=drtgc39jjiar91famk01ki3r5&dl=0','gal-qmlwv');}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</script>
+
+
+      <div data-lb-group="grf36" style="margin-bottom:4px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:stretch">
+        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/xll4npftlhtbiw57qn3jj/TWT-INSTALL_hastings_120926-IMG_5424.jpg?rlkey=c6dx0uwomjzd2eule8ngro1sa&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/xll4npftlhtbiw57qn3jj/TWT-INSTALL_hastings_120926-IMG_5424.jpg?rlkey=c6dx0uwomjzd2eule8ngro1sa&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
+        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/tceo0lkmns8bio0napwr2/TWT-INSTALL_hastings_120926-IMG_5819.jpg?rlkey=usf3p3ngw9hjysv6736ub4hxa&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/tceo0lkmns8bio0napwr2/TWT-INSTALL_hastings_120926-IMG_5819.jpg?rlkey=usf3p3ngw9hjysv6736ub4hxa&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
+      </div>
+      </div>
   - title: New Ground - 10 Years
     site_link: owch-new-ground
     venue: Pollard Thomas Edwards
