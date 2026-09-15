@@ -77,7 +77,7 @@ installs:
     venue: Rotunda
     location: Cressingham Gardens, London
     date_range: 19–20 September 2026
-    status: live
+    status: upcoming
     image: /images/dsc_0531-twt_cressingham-gardens_low.webp
     info: Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
     embed_code: ''
