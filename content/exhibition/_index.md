@@ -40,6 +40,6 @@ downloads:
     file: /downloads/enrico_policardo_twt_locations.pdf
     note: Exhibition A4 Sheets for each location
   - label: Intro Text, Quote generator, Biography
-    file: enrico_policardo_twt_QR_BIO_QUOTES.pdf
+    file: /downloads/enrico_policardo_twt_QR_BIO_QUOTES.pdf
     note: Exhibition A4 Sheets for Intro Text, Quote generator, Biography
 ---
