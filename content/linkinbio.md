@@ -9,10 +9,10 @@ updates:
     title: Is This The Future We Were Dreaming Of? - Hastings Commons
     location: Hastings
     url: https://www.heritageopendays.org.uk/submission-event/the-alley-and-the-commons.html
-  - date: 19 – 20 Sep 2026
+  - date: 20 Sep 2026
     title: Cressingham Gardens
     location: Lambeth, London
-    url: ''
+    url: https://programme.openhouse.org.uk/listings/6047
 links:
   - label: Homepage
     url: https://thiswastomorrow.co.uk
