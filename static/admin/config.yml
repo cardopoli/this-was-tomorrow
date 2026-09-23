@@ -358,7 +358,6 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
-              - { name: detail_link, label: Detail page link (slug), widget: string, required: false, hint: "e.g. cressingham-gardens — only if a detail page exists" }
               - { name: venue, label: Venue name, widget: string, required: false }
               - { name: location, label: Location, widget: string, required: false }
               - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
