@@ -326,7 +326,7 @@ collections:
 
       - name: installs
         label: Installs
-        file: content/installs.md
+        file: content/installs/_index.md
         description: Modular gallery of installations across venues.
         fields:
           - { name: title, label: Page title, widget: string }
