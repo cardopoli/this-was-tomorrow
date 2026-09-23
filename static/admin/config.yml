@@ -177,56 +177,6 @@ collections:
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
 
-  # ─── INSTALLS (detail pages) ──────────────────────────────────────────────────
-  - name: install_details
-    label: Installs (detail pages)
-    label_singular: Install detail
-    folder: content/installs
-    create: true
-    extension: md
-    format: frontmatter
-    slug: "{{slug}}"
-    summary: "{{title}} · {{venue}}"
-    preview_path: "/installs/{{slug}}/"
-    sortable_fields:
-      fields: [title, venue, date_range, status]
-      default:
-        field: title
-        direction: ascending
-    view_filters:
-      - label: Live
-        field: status
-        pattern: live
-      - label: Upcoming
-        field: status
-        pattern: upcoming
-      - label: Past
-        field: status
-        pattern: past
-    fields:
-      - { name: title, label: Install Title, widget: string }
-      - { name: venue, label: Venue, widget: string, required: false }
-      - { name: location, label: Location, widget: string, required: false }
-      - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
-      - name: status
-        label: Status
-        widget: select
-        options: [live, upcoming, past]
-        default: live
-      - { name: site_link, label: Site page link (slug), widget: string, required: false, hint: "e.g. owch-new-ground" }
-      - { name: map_svg_file, label: Map SVG path, widget: string, required: false, hint: "e.g. images/maps/cressingham-gardens.svg" }
-      - { name: info, label: Venue info, widget: markdown, modes: [rich_text, raw], required: false }
-      - name: map_locations
-        label: Map Locations
-        widget: list
-        required: false
-        label_singular: Location
-        summary: "{{fields.name}}"
-        fields:
-          - { name: name, label: Location name, widget: string }
-          - { name: dropbox_url, label: Dropbox folder URL, widget: string }
-          - { name: hero_image, label: Hero image path, widget: string, required: false, hint: "e.g. /images/installs/cressingham-a.jpg" }
-
   # ─── QUOTES ───────────────────────────────────────────────────────────────────
   - name: quotes_data
     label: Quotes
@@ -324,35 +274,67 @@ collections:
           - { name: funder_note, label: Funder note, widget: string, required: false }
           - { name: copyright, label: Copyright line, widget: string, required: false }
 
-      - name: installs
-        label: Installs
-        file: content/installs.md
-        description: Modular gallery of installations across venues.
+  # ─── INSTALLS (listing + detail pages) ───────────────────────────────────────
+  - name: installs
+    label: Installs
+    folder: content/installs
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    preview_path: "/installs/{{slug}}/"
+    index_file:
+      name: _index
+      label: Installs listing page
+      fields:
+        - { name: title, label: Page title, widget: string }
+        - { name: description, label: Meta description, widget: string, required: false }
+        - { name: layout, label: Layout, widget: hidden, default: installs }
+        - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+        - name: installations
+          label: Installations
+          label_singular: Installation
+          widget: list
+          required: false
+          summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
+          fields:
+            - { name: title, label: Title, widget: string }
+            - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
+            - { name: venue, label: Venue name, widget: string, required: false }
+            - { name: location, label: Location, widget: string, required: false }
+            - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
+            - name: status
+              label: Status
+              widget: select
+              options: [live, upcoming, past]
+              default: upcoming
+            - { name: image, label: Hero image, widget: image, required: false }
+            - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false }
+            - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code from Studio tool" }
+    fields:
+      - { name: title, label: Install Title, widget: string }
+      - { name: venue, label: Venue, widget: string, required: false }
+      - { name: location, label: Location, widget: string, required: false }
+      - { name: date_range, label: Date range, widget: string, required: false }
+      - name: status
+        label: Status
+        widget: select
+        options: [live, upcoming, past]
+        default: live
+      - { name: site_link, label: Site page link (slug), widget: string, required: false }
+      - { name: map_svg_file, label: Map SVG path, widget: string, required: false }
+      - { name: info, label: Venue info, widget: markdown, modes: [rich_text, raw], required: false }
+      - name: map_locations
+        label: Map Locations
+        widget: list
+        required: false
+        label_singular: Location
+        summary: "{{fields.name}}"
         fields:
-          - { name: title, label: Page title, widget: string }
-          - { name: description, label: Meta description, widget: string, required: false }
-          - { name: layout, label: Layout, widget: hidden, default: installs }
-          - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-          - name: installations
-            label: Installations
-            label_singular: Installation
-            widget: list
-            required: false
-            summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
-              - { name: venue, label: Venue name, widget: string, required: false }
-              - { name: location, label: Location, widget: string, required: false }
-              - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
-              - name: status
-                label: Status
-                widget: select
-                options: [live, upcoming, past]
-                default: upcoming
-              - { name: image, label: Hero image, widget: image, required: false }
-              - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false }
-              - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code from Studio tool" }
+          - { name: name, label: Location name, widget: string }
+          - { name: dropbox_url, label: Dropbox folder URL, widget: string }
+          - { name: hero_image, label: Hero image path, widget: string, required: false }
 
       - name: linkinbio
         label: Link in Bio
