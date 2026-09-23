@@ -25,9 +25,6 @@
   function select(loc, centre = false) {
     gallery.hidden = false;
     gallery.replaceChildren();
-    const selectedButton = [...list.children].find(el => el.dataset.mapLetter === loc.letter);
-    if (matchMedia('(max-width: 800px)').matches && selectedButton) selectedButton.after(gallery);
-    else list.after(gallery);
     const title = document.createElement('p'); title.className = 'detail-gallery-title';
     title.textContent = `${loc.letter} - ${loc.name}`; gallery.append(title);
     if (loc.page) {
@@ -40,6 +37,7 @@
       window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', loc.dropbox_url, holder.id);
     }
     document.querySelectorAll('[data-map-letter]').forEach(el => el.classList.toggle('selected', el.dataset.mapLetter === loc.letter));
+    requestAnimationFrame(() => gallery.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }));
     if (centre) {
       box = { x: Number(loc.x) - base.w / 4, y: Number(loc.y) - base.h / 4, w: base.w / 2, h: base.h / 2 };
       apply();
@@ -57,12 +55,6 @@
     circle.addEventListener('click', () => select(loc));
     circle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(loc); } });
     overlay.append(circle);
-  });
-  addEventListener('resize', () => {
-    if (gallery.hidden) return;
-    const selected = list.querySelector('.detail-location-button.selected');
-    if (matchMedia('(max-width: 800px)').matches && selected) selected.after(gallery);
-    else list.after(gallery);
   });
   document.getElementById('detailZoomIn').onclick = () => zoom(1.4);
   document.getElementById('detailZoomOut').onclick = () => zoom(1 / 1.4);
