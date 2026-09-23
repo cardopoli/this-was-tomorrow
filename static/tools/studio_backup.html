@@ -721,33 +721,28 @@ BUILD.layout = function (o) {
   var gcap = esc(v('lay-gcap'));
   var lbGroup = 'g' + Math.random().toString(36).slice(2, 6);
   function tag(im, st) {
-    return '<a class="twt-lb" data-full="' + im.src + '" style="cursor:zoom-in;display:block;height:100%">'
+    return '<a class="twt-lb" data-full="' + im.src + '" style="cursor:zoom-in;display:block">'
          + '<img src="' + im.src + '" alt="' + im.alt + '" style="' + st + ';display:block">'
          + '</a>';
   }
   var capLine = function (t) { return t ? '\n<p style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + t + '</p>' : ''; };
   var code = '';
   if (layout === 'single') {
-    code = '<div data-lb-group="' + lbGroup + '" style="margin-bottom:4px">\n<figure style="margin:0;width:100%">\n  ' + tag(imgs[0], 'width:100%') + '\n'
+    code = '<div data-lb-group="' + lbGroup + '">\n<figure style="margin:0">\n  ' + tag(imgs[0], 'width:100%') + '\n'
          + ((imgs[0].cap || gcap) ? '  <figcaption style="font-size:11px;color:#666;margin-top:6px;font-style:italic">' + (imgs[0].cap || gcap) + '</figcaption>\n' : '') + '</figure>\n</div>';
   } else {
     var cols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
              : layout === 'left-wide' ? '1.75fr 1fr' : layout === 'stacked' ? '1fr' : '1fr 1fr';
-    var fit = layout === 'double' || layout === 'triple' ? 'width:100%;height:100%;object-fit:cover' 
-            : layout === 'portrait' || layout === 'left-wide' ? 'width:100%;height:100%;object-fit:cover'
-            : 'width:100%';
-    code = '<div data-lb-group="' + lbGroup + '" style="margin-bottom:4px">\n<div style="display:grid;grid-template-columns:' + cols + ';gap:4px;align-items:stretch">\n';
-    imgs.forEach(function (im) { code += '  <div style="height:100%">' + tag(im, fit) + '</div>\n'; });
+    var fit = (layout === 'double' || layout === 'triple') ? 'width:100%;height:100%;object-fit:cover' : 'width:100%';
+    code = '<div data-lb-group="' + lbGroup + '">\n<div style="display:grid;grid-template-columns:' + cols + ';gap:4px;align-items:start">\n';
+    imgs.forEach(function (im) { code += '  <div>' + tag(im, fit) + '</div>\n'; });
     code += '</div>\n</div>' + capLine(gcap);
   }
   o.code = code; o.title = 'Layout — ' + layout;
   var pcols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
             : layout === 'left-wide' ? '1.75fr 1fr' : layout === 'stacked' ? '1fr' : '1fr 1fr';
-  o.preview = '<div style="display:grid;grid-template-columns:' + pcols + ';gap:4px;align-items:stretch">'
-    + imgs.map(function (im) { 
-      var pfit = 'width:100%;height:100%;object-fit:cover';
-      return '<img src="' + im.src + '" alt="' + im.alt + '" data-full="' + im.src + '" data-cap="' + im.cap + '" style="' + pfit + '">';
-    }).join('')
+  o.preview = '<div style="display:grid;grid-template-columns:' + pcols + ';gap:4px;align-items:start">'
+    + imgs.map(function (im) { return '<img src="' + im.src + '" alt="' + im.alt + '" data-full="' + im.src + '" data-cap="' + im.cap + '" style="width:100%">'; }).join('')
     + '</div>' + (gcap ? '<p style="font-size:11px;color:var(--muted);margin-top:7px;font-style:italic">' + gcap + '</p>' : '');
 };
 

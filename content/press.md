@@ -8,9 +8,11 @@ _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audi
 
 Supported by Arts Council England.
 
+[View all installations →](/installs/)
+
 ## Downloads
 
-Press pack available for download [here](https://thiswastomorrow.co.uk/downloads/enrico_policardo_twt_press_enrico_policardo_twt_press_pack.pdf).
+Press pack available for download [here](https://thiswastomorrow.co.uk/downloads/enrico_policardo_twt_press_pack.pdf)
 
 ## Contact
 

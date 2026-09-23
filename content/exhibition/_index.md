@@ -19,7 +19,10 @@ intro: |-
   The people you see, read about, and listen to here, are the people already doing it.
 hero: /images/twt_wobble.gif
 links_line: Read the voices in the [quotes](/quotes/), or find every place on the [map](/map/).
-host_text: 'To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )'
+host_text: |-
+  Have a look at the previous installs [here](https://thiswastomorrow.co.uk/installs).
+
+  To talk about showing it, get in touch: [info@enricopolicardo.com](mailto:info@enricopolicardo.com )
 downloads:
   - label: Curation /// Info Packs
     file: /downloads/enrico_policardo_twt_press_pack.pdf
@@ -37,6 +40,6 @@ downloads:
     file: /downloads/enrico_policardo_twt_locations.pdf
     note: Exhibition A4 Sheets for each location
   - label: Intro Text, Quote generator, Biography
-    file: enrico_policardo_twt_QR_BIO_QUOTES.pdf
+    file: /downloads/enrico_policardo_twt_QR_BIO_QUOTES.pdf
     note: Exhibition A4 Sheets for Intro Text, Quote generator, Biography
 ---
