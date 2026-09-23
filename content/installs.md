@@ -6,12 +6,11 @@ draft: false
 installs:
   - title: New Ground - 10 Years
     site_link: owch-new-ground
-    detail_link: ''
     venue: Pollard Thomas Edwards
     location: Diespeker Wharf, London
     date_range: 12 September 2026
     status: live
-    image: /images/twt-install_pte_120926-p1010227_medium.webp
+    image: /images/_DSC1962_Tinkers Bubble Selected.jpg
     info: Drop-in viewing, 10am–4pm. Part of Open House Festival, celebrating ten years of New Ground cohousing. Wall graphic by Tim Metcalfe.
     embed_code: |-
       <div class="dbx-gallery" id="gal-ngiy9" aria-live="polite">
