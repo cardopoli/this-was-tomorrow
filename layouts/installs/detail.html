@@ -1,0 +1,278 @@
+{{ define "main" }}
+<style>
+  .install-detail-container { max-width: 900px; margin: 0 auto; padding: 48px 22px; }
+  
+  .install-detail-header { margin-bottom: 56px; }
+  .install-detail-header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; line-height: 1.05; }
+  
+  .install-detail-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .install-detail-venue {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .install-detail-location {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .install-detail-date {
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .install-detail-status {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+
+  .install-detail-status.live {
+    background: #f0ede8;
+    color: #077533;
+  }
+
+  .install-detail-status.upcoming {
+    background: #f0ede8;
+    color: #8c8880;
+  }
+
+  .install-detail-status.past {
+    background: #f0ede8;
+    color: #8c8880;
+  }
+
+  .install-detail-info {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 32px 0;
+    color: var(--text);
+  }
+
+  .install-detail-map-section {
+    margin: 56px 0;
+    padding: 32px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .install-detail-map-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .install-detail-map-container {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .install-detail-map-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-location-letter {
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .map-location-letter:hover {
+    opacity: 0.7;
+  }
+
+  .map-preview {
+    position: absolute;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    padding: 8px;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+    pointer-events: none;
+  }
+
+  .map-preview.show {
+    display: block;
+  }
+
+  .map-preview img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+  }
+
+  .map-preview-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  .install-detail-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .install-detail-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .install-detail-link:hover {
+    opacity: 0.65;
+  }
+
+  @media (max-width: 640px) {
+    .install-detail-container { padding: 32px 16px; }
+    .install-detail-header h1 { font-size: 24px; }
+    .install-detail-links { flex-direction: column; gap: 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .map-location-letter, .install-detail-link { transition: none; }
+  }
+</style>
+
+<div class="install-detail-container">
+  <div class="install-detail-header">
+    <h1>{{ .Title }}</h1>
+  </div>
+
+  <div class="install-detail-header">
+    {{ if .Params.venue }}<p class="install-detail-meta">{{ .Params.venue }}</p>{{ end }}
+    {{ if .Params.location }}<p class="install-detail-location">{{ .Params.location }}</p>{{ end }}
+    {{ if .Params.date_range }}<p class="install-detail-date">{{ .Params.date_range }}</p>{{ end }}
+    {{ if .Params.status }}<span class="install-detail-status {{ .Params.status }}">{{ .Params.status }}</span>{{ end }}
+  </div>
+
+  {{ if .Params.info }}
+    <div class="install-detail-info">
+      {{ .Params.info | markdownify }}
+    </div>
+  {{ end }}
+
+  {{ if .Params.map_locations }}
+    <div class="install-detail-map-section">
+      <h2 class="install-detail-map-title">Locations</h2>
+      <div class="install-detail-map-container" id="mapContainer">
+        {{ if .Params.map_svg_file }}
+          {{ readFile (printf "static/%s" .Params.map_svg_file) | safeHTML }}
+        {{ end }}
+        <div class="map-preview" id="mapPreview">
+          <img id="previewImg" src="" alt="Location preview">
+          <div class="map-preview-label" id="previewLabel"></div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+
+  {{ if .Params.site_link }}
+    <div class="install-detail-links">
+      <a href="/sites/{{ .Params.site_link }}/" class="install-detail-link">Full page →</a>
+      <a href="/exhibition/{{ .Params.site_link }}/" class="install-detail-link">Exhibition →</a>
+      <a href="/map/" class="install-detail-link">Map →</a>
+      <a href="/installs/" class="install-detail-link">Installs →</a>
+    </div>
+  {{ end }}
+</div>
+
+<script>
+(function() {
+  const mapLocations = {{ .Params.map_locations | jsonify }};
+  const mapContainer = document.getElementById('mapContainer');
+  const mapPreview = document.getElementById('mapPreview');
+  const previewImg = document.getElementById('previewImg');
+  const previewLabel = document.getElementById('previewLabel');
+
+  if (!mapLocations || !mapContainer) return;
+
+  // Add data attributes to SVG letter elements and make them interactive
+  Object.keys(mapLocations).forEach(letter => {
+    const location = mapLocations[letter];
+    const letterElements = mapContainer.querySelectorAll('text, tspan');
+    
+    letterElements.forEach(el => {
+      if (el.textContent.trim() === letter) {
+        const parent = el.closest('[data-location]') || el.parentElement;
+        parent.setAttribute('data-location', letter);
+        parent.setAttribute('data-dropbox-url', location.dropbox_url);
+        parent.setAttribute('data-hero', location.hero_image);
+        parent.setAttribute('data-name', location.name);
+        parent.style.cursor = 'pointer';
+        parent.classList.add('map-location-letter');
+        
+        parent.addEventListener('mouseenter', showPreview);
+        parent.addEventListener('mouseleave', hidePreview);
+        parent.addEventListener('click', openGallery);
+      }
+    });
+  });
+
+  function showPreview(e) {
+    const location = e.currentTarget.getAttribute('data-location');
+    const hero = e.currentTarget.getAttribute('data-hero');
+    const name = e.currentTarget.getAttribute('data-name');
+    
+    if (hero) {
+      previewImg.src = hero;
+      previewLabel.textContent = name || location;
+      
+      const rect = e.currentTarget.getBoundingClientRect();
+      const containerRect = mapContainer.getBoundingClientRect();
+      mapPreview.style.left = (rect.left - containerRect.left + rect.width / 2 - 70) + 'px';
+      mapPreview.style.top = (rect.top - containerRect.top - 160) + 'px';
+      mapPreview.classList.add('show');
+    }
+  }
+
+  function hidePreview() {
+    mapPreview.classList.remove('show');
+  }
+
+  function openGallery(e) {
+    const dropboxUrl = e.currentTarget.getAttribute('data-dropbox-url');
+    const location = e.currentTarget.getAttribute('data-location');
+    
+    if (dropboxUrl && window._twt && window._twt.buildGallery) {
+      const uid = 'gal-' + location + '-' + Math.random().toString(36).slice(2, 7);
+      const container = document.createElement('div');
+      container.className = 'dbx-gallery';
+      container.id = uid;
+      container.setAttribute('aria-live', 'polite');
+      container.innerHTML = '<div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>';
+      
+      mapContainer.appendChild(container);
+      window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', dropboxUrl, uid);
+    }
+  }
+})();
+</script>
+
+{{ end }}

@@ -1,0 +1,168 @@
+{{ define "main" }}
+<style>
+  .installs-container { max-width: 900px; margin: 0 auto; padding: 48px 22px; }
+  
+  .installs-header { margin-bottom: 56px; }
+  .installs-header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; line-height: 1.05; }
+  .installs-header p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 60ch; }
+
+  .install-section {
+    margin-bottom: 72px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .install-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .install-section-header {
+    margin-bottom: 32px;
+  }
+
+  .install-section-title {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .install-section-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .install-section-venue {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .install-section-location {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .install-section-date {
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .install-section-status {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+
+  .install-section-status.live {
+    background: #f0ede8;
+    color: #077533;
+  }
+
+  .install-section-status.upcoming {
+    background: #f0ede8;
+    color: #8c8880;
+  }
+
+  .install-section-info {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    color: var(--text);
+  }
+
+  .install-section-info p {
+    margin-bottom: 12px;
+  }
+
+  .install-section-embed {
+    margin-bottom: 32px;
+    border: 1px solid var(--rule);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .install-section-embed iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+  }
+
+  .install-section-link {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--hover);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(198,245,0,0.4);
+    padding-bottom: 2px;
+  }
+
+  .install-section-link:hover {
+    border-color: var(--hover);
+  }
+
+  @media (max-width: 600px) {
+    .installs-container { padding: 32px 16px; }
+    .installs-header h1 { font-size: 28px; }
+    .install-section { margin-bottom: 48px; padding-bottom: 40px; }
+    .install-section-title { font-size: 22px; }
+    .install-section-embed iframe { height: 350px; }
+  }
+</style>
+
+<div class="installs-container">
+  <div class="installs-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+  </div>
+
+  {{ range .Params.installs }}
+    <section class="install-section">
+      <div class="install-section-header">
+        <h2 class="install-section-title">{{ .title }}</h2>
+        <p class="install-section-meta">{{ .venue }}</p>
+        <p class="install-section-location">{{ .location }}</p>
+        <p class="install-section-date">{{ .date_range }}</p>
+        <span class="install-section-status {{ .status }}">{{ .status }}</span>
+      </div>
+
+      {{ if .info }}
+        <div class="install-section-info">
+          {{ .info | markdownify }}
+        </div>
+      {{ end }}
+
+      {{ if .embed_code }}
+        <div class="install-section-embed">
+          {{ .embed_code | safeHTML }}
+        </div>
+      {{ end }}
+
+      {{ if .site_link }}
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px">
+          <a href="/sites/{{ .site_link }}/" class="install-section-link">Full page →</a>
+          <a href="/exhibition/{{ .site_link }}/" class="install-section-link">Exhibition →</a>
+          <a href="/map/" class="install-section-link">Map →</a>
+        </div>
+      {{ end }}
+    </section>
+  {{ end }}
+</div>
+
+{{ end }}
