@@ -26,7 +26,6 @@ media_libraries:
 
 collections:
 
-  # ─── SITES ───────────────────────────────────────────────────────────────────
   - name: sites
     label: Sites
     label_singular: Site
@@ -35,14 +34,24 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{slug}}"
+
+    # Shows title · location · status in the Sveltia list view
     summary: "{{title}} · {{location}} · {{status}}"
+
+    # Thumbnail from hero image in list view
     thumbnail: image
+
+    # "View on site" button when editing
     preview_path: "/sites/{{slug}}/"
+
+    # Sort options in Sveltia
     sortable_fields:
       fields: [title, location, visit_date, status]
       default:
         field: title
         direction: ascending
+
+    # Quick filter buttons
     view_filters:
       - label: Visited
         field: status
@@ -53,9 +62,12 @@ collections:
       - label: Drafts
         field: draft
         pattern: true
+
+    # Group by status
     view_groups:
       - label: Status
         field: status
+
     fields:
       - { name: title, label: Site Title, widget: string }
       - { name: location, label: Location, widget: string, required: false }
@@ -63,6 +75,7 @@ collections:
       - { name: visit_date, label: Visit Date, widget: string, required: false, hint: "e.g. April 2026" }
       - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
       - { name: description, label: Short Description, widget: markdown, modes: [rich_text, raw], required: false }
+
       - name: photos
         label: Hero Photo
         widget: list
@@ -71,15 +84,30 @@ collections:
         fields:
           - { name: image, label: Image, widget: image }
           - { name: caption, label: Caption, widget: string, required: false }
-      - { name: image, label: OG Share Image (optional override), widget: image, required: false }
-      - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, required: false }
+
+      - { name: image, label: OG Share Image (optional override), widget: image, required: false, hint: "Used when sharing on social media. Leave blank to use hero photo." }
+
+      - { name: dropbox_audio, label: Dropbox Audio Folder, widget: string, required: false, hint: "Shared Dropbox folder link containing MP3 files" }
+
       - { name: body_intro, label: Text Before Gallery, widget: markdown, required: false, modes: [rich_text, raw] }
-      - { name: dropbox_gallery, label: Dropbox Gallery (first), widget: string, required: false }
+
+      - { name: dropbox_gallery, label: Dropbox Gallery (first), widget: string, required: false, hint: "Paste the shared Dropbox folder link" }
+
       - { name: body_middle, label: Text Between Galleries, widget: markdown, required: false, modes: [rich_text, raw] }
-      - { name: dropbox_gallery_2, label: Dropbox Gallery (second), widget: string, required: false }
-      - { name: body_after, label: Text After Second Gallery, widget: markdown, required: false, modes: [rich_text, raw] }
-      - { name: dropbox_gallery_3, label: Dropbox Gallery (third), widget: string, required: false }
+
+      - { name: dropbox_gallery_2, label: Dropbox Gallery (second), widget: string, required: false, hint: "Optional second Dropbox folder link" }
+
+      - name: body_after
+        label: Text After Second Gallery
+        widget: markdown
+        required: false
+        modes: [rich_text, raw]
+
+      - { name: dropbox_gallery_3, label: Dropbox Gallery (third), widget: string, required: false, hint: "Optional third Dropbox folder link" }
+
+
       - { name: body, label: Main Content, widget: markdown, required: false, modes: [rich_text, raw] }
+
       - name: audio
         label: Audio
         widget: list
@@ -88,6 +116,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: url, label: Archive.org URL, widget: string }
           - { name: duration, label: Duration (e.g. 24 min), widget: string, required: false }
+
       - name: archives
         label: Archive.org Recordings
         widget: list
@@ -96,6 +125,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
           - { name: note, label: Note, widget: markdown, modes: [rich_text, raw], required: false }
+
       - name: videos
         label: Videos
         widget: list
@@ -104,6 +134,7 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: url, label: Embed URL, widget: string }
           - { name: description, label: Description, widget: markdown, modes: [rich_text, raw], required: false }
+
       - name: sources
         label: Sources
         widget: list
@@ -111,6 +142,7 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: url, label: URL, widget: string }
+
       - name: links
         label: Links (bottom of page)
         widget: list
@@ -120,7 +152,6 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: source, label: Source, widget: string, required: false }
 
-  # ─── EXHIBITION ───────────────────────────────────────────────────────────────
   - name: exhibition
     label: Exhibition
     label_singular: Exhibition
@@ -131,9 +162,9 @@ collections:
       fields:
         - { name: title, label: Heading, widget: string }
         - { name: intro, label: Statement text, widget: markdown, modes: [rich_text, raw] }
-        - { name: hero, label: Hero image, widget: image, required: false }
-        - { name: links_line, label: Quotes / map line, widget: string, required: false }
-        - { name: host_text, label: Host this work (text), widget: markdown, required: false }
+        - { name: hero, label: Hero image, widget: image, required: false, hint: "Top image on the exhibition page" }
+        - { name: links_line, label: Quotes / map line, widget: string, required: false, hint: "The line under the site list. Markdown links allowed." }
+        - { name: host_text, label: Host this work (text), widget: markdown, required: false, hint: "The venue-facing text under the Host this work toggle." }
         - name: downloads
           label: Downloads
           widget: list
@@ -142,20 +173,23 @@ collections:
           summary: "{{fields.label}}"
           fields:
             - { name: label, label: Label, widget: string }
-            - { name: file, label: File path, widget: string }
+            - { name: file, label: File path, widget: string, hint: "e.g. /downloads/your-file.pdf" }
             - { name: note, label: Description, widget: string, required: false }
     create: true
     extension: md
     format: frontmatter
     slug: "{{slug}}"
+
     summary: "{{title}}{{#if location}} · {{location}}{{/if}}"
     thumbnail: image
     preview_path: "/exhibition/{{slug}}/"
+
     sortable_fields:
       fields: [title, location]
       default:
         field: title
         direction: ascending
+
     view_filters:
       - label: Has photographs
         field: exhibit_gallery
@@ -163,89 +197,28 @@ collections:
       - label: Drafts
         field: draft
         pattern: true
+
     fields:
       - { name: title, label: Title, widget: string }
       - { name: description, label: Meta description, widget: string, required: false }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
-      - { name: exhibit_speaker, label: Speaker, widget: string, required: false }
+      - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "Metadata - the current grid layout doesn't display it" }
       - { name: location, label: Location, widget: string, required: false }
-      - { name: cap, label: Page text (optional), widget: markdown, modes: [rich_text, raw], required: false }
-      - { name: exhibit_gallery, label: Photographs (online), widget: list, required: false }
-      - { name: gallery_label, label: Photographs button text, widget: string, required: false }
-      - { name: gallery_note, label: Photographs button note, widget: string, required: false }
+      - { name: cap, label: Page text (optional), widget: markdown, modes: [rich_text, raw], required: false, hint: "Custom caption for this audio page - leave blank for none" }
+      - { name: exhibit_gallery, label: Photographs (online), widget: list, required: false, hint: "Dropbox image URLs, one per row (dl=0 links are fine). Put the curation sheet first if you upload one." }
+      - { name: gallery_label, label: Photographs button text, widget: string, required: false, hint: "Default: See all the photographs" }
+      - { name: gallery_note, label: Photographs button note, widget: string, required: false, hint: "The small line under the button. Default explains one-of-a-set." }
       - { name: image, label: Hero image (social / listing), widget: image }
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
-
-  # ─── INSTALLS ─────────────────────────────────────────────────────────────────
-  - name: installs
-    label: Installs
-    folder: content/installs
-    create: true
-    extension: md
-    format: frontmatter
-    slug: "{{slug}}"
-    summary: "{{title}}"
-    preview_path: "/installs/{{slug}}/"
-    index_file:
-      name: _index
-      label: Installs listing page
-      fields:
-        - { name: title, label: Page title, widget: string }
-        - { name: description, label: Meta description, widget: string, required: false }
-        - { name: layout, label: Layout, widget: hidden, default: installs }
-        - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-        - name: installations
-          label: Installations
-          label_singular: Installation
-          widget: list
-          required: false
-          summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
-          fields:
-            - { name: title, label: Title, widget: string }
-            - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
-            - { name: venue, label: Venue name, widget: string, required: false }
-            - { name: location, label: Location, widget: string, required: false }
-            - { name: date_range, label: Date range, widget: string, required: false }
-            - name: status
-              label: Status
-              widget: select
-              options: [live, upcoming, past]
-              default: upcoming
-            - { name: image, label: Hero image, widget: image, required: false }
-            - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false }
-            - { name: embed_code, label: Embed code (from Studio), widget: text, required: false }
-    fields:
-      - { name: title, label: Install Title, widget: string }
-      - { name: venue, label: Venue, widget: string, required: false }
-      - { name: location, label: Location, widget: string, required: false }
-      - { name: date_range, label: Date range, widget: string, required: false }
-      - name: status
-        label: Status
-        widget: select
-        options: [live, upcoming, past]
-        default: live
-      - { name: site_link, label: Site page link (slug), widget: string, required: false }
-      - { name: map_svg_file, label: Map SVG path, widget: string, required: false }
-      - { name: info, label: Venue info, widget: markdown, modes: [rich_text, raw], required: false }
-      - name: map_locations
-        label: Map Locations
-        widget: list
-        required: false
-        label_singular: Location
-        summary: "{{fields.name}}"
-        fields:
-          - { name: name, label: Location name, widget: string }
-          - { name: dropbox_url, label: Dropbox folder URL, widget: string }
-          - { name: hero_image, label: Hero image path, widget: string, required: false }
-
-  # ─── QUOTES ───────────────────────────────────────────────────────────────────
+  
   - name: quotes_data
     label: Quotes
     files:
       - name: quotes
         label: Quote deck
         file: static/data/twt_quotes.json
+        description: The rotating quotes shown at /quotes
         fields:
           - name: quotes
             label: Quotes
@@ -255,19 +228,9 @@ collections:
               - { name: quote, label: Quote, widget: text }
               - { name: speaker, label: Speaker, widget: string }
               - { name: location, label: Location, widget: string }
-
-  # ─── PAGES ────────────────────────────────────────────────────────────────────
   - name: pages
     label: Pages
     files:
-      - name: homepage
-        label: Homepage
-        file: content/_index.md
-        fields:
-          - { name: title, label: Site title (browser tab), widget: string }
-          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw] }
-          - { name: framing, label: Framing block, widget: markdown, modes: [rich_text, raw], required: false }
-
       - name: about
         label: About
         file: content/about.md
@@ -277,13 +240,13 @@ collections:
           - { name: layout, label: Layout, widget: hidden, default: about }
           - { name: body, label: Content, widget: markdown, modes: [rich_text, raw] }
 
-      - name: press
-        label: Press
-        file: content/press.md
+      - name: homepage
+        label: Homepage
+        file: content/_index.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: Meta description, widget: string, required: false }
-          - { name: body, label: Content, widget: markdown }
+          - { name: title, label: Site title (browser tab), widget: string }
+          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw], hint: "The paragraph above the list of sites." }
+          - { name: framing, label: Framing block, widget: markdown, modes: [rich_text, raw], required: false, hint: "The line before the site list." }
 
       - name: map
         label: Map
@@ -292,7 +255,15 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: map }
-          - { name: body, label: Intro text, widget: markdown, required: false }
+          - { name: body, label: Intro text, widget: markdown, required: false, hint: "Text shown above the map." }
+
+      - name: press
+        label: Press
+        file: content/press.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: body, label: Content, widget: markdown }
 
       - name: thoughts
         label: Thoughts
@@ -335,11 +306,14 @@ collections:
           - { name: funder_note, label: Funder note, widget: string, required: false }
           - { name: copyright, label: Copyright line, widget: string, required: false }
 
+
       - name: linkinbio
         label: Link in Bio
         file: content/linkinbio.md
+        description: Link in Bio page
         fields:
           - { name: title, label: Title, widget: string }
+
           - name: updates
             label: Updates
             widget: list
@@ -351,6 +325,7 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: location, label: Location, widget: string, required: false }
               - { name: url, label: URL, widget: string, required: false }
+
           - name: links
             label: Links
             widget: list
@@ -360,12 +335,46 @@ collections:
             fields:
               - { name: label, label: Label, widget: string }
               - { name: url, label: URL, widget: string }
+
           - { name: slug, label: Slug, widget: hidden }
           - { name: layout, label: Layout, widget: hidden }
+
+      - name: installs
+        label: Installs
+        file: content/installs.md
+        description: Modular gallery of installations across venues.
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: layout, label: Layout, widget: hidden, default: installs }
+          - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+
+          - name: installs
+            label: Installations
+            label_singular: Installation
+            widget: list
+            required: false
+            summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
+              - { name: detail_link, label: Detail page link (slug), widget: string, required: false, hint: "e.g. cressingham-gardens — only if a detail page exists" }
+              - { name: venue, label: Venue name, widget: string, required: false }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
+              - name: status
+                label: Status
+                widget: select
+                options: [live, upcoming, past]
+                default: upcoming
+              - { name: image, label: Hero image, widget: image, required: false }
+              - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false, hint: "Exhibition details, hours, etc." }
+              - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code or Dropbox gallery link here" }
 
       - name: news
         label: News
         file: content/news.md
+        description: The News / What's On page.
         fields:
           - { name: title, label: Page title, widget: string }
           - { name: description, label: Meta description, widget: string, required: false }
@@ -373,7 +382,8 @@ collections:
           - { name: slug, label: Slug, widget: hidden, default: news }
           - { name: kicker, label: Kicker, widget: string, required: false }
           - { name: heading, label: Heading, widget: string }
-          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw], required: false }
+          - { name: intro, label: Intro text, widget: markdown, modes: [rich_text, raw], required: false, hint: "Image + opening paragraph" }
+
           - name: exhibitions
             label: "What's on"
             label_singular: Exhibition
@@ -394,6 +404,7 @@ collections:
               - { name: note, label: Note, widget: text, required: false }
               - { name: link, label: Link URL, widget: string, required: false }
               - { name: link_label, label: Link label, widget: string, required: false }
+
           - name: communities
             label: Communities
             widget: list
@@ -402,9 +413,9 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { name: name, label: Name, widget: string }
-              - { name: url, label: Site page URL, widget: string, required: false }
-          - { name: press_link, label: Press link text, widget: markdown, modes: [rich_text, raw], required: false }
+              - { name: url, label: Site page URL, widget: string, required: false, hint: "e.g. /sites/granby/" }
+          - { name: press_link, label: Press link text, widget: markdown, modes: [rich_text, raw], required: false, hint: "e.g. Press pack is [here](/downloads/...)" }
           - { name: thanks, label: Thanks / closing note, widget: markdown, modes: [rich_text, raw], required: false }
-          - { name: video_label, label: Video heading, widget: string, required: false }
-          - { name: video_url, label: Video embed URL, widget: string, required: false }
+          - { name: video_label, label: Video heading, widget: string, required: false, hint: "e.g. Don't we need utopias?" }
+          - { name: video_url, label: Video embed URL, widget: string, required: false, hint: "YouTube embed URL (use /embed/ format)" }
           - { name: tagline, label: Closing tagline, widget: string, required: false }
