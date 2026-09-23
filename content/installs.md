@@ -3,7 +3,7 @@ title: Installs
 description: Physical installations of This Was Tomorrow across the UK
 layout: installs
 draft: false
-installs:
+installations:
   - title: New Ground - 10 Years
     site_link: owch-new-ground
     venue: Pollard Thomas Edwards

@@ -177,40 +177,6 @@ collections:
       - { name: exhibit_image, label: Exhibit image (shown on the page), widget: image, required: false }
       - { name: body, label: Player / text, widget: markdown, required: false, modes: [rich_text, raw] }
 
-  # ─── INSTALLS (listing page) ──────────────────────────────────────────────────
-  - name: installs_listing
-    label: Installs (listing)
-    files:
-      - name: installs
-        label: Installs page
-        file: content/installs.md
-        description: Modular gallery of installations across venues.
-        fields:
-          - { name: title, label: Page title, widget: string }
-          - { name: description, label: Meta description, widget: string, required: false }
-          - { name: layout, label: Layout, widget: hidden, default: installs }
-          - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
-          - name: installs
-            label: Installations
-            label_singular: Installation
-            widget: list
-            required: false
-            summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
-              - { name: venue, label: Venue name, widget: string, required: false }
-              - { name: location, label: Location, widget: string, required: false }
-              - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
-              - name: status
-                label: Status
-                widget: select
-                options: [live, upcoming, past]
-                default: upcoming
-              - { name: image, label: Hero image, widget: image, required: false }
-              - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false }
-              - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code from Studio tool" }
-
   # ─── INSTALLS (detail pages) ──────────────────────────────────────────────────
   - name: install_details
     label: Installs (detail pages)
@@ -357,6 +323,36 @@ collections:
               - { name: text, label: Text block, widget: markdown, modes: [rich_text, raw], required: false }
           - { name: funder_note, label: Funder note, widget: string, required: false }
           - { name: copyright, label: Copyright line, widget: string, required: false }
+
+      - name: installs
+        label: Installs
+        file: content/installs.md
+        description: Modular gallery of installations across venues.
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: layout, label: Layout, widget: hidden, default: installs }
+          - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+          - name: installations
+            label: Installations
+            label_singular: Installation
+            widget: list
+            required: false
+            summary: "{{fields.title}} — {{fields.location}} ({{fields.status}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: site_link, label: Site link (slug), widget: string, hint: "e.g. cressingham-gardens" }
+              - { name: venue, label: Venue name, widget: string, required: false }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: date_range, label: Date range, widget: string, required: false, hint: "e.g. 12 September 2026" }
+              - name: status
+                label: Status
+                widget: select
+                options: [live, upcoming, past]
+                default: upcoming
+              - { name: image, label: Hero image, widget: image, required: false }
+              - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false }
+              - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code from Studio tool" }
 
       - name: linkinbio
         label: Link in Bio
