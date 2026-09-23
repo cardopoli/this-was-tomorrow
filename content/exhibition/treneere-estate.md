@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/treneere-estate/
 title: Treneere Estate
 draft: false
 exhibit_speaker: Emma Nicholls

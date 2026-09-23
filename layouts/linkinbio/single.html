@@ -131,6 +131,7 @@
   </style>
 </head>
 <body>
+  {{ partial "core-nav.html" "Top" }}
 
   <header class="lib-header" data-fade>
     <p class="lib-title">{{ .Site.Title }}</p>
@@ -138,7 +139,7 @@
   </header>
 
   {{ with .Params.updates }}
-  <section class="lib-section" data-fade aria-label="Exhibition updates">
+  <section class="lib-section" data-fade aria-label="Installation updates">
     <p class="lib-section-label">What's on</p>
     {{ range . }}
     <div class="lib-event">
@@ -189,5 +190,6 @@
     })();
   </script>
 
+  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>

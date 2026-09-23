@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/hastings-commons/
 title: Hastings Commons
 draft: false
 exhibit_speaker: Jess Steele

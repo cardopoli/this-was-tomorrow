@@ -16,3 +16,6 @@ title = "This Was Tomorrow: Is This the Future We Were Dreaming Of?"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[permalinks.page]
+  exhibition = "/audio/:slug/"

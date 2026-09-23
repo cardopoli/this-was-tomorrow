@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/tinkers-bubble/
 title: Tinker's Bubble
 draft: false
 exhibit_speaker: Cameron, Meg, Ree

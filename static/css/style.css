@@ -244,6 +244,13 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--text);
 }
 
+/* Main navigation */
+.tagline-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 18px; flex-wrap: wrap; }
+.header-nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+.header-nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+.header-nav a:hover, .header-nav a.active { color: var(--text); }
+@media (max-width: 600px) { .tagline-row { display: block; } .header-nav { gap: 8px 14px; } }
+
 /* SITE INDEX (landing page) */
 
 .site-index {

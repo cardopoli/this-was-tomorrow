@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/owch-new-ground/
 title: OWCH / New Ground Cohousing
 draft: false
 exhibit_speaker: Jude, Hillary, Anne

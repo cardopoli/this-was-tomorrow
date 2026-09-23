@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/cressingham-gardens/
 title: Cressingham Gardens
 draft: false
 exhibit_speaker: Andy Plant, Elizabeth Fraser

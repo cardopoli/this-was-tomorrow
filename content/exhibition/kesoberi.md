@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/kesoberi/
 title: Kesoberi Community Farm
 draft: false
 exhibit_speaker: Fi Garrard

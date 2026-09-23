@@ -6,11 +6,13 @@
       {{ with .Site.Params.footer_project }}<p class="footer-desc">{{ . }}</p>{{ end }}
     </div>
     <nav class="footer-nav" aria-label="Site navigation">
-      <a href="/exhibition/"{{ if eq .RelPermalink "/exhibition/" }} class="active"{{ end }}>Exhibition</a>
-      <a href="/quotes/"{{ if eq .RelPermalink "/quotes/" }} class="active"{{ end }}>Quotes</a>
-      <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
-      <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
-      <a href="/press/"{{ if eq .RelPermalink "/press/" }} class="active"{{ end }}>Press</a>
+      <a href="/"{{ if or .IsHome (eq .Section "sites") }} class="active" aria-current="page"{{ end }}>Sites</a>
+      <a href="/audio/"{{ if eq .Section "exhibition" }} class="active" aria-current="page"{{ end }}>Audio</a>
+      <a href="/installs/"{{ if eq .Type "installs" }} class="active" aria-current="page"{{ end }}>Installs</a>
+      <a href="/map/"{{ if eq .RelPermalink "/map/" }} class="active" aria-current="page"{{ end }}>Map</a>
+      <a href="/quotes/"{{ if eq .RelPermalink "/quotes/" }} class="active" aria-current="page"{{ end }}>Quotes</a>
+      <a href="/about/"{{ if eq .RelPermalink "/about/" }} class="active" aria-current="page"{{ end }}>About</a>
+      <a href="/press/"{{ if eq .RelPermalink "/press/" }} class="active" aria-current="page"{{ end }}>Press</a>
     </nav>
   </div>
 

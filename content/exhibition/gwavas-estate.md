@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/gwavas-estate/
 title: "Gwavas Estate"
 draft: true              # scaffold - flip to false once audio is pasted and details are checked
 layout: exhibition

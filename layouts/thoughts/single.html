@@ -215,6 +215,7 @@
 </head>
 
 <body>
+  {{ partial "core-nav.html" "Top" }}
   <main class="content">
 
     <a class="back" href="/">&larr; This Was Tomorrow</a>
@@ -287,5 +288,6 @@
       blocks.forEach(function (b) { io.observe(b); });
     })();
   </script>
+  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>

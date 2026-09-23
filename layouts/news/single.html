@@ -79,6 +79,7 @@
   </style>
 </head>
 <body>
+  {{ partial "core-nav.html" "Top" }}
 
 <div class="wrap">
 
@@ -162,5 +163,6 @@
     items.forEach(function (el) { io.observe(el); });
   })();
 </script>
+  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>

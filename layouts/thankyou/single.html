@@ -203,6 +203,7 @@
 </head>
 
 <body>
+  {{ partial "core-nav.html" "Top" }}
   <main class="content">
 
     <a class="back" href="/">&larr; This Was Tomorrow</a>
@@ -259,5 +260,6 @@
       items.forEach(function (el) { io.observe(el); });
     })();
   </script>
+  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>

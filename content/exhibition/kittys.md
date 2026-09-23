@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/kittys/
 title: Kitty's Launderette
 draft: false
 exhibit_speaker: Bryn, Anthony

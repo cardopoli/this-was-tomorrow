@@ -3,6 +3,31 @@ title: Installs
 description: Physical installations of This Was Tomorrow across the UK
 layout: installs
 draft: false
+intro: |-
+  Large photographs, pasted to walls, unframed. Each installation puts images from other communities into a new place. A QR code beside each photograph leads to a voice from that place.
+
+  These are the physical showings of This Was Tomorrow. The images are left with the host at the end. Hosting needs a wall and a bit of room; everything else travels with the work.
+host_text: |-
+  To talk about showing this work, contact [info@enricopolicardo.com](mailto:info@enricopolicardo.com).
+downloads:
+  - label: Curation /// Info Packs
+    file: /downloads/enrico_policardo_twt_press_pack.pdf
+    note: Press pack with essential info about the project
+  - label: One-page overview (PDF)
+    file: /downloads/enrico_policardo_twt_one-pager.pdf
+    note: the project on a single A5
+  - label: Curation and print notes (PDF)
+    file: /downloads/enrico_policardo_twt_curation-info.pdf
+    note: install sizes, materials and method, for venues and printers.
+  - label: The exhibit pack (PDF)
+    file: /downloads/enrico_policardo_twt_xhbt-pack.pdf
+    note: 'the full set: about the project, the artist statement, curation and print notes, and a plate for each site.'
+  - label: Location Sheets
+    file: /downloads/enrico_policardo_twt_locations.pdf
+    note: Exhibition A4 Sheets for each location
+  - label: Intro Text, Quote generator, Biography
+    file: /downloads/enrico_policardo_twt_QR_BIO_QUOTES.pdf
+    note: Exhibition A4 Sheets for Intro Text, Quote generator, Biography
 installs:
   - title: Hastings Commons
     site_link: hastings-commons

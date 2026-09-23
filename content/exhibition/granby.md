@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/granby/
 title: Granby Four Streets Community Land Trust
 draft: false
 exhibit_speaker: Hazel Tilley

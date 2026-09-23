@@ -4,7 +4,7 @@
   
   .installs-header { margin-bottom: 36px; }
   .installs-header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; line-height: 1.05; }
-  .installs-header p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 60ch; }
+  .installs-header p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 60ch; margin-bottom: 12px; }
 
   .install-section {
     margin-bottom: 48px;
@@ -116,6 +116,10 @@
     border-color: var(--hover);
   }
 
+  .installs-host { margin: 50px 0; border-top: 1px solid var(--rule); }
+  .installs-host summary { cursor: pointer; padding: 20px 0; font: 12px var(--mono); text-transform: uppercase; }
+  .installs-host p { margin: 0 0 14px; }
+  .installs-host li { margin-bottom: 10px; }
   @media (max-width: 600px) {
     .installs-container { padding: 0 0 40px; }
     .installs-header h1 { font-size: 28px; }
@@ -129,8 +133,18 @@
 <div class="installs-container">
   <div class="installs-header">
     <h1>{{ .Title }}</h1>
-    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+    {{ with .Params.intro }}<div class="installs-intro">{{ . | markdownify }}</div>{{ end }}
   </div>
+
+  {{ if or .Params.host_text .Params.downloads }}
+    <details class="installs-host">
+      <summary>Host this work - info and downloads</summary>
+      {{ with .Params.host_text }}{{ . | markdownify }}{{ end }}
+      {{ with .Params.downloads }}
+        <ul>{{ range . }}<li><a href="{{ .file | relURL }}">{{ .label }}</a>{{ with .note }} - {{ . }}{{ end }}</li>{{ end }}</ul>
+      {{ end }}
+    </details>
+  {{ end }}
 
   {{ range .Params.installs }}
     <section class="install-section">
@@ -158,7 +172,6 @@
         <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px">
           {{ if .detail_link }}<a href="/installs/{{ .detail_link }}/" class="install-section-link">Interactive map →</a>{{ end }}
           <a href="/sites/{{ .site_link }}/" class="install-section-link">Full page →</a>
-          <a href="/exhibition/{{ .site_link }}/" class="install-section-link">Exhibition →</a>
           {{ if not .detail_link }}<a href="/map/" class="install-section-link">Map →</a>{{ end }}
         </div>
       {{ end }}

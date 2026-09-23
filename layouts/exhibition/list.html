@@ -14,20 +14,6 @@
   .exhibition-links { margin-top: 30px; font-size: 14px; line-height: 1.7; color: var(--muted); }
   .exhibition-links a { color: var(--hover); text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); }
   .exhibition-links a:hover { border-color: var(--hover); }
-  .host { margin-top: 48px; border-top: 1px solid var(--rule); }
-  .host > summary { list-style: none; cursor: pointer; padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
-  .host > summary::-webkit-details-marker { display: none; }
-  .host > summary::after { content: "+"; font-size: 18px; line-height: 1; }
-  .host[open] > summary::after { content: "\2013"; }
-  .host[open] > summary { color: var(--text); }
-  .exhibition-extra { padding-bottom: 8px; }
-  .exhibition-extra h2 { font-size: 18px; font-weight: 700; margin: 26px 0 12px; }
-  .exhibition-extra p { line-height: 1.7; margin-bottom: 16px; }
-  .exhibition-extra ul { list-style: none; padding: 0; margin: 0 0 20px; }
-  .exhibition-extra li { margin-bottom: 12px; line-height: 1.55; }
-  .exhibition-extra a { color: var(--hover); text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); }
-  .exhibition-extra a:hover { border-color: var(--hover); }
 </style>
 
 <div class="site-index">
@@ -58,19 +44,5 @@
 
     {{ with .Params.links_line }}<p class="exhibition-links">{{ . | markdownify }}</p>{{ end }}
 
-    {{ if or .Params.host_text .Params.downloads }}
-    <details class="host">
-      <summary>Info & Press Pack</summary>
-      <div class="exhibition-extra">
-        {{ with .Params.host_text }}{{ . | markdownify }}{{ end }}
-        {{ with .Params.downloads }}
-        <h2>Downloads</h2>
-        <ul>
-          {{ range . }}<li><a href="{{ .file | relURL }}">{{ .label }}</a>{{ with .note }} - {{ . }}{{ end }}</li>{{ end }}
-        </ul>
-        {{ end }}
-      </div>
-    </details>
-    {{ end }}
 </div>
 {{ end }}

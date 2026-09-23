@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/lilac/
 title: 'LILAC: Low Impact Living Affordable Community'
 draft: false
 exhibit_speaker: Paul, Maria, Keith

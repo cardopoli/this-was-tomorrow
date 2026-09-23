@@ -153,28 +153,19 @@ collections:
           - { name: source, label: Source, widget: string, required: false }
 
   - name: exhibition
-    label: Exhibition
-    label_singular: Exhibition
+    label: Audio
+    label_singular: Audio page
     folder: content/exhibition
     index_file:
       name: _index
-      label: Exhibition page
+      label: Audio overview
       fields:
         - { name: title, label: Heading, widget: string }
-        - { name: intro, label: Statement text, widget: markdown, modes: [rich_text, raw] }
-        - { name: hero, label: Hero image, widget: image, required: false, hint: "Top image on the exhibition page" }
+        - { name: url, label: Public URL, widget: hidden, default: /audio/ }
+        - { name: aliases, label: Previous URLs, widget: list, required: false }
+        - { name: intro, label: Introduction, widget: markdown, modes: [rich_text, raw] }
+        - { name: hero, label: Hero image, widget: image, required: false, hint: "Top image on the audio page" }
         - { name: links_line, label: Quotes / map line, widget: string, required: false, hint: "The line under the site list. Markdown links allowed." }
-        - { name: host_text, label: Host this work (text), widget: markdown, required: false, hint: "The venue-facing text under the Host this work toggle." }
-        - name: downloads
-          label: Downloads
-          widget: list
-          required: false
-          label_singular: Download
-          summary: "{{fields.label}}"
-          fields:
-            - { name: label, label: Label, widget: string }
-            - { name: file, label: File path, widget: string, hint: "e.g. /downloads/your-file.pdf" }
-            - { name: note, label: Description, widget: string, required: false }
     create: true
     extension: md
     format: frontmatter
@@ -182,7 +173,7 @@ collections:
 
     summary: "{{title}}{{#if location}} · {{location}}{{/if}}"
     thumbnail: image
-    preview_path: "/exhibition/{{slug}}/"
+    preview_path: "/audio/{{slug}}/"
 
     sortable_fields:
       fields: [title, location]
@@ -200,6 +191,7 @@ collections:
 
     fields:
       - { name: title, label: Title, widget: string }
+      - { name: aliases, label: Previous URLs, widget: list, required: false, hint: "Keep existing /exhibition/ paths so printed QR codes continue to work." }
       - { name: description, label: Meta description, widget: string, required: false }
       - { name: draft, label: Draft, widget: boolean, default: false, required: false }
       - { name: exhibit_speaker, label: Speaker, widget: string, required: false, hint: "Metadata - the current grid layout doesn't display it" }
@@ -348,6 +340,18 @@ collections:
           - { name: description, label: Meta description, widget: string, required: false }
           - { name: layout, label: Layout, widget: hidden, default: installs }
           - { name: draft, label: Draft (hide from site), widget: boolean, default: false, required: false }
+          - { name: intro, label: Installation introduction, widget: markdown, modes: [rich_text, raw], required: false }
+          - { name: host_text, label: Host this work (text), widget: markdown, required: false, hint: "The venue-facing text under the Host this work toggle." }
+          - name: downloads
+            label: Downloads
+            widget: list
+            required: false
+            label_singular: Download
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: file, label: File path, widget: string, hint: "e.g. /downloads/your-file.pdf" }
+              - { name: note, label: Description, widget: string, required: false }
 
           - name: installs
             label: Installations
@@ -390,7 +394,7 @@ collections:
               - { name: place, label: Place, widget: string, required: false }
               - { name: x, label: SVG horizontal coordinate, widget: number, value_type: float }
               - { name: y, label: SVG vertical coordinate, widget: number, value_type: float }
-              - { name: page, label: Exhibition page slug, widget: string, required: false }
+              - { name: page, label: Audio page slug, widget: string, required: false }
               - { name: dropbox_url, label: Dropbox gallery folder, widget: string, required: false }
 
       - name: news

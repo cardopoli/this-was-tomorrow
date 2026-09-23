@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/calder-valley/
 title: Calder Valley Community Land Trust
 draft: false
 exhibit_speaker: Paul Brannigan

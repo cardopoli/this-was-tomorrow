@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /exhibition/trevone-quarry/
 title: Trevone Quarry
 draft: false
 exhibit_speaker: Rob Higgs, Sophie Miller, Dave, Oli Sword

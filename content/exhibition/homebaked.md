@@ -12,6 +12,8 @@ exhibit_image: /images/r0043867-18_19_052026-homebaked-liverpool-lowres.webp
 dropbox_folder: null
 aliases:
   - /exhibition/two-up-two-down/
+  - /exhibition/homebaked/
+  - /audio/two-up-two-down/
 slug: homebaked
 layout: exhibition
 ---

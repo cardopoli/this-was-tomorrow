@@ -3,9 +3,11 @@
     {{ with .Site.Params.tagline }}
     <div class="tagline-row">
         <div class="tagline">{{ replace . "Dreaming Of?" "Dreaming&nbsp;Of?" | safeHTML }}</div>
-        <nav class="header-nav">
-            <a href="/exhibition/"{{ if eq $.RelPermalink "/exhibition/" }} class="active"{{ end }}>Exhibition</a>
-            <a href="/map/"{{ if eq $.RelPermalink "/map/" }} class="active"{{ end }}>Map</a>
+        <nav class="header-nav" aria-label="Main navigation">
+            <a href="/"{{ if or $.IsHome (eq $.Section "sites") }} class="active" aria-current="page"{{ end }}>Sites</a>
+            <a href="/audio/"{{ if eq $.Section "exhibition" }} class="active" aria-current="page"{{ end }}>Audio</a>
+            <a href="/installs/"{{ if eq $.Type "installs" }} class="active" aria-current="page"{{ end }}>Installs</a>
+            <a href="/map/"{{ if eq $.RelPermalink "/map/" }} class="active" aria-current="page"{{ end }}>Map</a>
         </nav>
     </div>
     {{ end }}
