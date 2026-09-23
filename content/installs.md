@@ -6,7 +6,6 @@ draft: false
 installs:
   - title: Hastings Commons
     site_link: hastings-commons
-    detail_link: ''
     venue: The Rose Cottage, Gotham Alley - Hastings Commons
     location: Hastings
     date_range: from 12 September 2026
@@ -45,9 +44,9 @@ installs:
         <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/tceo0lkmns8bio0napwr2/TWT-INSTALL_hastings_120926-IMG_5819.jpg?rlkey=usf3p3ngw9hjysv6736ub4hxa&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/tceo0lkmns8bio0napwr2/TWT-INSTALL_hastings_120926-IMG_5819.jpg?rlkey=usf3p3ngw9hjysv6736ub4hxa&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
       </div>
       </div>
+    detail_link: ''
   - title: New Ground - 10 Years
     site_link: owch-new-ground
-    detail_link: ''
     venue: Pollard Thomas Edwards
     location: Diespeker Wharf, London
     date_range: 12 September 2026
@@ -84,18 +83,19 @@ installs:
         <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/k4fczjfk1n9eu7yvvalpv/TWT-INSTALL_PTE_120926-P1010266_medium.jpg?rlkey=6v2z1glx4pfw9llvknohpa8sx&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/k4fczjfk1n9eu7yvvalpv/TWT-INSTALL_PTE_120926-P1010266_medium.jpg?rlkey=6v2z1glx4pfw9llvknohpa8sx&raw=1" alt="" style="width:100%;display:block"></a>
       </figure>
       </div>
+    detail_link: ''
   - title: Cressingham Gardens
     site_link: cressingham-gardens
     venue: Rotunda
     location: Cressingham Gardens, London
     date_range: 20 September 2026
     status: live
-    image: /images/dsc_0531-twt_cressingham-gardens_low.webp
+    image: /images/maps/cressingham-gardens.svg
     info: Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
     embed_code: ''
+    detail_link: cressingham-gardens
   - title: Calder Valley Community Land Trust
     site_link: calder-valley
-    detail_link: ''
     venue: Calder Valley CLT
     location: Hebden Bridge & Todmorden
     date_range: Autumn 2026
@@ -103,4 +103,5 @@ installs:
     image: /images/dsc_0531-twt_calder-valley_low.webp
     info: Installation details to follow.
     embed_code: ''
+    detail_link: ''
 ---
