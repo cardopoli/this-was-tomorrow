@@ -90,8 +90,11 @@ installs:
     location: Cressingham Gardens, London
     date_range: 20 September 2026
     status: live
-    image: /images/maps/cressingham-gardens.svg
-    info: Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
+    image: /images/img_8041_medium.webp
+    info: |-
+      Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
+
+      Photos by [cardopoli](https://www.instagram.com/cardopoli/) and by [Rosamond Martin](https://www.rosamondmartin.com/)
     embed_code: ''
     detail_link: cressingham-gardens
   - title: Calder Valley Community Land Trust
