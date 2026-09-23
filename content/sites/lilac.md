@@ -15,7 +15,7 @@ dropbox_audio: ''
 body_intro: |-
   LILAC began in 2006 with a group of Leeds residents who wanted to build their own homes and live differently. The idea was urban from the start - deliberately so, close enough to the city that people could travel to work without cars. After years of research, planning and fundraising, they established LILAC Mutual Home Ownership Society Ltd as a registered co-operative in 2009. Construction began in 2012. First residents moved in May 2013.
 
-  The site is a former primary school in Bramley, west Leeds. Twenty homes: a mix of one and two-bed flats and three and four-bed houses, and a Common House at the centre. Designed by White Design architects. Built using ModCell - prefabricated panels of timber frame packed with straw bale, assembled offsite in a temporary flying factory and joined on site. External walls in lime render. Triple-glazed windows. MVHR ventilation. Solar thermal panels and a 1.25kw solar PV array, with an additional 4kw on the Common House. A sustainable urban drainage system feeds a central pond.
+  The site is a former primary school in Kirkstall, west Leeds. Twenty homes: a mix of one and two-bed flats and three and four-bed houses, and a Common House at the centre. Designed by White Design architects. Built using ModCell - prefabricated panels of timber frame packed with straw bale, assembled offsite in a temporary flying factory and joined on site. External walls in lime render. Triple-glazed windows. MVHR ventilation. Solar thermal panels and a 1.25kw solar PV array, with an additional 4kw on the Common House. A sustainable urban drainage system feeds a central pond.
 
   Residents helped build it - collectively adding the straw bale insulation during construction. The choice of straw was deliberate: renewable, locally sourced, high-insulating, and a material that allowed the community to be physically involved in making where they would live.
 
@@ -29,7 +29,7 @@ body_intro: |-
 
   ## The Mutual Home Ownership Model
 
-  LILAC were the first co-operative in the UK to use the Mutual Home Ownership (MHO) model. Members pay 35% of their net monthly household income. That payment covers a house charge - maintenance, insurance - with the remainder building equity in the co-operative over time.
+  LILAC were the first co-operative in the UK to use the Mutual Home Ownership (MHOs) model. Members pay 35% of their net monthly household income. That payment covers a house charge - maintenance, insurance - with the remainder building equity in the co-operative over time.
 
   Equity units are indexed to wage inflation at three-quarters rate - not to the property market. In the thirteen years since LILAC opened, local house prices have risen roughly 60%. Private rental in the area has gone up over 80%. LILAC's equity units have risen around 23%. The gap between those numbers is structural, and intentional: the place becomes relatively cheaper over time, not more expensive.
 
@@ -46,11 +46,11 @@ dropbox_gallery: https://www.dropbox.com/scl/fo/ym89f2q1sxn6g8kvo1jyc/AAAlEKj9Nl
 body_middle: |-
   ## The Common House
 
-  The Common House is at the centre of the site - physically and otherwise. Shared kitchen and dining room, laundry, meeting rooms, a workshop with power tools and workbench, office, guest rooms, play area. Outside: communal gardens, allotments, a pocket park that the wider neighbourhood uses too. Around eight or nine cars between twenty households. Five washing machines. Two lawnmowers. The maths of sharing is simple and the results are not abstract.
+  The Common House is at the centre of the site - physically and otherwise. Shared kitchen and dining room, laundry, meeting rooms, a workshop with power tools and workbench, office, guest rooms. Outside: communal gardens, play area, allotments, a pocket park that the wider neighbourhood uses too. Around eight or nine cars between twenty households. Five washing machines. Two lawnmowers. The maths of sharing is simple and the results are not abstract.
 
-  Meals together happen at least once a week, often two or three times. The dining room and kitchen were squeezed at the build stage to keep costs down - there is ongoing discussion about whether to extend both. That decision, when it comes, will go to all-member consensus.
+  On average, residents share a communal meal once a week - it used to happen more often. The dining room and kitchen were squeezed at the build stage to keep costs down - there is ongoing discussion about whether to extend both. That decision, when it comes, will go to all-member consensus.
 
-  Every month: a Tend and Mend day. Residents are expected to show up. Where they can, they maintain the place themselves, calling in contractors when they can't.
+  Every other month: a Tend and Mend day, five a year, with landscaping happening in the alternate months. Residents are expected to show up. Where they can, they maintain the place themselves, calling in contractors when they can't.
 
   <img src="https://www.dropbox.com/scl/fi/s431dk6tgfyts5810k9to/R0043729-TWT_14052026_LILAC-LEEDS_LOWRES-copy.jpg?rlkey=hl27nmp1j4xzpbqa735466xme&raw=1" alt="" style="width:100%">
 
