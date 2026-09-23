@@ -86,7 +86,6 @@ installs:
       </div>
   - title: Cressingham Gardens
     site_link: cressingham-gardens
-    detail_link: cressingham-gardens
     venue: Rotunda
     location: Cressingham Gardens, London
     date_range: 20 September 2026
