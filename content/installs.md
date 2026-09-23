@@ -18,26 +18,6 @@ installs:
 
       For all the photos of the install click [here](https://www.dropbox.com/scl/fo/m8f4b791g6o8347kbobk0/ABS21tHusQBWQesVyoAnW9Q?rlkey=amd9lq1q5j0z0u967pidn2pw6&dl=0).
     embed_code: |-
-      <div data-lb-group="gszjj" style="margin-bottom:4px">
-      <figure style="margin:0;width:100%">
-        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/6qekd4ae7acvew24cq16b/TWT-INSTALL_hastings_120926-IMG_5435.jpg?rlkey=my34cij3xhlhg8uidpnvpr8w9&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/6qekd4ae7acvew24cq16b/TWT-INSTALL_hastings_120926-IMG_5435.jpg?rlkey=my34cij3xhlhg8uidpnvpr8w9&raw=1" alt="" style="width:100%;display:block"></a>
-      </figure>
-      </div>
-
-      <div data-lb-group="goiej" style="margin-bottom:4px">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;align-items:stretch">
-        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/hsjwqq04aw2s99dnfl3ly/TWT-INSTALL_HASTINGS_110926-P1010155_medium.jpg?rlkey=gm5cxqvzdt343o65g5d57wzaf&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/hsjwqq04aw2s99dnfl3ly/TWT-INSTALL_HASTINGS_110926-P1010155_medium.jpg?rlkey=gm5cxqvzdt343o65g5d57wzaf&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
-        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/8k12q3w0z89gg5f4cjbox/TWT-INSTALL_HASTINGS_110926-P1010158_medium.jpg?rlkey=g6c9fmwlomme5e491imdq1sm3&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/8k12q3w0z89gg5f4cjbox/TWT-INSTALL_HASTINGS_110926-P1010158_medium.jpg?rlkey=g6c9fmwlomme5e491imdq1sm3&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
-        <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/ltbww600zbbljn95bpul2/TWT-INSTALL_HASTINGS_110926-P1010157_medium.jpg?rlkey=c0cn64p405teypd62tgs194pf&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/ltbww600zbbljn95bpul2/TWT-INSTALL_HASTINGS_110926-P1010157_medium.jpg?rlkey=c0cn64p405teypd62tgs194pf&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
-      </div>
-      </div>
-
-      <div data-lb-group="gckga" style="margin-bottom:4px">
-      <figure style="margin:0;width:100%">
-        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/1u2je8w8jlfmr80et1j9w/TWT-INSTALL_hastings_120926-IMG_5444.jpg?rlkey=lhxaltbphizgn263w1lhd9ybk&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/1u2je8w8jlfmr80et1j9w/TWT-INSTALL_hastings_120926-IMG_5444.jpg?rlkey=lhxaltbphizgn263w1lhd9ybk&raw=1" alt="" style="width:100%;display:block"></a>
-      </figure>
-      </div>
-
       <div data-lb-group="grf36" style="margin-bottom:4px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;align-items:stretch">
         <div style="height:100%"><a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/xll4npftlhtbiw57qn3jj/TWT-INSTALL_hastings_120926-IMG_5424.jpg?rlkey=c6dx0uwomjzd2eule8ngro1sa&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/xll4npftlhtbiw57qn3jj/TWT-INSTALL_hastings_120926-IMG_5424.jpg?rlkey=c6dx0uwomjzd2eule8ngro1sa&raw=1" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></a></div>
