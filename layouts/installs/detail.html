@@ -1,15 +1,20 @@
 {{ define "main" }}
 <style>
-  .detail-container { max-width: 960px; margin: 0 auto; padding: 20px 0 60px; }
+  .detail-container { max-width: 1160px; margin: 0 auto; padding: 20px 0 60px; }
+  .detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 340px); gap: 24px; align-items: start; }
+  .detail-sidebar { min-width: 0; }
   .detail-container > h1 { font-size: 24px; margin: 0 0 14px; }
-  .detail-map { position: relative; margin: 0 0 24px; height: min(85vh, 820px); min-height: 460px; overflow: hidden; background: #fff; border: 1px solid var(--rule); touch-action: none; cursor: grab; }
+  .detail-map { position: sticky; top: 12px; margin: 0; height: min(82vh, 800px); min-height: 460px; overflow: hidden; background: transparent; border: 0; touch-action: none; cursor: grab; }
   .detail-map.dragging { cursor: grabbing; }
-  .detail-map svg { width: 100%; height: 100%; display: block; }
-  .detail-controls { position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; background: var(--bg); border: 1px solid var(--rule); }
-  .detail-controls button { min-width: 42px; min-height: 42px; padding: 7px; border: 0; background: transparent; color: var(--text); cursor: pointer; }
-  .detail-controls button:hover, .detail-controls button:focus-visible { background: var(--rule); }
+  .detail-map > svg { width: 100%; height: 100%; display: block; }
+  .detail-controls { position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; gap: 8px; }
+  .detail-controls button { width: 44px; height: 44px; padding: 10px; border: 0; border-radius: 50%; background: #c6f500; color: #111; cursor: pointer; display: grid; place-items: center; }
+  .detail-controls button svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .detail-controls button:hover { background: #d9ff56; }
+  .detail-controls button:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+  .detail-controls button:disabled { opacity: .45; cursor: default; }
   .detail-prompt { font: 12px/1.5 var(--mono); color: var(--muted); margin-bottom: 18px; }
-  .detail-locations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 20px; margin: 0 0 32px; }
+  .detail-locations { display: grid; grid-template-columns: 1fr; gap: 5px; margin: 0 0 20px; }
   .detail-location-button { text-align: left; color: var(--text); background: transparent; border: 1px solid var(--rule); cursor: pointer; padding: 10px; font: 12px/1.4 var(--mono); }
   .detail-location-button:hover, .detail-location-button:focus-visible, .detail-location-button.selected { background: var(--rule); }
   .detail-hotspot { fill: transparent; stroke: transparent; stroke-width: 2; vector-effect: non-scaling-stroke; cursor: pointer; }
@@ -18,7 +23,9 @@
   .detail-gallery-link { display: inline-block; margin: 6px 0 18px; font: 12px var(--mono); }
 
 
-  .detail-gallery { margin-top: 32px; }
+  .detail-gallery { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .detail-gallery .dbx-gallery { max-width: 100%; }
+  .detail-locations > .detail-gallery { margin: 4px 0 12px; padding: 16px 10px; border: 1px solid var(--rule); }
 
   .detail-gallery-title {
     font-family: var(--mono);
@@ -43,24 +50,31 @@
     display: block;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
+    .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+    .detail-map { position: relative; top: auto; height: 52dvh; min-height: 340px; max-height: 520px; }
     .detail-container { padding: 8px 0 30px; }
-    .detail-map { height: 65vh; min-height: 360px; }
-    .detail-locations { grid-template-columns: 1fr; }
   }
 </style>
 
 <div class="detail-container">
   <h1>{{ .Title }}</h1>
-  <p class="detail-prompt">Select a letter or a location below. Scroll or pinch to zoom; drag to move around.</p>
-  <div class="detail-map" id="mapWrap">
-    <div class="detail-controls"><button type="button" id="detailZoomIn" aria-label="Zoom in">+</button><button type="button" id="detailZoomOut" aria-label="Zoom out">-</button><button type="button" id="detailReset" aria-label="Reset map">Reset</button></div>
-    {{ readFile "static/images/maps/cressingham-interactive.svg" | safeHTML }}
+  <p class="detail-prompt">Select a letter on the map or a location on the right. Scroll or pinch to zoom; drag to move around.</p>
+  <div class="detail-grid">
+    <div class="detail-map" id="mapWrap">
+      <div class="detail-controls" aria-label="Map controls">
+        <button type="button" id="detailZoomIn" aria-label="Zoom in" title="Zoom in"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+        <button type="button" id="detailZoomOut" aria-label="Zoom out" title="Zoom out"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+        <button type="button" id="detailReset" aria-label="Reset map" title="Reset map"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 11a8 8 0 1 0 2-5.5M4 4v5h5"/></svg></button>
+      </div>
+      {{ readFile "static/images/maps/cressingham-interactive.svg" | safeHTML }}
+    </div>
+    <aside class="detail-sidebar" aria-label="Map locations and preview">
+      <h2 class="detail-gallery-title">Locations</h2>
+      <div class="detail-locations" id="detailLocations"></div>
+      <div class="detail-gallery" id="galleryWrap" aria-live="polite" hidden></div>
+    </aside>
   </div>
-
-  <h2 class="detail-gallery-title">Locations</h2>
-  <div class="detail-locations" id="detailLocations"></div>
-  <div class="detail-gallery" id="galleryWrap" aria-live="polite" hidden></div>
 
   <a href="/installs/" class="detail-back">← Back to installs</a>
 </div>
