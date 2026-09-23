@@ -156,10 +156,10 @@
 
       {{ if .site_link }}
         <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px">
-          {{ if .detail_link }}<a href="/installs/{{ .detail_link }}/" class="install-section-link">Details →</a>{{ end }}
+          {{ if .detail_link }}<a href="/installs/{{ .detail_link }}/" class="install-section-link">Interactive map →</a>{{ end }}
           <a href="/sites/{{ .site_link }}/" class="install-section-link">Full page →</a>
           <a href="/exhibition/{{ .site_link }}/" class="install-section-link">Exhibition →</a>
-          <a href="/map/" class="install-section-link">Map →</a>
+          {{ if not .detail_link }}<a href="/map/" class="install-section-link">Map →</a>{{ end }}
         </div>
       {{ end }}
     </section>

@@ -7,8 +7,21 @@
   .detail-location { font-size: 14px; color: var(--text); margin-bottom: 2px; }
   .detail-date { font-size: 14px; color: var(--text); }
 
-  .detail-map { margin: 0 0 48px; }
-  .detail-map svg { width: 100%; height: auto; display: block; }
+  .detail-map { position: relative; margin: 0 0 24px; height: min(68vw, 650px); min-height: 330px; overflow: hidden; background: #fff; border: 1px solid var(--rule); touch-action: none; cursor: grab; }
+  .detail-map.dragging { cursor: grabbing; }
+  .detail-map svg { width: 100%; height: 100%; display: block; }
+  .detail-controls { position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; background: var(--bg); border: 1px solid var(--rule); }
+  .detail-controls button { min-width: 42px; min-height: 42px; padding: 7px; border: 0; background: transparent; color: var(--text); cursor: pointer; }
+  .detail-controls button:hover, .detail-controls button:focus-visible { background: var(--rule); }
+  .detail-prompt { font: 12px/1.5 var(--mono); color: var(--muted); margin-bottom: 18px; }
+  .detail-locations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 20px; margin: 0 0 32px; }
+  .detail-location-button { text-align: left; color: var(--text); background: transparent; border: 1px solid var(--rule); cursor: pointer; padding: 10px; font: 12px/1.4 var(--mono); }
+  .detail-location-button:hover, .detail-location-button:focus-visible, .detail-location-button.selected { background: var(--rule); }
+  .detail-hotspot { fill: transparent; stroke: transparent; stroke-width: 2; vector-effect: non-scaling-stroke; cursor: pointer; }
+  .detail-hotspot:hover, .detail-hotspot:focus-visible, .detail-hotspot.selected { fill: #c6f50066; stroke: #7b9300; outline: none; }
+  .detail-gallery[hidden] { display: none; }
+  .detail-gallery-link { display: inline-block; margin: 6px 0 18px; font: 12px var(--mono); }
+
 
   .map-marker { cursor: pointer; }
   .map-marker circle { transition: opacity 0.15s; }
@@ -56,6 +69,7 @@
   @media (max-width: 600px) {
     .detail-container { padding: 32px 16px; }
     .detail-header h1 { font-size: 24px; }
+    .detail-locations { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -67,73 +81,18 @@
     {{ if .Params.date_range }}<p class="detail-date">{{ .Params.date_range }}</p>{{ end }}
   </div>
 
+  <p class="detail-prompt">Select a letter or a location below. Scroll or pinch to zoom; drag to move around.</p>
   <div class="detail-map" id="mapWrap">
+    <div class="detail-controls"><button type="button" id="detailZoomIn" aria-label="Zoom in">+</button><button type="button" id="detailZoomOut" aria-label="Zoom out">-</button><button type="button" id="detailReset" aria-label="Reset map">Reset</button></div>
     {{ readFile "static/images/maps/cressingham-gardens.svg" | safeHTML }}
   </div>
 
-  <div class="detail-tooltip" id="mapTooltip"></div>
-
-  <div class="detail-gallery" id="galleryWrap"></div>
+  <div class="detail-locations" id="detailLocations"></div>
+  <div class="detail-gallery" id="galleryWrap" aria-live="polite" hidden></div>
 
   <a href="/installs/" class="detail-back">← Back to installs</a>
 </div>
 
-<script>
-(function() {
-  var locations = {{ .Params.map_locations | jsonify }};
-  var tooltip = document.getElementById('mapTooltip');
-  var galleryWrap = document.getElementById('galleryWrap');
-
-  // Build lookup by letter
-  var byLetter = {};
-  locations.forEach(function(loc) { byLetter[loc.letter] = loc; });
-
-  // Wire up each marker
-  Object.keys(byLetter).forEach(function(letter) {
-    var el = document.getElementById('loc-' + letter);
-    if (!el) return;
-    var loc = byLetter[letter];
-
-    el.classList.add('map-marker');
-
-    el.addEventListener('mouseenter', function(e) {
-      tooltip.textContent = letter + ' — ' + loc.name;
-      tooltip.style.display = 'block';
-    });
-
-    el.addEventListener('mousemove', function(e) {
-      tooltip.style.left = (e.clientX + 14) + 'px';
-      tooltip.style.top = (e.clientY - 28) + 'px';
-    });
-
-    el.addEventListener('mouseleave', function() {
-      tooltip.style.display = 'none';
-    });
-
-    el.addEventListener('click', function() {
-      // Clear previous gallery
-      galleryWrap.innerHTML = '';
-
-      var title = document.createElement('p');
-      title.className = 'detail-gallery-title';
-      title.textContent = letter + ' — ' + loc.name;
-      galleryWrap.appendChild(title);
-
-      var uid = 'gal-cress-' + letter.toLowerCase();
-      var container = document.createElement('div');
-      container.className = 'dbx-gallery';
-      container.id = uid;
-      container.setAttribute('aria-live', 'polite');
-      container.innerHTML = '<div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>';
-      galleryWrap.appendChild(container);
-
-      galleryWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      if (window._twt && window._twt.buildGallery) {
-        window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', loc.dropbox_url, uid);
-      }
-    });
-  });
-})();
-</script>
+<script id="detailMapData" type="application/json">{{ .Params.map_locations | jsonify | safeJS }}</script>
+<script src="{{ "JS/cressingham-map.js" | relURL }}" defer></script>
 {{ end }}
