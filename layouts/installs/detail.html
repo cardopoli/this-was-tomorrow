@@ -213,43 +213,42 @@
 
   if (!mapLocations || !mapContainer) return;
 
-  // Add data attributes to SVG letter elements and make them interactive
+  // Wire up each marker by id (loc-A, loc-B etc)
   Object.keys(mapLocations).forEach(letter => {
-    const location = mapLocations[letter];
-    const letterElements = mapContainer.querySelectorAll('text, tspan');
-    
-    letterElements.forEach(el => {
-      if (el.textContent.trim() === letter) {
-        const parent = el.closest('[data-location]') || el.parentElement;
-        parent.setAttribute('data-location', letter);
-        parent.setAttribute('data-dropbox-url', location.dropbox_url);
-        parent.setAttribute('data-hero', location.hero_image);
-        parent.setAttribute('data-name', location.name);
-        parent.style.cursor = 'pointer';
-        parent.classList.add('map-location-letter');
-        
-        parent.addEventListener('mouseenter', showPreview);
-        parent.addEventListener('mouseleave', hidePreview);
-        parent.addEventListener('click', openGallery);
-      }
-    });
+    const loc = mapLocations[letter];
+    const marker = document.getElementById('loc-' + letter);
+    if (!marker) return;
+
+    marker.setAttribute('data-letter', letter);
+    marker.setAttribute('data-dropbox-url', loc.dropbox_url);
+    marker.setAttribute('data-hero', loc.hero_image || '');
+    marker.setAttribute('data-name', loc.name);
+    marker.style.cursor = 'pointer';
+
+    marker.addEventListener('mouseenter', showPreview);
+    marker.addEventListener('mouseleave', hidePreview);
+    marker.addEventListener('click', openGallery);
   });
 
   function showPreview(e) {
-    const location = e.currentTarget.getAttribute('data-location');
     const hero = e.currentTarget.getAttribute('data-hero');
     const name = e.currentTarget.getAttribute('data-name');
-    
+    const letter = e.currentTarget.getAttribute('data-letter');
+
+    previewLabel.textContent = name || letter;
+
     if (hero) {
       previewImg.src = hero;
-      previewLabel.textContent = name || location;
-      
-      const rect = e.currentTarget.getBoundingClientRect();
-      const containerRect = mapContainer.getBoundingClientRect();
-      mapPreview.style.left = (rect.left - containerRect.left + rect.width / 2 - 70) + 'px';
-      mapPreview.style.top = (rect.top - containerRect.top - 160) + 'px';
-      mapPreview.classList.add('show');
+      previewImg.style.display = 'block';
+    } else {
+      previewImg.style.display = 'none';
     }
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const containerRect = mapContainer.getBoundingClientRect();
+    mapPreview.style.left = (rect.left - containerRect.left + rect.width / 2 - 70) + 'px';
+    mapPreview.style.top = (rect.top - containerRect.top - 80) + 'px';
+    mapPreview.classList.add('show');
   }
 
   function hidePreview() {
@@ -258,19 +257,24 @@
 
   function openGallery(e) {
     const dropboxUrl = e.currentTarget.getAttribute('data-dropbox-url');
-    const location = e.currentTarget.getAttribute('data-location');
-    
-    if (dropboxUrl && window._twt && window._twt.buildGallery) {
-      const uid = 'gal-' + location + '-' + Math.random().toString(36).slice(2, 7);
-      const container = document.createElement('div');
-      container.className = 'dbx-gallery';
-      container.id = uid;
-      container.setAttribute('aria-live', 'polite');
-      container.innerHTML = '<div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>';
-      
-      mapContainer.appendChild(container);
-      window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', dropboxUrl, uid);
-    }
+    const letter = e.currentTarget.getAttribute('data-letter');
+
+    if (!dropboxUrl || !window._twt || !window._twt.buildGallery) return;
+
+    // Remove any existing gallery
+    const existing = document.getElementById('map-gallery');
+    if (existing) existing.remove();
+
+    const uid = 'map-gallery';
+    const container = document.createElement('div');
+    container.className = 'dbx-gallery';
+    container.id = uid;
+    container.setAttribute('aria-live', 'polite');
+    container.innerHTML = '<div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>';
+
+    mapContainer.after(container);
+    window._twt.buildGallery('https://dropbox-proxy.cardopoli.workers.dev', dropboxUrl, uid);
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 })();
 </script>
