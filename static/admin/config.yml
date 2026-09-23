@@ -370,6 +370,29 @@ collections:
               - { name: info, label: Info text, widget: markdown, modes: [rich_text, raw], required: false, hint: "Exhibition details, hours, etc." }
               - { name: embed_code, label: Embed code (from Studio), widget: text, required: false, hint: "Paste HTML embed code or Dropbox gallery link here" }
 
+      - name: cressingham_install
+        label: Cressingham interactive map
+        file: content/cressingham-install.md
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: layout, label: Layout, widget: hidden, default: detail }
+          - { name: venue, label: Venue, widget: string, required: false }
+          - { name: location, label: Location, widget: string, required: false }
+          - { name: date_range, label: Date, widget: string, required: false }
+          - name: map_locations
+            label: Map locations
+            label_singular: Location
+            widget: list
+            summary: "{{fields.letter}} - {{fields.name}}"
+            fields:
+              - { name: letter, label: Letter on map, widget: string }
+              - { name: name, label: Name, widget: string }
+              - { name: place, label: Place, widget: string, required: false }
+              - { name: x, label: SVG horizontal coordinate, widget: number, value_type: float }
+              - { name: y, label: SVG vertical coordinate, widget: number, value_type: float }
+              - { name: page, label: Exhibition page slug, widget: string, required: false }
+              - { name: dropbox_url, label: Dropbox gallery folder, widget: string, required: false }
+
       - name: news
         label: News
         file: content/news.md
