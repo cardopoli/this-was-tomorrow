@@ -1,13 +1,8 @@
 {{ define "main" }}
 <style>
-  .detail-container { max-width: 900px; margin: 0 auto; padding: 48px 22px; }
-  .detail-header { margin-bottom: 48px; }
-  .detail-header h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; line-height: 1.05; }
-  .detail-meta { font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-  .detail-location { font-size: 14px; color: var(--text); margin-bottom: 2px; }
-  .detail-date { font-size: 14px; color: var(--text); }
-
-  .detail-map { position: relative; margin: 0 0 24px; height: min(68vw, 650px); min-height: 330px; overflow: hidden; background: #fff; border: 1px solid var(--rule); touch-action: none; cursor: grab; }
+  .detail-container { max-width: 960px; margin: 0 auto; padding: 20px 0 60px; }
+  .detail-container > h1 { font-size: 24px; margin: 0 0 14px; }
+  .detail-map { position: relative; margin: 0 0 24px; height: min(85vh, 820px); min-height: 460px; overflow: hidden; background: #fff; border: 1px solid var(--rule); touch-action: none; cursor: grab; }
   .detail-map.dragging { cursor: grabbing; }
   .detail-map svg { width: 100%; height: 100%; display: block; }
   .detail-controls { position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; background: var(--bg); border: 1px solid var(--rule); }
@@ -22,24 +17,6 @@
   .detail-gallery[hidden] { display: none; }
   .detail-gallery-link { display: inline-block; margin: 6px 0 18px; font: 12px var(--mono); }
 
-
-  .map-marker { cursor: pointer; }
-  .map-marker circle { transition: opacity 0.15s; }
-  .map-marker:hover circle { opacity: 0.7; }
-
-  .detail-tooltip {
-    position: fixed;
-    background: var(--bg, #fafaf7);
-    border: 1px solid var(--rule, #e0ddd8);
-    padding: 6px 10px;
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    pointer-events: none;
-    display: none;
-    z-index: 100;
-    max-width: 220px;
-  }
 
   .detail-gallery { margin-top: 32px; }
 
@@ -67,26 +44,21 @@
   }
 
   @media (max-width: 600px) {
-    .detail-container { padding: 32px 16px; }
-    .detail-header h1 { font-size: 24px; }
+    .detail-container { padding: 8px 0 30px; }
+    .detail-map { height: 65vh; min-height: 360px; }
     .detail-locations { grid-template-columns: 1fr; }
   }
 </style>
 
 <div class="detail-container">
-  <div class="detail-header">
-    <h1>{{ .Title }}</h1>
-    {{ if .Params.venue }}<p class="detail-meta">{{ .Params.venue }}</p>{{ end }}
-    {{ if .Params.location }}<p class="detail-location">{{ .Params.location }}</p>{{ end }}
-    {{ if .Params.date_range }}<p class="detail-date">{{ .Params.date_range }}</p>{{ end }}
-  </div>
-
+  <h1>{{ .Title }}</h1>
   <p class="detail-prompt">Select a letter or a location below. Scroll or pinch to zoom; drag to move around.</p>
   <div class="detail-map" id="mapWrap">
     <div class="detail-controls"><button type="button" id="detailZoomIn" aria-label="Zoom in">+</button><button type="button" id="detailZoomOut" aria-label="Zoom out">-</button><button type="button" id="detailReset" aria-label="Reset map">Reset</button></div>
-    {{ readFile "static/images/maps/cressingham-gardens.svg" | safeHTML }}
+    {{ readFile "static/images/maps/cressingham-interactive.svg" | safeHTML }}
   </div>
 
+  <h2 class="detail-gallery-title">Locations</h2>
   <div class="detail-locations" id="detailLocations"></div>
   <div class="detail-gallery" id="galleryWrap" aria-live="polite" hidden></div>
 
