@@ -5,6 +5,8 @@
   const locations = JSON.parse(document.getElementById('detailMapData').textContent);
   const list = document.getElementById('detailLocations');
   const gallery = document.getElementById('galleryWrap');
+  const sitePages = JSON.parse(document.getElementById('detailSitePages').textContent);
+  const audioPages = JSON.parse(document.getElementById('detailAudioPages').textContent);
   const original = svg.viewBox.baseVal;
   const base = { x: original.x, y: original.y, w: original.width, h: original.height };
   let box = { ...base };
@@ -28,8 +30,18 @@
     const title = document.createElement('p'); title.className = 'detail-gallery-title';
     title.textContent = `${loc.letter} - ${loc.name}`; gallery.append(title);
     if (loc.page) {
-      const link = document.createElement('a'); link.className = 'detail-gallery-link';
-      link.href = `/exhibition/${encodeURIComponent(loc.page)}/`; link.textContent = 'View exhibition page'; gallery.append(link);
+      const audio = audioPages[loc.page];
+      const site = sitePages[loc.page];
+      if (audio) {
+        const link = document.createElement('a'); link.className = 'detail-gallery-link';
+        link.href = audio.url; link.textContent = `Listen to the audio for ${audio.title}`;
+        gallery.append(link);
+      }
+      if (site) {
+        const link = document.createElement('a'); link.className = 'detail-gallery-link';
+        link.href = site.url; link.textContent = `View the full ${site.title} page`;
+        gallery.append(link);
+      }
     }
     if (loc.dropbox_url && window._twt?.buildGallery) {
       const holder = document.createElement('div'); holder.id = `gal-cress-${loc.letter.toLowerCase()}`;
