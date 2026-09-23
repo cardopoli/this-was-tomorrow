@@ -47,6 +47,7 @@ installs:
       </div>
   - title: New Ground - 10 Years
     site_link: owch-new-ground
+    detail_link: ''
     venue: Pollard Thomas Edwards
     location: Diespeker Wharf, London
     date_range: 12 September 2026
@@ -88,13 +89,14 @@ installs:
     detail_link: cressingham-gardens
     venue: Rotunda
     location: Cressingham Gardens, London
-    date_range: 19–20 September 2026
-    status: upcoming
+    date_range: 20 September 2026
+    status: live
     image: /images/dsc_0531-twt_cressingham-gardens_low.webp
     info: Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
     embed_code: ''
   - title: Calder Valley Community Land Trust
     site_link: calder-valley
+    detail_link: ''
     venue: Calder Valley CLT
     location: Hebden Bridge & Todmorden
     date_range: Autumn 2026
