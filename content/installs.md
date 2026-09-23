@@ -10,7 +10,7 @@ installs:
     location: Hastings
     date_range: from 12 September 2026
     status: live
-    image: /images/twt-install_hastings_110926-p1010197_medium.webp
+    image: /images/twt-install_hastings_120926-img_5871.webp
     info: |-
       The installation is (im)perm(e)anent and free to visit. Find it at Gotham Alley, Hastings Commons.
 
@@ -95,7 +95,12 @@ installs:
       Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
 
       Photos by [cardopoli](https://www.instagram.com/cardopoli/) and by [Rosamond Martin](https://www.rosamondmartin.com/)
-    embed_code: ''
+    embed_code: |-
+      <div data-lb-group="g4a90" style="margin-bottom:4px">
+      <figure style="margin:0;width:100%">
+        <a class="twt-lb" data-full="https://www.dropbox.com/scl/fi/a0r6sw03q9byvja7kzyx2/IMG_8041_medium.jpg?rlkey=89bqbnxwj7vagul0uq3p4cpro&raw=1" style="cursor:zoom-in;display:block;height:100%"><img src="https://www.dropbox.com/scl/fi/a0r6sw03q9byvja7kzyx2/IMG_8041_medium.jpg?rlkey=89bqbnxwj7vagul0uq3p4cpro&raw=1" alt="" style="width:100%;display:block"></a>
+      </figure>
+      </div>
     detail_link: cressingham-gardens
   - title: Calder Valley Community Land Trust
     site_link: calder-valley
