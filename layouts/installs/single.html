@@ -1,14 +1,14 @@
 {{ define "main" }}
 <style>
-  .installs-container { max-width: 900px; margin: 0 auto; padding: 48px 22px; }
+  .installs-container { width: 100%; padding: 0 0 64px; }
   
-  .installs-header { margin-bottom: 56px; }
+  .installs-header { margin-bottom: 36px; }
   .installs-header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; line-height: 1.05; }
   .installs-header p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 60ch; }
 
   .install-section {
-    margin-bottom: 72px;
-    padding-bottom: 56px;
+    margin-bottom: 48px;
+    padding-bottom: 42px;
     border-bottom: 1px solid var(--rule);
   }
 
@@ -19,7 +19,7 @@
   }
 
   .install-section-header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .install-section-title {
@@ -89,7 +89,6 @@
 
   .install-section-embed {
     margin-bottom: 32px;
-    border: 1px solid var(--rule);
     padding: 0;
     overflow: hidden;
   }
@@ -118,11 +117,12 @@
   }
 
   @media (max-width: 600px) {
-    .installs-container { padding: 32px 16px; }
+    .installs-container { padding: 0 0 40px; }
     .installs-header h1 { font-size: 28px; }
-    .install-section { margin-bottom: 48px; padding-bottom: 40px; }
+    .install-section { margin-bottom: 36px; padding-bottom: 32px; }
     .install-section-title { font-size: 22px; }
     .install-section-embed iframe { height: 350px; }
+    .install-section-embed [style*="grid-template-columns"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   }
 </style>
 
