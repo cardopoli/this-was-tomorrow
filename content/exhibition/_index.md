@@ -1,6 +1,8 @@
 ---
 title: Voices and Places
 intro: |-
+  # See the installs so far [here](https://thiswastomorrow.co.uk/installs/).
+
   Communities across the UK who have taken housing into their own hands.
 
   Large photographs, pasted to walls, unframed.
