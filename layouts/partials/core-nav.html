@@ -1,7 +1,10 @@
 <style>
-  .core-nav { position: relative; z-index: 3; display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; max-width: 960px; margin: 20px auto; padding: 0 20px; font: 600 12px/1.5 monospace; text-transform: uppercase; letter-spacing: .06em; }
+  .core-nav { position: relative; z-index: 3; display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; max-width: 960px; margin: 20px auto; padding: 0 20px; font: 400 11px/1.5 var(--mono, "FreeMono", "Courier New", monospace); text-transform: uppercase; letter-spacing: .06em; }
   .core-nav a { color: #c6f500; text-decoration: underline; text-underline-offset: 4px; }
   .core-nav a:hover, .core-nav a:focus-visible { color: #fff; }
+  .audio-player .core-nav { display: grid; grid-template-columns: repeat(4, max-content); justify-content: center; gap: 12px 22px; max-width: none; margin: 38px 0 0; padding: 22px 0 0; border-top: 1px solid rgba(198,245,0,.4); text-align: center; }
+  .audio-player .core-nav a { display: inline-block; padding: 6px 2px; }
+  @media (max-width: 480px) { .audio-player .core-nav { grid-template-columns: repeat(2, max-content); column-gap: 38px; row-gap: 6px; } }
 </style>
 <nav class="core-nav" aria-label="{{ . }} navigation">
   <a href="/">Sites</a>

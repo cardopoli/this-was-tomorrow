@@ -76,8 +76,7 @@
   </style>
 </head>
 
-<body>
-  {{ partial "core-nav.html" "Top" }}
+<body class="audio-player">
   {{ with .Params.exhibit_image }}<div class="bmp" style="background-image:url('{{ . }}')"></div>{{ end }}
   <div class="veil"></div>
 
@@ -107,6 +106,7 @@
 
       <noscript><p style="margin-top:24px;font-family:var(--mono);font-size:11px;opacity:0.8">Turn on JavaScript for the audio — or open the full page above.</p></noscript>
     </footer>
+    {{ partial "core-nav.html" "Bottom" }}
   </main>
 
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
@@ -124,6 +124,5 @@
       wire();
     })();
   </script>
-  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>
