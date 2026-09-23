@@ -93,7 +93,6 @@ installs:
     image: /images/maps/cressingham-gardens.svg
     info: Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
     embed_code: ''
-    detail_link: cressingham-gardens
   - title: Calder Valley Community Land Trust
     site_link: calder-valley
     venue: Calder Valley CLT
