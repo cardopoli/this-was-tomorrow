@@ -11,7 +11,6 @@ intro: |-
   For the past year I've been photographing community-led housing across the UK - cohousing, community land trusts, self-build, co-ops. A dozen communities the length of the country, shown as large prints with the residents' own voices beside them.
 
   It's starting to go up on walls, and I'd love you to come and see it.
-
 exhibitions:
   - name: New Ground - 10 Years
     venue: Pollard Thomas Edwards
@@ -49,7 +48,6 @@ exhibitions:
     note: Venue being finalised.
     link: ''
     link_label: ''
-
 communities:
   - name: Cressingham Gardens
     url: /sites/cressingham-gardens/
@@ -59,7 +57,7 @@ communities:
     url: /sites/granby/
   - name: Two Up Two Down
     url: /sites/two-up-two-down/
-  - name: "Kitty's Launderette"
+  - name: Kitty's Launderette
     url: /sites/kittys/
   - name: LILAC
     url: /sites/lilac/
@@ -67,21 +65,17 @@ communities:
     url: /sites/calder-valley/
   - name: Hastings Commons
     url: /sites/hastings-commons/
-  - name: "Tinker's Bubble"
+  - name: Tinker's Bubble
     url: /sites/tinkers-bubble/
   - name: Trevone Quarry
     url: /sites/trevone-quarry/
   - name: Kesoberi
-    url: /sites/kesoberi/
+    url: /sites/kesoberi-community-farm/
   - name: Treneere
     url: /sites/treneere-estate/
-
-press_link: "Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf)."
-
-thanks: "With thanks to everyone who gave me their time - the communities who sat down with me and showed me how they live, and the collaborators, supporters and friends who made this possible. It's yours as much as mine."
-
-video_label: "Don't we need utopias?"
-video_url: "https://www.youtube.com/embed/X0tGY-LgxSc?si=idBZnwBsAUy-gXa7"
-
+press_link: Writing about the project, or want to know more? The full press pack is [here](/downloads/enrico_policardo_twt_press_pack.pdf).
+thanks: With thanks to everyone who gave me their time - the communities who sat down with me and showed me how they live, and the collaborators, supporters and friends who made this possible. It's yours as much as mine.
+video_label: Don't we need utopias?
+video_url: https://www.youtube.com/embed/X0tGY-LgxSc?si=idBZnwBsAUy-gXa7
 tagline: A speculative tool to re-find lost pasts, re-think the present, and re-imagine new futures.
 ---
