@@ -1,9 +1,9 @@
 {{ define "main" }}
 <style>
-  .detail-container { width: min(1040px, calc(100vw - 32px)); position: relative; left: 50%; transform: translateX(-50%); padding: 18px 0 60px; }
+  .detail-container { width: min(900px, calc(100vw - 32px)); position: relative; left: 50%; transform: translateX(-50%); padding: 18px 0 60px; }
   .detail-heading h1 { font-size: 24px; margin: 0 0 8px; }
   .detail-prompt { font: 12px/1.5 var(--mono); color: var(--muted); margin-bottom: 18px; }
-  .detail-stage { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); column-gap: clamp(16px, 3vw, 48px); row-gap: 28px; align-items: start; }
+  .detail-stage { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 28px; align-items: start; }
   .detail-map { grid-column: 1; grid-row: 1; position: relative; min-width: 0; height: min(82vh, 800px); min-height: 560px; overflow: hidden; background: transparent; touch-action: none; cursor: grab; }
   .detail-map.dragging { cursor: grabbing; }
   .detail-map > svg { display: block; width: 100%; height: 100%; }
@@ -13,24 +13,24 @@
   .detail-controls button:hover { background: #d9ff56; }
   .detail-controls button:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
   .detail-controls button:disabled { opacity: .45; cursor: default; }
-  .detail-sidebar { grid-column: 2; grid-row: 1; min-width: 0; padding-top: 4px; }
+  .detail-sidebar { grid-column: 1; grid-row: 1; justify-self: end; align-self: start; z-index: 1; width: min(285px, 34%); min-width: 0; padding: 14px; background: rgba(247,245,240,.9); }
   .detail-sidebar h2 { margin: 0 0 12px; }
   .detail-locations { display: grid; gap: 4px; }
   .detail-location-button { width: 100%; text-align: left; color: var(--text); background: transparent; border: 0; cursor: pointer; padding: 9px 4px; font: 12px/1.35 var(--mono); }
   .detail-location-button:hover, .detail-location-button:focus-visible, .detail-location-button.selected { background: #c6f500; outline: none; }
   .detail-hotspot { fill: transparent; stroke: transparent; stroke-width: 2; vector-effect: non-scaling-stroke; cursor: pointer; }
   .detail-hotspot:hover, .detail-hotspot:focus-visible, .detail-hotspot.selected { fill: #c6f50066; stroke: #7b9300; outline: none; }
-  .detail-preview { grid-column: 1 / -1; grid-row: 2; min-width: 0; padding-top: 18px; scroll-margin-top: 20px; }
+  .detail-preview { grid-column: 1; grid-row: 2; min-width: 0; padding-top: 18px; scroll-margin-top: 20px; }
   .detail-preview[hidden] { display: none; }
   .detail-gallery-title { font: 11px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-  .detail-gallery-link { display: inline-block; margin: 6px 0 18px; font: 12px var(--mono); }
+  .detail-gallery-link { display: inline-block; margin: 6px 18px 18px 0; font: 12px var(--mono); }
   .detail-back { display: inline-block; font: 11px var(--mono); letter-spacing: 1px; text-transform: uppercase; color: var(--text); text-decoration: none; margin-top: 48px; }
   @media (max-width: 800px) {
     .detail-container { padding-top: 8px; }
     .detail-heading h1 { font-size: 21px; }
-    .detail-stage { grid-template-columns: minmax(0, 1fr); row-gap: 22px; }
+    .detail-stage { row-gap: 22px; }
     .detail-map { grid-column: 1; grid-row: 1; height: min(64dvh, 600px); min-height: 370px; }
-    .detail-sidebar { grid-column: 1; grid-row: 2; padding: 0; }
+    .detail-sidebar { grid-column: 1; grid-row: 2; justify-self: stretch; width: auto; padding: 0; background: transparent; }
     .detail-preview { grid-column: 1; grid-row: 3; }
     .detail-locations { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3px 12px; }
   }
@@ -40,7 +40,7 @@
 <div class="detail-container">
   <div class="detail-heading">
     <h1>{{ .Title }}</h1>
-    <p class="detail-prompt">Select a letter on the map or a location on the right. Scroll or pinch to zoom; drag to move around.</p>
+    <p class="detail-prompt">Select a letter on the map or a location in the list. Scroll or pinch to zoom; drag to move around.</p>
   </div>
   <div class="detail-stage">
     <div class="detail-map" id="mapWrap">
@@ -61,5 +61,15 @@
 </div>
 
 <script id="detailMapData" type="application/json">{{ .Params.map_locations | jsonify | safeJS }}</script>
+{{- $sitePages := dict -}}
+{{- range where .Site.RegularPages "Section" "sites" -}}
+  {{- $sitePages = merge $sitePages (dict .File.ContentBaseName (dict "url" .RelPermalink "title" .Title)) -}}
+{{- end -}}
+{{- $audioPages := dict -}}
+{{- range where .Site.RegularPages "Section" "exhibition" -}}
+  {{- $audioPages = merge $audioPages (dict .File.ContentBaseName (dict "url" .RelPermalink "title" .Title)) -}}
+{{- end -}}
+<script id="detailSitePages" type="application/json">{{ $sitePages | jsonify | safeJS }}</script>
+<script id="detailAudioPages" type="application/json">{{ $audioPages | jsonify | safeJS }}</script>
 <script src="{{ "JS/cressingham-map.js" | relURL }}" defer></script>
 {{ end }}
