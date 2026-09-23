@@ -6,7 +6,8 @@ draft: false
 installs:
   - title: Hastings Commons
     site_link: hastings-commons
-    venue: The Rosa Cottage, Gotham Alley - Hastings Commons
+    detail_link: ''
+    venue: The Rose Cottage, Gotham Alley - Hastings Commons
     location: Hastings
     date_range: from 12 September 2026
     status: live
