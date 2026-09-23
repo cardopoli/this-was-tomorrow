@@ -1,17 +1,21 @@
 (() => {
   const wrap = document.getElementById('mapWrap');
   if (!wrap) return;
-  const svg = wrap.querySelector('svg');
+  const svg = wrap.querySelector(':scope > svg');
   const locations = JSON.parse(document.getElementById('detailMapData').textContent);
   const list = document.getElementById('detailLocations');
   const gallery = document.getElementById('galleryWrap');
   const original = svg.viewBox.baseVal;
   const base = { x: original.x, y: original.y, w: original.width, h: original.height };
   let box = { ...base };
-  const apply = () => svg.setAttribute('viewBox', `${box.x} ${box.y} ${box.w} ${box.h}`);
+  const apply = () => {
+    svg.setAttribute('viewBox', `${box.x} ${box.y} ${box.w} ${box.h}`);
+    document.getElementById('detailZoomIn').disabled = box.w <= base.w / 2 + .01;
+    document.getElementById('detailZoomOut').disabled = box.w >= base.w - .01;
+  };
   const at = (x, y) => { const p = svg.createSVGPoint(); p.x = x; p.y = y; return p.matrixTransform(svg.getScreenCTM().inverse()); };
   const zoom = (factor, anchor = { x: box.x + box.w / 2, y: box.y + box.h / 2 }) => {
-    const w = Math.max(base.w / 12, Math.min(base.w * 1.5, box.w / factor));
+    const w = Math.max(base.w / 2, Math.min(base.w, box.w / factor));
     const ratio = w / box.w;
     box = { x: anchor.x + (box.x - anchor.x) * ratio, y: anchor.y + (box.y - anchor.y) * ratio, w, h: box.h * ratio };
     apply();
@@ -21,6 +25,9 @@
   function select(loc, centre = false) {
     gallery.hidden = false;
     gallery.replaceChildren();
+    const selectedButton = [...list.children].find(el => el.dataset.mapLetter === loc.letter);
+    if (matchMedia('(max-width: 800px)').matches && selectedButton) selectedButton.after(gallery);
+    else list.after(gallery);
     const title = document.createElement('p'); title.className = 'detail-gallery-title';
     title.textContent = `${loc.letter} - ${loc.name}`; gallery.append(title);
     if (loc.page) {
@@ -34,8 +41,8 @@
     }
     document.querySelectorAll('[data-map-letter]').forEach(el => el.classList.toggle('selected', el.dataset.mapLetter === loc.letter));
     if (centre) {
-      box = { x: Number(loc.x) - base.w / 5, y: Number(loc.y) - base.h / 5, w: base.w / 2.5, h: base.h / 2.5 };
-      apply(); if (innerWidth < 600) wrap.scrollIntoView({ behavior: 'smooth' });
+      box = { x: Number(loc.x) - base.w / 4, y: Number(loc.y) - base.h / 4, w: base.w / 2, h: base.h / 2 };
+      apply();
     }
   }
   locations.forEach(loc => {
@@ -51,9 +58,16 @@
     circle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(loc); } });
     overlay.append(circle);
   });
+  addEventListener('resize', () => {
+    if (gallery.hidden) return;
+    const selected = list.querySelector('.detail-location-button.selected');
+    if (matchMedia('(max-width: 800px)').matches && selected) selected.after(gallery);
+    else list.after(gallery);
+  });
   document.getElementById('detailZoomIn').onclick = () => zoom(1.4);
   document.getElementById('detailZoomOut').onclick = () => zoom(1 / 1.4);
   document.getElementById('detailReset').onclick = () => { box = { ...base }; apply(); };
+  apply();
   wrap.addEventListener('wheel', e => { e.preventDefault(); zoom(Math.exp(-e.deltaY * .0015), at(e.clientX, e.clientY)); }, { passive: false });
   const pointers = new Map(); let pinch = null;
   wrap.addEventListener('pointerdown', e => {
