@@ -14,10 +14,12 @@ updates:
     location: Lambeth, London
     url: https://programme.openhouse.org.uk/listings/6047
 links:
-  - label: Homepage
-    url: https://thiswastomorrow.co.uk
+  - label: Installs
+    url: https://thiswastomorrow.co.uk/installs/
   - label: Map of all sites
     url: https://thiswastomorrow.co.uk/map/
+  - label: Homepage
+    url: https://thiswastomorrow.co.uk
   - label: About the project
     url: https://thiswastomorrow.co.uk/about/
   - label: Press and downloads
