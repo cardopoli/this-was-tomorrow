@@ -1,0 +1,480 @@
+{
+  "files": [
+    {
+      "path": "content/_index.md",
+      "group": "content",
+      "description": " index"
+    },
+    {
+      "path": "content/about.md",
+      "group": "content",
+      "description": "about"
+    },
+    {
+      "path": "content/cressingham-install.md",
+      "group": "content",
+      "description": "cressingham install"
+    },
+    {
+      "path": "content/exhibition/_index.md",
+      "group": "content",
+      "description": " index"
+    },
+    {
+      "path": "content/exhibition/calder-valley.md",
+      "group": "content",
+      "description": "calder valley"
+    },
+    {
+      "path": "content/exhibition/cressingham-gardens.md",
+      "group": "content",
+      "description": "cressingham gardens"
+    },
+    {
+      "path": "content/exhibition/granby.md",
+      "group": "content",
+      "description": "granby"
+    },
+    {
+      "path": "content/exhibition/gwavas-estate.md",
+      "group": "content",
+      "description": "gwavas estate"
+    },
+    {
+      "path": "content/exhibition/hastings-commons.md",
+      "group": "content",
+      "description": "hastings commons"
+    },
+    {
+      "path": "content/exhibition/homebaked.md",
+      "group": "content",
+      "description": "homebaked"
+    },
+    {
+      "path": "content/exhibition/kesoberi.md",
+      "group": "content",
+      "description": "kesoberi"
+    },
+    {
+      "path": "content/exhibition/kittys.md",
+      "group": "content",
+      "description": "kittys"
+    },
+    {
+      "path": "content/exhibition/lilac.md",
+      "group": "content",
+      "description": "lilac"
+    },
+    {
+      "path": "content/exhibition/owch-new-ground.md",
+      "group": "content",
+      "description": "owch new ground"
+    },
+    {
+      "path": "content/exhibition/tinkers-bubble.md",
+      "group": "content",
+      "description": "tinkers bubble"
+    },
+    {
+      "path": "content/exhibition/treneere-estate.md",
+      "group": "content",
+      "description": "treneere estate"
+    },
+    {
+      "path": "content/exhibition/trevone-quarry.md",
+      "group": "content",
+      "description": "trevone quarry"
+    },
+    {
+      "path": "content/installs.md",
+      "group": "content",
+      "description": "installs"
+    },
+    {
+      "path": "content/linkinbio.md",
+      "group": "content",
+      "description": "linkinbio"
+    },
+    {
+      "path": "content/map.md",
+      "group": "content",
+      "description": "map"
+    },
+    {
+      "path": "content/news.md",
+      "group": "content",
+      "description": "news"
+    },
+    {
+      "path": "content/press.md",
+      "group": "content",
+      "description": "press"
+    },
+    {
+      "path": "content/quotes.md",
+      "group": "content",
+      "description": "quotes"
+    },
+    {
+      "path": "content/sites/_index.md",
+      "group": "content",
+      "description": " index"
+    },
+    {
+      "path": "content/sites/bosavern.md",
+      "group": "content",
+      "description": "bosavern"
+    },
+    {
+      "path": "content/sites/calder-valley.md",
+      "group": "content",
+      "description": "calder valley"
+    },
+    {
+      "path": "content/sites/cressingham-gardens.md",
+      "group": "content",
+      "description": "cressingham gardens"
+    },
+    {
+      "path": "content/sites/granby.md",
+      "group": "content",
+      "description": "granby"
+    },
+    {
+      "path": "content/sites/gwavas.md",
+      "group": "content",
+      "description": "gwavas"
+    },
+    {
+      "path": "content/sites/hastings-commons.md",
+      "group": "content",
+      "description": "hastings commons"
+    },
+    {
+      "path": "content/sites/kesoberi.md",
+      "group": "content",
+      "description": "kesoberi"
+    },
+    {
+      "path": "content/sites/kittys.md",
+      "group": "content",
+      "description": "kittys"
+    },
+    {
+      "path": "content/sites/lilac.md",
+      "group": "content",
+      "description": "lilac"
+    },
+    {
+      "path": "content/sites/newquay.md",
+      "group": "content",
+      "description": "newquay"
+    },
+    {
+      "path": "content/sites/owch-new-ground.md",
+      "group": "content",
+      "description": "owch new ground"
+    },
+    {
+      "path": "content/sites/tinkers-bubble.md",
+      "group": "content",
+      "description": "tinkers bubble"
+    },
+    {
+      "path": "content/sites/trelay.md",
+      "group": "content",
+      "description": "trelay"
+    },
+    {
+      "path": "content/sites/treneere-estate.md",
+      "group": "content",
+      "description": "treneere estate"
+    },
+    {
+      "path": "content/sites/trevone-quarry.md",
+      "group": "content",
+      "description": "trevone quarry"
+    },
+    {
+      "path": "content/sites/twouptwodown.md",
+      "group": "content",
+      "description": "twouptwodown"
+    },
+    {
+      "path": "content/thankyou.md",
+      "group": "content",
+      "description": "thankyou"
+    },
+    {
+      "path": "content/thoughts.md",
+      "group": "content",
+      "description": "thoughts"
+    },
+    {
+      "path": "layouts/404.html",
+      "group": "layouts",
+      "description": "404"
+    },
+    {
+      "path": "layouts/_default/about-layout.html",
+      "group": "layouts",
+      "description": "about layout"
+    },
+    {
+      "path": "layouts/_default/baseof.html",
+      "group": "layouts",
+      "description": "Main HTML shell, metadata and shared assets"
+    },
+    {
+      "path": "layouts/_default/list.html",
+      "group": "layouts",
+      "description": "list"
+    },
+    {
+      "path": "layouts/_default/map.html",
+      "group": "layouts",
+      "description": "map"
+    },
+    {
+      "path": "layouts/_default/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/_default/taxonomy.html",
+      "group": "layouts",
+      "description": "taxonomy"
+    },
+    {
+      "path": "layouts/exhibition/list.html",
+      "group": "layouts",
+      "description": "list"
+    },
+    {
+      "path": "layouts/exhibition/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/index.html",
+      "group": "layouts",
+      "description": "index"
+    },
+    {
+      "path": "layouts/index.json",
+      "group": "layouts",
+      "description": "index"
+    },
+    {
+      "path": "layouts/installs/detail.html",
+      "group": "layouts",
+      "description": "detail"
+    },
+    {
+      "path": "layouts/installs/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/linkinbio/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/news/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/partials/core-nav.html",
+      "group": "layouts",
+      "description": "Shared navigation markup"
+    },
+    {
+      "path": "layouts/partials/dropbox-gallery.html",
+      "group": "layouts",
+      "description": "dropbox gallery"
+    },
+    {
+      "path": "layouts/partials/footer.html",
+      "group": "layouts",
+      "description": "footer"
+    },
+    {
+      "path": "layouts/partials/header.html",
+      "group": "layouts",
+      "description": "header"
+    },
+    {
+      "path": "layouts/partials/lightbox.html",
+      "group": "layouts",
+      "description": "lightbox"
+    },
+    {
+      "path": "layouts/quotes/Single.html",
+      "group": "layouts",
+      "description": "Single"
+    },
+    {
+      "path": "layouts/shortcodes/audio-playlist.html",
+      "group": "layouts",
+      "description": "audio playlist"
+    },
+    {
+      "path": "layouts/thankyou/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "layouts/thoughts/single.html",
+      "group": "layouts",
+      "description": "single"
+    },
+    {
+      "path": "static/css/core-nav.css",
+      "group": "styles",
+      "description": "Shared standalone-page navigation"
+    },
+    {
+      "path": "static/css/embeds.css",
+      "group": "styles",
+      "description": "embeds"
+    },
+    {
+      "path": "static/css/style.css",
+      "group": "styles",
+      "description": "Main shared stylesheet and fonts"
+    },
+    {
+      "path": "static/JS/cressingham-map.js",
+      "group": "scripts",
+      "description": "cressingham map"
+    },
+    {
+      "path": "static/JS/gallery.js",
+      "group": "scripts",
+      "description": "Dropbox galleries"
+    },
+    {
+      "path": "static/JS/supercharged.js",
+      "group": "scripts",
+      "description": "Audio players and shared behaviour"
+    },
+    {
+      "path": "static/tools/qr.html",
+      "group": "tools",
+      "description": "qr"
+    },
+    {
+      "path": "static/tools/studio.html",
+      "group": "tools",
+      "description": "studio"
+    },
+    {
+      "path": "static/admin/config.yml",
+      "group": "settings",
+      "description": "Content editor fields and collections"
+    },
+    {
+      "path": "static/admin/index.html",
+      "group": "settings",
+      "description": "Sveltia CMS loader"
+    },
+    {
+      "path": "static/data/twt_quotes.json",
+      "group": "content",
+      "description": "twt quotes"
+    },
+    {
+      "path": "hugo.toml",
+      "group": "settings",
+      "description": "Hugo website configuration"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Homepage",
+      "content": "content/_index.md",
+      "layout": "layouts/index.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Sites / field notes",
+      "content": "content/sites/_index.md",
+      "layout": "layouts/_default/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Audio overview",
+      "content": "content/exhibition/_index.md",
+      "layout": "layouts/exhibition/list.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Audio pages",
+      "content": "content/exhibition/kesoberi.md",
+      "layout": "layouts/exhibition/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "About",
+      "content": "content/about.md",
+      "layout": "layouts/_default/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Map",
+      "content": "content/map.md",
+      "layout": "layouts/_default/map.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "News",
+      "content": "content/news.md",
+      "layout": "layouts/news/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Installations",
+      "content": "content/installs.md",
+      "layout": "layouts/installs/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Cressingham interactive map",
+      "content": "content/cressingham-install.md",
+      "layout": "layouts/installs/detail.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Thoughts",
+      "content": "content/thoughts.md",
+      "layout": "layouts/thoughts/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Quotes",
+      "content": "static/data/twt_quotes.json",
+      "layout": "layouts/quotes/Single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Thank you",
+      "content": "content/thankyou.md",
+      "layout": "layouts/thankyou/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Link in bio",
+      "content": "content/linkinbio.md",
+      "layout": "layouts/linkinbio/single.html",
+      "style": "static/css/style.css"
+    },
+    {
+      "title": "Press",
+      "content": "content/press.md",
+      "layout": "layouts/_default/single.html",
+      "style": "static/css/style.css"
+    }
+  ]
+}
