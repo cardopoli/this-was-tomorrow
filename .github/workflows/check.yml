@@ -1,0 +1,24 @@
+name: Check site changes
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5.0.0
+      - name: Install matching Hugo version
+        env:
+          HUGO_VERSION: 0.160.1
+        run: |
+          curl -L --fail "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" -o "$RUNNER_TEMP/hugo.tar.gz"
+          tar -xzf "$RUNNER_TEMP/hugo.tar.gz" -C "$RUNNER_TEMP" hugo
+      - name: Validate dashboard index
+        run: |
+          python3 scripts/build_admin_index.py
+          git diff --exit-code static/manage/files.json
+      - name: Build without deploying
+        run: '"$RUNNER_TEMP/hugo" --gc --minify'
