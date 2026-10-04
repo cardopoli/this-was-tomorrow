@@ -1,0 +1,982 @@
+From 1992db58f972b9b16d46265e73d9fab9dccf74c8 Mon Sep 17 00:00:00 2001
+From: Codex <codex@users.noreply.github.com>
+Date: Sun, 4 Oct 2026 22:28:48 +0330
+Subject: [PATCH] Organise reference files and add unified website editing
+ dashboard
+
+---
+ .DS_Store                                     | Bin 10244 -> 0 bytes
+ .github/workflows/check.yml                   |  24 +
+ .gitignore                                    |   9 +-
+ README.md                                     |  31 ++
+ archive/README.md                             |  13 +
+ .../cms-config-old.yml                        |   0
+ .../exhibition-old-single.html                |   0
+ files.zip => archive/files.zip                | Bin
+ .../quotes-old-single.html                    |   0
+ .../thankyou-old-single.html                  |   0
+ docs/editing.md                               |  47 ++
+ docs/structure.md                             |  37 ++
+ layouts/.DS_Store                             | Bin 8196 -> 0 bytes
+ layouts/partials/core-nav.html                |   7 +-
+ scripts/build_admin_index.py                  |  46 ++
+ static/.DS_Store                              | Bin 14340 -> 0 bytes
+ static/css/core-nav.css                       |   4 +
+ static/manage/files.json                      | 480 ++++++++++++++++++
+ static/manage/index.html                      |  28 +
+ 19 files changed, 715 insertions(+), 11 deletions(-)
+ delete mode 100644 .DS_Store
+ create mode 100644 .github/workflows/check.yml
+ create mode 100644 README.md
+ create mode 100644 archive/README.md
+ rename static/admin/config_old.yml => archive/cms-config-old.yml (100%)
+ rename layouts/exhibition/old_single.html => archive/exhibition-old-single.html (100%)
+ rename files.zip => archive/files.zip (100%)
+ rename layouts/quotes/old_Single.html => archive/quotes-old-single.html (100%)
+ rename layouts/thankyou/old_single.html => archive/thankyou-old-single.html (100%)
+ create mode 100644 docs/editing.md
+ create mode 100644 docs/structure.md
+ delete mode 100644 layouts/.DS_Store
+ create mode 100644 scripts/build_admin_index.py
+ delete mode 100644 static/.DS_Store
+ create mode 100644 static/css/core-nav.css
+ create mode 100644 static/manage/files.json
+ create mode 100644 static/manage/index.html
+
+diff --git a/.DS_Store b/.DS_Store
+deleted file mode 100644
+index 306d74446220f99703ef442ab3bbe6d7c626de6d..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 10244
+zcmeHMYit!o6rOKe+FiTYrIzxLn|o_{G+3mCf;<E-ZFy8cDsAa)DVF<K+J)_Iy}S38
+zQcFsVuf#;-+xUa{{7KYk)EIpI(Zp9YjYblQQ4{@T;^PlS)H6GKYkLdw15FC<B(rDc
+z%$zfO&VFakow<xLG-OhBj71n@GF47Bl^*9Pe4N)QMe;c%L_zY5>C9qoV$c~#m{Vp4
+zjKBkd2LcZS9tb=TcwjnsfO0l3GSA;Z2|N&ZAn?FM5AgjVLY32~Pe%pywhnrDM*yOQ
+z#P$lc=^Wt6M0^_c>8PNdDCrcZ2l%4!j~Ec*G#=s8iAH@oDyR@=5aJB}%J5Gp@Kz_e
+zh&P=fDroQwJP>$bst0)PFJ?(*^OO6;^Shm(k@pe<rs24?wO>FgD4bDLEGvqv%vAQZ
+z_Su82Zrsf{4e|6|-fM}weF?waX4~d?JD%8M=z~34d82K)al_Knp0JV9X-ap8VWsTB
+z20LS=98XWH81NSA(JF?A>sQp)L{^T}M26S$R{iSwkr73nv#4%E^Zx#!Bg40k9DPjK
+z1%Gc~rFnKfKGn#SlQa|bntW!S{n^&EW!hFRjc|p<%w%ykL>|hJha7Rcart>?l98s9
+zZA_Tl$bzOE1Wt`Z;EED;W~d|9*`;>JjHGR~8b|aVt<)hDG*h=Ft!L?rcO-2y({DLF
+z+N@;UOlHiut8X$*KACu>PBLwqW{d3@u3=l9F;_qA<`hjDigh`5+HLfd^=Mkg(Rb^l
+z%gE|Yq>)sW@zr(>a5c^zJ?#*!iq`TE%b0TF$~obM)yq~~e?xS0^Ub@*O0`*KYPnj`
+zku@A6Ve0LJM#}B$j5|r)N*Pvf7s1bRjRS_BR%W3_X|v+}`dHcAdGoJc5DMkb&S{Bd
+z62@&A!yVG9WLd0H8LCpWSLE&#z2r_i#Wkk9kx*r5i7fBs{Km9SPr+7~hH4ZoF1I=4
+zAfaNpTBm4^(sqbqM2Oa_t7R>vw43pSZVJ{~b-k=@S30u7a=|QDZ<Li-((dmkV;sS2
+z2sO#t`|_=P;T>_u-8G<Fv^F<wOJyk3$@!a7DLq9N%%3~2EVMneQ`SC{yPUpwTHiHD
+zft%ysBFo<QCO+4+Ic2!^_+UF9)C?<Y(EdQ*LTnRqmG~fxRYj{svnuMdJRd6>{|OLc
+zi`g1V`EBd~1>7-qA3M%oW+&O3>?8I$JI%ghKe99IH+Gi&fdZ%~!vZYCGAu_e>aY&$
+zu>l*g9c^gG9wcxGCM?)+F@mEQ#WCE4`|$uC#6x%jPvaRphv#tuui`blj(70^KE%iP
+z1gG&me!|cA1;67g{*;(hB9%+Cr3$H9s*_eoE2S;cR;fkmloC>})F%v)a{JFd-!Pv@
+z2dR;_jZlQqB`J?E>B)0PSa|EU=9|=2(>}t!ypqS%RpqlQ=0p}PU0%Ot!=`cM383b%
+zIT7<7%qInh2XhY!`4APsr-s`p4)nw4i$SfJ$E!TXXIEaMhP4?KDWbc033ZDoN<{bC
+zns8W?C^$v8wl1t{1r&OUC%dYKy6`(|*Qu&jNI@vZHioFn{7yq7so^0dUl`o~2<=bV
+zDfTt{f&I$Ppa><<5JokwLp?!x3$_uQcVH*MIfgFmMK^Tx!oWcSw~H(eV+coZ2kyk(
+zxCi$Vv>(PJcofI+6v6vh0{98MfEV!+-oQz`g}3pJ2lO#~g>UkJyJIqN@$FRL=4Hns
+z=1^9QQ#Dxf^308sObjw(kQx8&%oshi-;2AyGh;3c{}-7tKfZ#zc=_bT3qku5&Wn>^
+zo0k=H@jJa~fq1<LzXRBO{{R1{w-LeH1s(`Ia8VvWVN+{U1F6WJU-Pv|#E4McPn8!w
+zZ&XlEgdThf=X=-j)Zy3h-Z`Im{#}eW9`)yq3hIfIoF`6H+~)u1e+C5S|B07x7k9%J
+Koc}M$^Z#F8E9$BM
+
+diff --git a/.github/workflows/check.yml b/.github/workflows/check.yml
+new file mode 100644
+index 0000000..4c9f87a
+--- /dev/null
++++ b/.github/workflows/check.yml
+@@ -0,0 +1,24 @@
++name: Check site changes
++on:
++  pull_request:
++    branches: [main]
++permissions:
++  contents: read
++jobs:
++  build:
++    runs-on: ubuntu-24.04
++    timeout-minutes: 10
++    steps:
++      - uses: actions/checkout@v5.0.0
++      - name: Install matching Hugo version
++        env:
++          HUGO_VERSION: 0.160.1
++        run: |
++          curl -L --fail "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" -o "$RUNNER_TEMP/hugo.tar.gz"
++          tar -xzf "$RUNNER_TEMP/hugo.tar.gz" -C "$RUNNER_TEMP" hugo
++      - name: Validate dashboard index
++        run: |
++          python3 scripts/build_admin_index.py
++          git diff --exit-code static/manage/files.json
++      - name: Build without deploying
++        run: '"$RUNNER_TEMP/hugo" --gc --minify'
+diff --git a/.gitignore b/.gitignore
+index ebe52f3..67e26df 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,8 +1,7 @@
+-static/.DS_Store
+-content/.DS_Store
+-.DS_Store
+-.DS_Store
+-.DS_Store
++**/.DS_Store
++/public/
++/resources/
++.hugo_build.lock
+ layouts/news/single_latest.html
+ static/admin/config_latest.yml
+ content/news_latest.md
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..ce4c415
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,31 @@
++# This Was Tomorrow
++
++Hugo website for Enrico Policardo's photographic and audio research into community-led housing.
++
++## Editing
++
++Start at [the management dashboard](https://thiswastomorrow.co.uk/manage/).
++
++- **Content:** [Sveltia CMS](https://thiswastomorrow.co.uk/admin/)
++- **Embeds:** [Studio](https://thiswastomorrow.co.uk/tools/studio.html)
++- **HTML, CSS and JavaScript:** [GitHub browser editor](https://github.dev/cardopoli/this-was-tomorrow)
++- **Deployment:** [GitHub Actions](https://github.com/cardopoli/this-was-tomorrow/actions)
++
++The dashboard links page content to the templates that render it. Read [editing.md](docs/editing.md) and [structure.md](docs/structure.md) before changing the implementation.
++
++## Local build
++
++Use Hugo **0.160.1 extended**, matching the deployment workflow.
++
++```sh
++python3 scripts/build_admin_index.py
++hugo server --disableFastRender
++```
++
++Production build:
++
++```sh
++hugo --gc --minify
++```
++
++`main` deploys to the live website. Use a branch for code changes. Compare the generated output before merging changes to shared templates. Never rename public paths or remove aliases used by printed QR codes without checking them.
+diff --git a/archive/README.md b/archive/README.md
+new file mode 100644
+index 0000000..6ac582e
+--- /dev/null
++++ b/archive/README.md
+@@ -0,0 +1,13 @@
++# Reference archive
++
++These files were moved out of active template and CMS directories. They are retained byte-for-byte for reference; Hugo does not publish this root-level directory.
++
++| Current archive file | Previous path |
++| --- | --- |
++| `exhibition-old-single.html` | `layouts/exhibition/old_single.html` |
++| `quotes-old-single.html` | `layouts/quotes/old_Single.html` |
++| `thankyou-old-single.html` | `layouts/thankyou/old_single.html` |
++| `cms-config-old.yml` | `static/admin/config_old.yml` |
++| `files.zip` | `files.zip` |
++
++The active templates and `static/admin/config.yml` remain in their original locations.
+diff --git a/static/admin/config_old.yml b/archive/cms-config-old.yml
+similarity index 100%
+rename from static/admin/config_old.yml
+rename to archive/cms-config-old.yml
+diff --git a/layouts/exhibition/old_single.html b/archive/exhibition-old-single.html
+similarity index 100%
+rename from layouts/exhibition/old_single.html
+rename to archive/exhibition-old-single.html
+diff --git a/files.zip b/archive/files.zip
+similarity index 100%
+rename from files.zip
+rename to archive/files.zip
+diff --git a/layouts/quotes/old_Single.html b/archive/quotes-old-single.html
+similarity index 100%
+rename from layouts/quotes/old_Single.html
+rename to archive/quotes-old-single.html
+diff --git a/layouts/thankyou/old_single.html b/archive/thankyou-old-single.html
+similarity index 100%
+rename from layouts/thankyou/old_single.html
+rename to archive/thankyou-old-single.html
+diff --git a/docs/editing.md b/docs/editing.md
+new file mode 100644
+index 0000000..1ce598a
+--- /dev/null
++++ b/docs/editing.md
+@@ -0,0 +1,47 @@
++# Editing the website
++
++Start at `/manage/`. It provides three entry points and a searchable active-file index.
++
++## Text, photographs and records
++
++Use Sveltia at `/admin/`. The CMS edits the collections defined in `static/admin/config.yml`. It does not currently edit Hugo HTML templates. The existing GitHub sign-in flow is unchanged.
++
++Raw Markdown and rich text are two views of the same content, not separate versions of the website. Use raw mode when preserving an existing shortcode or embed. The working audio playlist system remains as it is.
++
++## HTML, CSS and JavaScript
++
++Use **Code** in the dashboard, or an **Edit HTML** link beside a page type. These open GitHub's editors. HTML under `layouts/` contains Hugo template expressions as well as HTML; preserve both.
++
++Create a branch for layout or behaviour changes. Build locally with the same Hugo version used in `.github/workflows/hugo.yml`. Commit the change, review the diff and merge only when the checks pass. A commit to `main` publishes automatically.
++
++The file list includes the standalone tools, so their HTML can be edited too. The existing Studio interface creates embeds; it does not edit all website templates.
++
++## Finding the right file
++
++| Change | File or editor |
++| --- | --- |
++| Homepage introduction | Sveltia Homepage / `content/_index.md` |
++| Site text and galleries | Sveltia Sites / `content/sites/` |
++| Site page structure | `layouts/_default/single.html` |
++| Main website shell | `layouts/_default/baseof.html` |
++| Audio page structure | `layouts/exhibition/single.html` |
++| News page structure | `layouts/news/single.html` |
++| Installation page structure | `layouts/installs/single.html` |
++| Shared standalone navigation | `layouts/partials/core-nav.html` and `static/css/core-nav.css` |
++| Global colours, fonts and spacing | `static/css/style.css` |
++| CMS fields and collections | `static/admin/config.yml` |
++| Audio / gallery browser behaviour | `static/JS/supercharged.js` and `static/JS/gallery.js` |
++
++Some pages contain their own CSS in the HTML template. Changing the global stylesheet may not change an overridden page style. Consult the template before adding another override.
++
++## Downloads and media
++
++Files uploaded under `static/images/` are served at `/images/`; files in `static/downloads/` are served at `/downloads/`. Renaming a file can break a Markdown link or printed QR code. Search references before moving it.
++
++## Rolling back
++
++Use GitHub's revert operation on the change's pull request or commit. Do not restore the whole repository over newer content. Previous reference files are in `archive/`; public Studio backup paths are retained for compatibility.
++
++## What this maintenance pass changes
++
++The management dashboard, active-file index, repo documentation, backup-template locations and shared navigation stylesheet. It does not change page copy, routes, the CMS schema, audio/gallery behaviour or the intentional exhibition layouts.
+diff --git a/docs/structure.md b/docs/structure.md
+new file mode 100644
+index 0000000..b65b25b
+--- /dev/null
++++ b/docs/structure.md
+@@ -0,0 +1,37 @@
++# Repository structure
++
++| Folder | Purpose | Where to edit |
++| --- | --- | --- |
++| `content/` | Text and front matter for live pages | Sveltia, or Markdown in GitHub |
++| `content/sites/` | Location and community research | Sveltia Sites |
++| `content/exhibition/` | Audio pages; public URLs are `/audio/` | Sveltia Audio |
++| `layouts/` | Active Hugo HTML templates | GitHub code editor |
++| `layouts/partials/` | Shared header, footer, navigation and galleries | GitHub code editor |
++| `layouts/shortcodes/` | Reusable embeds inserted in content | GitHub code editor |
++| `static/admin/` | Sveltia loader and current configuration | GitHub code editor |
++| `static/manage/` | Editing dashboard and generated file index | GitHub code editor |
++| `static/tools/` | Standalone Studio and QR tools | Studio for creating embeds; GitHub for tool code |
++| `static/css/` | Shared styles and fonts declarations | GitHub code editor |
++| `static/JS/` | Shared browser behaviour | GitHub code editor |
++| `static/images/` | Public image assets | Sveltia media browser |
++| `static/downloads/` | Public PDF assets | GitHub upload |
++| `static/data/` | Structured data, including the quote deck | Sveltia Quotes, or GitHub |
++| `scripts/` | Maintenance scripts | GitHub code editor |
++| `archive/` | Previous templates, config and reference files | Reference only; Hugo does not publish this folder |
++| `docs/` | Maintenance and editing instructions | GitHub code editor |
++
++## Naming and compatibility
++
++Keep the existing `static/JS/` capitalisation. URLs are case-sensitive. Keep public image names, content slugs and existing aliases unless performing an explicit URL migration.
++
++The `exhibition` section deliberately publishes under `/audio/`; `hugo.toml` defines this. The old `/exhibition/` links are maintained through front matter aliases. This folder is not a duplicate audio website.
++
++Hugo copies everything in `static/` to the live site. Do not place new backups there. Save reference copies under `archive/`, or use Git history. Existing `studio_old.html` and `studio_backup.html` remain in place to preserve any external links; they are not indexed as active editors. `press_old.md` is also retained pending an explicit redirect migration.
++
++## Layout conventions
++
++Ordinary pages use `layouts/_default/baseof.html`; some exhibition-facing pages intentionally have standalone HTML shells. Avoid switching them wholesale to the normal shell: that can introduce unwanted navigation or change installation behaviour.
++
++Share components where their behaviour is identical. `core-nav.html` owns navigation markup; `static/css/core-nav.css` owns its styling. Page-specific styles remain with their current templates in this pass.
++
++When adding or removing an active file, regenerate `static/manage/files.json` with `python3 scripts/build_admin_index.py`. The dashboard does not require a database, token or custom authentication service.
+diff --git a/layouts/.DS_Store b/layouts/.DS_Store
+deleted file mode 100644
+index 2a58753fa70757d4b327014d5a1174b706d59208..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 8196
+zcmeI1UvJYe5Wvq{*^*5YeHd(ykq~c{ShI-@A*51@5N{Jj@BpYwma<k$<I<!Q$cp+3
+zd;tD@5%>nc2LQefceY#7qy>b~pkPb(r8!@c``yKkT>xO^u2%$D2LJ;r$^0@l6AJ06
+zX3Cs8vxbtPJ%9sU@F8-0VLQ`XpU?y}0Zl*?&;&GrzkvYG*;I@v^S;#TRuj+!{!0Qh
+zK3G^umXsVwDTWSg#1a5y4o{1M$G8p<HkOhlB?nRpQ@o~JJuqd;)DnY9bJSbZ9c4+$
+zft1o5m^25b?#$E*g^9bPoh7;hD@mzaO+XXK5}>ua0X6WT4)>Gmch~1G>OQ({zZpgw
+z8(-MmeD1`;qG6hbxnka{Hh8ZZIZ-z(JDof9YuAYyt~$QSxj#B~+*{3hua;lE!h^_Z
+z2KA0GZhCd>a`$#K@OZDxyMY&q>r|ye+^CjckK;{yvtSi>iv5BWU$8d{*4Fv0e&00K
+z&K56S-)lX75+C)SzLvf*H9o+}l&^0lIqHS`zKf4aeKQmuRy%>ug9FsjMVFA!BWOSq
+zT&xjR4gu|SC{pkLG^x{ZyhU_2zsu<*`HCJ*<MaxZ6I~s$n#v-@%RoW_gh<N4Js}^$
+z1gp10R-cDiwP-9G6LRXe<dI?4@@sLty<M>E9Xn0u)R}V^Z`2O`R=}SLG~d{)$ls&(
+zIUZ%)@(+sDecnoLcxC#uc%`D!#Q1b{ZMRVPaCy?TTHO1oe(lDO@0kjRi6NkX9Ez4w
+zm=7aL{^d|rhu&C}-W_|C@MX8{B8JJ%Byl246b3A#6i$cf1u94WOms5E#(*{^X-B-&
+zl&r~A{fA!bjGIX|8D)ym0zAOYU5<?EV|-@#RUUIG$zn{A;;@86S_3&yw(O&%i8D+Z
+zi`<-vW?nw!I<5b&PT&8Z319R>Y66<TuMuFmO0`l(+u=81`ZBcEwy^GDr9%A%QVJ7n
+z#Bv;^SdOC{{b7j57Ir0@l9B@{@eG#Z-w42uoYa_}nfnr-s(SvH@gAEK6MXdiKb!Oa
+ES9Pm{H~;_u
+
+diff --git a/layouts/partials/core-nav.html b/layouts/partials/core-nav.html
+index 67b3fbe..784de0c 100644
+--- a/layouts/partials/core-nav.html
++++ b/layouts/partials/core-nav.html
+@@ -1,10 +1,5 @@
+ {{- if ne . "Top" -}}
+-<style>
+-  .core-nav { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4, max-content); justify-content: center; gap: 12px 22px; max-width: 640px; margin: 32px auto; padding: 20px 24px 0; border-top: 1px solid rgba(198,245,0,.25); text-align: center; font: 400 11px/1.5 'FreeMono', 'Courier New', Courier, monospace; text-transform: uppercase; letter-spacing: .06em; }
+-  .core-nav a { display: inline-block; padding: 6px 2px; color: #c6f500; text-decoration: underline; text-underline-offset: 4px; }
+-  .core-nav a:hover, .core-nav a:focus-visible { color: #fff; }
+-  @media (max-width: 480px) { .core-nav { grid-template-columns: repeat(2, max-content); gap: 8px 38px; } }
+-</style>
++<link rel="stylesheet" href="{{ "css/core-nav.css" | relURL }}">
+ <nav class="core-nav" aria-label="Main navigation">
+   <a href="/">Sites</a>
+   <a href="/audio/">Audio</a>
+diff --git a/scripts/build_admin_index.py b/scripts/build_admin_index.py
+new file mode 100644
+index 0000000..3a4688d
+--- /dev/null
++++ b/scripts/build_admin_index.py
+@@ -0,0 +1,46 @@
++"""Build the editing dashboard's index from the active repo files."""
++import json
++from pathlib import Path
++ROOT=Path(__file__).resolve().parents[1]
++PAGES=[
++ ('Homepage','content/_index.md','layouts/index.html'),
++ ('Sites / field notes','content/sites/_index.md','layouts/_default/single.html'),
++ ('Audio overview','content/exhibition/_index.md','layouts/exhibition/list.html'),
++ ('Audio pages','content/exhibition/kesoberi.md','layouts/exhibition/single.html'),
++ ('About','content/about.md','layouts/_default/single.html'),
++ ('Map','content/map.md','layouts/_default/map.html'),
++ ('News','content/news.md','layouts/news/single.html'),
++ ('Installations','content/installs.md','layouts/installs/single.html'),
++ ('Cressingham interactive map','content/cressingham-install.md','layouts/installs/detail.html'),
++ ('Thoughts','content/thoughts.md','layouts/thoughts/single.html'),
++ ('Quotes','static/data/twt_quotes.json','layouts/quotes/Single.html'),
++ ('Thank you','content/thankyou.md','layouts/thankyou/single.html'),
++ ('Link in bio','content/linkinbio.md','layouts/linkinbio/single.html'),
++ ('Press','content/press.md','layouts/_default/single.html'),
++]
++DESCRIPTIONS={'static/admin/config.yml':'Content editor fields and collections','static/admin/index.html':'Sveltia CMS loader','static/css/style.css':'Main shared stylesheet and fonts','static/css/core-nav.css':'Shared standalone-page navigation','layouts/_default/baseof.html':'Main HTML shell, metadata and shared assets','layouts/partials/core-nav.html':'Shared navigation markup','static/JS/gallery.js':'Dropbox galleries','static/JS/supercharged.js':'Audio players and shared behaviour','hugo.toml':'Hugo website configuration'}
++def group(path):
++ if path.startswith('content/') or path.startswith('static/data/'):return 'content'
++ if path.startswith('layouts/'):return 'layouts'
++ if path.startswith('static/css/'):return 'styles'
++ if path.startswith('static/JS/'):return 'scripts'
++ if path.startswith('static/tools/'):return 'tools'
++ return 'settings'
++def main():
++ files=[]
++ for prefix in ('content','layouts','static/css','static/JS','static/tools','static/admin','static/data'):
++  for p in sorted((ROOT/prefix).rglob('*')):
++   if not p.is_file() or p.suffix not in ('.md','.html','.css','.js','.yml','.json'):continue
++   path=p.relative_to(ROOT).as_posix()
++   if '_old' in p.stem or '_backup' in p.stem or p.stem.endswith('_latest'):continue
++   files.append({'path':path,'group':group(path),'description':DESCRIPTIONS.get(path,p.stem.replace('_',' ').replace('-',' '))})
++ files.append({'path':'hugo.toml','group':'settings','description':DESCRIPTIONS['hugo.toml']})
++ pages=[]
++ for title,content,layout in PAGES:
++  assert (ROOT/content).exists(),content
++  assert (ROOT/layout).exists(),layout
++  pages.append({'title':title,'content':content,'layout':layout,'style':'static/css/style.css'})
++ out=ROOT/'static/manage/files.json';out.parent.mkdir(parents=True,exist_ok=True)
++ out.write_text(json.dumps({'files':files,'pages':pages},indent=2)+'\n')
++ print(f'Indexed {len(files)} active files and {len(pages)} page types')
++if __name__=='__main__':main()
+diff --git a/static/.DS_Store b/static/.DS_Store
+deleted file mode 100644
+index b398de56688e57cfe0d8b6d07ec34b4b47f9f11b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 14340
+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
+L=^KjwF8==)D!h7&
+
+diff --git a/static/css/core-nav.css b/static/css/core-nav.css
+new file mode 100644
+index 0000000..a9d8373
+--- /dev/null
++++ b/static/css/core-nav.css
+@@ -0,0 +1,4 @@
++.core-nav { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4, max-content); justify-content: center; gap: 12px 22px; max-width: 640px; margin: 32px auto; padding: 20px 24px 0; border-top: 1px solid rgba(198,245,0,.25); text-align: center; font: 400 11px/1.5 'FreeMono', 'Courier New', Courier, monospace; text-transform: uppercase; letter-spacing: .06em; }
++  .core-nav a { display: inline-block; padding: 6px 2px; color: #c6f500; text-decoration: underline; text-underline-offset: 4px; }
++  .core-nav a:hover, .core-nav a:focus-visible { color: #fff; }
++  @media (max-width: 480px) { .core-nav { grid-template-columns: repeat(2, max-content); gap: 8px 38px; } }
+diff --git a/static/manage/files.json b/static/manage/files.json
+new file mode 100644
+index 0000000..764c49c
+--- /dev/null
++++ b/static/manage/files.json
+@@ -0,0 +1,480 @@
++{
++  "files": [
++    {
++      "path": "content/_index.md",
++      "group": "content",
++      "description": " index"
++    },
++    {
++      "path": "content/about.md",
++      "group": "content",
++      "description": "about"
++    },
++    {
++      "path": "content/cressingham-install.md",
++      "group": "content",
++      "description": "cressingham install"
++    },
++    {
++      "path": "content/exhibition/_index.md",
++      "group": "content",
++      "description": " index"
++    },
++    {
++      "path": "content/exhibition/calder-valley.md",
++      "group": "content",
++      "description": "calder valley"
++    },
++    {
++      "path": "content/exhibition/cressingham-gardens.md",
++      "group": "content",
++      "description": "cressingham gardens"
++    },
++    {
++      "path": "content/exhibition/granby.md",
++      "group": "content",
++      "description": "granby"
++    },
++    {
++      "path": "content/exhibition/gwavas-estate.md",
++      "group": "content",
++      "description": "gwavas estate"
++    },
++    {
++      "path": "content/exhibition/hastings-commons.md",
++      "group": "content",
++      "description": "hastings commons"
++    },
++    {
++      "path": "content/exhibition/homebaked.md",
++      "group": "content",
++      "description": "homebaked"
++    },
++    {
++      "path": "content/exhibition/kesoberi.md",
++      "group": "content",
++      "description": "kesoberi"
++    },
++    {
++      "path": "content/exhibition/kittys.md",
++      "group": "content",
++      "description": "kittys"
++    },
++    {
++      "path": "content/exhibition/lilac.md",
++      "group": "content",
++      "description": "lilac"
++    },
++    {
++      "path": "content/exhibition/owch-new-ground.md",
++      "group": "content",
++      "description": "owch new ground"
++    },
++    {
++      "path": "content/exhibition/tinkers-bubble.md",
++      "group": "content",
++      "description": "tinkers bubble"
++    },
++    {
++      "path": "content/exhibition/treneere-estate.md",
++      "group": "content",
++      "description": "treneere estate"
++    },
++    {
++      "path": "content/exhibition/trevone-quarry.md",
++      "group": "content",
++      "description": "trevone quarry"
++    },
++    {
++      "path": "content/installs.md",
++      "group": "content",
++      "description": "installs"
++    },
++    {
++      "path": "content/linkinbio.md",
++      "group": "content",
++      "description": "linkinbio"
++    },
++    {
++      "path": "content/map.md",
++      "group": "content",
++      "description": "map"
++    },
++    {
++      "path": "content/news.md",
++      "group": "content",
++      "description": "news"
++    },
++    {
++      "path": "content/press.md",
++      "group": "content",
++      "description": "press"
++    },
++    {
++      "path": "content/quotes.md",
++      "group": "content",
++      "description": "quotes"
++    },
++    {
++      "path": "content/sites/_index.md",
++      "group": "content",
++      "description": " index"
++    },
++    {
++      "path": "content/sites/bosavern.md",
++      "group": "content",
++      "description": "bosavern"
++    },
++    {
++      "path": "content/sites/calder-valley.md",
++      "group": "content",
++      "description": "calder valley"
++    },
++    {
++      "path": "content/sites/cressingham-gardens.md",
++      "group": "content",
++      "description": "cressingham gardens"
++    },
++    {
++      "path": "content/sites/granby.md",
++      "group": "content",
++      "description": "granby"
++    },
++    {
++      "path": "content/sites/gwavas.md",
++      "group": "content",
++      "description": "gwavas"
++    },
++    {
++      "path": "content/sites/hastings-commons.md",
++      "group": "content",
++      "description": "hastings commons"
++    },
++    {
++      "path": "content/sites/kesoberi.md",
++      "group": "content",
++      "description": "kesoberi"
++    },
++    {
++      "path": "content/sites/kittys.md",
++      "group": "content",
++      "description": "kittys"
++    },
++    {
++      "path": "content/sites/lilac.md",
++      "group": "content",
++      "description": "lilac"
++    },
++    {
++      "path": "content/sites/newquay.md",
++      "group": "content",
++      "description": "newquay"
++    },
++    {
++      "path": "content/sites/owch-new-ground.md",
++      "group": "content",
++      "description": "owch new ground"
++    },
++    {
++      "path": "content/sites/tinkers-bubble.md",
++      "group": "content",
++      "description": "tinkers bubble"
++    },
++    {
++      "path": "content/sites/trelay.md",
++      "group": "content",
++      "description": "trelay"
++    },
++    {
++      "path": "content/sites/treneere-estate.md",
++      "group": "content",
++      "description": "treneere estate"
++    },
++    {
++      "path": "content/sites/trevone-quarry.md",
++      "group": "content",
++      "description": "trevone quarry"
++    },
++    {
++      "path": "content/sites/twouptwodown.md",
++      "group": "content",
++      "description": "twouptwodown"
++    },
++    {
++      "path": "content/thankyou.md",
++      "group": "content",
++      "description": "thankyou"
++    },
++    {
++      "path": "content/thoughts.md",
++      "group": "content",
++      "description": "thoughts"
++    },
++    {
++      "path": "layouts/404.html",
++      "group": "layouts",
++      "description": "404"
++    },
++    {
++      "path": "layouts/_default/about-layout.html",
++      "group": "layouts",
++      "description": "about layout"
++    },
++    {
++      "path": "layouts/_default/baseof.html",
++      "group": "layouts",
++      "description": "Main HTML shell, metadata and shared assets"
++    },
++    {
++      "path": "layouts/_default/list.html",
++      "group": "layouts",
++      "description": "list"
++    },
++    {
++      "path": "layouts/_default/map.html",
++      "group": "layouts",
++      "description": "map"
++    },
++    {
++      "path": "layouts/_default/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/_default/taxonomy.html",
++      "group": "layouts",
++      "description": "taxonomy"
++    },
++    {
++      "path": "layouts/exhibition/list.html",
++      "group": "layouts",
++      "description": "list"
++    },
++    {
++      "path": "layouts/exhibition/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/index.html",
++      "group": "layouts",
++      "description": "index"
++    },
++    {
++      "path": "layouts/index.json",
++      "group": "layouts",
++      "description": "index"
++    },
++    {
++      "path": "layouts/installs/detail.html",
++      "group": "layouts",
++      "description": "detail"
++    },
++    {
++      "path": "layouts/installs/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/linkinbio/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/news/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/partials/core-nav.html",
++      "group": "layouts",
++      "description": "Shared navigation markup"
++    },
++    {
++      "path": "layouts/partials/dropbox-gallery.html",
++      "group": "layouts",
++      "description": "dropbox gallery"
++    },
++    {
++      "path": "layouts/partials/footer.html",
++      "group": "layouts",
++      "description": "footer"
++    },
++    {
++      "path": "layouts/partials/header.html",
++      "group": "layouts",
++      "description": "header"
++    },
++    {
++      "path": "layouts/partials/lightbox.html",
++      "group": "layouts",
++      "description": "lightbox"
++    },
++    {
++      "path": "layouts/quotes/Single.html",
++      "group": "layouts",
++      "description": "Single"
++    },
++    {
++      "path": "layouts/shortcodes/audio-playlist.html",
++      "group": "layouts",
++      "description": "audio playlist"
++    },
++    {
++      "path": "layouts/thankyou/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "layouts/thoughts/single.html",
++      "group": "layouts",
++      "description": "single"
++    },
++    {
++      "path": "static/css/core-nav.css",
++      "group": "styles",
++      "description": "Shared standalone-page navigation"
++    },
++    {
++      "path": "static/css/embeds.css",
++      "group": "styles",
++      "description": "embeds"
++    },
++    {
++      "path": "static/css/style.css",
++      "group": "styles",
++      "description": "Main shared stylesheet and fonts"
++    },
++    {
++      "path": "static/JS/cressingham-map.js",
++      "group": "scripts",
++      "description": "cressingham map"
++    },
++    {
++      "path": "static/JS/gallery.js",
++      "group": "scripts",
++      "description": "Dropbox galleries"
++    },
++    {
++      "path": "static/JS/supercharged.js",
++      "group": "scripts",
++      "description": "Audio players and shared behaviour"
++    },
++    {
++      "path": "static/tools/qr.html",
++      "group": "tools",
++      "description": "qr"
++    },
++    {
++      "path": "static/tools/studio.html",
++      "group": "tools",
++      "description": "studio"
++    },
++    {
++      "path": "static/admin/config.yml",
++      "group": "settings",
++      "description": "Content editor fields and collections"
++    },
++    {
++      "path": "static/admin/index.html",
++      "group": "settings",
++      "description": "Sveltia CMS loader"
++    },
++    {
++      "path": "static/data/twt_quotes.json",
++      "group": "content",
++      "description": "twt quotes"
++    },
++    {
++      "path": "hugo.toml",
++      "group": "settings",
++      "description": "Hugo website configuration"
++    }
++  ],
++  "pages": [
++    {
++      "title": "Homepage",
++      "content": "content/_index.md",
++      "layout": "layouts/index.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Sites / field notes",
++      "content": "content/sites/_index.md",
++      "layout": "layouts/_default/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Audio overview",
++      "content": "content/exhibition/_index.md",
++      "layout": "layouts/exhibition/list.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Audio pages",
++      "content": "content/exhibition/kesoberi.md",
++      "layout": "layouts/exhibition/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "About",
++      "content": "content/about.md",
++      "layout": "layouts/_default/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Map",
++      "content": "content/map.md",
++      "layout": "layouts/_default/map.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "News",
++      "content": "content/news.md",
++      "layout": "layouts/news/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Installations",
++      "content": "content/installs.md",
++      "layout": "layouts/installs/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Cressingham interactive map",
++      "content": "content/cressingham-install.md",
++      "layout": "layouts/installs/detail.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Thoughts",
++      "content": "content/thoughts.md",
++      "layout": "layouts/thoughts/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Quotes",
++      "content": "static/data/twt_quotes.json",
++      "layout": "layouts/quotes/Single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Thank you",
++      "content": "content/thankyou.md",
++      "layout": "layouts/thankyou/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Link in bio",
++      "content": "content/linkinbio.md",
++      "layout": "layouts/linkinbio/single.html",
++      "style": "static/css/style.css"
++    },
++    {
++      "title": "Press",
++      "content": "content/press.md",
++      "layout": "layouts/_default/single.html",
++      "style": "static/css/style.css"
++    }
++  ]
++}
+diff --git a/static/manage/index.html b/static/manage/index.html
+new file mode 100644
+index 0000000..f8be6c3
+--- /dev/null
++++ b/static/manage/index.html
+@@ -0,0 +1,28 @@
++<!doctype html>
++<html lang="en-GB">
++<head>
++<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
++<title>Manage / This Was Tomorrow</title>
++<style>
++@font-face{font-family:FreeMono;src:url('../fonts/FreeMono.otf')}*{box-sizing:border-box}body{margin:0;background:#101410;color:#e8ead4;font:14px/1.6 FreeMono,monospace}a{color:#c6f500;text-underline-offset:4px}main{max-width:1120px;margin:auto;padding:42px 24px 70px}header{border-bottom:1px solid #354135;padding-bottom:24px;margin-bottom:30px}header p{max-width:76ch;color:#aeb7a5}h1{font:400 28px/1.3 FreeMono,monospace;margin:16px 0}h2{font-size:17px;font-weight:400;margin:0 0 12px}p{margin:8px 0}.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid #354135;padding:22px;background:#171d17}.card p{color:#aeb7a5;font-size:12px;min-height:65px}.button{display:inline-block;border:1px solid #82904e;padding:9px 14px;text-decoration:none;margin-top:8px}.button:hover{background:#c6f500;color:#101410}.note{margin:26px 0;color:#aeb7a5;font-size:12px}section{margin-top:38px}.filters{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}input,select{padding:12px;background:#171d17;border:1px solid #526052;color:#e8ead4;font:inherit}input{flex:1;min-width:180px}select{max-width:100%}.file{display:grid;grid-template-columns:1fr auto;gap:20px;border-top:1px solid #354135;padding:15px 0}.file strong{font-weight:400}.file small{display:block;color:#aeb7a5;overflow-wrap:anywhere}.file a{align-self:center;white-space:nowrap}.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px}.paths .card p{min-height:0}summary{cursor:pointer;color:#c6f500}.pages{border-top:1px solid #354135;padding-top:20px}.page{border-bottom:1px solid #354135;padding:12px 0}.page-links{display:flex;flex-wrap:wrap;gap:16px;font-size:12px}.page small{color:#aeb7a5}.count{color:#aeb7a5;font-size:12px}[hidden]{display:none!important}:focus-visible{outline:2px solid #c6f500;outline-offset:4px}@media(max-width:760px){.actions,.paths{grid-template-columns:1fr}.card p{min-height:0}main{padding:24px 18px}.file{gap:12px}.file a{font-size:12px}h1{font-size:23px}}
++</style>
++</head>
++<body><main>
++<header><a href="../">← Website</a><h1>Manage / This Was Tomorrow</h1><p>One place to reach the content editor, Studio and the website code. Choose what you want to change.</p></header>
++<div class="actions">
++<article class="card"><h2>Content</h2><p>Text, site records, audio pages, news, installations, quotes and photographs.</p><a class="button" href="../admin/">Open content editor</a></article>
++<article class="card"><h2>Studio</h2><p>Create the gallery and audio embeds used in pages and installations.</p><a class="button" href="../tools/studio.html">Open Studio</a></article>
++<article class="card"><h2>Code</h2><p>Edit HTML templates, CSS and JavaScript in GitHub’s browser editor. Sign in to save changes.</p><a class="button" href="https://github.dev/cardopoli/this-was-tomorrow" target="_blank" rel="noopener">Open repository editor ↗</a></article>
++</div>
++<p class="note">Content edits and code edits are saved to GitHub. Changes committed to main trigger the live build. For layout changes, create a branch and check it before merging. <a href="https://github.com/cardopoli/this-was-tomorrow/actions" target="_blank" rel="noopener">Build status ↗</a></p>
++<section><h2>Which file controls this page?</h2><p class="note">A page’s text and its HTML layout are separate files. These links open the exact files used by the current website.</p><div class="pages" id="pages"></div></section>
++<section><h2>Browse editable files</h2><div class="filters"><label for="search" hidden>Search files</label><input id="search" type="search" placeholder="Search file name, path or purpose" aria-label="Search editable files"><select id="group" aria-label="File category"><option value="">All active files</option><option value="content">Content</option><option value="layouts">HTML templates</option><option value="styles">CSS</option><option value="scripts">JavaScript</option><option value="tools">Tools</option><option value="settings">Settings / CMS</option></select></div><p class="count" id="count" role="status"></p><div id="files"></div></section>
++<section><h2>Where things belong</h2><div class="paths"><article class="card"><h2>Content and media</h2><p><code>content/</code> holds page text and records.<br><code>static/images/</code> holds uploaded images.<br><code>static/downloads/</code> holds public PDFs.</p></article><article class="card"><h2>Website and tools</h2><p><code>layouts/</code> holds Hugo HTML templates.<br><code>static/css/</code> and <code>static/JS/</code> hold shared styles and behaviour.<br><code>static/tools/</code> holds standalone tools.</p></article></div><p class="note">Old reference files live in <code>archive/</code>. Read the <a href="https://github.com/cardopoli/this-was-tomorrow/blob/main/docs/editing.md" target="_blank" rel="noopener">editing guide ↗</a> or <a href="https://github.com/cardopoli/this-was-tomorrow/blob/main/docs/structure.md" target="_blank" rel="noopener">repo structure ↗</a>.</p></section>
++<noscript><p><a href="../admin/">Content editor</a> · <a href="../tools/studio.html">Studio</a> · <a href="https://github.com/cardopoli/this-was-tomorrow/tree/main/layouts">HTML templates on GitHub</a></p></noscript>
++</main>
++<script>
++const base='https://github.com/cardopoli/this-was-tomorrow/edit/main/';let entries=[];
++function fileLink(path,label){const a=document.createElement('a');a.href=base+path.split('/').map(encodeURIComponent).join('/');a.textContent=label;a.target='_blank';a.rel='noopener';return a;}
++function render(){const query=document.getElementById('search').value.toLowerCase(),group=document.getElementById('group').value,list=entries.filter(f=>(!group||f.group===group)&&(!query||(f.path+' '+f.description).toLowerCase().includes(query)));const target=document.getElementById('files');target.replaceChildren();for(const f of list){const row=document.createElement('div');row.className='file';const detail=document.createElement('div'),name=document.createElement('strong'),path=document.createElement('small');name.textContent=f.description;path.textContent=f.path;detail.append(name,path);row.append(detail,fileLink(f.path,'Edit ↗'));target.append(row);}document.getElementById('count').textContent=list.length+' files';}
++fetch('files.json').then(r=>{if(!r.ok)throw new Error('File index unavailable');return r.json();}).then(data=>{entries=data.files;render();const target=document.getElementById('pages');for(const p of data.pages){const row=document.createElement('div');row.className='page';const name=document.createElement('div');name.textContent=p.title;const links=document.createElement('div');links.className='page-links';links.append(fileLink(p.content,'Edit content ↗'),fileLink(p.layout,'Edit HTML ↗'));if(p.style)links.append(fileLink(p.style,'Edit CSS ↗'));row.append(name,links);target.append(row);}}).catch(()=>{document.getElementById('count').textContent='The file index could not load. Use the repository editor above.';});document.getElementById('search').addEventListener('input',render);document.getElementById('group').addEventListener('change',render);
++</script></body></html>
+-- 
+2.51.1
+
