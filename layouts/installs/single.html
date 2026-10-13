@@ -71,6 +71,8 @@
     color: #077533;
   }
 
+  .install-section-status.past { color: var(--muted); border: 1px solid var(--rule); }
+
   .install-section-status.upcoming {
     background: #f0ede8;
     color: #8c8880;
@@ -147,7 +149,7 @@
   {{ end }}
 
   {{ range .Params.installs }}
-    <section class="install-section">
+    <section class="install-section" id="{{ .title | urlize }}">
       <div class="install-section-header">
         <h2 class="install-section-title">{{ .title }}</h2>
         <p class="install-section-meta">{{ .venue }}</p>
