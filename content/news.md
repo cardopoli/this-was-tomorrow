@@ -10,42 +10,33 @@ intro: |-
 
   For the past year I've been photographing community-led housing across the UK - cohousing, community land trusts, self-build, co-ops. A dozen communities the length of the country, shown as large prints with the residents' own voices beside them.
 
-  It's starting to go up on walls, and I'd love you to come and see it.
+  The first installations took place in September 2026. See the photographs, hear the voices, and find details of visiting the Hastings installation.
 exhibitions:
   - name: New Ground - 10 Years
     venue: Pollard Thomas Edwards
     address: Diespeker Wharf, 38 Graham Street, London N1 8JX
     dates: Saturday 12 September 2026
-    times: Drop in, 10am - 4pm
-    status: confirmed
+    times: ''
+    status: past
     note: Part of Open House Festival, celebrating ten years of New Ground cohousing.
-    link: https://programme.openhouse.org.uk/listings/1375
-    link_label: Book on Open House
+    link: /installs/#new-ground-10-years
+    link_label: See the installation
   - name: Hastings Commons
     venue: Hastings Commons
     address: Hastings
     dates: 12 September 2026 onwards
     times: ''
     status: confirmed
-    note: ''
-    link: ''
-    link_label: ''
+    note: Free to visit. Contact the venue to arrange your visit.
+    link: /installs/#hastings-commons
+    link_label: Visiting information
   - name: Cressingham Gardens Rotunda
     venue: Cressingham Gardens
     address: Rotunda, Cressingham Gardens, London SW2
     dates: 20 September 2026
     times: ''
-    status: confirmed
-    note: Part of Open House Festival. A talk on Cressingham accompanies the event.
-    link: ''
-    link_label: ''
-  - name: Calder Valley Community Land Trust
-    venue: Calder Valley CLT
-    address: Hebden Bridge, Todmorden
-    dates: Autumn 2026
-    times: ''
-    status: tbc
-    note: Venue being finalised.
+    status: past
+    note: Installation and talk at the Rotunda for Open House Festival.
     link: ''
     link_label: ''
 communities:
