@@ -55,7 +55,7 @@ installs:
     venue: Pollard Thomas Edwards
     location: Diespeker Wharf, London
     date_range: 12 September 2026
-    status: live
+    status: past
     image: /images/twt-install_pte_120926-p1010266_medium.webp
     info: |-
       Part of Open House Festival, celebrating ten years of New Ground cohousing. 
@@ -94,10 +94,10 @@ installs:
     venue: Rotunda
     location: Cressingham Gardens, London
     date_range: 20 September 2026
-    status: live
+    status: past
     image: /images/img_8041_medium.webp
     info: |-
-      Installation in the Rotunda as part of Open House Festival. A talk on Cressingham accompanies the event.
+      Installation in the Rotunda for Open House Festival on 20 September 2026, accompanied by a talk on Cressingham.
 
       Photos by [cardopoli](https://www.instagram.com/cardopoli/) and by [Rosamond Martin](https://www.rosamondmartin.com/)
     embed_code: |-
@@ -107,14 +107,4 @@ installs:
       </figure>
       </div>
     detail_link: cressingham-gardens
-  - title: Calder Valley Community Land Trust
-    site_link: calder-valley
-    venue: Calder Valley CLT
-    location: Hebden Bridge & Todmorden
-    date_range: Autumn 2026
-    status: upcoming
-    image: /images/dsc_0531-twt_calder-valley_low.webp
-    info: Installation details to follow.
-    embed_code: ''
-    detail_link: ''
 ---
