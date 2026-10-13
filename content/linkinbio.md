@@ -1,31 +1,46 @@
 ---
 title: This Was Tomorrow
+description: Photographs, voices and installations from community-led housing across the UK.
+intro: Photographs and voices from community-led housing across the UK.
+hero: /images/twt-install_hastings_120926-img_5871.webp
+hero_alt: This Was Tomorrow installation at Hastings Commons
+hero_gif: /images/twt_wobble.gif
 updates:
-  - date: 12 Sep 2026
-    title: Open House Festival — Pollard Thomas Edwards
-    location: London
-    url: https://pollardthomasedwards.co.uk/journal/open-house-festival-saturday-12-september-2026/
-  - date: 12/09/2026 > Onwards
-    title: Is This The Future We Were Dreaming Of? - Hastings Commons
-    location: Hastings
-    url: https://www.heritageopendays.org.uk/submission-event/the-alley-and-the-commons.html
-  - date: 20 Sep 2026
+  - date: From 12 September 2026
+    title: Hastings Commons
+    location: Rose Cottage, Hastings
+    note: Free to visit. Contact the venue to arrange your visit.
+    url: /installs/#hastings-commons
+recent:
+  - date: 20 September 2026
     title: Cressingham Gardens
-    location: Lambeth, London
-    url: https://programme.openhouse.org.uk/listings/6047
+    location: Rotunda, London
+    url: /installs/#cressingham-gardens
+  - date: 12 September 2026
+    title: New Ground - 10 Years
+    location: Pollard Thomas Edwards, London
+    url: /installs/#new-ground-10-years
 links:
-  - label: Installs
-    url: https://thiswastomorrow.co.uk/installs/
+  - label: Listen to the voices
+    note: Audio from the people who live here
+    url: /audio/
+    featured: true
+  - label: See the installations
+    note: Photographs of the work on walls
+    url: /installs/
+    featured: true
+  - label: Explore the places
+    url: /
   - label: Map of all sites
-    url: https://thiswastomorrow.co.uk/map/
-  - label: Homepage
-    url: https://thiswastomorrow.co.uk
+    url: /map/
   - label: About the project
-    url: https://thiswastomorrow.co.uk/about/
+    url: /about/
   - label: Press and downloads
-    url: https://thiswastomorrow.co.uk/press/
-  - label: Quotes Generator
-    url: https://thiswastomorrow.co.uk/quotes/
+    url: /press/
+  - label: Read the quotes
+    url: /quotes/
+  - label: Host this work
+    url: mailto:info@enricopolicardo.com
 slug: linkinbio
 layout: linkinbio
 ---
