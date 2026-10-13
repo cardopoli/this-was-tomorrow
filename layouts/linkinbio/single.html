@@ -2,7 +2,7 @@
 <html lang="{{ .Site.LanguageCode | default "en-gb" }}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>{{ .Title }} · {{ .Site.Title }}</title>
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -128,98 +128,57 @@
     @media (prefers-reduced-motion: reduce) {
       .lib-section { transition: none; opacity: 1; transform: none; }
     }
-
-    .lib-shell { width: min(100%, 640px); margin: 0 auto; padding: 0 20px; }
-    .lib-header { padding: 32px 0 24px; margin-bottom: 24px; }
-    .lib-kicker { font: 11px 'FreeMono', monospace; letter-spacing: 2px; color: var(--fluo); margin: 24px 0 12px; text-transform: uppercase; }
-    .lib-title { font-size: clamp(30px, 8vw, 48px); letter-spacing: -1px; }
-    .lib-tagline { margin: 12px 0; color: #d2cec7; font-size: 17px; line-height: 1.4; }
-    .lib-intro { color: #aaa79f; font-size: 18px; line-height: 1.4; max-width: 36ch; }
-    .lib-hero { position: relative; margin-bottom: 24px; }
-    .lib-hero img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
-    .lib-motion { margin-top: 10px; background: transparent; color: var(--fluo); border: 1px solid #485719; padding: 8px 12px; font: 12px 'FreeMono', monospace; cursor: pointer; }
-    .lib-section { padding: 0; opacity: 1; transform: none; margin-bottom: 28px; }
-    .lib-section-label { color: #b1bd84; font-size: 11px; }
-    .lib-actions { display: grid; gap: 10px; margin-bottom: 28px; }
-    .lib-link { min-height: 52px; padding: 15px 0; font-size: 20px; }
-    .lib-link.featured { padding: 20px; border: 1px solid #3c4822; background: #12160b; }
-    .lib-link.featured:first-child { background: var(--fluo); color: #101400; border-color: var(--fluo); }
-    .lib-link.featured:first-child .lib-link-arrow { color: #101400; }
-    .lib-link-note { display: block; font-size: 16px; margin-top: 4px; opacity: .72; line-height: 1.35; }
-    .lib-event { padding: 16px 0; }
-    .lib-event-date { font-size: 11px; }
-    .lib-event-title { font-size: 23px; line-height: 1.2; }
-    .lib-event-note { color: #b8b5ae; margin-top: 8px; font-size: 16px; line-height: 1.4; }
-    .lib-recent summary { cursor: pointer; padding: 16px 0; color: #c0bdb6; font: 12px 'FreeMono', monospace; }
-    .lib-footer { padding: 24px 0; }
-    .lib-footer-text { color: #aaa79f; font-size: 11px; }
-    .lib-footer-text a { color: #aaa79f; }
-    @media (max-width: 400px) { .lib-shell { padding: 0 16px; } .lib-link.featured { padding: 16px; } }
   </style>
 </head>
 <body>
+  {{ partial "core-nav.html" "Top" }}
 
-  <main class="lib-shell">
-  <header class="lib-header">
-    {{ with .Params.hero }}
-    <div class="lib-hero">
-      <img id="lib-hero-image" src="{{ . | relURL }}" alt="{{ $.Params.hero_alt }}" width="600" height="400" fetchpriority="high">
-      {{ with $.Params.hero_gif }}<button class="lib-motion" id="lib-motion" type="button" data-gif="{{ . | relURL }}" aria-pressed="false" hidden>Play moving image</button>{{ end }}
-    </div>
-    {{ end }}
-    <p class="lib-kicker">Enrico Policardo</p>
-    <h1 class="lib-title">{{ .Title }}</h1>
+  <header class="lib-header" data-fade>
+    <p class="lib-title">{{ .Site.Title }}</p>
     <p class="lib-tagline">{{ .Site.Params.tagline }}</p>
-    {{ with .Params.intro }}<p class="lib-intro">{{ . }}</p>{{ end }}
   </header>
 
-  <section class="lib-actions" aria-label="Explore the work">
-    {{ range .Params.links }}{{ if .featured }}
-    <a class="lib-link featured" href="{{ .url | relURL }}">
-      <span class="lib-link-label">{{ .label }}{{ with .note }}<span class="lib-link-note">{{ . }}</span>{{ end }}</span>
-      <span class="lib-link-arrow" aria-hidden="true">↗</span>
-    </a>
-    {{ end }}{{ end }}
-  </section>
-
   {{ with .Params.updates }}
-  <section class="lib-section" aria-label="Current installation">
-    <h2 class="lib-section-label">On the walls</h2>
+  <section class="lib-section" data-fade aria-label="Installation updates">
+    <p class="lib-section-label">Current installation</p>
     {{ range . }}
-    <article class="lib-event">
+    <div class="lib-event">
       <p class="lib-event-date">{{ .date }}</p>
-      {{ if .url }}<a href="{{ .url | relURL }}">{{ end }}
-        <h3 class="lib-event-title">{{ .title }}</h3>
+      {{ if .url }}<a href="{{ .url }}">{{ else }}<div>{{ end }}
+        <p class="lib-event-title">{{ .title }}</p>
         {{ with .location }}<p class="lib-event-location">{{ . }}</p>{{ end }}
-      {{ if .url }}</a>{{ end }}
-      {{ with .note }}<p class="lib-event-note">{{ . }}</p>{{ end }}
-    </article>
+      {{ if .url }}</a>{{ else }}</div>{{ end }}
+    </div>
     {{ end }}
   </section>
   {{ end }}
 
   {{ with .Params.recent }}
-  <details class="lib-section lib-recent">
-    <summary>Recent installations</summary>
+  <section class="lib-section" data-fade aria-label="Recent installations">
+    <p class="lib-section-label">Recent installations</p>
     {{ range . }}
-    <article class="lib-event">
+    <div class="lib-event">
       <p class="lib-event-date">{{ .date }}</p>
-      <a href="{{ .url | relURL }}"><h3 class="lib-event-title">{{ .title }}</h3>
-      {{ with .location }}<p class="lib-event-location">{{ . }}</p>{{ end }}</a>
-    </article>
+      <a href="{{ .url }}">
+        <p class="lib-event-title">{{ .title }}</p>
+        {{ with .location }}<p class="lib-event-location">{{ . }}</p>{{ end }}
+      </a>
+    </div>
     {{ end }}
-  </details>
+  </section>
   {{ end }}
 
-  <section class="lib-section" aria-label="More links">
-    <h2 class="lib-section-label">Explore further</h2>
-    {{ range .Params.links }}{{ if not .featured }}
-    <a class="lib-link" href="{{ .url | relURL }}">
+  {{ with .Params.links }}
+  <section class="lib-section" data-fade aria-label="Links">
+    <p class="lib-section-label">Links</p>
+    {{ range . }}
+    <a class="lib-link{{ if .download }} download{{ end }}" href="{{ .url }}">
       <span class="lib-link-label">{{ .label }}</span>
-      <span class="lib-link-arrow" aria-hidden="true">↗</span>
+      <span class="lib-link-arrow">→</span>
     </a>
-    {{ end }}{{ end }}
+    {{ end }}
   </section>
+  {{ end }}
 
   <div class="lib-footer">
     <div class="lib-footer-text">
@@ -233,33 +192,19 @@
     </div>
   </div>
 
-
-  </main>
   <script>
-  (function () {
-    var button = document.getElementById('lib-motion');
-    var image = document.getElementById('lib-hero-image');
-    if (!button || !image) return;
-    var still = image.src;
-    var alt = image.alt;
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (reduced.matches) return;
-    button.hidden = false;
-    button.addEventListener('click', function () {
-      var playing = button.getAttribute('aria-pressed') !== 'true';
-      image.src = playing ? button.dataset.gif : still;
-      image.alt = playing ? 'Animated photographic study from This Was Tomorrow' : alt;
-      button.setAttribute('aria-pressed', String(playing));
-      button.textContent = playing ? 'Stop moving image' : 'Play moving image';
-    });
-    image.addEventListener('error', function () {
-      if (button.getAttribute('aria-pressed') === 'true') {
-        image.src = still; image.alt = alt;
-        button.setAttribute('aria-pressed', 'false');
-        button.textContent = 'Play moving image';
-      }
-    });
-  })();
+    (function () {
+      var items = document.querySelectorAll('[data-fade]');
+      if (!items.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
   </script>
+
+  {{ partial "core-nav.html" "Bottom" }}
 </body>
 </html>
