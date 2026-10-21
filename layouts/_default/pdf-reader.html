@@ -1,5 +1,7 @@
 {{ define "main" }}
 <style>
+  :root:has(.pdf-reader) { --bg: #111; --text: #f7f5f0; --muted: #b5b5b5; --rule: #505050; --link: #f7f5f0; --hover: #fff; color-scheme: dark; }
+  body:has(.pdf-reader) { background: var(--bg); color: var(--text); }
   .wrap:has(.pdf-reader) { max-width: 1240px; }
   .publication-heading { margin: 0 0 20px; }
   .publication-heading h2 { font-size: clamp(25px, 3vw, 34px); margin: 0 0 8px; }
@@ -8,7 +10,7 @@
   .pdf-reader button, .pdf-reader select, .pdf-reader input, .pdf-reader a { font-family: var(--mono); font-size: 12px; }
   .pdf-reader button, .pdf-reader select, .pdf-reader input { min-height: 44px; border: 1px solid var(--rule); border-radius: 0; padding: 9px 11px; background: transparent; color: inherit; }
   .pdf-reader button { cursor: pointer; }
-  .pdf-reader button:hover:not(:disabled) { background: #e9e6de; }
+  .pdf-reader button:hover:not(:disabled) { background: #292929; }
   .pdf-reader button:disabled { opacity: .35; cursor: default; }
   .pdf-reader :focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
   .reader-toolbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); align-items: center; }
@@ -16,7 +18,7 @@
   .reader-group label { font-family: var(--mono); font-size: 11px; }
   .reader-group input { width: 64px; }
   .reader-count { font-family: var(--mono); font-size: 12px; min-width: 102px; text-align: center; }
-  .reader-stage { height: min(78svh, 880px); min-height: 280px; overflow: auto; overscroll-behavior: contain; margin-top: 16px; background: #eae7df; touch-action: pan-x pan-y pinch-zoom; }
+  .reader-stage { height: min(78svh, 880px); min-height: 280px; overflow: auto; overscroll-behavior: contain; margin-top: 16px; background: #080808; touch-action: pan-x pan-y pinch-zoom; }
   .reader-pages { display: flex; align-items: center; justify-content: center; width: max-content; min-width: 100%; min-height: 100%; gap: 0; }
   .reader-pages canvas { flex: none; display: block; background: #fff; max-width: none; }
   .reader-status { min-height: 24px; font-family: var(--mono); color: var(--muted); font-size: 12px; margin: 12px 0; }
@@ -56,7 +58,7 @@
     </div>
   </div>
   <p id="pdf-status" class="reader-status" role="status" aria-live="polite">Loading the PDF…</p>
-  <div class="reader-stage" id="pdf-stage" aria-label="Publication pages" aria-busy="true"><div class="reader-pages" id="pdf-pages"></div></div>
+  <div class="reader-stage" id="pdf-stage" aria-label="PDF pages" aria-busy="true"><div class="reader-pages" id="pdf-pages"></div></div>
   <div class="reader-group">
     <a class="reader-original" id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">Open / download PDF ↗</a>
   </div>
