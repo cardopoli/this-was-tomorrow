@@ -62,8 +62,9 @@ async function startReader(root) {
       const ratio = Math.min(devicePixelRatio || 1, 2, Math.sqrt(8000000 / (css.width * css.height)));
       const view = page.getViewport({ scale: scale * ratio });
       const c = document.createElement('canvas');
-      c.width = Math.ceil(view.width); c.height = Math.ceil(view.height);
-      c.style.width = Math.round(css.width) + 'px'; c.style.height = Math.round(css.height) + 'px';
+      // round DOWN so no pixel sits half outside the page (that sliver showed as a pale line)
+      c.width = Math.floor(view.width); c.height = Math.floor(view.height);
+      c.style.width = (c.width / ratio) + 'px'; c.style.height = (c.height / ratio) + 'px';
       c.setAttribute('role', 'img'); c.setAttribute('aria-label', 'Page ' + n);
       await page.render({ canvasContext: c.getContext('2d'), viewport: view }).promise;
       return c;
