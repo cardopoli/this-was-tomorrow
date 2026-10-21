@@ -15,7 +15,7 @@
   .publication-heading h2 { font-size:18px; font-weight:400; margin:0; }
   .publication-heading p { font-size:13px; color:var(--muted); margin:8px 0 0; }
   .pdf-reader { background:var(--bg); color:var(--text); }
-  .pdf-reader button, .pdf-reader select, .pdf-reader input, .pdf-reader a, .reader-options summary { font-family:var(--sans); font-size:12px; }
+  .pdf-reader button, .pdf-reader select, .pdf-reader input, .pdf-reader a { font-family:var(--sans); font-size:12px; }
   .pdf-reader button, .pdf-reader select, .pdf-reader input { min-height:44px; border:0; border-radius:0; padding:8px; background:transparent; color:inherit; }
   .pdf-reader button, .reader-options summary { cursor:pointer; }
   .pdf-reader button:hover:not(:disabled), .reader-options summary:hover { color:#fff; }
@@ -26,14 +26,8 @@
   .reader-group label { font-size:12px; color:var(--muted); }
   .reader-group input { width:52px; border-bottom:1px solid var(--rule); }
   .reader-count { font-size:12px; min-width:80px; text-align:center; color:var(--muted); font-variant-numeric:tabular-nums; }
-  #pdf-prev, #pdf-next { width:44px; font-size:20px; font-weight:300; }
-  .reader-options { margin-left:auto; }
-  .reader-options summary { min-height:44px; display:flex; align-items:center; justify-content:flex-end; color:var(--muted); list-style:none; }
-  .reader-options summary::-webkit-details-marker { display:none; }
-  .reader-options summary::after { content:' +'; margin-left:6px; }
-  .reader-options[open] summary::after { content:' −'; }
-  .reader-options .reader-group { padding:4px 0 12px; justify-content:flex-end; }
-  .reader-stage { height:min(78svh,880px); min-height:280px; overflow:auto; overscroll-behavior:contain; margin-top:8px; background:var(--bg); touch-action:pan-x pan-y pinch-zoom; }
+  #pdf-prev, #pdf-next { min-width:44px; font-size:12px; font-weight:400; }
+  .reader-stage { height:82svh; min-height:280px; overflow:auto; overscroll-behavior:contain; margin-top:8px; background:var(--bg); touch-action:pan-x pan-y pinch-zoom; }
   .reader-pages { display:flex; align-items:center; justify-content:center; width:max-content; min-width:100%; min-height:100%; gap:0; }
   .reader-pages canvas { flex:none; display:block; background:#fff; max-width:none; }
   .reader-status { font-size:12px; color:var(--muted); margin:0; }
@@ -47,9 +41,7 @@
   @media(max-width:600px) {
     .wrap:has(.pdf-reader) .site-header { margin-bottom:24px; }
     .reader-toolbar { gap:4px; }
-    .reader-options[open] { width:100%; }
-    .reader-options .reader-group { justify-content:flex-start; gap:6px; }
-    .reader-stage { height:68svh; min-height:250px; }
+        .reader-stage { height:75svh; min-height:250px; }
   }
 </style>
 <div class="publication-heading">
@@ -59,11 +51,10 @@
 <section class="pdf-reader" id="pdf-reader" data-pdf-url="{{ .Params.pdf_url }}" aria-label="PDF reader" tabindex="0">
   <div class="reader-toolbar">
     <div class="reader-group">
-      <button type="button" id="pdf-prev" aria-label="Previous page" title="Previous page" disabled>←</button>
+      <button type="button" id="pdf-prev" aria-label="Previous page" title="Previous page" disabled>← Previous</button>
       <span class="reader-count" id="pdf-count">Loading…</span>
-      <button type="button" id="pdf-next" aria-label="Next page" title="Next page" disabled>→</button>
+      <button type="button" id="pdf-next" aria-label="Next page" title="Next page" disabled>Next →</button>
     </div>
-    <details class="reader-options"><summary>Options</summary>
     <div class="reader-group">
       <label for="pdf-page">Page</label>
       <input type="number" id="pdf-page" min="1" value="1" step="1" inputmode="numeric" disabled>
@@ -71,17 +62,16 @@
       <label for="pdf-layout">View</label>
       <select id="pdf-layout" disabled><option value="auto">Auto</option><option value="single">One page</option><option value="spread">Two pages</option></select>
       <label for="pdf-zoom">Zoom</label>
-      <select id="pdf-zoom" disabled><option value="1">Fit</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+      <select id="pdf-zoom" disabled><option value="1">Fill width</option><option value="page">Whole page</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
       <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
     </div>
-    </details>
   </div>
   <p id="pdf-status" class="reader-status" role="status" aria-live="polite">Loading the PDF…</p>
   <div class="reader-stage" id="pdf-stage" aria-label="PDF pages" aria-busy="true"><div class="reader-pages" id="pdf-pages"></div></div>
   <div class="reader-group">
     <a class="reader-original" id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">Download PDF ↗</a>
   </div>
-  <details class="reader-help"><summary>Reading help</summary><p class="reader-hint">Previous / next, arrow keys, or swipe at Fit zoom. Zoom in to read the detail. The original PDF is available for text selection and accessible reading.</p></details>
+  <details class="reader-help"><summary>Reading help</summary><p class="reader-hint">Previous / next, arrow keys, or swipe at Fill width. Scroll down for taller pages. Zoom in to read the detail. The original PDF is available for text selection and accessible reading.</p></details>
   <noscript><p>JavaScript is needed for the online reader. Use the PDF link above to read or download the file.</p></noscript>
 </section>
 <script type="module" src="{{ "JS/pdf-reader.mjs" | relURL }}"></script>
