@@ -12,6 +12,8 @@ Supported by Arts Council England.
 
 ## Downloads
 
+[Read the publication online →](/publication/)
+
 Press pack available for download [here](https://thiswastomorrow.co.uk/downloads/enrico_policardo_twt_press_pack.pdf)
 
 ## Contact
