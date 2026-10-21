@@ -115,7 +115,7 @@ async function startReader(root) {
     if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); current = e.key === 'Home' ? 1 : doc.numPages; render(); }
   });
   stage.addEventListener('touchstart', e => {
-    touchStart = e.touches.length === 1 && zoom.value === '1' ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null;
+    touchStart = e.touches.length === 1 && (zoom.value === '1' || zoom.value === 'page') ? { x: e.touches[0].clientX, y: e.touches[0].clientY } : null;
   }, { passive: true });
   stage.addEventListener('touchend', e => {
     if (!touchStart || !e.changedTouches.length) return;
