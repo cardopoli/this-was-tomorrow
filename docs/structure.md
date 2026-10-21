@@ -26,7 +26,7 @@ Keep the existing `static/JS/` capitalisation. URLs are case-sensitive. Keep pub
 
 The `exhibition` section deliberately publishes under `/audio/`; `hugo.toml` defines this. The old `/exhibition/` links are maintained through front matter aliases. This folder is not a duplicate audio website.
 
-Hugo copies everything in `static/` to the live site. Do not place new backups there. Save reference copies under `archive/`, or use Git history. Existing `studio_old.html` and `studio_backup.html` remain in place to preserve any external links; they are not indexed as active editors. `press_old.md` is also retained pending an explicit redirect migration.
+Hugo copies everything in `static/` to the live site. Do not place new backups there. Save reference copies under `archive/`, or use Git history. `studio_old.html` and `studio_backup.html` are now redirects to `studio.html`, kept only so old links still work. `/press_old/` is an alias on `press.md` that redirects to `/press/`. Tags and categories are switched off in `hugo.toml`. The `/readers/` list page is not rendered; each reader sets its own address.
 
 ## Layout conventions
 

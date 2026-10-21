@@ -1,5 +1,6 @@
 baseURL = "https://thiswastomorrow.co.uk/"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 languageCode = "en-gb"
 title = "This Was Tomorrow: Is This the Future We Were Dreaming Of?"
 

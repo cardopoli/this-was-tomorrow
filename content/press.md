@@ -2,6 +2,8 @@
 title: Press
 description: Press information and downloads for This Was Tomorrow by Enrico Policardo.
 layout: about
+aliases:
+  - /press_old/
 ---
 
 _This Was Tomorrow: Is This the Future We Were Dreaming Of?_ is a long-term audio-visual investigation by artist and photographer Enrico Policardo into community-led housing across the UK - cohousing, Community Land Trusts, cooperative living, retrofit and repair.
