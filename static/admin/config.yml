@@ -249,6 +249,18 @@ collections:
           - { name: layout, label: Layout, widget: hidden, default: map }
           - { name: body, label: Intro text, widget: markdown, required: false, hint: "Text shown above the map." }
 
+      - name: publication
+        label: Publication / PDF reader
+        file: content/publication.md
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: description, label: Meta description, widget: string, required: false }
+          - { name: intro, label: Short introduction, widget: string, required: false }
+          - { name: pdf_url, label: PDF file address, widget: string, hint: "A site path such as /downloads/THDVLPR_v03_small.pdf or a public Dropbox link to one PDF file. Folder links cannot be used. External hosts must allow the reader to load the PDF." }
+          - { name: layout, label: Layout, widget: hidden, default: pdf-reader }
+          - { name: slug, label: Slug, widget: hidden, default: publication }
+          - { name: aliases, label: Previous URLs, widget: list, required: false }
+
       - name: press
         label: Press
         file: content/press.md
