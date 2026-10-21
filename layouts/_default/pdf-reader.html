@@ -60,9 +60,9 @@
       <input type="number" id="pdf-page" min="1" value="1" step="1" inputmode="numeric" disabled>
       <button type="button" id="pdf-go" disabled>Go</button>
       <label for="pdf-layout">View</label>
-      <select id="pdf-layout" disabled><option value="auto">Auto</option><option value="single">One page</option><option value="spread">Two pages</option></select>
+      <select id="pdf-layout" disabled><option value="auto" selected>Auto · book</option><option value="single">One page</option><option value="spread">Two pages</option></select>
       <label for="pdf-zoom">Zoom</label>
-      <select id="pdf-zoom" disabled><option value="1">Fill width</option><option value="page">Whole page</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
+      <select id="pdf-zoom" disabled><option value="page" selected>Whole page</option><option value="1">Fill width</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
       <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
     </div>
   </div>
@@ -71,7 +71,7 @@
   <div class="reader-group">
     <a class="reader-original" id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">Download PDF ↗</a>
   </div>
-  <details class="reader-help"><summary>Reading help</summary><p class="reader-hint">Previous / next, arrow keys, or swipe at Fill width. Scroll down for taller pages. Zoom in to read the detail. The original PDF is available for text selection and accessible reading.</p></details>
+  <details class="reader-help"><summary>Reading help</summary><p class="reader-hint">Previous / next, arrow keys, or swipe at Whole page or Fill width. Zoom in to read the detail. The original PDF is available for text selection and accessible reading.</p></details>
   <noscript><p>JavaScript is needed for the online reader. Use the PDF link above to read or download the file.</p></noscript>
 </section>
 <script type="module" src="{{ "JS/pdf-reader.mjs" | relURL }}"></script>
