@@ -48,6 +48,11 @@
     .chrome a, .chrome button { pointer-events: auto; color: inherit; text-decoration: none; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 6px 0; }
     .chrome a:hover, .chrome button:hover { color: #fff; }
     .chrome .right { display: flex; gap: 22px; }
+    .crumbs { display: flex; align-items: center; gap: 10px; min-width: 0; white-space: nowrap; }
+    .crumbs i { font-style: normal; opacity: .45; }
+    .crumbs .here { color: rgba(236,235,231,.9); overflow: hidden; text-overflow: ellipsis; }
+    .crumbs .short { display: none; }
+    @media (max-width: 600px) { .crumbs .long { display: none; } .crumbs .short { display: inline; } #pdf-fullscreen { display: none; } }
     .reader.idle .chrome { opacity: 0; }
     .reader.idle .chrome a, .reader.idle .chrome button { pointer-events: none; }
     :focus-visible { outline: 1px solid rgba(236,235,231,.6); outline-offset: 4px; }
@@ -63,7 +68,11 @@
     <div class="stage" id="pdf-stage"><div class="pages waiting" id="pdf-pages"></div></div>
 
     <div class="chrome top">
-      <a href="/">{{ .Title }}</a>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/"><span class="long">This Was Tomorrow</span><span class="short">TWT</span></a><i>/</i>
+        <a href="/publications/">Publications</a><i>/</i>
+        <span class="here" aria-current="page">{{ .Title }}</span>
+      </nav>
       <div class="right">
         <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
         <a id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">PDF ↗</a>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ .Title }} · This Was Tomorrow</title>
+  {{- $desc := .Site.Params.description -}}{{- with .Params.description }}{{- $desc = . -}}{{- end }}
+  <meta name="description" content="{{ $desc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; background: #0e0e0e; color: #ecebe7; color-scheme: dark; }
+    body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    .top { display: flex; justify-content: space-between; align-items: center;
+           padding: max(18px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) 18px max(22px, env(safe-area-inset-left));
+           font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(236,235,231,.6); }
+    .top a { color: inherit; text-decoration: none; padding: 6px 0; }
+    .top a:hover { color: #fff; }
+    .crumbs { display: flex; gap: 10px; align-items: center; white-space: nowrap; }
+    .crumbs i { font-style: normal; opacity: .45; }
+    .crumbs .here { color: rgba(236,235,231,.9); }
+    .shelf { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 56px 40px;
+             max-width: 1240px; margin: 0 auto; padding: 8vh max(22px, env(safe-area-inset-left)) 12vh; }
+    .shelf a { display: block; color: inherit; text-decoration: none; }
+    .cover { aspect-ratio: 3 / 4; display: grid; place-items: center; background: #161616; overflow: hidden; }
+    .cover canvas, .cover img { display: block; max-width: 100%; max-height: 100%; transition: transform .4s ease, opacity .4s ease; }
+    .cover canvas { opacity: 0; }
+    .cover canvas.ready { opacity: 1; }
+    .shelf a:hover .cover canvas, .shelf a:hover .cover img { transform: scale(1.02); }
+    .name { margin-top: 16px; font-size: 15px; font-weight: 700; line-height: 1.25; }
+    .intro { margin-top: 6px; font-family: var(--mono); font-size: 11px; line-height: 1.6; color: rgba(236,235,231,.55); }
+    .shelf a:focus-visible { outline: 1px solid rgba(236,235,231,.6); outline-offset: 6px; }
+    @media (max-width: 560px) { .shelf { grid-template-columns: 1fr 1fr; gap: 40px 18px; } .name { font-size: 13px; } .intro { display: none; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">This Was Tomorrow</a><i>/</i><span class="here" aria-current="page">{{ .Title }}</span>
+    </nav>
+  </header>
+  <main>
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ .Title }}</h1>
+    <ul class="shelf">
+      {{ range (.Pages.ByWeight) }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <div class="cover" data-pdf="{{ .Params.pdf_url }}">
+              {{ with .Params.cover }}<img src="{{ . }}" alt="" loading="lazy">{{ end }}
+            </div>
+            <p class="name">{{ .Title }}</p>
+            {{ with .Params.intro }}<p class="intro">{{ . }}</p>{{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+  <script type="module">
+    // Draw each PDF's first page as its cover, only when it scrolls into view.
+    const ROOT = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.296/';
+    const boxes = [...document.querySelectorAll('.cover[data-pdf]')].filter(b => !b.querySelector('img') && b.dataset.pdf);
+    let lib;
+    const load = async () => lib ??= import(ROOT + 'build/pdf.min.mjs').then(m => { m.GlobalWorkerOptions.workerSrc = ROOT + 'build/pdf.worker.min.mjs'; return m; });
+    async function draw(box) {
+      try {
+        const pdfjs = await load();
+        const doc = await pdfjs.getDocument({ url: new URL(box.dataset.pdf, location.href).href, isEvalSupported: false, disableAutoFetch: true, disableStream: true, wasmUrl: ROOT + 'wasm/', standardFontDataUrl: ROOT + 'standard_fonts/' }).promise;
+        const page = await doc.getPage(1), base = page.getViewport({ scale: 1 });
+        const scale = Math.min(box.clientWidth / base.width, box.clientHeight / base.height) * Math.min(devicePixelRatio || 1, 2);
+        const view = page.getViewport({ scale }), c = document.createElement('canvas');
+        c.width = Math.ceil(view.width); c.height = Math.ceil(view.height);
+        await page.render({ canvasContext: c.getContext('2d'), viewport: view }).promise;
+        box.append(c); requestAnimationFrame(() => c.classList.add('ready'));
+        doc.destroy();
+      } catch (e) { console.warn('Cover could not be drawn', e); }
+    }
+    const watch = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { watch.unobserve(e.target); draw(e.target); } }), { rootMargin: '200px' });
+    boxes.forEach(b => watch.observe(b));
+  </script>
+</body>
+</html>
