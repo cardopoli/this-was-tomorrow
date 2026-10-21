@@ -1,79 +1,80 @@
-{{ define "main" }}
-<style>
-  :root:has(.pdf-reader) { --bg:#111; --text:#ecebe7; --muted:#aaa; --rule:#333; --link:#ecebe7; --hover:#fff; color-scheme:dark; }
-  body:has(.pdf-reader) { background:var(--bg); color:var(--text); }
-  .wrap:has(.pdf-reader) { max-width:1240px; padding-top:24px; }
-  .wrap:has(.pdf-reader) .site-header { margin-bottom:36px; padding-bottom:0; border:0; }
-  .wrap:has(.pdf-reader) .site-header h1 { font-size:18px; letter-spacing:0; line-height:1.3; }
-  .wrap:has(.pdf-reader) .tagline { display:none; }
-  .wrap:has(.pdf-reader) .tagline-row { margin-top:12px; }
-  .wrap:has(.pdf-reader) .header-nav { font-size:12px; }
-  .wrap:has(.pdf-reader) .footer-body { display:none; }
-  .wrap:has(.pdf-reader) .site-footer { margin-top:36px; }
-  .wrap:has(.pdf-reader) .footer-ace img { filter:invert(1); }
-  .publication-heading { margin:0 0 12px; }
-  .publication-heading h2 { font-size:18px; font-weight:400; margin:0; }
-  .publication-heading p { font-size:13px; color:var(--muted); margin:8px 0 0; }
-  .pdf-reader { position:relative; background:var(--bg); color:var(--text); }
-  .pdf-reader button, .pdf-reader select, .pdf-reader input, .pdf-reader a { font-family:var(--sans); font-size:12px; }
-  .pdf-reader button, .pdf-reader select, .pdf-reader input { min-height:44px; border:0; border-radius:0; padding:8px; background:transparent; color:inherit; }
-  .pdf-reader button, .reader-options summary { cursor:pointer; }
-  .pdf-reader button:hover:not(:disabled), .reader-options summary:hover { color:#fff; }
-  .pdf-reader button:disabled { opacity:.3; cursor:default; }
-  .pdf-reader :focus-visible { outline:1px solid var(--text); outline-offset:3px; }
-  .reader-toolbar { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center; }
-  .reader-group { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-  .reader-group label { font-size:12px; color:var(--muted); }
-  .reader-group input { width:52px; border-bottom:1px solid var(--rule); }
-  .reader-count { font-size:12px; min-width:80px; text-align:center; color:var(--muted); font-variant-numeric:tabular-nums; }
-  #pdf-prev, #pdf-next { min-width:44px; font-size:12px; font-weight:400; }
-  .reader-stage { height:82svh; min-height:280px; overflow:auto; overscroll-behavior:contain; margin-top:8px; background:var(--bg); touch-action:pan-x pan-y pinch-zoom; }
-  .reader-pages { display:flex; align-items:center; justify-content:center; width:max-content; min-width:100%; min-height:100%; gap:0; }
-  .reader-pages canvas { flex:none; display:block; background:#fff; max-width:none; }
-  .reader-status { position:absolute; top:100%; left:50%; transform:translateX(-50%); z-index:2; width:max-content; max-width:calc(100% - 24px); margin:8px 0 0; padding:6px 10px; background:var(--bg); color:var(--muted); font-size:12px; line-height:1.5; text-align:center; pointer-events:none; }
-  .reader-status:empty { visibility:hidden; }
-  .reader-toolbar { position:relative; }
-  .reader-original { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); text-decoration:none; }
-  .reader-help { margin-top:4px; color:var(--muted); font-size:12px; }
-  .reader-help summary { cursor:pointer; min-height:44px; display:flex; align-items:center; }
-  .reader-hint { font-size:12px; line-height:1.6; max-width:65ch; margin:0 0 16px; }
-  .pdf-reader:fullscreen { display:flex; flex-direction:column; padding:16px; overflow:auto; }
-  .pdf-reader:fullscreen .reader-stage { height:auto; flex:1; min-height:200px; }
-  @media(max-width:600px) {
-    .wrap:has(.pdf-reader) .site-header { margin-bottom:24px; }
-    .reader-toolbar { gap:4px; }
-        .reader-stage { height:75svh; min-height:250px; }
-  }
-</style>
-<div class="publication-heading">
-  <h2>{{ .Title }}</h2>
-  {{ with .Params.intro }}<p>{{ . }}</p>{{ end }}
-</div>
-<section class="pdf-reader" id="pdf-reader" data-pdf-url="{{ .Params.pdf_url }}" aria-label="PDF reader" tabindex="0">
-  <div class="reader-toolbar">
-    <div class="reader-group">
-      <button type="button" id="pdf-prev" aria-label="Previous page" title="Previous page" disabled>← Previous</button>
-      <span class="reader-count" id="pdf-count">Loading…</span>
-      <button type="button" id="pdf-next" aria-label="Next page" title="Next page" disabled>Next →</button>
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ .Title }} · This Was Tomorrow</title>
+  {{- $desc := .Site.Params.description -}}{{- with .Params.description }}{{- $desc = . -}}{{- end }}
+  <meta name="description" content="{{ $desc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.296/build/pdf.min.mjs" crossorigin>
+  {{/* site fonts only (--sans, --mono) */}}
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: #0e0e0e; color: #ecebe7; overflow: hidden; color-scheme: dark; }
+    body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+
+    /* the stage is the whole screen; pages sit in the middle of it */
+    .reader { position: fixed; inset: 0; outline: none; }
+    .stage { position: absolute; inset: 0; overflow: hidden; display: grid; place-items: center; touch-action: pan-y pinch-zoom; }
+    .stage.zoomed { overflow: auto; place-items: start; touch-action: auto; cursor: zoom-out; }
+    .pages { display: flex; justify-content: center; align-items: center; transition: opacity .25s ease; }
+    .stage.zoomed .pages { margin: auto; }
+    .pages canvas { display: block; background: #fff; flex: none; }
+    .pages.waiting { opacity: 0; }
+
+    /* invisible turning zones (desktop cursors only) */
+    @media (hover: hover) {
+      .stage[data-zone="prev"] { cursor: w-resize; }
+      .stage[data-zone="next"] { cursor: e-resize; }
+      .stage[data-zone="mid"]  { cursor: zoom-in; }
+      .reader.idle .stage:not(.zoomed) { cursor: none; }
+    }
+
+    /* the only furniture: three small lines of type, gone when you stop moving */
+    .chrome { position: absolute; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center;
+              padding: 18px max(22px, env(safe-area-inset-right)) 18px max(22px, env(safe-area-inset-left));
+              font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(236,235,231,.6);
+              transition: opacity .6s ease; pointer-events: none; z-index: 2; }
+    .chrome.top { top: 0; padding-top: max(18px, env(safe-area-inset-top)); }
+    .chrome.bottom { bottom: 0; justify-content: center; padding-bottom: max(18px, env(safe-area-inset-bottom)); font-variant-numeric: tabular-nums; }
+    .chrome a, .chrome button { pointer-events: auto; color: inherit; text-decoration: none; background: none; border: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 6px 0; }
+    .chrome a:hover, .chrome button:hover { color: #fff; }
+    .chrome .right { display: flex; gap: 22px; }
+    .reader.idle .chrome { opacity: 0; }
+    .reader.idle .chrome a, .reader.idle .chrome button { pointer-events: none; }
+    :focus-visible { outline: 1px solid rgba(236,235,231,.6); outline-offset: 4px; }
+
+    .fallback { position: absolute; inset: 0; display: none; place-items: center; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: rgba(236,235,231,.6); }
+    .fallback a { color: #ecebe7; }
+    .reader.failed .fallback { display: grid; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  </style>
+</head>
+<body>
+  <main class="reader" id="pdf-reader" data-pdf-url="{{ .Params.pdf_url }}" tabindex="0" aria-label="{{ .Title }} - use the arrow keys to turn pages">
+    <div class="stage" id="pdf-stage"><div class="pages waiting" id="pdf-pages"></div></div>
+
+    <div class="chrome top">
+      <a href="/">{{ .Title }}</a>
+      <div class="right">
+        <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
+        <a id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">PDF ↗</a>
+      </div>
     </div>
-    <div class="reader-group">
-      <label for="pdf-page">Page</label>
-      <input type="number" id="pdf-page" min="1" value="1" step="1" inputmode="numeric" disabled>
-      <button type="button" id="pdf-go" disabled>Go</button>
-      <label for="pdf-layout">View</label>
-      <select id="pdf-layout" disabled><option value="auto" selected>Auto · book</option><option value="single">One page</option><option value="spread">Two pages</option></select>
-      <label for="pdf-zoom">Zoom</label>
-      <select id="pdf-zoom" disabled><option value="page" selected>Whole page</option><option value="1">Fill width</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
-      <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
-    </div>
-    <p id="pdf-status" class="reader-status" role="status" aria-live="polite">Loading the PDF…</p>
-  </div>
-  <div class="reader-stage" id="pdf-stage" aria-label="PDF pages" aria-busy="true"><div class="reader-pages" id="pdf-pages"></div></div>
-  <div class="reader-group">
-    <a class="reader-original" id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">Download PDF ↗</a>
-  </div>
-  <details class="reader-help"><summary>Reading help</summary><p class="reader-hint">Previous / next, arrow keys, or swipe at Whole page or Fill width. Zoom in to read the detail. The original PDF is available for text selection and accessible reading.</p></details>
-  <noscript><p>JavaScript is needed for the online reader. Use the PDF link above to read or download the file.</p></noscript>
-</section>
-<script type="module" src="{{ "JS/pdf-reader.mjs" | relURL }}"></script>
-{{ end }}
+    <div class="chrome bottom"><span id="pdf-count" aria-hidden="true"></span></div>
+    <p class="sr" id="pdf-status" role="status" aria-live="polite"></p>
+
+    <div class="fallback"><p>This reader could not open the file.<br><br><a href="{{ .Params.pdf_url }}">Open the PDF ↗</a></p></div>
+    <noscript><div style="position:absolute;inset:0;display:grid;place-items:center"><a href="{{ .Params.pdf_url }}" style="color:#ecebe7">Open the PDF ↗</a></div></noscript>
+  </main>
+  <script type="module" src="{{ "JS/pdf-reader.mjs" | relURL }}"></script>
+</body>
+</html>
