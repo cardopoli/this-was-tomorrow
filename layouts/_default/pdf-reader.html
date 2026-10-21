@@ -14,7 +14,7 @@
   .publication-heading { margin:0 0 12px; }
   .publication-heading h2 { font-size:18px; font-weight:400; margin:0; }
   .publication-heading p { font-size:13px; color:var(--muted); margin:8px 0 0; }
-  .pdf-reader { background:var(--bg); color:var(--text); }
+  .pdf-reader { position:relative; background:var(--bg); color:var(--text); }
   .pdf-reader button, .pdf-reader select, .pdf-reader input, .pdf-reader a { font-family:var(--sans); font-size:12px; }
   .pdf-reader button, .pdf-reader select, .pdf-reader input { min-height:44px; border:0; border-radius:0; padding:8px; background:transparent; color:inherit; }
   .pdf-reader button, .reader-options summary { cursor:pointer; }
@@ -30,8 +30,9 @@
   .reader-stage { height:82svh; min-height:280px; overflow:auto; overscroll-behavior:contain; margin-top:8px; background:var(--bg); touch-action:pan-x pan-y pinch-zoom; }
   .reader-pages { display:flex; align-items:center; justify-content:center; width:max-content; min-width:100%; min-height:100%; gap:0; }
   .reader-pages canvas { flex:none; display:block; background:#fff; max-width:none; }
-  .reader-status { font-size:12px; color:var(--muted); margin:0; }
-  .reader-status:not(:empty) { padding:8px 0; }
+  .reader-status { position:absolute; top:100%; left:50%; transform:translateX(-50%); z-index:2; width:max-content; max-width:calc(100% - 24px); margin:8px 0 0; padding:6px 10px; background:var(--bg); color:var(--muted); font-size:12px; line-height:1.5; text-align:center; pointer-events:none; }
+  .reader-status:empty { visibility:hidden; }
+  .reader-toolbar { position:relative; }
   .reader-original { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); text-decoration:none; }
   .reader-help { margin-top:4px; color:var(--muted); font-size:12px; }
   .reader-help summary { cursor:pointer; min-height:44px; display:flex; align-items:center; }
@@ -65,8 +66,8 @@
       <select id="pdf-zoom" disabled><option value="page" selected>Whole page</option><option value="1">Fill width</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="2">200%</option></select>
       <button type="button" id="pdf-fullscreen" hidden>Full screen</button>
     </div>
+    <p id="pdf-status" class="reader-status" role="status" aria-live="polite">Loading the PDF…</p>
   </div>
-  <p id="pdf-status" class="reader-status" role="status" aria-live="polite">Loading the PDF…</p>
   <div class="reader-stage" id="pdf-stage" aria-label="PDF pages" aria-busy="true"><div class="reader-pages" id="pdf-pages"></div></div>
   <div class="reader-group">
     <a class="reader-original" id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">Download PDF ↗</a>
