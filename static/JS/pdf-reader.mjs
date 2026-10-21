@@ -61,7 +61,10 @@ async function startReader(root) {
       const baseViews = pdfPages.map(p => p.getViewport({ scale: 1 }));
       const totalWidth = baseViews.reduce((sum, v) => sum + v.width, 0);
       const maxHeight = Math.max(...baseViews.map(v => v.height));
-      const scale = Math.max(.1, Math.min((stage.clientWidth - 16) / totalWidth, (stage.clientHeight - 16) / maxHeight)) * Number(zoom.value);
+      const widthScale = stage.clientWidth / totalWidth;
+      const scale = zoom.value === 'page'
+        ? Math.max(.1, Math.min(widthScale, stage.clientHeight / maxHeight))
+        : Math.max(.1, widthScale) * Number(zoom.value);
       for (let i = 0; i < pdfPages.length; i++) {
         if (version !== generation) break;
         const page = pdfPages[i], cssView = page.getViewport({ scale });
