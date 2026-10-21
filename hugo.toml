@@ -20,3 +20,7 @@ title = "This Was Tomorrow: Is This the Future We Were Dreaming Of?"
 
 [permalinks.page]
   exhibition = "/audio/:slug/"
+
+# lets /manage/ show which commit the live site was built from
+[security.funcs]
+  getenv = ['^HUGO_', '^CI$', '^GITHUB_SHA$']

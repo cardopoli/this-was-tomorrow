@@ -10,6 +10,8 @@
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Params.cover }}<meta property="og:image" content="{{ . | absURL }}">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
