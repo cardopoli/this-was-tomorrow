@@ -7,5 +7,6 @@ layout: pdf-reader
 url: /thdvlpr
 aliases:
   - /flipbook/
+  - /readers/publication/
 draft: false
 ---
