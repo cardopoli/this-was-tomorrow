@@ -8,5 +8,6 @@ url: /thdvlpr
 aliases:
   - /flipbook/
   - /publication/
+  - /readers/publication/
 draft: false
 ---
