@@ -41,7 +41,7 @@ collections:
       - { name: intro, label: Short introduction, widget: string, required: false }
       - { name: pdf_url, label: PDF file address, widget: string, hint: "Site path such as /downloads/example.pdf or a public link to a single PDF. External hosts must allow cross-origin loading." }
       - { name: layout, label: Layout, widget: hidden, default: pdf-reader }
-      - { name: url, label: Public page address, widget: string, required: false, hint: "Leave blank for /readers/name/. Keep existing addresses to preserve links." }
+      - { name: url, label: Public page address, widget: string, required: false, pattern: ['^/[a-z0-9][a-z0-9/-]*$', 'Start with / and use only lowercase letters, numbers, hyphens and slashes - no spaces, capitals or ? marks.'], hint: "Optional. Leave blank and it becomes /publications/file-name/. Or type a short one like /publications/one-pager/ - keep existing addresses so old links still work." }
       - { name: cover, label: Cover image (optional), widget: image, required: false, hint: "Leave empty and the first page of the PDF is used." }
       - { name: weight, label: Order on Publications page, widget: number, value_type: int, required: false, hint: "Lower numbers come first. Leave blank to sort by title." }
       - { name: aliases, label: Previous URLs, widget: list, required: false }

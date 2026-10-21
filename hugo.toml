@@ -20,6 +20,7 @@ title = "This Was Tomorrow: Is This the Future We Were Dreaming Of?"
 
 [permalinks.page]
   exhibition = "/audio/:slug/"
+  readers = "/publications/:slug/"
 
 # lets /manage/ show which commit the live site was built from
 [security.funcs]
