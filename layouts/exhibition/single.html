@@ -56,6 +56,11 @@
     .content .twt-player-bar    { background: rgba(198,245,0,0.28) !important; height: 4px !important; }
     .content .twt-player-handle { width: 14px !important; height: 14px !important; }
 
+    .popout { display: inline-block; margin-bottom: 24px; padding: 10px 0; color: var(--fluo); background: transparent; border: 0; border-bottom: 1px solid var(--fluo); font: inherit; cursor: pointer; }
+    .popout[hidden], .popout-note[hidden] { display: none; }
+    .popout-note { font-family: var(--mono); font-size: 12px; line-height: 1.5; margin-bottom: 20px; }
+    body.is-popout .back, body.is-popout .pager { display: none; }
+
     /* ---- foot navigation: index (top), siblings + deep link (here) — one congruent set ---- */
     .full { display: inline-block; margin-top: 40px; font-family: var(--mono); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--fluo); opacity: 0.9; text-decoration: none; border-bottom: 1px solid rgba(198,245,0,0.4); padding-bottom: 3px; }
     .full:hover { opacity: 1; }
@@ -91,6 +96,9 @@
 
     {{ with .Params.cap }}<div class="cap">{{ . | markdownify }}</div>{{ end }}
 
+    <button class="popout" id="audio-popout" type="button" hidden>Open player in a separate window ↗</button>
+    <p class="popout-note" id="audio-popout-note" role="status" hidden></p>
+
     {{ .Content }}
 
     <footer>
@@ -112,6 +120,34 @@
   <script src="{{ "JS/supercharged.js" | relURL }}"></script>
   <script>
     (function () {
+      var launch = document.getElementById('audio-popout');
+      var note = document.getElementById('audio-popout-note');
+      if (new URLSearchParams(location.search).get('player') === 'popup') {
+        document.body.classList.add('is-popout');
+        note.hidden = false;
+        note.textContent = 'Press play, then keep this window open while you browse the site.';
+        // Keep navigation from replacing the playing document.
+        document.querySelectorAll('a[href]').forEach(function (link) {
+          link.target = '_blank';
+          link.rel = 'noopener';
+        });
+      } else {
+        launch.hidden = false;
+        launch.addEventListener('click', function () {
+          var url = new URL(location.href);
+          url.searchParams.set('player', 'popup');
+          var player = window.open(url.href, 'twtAudioPlayer', 'popup=yes,width=540,height=760,resizable=yes,scrollbars=yes');
+          note.hidden = false;
+          if (!player) {
+            note.textContent = 'Your browser blocked the player window. Allow pop-ups for this site and try again.';
+            return;
+          }
+          document.querySelectorAll('audio').forEach(function (audio) { audio.pause(); });
+          note.textContent = 'Player opened. Press play there, then browse here. It may open as a new tab on mobile.';
+          player.focus();
+        });
+      }
+
       function wire() {
         var au = document.querySelector('.content audio');
         var btn = document.querySelector('.content .twt-player-btn');
