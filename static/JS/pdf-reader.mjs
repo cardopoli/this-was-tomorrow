@@ -39,7 +39,8 @@ async function startReader(root) {
     current = visible[0];
     prev.disabled = busy || current === 1;
     next.disabled = busy || visible.at(-1) === doc.numPages;
-    jump.disabled = go.disabled = layout.disabled = zoom.disabled = false;
+    jump.disabled = go.disabled = busy;
+    layout.disabled = zoom.disabled = false;
     jump.max = String(doc.numPages); jump.value = String(current);
     count.textContent = (visible.length === 1 ? 'Page ' + current : 'Pages ' + visible.join('-')) + ' / ' + doc.numPages;
   }
