@@ -30,14 +30,18 @@ export function pageFromHash(hash) { const m = /^#page=(\d+)$/.exec(hash); retur
 
 async function startReader(root) {
   const $ = id => document.getElementById(id);
-  const stage = $('pdf-stage'), holder = $('pdf-pages'), count = $('pdf-count'), status = $('pdf-status'), full = $('pdf-fullscreen');
+  const stage = $('pdf-stage'), holder = $('pdf-pages'), count = $('pdf-count'), status = $('pdf-status'), full = $('pdf-fullscreen'), viewBtn = $('pdf-view');
   let doc, current = pageFromHash(location.hash), zoomed = false, generation = 0, idleTimer, resizeTimer;
   const sizes = new Map();          // page number -> unscaled viewport {width,height}
   const cache = new Map();          // "page@scale" -> Promise<canvas>
-  const wide = () => {
-    const w = innerWidth, h = innerHeight;
-    return w >= 760 && w / h > 1.1;  // two-page spreads on landscape screens
-  };
+  // Spreads by default (the PDFs are designed as spreads). Landscape always shows
+  // spreads; in portrait the reader can switch to single pages, remembered per device.
+  const VIEW_KEY = 'pdf-reader-view';
+  let view = 'spread';
+  try { if (localStorage.getItem(VIEW_KEY) === 'page') view = 'page'; } catch {}
+  const landscape = () => innerWidth / innerHeight > 1.1;
+  const wide = () => landscape() || view === 'spread';
+  const labelView = () => { if (viewBtn) { viewBtn.textContent = view === 'spread' ? 'Single page' : 'Spread'; viewBtn.setAttribute('aria-label', view === 'spread' ? 'Show one page at a time' : 'Show two-page spreads'); } };
 
   // ---- quiet furniture -------------------------------------------------------
   const wake = () => { root.classList.remove('idle'); clearTimeout(idleTimer); idleTimer = setTimeout(() => root.classList.add('idle'), IDLE_MS); };
@@ -145,6 +149,15 @@ async function startReader(root) {
     if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) { e.preventDefault(); turn(dx < 0 ? 1 : -1); }
   });
   addEventListener('mousemove', () => { if (!touch.matches) wake(); }, { passive: true });
+  if (viewBtn) {
+    labelView();
+    viewBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      view = view === 'spread' ? 'page' : 'spread';
+      try { localStorage.setItem(VIEW_KEY, view); } catch {}
+      labelView(); zoomed = false; stage.classList.remove('zoomed'); show(); wake();
+    });
+  }
   root.addEventListener('keydown', e => {
     if (!doc || e.ctrlKey || e.altKey || e.metaKey) return;
     const k = e.key;
