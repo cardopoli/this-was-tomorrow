@@ -39,7 +39,11 @@ async function startReader(root) {
   const VIEW_KEY = 'pdf-reader-view';
   let view = 'spread';
   try { if (localStorage.getItem(VIEW_KEY) === 'page') view = 'page'; } catch {}
-  const landscape = () => innerWidth / innerHeight > 1.1;
+  const vw = () => document.documentElement.clientWidth || innerWidth;
+  const vh = () => document.documentElement.clientHeight || innerHeight;
+  // how far the reader has pinched in (1 = not zoomed); used to redraw pages sharp
+  const pinch = () => Math.max(1, Math.min((window.visualViewport && visualViewport.scale) || 1, 4));
+  const landscape = () => vw() / vh() > 1.1;
   const wide = () => landscape() || view === 'spread';
   const labelView = () => { if (viewBtn) { viewBtn.textContent = view === 'spread' ? 'Single page' : 'Spread'; viewBtn.setAttribute('aria-label', view === 'spread' ? 'Show one page at a time' : 'Show two-page spreads'); } };
 
@@ -55,15 +59,16 @@ async function startReader(root) {
   async function scaleFor(numbers) {
     const views = await Promise.all(numbers.map(size));
     const w = views.reduce((s, v) => s + v.width, 0), h = Math.max(...views.map(v => v.height));
-    const fit = Math.min(innerWidth * (1 - MARGIN * 2) / w, innerHeight * (1 - MARGIN * 3) / h);
+    const fit = Math.min(vw() * (1 - MARGIN * 2) / w, vh() * (1 - MARGIN * 3) / h);
     return Math.max(0.1, fit * (zoomed ? ZOOM : 1));
   }
-  function draw(n, scale) {
+  function draw(n, scale, boost = 1) {
     const key = n + '@' + scale.toFixed(4);
-    if (cache.has(key)) { const hit = cache.get(key); cache.delete(key); cache.set(key, hit); return hit; }
+    if (boost === 1 && cache.has(key)) { const hit = cache.get(key); cache.delete(key); cache.set(key, hit); return hit; }
     const job = (async () => {
       const page = await doc.getPage(n), css = page.getViewport({ scale });
-      const ratio = Math.min(devicePixelRatio || 1, 2, Math.sqrt(8000000 / (css.width * css.height)));
+      // enough pixels for the screen and the current pinch, within what phones allow per canvas
+      const ratio = Math.min((devicePixelRatio || 1) * boost, Math.sqrt(16000000 / (css.width * css.height)));
       const view = page.getViewport({ scale: scale * ratio });
       const c = document.createElement('canvas');
       // round DOWN so no pixel sits half outside the page (that sliver showed as a pale line)
@@ -71,8 +76,10 @@ async function startReader(root) {
       c.style.width = (c.width / ratio) + 'px'; c.style.height = (c.height / ratio) + 'px';
       c.setAttribute('role', 'img'); c.setAttribute('aria-label', 'Page ' + n);
       await page.render({ canvasContext: c.getContext('2d'), viewport: view }).promise;
+      if (boost > 1) c.dataset.boosted = '1';
       return c;
     })();
+    if (boost > 1) return job;
     cache.set(key, job);
     job.catch(() => cache.delete(key));
     while (cache.size > CACHE_MAX) {
@@ -81,25 +88,27 @@ async function startReader(root) {
     }
     return job;
   }
-  async function prepare(first) {
+  async function prepare(first, boost = 1) {
     const numbers = visiblePages(first, doc.numPages, wide()), scale = await scaleFor(numbers);
-    return Promise.all(numbers.map(n => draw(n, scale)));
+    return Promise.all(numbers.map(n => draw(n, scale, boost)));
   }
 
-  async function show(focus) {
+  async function show(focus, sharpen = false) {
     if (!doc) return;
-    const version = ++generation, spread = wide();
+    const version = ++generation, spread = wide(), boost = pinch();
     const numbers = visiblePages(current, doc.numPages, spread);
     current = numbers[0];
     try {
-      const canvases = await prepare(current);
+      const canvases = await prepare(current, boost);
       if (version !== generation) return;
-      // the same canvas cannot sit in two places; clone if a spread repeats one
+      const old = [...holder.querySelectorAll('canvas[data-boosted]')];
       holder.replaceChildren(...canvases);
+      old.forEach(c => { if (!c.isConnected) c.width = c.height = 0; });   // free big pinch-zoom canvases
       holder.classList.remove('waiting');
+      if (sharpen) return;   // same page, just redrawn sharper: leave scroll and position alone
       if (zoomed && focus) {
-        stage.scrollLeft = focus.x * stage.scrollWidth - innerWidth / 2;
-        stage.scrollTop = focus.y * stage.scrollHeight - innerHeight / 2;
+        stage.scrollLeft = focus.x * stage.scrollWidth - vw() / 2;
+        stage.scrollTop = focus.y * stage.scrollHeight - vh() / 2;
       } else { stage.scrollLeft = stage.scrollTop = 0; }
       const label = (numbers.length > 1 ? numbers.join('-') : numbers[0]) + ' / ' + doc.numPages;
       count.textContent = label; status.textContent = 'Page ' + label;
@@ -134,6 +143,7 @@ async function startReader(root) {
   const touch = matchMedia('(hover: none)');
   stage.addEventListener('mousemove', e => { stage.dataset.zone = zoomed ? '' : zone(e.clientX); });
   stage.addEventListener('click', e => {
+    if (pinch() > 1.05) return;
     if (zoomed) { toggleZoom(); return; }
     const z = zone(e.clientX);
     if (z === 'prev') turn(-1);
@@ -170,7 +180,12 @@ async function startReader(root) {
     else return;
     wake();
   });
-  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { cache.clear(); show(); }, 160); });
+  let laidOut = vw() + 'x' + vh(), drawnBoost = 1, pinchTimer;
+  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { const now = vw() + 'x' + vh(); if (now === laidOut) return; laidOut = now; cache.clear(); show(); }, 160); });
+  if (window.visualViewport) visualViewport.addEventListener('resize', () => {
+    clearTimeout(pinchTimer);
+    pinchTimer = setTimeout(() => { const b = pinch(); if (Math.abs(b - drawnBoost) < 0.2) return; drawnBoost = b; show(null, true); }, 250);
+  });
   addEventListener('hashchange', () => { const p = pageFromHash(location.hash); if (doc && p !== current) { current = p; show(); } });
 
   if (root.requestFullscreen && document.fullscreenEnabled) {
