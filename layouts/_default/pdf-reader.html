@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background: #0e0e0e; color: #ecebe7; overflow: hidden; color-scheme: dark; }
+    html, body { height: 100%; background: #0e0e0e; color: #ecebe7; overflow: hidden; color-scheme: dark; touch-action: pan-x pan-y; }   /* no browser zoom: the reader zooms */
     body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 
     /* the stage is the whole screen; pages sit in the middle of it */
@@ -58,6 +58,26 @@
     /* the Spread / Single page switch only matters in portrait - landscape always shows spreads */
     @media (orientation: landscape) { .view-toggle { display: none; } }
     @media (max-width: 600px) { .crumbs .long { display: none; } .crumbs .short { display: inline; } #pdf-fullscreen { display: none; } }
+    .bar { display: flex; align-items: center; gap: 18px; pointer-events: auto; }
+    .tbtn { width: 32px; height: 32px; display: grid !important; place-items: center; padding: 0 !important; }
+    .tbtn svg { width: 18px; height: 18px; }
+    .tbtn:disabled { opacity: .3; cursor: default; }
+    .sep { width: 1px; height: 18px; background: rgba(236,235,231,.18); }
+    .touch-only { display: none; }
+    /* phones and tablets: controls stay put in a small dark pill you can always see and hit */
+    @media (hover: none) {
+      .touch-only { display: block; }
+      .chrome { color: #ecebe7; }
+      .chrome.top { background: linear-gradient(rgba(14,14,14,.8), rgba(14,14,14,0)); padding-bottom: 28px; }
+      .chrome.bottom { padding-left: 10px; padding-right: 10px; }
+      .bar { gap: 0; padding: 2px 6px; border-radius: 999px; white-space: nowrap; max-width: 100%; background: rgba(14,14,14,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border: 1px solid rgba(236,235,231,.14); font-size: 11px; }
+      .tbtn { width: 44px; height: 44px; }
+      .tbtn svg { width: 20px; height: 20px; }
+      #pdf-count { padding: 0 2px; min-width: 62px; text-align: center; letter-spacing: .5px; }
+      .view-toggle { padding: 0 10px 0 8px !important; min-height: 44px; }
+      .sep { margin: 0 4px; }
+    }
+    @media (hover: none) and (max-width: 380px) { .tbtn { width: 38px; height: 44px; } .bar { padding: 2px 2px; } #pdf-count { min-width: 54px; letter-spacing: 0; } .view-toggle { letter-spacing: .5px; padding: 0 8px 0 4px !important; } .sep { margin: 0 2px; } }
     .reader.idle .chrome { opacity: 0; }
     .reader.idle .chrome a, .reader.idle .chrome button { pointer-events: none; }
     :focus-visible { outline: 1px solid rgba(236,235,231,.6); outline-offset: 4px; }
@@ -83,7 +103,15 @@
         <a id="pdf-original" href="{{ .Params.pdf_url }}" target="_blank" rel="noopener">PDF ↗</a>
       </div>
     </div>
-    <div class="chrome bottom"><span id="pdf-count" aria-hidden="true"></span><button type="button" id="pdf-view" class="view-toggle">Single page</button></div>
+    <div class="chrome bottom"><div class="bar">
+      <button type="button" id="pdf-prev" class="tbtn" aria-label="Previous pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <span id="pdf-count" aria-hidden="true"></span>
+      <button type="button" id="pdf-next" class="tbtn" aria-label="Next pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <span class="sep touch-only" aria-hidden="true"></span>
+      <button type="button" id="pdf-zoom-out" class="tbtn touch-only" aria-label="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <button type="button" id="pdf-zoom-in" class="tbtn touch-only" aria-label="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12M12 6v12" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <button type="button" id="pdf-view" class="view-toggle">Single</button>
+    </div></div>
     <p class="sr" id="pdf-status" role="status" aria-live="polite"></p>
 
     <div class="fallback"><p>This reader could not open the file.<br><br><a href="{{ .Params.pdf_url }}">Open the PDF ↗</a></p></div>

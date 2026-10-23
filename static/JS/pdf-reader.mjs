@@ -30,6 +30,7 @@ export function pageFromHash(hash) { const m = /^#page=(\d+)$/.exec(hash); retur
 
 async function startReader(root) {
   const $ = id => document.getElementById(id);
+  const prevBtn = $('pdf-prev'), nextBtn = $('pdf-next'), zoomOutBtn = $('pdf-zoom-out'), zoomInBtn = $('pdf-zoom-in');
   const stage = $('pdf-stage'), holder = $('pdf-pages'), count = $('pdf-count'), status = $('pdf-status'), full = $('pdf-fullscreen'), viewBtn = $('pdf-view');
   let doc, current = pageFromHash(location.hash), zoom = 1, generation = 0, idleTimer, resizeTimer;
   const zoomedIn = () => zoom > 1.01;
@@ -46,10 +47,12 @@ async function startReader(root) {
   const pinch = () => Math.max(1, Math.min((window.visualViewport && visualViewport.scale) || 1, 4));
   const landscape = () => vw() / vh() > 1.1;
   const wide = () => landscape() || view === 'spread';
-  const labelView = () => { if (viewBtn) { viewBtn.textContent = view === 'spread' ? 'Single page' : 'Spread'; viewBtn.setAttribute('aria-label', view === 'spread' ? 'Show one page at a time' : 'Show two-page spreads'); } };
+  const labelView = () => { if (viewBtn) { viewBtn.textContent = view === 'spread' ? 'Single' : 'Spread'; viewBtn.setAttribute('aria-label', view === 'spread' ? 'Show one page at a time' : 'Show two-page spreads'); } };
 
   // ---- quiet furniture -------------------------------------------------------
-  const wake = () => { root.classList.remove('idle'); clearTimeout(idleTimer); idleTimer = setTimeout(() => root.classList.add('idle'), IDLE_MS); };
+  const touchUI = matchMedia('(hover: none)');
+  // desktop: labels fade after a moment. phones: controls stay until you tap the page to hide them
+  const wake = () => { root.classList.remove('idle'); clearTimeout(idleTimer); if (!touchUI.matches) idleTimer = setTimeout(() => root.classList.add('idle'), IDLE_MS); };
   const hush = () => { clearTimeout(idleTimer); root.classList.add('idle'); };
 
   // ---- drawing ---------------------------------------------------------------
@@ -69,7 +72,7 @@ async function startReader(root) {
     const job = (async () => {
       const page = await doc.getPage(n), css = page.getViewport({ scale });
       // enough pixels for the screen and the current pinch, within what phones allow per canvas
-      const ratio = Math.min((devicePixelRatio || 1) * boost, Math.sqrt(16000000 / (css.width * css.height)));
+      const ratio = Math.min((devicePixelRatio || 1) * boost, Math.sqrt((touchUI.matches ? 8e6 : 16e6) / (css.width * css.height)));
       const view = page.getViewport({ scale: scale * ratio });
       const c = document.createElement('canvas');
       // round DOWN so no pixel sits half outside the page (that sliver showed as a pale line)
@@ -114,7 +117,9 @@ async function startReader(root) {
         stage.scrollTop = holder.offsetTop + focus.fy * holder.offsetHeight - focus.sy;
       } else { stage.scrollLeft = stage.scrollTop = 0; }
       const label = (numbers.length > 1 ? numbers.join('-') : numbers[0]) + ' / ' + doc.numPages;
-      count.textContent = label; status.textContent = 'Page ' + label;
+      count.textContent = (numbers.length > 1 ? numbers.join('-') : numbers[0]) + '/' + doc.numPages + (zoomedIn() ? ' ' + (Math.round(zoom * 10) / 10) + '×' : '');
+      if (prevBtn) { prevBtn.disabled = current === 1; nextBtn.disabled = numbers.at(-1) === doc.numPages; }
+      if (zoomOutBtn) { zoomOutBtn.disabled = !zoomedIn(); zoomInBtn.disabled = zoom >= MAX_ZOOM; } status.textContent = 'Page ' + label;
       history.replaceState(null, '', '#page=' + current);
       // quietly get the neighbours ready
       if (!zoomedIn()) {
@@ -154,7 +159,8 @@ async function startReader(root) {
   stage.addEventListener('mousemove', e => { stage.dataset.zone = zoomedIn() ? '' : zone(e.clientX); });
   stage.addEventListener('click', e => {
     if (pinch() > 1.05 || Date.now() < quietUntil) return;
-    if (zoomedIn()) { if (!touch.matches) toggleZoom(); return; }   // on phones, taps while zoomed just pan
+    if (touch.matches) { root.classList.contains('idle') ? wake() : hush(); return; }   // phones: a tap shows / hides the controls
+    if (zoomedIn()) { toggleZoom(); return; }
     const z = zone(e.clientX);
     if (z === 'prev') turn(-1);
     else if (z === 'next') turn(1);
@@ -200,6 +206,12 @@ async function startReader(root) {
       } else lastTap = { x: t.clientX, y: t.clientY, t: now };
     }
   });
+  // ---- the visible buttons
+  const tap = (el, fn) => el && el.addEventListener('click', e => { e.stopPropagation(); fn(); wake(); });
+  tap(prevBtn, () => turn(-1)); tap(nextBtn, () => turn(1));
+  tap(zoomInBtn, () => setZoom(zoom * 2)); tap(zoomOutBtn, () => setZoom(zoom / 2));
+  // iPhone Safari runs its own pinch zoom on top of ours unless told not to
+  for (const g of ['gesturestart', 'gesturechange', 'gestureend']) document.addEventListener(g, e => e.preventDefault(), { passive: false });
   // ---- trackpad pinch / ctrl + scroll on desktop
   let wheel = null, wheelTimer;
   stage.addEventListener('wheel', e => {
