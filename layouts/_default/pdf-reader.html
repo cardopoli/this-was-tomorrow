@@ -25,9 +25,9 @@
 
     /* the stage is the whole screen; pages sit in the middle of it */
     .reader { position: fixed; inset: 0; outline: none; }
-    .stage { position: absolute; inset: 0; overflow: hidden; display: grid; place-items: center; touch-action: pan-y pinch-zoom; }
-    .stage.zoomed { overflow: auto; place-items: start; touch-action: auto; cursor: zoom-out; }
-    .pages { display: flex; justify-content: center; align-items: center; transition: opacity .25s ease; }
+    .stage { position: absolute; inset: 0; overflow: hidden; display: grid; place-items: center; touch-action: pan-x pan-y; }   /* pinch is handled by the reader, so it can redraw sharp */
+    .stage.zoomed { overflow: auto; place-items: start; touch-action: pan-x pan-y; cursor: zoom-out; -webkit-overflow-scrolling: touch; }
+    .pages { display: flex; justify-content: center; align-items: center; transition: opacity .25s ease; will-change: transform; }
     .stage.zoomed .pages { margin: auto; }
     .pages canvas { display: block; flex: none; }
     .pages.waiting { opacity: 0; }

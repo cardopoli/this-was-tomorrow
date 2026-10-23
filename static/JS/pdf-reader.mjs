@@ -2,7 +2,7 @@
 // fade away when you stop moving. Neighbouring pages are drawn in advance so
 // turning is instant.
 const PDFJS_ROOT = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.296/';
-const IDLE_MS = 2200, MARGIN = 0.04, ZOOM = 2.2, CACHE_MAX = 10;
+const IDLE_MS = 2200, MARGIN = 0.04, ZOOM = 2.5, MAX_ZOOM = 8, CACHE_MAX = 10;
 
 export function normaliseSource(raw, base) {
   const url = new URL(String(raw || '').trim(), base);
@@ -31,7 +31,8 @@ export function pageFromHash(hash) { const m = /^#page=(\d+)$/.exec(hash); retur
 async function startReader(root) {
   const $ = id => document.getElementById(id);
   const stage = $('pdf-stage'), holder = $('pdf-pages'), count = $('pdf-count'), status = $('pdf-status'), full = $('pdf-fullscreen'), viewBtn = $('pdf-view');
-  let doc, current = pageFromHash(location.hash), zoomed = false, generation = 0, idleTimer, resizeTimer;
+  let doc, current = pageFromHash(location.hash), zoom = 1, generation = 0, idleTimer, resizeTimer;
+  const zoomedIn = () => zoom > 1.01;
   const sizes = new Map();          // page number -> unscaled viewport {width,height}
   const cache = new Map();          // "page@scale" -> Promise<canvas>
   // Spreads by default (the PDFs are designed as spreads). Landscape always shows
@@ -60,11 +61,11 @@ async function startReader(root) {
     const views = await Promise.all(numbers.map(size));
     const w = views.reduce((s, v) => s + v.width, 0), h = Math.max(...views.map(v => v.height));
     const fit = Math.min(vw() * (1 - MARGIN * 2) / w, vh() * (1 - MARGIN * 3) / h);
-    return Math.max(0.1, fit * (zoomed ? ZOOM : 1));
+    return Math.max(0.1, fit * zoom);
   }
   function draw(n, scale, boost = 1) {
-    const key = n + '@' + scale.toFixed(4);
-    if (boost === 1 && cache.has(key)) { const hit = cache.get(key); cache.delete(key); cache.set(key, hit); return hit; }
+    const key = n + '@' + scale.toFixed(4), big = boost > 1 || zoomedIn();
+    if (!big && cache.has(key)) { const hit = cache.get(key); cache.delete(key); cache.set(key, hit); return hit; }
     const job = (async () => {
       const page = await doc.getPage(n), css = page.getViewport({ scale });
       // enough pixels for the screen and the current pinch, within what phones allow per canvas
@@ -76,10 +77,10 @@ async function startReader(root) {
       c.style.width = (c.width / ratio) + 'px'; c.style.height = (c.height / ratio) + 'px';
       c.setAttribute('role', 'img'); c.setAttribute('aria-label', 'Page ' + n);
       await page.render({ canvasContext: c.getContext('2d'), viewport: view }).promise;
-      if (boost > 1) c.dataset.boosted = '1';
+      if (big) c.dataset.boosted = '1';
       return c;
     })();
-    if (boost > 1) return job;
+    if (big) return job;
     cache.set(key, job);
     job.catch(() => cache.delete(key));
     while (cache.size > CACHE_MAX) {
@@ -103,18 +104,20 @@ async function startReader(root) {
       if (version !== generation) return;
       const old = [...holder.querySelectorAll('canvas[data-boosted]')];
       holder.replaceChildren(...canvases);
+      holder.style.transform = holder.style.transformOrigin = '';   // drop the pinch preview now the sharp page is in
       old.forEach(c => { if (!c.isConnected) c.width = c.height = 0; });   // free big pinch-zoom canvases
       holder.classList.remove('waiting');
       if (sharpen) return;   // same page, just redrawn sharper: leave scroll and position alone
-      if (zoomed && focus) {
-        stage.scrollLeft = focus.x * stage.scrollWidth - vw() / 2;
-        stage.scrollTop = focus.y * stage.scrollHeight - vh() / 2;
+      if (zoomedIn() && focus) {
+        // keep the point under the fingers (or the click) where it was
+        stage.scrollLeft = holder.offsetLeft + focus.fx * holder.offsetWidth - focus.sx;
+        stage.scrollTop = holder.offsetTop + focus.fy * holder.offsetHeight - focus.sy;
       } else { stage.scrollLeft = stage.scrollTop = 0; }
       const label = (numbers.length > 1 ? numbers.join('-') : numbers[0]) + ' / ' + doc.numPages;
       count.textContent = label; status.textContent = 'Page ' + label;
       history.replaceState(null, '', '#page=' + current);
       // quietly get the neighbours ready
-      if (!zoomed) {
+      if (!zoomedIn()) {
         const ahead = nextPage(current, doc.numPages, spread), behind = previousPage(current, doc.numPages, spread);
         setTimeout(() => { if (version === generation) { prepare(ahead).catch(() => {}); if (behind !== current) prepare(behind).catch(() => {}); } }, 120);
       }
@@ -127,37 +130,87 @@ async function startReader(root) {
     if (!doc) return;
     const spread = wide(), target = direction > 0 ? nextPage(current, doc.numPages, spread) : previousPage(current, doc.numPages, spread);
     if (target === current) return;
-    if (zoomed) zoomed = false, stage.classList.remove('zoomed');
+    zoom = 1; stage.classList.remove('zoomed');
     current = target; show();
   }
-  function toggleZoom(event) {
+  // zoom to z (1 = whole page fits) keeping screen point (sx, sy) fixed; `box` = page rect before any preview
+  function setZoom(z, sx = vw() / 2, sy = vh() / 2, box = holder.getBoundingClientRect()) {
     if (!doc) return;
-    let focus = { x: .5, y: .5 };
-    const box = holder.getBoundingClientRect();
-    if (event && box.width) focus = { x: (event.clientX - box.left) / box.width, y: (event.clientY - box.top) / box.height };
-    zoomed = !zoomed; stage.classList.toggle('zoomed', zoomed); if (zoomed) hush(); show(focus);
+    z = Math.max(1, Math.min(MAX_ZOOM, z));
+    const clamp01 = v => Math.max(0, Math.min(1, v));
+    const focus = { fx: box.width ? clamp01((sx - box.left) / box.width) : .5, fy: box.height ? clamp01((sy - box.top) / box.height) : .5, sx, sy };
+    zoom = z < 1.03 ? 1 : z;
+    stage.classList.toggle('zoomed', zoomedIn()); if (zoomedIn()) hush();
+    show(focus);
   }
+  function toggleZoom(event) { setZoom(zoomedIn() ? 1 : ZOOM, event?.clientX, event?.clientY); }
+  // live preview while pinching or wheel-zooming: scale what is there, redraw sharp when the gesture ends
+  function preview(k, sx, sy, box) { holder.style.transformOrigin = `${sx - box.left}px ${sy - box.top}px`; holder.style.transform = `scale(${k})`; }
 
   // ---- input -----------------------------------------------------------------
   const zone = x => x < innerWidth * 0.38 ? 'prev' : x > innerWidth * 0.62 ? 'next' : 'mid';
   const touch = matchMedia('(hover: none)');
-  stage.addEventListener('mousemove', e => { stage.dataset.zone = zoomed ? '' : zone(e.clientX); });
+  let quietUntil = 0;   // swallow the click a touch gesture leaves behind
+  stage.addEventListener('mousemove', e => { stage.dataset.zone = zoomedIn() ? '' : zone(e.clientX); });
   stage.addEventListener('click', e => {
-    if (pinch() > 1.05) return;
-    if (zoomed) { toggleZoom(); return; }
+    if (pinch() > 1.05 || Date.now() < quietUntil) return;
+    if (zoomedIn()) { if (!touch.matches) toggleZoom(); return; }   // on phones, taps while zoomed just pan
     const z = zone(e.clientX);
     if (z === 'prev') turn(-1);
     else if (z === 'next') turn(1);
     else if (touch.matches) { root.classList.contains('idle') ? wake() : hush(); }
     else toggleZoom(e);
   });
-  let start;
-  stage.addEventListener('touchstart', e => { start = !zoomed && e.touches.length === 1 && (visualViewport?.scale ?? 1) <= 1.01 ? { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() } : null; }, { passive: true });
+  // ---- touch: swipe to turn, pinch to zoom (up to 8x), double-tap to zoom in / out
+  let start = null, gesture = null, lastTap = null;
+  const dist = (a, b) => Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
+  stage.addEventListener('touchstart', e => {
+    if (e.touches.length === 2) {
+      const [a, b] = e.touches;
+      gesture = { d0: dist(a, b) || 1, sx: (a.clientX + b.clientX) / 2, sy: (a.clientY + b.clientY) / 2, z0: zoom, k: 1, box: holder.getBoundingClientRect() };
+      start = null; return;
+    }
+    if (e.touches.length === 1 && !gesture) start = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
+  }, { passive: true });
+  stage.addEventListener('touchmove', e => {
+    if (!gesture || e.touches.length < 2) return;
+    e.preventDefault();
+    const [a, b] = e.touches, z = Math.max(1, Math.min(MAX_ZOOM, gesture.z0 * dist(a, b) / gesture.d0));
+    gesture.k = z / gesture.z0;
+    preview(gesture.k, gesture.sx, gesture.sy, gesture.box);
+  }, { passive: false });
   stage.addEventListener('touchend', e => {
+    if (gesture) {
+      if (e.touches.length < 2) {
+        const g = gesture; gesture = null; quietUntil = Date.now() + 400;
+        if (Math.abs(g.k - 1) > 0.02) setZoom(g.z0 * g.k, g.sx, g.sy, g.box); else holder.style.transform = '';
+      }
+      return;
+    }
     if (!start || !e.changedTouches.length) return;
-    const dx = e.changedTouches[0].clientX - start.x, dy = e.changedTouches[0].clientY - start.y; start = null;
-    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) { e.preventDefault(); turn(dx < 0 ? 1 : -1); }
+    const t = e.changedTouches[0], dx = t.clientX - start.x, dy = t.clientY - start.y, quick = Date.now() - start.t < 260;
+    start = null;
+    if (!zoomedIn() && Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) { e.preventDefault(); turn(dx < 0 ? 1 : -1); return; }
+    if (quick && Math.abs(dx) < 12 && Math.abs(dy) < 12) {
+      const now = Date.now();
+      // double-tap: zoom in where you tapped (middle of the screen) or back out (anywhere, when zoomed)
+      if (lastTap && now - lastTap.t < 320 && Math.hypot(t.clientX - lastTap.x, t.clientY - lastTap.y) < 40 && (zoomedIn() || zone(t.clientX) === 'mid')) {
+        lastTap = null; quietUntil = now + 400; e.preventDefault();
+        setZoom(zoomedIn() ? 1 : ZOOM, t.clientX, t.clientY);
+      } else lastTap = { x: t.clientX, y: t.clientY, t: now };
+    }
   });
+  // ---- trackpad pinch / ctrl + scroll on desktop
+  let wheel = null, wheelTimer;
+  stage.addEventListener('wheel', e => {
+    if (!e.ctrlKey) return;
+    e.preventDefault();
+    if (!wheel) wheel = { z0: zoom, k: 1, sx: e.clientX, sy: e.clientY, box: holder.getBoundingClientRect() };
+    wheel.k = Math.max(1 / wheel.z0, Math.min(MAX_ZOOM / wheel.z0, wheel.k * Math.exp(-e.deltaY * 0.01)));
+    preview(wheel.k, wheel.sx, wheel.sy, wheel.box);
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(() => { const w = wheel; wheel = null; setZoom(w.z0 * w.k, w.sx, w.sy, w.box); }, 180);
+  }, { passive: false });
   addEventListener('mousemove', () => { if (!touch.matches) wake(); }, { passive: true });
   if (viewBtn) {
     labelView();
@@ -165,7 +218,7 @@ async function startReader(root) {
       e.stopPropagation();
       view = view === 'spread' ? 'page' : 'spread';
       try { localStorage.setItem(VIEW_KEY, view); } catch {}
-      labelView(); zoomed = false; stage.classList.remove('zoomed'); show(); wake();
+      labelView(); zoom = 1; stage.classList.remove('zoomed'); show(); wake();
     });
   }
   root.addEventListener('keydown', e => {
@@ -173,10 +226,12 @@ async function startReader(root) {
     const k = e.key;
     if (k === 'ArrowRight' || k === 'PageDown' || k === ' ') { e.preventDefault(); turn(1); }
     else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); turn(-1); }
-    else if (k === 'Home' || k === 'End') { e.preventDefault(); zoomed = false; stage.classList.remove('zoomed'); current = k === 'Home' ? 1 : doc.numPages; show(); }
+    else if (k === 'Home' || k === 'End') { e.preventDefault(); zoom = 1; stage.classList.remove('zoomed'); current = k === 'Home' ? 1 : doc.numPages; show(); }
     else if (k === 'z' || k === 'Z') toggleZoom();
+    else if (k === '+' || k === '=') setZoom(zoom * 1.5);
+    else if (k === '-' || k === '_') setZoom(zoom / 1.5);
     else if ((k === 'f' || k === 'F') && !full.hidden) full.click();
-    else if (k === 'Escape' && zoomed) toggleZoom();
+    else if (k === 'Escape' && zoomedIn()) setZoom(1);
     else return;
     wake();
   });
