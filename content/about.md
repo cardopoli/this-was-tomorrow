@@ -1,6 +1,6 @@
 ---
 title: About
-description: A photographic investigation by Enrico Policardo into community-led housing across the UK.
+description: A long-term audio-visual investigation by Enrico Policardo into community-led housing across the UK.
 layout: about
 ---
 
