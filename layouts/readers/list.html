@@ -37,6 +37,8 @@
     .name { margin-top: 16px; font-size: 15px; font-weight: 700; line-height: 1.25; }
     .intro { margin-top: 6px; font-family: var(--mono); font-size: 11px; line-height: 1.6; color: rgba(236,235,231,.55); }
     .shelf a:focus-visible { outline: 1px solid rgba(236,235,231,.6); outline-offset: 6px; }
+    .publisher { max-width: 1240px; margin: 0 auto; padding: 0 max(22px, env(safe-area-inset-left)) 10vh; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: rgba(236,235,231,.55); }
+    .publisher a { color: rgba(236,235,231,.9); text-underline-offset: 3px; }
     @media (max-width: 560px) { .shelf { grid-template-columns: 1fr 1fr; gap: 40px 18px; } .name { font-size: 13px; } .intro { display: none; } }
   </style>
 </head>
@@ -61,6 +63,7 @@
         </li>
       {{ end }}
     </ul>
+    <p class="publisher">Published by <a href="https://desirelineseditions.co.uk" target="_blank" rel="noopener">Desire Lines Editions</a></p>
   </main>
   <script type="module">
     // Draw each PDF's first page as its cover, only when it scrolls into view.
