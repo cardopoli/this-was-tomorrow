@@ -116,7 +116,9 @@ textarea.code.short { height:52px; }
   background:var(--ink); color:var(--paper); font-size:11px; letter-spacing:1.5px;
   text-transform:uppercase; padding:11px 20px; z-index:200; transition:transform .22s;
 }
+.toast:not(.on) { visibility:hidden; transition:transform .22s, visibility 0s .22s; }
 .toast.on { transform:translateX(-50%) translateY(0); }
+[hidden] { display:none !important; }
 
 /* swatches */
 .palette { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:var(--s3); }
@@ -159,6 +161,13 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
 .lb.on { display:flex; }
 .lb img { max-width:92vw; max-height:88vh; object-fit:contain; }
 .lb-cap { color:#bbb; font-size:11px; text-align:center; margin-top:10px; font-style:italic; }
+
+/* isbn */
+.isbn-prev { background:#fff; padding:var(--s4); max-width:340px; }
+.isbn-prev svg { display:block; width:100%; height:auto; }
+.prev-only > .out-head, .prev-only > textarea { display:none !important; }
+.prev-only .prev { margin-top:0; }
+.isbn-btns { display:flex; gap:var(--s2); flex-wrap:wrap; margin-top:var(--s4); }
 
 /* mobile */
 @media (max-width:760px) {
@@ -381,6 +390,39 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
       </div>
     </section>
 
+    <!-- ISBN -->
+    <section class="panel" id="p-isbn">
+      <h2 class="h">ISBN</h2>
+      <p class="lede">The barcode for the back cover. Type the ISBN as Nielsen gives it, hyphens and all. SVG stays sharp in InDesign at any size.</p>
+      <div class="f">
+        <label class="fl" for="is-num">ISBN</label>
+        <input type="text" id="is-num" inputmode="numeric" autocomplete="off" placeholder="978-1-0000-0000-0">
+        <div class="warn" id="is-warn"></div>
+        <div class="hint" id="is-ok"></div>
+      </div>
+      <div class="g2">
+        <div><label class="fl" for="is-price">Price code (optional)</label>
+          <input type="text" id="is-price" inputmode="numeric" maxlength="5" placeholder="e.g. 90000">
+          <div class="hint">Five digits to the right of the barcode. Leave empty unless a distributor or shop asks for one.</div>
+        </div>
+        <div><label class="fl" for="is-size">Size</label>
+          <select id="is-size">
+            <option value="0.8">80% · 29.8 mm wide</option><option value="0.9">90% · 33.6 mm wide</option>
+            <option value="1" selected>100% · 37.3 mm wide</option><option value="1.2">120% · 44.7 mm wide</option>
+          </select>
+          <div class="hint">Keep it between 80% and 200% so shop scanners read it. 100% is the safe choice.</div>
+        </div>
+      </div>
+      <div class="g2">
+        <div><label class="fl" for="is-ink">Bars</label><input type="text" id="is-ink" value="#000000"></div>
+        <div><label class="fl" for="is-bg">Background</label><input type="text" id="is-bg" value="#ffffff">
+          <div class="hint">Dark bars on a light ground. Type <b>none</b> for a see-through background.</div></div>
+      </div>
+      <div class="opts">
+        <label><input type="checkbox" id="is-top" checked> "ISBN …" line above</label>
+      </div>
+    </section>
+
     <!-- COLOUR -->
     <section class="panel" id="p-colour">
       <h2 class="h">Colour</h2>
@@ -548,7 +590,7 @@ var PALETTE = [
 ];
 var TOOLS = [
   ['Embed', [['image','Image'],['layout','Layout'],['audio','Audio'],['playlist','Playlist'],['video','Video'],['gallery','Gallery'],['iframe','iFrame']]],
-  ['Make',  [['qr','QR'],['colour','Colour'],['css','CSS'],['type','Type']]],
+  ['Make',  [['qr','QR'],['isbn','ISBN'],['colour','Colour'],['css','CSS'],['type','Type']]],
   ['Library',[['snippets','Snippets'],['ref','Reference']]]
 ];
 var NO_OUTPUT = { colour:1, type:1, ref:1 };
@@ -634,6 +676,7 @@ function go(tool) {
   document.querySelectorAll('.rail-btn').forEach(function (b) { b.setAttribute('aria-current', b.dataset.tool === tool ? 'true' : 'false'); });
   document.querySelectorAll('.panel').forEach(function (p) { p.classList.toggle('on', p.id === 'p-' + tool); });
   $('outWrap').hidden = !!NO_OUTPUT[tool];
+  $('outWrap').classList.toggle('prev-only', tool === 'isbn');
   render();
 }
 
@@ -882,6 +925,104 @@ function qrSave(fmt) {
   }
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
   toast(fmt.toUpperCase() + ' downloaded');
+}
+
+/* ============ ISBN (EAN-13 + optional EAN-5 price code) ============ */
+var EAN_L = ['0001101','0011001','0010011','0111101','0100011','0110001','0101111','0111011','0110111','0001011'];
+var EAN_G = ['0100111','0110011','0011011','0100001','0011101','0111001','0000101','0010001','0001001','0010111'];
+var EAN_R = ['1110010','1100110','1101100','1000010','1011100','1001110','1010000','1000100','1001000','1110100'];
+var EAN_FIRST = ['LLLLLL','LLGLGG','LLGGLG','LLGGGL','LGLLGG','LGGLLG','LGGGLL','LGLGLG','LGLGGL','LGGLGL'];
+var EAN5_PAR = ['GGLLL','GLGLL','GLLGL','GLLLG','LGGLL','LLGGL','LLLGG','LGLGL','LGLLG','LLGLG'];
+function isbnCheck13(d12) { var s = 0; for (var i = 0; i < 12; i++) s += (+d12[i]) * (i % 2 ? 3 : 1); return String((10 - s % 10) % 10); }
+function isbnParse(raw) {
+  var clean = raw.replace(/^isbn(-1[03])?:?\s*/i, '').replace(/[\s‐-―-]/g, '').toUpperCase();
+  if (/^\d{9}[\dX]$/.test(clean)) {               // ISBN-10: check it, then convert to 978…
+    var s = 0; for (var i = 0; i < 10; i++) s += (clean[i] === 'X' ? 10 : +clean[i]) * (10 - i);
+    if (s % 11) return { err: 'The last digit doesn\'t match - one of the digits is probably mistyped.' };
+    var d12 = '978' + clean.slice(0, 9), d = d12 + isbnCheck13(d12);
+    return { digits: d, label: 'ISBN ' + d.slice(0, 3) + '-' + raw.replace(/^isbn(-10)?:?\s*/i, '').trim().replace(/[\dX]$/i, d[12]), note: 'Converted from a 10-digit ISBN.' };
+  }
+  if (!/^\d{13}$/.test(clean)) return { err: clean.length ? 'An ISBN has 13 digits (or 10 for an old one) - this has ' + clean.replace(/\D/g, '').length + '.' : '' };
+  if (!/^97[89]/.test(clean)) return { err: 'A book ISBN starts with 978 or 979.' };
+  if (isbnCheck13(clean.slice(0, 12)) !== clean[12]) return { err: 'The last digit should be ' + isbnCheck13(clean.slice(0, 12)) + ' - one of the digits is probably mistyped.' };
+  var typed = raw.replace(/^isbn(-13)?:?\s*/i, '').trim();
+  return { digits: clean, label: 'ISBN ' + (/[-\s]/.test(typed) ? typed.replace(/\s+/g, '-') : clean) };
+}
+function eanBits(d) {
+  var b = '101', p = EAN_FIRST[+d[0]];
+  for (var i = 1; i <= 6; i++) b += (p[i - 1] === 'L' ? EAN_L : EAN_G)[+d[i]];
+  b += '01010';
+  for (i = 7; i <= 12; i++) b += EAN_R[+d[i]];
+  return b + '101';
+}
+function ean5Bits(p) {
+  var c = (3 * (+p[0] + +p[2] + +p[4]) + 9 * (+p[1] + +p[3])) % 10, par = EAN5_PAR[c], b = '1011';
+  for (var i = 0; i < 5; i++) { if (i) b += '01'; b += (par[i] === 'L' ? EAN_L : EAN_G)[+p[i]]; }
+  return b;
+}
+function runs(bits, x0, X, y, h, extra) {          // merge neighbouring dark modules into single rectangles
+  var out = '';
+  for (var i = 0; i < bits.length; i++) if (bits[i] === '1') {
+    var j = i; while (j + 1 < bits.length && bits[j + 1] === '1') j++;
+    var guard = extra && extra(i);
+    out += '<rect x="' + r3(x0 + i * X) + '" y="' + r3(y) + '" width="' + r3((j - i + 1) * X) + '" height="' + r3(h + (guard ? 5 * X : 0)) + '"/>';
+    i = j;
+  }
+  return out;
+}
+function r3(n) { return Math.round(n * 1000) / 1000; }
+function isbnSVG() {
+  var r = isbnParse(v('is-num'));
+  if (!r.digits) return r;
+  var price = v('is-price').replace(/\D/g, '');
+  if (price && price.length !== 5) return { err: 'The price code needs exactly 5 digits.' };
+  var mag = parseFloat(v('is-size')) || 1, X = 0.33 * mag, H = 22.85 * mag, top = $('is-top').checked;
+  var ink = v('is-ink') || '#000000', bg = (v('is-bg') || '#ffffff').toLowerCase();
+  var qL = 11 * X, mainW = 95 * X, gap = 9 * X, addW = 47 * X, qR = (price ? 5 : 7) * X;
+  var W = qL + mainW + (price ? gap + addW : 0) + qR;
+  var fs = 2.75 * mag, head = top ? 3.4 * mag : 0.6 * mag, y0 = head, Ht = y0 + H + 5 * X + 0.4 * mag;
+  var bits = eanBits(r.digits);
+  var isGuard = function (i) { return i < 3 || (i >= 45 && i < 50) || i >= 92; };
+  var d = r.digits, font = "font-family=\"'OCR-B','OCRB','OCR B Std','Courier New',monospace\"";
+  var text = '<text x="' + r3(qL - 1.6 * X) + '" y="' + r3(y0 + H + 4.6 * X) + '" font-size="' + r3(fs) + '" text-anchor="end" ' + font + '>' + d[0] + '</text>'
+    + '<text x="' + r3(qL + 3 * X + 21 * X) + '" y="' + r3(y0 + H + 4.6 * X) + '" font-size="' + r3(fs) + '" text-anchor="middle" letter-spacing="' + r3(0.62 * mag) + '" ' + font + '>' + d.slice(1, 7) + '</text>'
+    + '<text x="' + r3(qL + 50 * X + 21 * X) + '" y="' + r3(y0 + H + 4.6 * X) + '" font-size="' + r3(fs) + '" text-anchor="middle" letter-spacing="' + r3(0.62 * mag) + '" ' + font + '>' + d.slice(7) + '</text>';
+  if (top) text += '<text x="' + r3(qL + mainW / 2) + '" y="' + r3(2.6 * mag) + '" font-size="' + r3(2.6 * mag) + '" text-anchor="middle" font-family="Helvetica, Arial, sans-serif">' + r.label + '</text>';
+  var add = '';
+  if (price) {
+    var ax = qL + mainW + gap, ay = y0 + fs + 0.6 * mag;
+    add = runs(ean5Bits(price), ax, X, ay, y0 + H + 5 * X - ay)
+      + '<text x="' + r3(ax + addW / 2) + '" y="' + r3(y0 + fs - 0.2 * mag) + '" font-size="' + r3(fs) + '" text-anchor="middle" letter-spacing="' + r3(0.62 * mag) + '" ' + font + '>' + price + '</text>';
+  }
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + r3(W) + 'mm" height="' + r3(Ht) + 'mm" viewBox="0 0 ' + r3(W) + ' ' + r3(Ht) + '" shape-rendering="crispEdges">'
+    + (bg && bg !== 'none' && bg !== 'transparent' ? '<rect width="' + r3(W) + '" height="' + r3(Ht) + '" fill="' + bg + '"/>' : '')
+    + '<g fill="' + ink + '">' + runs(bits, qL, X, y0, H, isGuard) + add + text + '</g></svg>';
+  return { svg: svg, digits: d, label: r.label, note: r.note, W: W, Ht: Ht };
+}
+BUILD.isbn = function (o) {
+  var res = isbnSVG();
+  $('is-warn').textContent = res.err || ''; warn('is-warn', !!res.err);
+  $('is-ok').textContent = res.svg ? '✓ Valid. ' + (res.note ? res.note + ' ' : '') + 'Barcode number ' + res.digits + '.' : '';
+  if (!res.svg) return;
+  o.code = res.svg; o.title = 'ISBN barcode - SVG (' + r3(res.W) + ' × ' + r3(res.Ht) + ' mm)';
+  o.preview = '<div class="isbn-prev">' + res.svg.replace(/ width="[\d.]+mm" height="[\d.]+mm"/, ' width="100%"') + '</div>'
+    + '<div class="isbn-btns"><button class="cp" type="button" onclick="isbnSave(\'svg\')">Download SVG</button>'
+    + '<button class="cp ghost" type="button" onclick="isbnSave(\'png\')">Download PNG</button></div>'
+    + '<p class="hint">The digits use OCR-B if your computer has it, otherwise a similar monospace. In InDesign, place the SVG at 100% - don\'t stretch it.</p>';
+};
+function isbnSave(fmt) {
+  var res = isbnSVG(); if (!res.svg) return;
+  var name = 'isbn-' + res.digits + (v('is-price') ? '-' + v('is-price') : '');
+  var a = document.createElement('a');
+  function go(href, ext) { a.href = href; a.download = name + ext; document.body.appendChild(a); a.click(); document.body.removeChild(a); toast(ext.slice(1).toUpperCase() + ' downloaded'); }
+  if (fmt === 'svg') return go(URL.createObjectURL(new Blob([res.svg], { type: 'image/svg+xml' })), '.svg');
+  var dpmm = 1200 / 25.4, img = new Image();       // 1200 dpi, same physical size as the SVG
+  img.onload = function () {
+    var cv = document.createElement('canvas'); cv.width = Math.round(res.W * dpmm); cv.height = Math.round(res.Ht * dpmm);
+    cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+    go(cv.toDataURL('image/png'), '.png');
+  };
+  img.src = URL.createObjectURL(new Blob([res.svg], { type: 'image/svg+xml' }));
 }
 
 BUILD.css = function (o) {
