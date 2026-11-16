@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>TWT — Studio</title>
+<title>Studio</title>
 <style>
 :root {
   --paper:#f7f5f0; --card:#fff; --ink:#111; --muted:#8c8880; --rule:#d6d2ca;
@@ -187,7 +187,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
 <body>
 
 <div class="bar">
-  <div class="brand">TWT <em>/ Studio</em></div>
+  <div class="brand"><span id="brandName">TWT</span> <em>/ Studio</em></div>
   <div class="bar-sp"></div>
   <button class="icon-btn" id="themeBtn" type="button">Dark</button>
 </div>
@@ -243,7 +243,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
         <div class="f"><label class="fl">Dropbox URL</label><input type="text" id="lay-url-3" data-recent="image" placeholder="https://www.dropbox.com/scl/fi/…"></div>
         <div class="g2" style="margin-bottom:0"><div><label class="fl">Alt</label><input type="text" id="lay-alt-3"></div><div><label class="fl">Caption</label><input type="text" id="lay-cap-3"></div></div>
       </div>
-      <div class="f"><label class="fl" for="lay-gcap">Group caption</label><input type="text" id="lay-gcap" placeholder="Optional — sits below the block"></div>
+      <div class="f"><label class="fl" for="lay-gcap">Group caption</label><input type="text" id="lay-gcap" placeholder="Optional - sits below the block"></div>
       <div class="warn" id="lay-warn">Add a Dropbox link to each visible slot.</div>
     </section>
 
@@ -289,7 +289,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
     <!-- PLAYLIST -->
     <section class="panel" id="p-playlist">
       <h2 class="h">Playlist</h2>
-      <p class="lede">A shared Dropbox folder of audio. Outputs a Hugo shortcode — paste it into a body field.</p>
+      <p class="lede">A shared Dropbox folder of audio. Outputs a Hugo shortcode - paste it into a body field.</p>
       <div class="f">
         <label class="fl" for="pl-url">Dropbox folder URL</label>
         <input type="text" id="pl-url" data-recent="folder" placeholder="https://www.dropbox.com/scl/fo/…">
@@ -320,7 +320,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
     <!-- VIDEO -->
     <section class="panel" id="p-video">
       <h2 class="h">Video</h2>
-      <p class="lede">A Dropbox file plays natively — no third-party branding.</p>
+      <p class="lede">A Dropbox file plays natively - no third-party branding.</p>
       <span class="sub">Source</span>
       <div class="opts">
         <label><input type="radio" name="vi-src" value="dropbox" checked> Dropbox file</label>
@@ -375,16 +375,16 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
     <!-- QR -->
     <section class="panel" id="p-qr">
       <h2 class="h">QR</h2>
-      <p class="lede">Any link. SVG stays sharp at any print size — use it for wall labels.</p>
+      <p class="lede">Any link. SVG stays sharp at any print size - use it for wall labels.</p>
       <div class="f">
         <label class="fl" for="qr-url">URL</label>
         <input type="text" id="qr-url" placeholder="https://thiswastomorrow.co.uk/audio/…">
         <div class="recent" id="qr-recent"></div>
-        <div class="warn" id="qr-warn">QR library didn't load — check your connection and reload.</div>
+        <div class="warn" id="qr-warn">QR library didn't load - check your connection and reload.</div>
       </div>
       <div class="g2">
         <div><label class="fl" for="qr-ec">Error correction</label>
-          <select id="qr-ec"><option value="H" selected>High — best for print</option><option value="Q">Quartile</option><option value="M">Medium</option><option value="L">Low</option></select>
+          <select id="qr-ec"><option value="H" selected>High - best for print</option><option value="Q">Quartile</option><option value="M">Medium</option><option value="L">Low</option></select>
         </div>
         <div><label class="fl" for="qr-margin">Quiet margin</label><input type="text" id="qr-margin" value="4"></div>
       </div>
@@ -427,7 +427,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
     <section class="panel" id="p-colour">
       <h2 class="h">Colour</h2>
       <p class="lede">Click a swatch for A, double-click for B. Check the pair reads before you use it.</p>
-      <span class="sub">TWT palette</span>
+      <span class="sub">Palette</span>
       <div class="palette" id="col-pal"></div>
       <hr class="divider">
       <div class="g2">
@@ -526,19 +526,19 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
         <tr><td>### Heading</td><td>Sub heading, muted mono</td></tr>
         <tr><td>**bold** / *italic*</td><td>Emphasis</td></tr>
         <tr><td>[text](url)</td><td>Link</td></tr>
-        <tr><td>![alt](url)</td><td>Image — use a Dropbox raw URL</td></tr>
+        <tr><td>![alt](url)</td><td>Image - use a Dropbox raw URL</td></tr>
         <tr><td>- item / 1. item</td><td>Lists</td></tr>
         <tr><td>&gt; text</td><td>Blockquote</td></tr>
         <tr><td>---</td><td>Horizontal rule</td></tr>
-        <tr><td># Heading</td><td>h1 — reserved for the page title, don't use</td></tr>
+        <tr><td># Heading</td><td>h1 - reserved for the page title, don't use</td></tr>
       </table>
-      <span class="sub">Raw HTML — works because unsafe = true</span>
+      <span class="sub">Raw HTML - works because unsafe = true</span>
       <table class="ref">
         <tr><td><code>&lt;img src="…" style="width:100%"&gt;</code></td><td>Full-width image</td></tr>
         <tr><td><code>&lt;div class="audio-track" data-twt-bg="…"&gt;</code></td><td>Custom audio player</td></tr>
         <tr><td><code>&lt;div style="display:grid;…"&gt;</code></td><td>Column layouts</td></tr>
       </table>
-      <span class="sub">Hugo shortcodes — run before markdown</span>
+      <span class="sub">Hugo shortcodes - run before markdown</span>
       <table class="ref">
         <tr><td><code>{{&lt; audio-playlist url="…" &gt;}}</code></td><td>Folder playlist</td></tr>
       </table>
@@ -564,7 +564,7 @@ table.ref code { background:var(--shade); padding:2px 5px; font-size:10px; }
         <button class="cp ghost" id="clearBtn" type="button">Clear</button>
         <button class="cp" id="copyBtn" type="button">Copy</button>
       </div>
-      <textarea class="code" id="out" readonly onclick="this.select()" placeholder="Fill the fields above — the code appears here as you type."></textarea>
+      <textarea class="code" id="out" readonly onclick="this.select()" placeholder="Fill the fields above - the code appears here as you type."></textarea>
       <div class="out-head" id="rawHead" hidden style="margin-top:14px">
         <span class="out-title">Direct URL</span><span class="out-sp"></span>
         <button class="cp ghost" id="copyRawBtn" type="button">Copy URL</button>
@@ -594,6 +594,30 @@ var TOOLS = [
   ['Library',[['snippets','Snippets'],['ref','Reference']]]
 ];
 var NO_OUTPUT = { colour:1, type:1, ref:1 };
+
+/* ============ PER-SITE SETTINGS ============
+   This file is the same on every site. What changes lives in studio.json next to it
+   (edited in Sveltia under Settings > Studio): the name, which tabs show, the accent
+   colour and the swatches in Colour. No studio.json = TWT defaults, every tab. */
+function applySettings(c) {
+  if (!c || typeof c !== 'object') return;
+  if (c.name) { $('brandName').textContent = c.name; document.title = c.name + ' · Studio'; }
+  if (c.tabs && c.tabs.length) {
+    var keep = {}; c.tabs.forEach(function (k) { keep[k] = 1; });
+    TOOLS = TOOLS.map(function (g) { return [g[0], g[1].filter(function (t) { return keep[t[0]]; })]; })
+                 .filter(function (g) { return g[1].length; });
+  }
+  if (c.palette && c.palette.length) {
+    PALETTE = c.palette.map(function (p) { return [p.colour, p.name || p.colour]; });
+    $('col-a').value = PALETTE[0][0]; if (PALETTE[1]) $('col-b').value = PALETTE[1][0];
+  }
+  var css = '';
+  if (c.accent) css += ':root{--accent:' + c.accent + '}';
+  if (c.accent_dark) css += '[data-theme="dark"]{--accent:' + c.accent_dark + '}';
+  if (css) { var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }
+  if (c.dropbox_proxy) PROXY = c.dropbox_proxy.replace(/\/$/, '');
+}
+function allTabs() { var a = []; TOOLS.forEach(function (g) { g[1].forEach(function (t) { a.push(t[0]); }); }); return a; }
 
 /* ============ STORAGE (degrades quietly) ============ */
 function store(k, v) { try { if (v === undefined) { var r = localStorage.getItem('twt.'+k); return r ? JSON.parse(r) : null; } localStorage.setItem('twt.'+k, JSON.stringify(v)); } catch (e) { return null; } }
@@ -642,7 +666,7 @@ function copyText(text, label) {
     var ta = document.createElement('textarea');
     ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
     document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); toast(label + ' copied'); } catch (e) { toast('Copy failed — select and copy manually'); }
+    try { document.execCommand('copy'); toast(label + ' copied'); } catch (e) { toast('Copy failed - select and copy manually'); }
     document.body.removeChild(ta);
   }
 }
@@ -655,8 +679,8 @@ function sizeSet(size) {
 }
 
 /* ============ NAV ============ */
-var current = store('tool') || 'image';
-(function buildRail() {
+var current;
+function buildRail() {
   var rail = $('rail');
   TOOLS.forEach(function (group) {
     var g = document.createElement('div');
@@ -670,7 +694,7 @@ var current = store('tool') || 'image';
       rail.appendChild(b);
     });
   });
-})();
+}
 function go(tool) {
   current = tool; store('tool', tool);
   document.querySelectorAll('.rail-btn').forEach(function (b) { b.setAttribute('aria-current', b.dataset.tool === tool ? 'true' : 'false'); });
@@ -783,7 +807,7 @@ BUILD.layout = function (o) {
     imgs.forEach(function (im) { code += '  <div style="height:100%">' + tag(im, fit) + '</div>\n'; });
     code += '</div>\n</div>' + capLine(gcap);
   }
-  o.code = code; o.title = 'Layout — ' + layout;
+  o.code = code; o.title = 'Layout - ' + layout;
   var pcols = layout === 'triple' ? '1fr 1fr 1fr' : layout === 'portrait' ? '0.65fr 1fr'
             : layout === 'left-wide' ? '1.75fr 1fr' : layout === 'stacked' ? '1fr' : '1fr 1fr';
   o.preview = '<div style="display:grid;grid-template-columns:' + pcols + ';gap:4px;align-items:stretch">'
@@ -873,7 +897,7 @@ BUILD.gallery = function (o) {
     + '  <div class="dbx-skeleton"><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div><div class="dbx-skeleton-item"></div></div>\n</div>\n'
     + '<scr' + 'ipt>(function(){function run(){window._twt.buildGallery(\'' + PROXY + '\',\'' + url.replace(/'/g, "\\'") + '\',\'' + uid + '\');}'
     + 'if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})()</scr' + 'ipt>';
-  o.title = 'Gallery — paste in raw mode';
+  o.title = 'Gallery - paste in raw mode';
 };
 
 BUILD.iframe = function (o) {
@@ -899,7 +923,7 @@ BUILD.qr = function (o) {
   for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) rects += '<rect x="' + (c + m) + '" y="' + (r + m) + '" width="1" height="1"/>';
   var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + dim + ' ' + dim + '" shape-rendering="crispEdges">'
           + '<rect width="' + dim + '" height="' + dim + '" fill="#ffffff"/><g fill="#111111">' + rects + '</g></svg>';
-  o.code = svg; o.title = 'QR — SVG (' + n + '×' + n + ' modules)';
+  o.code = svg; o.title = 'QR - SVG (' + n + '×' + n + ' modules)';
   o.preview = '<div style="background:#fff;padding:18px;display:inline-block">'
     + svg.replace('<svg ', '<svg width="190" height="190" ') + '</div>'
     + '<div style="display:flex;gap:10px;margin-top:14px">'
@@ -1042,7 +1066,7 @@ BUILD.css = function (o) {
 
 BUILD.snippets = function (o) {
   o.code = $('out').dataset.snippet || '';
-  o.title = $('out').dataset.snippetName || 'Snippet — pick one above';
+  o.title = $('out').dataset.snippetName || 'Snippet - pick one above';
 };
 
 /* ---- colour + type: live, no code output ---- */
@@ -1051,7 +1075,7 @@ function paintColour() {
   $('col-ab').style.cssText = 'padding:18px;font-size:12px;background:' + a + ';color:' + b;
   $('col-ba').style.cssText = 'padding:18px;font-size:12px;background:' + b + ';color:' + a;
   var ratio = contrast(a, b);
-  $('col-contrast').textContent = ratio ? 'Contrast ' + ratio.toFixed(2) + ':1 — ' +
+  $('col-contrast').textContent = ratio ? 'Contrast ' + ratio.toFixed(2) + ':1 - ' +
     (ratio >= 4.5 ? 'passes for body text' : ratio >= 3 ? 'large text only' : 'too low, hard to read') : '';
 }
 function lum(hex) {
@@ -1064,17 +1088,17 @@ function contrast(a, b) {
   var la = lum(a), lb = lum(b); if (la === null || lb === null) return null;
   return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
 }
-(function initPalette() {
-  var box = $('col-pal');
+function initPalette() {
+  var box = $('col-pal'); box.innerHTML = '';
   PALETTE.forEach(function (c) {
     var s = document.createElement('button');
     s.className = 'sw'; s.type = 'button'; s.style.background = c[0];
-    s.title = c[1] + ' ' + c[0] + ' — click for A, double-click for B';
+    s.title = c[1] + ' ' + c[0] + ' - click for A, double-click for B';
     s.onclick = function () { $('col-a').value = c[0]; paintColour(); };
     s.ondblclick = function () { $('col-b').value = c[0]; paintColour(); };
     box.appendChild(s);
   });
-})();
+}
 function paintType() {
   var d = $('ty-display');
   d.textContent = v('ty-text') || 'The quick brown fox';
@@ -1156,8 +1180,17 @@ function setTheme(t) {
 $('themeBtn').onclick = function () { setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'); };
 setTheme(store('theme') || 'light');
 
-/* boot */
-paintCards(); paintRecent(); paintColour(); paintType(); go(current);
+/* boot: read this site's settings, then draw */
+function boot(cfg) {
+  applySettings(cfg);
+  var tabs = allTabs(), saved = store('tool');
+  current = tabs.indexOf(saved) >= 0 ? saved : tabs[0];
+  buildRail(); initPalette(); paintCards(); paintRecent(); paintColour(); paintType(); go(current);
+}
+fetch('studio.json', { cache: 'no-cache' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .catch(function () { return null; })
+  .then(boot);
 </script>
 </body>
 </html>

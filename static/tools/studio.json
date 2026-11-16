@@ -1,0 +1,15 @@
+{
+  "name": "TWT",
+  "tabs": ["image", "layout", "audio", "playlist", "video", "gallery", "iframe", "qr", "isbn", "colour", "css", "type", "snippets", "ref"],
+  "accent": "#077533",
+  "accent_dark": "#27f5b0",
+  "dropbox_proxy": "https://dropbox-proxy.cardopoli.workers.dev",
+  "palette": [
+    { "colour": "#111111", "name": "Text" }, { "colour": "#f7f5f0", "name": "Paper" },
+    { "colour": "#666666", "name": "Muted" }, { "colour": "#cccccc", "name": "Rule" },
+    { "colour": "#077533", "name": "Green" }, { "colour": "#041801", "name": "Dark green" },
+    { "colour": "#f54927", "name": "Orange" }, { "colour": "#27f5b0", "name": "Mint" },
+    { "colour": "#c6f500", "name": "Fluo" }, { "colour": "#b5b800", "name": "Acid" },
+    { "colour": "#ffffff", "name": "White" }, { "colour": "#000000", "name": "Black" }
+  ]
+}
