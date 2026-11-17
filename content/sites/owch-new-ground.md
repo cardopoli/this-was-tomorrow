@@ -25,7 +25,7 @@ body_intro: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/jude/">Read the conversation</a> &middot; <a href="/transcripts/jude/jude.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/jude/">Read the conversation</a> &middot; <a href="/transcripts/jude/jude.pdf" download>Download PDF</a></p>
 dropbox_gallery: https://www.dropbox.com/scl/fo/aluqwafghb57ixkfsp9pj/APXAF6xErar6Hl-mcLJvh84?rlkey=171vn2ayosgfvuqssbfd2xvo3&dl=0
 body_middle: |-
   ## THE LONG FIGHT FOR REALISATION
@@ -42,7 +42,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/hilary/">Read the conversation</a> &middot; <a href="/transcripts/hilary/hilary.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/hilary/">Read the conversation</a> &middot; <a href="/transcripts/hilary/hilary.pdf" download>Download PDF</a></p>
 
   For nearly two decades, the group continued to advocate and organise. A crucial turning point came in 2006 when the Tudor Trust, a West London charity, approached Maria Brenton about how the OWCH experiment might relate to their interest in self-determining communities of older people. The Tudor Trust funded Maria's time and OWCH running expenses for many years, and eventually made a generous capital grant to Housing for Women for the social rental flats when it became clear that conventional Housing Grant would not be forthcoming. The Trust also provided funds to the OWCH group to ensure a high-quality communal setting.
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/iq9hgzcftd2pms09bicou/AGOPfUZL2zvAmasp7KBUFVo?rlkey=vhg1zf894s8qwowylepiyakrk&dl=0
@@ -65,7 +65,7 @@ slug: owch-new-ground
 
 </div>
 
-<p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/anne/">Read the conversation</a> &middot; <a href="/transcripts/anne/anne.pdf" download>Download PDF</a></p>
+<p class="twt-transcript-link"><a class="twt-read" href="/transcripts/anne/">Read the conversation</a> &middot; <a href="/transcripts/anne/anne.pdf" download>Download PDF</a></p>
 
 Hanover Housing Association, a not-for-profit retirement housing provider, eventually acquired the site – a former convent in High Barnet. Hanover's interest had been encouraged by visits to cohousing schemes in Continental Europe, particularly those documented in the HAPPI Report on older people's housing (2009). The group chose London-based architects Pollard, Thomas, Edwards (PTE) as their design partners in 2010. Critically, PTE involved the OWCH women in scoping out the site and designing the building, giving them a genuine sense of ownership of the project – unusually collaborative for a development process at that time.
 

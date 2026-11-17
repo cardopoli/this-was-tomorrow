@@ -1,108 +1,141 @@
-<!doctype html><html lang="en-gb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dave and Lisa in conversation · This Was Tomorrow</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-@font-face { font-family:'AGProExt'; src:url('/fonts/akzidenzgroteskpro_ext.woff2') format('woff2'); }
-@font-face { font-family:'FreeMono'; src:url('/fonts/FreeMono.otf') format('opentype'); }
-:root { --bg:#f7f5f0; --text:#111; --muted:#666; --rule:#ccc; --green:#077533; --cut:#c0391b;
-  --wide:'AGProExt', Arial, sans-serif; --mono:'FreeMono', 'Courier New', monospace; --serif:'Averia Serif Libre', Georgia, serif; }
-* { box-sizing:border-box; margin:0; padding:0; }
-html { background:var(--bg); color:var(--text); }
-body { font-family:var(--serif); font-weight:300; font-size:18px; line-height:1.62; -webkit-font-smoothing:antialiased; }
-a { color:inherit; text-underline-offset:3px; }
-.wrap { max-width:720px; margin:0 auto; padding:0 22px; }
-.top { padding:44px 0 26px; border-bottom:2px solid var(--text); margin-bottom:44px; }
-.top .brand { font-family:var(--wide); font-weight:700; text-transform:uppercase; letter-spacing:-1px; font-size:22px; line-height:.95; text-decoration:none; }
-.crumb { font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--muted); margin-top:14px; }
-.crumb a { text-decoration:none; } .crumb a:hover { color:var(--text); }
-h1 { font-family:var(--wide); font-weight:700; text-transform:uppercase; letter-spacing:-1.5px; line-height:.92; font-size:clamp(40px,8vw,72px); }
-.role { font-family:var(--wide); font-style:italic; font-size:clamp(17px,2.4vw,22px); margin-top:12px; }
-.meta { font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:18px; line-height:1.7; }
-.actions { display:flex; gap:18px; flex-wrap:wrap; align-items:center; margin:30px 0 8px; font-family:var(--mono); font-size:13px; }
-.btn { display:inline-flex; align-items:center; gap:10px; background:var(--text); color:var(--bg); text-decoration:none; padding:11px 18px; border-radius:999px; }
-.btn:hover { background:var(--green); }
-.note { font-style:italic; color:var(--muted); font-size:15px; margin:26px 0 48px; max-width:36em; }
-.q { font-family:var(--wide); font-weight:400; font-size:16px; line-height:1.3; letter-spacing:-.1px; margin:52px 0 16px; display:flex; gap:14px; max-width:34em; }
-.q .n { font-family:var(--mono); font-size:11px; color:var(--green); padding-top:4px; flex:none; }
-p { margin:0 0 1.05em; max-width:34em; hanging-punctuation:first; }
-.sp { font-family:var(--wide); font-weight:700; font-size:.72em; text-transform:uppercase; letter-spacing:.2px; margin-right:.35em; }
-.gap { font-family:var(--mono); font-size:.8em; color:var(--muted); white-space:nowrap; }
-del.cut { text-decoration:line-through; text-decoration-color:var(--cut); color:#7b2a17; background:rgba(192,57,27,.07); }
-.why { display:block; font-family:var(--mono); font-size:11.5px; line-height:1.45; color:var(--cut); background:#fff; border-left:2px solid var(--cut); padding:7px 10px; margin:8px 0; }
-.review-bar { position:sticky; top:0; z-index:5; background:var(--cut); color:#fff; font-family:var(--mono); font-size:12px; padding:9px 22px; text-align:center; }
-.end { border-top:2px solid var(--text); margin:64px 0 0; padding:18px 0 60px; font-family:var(--mono); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
-@media (max-width:600px) { body { font-size:17px; } .q { font-size:15px; margin-top:42px; } .top { padding-top:28px; } }
-</style></head><body>
-<div class="wrap">
-<header class="top"><a class="brand" href="/">This Was<br>Tomorrow</a>
-<div class="crumb"><a href="/sites/trevone-quarry/">Trevone Quarry</a> / Conversation</div></header>
-<h1>Dave and Lisa</h1>
-<div class="role">Recording engineer and blacksmith, residents at Trevone</div>
-<div class="meta">In conversation with Enrico Policardo<br>Trevone Quarry, Cornwall · June 2026 · 9 questions</div>
-<div class="actions"><a class="btn" href="dave-and-lisa.pdf" download>Download PDF <span aria-hidden="true">↓</span></a><a href="/sites/trevone-quarry/">Listen on the site page</a></div>
-<p class="note">Edited for reading - tidied, shortened and with some personal details taken out. Cuts are marked […].</p>
-<article><h2 class="q" id="q1"><span class="n">01</span>Who are you, where are we, and how did you get here?</h2>
+---
+title: "Dave and Lisa"
+layout: transcript
+role: "Recording engineer and blacksmith, residents at Trevone"
+site: "Trevone Quarry"
+place: "Cornwall"
+date_label: "June 2026"
+interviewer: "Enrico Policardo"
+site_page: "/sites/trevone-quarry/"
+pdf: "/transcripts/dave-and-lisa/dave-and-lisa.pdf"
+questions: 9
+note: "Edited from the recorded conversation."
+description: "Dave and Lisa in conversation - Trevone Quarry, This Was Tomorrow"
+---
+<h2 class="q" id="q1"><span class="n">01</span> Who are you, where are we, and how did you get here?</h2>
+
 <p><strong class="sp">Dave:</strong> I'm Dave.</p>
+
 <p><strong class="sp">Lisa:</strong> And I'm Lisa. I trained as a jeweller and as a blacksmith, and I came back to Cornwall, where I was born and brought up, to set up my own business near Falmouth. It was a very temporary set-up - perfect for a start-up: a tiny, very cheap workshop, and I was allowed to live in a caravan next to it. But I knew I'd outgrow it fairly quickly.</p>
+
 <p>I'd been friends with Rob for years through the music and folk art scene in Falmouth. When he bought this old derelict granite quarry, he said, come up and see what we've just bought, let's have a picnic - I think there might be an old forge on the land somewhere. So we clambered through the undergrowth and had a picnic by the quarry lake. Then we hacked our way through the brambles and bracken to this ruined granite building, through a big granite doorway. There was a tree growing inside. We worked our way round the tree and found a big granite hearth - a blacksmith's forge hearth, built into the building. Obviously I was very excited. He said, would you be interested in renting it as your workshop? And I said, yes, of course, that would be amazing. We agreed some very loose terms, and a few months later, once he'd put a roof on it, I moved my business in.</p>
+
 <p>That really dictated the course of my life after that. Sixteen years ago it had an even more remote feel than today - very overgrown and derelict, a bit of a sad place. But the way nature had grown back into this post-industrial landscape was really hopeful. And as one of very few traditional blacksmiths in Cornwall, moving into a building built to be a blacksmith's forge felt really special - like a legacy of the past blacksmiths and quarry workers and what would have been made in this building.</p>
+
 <p>It had been used as a local rubbish dump, so there was a lot to clear. And clearing round the forge I kept finding remnants of past industry, bits of metal. The magic of being a blacksmith is that you can put those pieces into the forge fire and transform them, give them a new life. That's one of the big callings for me - that transformation of the material. So the landscape fed straight into my work, and it all tied together very holistically with my life.</p>
+
 <p>I was living on the fringes at the time anyway - in a caravan on a local campsite, then in a shepherd's hut I'd built out of one of the derelict buildings here, on another campsite. All the campsites I lived on were always being hounded by the council, the people living there always under threat of eviction. And that's how I met Dave, because I'm also a musician, and the band I was in went to record an album at his studio in Devon.</p>
+
 <p><strong class="sp">Dave:</strong> I remember I stuck a microphone in front of you while you played the viola, and then I had to rush to the pig pen, where piglets were being born. Piglets popping out all over the place. My landlord was a farmer, it was his first litter, and the pen hadn't been designed properly - too much room, so the piglets, which are like big chunky sausages with feet, kept getting under the mother's hooves. That's really traumatic. So we invented the piglet spoon - a big fishing-net kind of thing, to scoop them up and put them somewhere safer. Then I'd go back to recording Lisa.</p>
+
 <p><strong class="sp">Lisa:</strong> It became quite a bonding experience.</p>
+
 <p><strong class="sp">Dave:</strong> We met over piglets and violas. Pig midwifery and a string section.</p>
+
 <p><strong class="sp">Lisa:</strong> Over the next couple of years we worked together a lot more - Dave recording us, being our sound man at gigs - and we really started playing music together. And we persuaded Dave he didn't want to live on a pig farm in Devon, he wanted to move to Cornwall.</p>
+
 <p><strong class="sp">Dave:</strong> I bought a caravan down here and ended up living next door to Lisa, in the same field. Before that I'd been very into folk music - I'd studied it, then started recording it, and lots of other music. I'd been in various transient situations. I lived in Newcastle for a while, and I followed communities where I could have little studios. After Newcastle I lived in a Norman castle in Durham, which had been bought by a small family publishing company in the fifties and let out rooms. It's not open to the public. I had a little studio there for a few years and started recording medieval musicians - if you've got a castle, you're going to end up with medieval musicians. The instrument I've recorded more than any other is the hurdy-gurdy, which is unusual.</p>
+
 <p>Then I moved to the pig farm in Devon, in a caravan next to the pigs, sharing my water tap with them. That was the big freeze of 2010 - it got to minus 10, minus 15, unheard of in this country. The caravan door kept falling off, I was trying to keep the pigs warm, and I had a completely unsuitable barn for a recording studio. Then I moved to Cornwall. Lisa was quite ensconced here by then, and I realised the building at the back was completely overgrown with brambles and gorse - you couldn't see it. Rob had filled it with pianos and surfboards and all sorts of Rob stuff. It used to be the explosives store for the quarry, where they kept the dynamite, made of reinforced concrete.</p>
+
 <p><strong class="sp">Lisa:</strong> Ten metres from the forge. They were the two permanent structures on the site. They didn't map buildings on quarry sites, which became an issue later in our planning battle, because we couldn't prove how long they'd been here and in the same use. But they were in good enough condition to put a roof on and use. So we negotiated with Rob that Dave could set up his recording studio here.</p>
+
 <p><strong class="sp">Dave:</strong> And the community slowly started to grow. There was also Tim Shaw, the artist, down there - he does large-scale, really nutty public works. He's a Royal Academician.</p>
+
 <p><strong class="sp">Lisa:</strong> But we were the only ones living here for quite a few years. You could go weeks without seeing anybody. It was beautifully remote and derelict. Rob and I sometimes ask, is it a shame it's less wild than it was? Or is it wild in a different way? And we always come round to the same conclusion: it's so much better, because we've increased the biodiversity and the habitats, and the community, which is really important.</p>
+
 <p>We've reconnected the hamlet a few hundred yards up the hill with the one a few hundred yards down, by opening up the footpath - a public bridleway that always existed but wasn't used much. Now it's a really well-used link, and we know the people and they know us. And the nature that's come back from the work we've done cleaning the stream - you can't describe what it was like sixteen years ago. Upturned cars. We've dug out fridges and washing machines and plastic. All this area we're looking across was full of dumped rubbish. Removing that, and watching the pioneer plants come back in, has been so magical.</p>
+
 <p><strong class="sp">Dave:</strong> There's still a washing machine under the raspberries over there that we couldn't get out.</p>
-<h2 class="q" id="q2"><span class="n">02</span>Tell me about the garden.</h2>
+
+<h2 class="q" id="q2"><span class="n">02</span> Tell me about the garden.</h2>
+
 <p><strong class="sp">Lisa:</strong> We've moved epic amounts of rock and boulders - it's an old granite quarry. Between the smithy and the explosives store, which is now Dave's studio, there's a patch of land that became ours. There was no water or sewerage anywhere near, so we got into composting toilets very quickly. We'd lived in alternative communities our whole adult lives, so we'd been through all the different systems. And the by-product was lots of soil.</p>
+
 <p>The ground here is quarry spoil - boulders on boulders, maybe five metres below the original land level, hundreds of years of it. Very free-draining, shallow, arid, acidic. Nothing grew. People who knew the valley when it was a working quarry describe it as white with granite dust. Barren. The blasting stopped for good in the eighties.</p>
+
 <p><strong class="sp">Dave:</strong> There were still a couple of guys digging out a bit of rock in the nineties.</p>
+
 <p><strong class="sp">Lisa:</strong> So bringing nature back into it consciously has been a journey of growing with the soil. All the soil in that garden we've made ourselves, or brought in - some compost from the local green waste company, to add bulk.</p>
+
 <p><strong class="sp">Dave:</strong> But from our compost toilets there's probably about 30 cubic metres in there, over fifteen years. Done properly, it turns from toilet and sawdust into soil in about a year and a half. The system is from an American called Joseph Jenkins, who called it "humanure" - I don't love the name. It's about generating enough heat in the compost to kill all the pathogens.</p>
+
 <p>You build a box - wood, metal, wire - and insulate it with straw: a couple of bales underneath, a foot of thick straw, and straw walls, so you get a well in the middle. You fill that with the buckets - wee and poo together, mixed with sawdust, which provides the carbon to trigger the bacteria. Plus all the kitchen waste, cooked food, meat, oils, leather, natural fabrics. Anything organic. When we kept chickens, if one died I'd put the whole chicken in, and within a couple of weeks it just wasn't there any more. Then another thick layer of straw on top, so it's a sealed, insulated box.</p>
+
 <p>It goes through three stages of bacteria. The cold stage, then the mesophilic, up to about 40 degrees, and then at about 50 the thermophilic bacteria kick in and just cook it, between 55 and 70 degrees, for days or weeks depending on the mass. At that temperature the pathogens die within minutes or hours. It breaks down everything organic very quickly - a couple of weeks later all you see is sawdust, maybe some bones and feathers. You keep adding loads until the heap is full, which for us takes about six months. Then you leave it a year to mature. When the compost temperature meets the air temperature, it's stopped, and fungi, worms and insects move in to break down the wood. Then you empty it and start again.</p>
+
 <p><strong class="sp">Lisa:</strong> And you don't need to turn it, because the thermophilic stage is so fierce it reaches everything, even the inner straw. When you unpack it, it's this delicious compost, and all our plants absolutely thrive in it. It's made our garden amazing. We started piling rocks up just to clear bits of land, and built granite-walled raised beds that we've filled with compost over the years. That led us into permaculture and forest gardening and no-dig gardening, and we've pulled all that together into our own philosophy for this landscape. After about ten years of concerted effort, parts of the garden are reaching maturity.</p>
+
 <p><strong class="sp">Dave:</strong> The soil's still fairly shallow. We have a mole.</p>
+
 <p><strong class="sp">Lisa:</strong> Who thinks he's very well hidden. You can see the surface of the soil moving as he goes. He probably bangs his head on bits of granite quite a lot. I don't know how he got here - it's pretty barren around. He must have got a memo about the pickings. We've probably got more worms than most of the local area.</p>
-<h2 class="q" id="q3"><span class="n">03</span>What does this place mean to you?</h2>
+
+<h2 class="q" id="q3"><span class="n">03</span> What does this place mean to you?</h2>
+
 <p><strong class="sp">Dave:</strong> A lot. I consider myself incredibly lucky to have ended up here, and that Rob has let this happen. To have this much creative freedom in making our workplaces and homes is really rare. It's an idea he's built as he's gone along. But that generosity of spirit was there from the start.</p>
+
 <p><strong class="sp">Lisa:</strong> And the way he's included us in the decision-making and the vision and the future of the place. We've been on the journey with him from the very beginning. We were all such different people back then. It's all been made possible by his generosity, his vision, and his fearlessness in fighting for it. It's a social experiment in lots of ways, but it just makes so much sense. Everybody who comes here is blown away by it. But it's only like this because we've made it like this - a lot of work, a lot of labour, a lot of dedication to what this place could become, and to what should be accepted as normal. If we'd been on our own, maybe we'd all have backed down when times got hard. But because Rob backed us collectively, we stuck with it.</p>
+
 <p><strong class="sp">Dave:</strong> Because we'd all lived such transient lives, it's funny how we coalesced here, and how the transients dug in and it became something permanent, worth fighting for. Before, we'd all have just moved on at the first sign of trouble.</p>
-<h2 class="q" id="q4"><span class="n">04</span>What&#x27;s unique about being here?</h2>
+
+<h2 class="q" id="q4"><span class="n">04</span> What&#x27;s unique about being here?</h2>
+
 <p><strong class="sp">Lisa:</strong> Everything. One of the main things is that Rob, who owns the land, has made us feel we have ownership of it - not in a territorial way, but that we're really involved and valued, our opinions and our contribution. In conventional terms that's a really unusual landlord-tenant relationship. It's always been clear that's not the role he wants. He's been fortunate enough to buy this land and he's wanted to gift that onwards. That's let us make this place ours, knowing he's happy for us to be here for the rest of our lives. That safety and security - knowing he had our backs even when we all feared we'd be evicted - is something I've never had in any living situation. I'm a craftsperson and an artist and I don't earn enough to have ever considered buying my own place, and my family can't support me financially.</p>
+
 <p><strong class="sp">Dave:</strong> The money side really matters. Rob let us be here for a very low rent. We've both got businesses, like various other people here, and otherwise we just couldn't afford it - especially not living in the same place as the business. That gave us huge freedom.</p>
+
 <p><strong class="sp">Lisa:</strong> And it's not for lack of trying. We've got successful businesses. Lots of my fellow artists would look at me and think, she's a successful artist. And I still couldn't afford to live in Cornwall. The artists round here who own homes are mostly supported by family or partners with "proper jobs". I have a proper job. We both work full-time, we put the hours in, and it would still be a real struggle to live and work here.</p>
+
 <p>The other big thing has been Rob's climate activism, which came into the ethos of the community quite early on. It helped us follow what we already believed in: living low-impact, leaving a small footprint, being as economical as we can in our lives and our work. Why would we live in the town six miles away and drive in every day? Being able to live with that mindset is amazing.</p>
-<h2 class="q" id="q5"><span class="n">05</span>Is this the future you were dreaming of?</h2>
+
+<h2 class="q" id="q5"><span class="n">05</span> Is this the future you were dreaming of?</h2>
+
 <p><strong class="sp">Dave:</strong> I think it is. I surprise myself, but every now and then I look back at what I might have thought when I was younger, and it'd be hard to get something better than this. It's built itself out of happenstance and coincidence.</p>
+
 <p><strong class="sp">Lisa:</strong> And our hard work.</p>
+
 <p><strong class="sp">Dave:</strong> And hard work. And poo.</p>
+
 <p><strong class="sp">Lisa:</strong> Masses of poo.</p>
+
 <p><strong class="sp">Dave:</strong> As Lisa said, living here, with Rob and his concerns, has turned us into environmentalists and permaculturists, just from the practicalities driving you that way. The composting and building soil came from needing a toilet. We're in a field, there's no toilet - what do we do? And that became an absolute obsession.</p>
+
 <p><strong class="sp">Lisa:</strong> But it also just makes total sense that we should be responsible for our own waste. Society has normalised this disconnect from our waste, and it's one of the causes of the climate crisis. It shouldn't be a radical thing. It's only our grandparents' generation - a lot of them had a toilet in an outhouse at the end of the garden and could see where their poo went. In that short time it's been forgotten, and now we flush it into the sea with our drinking water.</p>
+
 <p><strong class="sp">Dave:</strong> In America there were two models of toilet competing commercially - the earth closet and the water closet. It's all in Joseph Jenkins's book. It could have gone the other way.</p>
+
 <p><strong class="sp">Lisa:</strong> I understand that sewers got rid of a lot of disease. But it was definitely one of the biggest squeamish hang-ups the officials had in our planning case - they were really worried we'd be irresponsible.</p>
-<h2 class="q" id="q6"><span class="n">06</span>What&#x27;s hard about being here?</h2>
+
+<h2 class="q" id="q6"><span class="n">06</span> What&#x27;s hard about being here?</h2>
+
 <p><strong class="sp">Dave:</strong> Rough tracks, destroying our vehicles.</p>
+
 <p><strong class="sp">Lisa:</strong> Which we don't really want anyway.</p>
+
 <p><strong class="sp">Dave:</strong> But we've got to have them. And water security is always a thing. There's a borehole and the quarry pool, but aquifers all over the country are drying up. The garden dries out quickly because the soil is so thin and free-draining through the granite, so we're always working on water retention. I'm building a grey water system so all the water from the house goes into the garden - use it as many times as you can, instead of once.</p>
+
 <p><strong class="sp">Lisa:</strong> But honestly, it's hard to think of hard things. There's more physical labour in this way of life, but it doesn't feel hard - it's part of what we've chosen. It's an incredibly attractive place and lifestyle, and it's attracting interest, which helps us and what we do. The hardships are really overpowered by the good things. But it's only like this because we went through the hard times of fighting to be here. Being able to settle and put our roots down is a huge relief. That's a really big emotion for me, being here.</p>
-<h2 class="q" id="q7"><span class="n">07</span>What&#x27;s something you love?</h2>
+
+<h2 class="q" id="q7"><span class="n">07</span> What&#x27;s something you love?</h2>
+
 <p><strong class="sp">Dave:</strong> It feels like I've already said it all, really.</p>
+
 <p><strong class="sp">Lisa:</strong> For me it's intertwined with my work, which is a huge passion as well as my job: traditional blacksmithing and metalworking. I love doing it, promoting it, teaching it, sharing it - and that's come out of this place too. Being able to reach a wider community because of what we've done here. But we also love music, playing music, reading and learning.</p>
+
 <p><strong class="sp">Dave:</strong> We read a lot.</p>
+
 <p><strong class="sp">Lisa:</strong> Hours every day. That's our entertainment instead of television. We love cycling and eating well. I think we do life pretty well, don't you?</p>
+
 <p><strong class="sp">Dave:</strong> It's okay.</p>
+
 <p><strong class="sp">Lisa:</strong> It's pretty cushy. It's very enviable for a lot of people - but it's not the way a lot of people would want to live.</p>
+
 <p><strong class="sp">Dave:</strong> It's funny - sometimes people visit and we feel we're living in the height of luxury, in utter privilege. But if you're used to a more convenient world, I suppose we look like peasants living in hardship. When you see someone thinking that, it's strange. But it puts it back in context, because it can be a bit of a bubble here, as all communities are.</p>
-<h2 class="q" id="q8"><span class="n">08</span>Do you feel like you&#x27;re in a bubble?</h2>
+
+<h2 class="q" id="q8"><span class="n">08</span> Do you feel like you&#x27;re in a bubble?</h2>
+
 <p><strong class="sp">Dave:</strong> It's an expanding bubble. Even locally there are more like-minded people - or we're discovering them - and the network grows, and you discover more places all over the country. So it's an expanding bubble, or lots of little bubbles. And hopefully enough people can move towards hope rather than hate.</p>
-<h2 class="q" id="q9"><span class="n">09</span>Anything you&#x27;d like to say to the people of the world?</h2>
-<p><strong class="sp">Lisa:</strong> To people I've talked to who are thinking of breaking out of the rat race and conventional society, I say: just jump and do it, and be poor and happy. I think there's a lot more happiness in this kind of life than in striving for money and wealth and property. Not that there's happiness in poverty - that's different. But you can be poor and happy, poor and fulfilled, perhaps even more than if you were wealthy. That's just my own wisdom. It might not be true. But it's been my experience.</p></article>
-<footer class="end"><span>This Was Tomorrow · Enrico Policardo</span><a href="/sites/trevone-quarry/">Back to Trevone Quarry</a></footer>
-</div></body></html>
+
+<h2 class="q" id="q9"><span class="n">09</span> Anything you&#x27;d like to say to the people of the world?</h2>
+
+<p><strong class="sp">Lisa:</strong> To people I've talked to who are thinking of breaking out of the rat race and conventional society, I say: just jump and do it, and be poor and happy. I think there's a lot more happiness in this kind of life than in striving for money and wealth and property. Not that there's happiness in poverty - that's different. But you can be poor and happy, poor and fulfilled, perhaps even more than if you were wealthy. That's just my own wisdom. It might not be true. But it's been my experience.</p>

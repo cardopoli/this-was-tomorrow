@@ -32,7 +32,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/fi-garrard/">Read the conversation</a> &middot; <a href="/transcripts/fi-garrard/fi-garrard.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/fi-garrard/">Read the conversation</a> &middot; <a href="/transcripts/fi-garrard/fi-garrard.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/o1j2rglpwy22g7iq3fgoh/AOqJWVR-l4OL4OV15hMgeV4?rlkey=e37w0ouzvmjmxourecwixrkcx&dl=0
 body_after: |-
   ## What's being built

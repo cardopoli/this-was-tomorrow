@@ -25,7 +25,7 @@ body_intro: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/paul-brannigan/">Read the conversation</a> &middot; <a href="/transcripts/paul-brannigan/paul-brannigan.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/paul-brannigan/">Read the conversation</a> &middot; <a href="/transcripts/paul-brannigan/paul-brannigan.pdf" download>Download PDF</a></p>
 
   ## Crown Street, Hebden Bridge
 
@@ -90,7 +90,7 @@ slug: calder-valley
 
 </div>
 
-<p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/danielle/">Read the conversation</a> &middot; <a href="/transcripts/danielle/danielle.pdf" download>Download PDF</a></p>
+<p class="twt-transcript-link"><a class="twt-read" href="/transcripts/danielle/">Read the conversation</a> &middot; <a href="/transcripts/danielle/danielle.pdf" download>Download PDF</a></p>
 
 CVCLT’s first property in Hebden Bridge: a property purchased from a CLT member at below market cost in April 2024 using Homes England grant funding and a zero percent mortgage from the seller. Refurbished and retrofitted to Decent Homes standard, and let to a local family at a social rent. Danielle is the tenant.
 

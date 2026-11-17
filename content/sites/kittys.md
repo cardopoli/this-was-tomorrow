@@ -40,7 +40,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/bryn/">Read the conversation</a> &middot; <a href="/transcripts/bryn/bryn.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/bryn/">Read the conversation</a> &middot; <a href="/transcripts/bryn/bryn.pdf" download>Download PDF</a></p>
 
   Kitty's is a workers' community co-operative. Nine staff, all local people, all co-operative members. The structure is flat - all work is valued equally, all workers paid the same hourly wage, the Real Living Wage. Nobody manages anybody else in the traditional sense. The model was chosen deliberately: to reflect the needs of both workers and the wider community, rather than extracting value from either.
 
@@ -73,7 +73,7 @@ body_after: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/anthony/">Read the conversation</a> &middot; <a href="/transcripts/anthony/anthony.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/anthony/">Read the conversation</a> &middot; <a href="/transcripts/anthony/anthony.pdf" download>Download PDF</a></p>
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/83voh0lwh6ryttchul7pb/AE0pvDv02F1EfQ5iyGRZo0A?rlkey=r5g6pc519qcmgv86ssngiv6oh&dl=0
 audio: []
 sources: []

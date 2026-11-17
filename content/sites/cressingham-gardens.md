@@ -37,7 +37,7 @@ body_intro: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/andy-and-elizabeth/">Read the conversation</a> &middot; <a href="/transcripts/andy-and-elizabeth/andy-and-elizabeth.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/andy-and-elizabeth/">Read the conversation</a> &middot; <a href="/transcripts/andy-and-elizabeth/andy-and-elizabeth.pdf" download>Download PDF</a></p>
 dropbox_gallery: https://www.dropbox.com/scl/fo/styjydduoyfwlfv5me0fo/AADfs4kAGpusa8a4vIZ4dCU?rlkey=f0wk85ul2vzkhlhpm9r0lalxj&dl=0
 body_middle: |-
   ## WHY IT MATTERS – THEN AND NOW

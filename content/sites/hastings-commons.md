@@ -33,7 +33,7 @@ body_intro: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/jess-steele/">Read the conversation</a> &middot; <a href="/transcripts/jess-steele/jess-steele.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/jess-steele/">Read the conversation</a> &middot; <a href="/transcripts/jess-steele/jess-steele.pdf" download>Download PDF</a></p>
 
   In 2014, Jess Steele (via her company [Jericho Road Solutions](https://www.jerichoroad.co.uk/)) partnered with Meanwhile Space CIC to establish [Hastings Commons Neighbourhood Ventures (HCNV)](https://hastingscommons.com/), acquiring Rock House – a derelict building in the White Rock conservation area – for £230,000. What followed was a deliberate risk: in 2018, when Rock House was valued at £1.6 million, they mortgaged it to buy the adjoining derelict Observer Building, without sight of the many millions of pounds it would take to renovate. By 2024, they had brought 8,500 square metres of derelict space back to life.
 dropbox_gallery: https://www.dropbox.com/scl/fo/bnc5x98ncccxlq7f21lwo/ALH0aZpNjMjpwHFuy7zI04o?rlkey=ho9k7rd328x0dihag2ljreuvj&dl=0

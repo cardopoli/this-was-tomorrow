@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="transcript" data-transcript>
+  <div class="transcript-kicker"><a href="{{ .Params.site_page }}">{{ .Params.site }}</a> / Conversation</div>
+  <h1>{{ .Title }}</h1>
+  <div class="meta">{{ .Params.role }}<br>In conversation with {{ .Params.interviewer }} · {{ .Params.place }} · {{ .Params.date_label }}</div>
+  <div class="transcript-actions">
+    <a href="{{ .Params.pdf }}" download>Download PDF</a>
+    <a href="{{ .Params.site_page }}" class="transcript-listen">Listen on the site page</a>
+  </div>
+  <p class="transcript-note">{{ .Params.note }}</p>
+  <div class="transcript-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

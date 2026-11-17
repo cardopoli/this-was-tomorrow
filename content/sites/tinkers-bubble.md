@@ -29,7 +29,7 @@ body_intro: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/cameron-and-meg/">Read the conversation</a> &middot; <a href="/transcripts/cameron-and-meg/cameron-and-meg.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/cameron-and-meg/">Read the conversation</a> &middot; <a href="/transcripts/cameron-and-meg/cameron-and-meg.pdf" download>Download PDF</a></p>
 
   The community was founded by a group of 10 friends, including former Ecologist editor Simon Fairlie, who shared a vision of a place where people could live and work in harmony with the land. The site comprises approximately 28 acres of managed woodland (mostly Douglas fir and larch but with patches of native species such as ash trees) and 14 acres of orchard and pasture. The woodland provides the fuel for cooking, space and water-heating. A wind-generator and solar panels provide electricity for lighting, music and laptops. Much of the pasture is maintained traditionally using scythes for hay-making.
 dropbox_gallery: https://www.dropbox.com/scl/fo/d1x23gmyx8qc4yz4jh56a/ABAx6x2zOPwOhz2JkrCHV0k?rlkey=7n34w64swc6wlfeszf1b4550u&dl=0
@@ -46,7 +46,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/ree/">Read the conversation</a> &middot; <a href="/transcripts/ree/ree.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/ree/">Read the conversation</a> &middot; <a href="/transcripts/ree/ree.pdf" download>Download PDF</a></p>
 
   Over the years the community has tended a range of livestock, including cows, goats, horses, pigs, sheep and poultry. They currently keep horses, chickens and ducks. They grow their own food and manage around 28 acres of woodland, creating their own fuel. Tinkers Bubble produce organic apple juice, cider and cider vinegar which they sell to local shops and at events. They also sell sustainably produced timber which is felled by hand, logged by horse and sawn by a wood-fired steam-engine driven sawmill. The monthly contribution of around £120 for each person covers the community's shared costs.
 

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="transcript-index">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.description }}</p>
+  <h2>All conversations</h2>
+  <ul class="transcript-list">
+    {{ range .Pages.ByParam "site" }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span>{{ .Params.site }}</span></li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

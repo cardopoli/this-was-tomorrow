@@ -32,7 +32,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/naomi-cull/">Read the conversation</a> &middot; <a href="/transcripts/naomi-cull/naomi-cull.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/naomi-cull/">Read the conversation</a> &middot; <a href="/transcripts/naomi-cull/naomi-cull.pdf" download>Download PDF</a></p>
 
   _Note: At the time of recording this interview the organisation was still called Homebaked CLT. Its name changed to Two Up Two Down the following month._
 
@@ -71,7 +71,7 @@ body_middle: |-
 
   </div>
 
-  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/tom-murphy/">Read the conversation</a> &middot; <a href="/transcripts/tom-murphy/tom-murphy.pdf" download>Download PDF</a></p>
+  <p class="twt-transcript-link"><a class="twt-read" href="/transcripts/tom-murphy/">Read the conversation</a> &middot; <a href="/transcripts/tom-murphy/tom-murphy.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: ''
 body_after: |-
   ## The Model

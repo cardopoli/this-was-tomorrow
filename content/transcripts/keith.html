@@ -1,85 +1,95 @@
-<!doctype html><html lang="en-gb"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keith in conversation · This Was Tomorrow</title><style>
-@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-@font-face { font-family:'AGProExt'; src:url('/fonts/akzidenzgroteskpro_ext.woff2') format('woff2'); }
-@font-face { font-family:'FreeMono'; src:url('/fonts/FreeMono.otf') format('opentype'); }
-:root { --bg:#f7f5f0; --text:#111; --muted:#666; --rule:#ccc; --green:#077533; --cut:#c0391b;
-  --wide:'AGProExt', Arial, sans-serif; --mono:'FreeMono', 'Courier New', monospace; --serif:'Averia Serif Libre', Georgia, serif; }
-* { box-sizing:border-box; margin:0; padding:0; }
-html { background:var(--bg); color:var(--text); }
-body { font-family:var(--serif); font-weight:300; font-size:18px; line-height:1.62; -webkit-font-smoothing:antialiased; }
-a { color:inherit; text-underline-offset:3px; }
-.wrap { max-width:720px; margin:0 auto; padding:0 22px; }
-.top { padding:44px 0 26px; border-bottom:2px solid var(--text); margin-bottom:44px; }
-.top .brand { font-family:var(--wide); font-weight:700; text-transform:uppercase; letter-spacing:-1px; font-size:22px; line-height:.95; text-decoration:none; }
-.crumb { font-family:var(--mono); font-size:11px; letter-spacing:1px; color:var(--muted); margin-top:14px; }
-.crumb a { text-decoration:none; } .crumb a:hover { color:var(--text); }
-h1 { font-family:var(--wide); font-weight:700; text-transform:uppercase; letter-spacing:-1.5px; line-height:.92; font-size:clamp(40px,8vw,72px); }
-.role { font-family:var(--wide); font-style:italic; font-size:clamp(17px,2.4vw,22px); margin-top:12px; }
-.meta { font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:18px; line-height:1.7; }
-.actions { display:flex; gap:18px; flex-wrap:wrap; align-items:center; margin:30px 0 8px; font-family:var(--mono); font-size:13px; }
-.btn { display:inline-flex; align-items:center; gap:10px; background:var(--text); color:var(--bg); text-decoration:none; padding:11px 18px; border-radius:999px; }
-.btn:hover { background:var(--green); }
-.note { font-style:italic; color:var(--muted); font-size:15px; margin:26px 0 48px; max-width:36em; }
-.q { font-family:var(--wide); font-weight:400; font-size:16px; line-height:1.3; letter-spacing:-.1px; margin:52px 0 16px; display:flex; gap:14px; max-width:34em; }
-.q .n { font-family:var(--mono); font-size:11px; color:var(--green); padding-top:4px; flex:none; }
-p { margin:0 0 1.05em; max-width:34em; hanging-punctuation:first; }
-.sp { font-family:var(--wide); font-weight:700; font-size:.72em; text-transform:uppercase; letter-spacing:.2px; margin-right:.35em; }
-.gap { font-family:var(--mono); font-size:.8em; color:var(--muted); white-space:nowrap; }
-del.cut { text-decoration:line-through; text-decoration-color:var(--cut); color:#7b2a17; background:rgba(192,57,27,.07); }
-.why { display:block; font-family:var(--mono); font-size:11.5px; line-height:1.45; color:var(--cut); background:#fff; border-left:2px solid var(--cut); padding:7px 10px; margin:8px 0; }
-.review-bar { position:sticky; top:0; z-index:5; background:var(--cut); color:#fff; font-family:var(--mono); font-size:12px; padding:9px 22px; text-align:center; }
-.end { border-top:2px solid var(--text); margin:64px 0 0; padding:18px 0 60px; font-family:var(--mono); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
-@media (max-width:600px) { body { font-size:17px; } .q { font-size:15px; margin-top:42px; } .top { padding-top:28px; } }
-</style></head><body>
-<div class="wrap">
-<header class="top"><a class="brand" href="/">This Was<br>Tomorrow</a>
-<div class="crumb"><a href="/sites/lilac/">LILAC</a> / Conversation</div></header>
-<h1>Keith</h1>
-<div class="role">Resident at LILAC</div>
-<div class="meta">In conversation with Enrico Policardo<br>LILAC, Leeds · 14/05/2026 · 16 questions</div>
-<div class="actions"><a class="btn" href="keith.pdf" download>Download PDF <span aria-hidden="true">↓</span></a><a href="/sites/lilac/">Listen on the site page</a></div>
-<p class="note">Edited for reading - tidied, shortened and with some personal details taken out. Cuts are marked […].</p>
-<article><h2 class="q" id="q1"><span class="n">01</span>Who are you, and what do you do here?</h2>
+---
+title: "Keith"
+layout: transcript
+role: "Resident at LILAC"
+site: "LILAC"
+place: "Leeds"
+date_label: "14/05/2026"
+interviewer: "Enrico Policardo"
+site_page: "/sites/lilac/"
+pdf: "/transcripts/keith/keith.pdf"
+questions: 16
+note: "Edited from the recorded conversation."
+description: "Keith in conversation - LILAC, This Was Tomorrow"
+---
+<h2 class="q" id="q1"><span class="n">01</span> Who are you, and what do you do here?</h2>
+
 <p>I'm Keith. I'm a resident - I've been here just over ten years. So I'm not one of the originals, really. I did apply before it was built, but I didn't get in then, so I had to apply a few more times. In between I got involved in a couple of other co-housing projects, trying to get them going. I mostly love it. It has its frustrations, as I'm sure you can imagine, but mostly it feels like a really good place.</p>
-<h2 class="q" id="q2"><span class="n">02</span>How would you describe it to someone with no idea?</h2>
+
+<h2 class="q" id="q2"><span class="n">02</span> How would you describe it to someone with no idea?</h2>
+
 <p>It's a co-housing project - a type of intentional community - where we have our own flats or houses, but we also try to share. There's a common house where we meet and eat together regularly. We encourage car sharing, we have a laundry and a workshop, things like that.</p>
+
 <p>This co-housing model runs on something called mutual home ownership, which is a type of co-op. LILAC stands for Low Impact Living Affordable Community. The "affordable" bit is in our financial model: we try to keep it relatively affordable - it's not affordable to everyone - and the cost of living here goes down relative to the property market over time. That's already happened since it was built thirteen years ago. It's relatively cheaper now than local housing.</p>
-<h2 class="q" id="q3"><span class="n">03</span>How does the money work?</h2>
+
+<h2 class="q" id="q3"><span class="n">03</span> How does the money work?</h2>
+
 <p>You pay 35% of your net income, monthly, after tax. We're a housing co-op in which you build up equity over time, and when you leave you get some of that equity back. We have one mortgage, and you never own the property, but you own equity in the co-op. Your 35% partly goes on what we call the house charge - maintenance, insurance - and the rest pays off the mortgage. If you're what's called a high earner, part of it pays off the mortgage quicker and part goes into reserves.</p>
+
 <p>The equity units aren't linked to the property market - they're linked to about three-quarters of wage inflation. It came up just the other week: since LILAC started, our equity units have gone up about 23%, while local house prices have gone up something like 60%, and local private rents over 80%. So even in thirteen years we've become a relatively cheaper place to live. And that's part of our long-term vision.</p>
-<h2 class="q" id="q4"><span class="n">04</span>What makes this place special to you?</h2>
+
+<h2 class="q" id="q4"><span class="n">04</span> What makes this place special to you?</h2>
+
 <p>Part of it is the political act of living here - the political vision. The sustainability, the affordability and the community are all important to me, and it does feel like a political act to live here. I think we could do more outreach, but we hold learning days, and we'd love to see more of this kind of project happening, and we do a bit to support that.</p>
+
 <p>And it's a lovely physical space. We're lucky to have such low housing density. I've lived in the flats, so I didn't have a garden until very recently - we just moved to a downstairs flat - but there's lots of lovely space: allotments, and a little pocket park the neighbourhood uses. It mostly works really well as a community. I love its intergenerational side. When we're recruiting, we try to make sure we bring in young people, and people with a real housing need.</p>
-<h2 class="q" id="q5"><span class="n">05</span>How do you make decisions?</h2>
+
+<h2 class="q" id="q5"><span class="n">05</span> How do you make decisions?</h2>
+
 <p>Again, I'm no expert, but it's close to something called sociocracy. Major decisions are made by consensus in practice. In theory, if we can't reach consensus after three general meetings of all members, we can go to a majority vote - but I don't think that's ever happened. Not all decisions come to general meetings. We have task teams with delegated budgets and decision-making: maintenance, finance, process, landscape, secretary, common house, food. Most have a spokesperson on what's called the hub, which has a sort of oversight role - it's as close to a board as we get. But anything contentious comes to the whole membership.</p>
-<h2 class="q" id="q6"><span class="n">06</span>What counts as contentious?</h2>
+
+<h2 class="q" id="q6"><span class="n">06</span> What counts as contentious?</h2>
+
 <p>Anything seen as changing our vision and values, or beyond the budget of the team looking at it, is a major decision. One ongoing question is whether to extend the common house. When LILAC was set up, it tried hard to be affordable, and the common house was maybe squeezed a bit too hard on budget. There's a feeling the dining room and kitchen don't work very well and could be bigger and better laid out. We probably eat together a bit less than the original vision, but there's a chance to eat together at least once a week, often two or three times. The other weekend we had five or six meals together - but that was a busy weekend.</p>
-<h2 class="q" id="q7"><span class="n">07</span>What&#x27;s great about being here, and what&#x27;s hard?</h2>
+
+<h2 class="q" id="q7"><span class="n">07</span> What&#x27;s great about being here, and what&#x27;s hard?</h2>
+
 <p>Covid showed how nice it is to be here - the support we got from each other, how we handled different people's vulnerabilities. That intergenerational thing feels really great to me.</p>
+
 <p>On the negative side, the workshop is where the idea of the commons is at its worst. Mostly it works well enough, but it can be really frustrating - you can't find the tools you want, it's a mess. It's a carpentry workshop with power tools and a workbench; there's a tool store on the allotments for garden tools. We do our own maintenance where we can, though often we need a contractor. And every month there's a "tend and mend" community day, for landscaping and building maintenance, and people are expected to try to come.</p>
-<h2 class="q" id="q8"><span class="n">08</span>Do you think about people&#x27;s skills when recruiting?</h2>
+
+<h2 class="q" id="q8"><span class="n">08</span> Do you think about people&#x27;s skills when recruiting?</h2>
+
 <p>We have a work-share agreement now, which makes clear - especially to new members - what's expected of them. There's a massive range in people's skills and their ability and time to contribute, and we live with that. We hope people will do what's reasonable for them. If you've just had a baby, obviously that's different. We don't recruit for particular skills. It probably happens subtly, but it isn't an agreed intention.</p>
+
 <p>It's within our vision and values to be as diverse as we can. How good we are at actually achieving that is probably not for us to answer. I suspect we could be doing better. But it's not that easy to know exactly how.</p>
-<h2 class="q" id="q9"><span class="n">09</span>What&#x27;s changed, in you and in the community, since you moved in?</h2>
+
+<h2 class="q" id="q9"><span class="n">09</span> What&#x27;s changed, in you and in the community, since you moved in?</h2>
+
 <p>In myself, I think I've developed more emotional intelligence. There's enough space to be on your own when you want - there are introverts here - but you're making decisions with people when you don't always find it easy, and you have to find a way. It helps you manage your relationships better. At a personal level, that's a positive.</p>
+
 <p>When I moved in it was still pretty new. Now it feels established and quite secure - hopefully without complacency. The people who set it up, and even those of us who came a bit after, felt a bit like pioneers, and some of that has gone. I'm not saying whether that's good or bad. And there's probably a bit more spread in people's values now.</p>
-<h2 class="q" id="q10"><span class="n">10</span>What could be taken from this model and reproduced elsewhere?</h2>
+
+<h2 class="q" id="q10"><span class="n">10</span> What could be taken from this model and reproduced elsewhere?</h2>
+
 <p>There are quite a lot of co-housing projects with a common house and so on. For me, the pioneering bit is the affordability - this financial model, or some other one that makes it affordable. I think Paul would say he'd hoped by now there'd be a whole network of mutual home ownership schemes around the country. That's never happened, partly because co-housing projects are just bloody hard work to set up. I've been in two that didn't make it. Some groups aren't strong enough. Some fall apart over choosing a site. My advice to a forming group would be: don't be afraid to split over the site if you need to, because I don't think you ever get consensus on that.</p>
+
 <p>And costs have gone crazy. LILAC happened just after the financial crash, when land was cheap. Building costs are nearly three times higher now - just the materials. So the scale of it has gone sky-high. The only other project I know of trying something similar is Chapeltown Cohousing, also in Leeds, which has a variable ownership model: you can go from ninety-something per cent ownership down to zero, renting, or anything in between. Again, it's about making it accessible to a spread of people.</p>
-<h2 class="q" id="q11"><span class="n">11</span>Do you think the north does community better?</h2>
+
+<h2 class="q" id="q11"><span class="n">11</span> Do you think the north does community better?</h2>
+
 <p>Possibly. I've visited a few northern co-housing projects, but only one in the south. Two things I'd say about why this one works. First, it was fully recruited before building started. A small team got the idea going and found the site, but once it looked like it would happen, it filled up before construction. So that group had a year and a half or so to form as a community and agree their rules before they moved in. They were probably as close-knit then as at any point since.</p>
+
 <p>Second, the financial model means you have to work together more. In some co-housing projects, homes are individually owned and people sell at market price, and that dictates who moves in. People who live in some of those have told me you have little control over who comes, it's harder to build community, and in some cases they've almost become privately let. So the financial model supports the community - you're in it together. And it helps keep the values, because the values are part of the project.</p>
-<h2 class="q" id="q12"><span class="n">12</span>Is this the future you were dreaming of?</h2>
-<p>In terms of this place, it's pretty close. But the rest of the world feels like it's going to pot, and housing - <span class="gap" title="Cut for privacy">[…]</span> what's going on in Leeds, and it's just shocking. So the part of the dream that hasn't happened yet - and hopefully still will - is a bigger network of this type of housing. It feels so needed, at all three levels it was set up for. We desperately need more sense of community, we need eco-housing, and we definitely need better affordability. This provides all three, within some limits. It would be so good to see a lot more of it.</p>
-<h2 class="q" id="q13"><span class="n">13</span>What&#x27;s your relationship with the neighbourhood?</h2>
+
+<h2 class="q" id="q12"><span class="n">12</span> Is this the future you were dreaming of?</h2>
+
+<p>In terms of this place, it's pretty close. But the rest of the world feels like it's going to pot, and housing - <span class="gap">[…]</span> what's going on in Leeds, and it's just shocking. So the part of the dream that hasn't happened yet - and hopefully still will - is a bigger network of this type of housing. It feels so needed, at all three levels it was set up for. We desperately need more sense of community, we need eco-housing, and we definitely need better affordability. This provides all three, within some limits. It would be so good to see a lot more of it.</p>
+
+<h2 class="q" id="q13"><span class="n">13</span> What&#x27;s your relationship with the neighbourhood?</h2>
+
 <p>As an entity, there used to be a wider community task team, and open days, and the common house was used by a local community group. It's still a polling station. Some of that has fallen away - Covid killed some of it. There's talk of traffic calming round here, and we're sometimes seen as the people pushing for it, so there's a bit of antagonism from some people. But mostly our relationship with the neighbourhood is down to individuals. People here are parents, some have been school governors. Several of us are or have been involved in Kirkstall Valley Farm, and various other initiatives. We've talked about doing more, and in many ways it would be good. But running this place is a big job in itself, so there's a capacity issue.</p>
-<h2 class="q" id="q14"><span class="n">14</span>What makes you really happy?</h2>
+
+<h2 class="q" id="q14"><span class="n">14</span> What makes you really happy?</h2>
+
 <p>Doing practical jobs with a group of other people. I really enjoy something like the tend and mend days - you're doing something useful, chatting to whoever you're working with, and then here we have a shared lunch. That combination of socialising and doing something practical is one of the things that makes me happiest.</p>
-<h2 class="q" id="q15"><span class="n">15</span>Anything else you&#x27;d like to say?</h2>
+
+<h2 class="q" id="q15"><span class="n">15</span> Anything else you&#x27;d like to say?</h2>
+
 <p>For me it's been predominantly a wonderful experience living here. I think it's a real shame it's not being adopted more widely. Friends say, oh, it's lovely, but I could never live here. But there's enough space and range here to suit an awful lot of different people - a mix of introverts and extroverts, people with different interests. So don't be scared of the idea.</p>
-<h2 class="q" id="q16"><span class="n">16</span>Do you think the nuclear family as the model of success holds people back?</h2>
+
+<h2 class="q" id="q16"><span class="n">16</span> Do you think the nuclear family as the model of success holds people back?</h2>
+
 <p>It puts so much strain on the family. We've lost so much community, and so many people live far from the rest of their family, that the nuclear family can be a hotpot of turmoil. Here, sometimes it can feel intrusive, but on the whole there's a whole load of support. I'm middle class, but historically I think that kind of community happened more in working-class areas - and it's fallen away in a lot of those places too.</p>
-<p>And one of the smaller advantages here: between twenty households we've got about eight or nine cars, five washing machines and two lawnmowers. It just makes sense. It saves resources, and it saves money.</p></article>
-<footer class="end"><span>This Was Tomorrow · Enrico Policardo</span><a href="/sites/lilac/">Back to LILAC</a></footer>
-</div></body></html>
+
+<p>And one of the smaller advantages here: between twenty households we've got about eight or nine cars, five washing machines and two lawnmowers. It just makes sense. It saves resources, and it saves money.</p>
