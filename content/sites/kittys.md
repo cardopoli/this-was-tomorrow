@@ -40,6 +40,8 @@ body_middle: |-
 
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/bryn/">Read the conversation</a> &middot; <a href="/transcripts/bryn/bryn.pdf" download>Download PDF</a></p>
+
   Kitty's is a workers' community co-operative. Nine staff, all local people, all co-operative members. The structure is flat - all work is valued equally, all workers paid the same hourly wage, the Real Living Wage. Nobody manages anybody else in the traditional sense. The model was chosen deliberately: to reflect the needs of both workers and the wider community, rather than extracting value from either.
 
   The launderette runs affordable, eco-friendly washing and drying services. All machines are electric, powered by 100% renewable electricity. But the laundry is almost beside the point. The space has tea and coffee, free Wi-Fi, computer access, a community notice board. Film screenings are timed to last exactly as long as a wash and dry cycle. There are story-telling sessions for children, quiz nights, live music, knitting groups, language clubs, social history projects. It is warm and open and free to walk into.
@@ -70,6 +72,8 @@ body_after: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/q6yz8f95lman8loj4fpmi/19052026_Anthony_KIttys-Anfield-Liverpool_TWT-AUDIO_128kbps.mp3?rlkey=quky9fj99585c7s00dw2oiqn6&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/anthony/">Read the conversation</a> &middot; <a href="/transcripts/anthony/anthony.pdf" download>Download PDF</a></p>
 dropbox_gallery_3: https://www.dropbox.com/scl/fo/83voh0lwh6ryttchul7pb/AE0pvDv02F1EfQ5iyGRZo0A?rlkey=r5g6pc519qcmgv86ssngiv6oh&dl=0
 audio: []
 sources: []

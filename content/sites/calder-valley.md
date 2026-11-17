@@ -25,6 +25,8 @@ body_intro: |-
 
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/paul-brannigan/">Read the conversation</a> &middot; <a href="/transcripts/paul-brannigan/paul-brannigan.pdf" download>Download PDF</a></p>
+
   ## Crown Street, Hebden Bridge
 
   Two council flats in the centre of Hebden Bridge, empty for nine years. Originally tied housing - accommodation that came with certain public sector jobs, a model that has largely disappeared. Both flats are dry, bright and structurally sound. Windows are to be replaced and the properties brought to current thermal and energy efficiency standards. The plan is to bring them back as housing for refugees.
@@ -87,6 +89,8 @@ slug: calder-valley
   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/e5yajsfwm7540w1i399yn/Danielle_13052026_TWT_Calder-Valley-CLT_128kbps.mp3?rlkey=jwlpvc6ods1ikgheey19ntrv3&raw=1"></audio>
 
 </div>
+
+<p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/danielle/">Read the conversation</a> &middot; <a href="/transcripts/danielle/danielle.pdf" download>Download PDF</a></p>
 
 CVCLT’s first property in Hebden Bridge: a property purchased from a CLT member at below market cost in April 2024 using Homes England grant funding and a zero percent mortgage from the seller. Refurbished and retrofitted to Decent Homes standard, and let to a local family at a social rent. Danielle is the tenant.
 

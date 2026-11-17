@@ -56,6 +56,8 @@ body_middle: |-
 
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/rob-higgs/">Read the conversation</a> &middot; <a href="/transcripts/rob-higgs/rob-higgs.pdf" download>Download PDF</a></p>
+
   ## Temperate rainforest
 
   The woodland at Trevone is temperate rainforest. This is not a metaphor or an aspiration - it is a classification, one of the rarest habitat types in the UK and globally. Rob had bought an oak forest without quite knowing what he had.
@@ -78,6 +80,8 @@ body_after: |-
   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/s1ziyus0zdxs2v07a91rh/AUDIO-TWT-AUDIO-TREVONE-Oli.mp3?rlkey=gh7ltm9u0xu18rx5bmxwzzykl&raw=1"></audio>
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/oli-sword/">Read the conversation</a> &middot; <a href="/transcripts/oli-sword/oli-sword.pdf" download>Download PDF</a></p>
+
   Sophie Miller has been here six years, since her late forties. Trained in theatre, then art, then activism. Has children. The adjustment was real.
 
   <div class="audio-track" data-twt-bg="#809fff" data-twt-fg="#000" data-twt-pad="14px 18px" data-twt-btn-size="14px" data-twt-time-size="11px" data-twt-show-timer="1">
@@ -87,6 +91,8 @@ body_after: |-
   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/hf74jsqayjwodz10j12d7/AUDIO-TWT-AUDIO-TREVONE-Sophie.mp3?rlkey=j225du6rug4hp2givsk2o3orz&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/sophie-miller/">Read the conversation</a> &middot; <a href="/transcripts/sophie-miller/sophie-miller.pdf" download>Download PDF</a></p>
 
   "This year we had 56 days of solid rain in the winter and that was really hard. Just the relentlessness of it. At the beginning it's beautiful down in the woods when it rains, it really is lovely. And you can have that and you can also have every fucking thing is wet and everyone's stuff is wet. And you wake up in the morning and you just hear the rain again."
 
@@ -100,6 +106,8 @@ body_after: |-
 
   <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/tmcw6hye341v818e57560/AUDIO-TWT-AUDIO-TREVONE-Dave-LIsa.mp3?rlkey=8wi95om69ufd2xhbfb9cozbi9&raw=1"></audio>
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/dave-and-lisa/">Read the conversation</a> &middot; <a href="/transcripts/dave-and-lisa/dave-and-lisa.pdf" download>Download PDF</a></p>
 
   Lisa's advice to anyone thinking about it: "Jump and do it and be poor and happy. There's a lot more happiness to be found in this type of life than in striving for money and wealth and property ownership. You can be poor and fulfilled - perhaps even more so than if you were wealthy."
 

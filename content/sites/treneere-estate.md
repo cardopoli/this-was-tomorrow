@@ -43,6 +43,8 @@ body_middle: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/xfw1kavtdc8bk3zj7mh1t/AUDIO-TWT-AUDIO-Treneere-Whole-Again.mp3?rlkey=ct7h3bhl6g55ozo5l223bxkay&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/emma-nicholls/">Read the conversation</a> &middot; <a href="/transcripts/emma-nicholls/emma-nicholls.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/5gudnupshcreq4at3qyme/AD4m7XE-RETPR7nIFShGrC8?rlkey=8nhppo0djksod10mcnvabh37p&dl=0
 body_after: |-
   ## On the estate

@@ -42,6 +42,8 @@ body_intro: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/imepgjojpaw8sju7o5dm2/14052026_PAUL-CHATTERTON_TWT_AUDIO_lilac_128kbps_edit.mp3?rlkey=z319r4euurbxrnznw4sacd9ii&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/paul-chatterton/">Read the conversation</a> &middot; <a href="/transcripts/paul-chatterton/paul-chatterton.pdf" download>Download PDF</a></p>
 dropbox_gallery: https://www.dropbox.com/scl/fo/ym89f2q1sxn6g8kvo1jyc/AAAlEKj9NlZ6-xzdTD2w5gg?rlkey=yqi0a7sunm1y3fsz5jrzc7mat&dl=0
 body_middle: |-
   ## The Common House
@@ -65,6 +67,8 @@ body_middle: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/nd2d6wzqieulwb09ny4k5/14052026_TWT_Lilac-Keith128kbps.mp3?rlkey=x46ceviitfpquhtv36mjw8410&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/keith/">Read the conversation</a> &middot; <a href="/transcripts/keith/keith.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/eoixopgt7titiuwwxkb6l/ABfz9ZKv58ZB5X0g-nZjPXQ?rlkey=ylj8eoku9l9y0uq3c1z9780df&dl=0
 body_after: |-
   ## Living Here
@@ -76,6 +80,8 @@ body_after: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/11qdmv32nshsj4fp5p857/15052026_MARIA-SANTOS_TWT_AUDIO_lilac_128kbps.mp3?rlkey=njwbcdbysqclo18b9zoj4gqhs&st=ypgo2gbj&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/maria-santos/">Read the conversation</a> &middot; <a href="/transcripts/maria-santos/maria-santos.pdf" download>Download PDF</a></p>
 
   Ten years in, the place feels established. The pioneer energy of the early years - when residents were doing something genuinely unprecedented in this country - has settled into something closer to ordinary life: kids growing, careers changing, a safe gaze towards the future. This is what the place communicates. Safety, stability, a sense of home and warmth.
 

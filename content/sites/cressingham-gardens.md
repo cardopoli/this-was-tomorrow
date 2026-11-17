@@ -36,6 +36,8 @@ body_intro: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/o2hrpxt3ht6fk2pgww2nw/ACE_TWT_30032026_Cressingham-Gardens_Andy_Elizabeth_01_128kbps.mp3?rlkey=4rvrtbiqjaozb6o44yx4jzeg5&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/andy-and-elizabeth/">Read the conversation</a> &middot; <a href="/transcripts/andy-and-elizabeth/andy-and-elizabeth.pdf" download>Download PDF</a></p>
 dropbox_gallery: https://www.dropbox.com/scl/fo/styjydduoyfwlfv5me0fo/AADfs4kAGpusa8a4vIZ4dCU?rlkey=f0wk85ul2vzkhlhpm9r0lalxj&dl=0
 body_middle: |-
   ## WHY IT MATTERS – THEN AND NOW

@@ -32,6 +32,8 @@ body_middle: |-
 
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/naomi-cull/">Read the conversation</a> &middot; <a href="/transcripts/naomi-cull/naomi-cull.pdf" download>Download PDF</a></p>
+
   _Note: At the time of recording this interview the organisation was still called Homebaked CLT. Its name changed to Two Up Two Down the following month._
 
   ## Brick by Brick We Build Ourselves
@@ -68,6 +70,8 @@ body_middle: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/f40pqhtvctvg2qpvcg0hn/19082026_TOm-Murphy_2UP2DOWN_Anfield_Liverpool_TWT-AUDIO.mp3?rlkey=zrtx8vu3papuxayxu6tf7kb3e&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/tom-murphy/">Read the conversation</a> &middot; <a href="/transcripts/tom-murphy/tom-murphy.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: ''
 body_after: |-
   ## The Model

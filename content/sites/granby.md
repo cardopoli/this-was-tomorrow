@@ -62,6 +62,8 @@ body_middle: |-
 
   </div>
 
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/hazel-tilley/">Read the conversation</a> &middot; <a href="/transcripts/hazel-tilley/hazel-tilley.pdf" download>Download PDF</a></p>
+
   <div data-lb-group="1">
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:0">

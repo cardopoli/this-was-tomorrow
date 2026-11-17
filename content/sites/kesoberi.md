@@ -31,6 +31,8 @@ body_middle: |-
     <audio controls preload="none" style="width:100%" src="https://www.dropbox.com/scl/fi/wfz7rgeqzuw6djky7n8pm/audio-TWT-AUDIO-KESOBERI-FI-GARRARD-shorter-edit.mp3?rlkey=mygphlh9spj5nhnbx5kb0r7ud&raw=1"></audio>
 
   </div>
+
+  <p class="twt-transcript-link" style="font-family:'FreeMono','Courier New',monospace;font-size:12px;letter-spacing:.5px;margin:10px 0 24px"><a href="/transcripts/fi-garrard/">Read the conversation</a> &middot; <a href="/transcripts/fi-garrard/fi-garrard.pdf" download>Download PDF</a></p>
 dropbox_gallery_2: https://www.dropbox.com/scl/fo/o1j2rglpwy22g7iq3fgoh/AOqJWVR-l4OL4OV15hMgeV4?rlkey=e37w0ouzvmjmxourecwixrkcx&dl=0
 body_after: |-
   ## What's being built
