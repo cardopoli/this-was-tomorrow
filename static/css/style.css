@@ -1458,34 +1458,50 @@ li:not(.status-visited) .location {
 .transcript-list li a { text-decoration: none; }
 .transcript-list li span { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
 
-/* pop-up */
+/* side panel */
 .twt-reader {
-  display: none;
-  position: fixed; inset: 0;
-  background: rgba(0, 0, 0, 0.94);
-  z-index: 9999;
-}
-.twt-reader.active { display: block; }
-.twt-reader-sheet {
-  position: absolute; top: 0; bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: min(var(--max-w), 100%);
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(560px, 46vw);
   background: var(--bg);
+  border-left: 2px solid var(--text);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
+  z-index: 9999;
+  transform: translateX(105%);
+  transition: transform 0.35s ease;
+  visibility: hidden;
+}
+.twt-reader.active { transform: none; visibility: visible; }
+.twt-reader-sheet {
+  height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 56px 32px 80px;
+  overscroll-behavior: contain;
+  padding: 56px 36px 80px;
+  outline: none;
 }
 .twt-reader-close {
-  position: fixed; top: 20px; right: 28px;
-  color: #fff; font-size: 24px; line-height: 1;
-  font-family: var(--mono);
-  background: none; border: none; cursor: pointer;
-  opacity: 0.6; transition: opacity 0.2s; z-index: 10000;
+  position: absolute; top: 14px; right: 16px;
+  width: 36px; height: 36px;
+  font-family: var(--mono); font-size: 18px; line-height: 1;
+  color: var(--text); background: var(--bg);
+  border: 1px solid var(--rule); border-radius: 50%;
+  cursor: pointer; z-index: 2;
 }
-.twt-reader-close:hover { opacity: 1; }
+.twt-reader-close:hover { border-color: var(--text); }
 .twt-reader-loading { font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
-body.twt-reader-open { overflow: hidden; }
+.twt-reader .transcript h1 { font-family: 'AGProExt', 'AGPro', Arial, sans-serif; font-size: 19px; font-weight: 700; margin-bottom: 18px; }
 @media (max-width: 760px) {
-  .twt-reader-sheet { padding: 64px 20px 72px; }
-  .twt-reader-close { top: 10px; right: 10px; color: var(--text); opacity: 1; background: var(--bg); width: 40px; height: 40px; border: 1px solid var(--rule); border-radius: 50%; font-size: 18px; }
+  .twt-reader {
+    top: auto; left: 0; width: 100%; height: 82vh;
+    border-left: none; border-top: 2px solid var(--text);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(105%);
+  }
+  .twt-reader-sheet { padding: 56px 20px 72px; }
+  .twt-reader-close { top: 10px; right: 12px; }
+}
+.twt-reader .transcript-listen { display: none; }
+@media (min-width: 761px) {
+  body .wrap { transition: margin 0.35s ease; }
+  body.twt-reader-side .wrap { margin-left: max(24px, calc((100vw - min(560px, 46vw) - var(--max-w)) / 2)); }
 }
