@@ -11,5 +11,8 @@
   <div class="transcript-body">
     {{ .Content }}
   </div>
+  {{ with .Params.support }}
+  <p class="transcript-support">{{ . }} <a href="{{ $.Params.support_url }}" target="_blank" rel="noopener">{{ replaceRE "^https?://" "" $.Params.support_url }}</a></p>
+  {{ end }}
 </article>
 {{ end }}

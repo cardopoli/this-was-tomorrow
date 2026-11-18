@@ -1505,3 +1505,11 @@ li:not(.status-visited) .location {
   body .wrap { transition: margin 0.35s ease; }
   body.twt-reader-side .wrap { margin-left: max(24px, calc((100vw - min(560px, 46vw) - var(--max-w)) / 2)); }
 }
+
+.transcript-support {
+  margin: 48px 0 24px; padding: 16px 18px;
+  border: 1px solid var(--text);
+  font-family: var(--mono); font-size: 12px; line-height: 1.6; letter-spacing: .3px;
+}
+.transcript-support a { color: var(--text); border-bottom: 1px solid var(--text); text-decoration: none; word-break: break-all; }
+.transcript-support a:hover { color: var(--hover); border-color: var(--hover); }
