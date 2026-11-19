@@ -897,6 +897,66 @@ article li {
 }
 
 /* ============================================================
+   DEVELOPMENT SECTION - sub-nav and release form
+   ============================================================ */
+
+.dev-nav {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.release-form label {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.release-form input[type="text"],
+.release-form input[type="email"],
+.release-form input[type="tel"],
+.release-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  font: inherit;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.release-form label.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.release-form label.check input {
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.release-form button {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  color: var(--bg);
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+}
+
+.release-form button:hover {
+  background: var(--hover);
+}
+
+/* ============================================================
    SITE LIST - STATUS INDICATORS
    ============================================================ */
 
