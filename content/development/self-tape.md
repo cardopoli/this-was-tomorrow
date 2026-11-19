@@ -4,7 +4,7 @@ description: Record your voice at your own pace - how to make a self-tape for Th
 layout: about
 ---
 
-<p class="dev-nav"><a href="/development/">Development</a> · <a href="/development/field-guide/">Field Guide</a> · <strong>Self-Tape Guide</strong> · <a href="/development/release-form/">Release Form</a></p>
+<p class="dev-nav"><a href="/development/">Development</a> · <a href="/development/field-guide/">Field Guide</a> · <strong>Self-Tape Guide</strong> · <a href="/development/release-form/">Release Form</a> · <a href="/development/usage-licence/">Usage Licence</a></p>
 
 ## Record your voice at your own pace
 

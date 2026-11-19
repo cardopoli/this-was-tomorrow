@@ -916,6 +916,7 @@ article li {
 .release-form input[type="text"],
 .release-form input[type="email"],
 .release-form input[type="tel"],
+.release-form input[type="number"],
 .release-form textarea {
   display: block;
   width: 100%;

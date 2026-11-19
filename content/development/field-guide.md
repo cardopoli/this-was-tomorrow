@@ -4,7 +4,7 @@ description: What happens during a This Was Tomorrow visit - how I work, recordi
 layout: about
 ---
 
-<p class="dev-nav"><a href="/development/">Development</a> · <strong>Field Guide</strong> · <a href="/development/self-tape/">Self-Tape Guide</a> · <a href="/development/release-form/">Release Form</a></p>
+<p class="dev-nav"><a href="/development/">Development</a> · <strong>Field Guide</strong> · <a href="/development/self-tape/">Self-Tape Guide</a> · <a href="/development/release-form/">Release Form</a> · <a href="/development/usage-licence/">Usage Licence</a></p>
 
 ## What happens during a visit
 

@@ -4,7 +4,7 @@ description: Media release and consent for This Was Tomorrow - photography and a
 layout: about
 ---
 
-<p class="dev-nav"><a href="/development/">Development</a> · <a href="/development/field-guide/">Field Guide</a> · <a href="/development/self-tape/">Self-Tape Guide</a> · <strong>Release Form</strong></p>
+<p class="dev-nav"><a href="/development/">Development</a> · <a href="/development/field-guide/">Field Guide</a> · <a href="/development/self-tape/">Self-Tape Guide</a> · <strong>Release Form</strong> · <a href="/development/usage-licence/">Usage Licence</a></p>
 
 ## Media release & consent
 

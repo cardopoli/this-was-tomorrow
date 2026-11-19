@@ -4,7 +4,7 @@ description: How to take part in This Was Tomorrow - visits, self-tapes and cons
 layout: single
 ---
 
-<p class="dev-nav"><strong>Development</strong> · <a href="/development/field-guide/">Field Guide</a> · <a href="/development/self-tape/">Self-Tape Guide</a> · <a href="/development/release-form/">Release Form</a></p>
+<p class="dev-nav"><strong>Development</strong> · <a href="/development/field-guide/">Field Guide</a> · <a href="/development/self-tape/">Self-Tape Guide</a> · <a href="/development/release-form/">Release Form</a> · <a href="/development/usage-licence/">Usage Licence</a></p>
 
 ## Do you have a story?
 
