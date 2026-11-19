@@ -8,9 +8,7 @@ layout: about
 
 ## Media release & consent
 
-Part of This Was Tomorrow, an Arts Council England-supported photography research project. Read the [Field Guide](/development/field-guide/) for details on how I work.
-
-**How to use this form:** Complete the "Your information" section, then fill out whichever applies to you: photography consent only, audio consent only, or both. If you're only doing one type, just skip the other section.
+Fill in your details, then the photography section, the audio section, or both - skip whichever doesn't apply. The [Field Guide](/development/field-guide/) explains how I work.
 
 <form class="release-form" action="https://formspree.io/f/xkoqaqyo" method="POST">
   <input type="hidden" name="formType" value="TWT Release Form">
@@ -22,17 +20,14 @@ Part of This Was Tomorrow, an Arts Council England-supported photography researc
   <label>Location / site name *<input type="text" name="location" required></label>
 
   <h2>Photography release</h2>
-  <p>If you're providing consent for images - complete this section. Otherwise, leave blank and skip to audio or submit.</p>
-  <p>The project does not focus on individuals, and no identifiable people will be intentionally photographed. Incidental inclusion may occur as part of wider scenes.</p>
-  <p>I consent to the photography and use of images from this visit for the following purposes:</p>
+  <p>The project does not focus on individuals, and no identifiable people will be intentionally photographed, though people may appear incidentally in wider scenes. I consent to photography during this visit, and to the images being used for:</p>
   <label class="check"><input type="checkbox" name="photoExhibition" value="yes"> Exhibition displays (in-person venues, galleries, museums)</label>
   <label class="check"><input type="checkbox" name="photoOnline" value="yes"> Online publication (website, social media, digital archive)</label>
   <label class="check"><input type="checkbox" name="photoResearch" value="yes"> Research &amp; educational use (university courses, publications, seminars)</label>
   <label>Any restrictions or notes about photography?<textarea name="photoNotes" rows="3"></textarea></label>
 
   <h2>Audio recording &amp; use</h2>
-  <p>If you're providing consent for audio - complete this section. Otherwise, leave blank and skip to photos or submit.</p>
-  <p>I consent to audio recording during our visit and use of audio/interviews for:</p>
+  <p>I consent to audio recording during our visit, and to the audio and interviews being used for:</p>
   <label class="check"><input type="checkbox" name="audioExhibition" value="yes"> Exhibition playback (in-person installations, soundscapes)</label>
   <label class="check"><input type="checkbox" name="audioOnline" value="yes"> Online broadcast (podcast, website, streaming platforms)</label>
   <label class="check"><input type="checkbox" name="audioResearch" value="yes"> Research &amp; archival use (educational materials, oral history projects)</label>
@@ -46,10 +41,6 @@ Part of This Was Tomorrow, an Arts Council England-supported photography researc
   <button type="submit">Submit release form</button>
 </form>
 
-## About this project
-
-This Was Tomorrow is an Arts Council England-supported documentary project exploring community-led housing, co-housing, and community land trusts across the UK. Your consent helps me document and share these spaces and stories responsibly.
-
 ## Data & privacy
 
-Your information will be emailed to me securely and stored in my project records. You can withdraw consent at any time by contacting me at [info@enricopolicardo.com](mailto:info@enricopolicardo.com).
+Your information is emailed to me securely and kept in my project records. You can withdraw consent at any time by contacting me at [info@enricopolicardo.com](mailto:info@enricopolicardo.com).

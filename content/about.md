@@ -22,6 +22,8 @@ The work doesn't take people as its primary subject. It looks instead at places,
 
 People are everywhere in this work, just not in the frame.
 
+[→ How a visit works, and how to take part](/development/)
+
 <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/X0tGY-LgxSc?si=3YkaHN0GPBMAA0or&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Supporters
@@ -34,11 +36,9 @@ _This Was Tomorrow_ grew out of an earlier iteration and two editions of a book 
 
 Enrico Policardo (b. 1982, Gorizia, Italy) is a photographer and artist based in London. His work examines how systems of power organise everyday life - housing and who gets to shape it, waste and what a consumer economy throws away, and the contested ground of borders. Creative Director of ReThinkable Festival on the Italy-Slovenia border (Nova Gorica / Gorizia, European Capital of Culture 2024-2026) and an Affiliate Research Fellow at the University of Nova Gorica.
 
-More work at [enricopolicardo.com](https://enricopolicardo.com).
-
 ## Get in touch
 
-drop a line [info@enricopolicardo.com](mailto:info@enricopolicardo.com) or visit [enricopolicardo.com](https://enricopolicardo.com)
+Drop a line to [info@enricopolicardo.com](mailto:info@enricopolicardo.com), or see more work at [enricopolicardo.com](https://enricopolicardo.com).
 
 ***
 
